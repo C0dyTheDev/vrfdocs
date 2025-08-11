@@ -5,8 +5,3 @@
 To create a new issue, head to: [Issue Reporting](https://gitlab.cie-group.cz/vr-framework/vrframework3.0/-/issues/new?issuable_template=default_issue)
 If it is regarding VR Training/VR School -> put **Michal Kulhánek** as an assignee, VR Medical goes to **Jakub Čekan** as an assignee.
 
-``` dataview
-TABLE WITHOUT ID file.link AS "Task", dueDate AS "Due Date" from "@Data/Gitlab Issues" SORT dueDate
-```
-
-
