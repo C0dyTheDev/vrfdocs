@@ -5,6 +5,8 @@
 
 ## Tasks
 
+- [ ] Fix editor errors
+- [ ] Unite the VRFPM names
 
 
 ## In Progress
