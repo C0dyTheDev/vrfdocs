@@ -25,7 +25,7 @@ This walkthrough takes you from a clean Unity project to a VR Framework enabled 
 ---
 ## 3) Install VR Framework
 
-### Note: 
+Note: 
 >The Git URL will differ with each project. Each stream has a distinct version of the package, here are the URLs for them:
 > 
 >**VR Training**: https://gitlab.cie-group.cz/vr-framework/vr-framework-3-0-training.git
@@ -52,4 +52,5 @@ The setup has 3 parts, please run them in this specific order:
 2. **VR Framework** → **Reset and Setup Samples**
 3. **VR Framework** → **Reset and Setup Editor**
 ![SetupButtons.png](/img/user/img/SetupButtons.png)
+
 If any errors occur, restart the project and try again and if the errors persist, contact VRF Team.

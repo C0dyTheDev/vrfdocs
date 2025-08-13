@@ -9,7 +9,7 @@ This framework is designed to give developers a solid foundation for building hi
 This documentation is your guide to understanding, extending, and integrating the framework into your own projects.  
 You’ll find:
 
-- **Getting Started**: Quick setup instructions to get you up and running.
+- **[[web/Getting Started/Project Setup\|Project Setup]]**: Quick setup instructions to get you up and running.
 - **Core Systems**: Detailed overviews of modules, interaction, and localization.
 - **API Reference**: Complete technical breakdown of public classes and methods.
 - **FAQ**: Important questions with important answers.
