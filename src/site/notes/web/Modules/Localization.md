@@ -60,3 +60,13 @@ You can use the **Sprite List** to create translations for images, f.e. images w
 ![GraphicsLocalizationModule.png](/img/user/img/GraphicsLocalizationModule.png)
 **LocalizedSprite.cs** changes the sprite of a **Sprite Renderer**.
 **LocalizedTexture.cs** changes the texture on the assigned **Material** of the object. This of course means, that the material on the object has to be modifiable - so it cannot be the **Default** material. **Material Index** tells the script which of the materials in the **Materials** list of the **Renderer** should the script modify and **Set Emission Map** - if true - changes the **Emission** texture of the material in addition to the **Base** texture.
+
+
+## Text
+The last of the lists is the Text List. Again, the settings are the same as for the Audio and Sprite lists, so refer to the text above for setting it up. 
+
+To change the text of **Text Mesh Pro Text** component, we need a script called **LocalizedText.cs**.
+![LocalizedTextExample.png](/img/user/img/LocalizedTextExample.png)
+
+
+
