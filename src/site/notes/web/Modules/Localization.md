@@ -6,7 +6,7 @@
 | Dependencies: | none |
 | ------------- | ---- |
 
-Localization module is designed to provide translation features for your project. It enables you to create translated audio, text and sprites for any language that you might need. It can integrate with Platform module - language is set automatically based on a parameter. 
+Localization module is designed to provide translation features for your project. It enables you to set up translated audio, text and sprites for any language that you might need. It can integrate with Platform module - language is set automatically based on a parameter. 
 
 # Usage
 
@@ -23,7 +23,7 @@ All of the lists above should already be included in your project, however you c
 Then set all of these in the Language Manager in your scene, it should look something like this: 
 ![LanguageManagerExample.png](/img/user/img/LanguageManagerExample.png)
 
-If you do not see any Selected Language, add one in your Language Config and click through some of the lists a few times - Unity sometimes doesn't register new objects in the editor that well so we need to trigger it manually. 
+If you do not see any **Selected Language**, add one in your **Language Config** and click through some of the lists a few times - Unity sometimes doesn't register new objects in the editor that well so we need to trigger it manually. 
 If you still see errors, it is still because of the problem stated above, try to restart Unity and hopefully that will fix the problem. This thankfully needs to be done only once. 
 Still seeing errors? Report an issue in [[web/2Issue Tracker\|Issue Tracker]] or when urgent, contact VRF Team directly.
 
@@ -67,6 +67,3 @@ The last of the lists is the Text List. Again, the settings are the same as for 
 
 To change the text of **Text Mesh Pro Text** component, we need a script called **LocalizedText.cs**.
 ![LocalizedTextExample.png](/img/user/img/LocalizedTextExample.png)
-
-
-
