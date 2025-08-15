@@ -40,5 +40,5 @@ There is a dropdown called **Parameter Name** and it contains all of the **Inter
 
 
 To display the **predefined Internal Parameters** (**Language** and **Max Game Time**) on the platform as **External Parameters**, you have to put the names **lang** and **runTime** into the **MyData** settings. 
-![runTimeLangParams.png](/img/user/img/runTimeLangParams.png)
+![RunTimeLangParams.png](/img/user/img/RunTimeLangParams.png)
 
