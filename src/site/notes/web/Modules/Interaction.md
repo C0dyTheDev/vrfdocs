@@ -2,6 +2,10 @@
 {"dg-publish":true,"dg-path":"Modules/Interaction.md","permalink":"/modules/interaction/","noteIcon":""}
 ---
 
+
+| Dependencies: | none |
+| ------------- | ---- |
+
 Interaction module ensures a gateway between the user and the app. It allows you to create interactive and seamless experiences while being easy to set up and use. 
 
 
@@ -47,6 +51,9 @@ When satisfied with the pose, you can click the **Stop Editing** button and it w
 
 There are also some **Events** available, these are self explanatory. 
 **Grabbable Object** also attaches a [[web/Additions/Highlight\|Highlight]] component. 
+
+
+If you want to block the user from grabbing the object, always turn off the **Grabbable Object** script, **NEVER** turn off the collider.
 
 ---
 ### SnapDropZone.cs
@@ -103,11 +110,11 @@ This one is a little more complex. It requires the user to stay in the trigger c
 ![TriggerStayExample.png](/img/user/img/TriggerStayExample.png)
 
 There are two **Modes** available: 
-- Reset
-- Save
+- **Reset**
+- **Save**
 
-When Reset is chosen, the time required to complete the Trigger Stay resets every time when the object goes out of the trigger collider.
-Save (as the name suggests) saves the time and doesn't reset when the object exits the trigger collider. 
+When **Reset** is chosen, the time required to complete the **Trigger Stay** resets every time when the object goes out of the trigger collider.
+**Save** (as the name suggests) saves the time and doesn't reset when the object exits the trigger collider. 
 >Example: The **Trigger Stay** is set to Reset **and** the **Time To Complete** is 4 seconds. User puts the required object inside the trigger collider and after 2 seconds pulls the object out. The time gets reset and they are now required to hold the object inside for 4 seconds again. 
 >When set to **Save**, user puts in the object for 2 seconds and then exits, the time is saved, so the user only needs to put the object into the trigger collider for the remaining 2 seconds, thus adding up to 4 seconds and completing the **Trigger Stay**.
 

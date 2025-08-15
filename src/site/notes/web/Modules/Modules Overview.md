@@ -10,6 +10,6 @@ Currently available modules:
 - [[web/Modules/Interaction\|Interaction]]
 - Minigame
 - Mistake
-- Platform
+- [[web/Modules/Platform\|Platform]]
 - Photography
 - Voice React
