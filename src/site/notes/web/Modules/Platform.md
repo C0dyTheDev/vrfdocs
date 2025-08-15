@@ -38,3 +38,7 @@ There is a dropdown called **Parameter Name** and it contains all of the **Inter
 >I then turn off the app and launch it without platform. The **Param1** doesn't get any value from platform since we launch it locally without it, so it gets assigned the **default value** **"scenario1**.**"** When the script **React On Parameter** loads, it evaluates that the actual value and expected value **do match**, so it invokes the **On Correct Parameter Value Event**. 
 
 
+
+To display the **predefined Internal Parameters** (**Language** and **Max Game Time**) on the platform as **External Parameters**, you have to put the names **lang** and **runTime** into the **MyData** settings. 
+![runTimeLangParams.png](/img/user/img/runTimeLangParams.png)
+
