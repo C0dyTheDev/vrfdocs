@@ -27,6 +27,14 @@ These **Internal Parameters** however don't get shown on platform automatically.
 
 **Parameters** specified in this section actually get shown on the platform. When the values of the parameters come from the platform, they get automatically mapped on the **Internal Parameters**. If some of them are missing, they get assigned the default value that we set in the **Internal Parameters** settings. 
 
+
+There are also fields **Name** and Value. This tells the platform how it should display the app. 
+**Name** is the name of the app on the platform. (without spaces!)
+**Value** is always stream underscore name.
+>Example: I am working on an app called **IAC Flexi 1**. Into the **Name**, I put **IACFlexi1** and since it belongs under **VR Training**, into the field **Value** goes **VRTraining_IACFlexi1**.
+
+
+
 ---
 ## Reacting to the parameters
 
@@ -42,3 +50,10 @@ There is a dropdown called **Parameter Name** and it contains all of the **Inter
 To display the **predefined Internal Parameters** (**Language** and **Max Game Time**) on the platform as **External Parameters**, you have to put the names **lang** and **runTime** into the **MyData** settings. 
 ![RunTimeLangParams.png](/img/user/img/RunTimeLangParams.png)
 
+---
+
+## Streaming
+There is also a script called **Stream Manager** which ensures the user of the platform can see what the user in VR sees in the app. 
+![StreamManagerExample.png](/img/user/img/StreamManagerExample.png)
+
+If you followed the [[web/Getting Started/Scene Setup\|Scene Setup]], the script is already set up in the scene under the **Game Director** object. It takes the image of **Main Camera** and sends it to the platform. The default settings are just fine, higher quality drains the performance significantly.
