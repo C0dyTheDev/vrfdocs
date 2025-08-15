@@ -5,8 +5,6 @@
 
 ## Tasks
 
-- [ ] Fix editor errors
-- [ ] Unite the VRFPM names
 
 
 ## In Progress
@@ -35,6 +33,7 @@
 - [x] Vytvorit showcase scenu #threepointo
 - [x] Samples import bug #automation
 - [x] Splash Screen setup #automation
+- [x] Unite the VRFPM names
 
 
 

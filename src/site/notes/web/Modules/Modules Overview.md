@@ -7,7 +7,7 @@ The entire framework is built and designed as modular as possible. This ensures 
 Currently available modules:
 - [[web/Modules/Localization\|Localization]]
 - Progress
-- Interaction
+- [[web/Modules/Interaction\|Interaction]]
 - Minigame
 - Mistake
 - Platform
