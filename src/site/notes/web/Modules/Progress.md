@@ -11,7 +11,7 @@ There are apps that are specifically created for a purpose of training its user 
 
 ## Setting up
 
-To setup the Progress Module, we need the Progress Manager script in the scene. It looks like this in the editor: 
+To setup the **Progress Module**, we need the **Progress Manager** script in the scene. It looks like this in the editor: 
 ![ProgressManagerExample.png](/img/user/img/ProgressManagerExample.png)
 There are a few settings to cover. First one is the **Start Block** and we will cover this one later. **App Mode** is an advanced setting which basically changes the entire behavior of the **Progress Module** and how it works with **Progress Blocks** and **Progress Steps**. 
 **Education** processes only one **Step** at a time, making the process very controlled. **Testing** basically throws all the **Steps** at the user at once, so they can skip various steps and make **mistakes** in the process (for **Mistake** management, refer to the [[web/Modules/Mistake\|Mistake Module]]).
@@ -95,5 +95,7 @@ So now the settings in the **Constant Enqueue** make a little bit more sense. Wh
 Let's take a look at the **Conditional Enqueue**. Click on one of the steps that have a green or a red route going from them to another block and you will see the script: 
 ![ConditionalEnqueueExample.png](/img/user/img/ConditionalEnqueueExample.png)
 
-
 There are **Conditions** and **Conditions Required**. **Conditions** are booleans that can be marked as true or false. **Conditions Required** set the number of the required conditions to be true to go to the **True branch** or, if not met, the **False branch**. When set to -1, it requires all of the **Conditions** to be true to go to the **True branch**.
+
+---
+
