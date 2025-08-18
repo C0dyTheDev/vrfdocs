@@ -6,15 +6,15 @@
 | Dependencies: | [[web/Modules/Localization\|Localization]] [[web/Modules/Platform\|Platform]] [[web/Modules/Audio\|Audio]] |
 | ------------- | --------------------------------------- |
 
-There are apps that are specifically created for a purpose of training its user to do some kind of repeating process. For implementing and managing this process in our app, we use the **Progress Module**.
+There are apps that are specifically created for a purpose of training its user to do some kind of process. For implementing and managing this process in our app, we use the **Progress Module**.
 
-
+---
 ## Setting up
 
 To setup the **Progress Module**, we need the **Progress Manager** script in the scene. It looks like this in the editor: 
 ![ProgressManagerExample.png](/img/user/img/ProgressManagerExample.png)
 There are a few settings to cover. First one is the **Start Block** and we will cover this one later. **App Mode** is an advanced setting which basically changes the entire behavior of the **Progress Module** and how it works with **Progress Blocks** and **Progress Steps**. 
-**Education** processes only one **Step** at a time, making the process very controlled. **Testing** basically throws all the **Steps** at the user at once, so they can skip various steps and make **mistakes** in the process (for **Mistake** management, refer to the [[web/Modules/Mistake\|Mistake Module]]).
+**Education** processes only one **Step** at a time, making the process very controlled. **Testing** basically throws all the **Steps** of the **Block** at the user at once, so they can skip various steps and make **mistakes** in the process (for **Mistake** management, refer to the [[web/Modules/Mistake\|Mistake Module]]).
 **App End Sound** is the sound which plays at the end of the app, when the process is finished. 
 
 
@@ -22,6 +22,8 @@ Another scripts we need in the scene is called **Scenario** and **Graph Updater*
 ![ScenarioExample.png](/img/user/img/ScenarioExample.png)
 >You don't need to set anything here, they just have to be there.
 
+
+---
 ## Basic Principles
 
 The entire concept is based on tracking the users progress through the process. Each step in the process corresponds to one **Progress Step** in the scene. The steps are divided into **Progress Blocks**. **Progress Blocks** make **conditional routing** possible. Refer to the diagram for an example of the structure: 
@@ -33,6 +35,7 @@ This is a simplified process showcasing **conditional branching** and how can we
 
 Let's take a closer look on how we would create such process in the editor. 
 
+---
 ## Creating the process
 
 To create a process, there is a handy tool which neatly visualizes the entirety of it the same way as in the example above. It is called Progress Graph Editor. To open it, go to **VR Framework** → **Graph Tools** → **Progress Graph Editor**.
@@ -81,7 +84,7 @@ When you click on one of the **Steps** that have a route going from them to anot
 
 As you can see, there is the **Block To Enqueue** which corresponds to the connected **Block** in the **Graph Editor**. The other settings require a deeper understanding of how the **Progress Manager** works and manages the **Steps**, so let's take a closer look at that. 
 
-
+---
 ## Step Queue
 
 The entire process management is built on a single data structure - **Queue**. When we start a **Block**, all of its **Steps** are put into the **Queue**. The important thing to note is that **Queue** is a **FIFO** data structure - **First In**, **First Out**. It is exactly the same principle as a waiting queue at the doctor. The one who came first goes first, second goes second and so on. So when we apply that logic to the **Progress Manager**, it always sets active the first step that is in the **Step Queue**. 
@@ -96,6 +99,3 @@ Let's take a look at the **Conditional Enqueue**. Click on one of the steps that
 ![ConditionalEnqueueExample.png](/img/user/img/ConditionalEnqueueExample.png)
 
 There are **Conditions** and **Conditions Required**. **Conditions** are booleans that can be marked as true or false. **Conditions Required** set the number of the required conditions to be true to go to the **True branch** or, if not met, the **False branch**. When set to -1, it requires all of the **Conditions** to be true to go to the **True branch**.
-
----
-
