@@ -5,6 +5,8 @@
 
 ## Tasks
 
+- [ ] Audio List GUID bug when changing the size
+- [ ] Auto lang element ID when empty and assigning the content
 
 
 ## In Progress
