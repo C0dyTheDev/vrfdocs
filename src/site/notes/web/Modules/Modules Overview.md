@@ -13,3 +13,4 @@ Currently available modules:
 - [[web/Modules/Platform\|Platform]]
 - Photography
 - Voice React
+- [[web/Modules/Audio\|Audio]]
