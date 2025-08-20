@@ -23,7 +23,7 @@ Each **Part** represents one possibly loaded scene. **Real Time** and **Shown Ti
 
 
 **Scene To Load Names** is a list of names of the scenes that belong into this specific part. It picks a random scene from the list and loads it when the part is active.
->Note: The scenes have to be in the **Build Index**. 
+>Note: The scenes have to be in the **Build Index**. **Start Scene** has to be on **build index 0**.
 
 
 
