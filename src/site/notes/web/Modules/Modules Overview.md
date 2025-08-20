@@ -6,10 +6,10 @@ The entire framework is built and designed as modular as possible. This ensures 
 
 Currently available modules:
 - [[web/Modules/Localization\|Localization]]
-- Progress
+- [[web/Modules/Progress\|Progress]]
 - [[web/Modules/Interaction\|Interaction]]
-- Minigame
-- Mistake
+- [[web/Modules/Minigame\|Minigame]]
+- [[web/Modules/Mistake\|Mistake]]
 - [[web/Modules/Platform\|Platform]]
 - Photography
 - Voice React

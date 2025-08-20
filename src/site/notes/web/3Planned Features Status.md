@@ -5,19 +5,18 @@
 
 ## Tasks
 
-- [ ] Audio List GUID bug when changing the size
-- [ ] Auto lang element ID when empty and assigning the content
 
 
 ## In Progress
 
-- [ ] PackageManager #threepointo
 - [ ] Dokumentace
 
 
 ## Complete
 
 **Complete**
+- [x] PackageManager #threepointo
+- [x] Audio List GUID bug when changing the size
 - [x] [[Notes/Definice Platformy medical\|Definice Platformy medical]]
 - [x] Rozdelit vsechny zavislosti #threepointo
 - [x] [[Notes/Otestovat Hurricane VR interaction3\|Otestovat Hurricane VR interaction3]]

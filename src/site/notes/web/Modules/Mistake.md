@@ -2,6 +2,10 @@
 {"dg-publish":true,"dg-path":"Modules/Mistake.md","permalink":"/modules/mistake/","noteIcon":""}
 ---
 
+
+| Dependencies: | none |
+| ------------- | ---- |
+
 Mistake Module is for tracking mistakes that the user makes during the app. It integrates with the [[web/Modules/Minigame\|Minigame]] and [[web/Modules/Platform\|Platform]] Module. 
 
 ---
