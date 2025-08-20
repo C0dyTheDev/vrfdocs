@@ -30,7 +30,7 @@ There are multiple events:
 Each recording begins when microphone volume goes above the **Threshold** that we set in **Voice Module Handler** and ends when the volume is below the **Threshold** for at least **Keep Alive Delay** time. When that happens - the microphone starts recording, it invokes the **On Mic Start Event**. 
 When the microphone stops recording, it invokes the **On Mic Stop Event**. 
 The recording is then passed to the **model** trained on people saying **"Ano"** and **"Ne"** which evaluates whether the user said **"Ano"** - which invokes the **On Yes Event** - or **"Ne"** - which invokes the **On No Event**. 
->Note: **Every single one** recording is evaluated, even when the user says something completely different, it evaluates it to be "Ano" or "Ne." 
+>Note: **Every single one** recording is evaluated, even when the user says something **completely different**, it evaluates it to be **"Ano"** or **"Ne**.**"**
 
 
 

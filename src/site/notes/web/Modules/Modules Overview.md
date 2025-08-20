@@ -11,5 +11,5 @@ Currently available modules:
 - [[web/Modules/Minigame\|Minigame]]
 - [[web/Modules/Mistake\|Mistake]]
 - [[web/Modules/Platform\|Platform]]
-- Voice React
+- [[web/Modules/Voice React\|Voice React]]
 - [[web/Modules/Audio\|Audio]]
