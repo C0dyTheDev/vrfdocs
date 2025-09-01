@@ -8,6 +8,7 @@
 - [ ] Scene Modules #threepointone
 - [ ] FAQ in the documentation
 - [ ] API Reference documentation
+- [ ] Better logging system #threepointone
 
 
 ## In Progress
