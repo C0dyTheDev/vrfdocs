@@ -10,5 +10,3 @@ This documentation is your guide to understanding, extending, and integrating th
 You’ll find:
 - **[[web/Getting Started/Project Setup\|Project Setup]]**: Quick setup instructions to get you up and running.
 - **[[web/Modules/Modules Overview\|Modules Overview]]**: Detailed overviews of modules, interaction, and localization.
-- **API Reference**: Complete technical breakdown of public classes and methods.
-- **FAQ**: Important questions with important answers.
