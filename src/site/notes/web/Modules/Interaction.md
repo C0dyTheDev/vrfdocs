@@ -9,7 +9,7 @@
 Interaction module ensures a gateway between the user and the app. It allows you to create interactive and seamless experiences while being easy to set up and use. 
 
 
-The automatic [[web/Getting Started/Scene Setup\|Scene Setup]] ensures correct settings for the **Interaction** module, so you don't need to do anything yourself. 
+The automatic [[web/Getting Started/Scene Builder\|Scene Builder]] ensures correct settings for the **Interaction** module, so you don't need to do anything yourself. 
 
 
 Important note about the new **Interaction 3.0** is that now it has two sets of hands - one that correspond to the headset **tracking** and one that serve as the actual **visual** of the hands for the user.

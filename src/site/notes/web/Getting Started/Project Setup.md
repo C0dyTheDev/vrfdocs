@@ -20,7 +20,7 @@ This walkthrough takes you from a clean Unity project to a VR Framework enabled 
 1. Open Package Manager.
 2. In the left top corner, click the **+** button
 3. Select **Install Package from Git URL...**
-4. Paste this URL: https://gitlab.cie-group.cz/vr-framework/vrfpackagemanager.git
+4. Paste this URL: https://git.cie-group.cz/vr-framework/vrfpackagemanager.git
 5. Install.
 ---
 ## 3) Install VR Framework
@@ -28,9 +28,9 @@ This walkthrough takes you from a clean Unity project to a VR Framework enabled 
 Note: 
 >The Git URL will differ with each project. Each stream has a distinct version of the package, here are the URLs for them:
 > 
->**VR Training**: https://gitlab.cie-group.cz/vr-framework/vr-framework-3-0-training.git
+>**VR Training**: https://git.cie-group.cz/vr-framework/vr-framework-3-0-training.git
 >**VR School**: Not created yet.
->**VR Medical**: https://gitlab.cie-group.cz/vr-framework/vr-framework-3-0-medical.git
+>**VR Medical**: https://git.cie-group.cz/vr-framework/vr-framework-3-0-medical.git
 >
 >The choice depends on the stream under which does the project belong. There might also be projects that require a specific setup of the VRF - in that case, you should be provided with a specific URL. 
 

@@ -5,10 +5,8 @@
 
 ## Tasks
 
-- [ ] Scene Modules #threepointone
 - [ ] FAQ in the documentation
 - [ ] API Reference documentation
-- [ ] Better logging system #threepointone
 
 
 ## In Progress
@@ -18,6 +16,8 @@
 ## Complete
 
 **Complete**
+- [x] Better logging system #threepointone
+- [x] Scene Modules #threepointone
 
 
 

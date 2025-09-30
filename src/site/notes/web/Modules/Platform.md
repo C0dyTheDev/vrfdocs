@@ -56,4 +56,4 @@ To display the **predefined Internal Parameters** (**Language** and **Max Game T
 There is also a script called **Stream Manager** which ensures the user of the platform can see what the user in VR sees in the app. 
 ![StreamManagerExample.png](/img/user/img/StreamManagerExample.png)
 
-If you followed the [[web/Getting Started/Scene Setup\|Scene Setup]], the script is already set up in the scene under the **Game Director** object. It takes the image of **Main Camera** and sends it to the platform. The default settings are just fine, higher quality drains the performance significantly.
+If you followed the [[web/Getting Started/Scene Builder\|Scene Builder]], the script is already set up in the scene under the **Game Director** object. It takes the image of **Main Camera** and sends it to the platform. The default settings are just fine, higher quality drains the performance significantly.
