@@ -5,7 +5,7 @@
 The **Scene Builder** allows you to setup and customize your scene according to your needs. To open, go to: **VRFramework** → **Scene Builder**. 
 
 It looks like this (the scene modules might differ in your version):
-![SceneBuilderExample.png](/img/user/img/SceneBuilderExample.png)
+![SceneBuilderExample.png](/img/user/img/Examples/SceneBuilderExample.png)
 
 First of all, there is a big button at the top-right corner - **Basic Scene Setup**. This button setups your scene with basic structure and a **Game Director** instance. 
 >Warning: **Basic Scene Setup DELETES** your **entire scene** before setting up the structure. 
@@ -17,6 +17,6 @@ Then there are **Scene Modules**. These are modular pieces that you can add to y
 
 
 After the setup, the scene should look something like this: 
-![SceneExample.png](/img/user/img/SceneExample.png)
+![SceneExample.png](/img/user/img/Examples/SceneExample.png)
 
 Don't forget to setup your **additional modules** like Language Manager, Platform Manager, etc.

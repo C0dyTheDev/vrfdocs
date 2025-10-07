@@ -6,7 +6,7 @@ This walkthrough takes you from a clean Unity project to a VR Framework enabled 
 
 ## 0) Prerequisites
 
-- Unity: 6000.1.2f
+- Unity: 6000.2.6f2
 - Access to VR Framework group on GitLab - if you do not have access, please contact Michal Kulhánek.
 ---
 ## 1) Create your Unity project
@@ -42,7 +42,7 @@ Note:
 	This will take around 5-10 minutes, so now is a good time to make some tea or coffee :) 
 
 The VRF Package Manager should now look something like this: 
-![VRFPMCompletedState.png](/img/user/img/VRFPMCompletedState.png)
+![VRFPMCompletedState.png](/img/user/img/Examples/VRFPMCompletedState.png)
 
 ---
 ## 4) Run the automatic setup
@@ -51,6 +51,6 @@ The setup has 3 parts, please run them in this specific order:
 1. **VR Framework** → **Reset and Setup Project**
 2. **VR Framework** → **Reset and Setup Samples**
 3. **VR Framework** → **Reset and Setup Editor**
-![SetupButtons.png](/img/user/img/SetupButtons.png)
+![SetupButtons.png](/img/user/img/Examples/SetupButtons.png)
 
 If any errors occur, restart the project and try again and if the errors persist, contact VRF Team.

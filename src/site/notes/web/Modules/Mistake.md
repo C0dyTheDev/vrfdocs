@@ -12,19 +12,19 @@
 ## Configuration
 
 To use the **Mistake Module**, you need the **Mistake Manager** in your scene: 
-![MistakeManagerExample.png](/img/user/img/MistakeManagerExample.png)
+![MistakeManagerExample.png](/img/user/img/Examples/MistakeManagerExample.png)
 
 There is **Mistake Platform**, which is an object that can be created within the Asset window by **Right-clicking** → **Create** → **VR Framework** → **Mistake Platform**. This object only serves as a holder of the mistakes in between the scenes, no additional configuration inside this object is necessary. Assign it into the **Mistakes Manager**. 
 
 
 You can preconfigure **Mistakes** with the list in the **Mistakes Manager**:
-![MistakesListExample.png](/img/user/img/MistakesListExample.png)
+![MistakesListExample.png](/img/user/img/Examples/MistakesListExample.png)
 
 
 Each **Mistake** has an internal **Mistake Name** and a **Display Name**, then **Done** checkmark. 
 
 You can then mark the **Mistake** as **Done** (that the user did **not** make the mistake) through an Event method **CheckMistake()**:
-![CheckMistakeExample.png](/img/user/img/CheckMistakeExample.png)
+![CheckMistakeExample.png](/img/user/img/Examples/CheckMistakeExample.png)
 Into the field goes the **Mistake Name**.
 
 You can uncheck the **Mistake** (that he did make the mistake) by calling **UncheckMistake()** the same way.

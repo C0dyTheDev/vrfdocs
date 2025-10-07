@@ -19,7 +19,7 @@ Important note about the new **Interaction 3.0** is that now it has two sets of 
 ### GrabbableObject.cs
 
 What serves as the foundation of an interactable object is this one script. Attaching this script to your object will trigger an automatic setup for correct behavior of the grabbing. After that, you should see something like this: 
-![GrabbableObjectExample.png](/img/user/img/GrabbableObjectExample.png)
+![GrabbableObjectExample.png](/img/user/img/Examples/GrabbableObjectExample.png)
 
 There are three **Grab Types**:
 - **Distance Pinch**
@@ -30,19 +30,19 @@ There are three **Grab Types**:
 
 
 **Distance Grab** works similarly but instead of one finger, it tracks the entire and measures how much is the user clenching the palm. If they clench it beyond the **Grab Distance**, it grabs the object.
-![DistanceGrab.png](/img/user/img/DistanceGrab.png)
+![DistanceGrab.png](/img/user/img/Examples/DistanceGrab.png)
 
 And lastly **Physical Grab**. This one is the most complex, as it allows you to choose which **fingers** are needed to grab the object. This type of grab checks whether the required fingers are **touching** the object and if so, grabs the object and **locks the fingers** in place until the object is **released**. 
-![PhysicalGrab.png](/img/user/img/PhysicalGrab.png)
+![PhysicalGrab.png](/img/user/img/Examples/PhysicalGrab.png)
 
 
 There are also some settings that also affects how the grab behaves. First one is **Permanent Grab**, which locks the object in user's hand until it is force dropped by code or snapped into **Snap Drop Zone**. **Can Swap Hands** is whether the user can pass the object from one hand to another. 
 
 
 The interesting parameter is **Use Custom Grab Poses**. With **Interaction 3.0**, you can define fully custom hand pose for each hand. When turned on, two new buttons appear: 
-![CustomGrabPoseButtons.png](/img/user/img/CustomGrabPoseButtons.png)
+![CustomGrabPoseButtons.png](/img/user/img/Examples/CustomGrabPoseButtons.png)
 One for each hand. When clicked, you can edit the pose with a hand ghost in the scene.
-![GrabPoseExample.png](/img/user/img/GrabPoseExample.png)
+![GrabPoseExample.png](/img/user/img/Examples/GrabPoseExample.png)
 
 When satisfied with the pose, you can click the **Stop Editing** button and it will save the pose. 
 >Info: Do not actually move the **Grabbable Object** itself. Align the hand and pose around it. Moving the object doesn't do anything other than actually moving the object in scene. 
@@ -62,7 +62,7 @@ Sometimes, you want to set up a specific place for the user to place an object. 
 
 
 The script looks like this:
-![SnapDropZoneExample.png](/img/user/img/SnapDropZoneExample.png)
+![SnapDropZoneExample.png](/img/user/img/Examples/SnapDropZoneExample.png)
 
 There are two **Snap Types**:
 - **Normal**
@@ -88,7 +88,7 @@ There are three **Identification Types**:
 **Use Custom Snap Transform**, when turned on, prompts you with three checkmarks - one for each part of the **Transform**. When an object is snapped into the **Snap Drop Zone**, the object transform is lerped into the zone's **Transform**. It means, that whatever the object snapped, it will always try to fit the object as well into the zone as possible. 
 When we turn off some of the checkmarks, these properties are not going to get lerped. 
 > Example: I have a **box1** and **box2**, **box2** is the **Snap Drop Zone** and is **larger** in scale than **box1**. When we have all three checkmarks turned on and **box1** gets snapped, it will align with the zone perfectly → it gets the same scale as the larger box2. However, when we turn off the **Scale** checkmark, the Snap Drop Zone (box2) will **NOT** change the scale of **box1** when snapped.
-> ![SDZExampleBoxes.png](/img/user/img/SDZExampleBoxes.png)
+> ![SDZExampleBoxes.png](/img/user/img/Examples/SDZExampleBoxes.png)
 
 
 
@@ -101,13 +101,13 @@ There are also some **Events** available, again - the names make them self expla
 ### TriggerAction.cs
 
 Trigger scripts usually have one purpose - to run an event when something enters their trigger collider. **Trigger Action** is the most basic one, as it has only a few **Events** and the **Identification Type** parameters. 
-![TriggerAction.png](/img/user/img/TriggerAction.png)
+![TriggerAction.png](/img/user/img/Examples/TriggerAction.png)
 
 --- 
 ### TriggerStay.cs
 
 This one is a little more complex. It requires the user to stay in the trigger collider for some amount of time - **Time To Complete**. 
-![TriggerStayExample.png](/img/user/img/TriggerStayExample.png)
+![TriggerStayExample.png](/img/user/img/Examples/TriggerStayExample.png)
 
 There are two **Modes** available: 
 - **Reset**
@@ -123,6 +123,6 @@ When **Reset** is chosen, the time required to complete the **Trigger Stay** res
 ### ToggleSelect.cs
 
 The task for the user is to select only a part of the presented options, whether it is objects or some checkmarks in a quiz. For that there is **Toggle Select**. It allows the user to toggle something with a trigger collider. 
-![ToggleSelectExample.png](/img/user/img/ToggleSelectExample.png)
+![ToggleSelectExample.png](/img/user/img/Examples/ToggleSelectExample.png)
 
 **Is Selected** is the default value and on each enter of the collider (that matches the **Identification**), the value gets flipped and the respective **Event** invokes. 

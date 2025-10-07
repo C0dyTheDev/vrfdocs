@@ -11,19 +11,19 @@ Platform module allows you to connect your app the the platform, set up custom p
 ## Settings
 
 The core of the module is **Platform Manager**. It looks like this: 
-![PlatformManagerExample.png](/img/user/img/PlatformManagerExample.png)
+![PlatformManagerExample.png](/img/user/img/Examples/PlatformManagerExample.png)
 If you don't have the **Parameters** object available, you can create a new one by right-clicking in the **Assets window** → **Create** → **VR Framework** → **Platform Parameters**. Let's take a closer look at them.
 
 
 When we select the **Parameters** object in the **Assets**, we get to see the settings. These are called the **Internal Parameters** and define the actual app parameters. 
-![ParametersExample.png](/img/user/img/ParametersExample.png)
+![ParametersExample.png](/img/user/img/Examples/ParametersExample.png)
 
 You can define as many parameters as you like. **Default Value** tells the app what value should the parameter have if it doesn't get the value from the platform. There are also two default parameters - **Language** and **Use Max Game Time**. If true, you can also set **Max Game Time**, which ends the app automatically after specified time.
 
 
 These **Internal Parameters** however don't get shown on platform automatically. That is why we also have **External Parameters**. 
 **External Parameters** are configured in the **VRF Project Settings**, in MyData section. You can find it in **Edit** → **Project Settings** → **VR Framework Settings** → **My Data**.
-![MyDataExample.png](/img/user/img/MyDataExample.png)
+![MyDataExample.png](/img/user/img/Examples/MyDataExample.png)
 
 **Parameters** specified in this section actually get shown on the platform. When the values of the parameters come from the platform, they get automatically mapped on the **Internal Parameters**. If some of them are missing, they get assigned the default value that we set in the **Internal Parameters** settings. 
 
@@ -39,7 +39,7 @@ There are also fields **Name** and Value. This tells the platform how it should 
 ## Reacting to the parameters
 
 Of course we also need to set up some hooks for the parameters, so that we can actually adjust the app according to the values inside the parameters. This is done with a script called **React On Parameter**. 
-![ReactOnParameterExample.png](/img/user/img/ReactOnParameterExample.png)
+![ReactOnParameterExample.png](/img/user/img/Examples/ReactOnParameterExample.png)
 
 There is a dropdown called **Parameter Name** and it contains all of the **Internal Parameters**. **Expected Value** is what should the parameter contain to invoke **On Correct Parameter Value Event**. If the parameter does not have the Expected Value inside, **On Wrong Parameter Value Event** gets invoked.
 >Example: I have an **Internal Parameter** called **Param1**, the default value is **"scenario1"** and I set the **React On Parameter** to expect a value **"scenario1**.**"** I set up an **External Parameter** with the same name in **MyData** so that it shows up on the platform. I launch the app from the platform with a parameter value **"scenario2**.**"** When the script loads, it evaluates that the value of **Param1** **does not match** the **expected value**, so the **On Wrong Parameter Value Event** gets invoked. 
@@ -48,12 +48,12 @@ There is a dropdown called **Parameter Name** and it contains all of the **Inter
 
 
 To display the **predefined Internal Parameters** (**Language** and **Max Game Time**) on the platform as **External Parameters**, you have to put the names **lang** and **runTime** into the **MyData** settings. 
-![RunTimeLangParams.png](/img/user/img/RunTimeLangParams.png)
+![RunTimeLangParams.png](/img/user/img/Examples/RunTimeLangParams.png)
 
 ---
 
 ## Streaming
 There is also a script called **Stream Manager** which ensures the user of the platform can see what the user in VR sees in the app. 
-![StreamManagerExample.png](/img/user/img/StreamManagerExample.png)
+![StreamManagerExample.png](/img/user/img/Examples/StreamManagerExample.png)
 
 If you followed the [[web/Getting Started/Scene Builder\|Scene Builder]], the script is already set up in the scene under the **Game Director** object. It takes the image of **Main Camera** and sends it to the platform. The default settings are just fine, higher quality drains the performance significantly.

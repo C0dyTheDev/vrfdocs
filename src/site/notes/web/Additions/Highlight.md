@@ -11,7 +11,7 @@ There are two **Types**:
 
 **Transparent Replacement** takes all your materials of the model and replaces it with a custom transparent one, pulsing between complete transparency and a **Color** of your choosing. 
 
-![HighlightExample.png](/img/user/img/HighlightExample.png)
+![HighlightExample.png](/img/user/img/Examples/HighlightExample.png)
 
 **Frequency** is how fast should the pulsing happen.
 

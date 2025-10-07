@@ -11,13 +11,13 @@ This module was created specifically for **Training**, it allows you to link mul
 ---
 ## Minigame Manager
 For the module to work correctly, you need a **Minigame Manager** in the scene. It looks like this: 
-![MinigameManagerExample.png](/img/user/img/MinigameManagerExample.png)
+![MinigameManagerExample.png](/img/user/img/Examples/MinigameManagerExample.png)
 **Minigames** is the settings for the module, we will discuss how to set the module up down below this section. Sometimes we don't want to have a time limit, so if **Should Count Time** is false, it won't use the **Real Time** and **Shown Time** from the **Minigames Settings**. **On Fail Event** is just an event that is invoked f.e. when time limit hits 0 or **MinigameManager.FailedPart()** is called.
 
 ---
 ## Settings
 You can create new **Minigames Settings** by **Right-clicking** in the **Assets** window and selecting **Create** → **VR Framework** → **Minigames Settings**. 
-![MinigamesSettingsExample.png](/img/user/img/MinigamesSettingsExample.png)
+![MinigamesSettingsExample.png](/img/user/img/Examples/MinigamesSettingsExample.png)
 
 Each **Part** represents one possibly loaded scene. **Real Time** and **Shown Time** are for the time limit settings. **Shown Time** is what time does the user see that they have left, **Real Time** is what time is actually left. This is for the purpose of creating an illusion that they have the same amount of time, but we speed the time up a little bit so the user can become more effective. 
 

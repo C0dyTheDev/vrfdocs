@@ -8,7 +8,7 @@
 
 To use the module, you will need two scripts - **Voice Module Handler** and **React On Voice**. 
 **Voice Module Handler** just has to be in the scene. It registers the **microphone input** and evaluates what did the user say. It looks like this: 
-![VoiceModuleHandlerExample.png](/img/user/img/VoiceModuleHandlerExample.png)
+![VoiceModuleHandlerExample.png](/img/user/img/Examples/VoiceModuleHandlerExample.png)
 **Threshold Offset** determines how loud the user has to be for the microphone to activate and pick up the sound. 
 **Keep Alive Delay** is a time that keeps the microphone on after it went down below the threshold. If microphone goes above the threshold again while this delay is active, it continues the recording. This ensures accidental pauses in the word don't cut the recording too early. 
 **Clip Len Seconds** is the maximum length of one recording. 
@@ -18,7 +18,7 @@ To use the module, you will need two scripts - **Voice Module Handler** and **Re
 ## React On Voice
 
 So now we can go and set up the events. Add **React On Voice** on any desired object. It looks like this: 
-![ReactOnVoiceExample.png](/img/user/img/ReactOnVoiceExample.png)
+![ReactOnVoiceExample.png](/img/user/img/Examples/ReactOnVoiceExample.png)
 
 Into **Voice Module Handler** goes the global script we set up earlier. 
 There are multiple events:

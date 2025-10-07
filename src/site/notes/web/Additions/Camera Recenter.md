@@ -2,7 +2,7 @@
 {"dg-publish":true,"dg-path":"Additions/Camera Recenter.md","permalink":"/additions/camera-recenter/","noteIcon":""}
 ---
 
-![CameraRecenterExample.png](/img/user/img/CameraRecenterExample.png)
+![CameraRecenterExample.png](/img/user/img/Examples/CameraRecenterExample.png)
 **Camera Recenter** takes the user and positions their head to the position and rotation of the **Camera Recenter**. Before teleporting, it darkens the screen through the **Vision Fader** under the user's camera and after teleporting, the vision fader fades out. **Before Recenter Event** invokes right before the player is teleported (not before the **Vision Fader** fades in), **After Recenter Event** invokes right after the player is teleported and **After Fade Out Event** invokes when the **Vision Fader** finishes fading out.
 
 
