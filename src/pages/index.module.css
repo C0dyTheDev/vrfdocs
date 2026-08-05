@@ -1,25 +1,140 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * Homepage hero. CSS modules, so these class names are scoped locally.
+ * Palette and drafting metrics come from src/css/custom.css.
  */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.hero {
   position: relative;
+  padding: 5rem 0 4.5rem;
+  border-bottom: var(--vrf-hairline) solid var(--vrf-rule);
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+/* Two heavy construction lines running off the edges of the sheet. */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  background: var(--vrf-rule-soft);
+  pointer-events: none;
 }
 
-.buttons {
+.hero::before {
+  left: 0;
+  right: 0;
+  top: 2.25rem;
+  height: var(--vrf-hairline);
+}
+
+.hero::after {
+  top: 0;
+  bottom: 0;
+  right: 2.25rem;
+  width: var(--vrf-hairline);
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.heroCopy {
+  position: relative;
+}
+
+.heroEyebrow {
+  margin-bottom: 0.9rem;
+}
+
+.heroTitle {
+  margin: 0 0 0.9rem;
+  font-size: clamp(2.4rem, 5.5vw, 3.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--vrf-ink-strong);
+}
+
+.heroTagline {
+  max-width: 44ch;
+  margin: 0 0 2rem;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--vrf-graphite);
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* The logo plate: framed, with a tick at each corner like a trim mark. */
+.heroPlate {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  padding: 2.75rem 2rem;
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  background:
+    linear-gradient(var(--vrf-grid-major) var(--vrf-hairline), transparent var(--vrf-hairline)),
+    linear-gradient(90deg, var(--vrf-grid-major) var(--vrf-hairline), transparent var(--vrf-hairline)),
+    var(--vrf-paper-raised);
+  background-size: 20px 20px, 20px 20px, auto;
+}
+
+.heroPlate::before,
+.heroPlate::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--vrf-ink);
+  border-style: solid;
+}
+
+.heroPlate::before {
+  top: -1px;
+  left: -1px;
+  border-width: var(--vrf-heavy) 0 0 var(--vrf-heavy);
+}
+
+.heroPlate::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 var(--vrf-heavy) var(--vrf-heavy) 0;
+}
+
+.heroMark {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 3rem 0 2.75rem;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .heroInner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .heroPlate {
+    order: -1;
+    padding: 2rem 1.5rem;
+  }
+
+  .heroMark {
+    max-width: 190px;
+  }
 }

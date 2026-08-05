@@ -1,13 +1,48 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import type {PrismTheme} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+/**
+ * Syntax highlighting in the site palette: graphite on paper, no hue. Weight
+ * and italics carry the meaning that colour normally would, so code blocks sit
+ * in the drafting aesthetic instead of fighting it.
+ */
+const graphiteLight: PrismTheme = {
+  plain: {color: '#2b2b2b', backgroundColor: 'transparent'},
+  styles: [
+    {types: ['comment', 'prolog', 'cdata'], style: {color: '#948f86', fontStyle: 'italic'}},
+    {types: ['punctuation', 'operator'], style: {color: '#8a857c'}},
+    {types: ['keyword', 'atrule', 'selector', 'tag', 'builtin'], style: {color: '#141414', fontWeight: 'bold'}},
+    {types: ['function', 'class-name', 'maybe-class-name'], style: {color: '#141414'}},
+    {types: ['string', 'char', 'attr-value', 'regex'], style: {color: '#565349', fontStyle: 'italic'}},
+    {types: ['number', 'boolean', 'constant', 'symbol'], style: {color: '#4f4f4f'}},
+    {types: ['property', 'attr-name', 'variable'], style: {color: '#3a3833'}},
+    {types: ['deleted'], style: {textDecorationLine: 'line-through'}},
+    {types: ['inserted'], style: {textDecorationLine: 'underline'}},
+  ],
+};
+
+const graphiteDark: PrismTheme = {
+  plain: {color: '#e7e4dd', backgroundColor: 'transparent'},
+  styles: [
+    {types: ['comment', 'prolog', 'cdata'], style: {color: '#6f6b64', fontStyle: 'italic'}},
+    {types: ['punctuation', 'operator'], style: {color: '#948f86'}},
+    {types: ['keyword', 'atrule', 'selector', 'tag', 'builtin'], style: {color: '#ffffff', fontWeight: 'bold'}},
+    {types: ['function', 'class-name', 'maybe-class-name'], style: {color: '#ffffff'}},
+    {types: ['string', 'char', 'attr-value', 'regex'], style: {color: '#b4afa6', fontStyle: 'italic'}},
+    {types: ['number', 'boolean', 'constant', 'symbol'], style: {color: '#c2beb6'}},
+    {types: ['property', 'attr-name', 'variable'], style: {color: '#d2cec6'}},
+    {types: ['deleted'], style: {textDecorationLine: 'line-through'}},
+    {types: ['inserted'], style: {textDecorationLine: 'underline'}},
+  ],
+};
+
 const config: Config = {
   title: 'VR Framework Docs',
   tagline: 'Build immersive VR experiences in Unity, faster',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -81,10 +116,13 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'VR Framework',
+      // No `title`: the wordmark already reads "VR Framework".
       logo: {
-        alt: 'VR Framework Logo',
-        src: 'img/logo.svg',
+        alt: 'VR Framework',
+        src: 'img/vrf-wordmark-ink.png',
+        srcDark: 'img/vrf-wordmark.png',
+        width: 176,
+        height: 28,
       },
       items: [
         {
@@ -135,8 +173,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} CIE Group. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: graphiteLight,
+      darkTheme: graphiteDark,
       additionalLanguages: ['csharp', 'json', 'bash'],
     },
   } satisfies Preset.ThemeConfig,

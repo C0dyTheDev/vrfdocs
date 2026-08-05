@@ -1,5 +1,4 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -43,16 +42,19 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, to, description}: FeatureItem) {
+/** One drawing sheet per section, numbered the way plates in a set are. */
+function Feature({title, to, description, index}: FeatureItem & {index: number}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="padding-horiz--md">
-        <Heading as="h3">
-          <Link to={to}>{title}</Link>
-        </Heading>
-        <p>{description}</p>
-      </div>
-    </div>
+    <Link to={to} className={styles.sheet}>
+      <span className={styles.sheetNumber}>
+        {String(index + 1).padStart(2, '0')}
+      </span>
+      <Heading as="h3" className={styles.sheetTitle}>
+        {title}
+      </Heading>
+      <p className={styles.sheetBody}>{description}</p>
+      <span className={styles.sheetAction}>Open</span>
+    </Link>
   );
 }
 
@@ -60,9 +62,9 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.grid}>
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <Feature key={props.title} index={idx} {...props} />
           ))}
         </div>
       </div>

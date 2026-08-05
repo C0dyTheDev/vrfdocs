@@ -1,11 +1,81 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  padding: 4rem 0 5rem;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Each card is a sheet: ruled border, hard offset shadow, no rounding. */
+.sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  background: var(--vrf-paper-raised);
+  color: var(--vrf-ink);
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.sheet:hover {
+  border-color: var(--vrf-ink);
+  color: var(--vrf-ink);
+  text-decoration: none;
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0 var(--vrf-rule-soft);
+}
+
+/* Plate number, set in the top-right corner of the sheet. */
+.sheetNumber {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.1rem;
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--vrf-pencil-soft);
+}
+
+.sheetTitle {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: var(--vrf-ink-strong);
+}
+
+.sheetBody {
+  flex: 1;
+  margin: 0 0 1.25rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--vrf-graphite);
+}
+
+/* Leader line + arrow head, drawn in CSS. */
+.sheetAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vrf-ink-strong);
+}
+
+.sheetAction::after {
+  content: '';
+  width: 2.25rem;
+  height: var(--vrf-hairline);
+  background: var(--vrf-ink);
+  transition: width 120ms ease;
+}
+
+.sheet:hover .sheetAction::after {
+  width: 3.25rem;
 }

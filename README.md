@@ -105,9 +105,52 @@ Point the SDK doc generator at `api/` and the pages appear automatically. See
 SDK, `docusaurus-plugin-openapi-docs` for an OpenAPI spec). Add the generation
 step as a `gen:api` script in `package.json`.
 
+## Design
+
+The identity comes from the logo: a "V" drawn as a construction sketch with
+dimension lines, fused to a solid "R". The site repeats that - graphite line
+work on drafting paper. The palette is dark grey and white only; there is no
+blue anywhere, including in Infima's defaults and the syntax highlighting.
+
+`src/css/custom.css` is the whole theme, in five layers: the VRF tokens, a
+bridge that maps them onto Infima's variables, the paper/grid/grain surfaces,
+type, then the components. Change a colour in the token block at the top and it
+propagates.
+
+A few Infima variables are hard-coded to blue-tinted greys and have to be
+overridden by name rather than through the palette - `--ifm-toc-link-color`,
+`--ifm-color-content-secondary`, and the `.footer--dark` block. If something
+turns blue after a Docusaurus upgrade, that is the first place to look. Syntax
+highlighting uses the `graphiteLight` / `graphiteDark` Prism themes defined in
+`docusaurus.config.ts`; they carry meaning with weight and italics instead of
+hue.
+
+### Brand assets
+
+```bash
+npm run gen:brand
+```
+
+`scripts/gen-brand.mjs` derives every brand asset from
+`static/img/vault/VRFrameworkLogo.png` (which the vault sync provides). The
+source is white line art on transparency, so it is invisible on the light
+theme; the script re-inks it using only the alpha channel, which keeps the
+pencil texture and the gradient in the "R":
+
+| Output | Used by |
+| --- | --- |
+| `vrf-wordmark.png` / `-ink.png` | navbar (`srcDark` / `src`) |
+| `vrf-mark.png` / `-ink.png` | homepage hero plate |
+| `favicon.png` | browser tab, graphite on paper |
+
+Re-run it if the logo changes in the vault. The assets are committed, so the
+build does not depend on it.
+
 ## Before deploying
 
-- set the real `url` / `baseUrl` in `docusaurus.config.ts`
-- uncomment `editUrl` if "edit this page" links should point at GitLab
-- replace `static/img/logo.svg` and `static/img/favicon.ico` with VR Framework
-  branding
+- set the real `url` / `baseUrl` in `docusaurus.config.ts` - it is currently the
+  Vercel domain
+- uncomment `editUrl` if "edit this page" links should point at the repo. Leave
+  it off for `tutorials/`: those files are generated and the next sync
+  overwrites any edit
+- the navbar and footer still link to GitLab while the source lives on GitHub

@@ -1,30 +1,599 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * VR Framework Docs - global theme.
+ *
+ * The identity comes from the logo: a "V" drawn as a construction sketch with
+ * dimension lines, fused to a solid "R". The site repeats that duality -
+ * graphite line work on drafting paper, with solid ink for the things that
+ * matter. Palette is dark grey and white only; no blue anywhere, including the
+ * Infima defaults and the syntax highlighting.
+ *
+ * Layers in this file:
+ *   1. tokens        - the VRF palette and drafting metrics
+ *   2. Infima bridge - map the palette onto Docusaurus' own variables
+ *   3. surfaces      - paper, grid, pencil grain
+ *   4. type          - headings as drawing titles, mono for annotations
+ *   5. components    - navbar, sidebar, cards, code, tables, admonitions
  */
 
-/* You can override the default Infima variables here. */
+/* ------------------------------------------------------------------ 1. tokens */
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Ink. `--vrf-ink` is mirrored in scripts/gen-brand.mjs. */
+  --vrf-ink: #2b2b2b;
+  --vrf-ink-strong: #141414;
+  --vrf-graphite: #4f4f4f;
+  --vrf-pencil: #757169;
+  --vrf-pencil-soft: #9a958c;
+
+  /* Paper. Warm off-white so the grey never reads as cold/blue. */
+  --vrf-paper: #f4f2ed;
+  --vrf-paper-raised: #fbfaf7;
+  --vrf-paper-sunken: #eae7e0;
+
+  /* Line work. */
+  --vrf-rule: rgba(43, 43, 43, 0.26);
+  --vrf-rule-soft: rgba(43, 43, 43, 0.13);
+  --vrf-grid-major: rgba(43, 43, 43, 0.07);
+  --vrf-grid-minor: rgba(43, 43, 43, 0.035);
+  --vrf-grain-opacity: 0.035;
+
+  /* Drafting metrics. */
+  --vrf-grid-size: 40px;
+  --vrf-hairline: 1px;
+  --vrf-heavy: 2px;
+  --vrf-sheet-shadow: 4px 4px 0 var(--vrf-rule-soft);
+
+  /* The footer is always dark, in both themes - it is the title block. */
+  --vrf-footer-bg: #1b1b1c;
+  --vrf-footer-text: #cfcbc3;
+  --vrf-footer-muted: #8b877f;
+
+  --vrf-font-display: 'Inter', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --vrf-font-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Cascadia Mono',
+    Menlo, Consolas, monospace;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --vrf-ink: #e7e4dd;
+  --vrf-ink-strong: #ffffff;
+  --vrf-graphite: #c2beb6;
+  --vrf-pencil: #948f86;
+  --vrf-pencil-soft: #6f6b64;
+
+  --vrf-paper: #1a1a1b;
+  --vrf-paper-raised: #232324;
+  --vrf-paper-sunken: #131314;
+
+  --vrf-rule: rgba(231, 228, 221, 0.24);
+  --vrf-rule-soft: rgba(231, 228, 221, 0.12);
+  --vrf-grid-major: rgba(231, 228, 221, 0.06);
+  --vrf-grid-minor: rgba(231, 228, 221, 0.03);
+  --vrf-grain-opacity: 0.045;
+  --vrf-sheet-shadow: 4px 4px 0 var(--vrf-rule-soft);
+
+  --vrf-footer-bg: #0f0f10;
+}
+
+/* ----------------------------------------------------- 2. Infima bridge */
+
+:root {
+  /* Infima's primary drives links, buttons and the active sidebar item. */
+  --ifm-color-primary: #2b2b2b;
+  --ifm-color-primary-dark: #1f1f1f;
+  --ifm-color-primary-darker: #171717;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #454545;
+  --ifm-color-primary-lighter: #565656;
+  --ifm-color-primary-lightest: #6d6d6d;
+
+  /* Infima's neutral ladder is faintly blue - re-cast it warm grey. */
+  --ifm-color-emphasis-0: #ffffff;
+  --ifm-color-emphasis-100: #f4f2ed;
+  --ifm-color-emphasis-200: #e8e5de;
+  --ifm-color-emphasis-300: #d6d2c9;
+  --ifm-color-emphasis-400: #b8b3a8;
+  --ifm-color-emphasis-500: #948f86;
+  --ifm-color-emphasis-600: #757169;
+  --ifm-color-emphasis-700: #565349;
+  --ifm-color-emphasis-800: #3a3833;
+  --ifm-color-emphasis-900: #232220;
+  --ifm-color-emphasis-1000: #141414;
+
+  --ifm-background-color: var(--vrf-paper);
+  --ifm-background-surface-color: var(--vrf-paper-raised);
+  --ifm-font-color-base: var(--vrf-ink);
+  --ifm-heading-color: var(--vrf-ink-strong);
+  --ifm-font-family-base: var(--vrf-font-display);
+  --ifm-font-family-monospace: var(--vrf-font-mono);
+
+  --ifm-link-color: var(--vrf-ink-strong);
+  --ifm-link-hover-color: var(--vrf-ink-strong);
+  --ifm-link-decoration: none;
+
+  --ifm-hr-border-color: var(--vrf-rule);
+  --ifm-toc-border-color: var(--vrf-rule-soft);
+  --ifm-table-border-color: var(--vrf-rule-soft);
+  --ifm-blockquote-color: var(--vrf-graphite);
+  --ifm-blockquote-border-color: var(--vrf-ink);
+
+  --ifm-code-background: var(--vrf-paper-sunken);
+  --ifm-code-border-radius: 0;
+  --ifm-pre-background: var(--vrf-paper-raised);
+  --ifm-code-font-size: 88%;
+
+  --ifm-global-radius: 0;
+  --ifm-button-border-radius: 0;
+  --ifm-alert-border-radius: 0;
+  --ifm-card-border-radius: 0;
+  --ifm-global-shadow-lw: none;
+  --ifm-global-shadow-md: none;
+  --ifm-global-shadow-tl: none;
+
+  --ifm-navbar-background-color: var(--vrf-paper);
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-link-color: var(--vrf-graphite);
+  --ifm-navbar-link-hover-color: var(--vrf-ink-strong);
+  --ifm-navbar-height: 4rem;
+
+  --ifm-menu-color: var(--vrf-graphite);
+  --ifm-menu-color-active: var(--vrf-ink-strong);
+  --ifm-menu-color-background-active: transparent;
+  --ifm-menu-color-background-hover: var(--vrf-rule-soft);
+
+  --ifm-footer-background-color: var(--vrf-ink-strong);
+  --ifm-footer-color: #cfcbc3;
+  --ifm-footer-link-color: #cfcbc3;
+  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-footer-title-color: #ffffff;
+
+  /* Infima hard-codes these two to a blue-tinted grey (#525860). */
+  --ifm-toc-link-color: var(--vrf-pencil);
+  --ifm-color-content-secondary: var(--vrf-pencil);
+
+  --ifm-breadcrumb-color-active: var(--vrf-ink-strong);
+  --ifm-breadcrumb-item-background-active: var(--vrf-rule-soft);
+  --ifm-breadcrumb-border-radius: 0;
+  --ifm-tabs-color-active: var(--vrf-ink-strong);
+  --ifm-tabs-color-active-border: var(--vrf-ink);
+
+  --docusaurus-highlighted-code-line-bg: rgba(43, 43, 43, 0.09);
+  --docusaurus-announcement-bar-height: auto;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #e7e4dd;
+  --ifm-color-primary-dark: #d5d1c8;
+  --ifm-color-primary-darker: #c2beb6;
+  --ifm-color-primary-darkest: #a9a49a;
+  --ifm-color-primary-light: #f1efea;
+  --ifm-color-primary-lighter: #f7f6f3;
+  --ifm-color-primary-lightest: #ffffff;
+
+  --ifm-color-emphasis-0: #131314;
+  --ifm-color-emphasis-100: #1a1a1b;
+  --ifm-color-emphasis-200: #232324;
+  --ifm-color-emphasis-300: #33322f;
+  --ifm-color-emphasis-400: #4a4842;
+  --ifm-color-emphasis-500: #6f6b64;
+  --ifm-color-emphasis-600: #948f86;
+  --ifm-color-emphasis-700: #b4afa6;
+  --ifm-color-emphasis-800: #d2cec6;
+  --ifm-color-emphasis-900: #ebe8e2;
+  --ifm-color-emphasis-1000: #ffffff;
+
+  --ifm-footer-background-color: #101011;
+  --docusaurus-highlighted-code-line-bg: rgba(231, 228, 221, 0.09);
+}
+
+/* --------------------------------------------------------- 3. surfaces */
+
+html,
+body {
+  background-color: var(--vrf-paper);
+}
+
+/* Drafting paper: a 8px minor grid inside a 40px major grid. */
+body {
+  background-image:
+    linear-gradient(var(--vrf-grid-major) var(--vrf-hairline), transparent var(--vrf-hairline)),
+    linear-gradient(90deg, var(--vrf-grid-major) var(--vrf-hairline), transparent var(--vrf-hairline)),
+    linear-gradient(var(--vrf-grid-minor) var(--vrf-hairline), transparent var(--vrf-hairline)),
+    linear-gradient(90deg, var(--vrf-grid-minor) var(--vrf-hairline), transparent var(--vrf-hairline));
+  background-size:
+    var(--vrf-grid-size) var(--vrf-grid-size),
+    var(--vrf-grid-size) var(--vrf-grid-size),
+    calc(var(--vrf-grid-size) / 5) calc(var(--vrf-grid-size) / 5),
+    calc(var(--vrf-grid-size) / 5) calc(var(--vrf-grid-size) / 5);
+}
+
+/*
+ * Pencil tooth. Sits over everything and never intercepts input.
+ * `translateZ(0)` promotes it to its own compositor layer so scrolling does not
+ * repaint the noise - without it the fixed overlay costs a full-viewport
+ * raster on every frame.
+ */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: var(--vrf-grain-opacity);
+  transform: translateZ(0);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ------------------------------------------------------------- 4. type */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero__title {
+  font-family: var(--vrf-font-display);
+  font-weight: 800;
+  letter-spacing: -0.022em;
+}
+
+.markdown h1:first-child {
+  font-size: 2.4rem;
+  letter-spacing: -0.03em;
+}
+
+/*
+ * Section headings get a dimension rule: a line with a tick at each end, the
+ * way a measured distance is called out on a drawing.
+ */
+.markdown > h2 {
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 0.55rem;
+  font-size: 1.55rem;
+  border-bottom: var(--vrf-hairline) solid var(--vrf-rule);
+}
+
+.markdown > h2::before,
+.markdown > h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  width: var(--vrf-hairline);
+  height: 9px;
+  background: var(--vrf-rule);
+}
+
+.markdown > h2::before {
+  left: 0;
+}
+
+.markdown > h2::after {
+  right: 0;
+}
+
+.markdown > h3 {
+  margin-top: 2.25rem;
+  font-size: 1.2rem;
+}
+
+/* Links are drawn, not coloured - a pencil underline that firms up on hover. */
+.markdown a:not(.card):not(.button),
+.footer__link-item {
+  text-decoration: underline;
+  text-decoration-color: var(--vrf-pencil-soft);
+  text-decoration-thickness: var(--vrf-hairline);
+  text-underline-offset: 0.22em;
+  transition: text-decoration-color 120ms linear, text-decoration-thickness 120ms linear;
+}
+
+.markdown a:not(.card):not(.button):hover {
+  text-decoration-color: var(--vrf-ink);
+  text-decoration-thickness: var(--vrf-heavy);
+}
+
+/* Annotations - the "610.4" style callouts on the logo. */
+.vrf-annotation {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vrf-pencil);
+}
+
+/* ------------------------------------------------------- 5. components */
+
+/* Navbar: a title block ruled off from the sheet below it. */
+.navbar {
+  border-bottom: var(--vrf-hairline) solid var(--vrf-rule);
+  backdrop-filter: blur(2px);
+  background-color: color-mix(in srgb, var(--vrf-paper) 88%, transparent);
+}
+
+.navbar__logo {
+  height: 1.85rem;
+}
+
+.navbar__logo img {
+  height: 100%;
+  width: auto;
+}
+
+.navbar__link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.navbar__link--active,
+.navbar__link:hover {
+  color: var(--vrf-ink-strong);
+}
+
+/* Sidebar: a construction guide line down the left of the item stack. */
+.theme-doc-sidebar-container {
+  border-right: var(--vrf-hairline) solid var(--vrf-rule-soft) !important;
+}
+
+.menu {
+  padding: 1rem 0.75rem !important;
+}
+
+.menu__link {
+  border-radius: 0;
+  font-size: 0.88rem;
+}
+
+.menu__link--active {
+  font-weight: 700;
+  box-shadow: inset var(--vrf-heavy) 0 0 var(--vrf-ink);
+}
+
+.menu__list .menu__list {
+  border-left: var(--vrf-hairline) dashed var(--vrf-rule);
+  margin-left: 0.65rem;
+  padding-left: 0.35rem;
+}
+
+.menu__list-item-collapsible .menu__link--sublist {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vrf-pencil);
+}
+
+/* Table of contents. */
+.table-of-contents {
+  font-size: 0.8rem;
+}
+
+.table-of-contents__link--active {
+  font-weight: 700;
+  color: var(--vrf-ink-strong);
+}
+
+/* Buttons: outlined plates with a hard drafting shadow, no blur. */
+.button {
+  border: var(--vrf-heavy) solid var(--vrf-ink);
+  border-radius: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.6rem;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.button--secondary {
+  background: var(--vrf-ink);
+  color: var(--vrf-paper);
+  border-color: var(--vrf-ink);
+}
+
+.button--secondary:hover {
+  background: var(--vrf-ink-strong);
+  color: var(--vrf-paper);
+}
+
+.button--outline.button--secondary {
+  background: transparent;
+  color: var(--vrf-ink);
+}
+
+.button--outline.button--secondary:hover {
+  background: var(--vrf-ink);
+  color: var(--vrf-paper);
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--vrf-sheet-shadow);
+}
+
+/* Cards (the generated category index pages) as drawing sheets. */
+.card {
+  background: var(--vrf-paper-raised);
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+article .card:hover,
+.card:hover {
+  border-color: var(--vrf-ink);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--vrf-sheet-shadow);
+}
+
+/* Code: a note pinned to the sheet, not a coloured box. */
+code {
+  border: var(--vrf-hairline) solid var(--vrf-rule-soft);
+  padding: 0.1rem 0.3rem;
+}
+
+.theme-code-block {
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  box-shadow: none !important;
+}
+
+.theme-code-block pre {
+  border-radius: 0 !important;
+}
+
+div[class^='codeBlockTitle'] {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vrf-pencil);
+  border-bottom: var(--vrf-hairline) solid var(--vrf-rule) !important;
+}
+
+/* Tables read as a drawing schedule. */
+.markdown table {
+  display: table;
+  width: 100%;
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  border-collapse: collapse;
+}
+
+.markdown table thead tr {
+  border-bottom: var(--vrf-heavy) solid var(--vrf-ink);
+  background: transparent;
+}
+
+.markdown table th {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vrf-pencil);
+}
+
+.markdown table tr:nth-child(2n) {
+  background: var(--vrf-rule-soft);
+}
+
+/* Images from the vault are screenshots - frame them like plates. */
+.markdown img {
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  background: var(--vrf-paper-raised);
+  max-width: 100%;
+}
+
+.markdown blockquote {
+  border-left: var(--vrf-heavy) solid var(--vrf-ink);
+  background: var(--vrf-rule-soft);
+  padding: 0.85rem 1.1rem;
+}
+
+/*
+ * Admonitions stay in the palette: graphite plates with a heavy left rule.
+ * Warning and danger keep a desaturated warm tint so they still read as a
+ * signal rather than as body text.
+ */
+.theme-admonition {
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  border-left: var(--vrf-heavy) solid var(--vrf-ink);
+  border-radius: 0;
+  background: var(--vrf-paper-raised);
+  color: var(--vrf-ink);
+}
+
+.theme-admonition .admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module,
+.theme-admonition div[class^='admonitionHeading'] {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vrf-pencil);
+}
+
+.theme-admonition svg {
+  fill: var(--vrf-pencil);
+}
+
+.theme-admonition-warning {
+  border-left-color: #8a6d3b;
+}
+
+.theme-admonition-danger {
+  border-left-color: #8c4b3f;
+}
+
+/* Pagination between docs. */
+.pagination-nav__link {
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  border-radius: 0;
+  transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--vrf-ink);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--vrf-sheet-shadow);
+}
+
+.pagination-nav__sublabel {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Breadcrumbs. */
+.breadcrumbs__item .breadcrumbs__link {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  border-radius: 0;
+}
+
+/*
+ * Footer: the title block at the bottom of the sheet.
+ * `.footer--dark` (from `footer.style: 'dark'`) redefines the Infima footer
+ * variables on the element itself with a blue-grey default, so they have to be
+ * overridden here rather than in `:root`.
+ */
+.footer,
+.footer--dark {
+  --ifm-footer-background-color: var(--vrf-footer-bg);
+  --ifm-footer-color: var(--vrf-footer-text);
+  --ifm-footer-link-color: var(--vrf-footer-text);
+  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-footer-title-color: #ffffff;
+  border-top: var(--vrf-heavy) solid var(--vrf-ink-strong);
+}
+
+.footer__title {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer__copyright {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: var(--vrf-hairline) solid rgba(255, 255, 255, 0.12);
+  font-family: var(--vrf-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--vrf-footer-muted);
+}
+
+/* Search / theme toggle keep square corners. */
+.navbar__search-input,
+.DocSearch-Button {
+  border-radius: 0;
+}
+
+/* The dark-mode logo swap keeps the mark from vanishing on dark paper. */
+[data-theme='dark'] .navbar__logo img[src*='-ink'] {
+  filter: invert(1);
 }

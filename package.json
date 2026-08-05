@@ -14,7 +14,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "sync:vault": "node scripts/sync-vault.mjs"
+    "sync:vault": "node scripts/sync-vault.mjs",
+    "gen:brand": "node scripts/gen-brand.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
