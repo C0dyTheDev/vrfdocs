@@ -187,13 +187,18 @@
 
 /* --------------------------------------------------------- 3. surfaces */
 
-html,
-body {
+/*
+ * Drafting paper: a 8px minor grid inside a 40px major grid.
+ *
+ * The sheet is drawn on `html`, not `body`. Docusaurus' Layout stylesheet sets
+ * `html, body { height: 100% }`, which pins the body box to one viewport, and
+ * Infima already paints `html`, so the body background can never propagate to
+ * the canvas. Painting the body would therefore stop the grid one screen down.
+ * The root element's background always covers the full canvas, so the grid
+ * tiles for the whole scroll length; `body` stays transparent to let it show.
+ */
+html {
   background-color: var(--vrf-paper);
-}
-
-/* Drafting paper: a 8px minor grid inside a 40px major grid. */
-body {
   background-image:
     linear-gradient(var(--vrf-grid-major) var(--vrf-hairline), transparent var(--vrf-hairline)),
     linear-gradient(90deg, var(--vrf-grid-major) var(--vrf-hairline), transparent var(--vrf-hairline)),
@@ -204,6 +209,10 @@ body {
     var(--vrf-grid-size) var(--vrf-grid-size),
     calc(var(--vrf-grid-size) / 5) calc(var(--vrf-grid-size) / 5),
     calc(var(--vrf-grid-size) / 5) calc(var(--vrf-grid-size) / 5);
+}
+
+body {
+  background-color: transparent;
 }
 
 /*
