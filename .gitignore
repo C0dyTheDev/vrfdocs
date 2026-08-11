@@ -31,3 +31,9 @@ yarn-error.log*
 
 # Per-machine vault location for scripts/sync-vault.mjs
 vault.config.json
+
+# Per-machine C# source location for scripts/gen-api.mjs
+api.config.json
+
+# docfx scratch output for scripts/gen-api.mjs
+.docfx/

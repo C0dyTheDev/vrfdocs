@@ -1,0 +1,9 @@
+{
+  "_comment": "Copy to api.config.json (gitignored) and point it at the VR Framework package inside your Unity project - the folder that holds Runtime/ and Editor/. Relative paths are resolved from the repo root.",
+  "source": "C:/Users/you/Documents/Unity Projects/VRF4.0_Core/Assets/vrframework",
+  "_comment_unityProject": "Optional. Defaults to the folder above Assets/, which is where Unity puts the generated .csproj files.",
+  "_comment_sourceUrlTemplate": "Optional. Adds 'view source' links. Placeholders: {repo} {branch} {path} {line}. Drop the key to omit the links (e.g. when the repo is private and the docs are public).",
+  "sourceUrlTemplate": "{repo}/-/blob/{branch}/{path}#L{line}",
+  "_comment_exclude": "Optional. Path segments inside the package whose assemblies are never documented.",
+  "exclude": ["ThirdPartyPlugins", "Samples", "Tests"]
+}

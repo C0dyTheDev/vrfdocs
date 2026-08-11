@@ -8,7 +8,7 @@ The site has two documentation sections:
 | Section | Route | Source directory | Where the content comes from |
 | --- | --- | --- | --- |
 | Tutorials | `/tutorials` | `tutorials/` | Generated from the Obsidian vault (`obsidian_vault/VRFramework/web`) |
-| API | `/api` | `api/` | Placeholder - to be generated from the SDK |
+| API | `/api` | `api/` | Generated from the C# sources in the Unity project (`<UnityProject>/Assets/vrframework`) |
 
 ## Requirements
 
@@ -28,6 +28,7 @@ Node.js >= 20.
 ```bash
 npm install          # once
 npm run sync:vault   # regenerate tutorials/ from the Obsidian vault
+npm run gen:api      # regenerate api/ from the C# sources
 npm start            # dev server on http://localhost:3000
 npm run build        # production build into build/
 npm run serve        # serve the production build locally
@@ -93,17 +94,59 @@ its name to `CATEGORY_ORDER` in `scripts/sync-vault.mjs`.
 
 ## API section
 
-Not wired to a generator yet. The Docusaurus side is ready:
+Generated from the VR Framework C# sources by `scripts/gen-api.mjs`:
 
-- a second `@docusaurus/plugin-content-docs` instance (`id: 'api'`) in
-  `docusaurus.config.ts`
-- content directory `api/`, route `/api`
-- `sidebarsApi.ts` autogenerates the sidebar from the folder tree
+```bash
+npm run gen:api
+npm run gen:api -- --source "C:/path/to/UnityProject/Assets/vrframework"
+```
 
-Point the SDK doc generator at `api/` and the pages appear automatically. See
-`api/index.md` for generator options (DocFX/Doxygen for C#, TypeDoc for a TS
-SDK, `docusaurus-plugin-openapi-docs` for an OpenAPI spec). Add the generation
-step as a `gen:api` script in `package.json`.
+The sources are **not** part of this repo and stay where they are, inside the
+Unity project. The script reads them in place and:
+
+1. finds every `.asmdef` under the package (skipping `ThirdPartyPlugins`,
+   `Samples` and `Tests`) and maps it to the `.csproj` Unity generates for it in
+   the Unity project root
+2. runs `docfx metadata` over those projects - Roslyn parses the C#, so XML doc
+   comments, inherited members and Unity types all resolve properly - into
+   intermediate YAML under `.docfx/` (gitignored)
+3. converts that YAML into Docusaurus Markdown in `api/`: one folder per
+   namespace with a `_category_.json` and an overview page, one page per type,
+   with parameter/return/exception tables, cross-links between framework types,
+   and outbound links to the Unity and .NET reference for foreign types
+
+### One-time setup
+
+```bash
+dotnet tool install -g docfx     # needs the .NET SDK 8 or newer
+```
+
+Open the Unity project once so the `.csproj` files exist - they are what carries
+the assembly references. Then point the script at the package. The location is
+resolved in this order:
+
+1. `--source <path>`
+2. the `VRF_SOURCE` environment variable
+3. `source` in `api.config.json` at the repo root - copy
+   `api.config.example.json` to `api.config.json` and edit it. That file is
+   gitignored, so every machine can have its own path
+4. a few guesses relative to the repo
+
+`api.config.json` also takes `sourceUrlTemplate` (the "view source" links, with
+`{repo}` `{branch}` `{path}` `{line}` - drop the key to omit the links),
+`unityProject` (defaults to the folder above `Assets/`) and `exclude`.
+
+### Rules
+
+`api/` is fully owned by the script and wiped on every run - fix a description
+by editing the XML doc comment in the C# source, then re-run `npm run gen:api`.
+
+The generated Markdown **is committed**, exactly like `tutorials/`: the Vercel
+build has no access to the Unity project, so `npm run build` must find the pages
+already in the repo. Regenerate and commit whenever the public API changes.
+
+Sidebar order comes from `NAMESPACE_ORDER` in `scripts/gen-api.mjs`; everything
+not listed follows alphabetically.
 
 ## Design
 
