@@ -27,6 +27,8 @@ public class SceneTemplateAsset : ScriptableObject
 
 ### description {#description}
 
+One line describing what the template builds.
+
 ```csharp
 [TextArea(2, 6)]
 [Tooltip("Shown in the details panel. Say what kind of scene this is for.")]
@@ -35,9 +37,11 @@ public string description
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L32)
 
 ### displayName {#displayname}
+
+Name shown on the card. Empty uses the asset's own name.
 
 ```csharp
 [Tooltip("Shown on the card. Falls back to the asset name when empty.")]
@@ -46,9 +50,11 @@ public string displayName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L28)
 
 ### iconName {#iconname}
+
+Icon name understood by Unity's built-in icon lookup.
 
 ```csharp
 [Tooltip("Built-in editor icon name used for the card thumbnail.")]
@@ -57,9 +63,11 @@ public string iconName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L43)
 
 ### installerIds {#installerids}
+
+The installers this template runs, in order.
 
 ```csharp
 [Tooltip("Module installer ids, run in this order. See the Modules category for the ids.")]
@@ -68,9 +76,11 @@ public List<string> installerIds
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L47)
 
 ### order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 [Tooltip("Lower sorts first. Framework templates sit between 0 and 100.")]
@@ -79,9 +89,11 @@ public int order
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L39)
 
 ### prefabs {#prefabs}
+
+Prefabs dropped into the scene once the installers have run.
 
 ```csharp
 [Tooltip("Prefabs dropped into the ENVIRONMENT block after the installers have run.")]
@@ -90,9 +102,11 @@ public List<GameObject> prefabs
 
 **Returns** `List<GameObject>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L51)
 
 ### tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public string[] tags
@@ -100,11 +114,13 @@ public string[] tags
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L35)
 
 ## Properties
 
 ### Title {#title}
+
+Name shown in the window.
 
 ```csharp
 public string Title { get; }
@@ -112,7 +128,7 @@ public string Title { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L54)
 
 ## Methods
 
@@ -128,7 +144,7 @@ public static SceneTemplateAsset CaptureActiveScene()
 
 **Returns** [`SceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/SceneTemplateAsset)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L73)
 
 ### FindAll() {#findall}
 
@@ -140,5 +156,5 @@ public static IEnumerable<SceneTemplateAsset> FindAll()
 
 **Returns** `IEnumerable<SceneTemplateAsset>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L57)
 

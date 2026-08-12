@@ -33,7 +33,7 @@ public virtual bool AllowsMultiple { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L38)
 
 ### Creates {#creates}
 
@@ -45,9 +45,11 @@ public virtual string[] Creates { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L32)
 
 ### Description {#description}
+
+One line explaining what this is.
 
 ```csharp
 public virtual string Description { get; }
@@ -55,9 +57,11 @@ public virtual string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L20)
 
 ### DisplayName {#displayname}
+
+Name shown on the card.
 
 ```csharp
 public abstract string DisplayName { get; }
@@ -65,9 +69,11 @@ public abstract string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L17)
 
 ### Group {#group}
+
+Sub-grouping this entry is listed under inside its category.
 
 ```csharp
 public virtual string Group { get; }
@@ -75,9 +81,11 @@ public virtual string Group { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L22)
 
 ### Icon {#icon}
+
+Icon shown on the card.
 
 ```csharp
 public virtual Texture Icon { get; }
@@ -85,9 +93,11 @@ public virtual Texture Icon { get; }
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L51)
 
 ### Id {#id}
+
+Stable identity of the installer.
 
 ```csharp
 public abstract string Id { get; }
@@ -95,9 +105,11 @@ public abstract string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L15)
 
 ### IsInstalled {#isinstalled}
+
+Whether the open scene already has this.
 
 ```csharp
 public virtual bool IsInstalled { get; }
@@ -105,7 +117,7 @@ public virtual bool IsInstalled { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L41)
 
 ### ModuleType {#moduletype}
 
@@ -117,9 +129,11 @@ public virtual Type ModuleType { get; }
 
 **Returns** [`Type`](https://learn.microsoft.com/dotnet/api/system.type)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L29)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public virtual int Order { get; }
@@ -127,7 +141,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L26)
 
 ### Requires {#requires}
 
@@ -139,9 +153,11 @@ public virtual string[] Requires { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L35)
 
 ### Tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public virtual string[] Tags { get; }
@@ -149,7 +165,7 @@ public virtual string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L24)
 
 ## Methods
 
@@ -171,7 +187,7 @@ public abstract GameObject Install(Transform parentOverride)
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L58)
 
 ### Run(Transform, bool) {#run-transform-boolean}
 
@@ -191,5 +207,5 @@ public bool Run(Transform parentOverride = null, bool select = true)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L64)
 

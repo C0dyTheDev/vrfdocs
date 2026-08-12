@@ -8,7 +8,7 @@ description: 'What a sequence has done so far: one status, note and duration per
 
 # SetupProgress
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L92)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L106)
 
 What a sequence has done so far: one status, note and duration per step, plus how it ended.
 
@@ -31,15 +31,19 @@ public class SetupProgress
 
 ### abortedBecause {#abortedbecause}
 
+Why the sequence stopped early, or null when it did not.
+
 ```csharp
 public string abortedBecause
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L128)
 
 ### durations {#durations}
+
+How long each step took, in seconds.
 
 ```csharp
 public List<float> durations
@@ -47,9 +51,11 @@ public List<float> durations
 
 **Returns** `List<float>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L118)
 
 ### failures {#failures}
+
+How many steps have failed so far.
 
 ```csharp
 public int failures
@@ -57,9 +63,11 @@ public int failures
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L105)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L124)
 
 ### finished {#finished}
+
+Whether the sequence has finished.
 
 ```csharp
 public bool finished
@@ -67,7 +75,7 @@ public bool finished
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L126)
 
 ### index {#index}
 
@@ -79,9 +87,11 @@ public int index
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L103)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L121)
 
 ### notes {#notes}
+
+Note recorded against each step, e.g. why it failed.
 
 ```csharp
 public List<string> notes
@@ -89,9 +99,11 @@ public List<string> notes
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L116)
 
 ### states {#states}
+
+Status of each step, as [`SetupStepStatus`](/api/vrframework-core-editors-setup/SetupStepStatus) values.
 
 ```csharp
 public List<int> states
@@ -99,7 +111,7 @@ public List<int> states
 
 **Returns** `List<int>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L114)
 
 ### summary {#summary}
 
@@ -111,9 +123,11 @@ public string summary
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L131)
 
 ### titles {#titles}
+
+Title of each step, in order.
 
 ```csharp
 public List<string> titles
@@ -121,11 +135,13 @@ public List<string> titles
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L112)
 
 ## Properties
 
 ### Aborted {#aborted}
+
+Whether the sequence stopped early.
 
 ```csharp
 public bool Aborted { get; }
@@ -133,9 +149,11 @@ public bool Aborted { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L137)
 
 ### Count {#count}
+
+How many steps the sequence has.
 
 ```csharp
 public int Count { get; }
@@ -143,7 +161,7 @@ public int Count { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L134)
 
 ### Settled {#settled}
 
@@ -155,7 +173,7 @@ public int Settled { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L140)
 
 ## Methods
 
@@ -175,7 +193,7 @@ public float DurationOf(int step)
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L147)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L176)
 
 ### NoteOf(int) {#noteof-int32}
 
@@ -193,9 +211,11 @@ public string NoteOf(int step)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L170)
 
 ### StatusOf(int) {#statusof-int32}
+
+Status of one step.
 
 ```csharp
 public SetupStepStatus StatusOf(int step)
@@ -205,13 +225,15 @@ public SetupStepStatus StatusOf(int step)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `step` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
+| `step` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the step. |
 
-**Returns** [`SetupStepStatus`](/api/vrframework-core-editors-setup/SetupStepStatus)
+**Returns** [`SetupStepStatus`](/api/vrframework-core-editors-setup/SetupStepStatus) - Its status, or Pending when there is no such step.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L164)
 
 ### TitleOf(int) {#titleof-int32}
+
+Title of one step.
 
 ```csharp
 public string TitleOf(int step)
@@ -221,9 +243,9 @@ public string TitleOf(int step)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `step` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
+| `step` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the step. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - Its title, or an empty string when there is no such step.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L130)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L156)
 

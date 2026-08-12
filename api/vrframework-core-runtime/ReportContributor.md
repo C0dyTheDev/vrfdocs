@@ -32,6 +32,8 @@ public abstract class ReportContributor : MonoBehaviour, IReportContributor
 
 ### reportKey {#reportkey}
 
+Key this component's value lands under in the report. Empty means the class name.
+
 ```csharp
 [Tooltip("Key this component's data lands under in the report. Empty means the class name.")]
 [SerializeField]
@@ -40,14 +42,13 @@ protected string reportKey
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L22)
 
 ## Properties
 
 ### ReportKey {#reportkey}
 
-The key this contribution lands under in the report JSON. Two contributors claiming the
-same key is a conflict: the framework says so and the last one collected wins.
+The report key: [`reportKey`](/api/vrframework-core-runtime/ReportContributor#reportkey) when set, otherwise the class name.
 
 ```csharp
 public virtual string ReportKey { get; }
@@ -55,17 +56,19 @@ public virtual string ReportKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L25)
 
 ## Methods
 
 ### Awake() {#awake}
 
+Registers the component with [`PlatformReport`](/api/vrframework-core-runtime/PlatformReport). Call the base when overriding.
+
 ```csharp
 protected virtual void Awake()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L34)
 
 ### GetReportValue() {#getreportvalue}
 
@@ -75,15 +78,18 @@ What to report. Anything JSON can hold; null leaves the key out of the report en
 public abstract object GetReportValue()
 ```
 
-**Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object)
+**Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object) - The value to report, or null to leave the key out.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L31)
 
 ### OnDestroy() {#ondestroy}
+
+Freezes the component's last value into the report and unregisters it. Call the base when
+overriding.
 
 ```csharp
 protected virtual void OnDestroy()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L43)
 

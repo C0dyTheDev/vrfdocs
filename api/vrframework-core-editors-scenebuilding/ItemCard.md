@@ -25,6 +25,8 @@ public class ItemCard : VisualElement, IEventHandler, IResolvedStyle, ITransform
 
 ### ItemCard(SceneBuilderItem, Action\<SceneBuilderItem>) {#ctor-scenebuilderitem-scenebuilderitem}
 
+Builds a card for one entry.
+
 ```csharp
 public ItemCard(SceneBuilderItem item, Action<SceneBuilderItem> onSelect)
 ```
@@ -33,14 +35,16 @@ public ItemCard(SceneBuilderItem item, Action<SceneBuilderItem> onSelect)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) |  |
-| `onSelect` | `Action<SceneBuilderItem>` |  |
+| `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) | Entry the card stands for. |
+| `onSelect` | `Action<SceneBuilderItem>` | Called with the entry when the card is clicked. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L25)
 
 ## Properties
 
 ### Item {#item}
+
+The entry this card stands for.
 
 ```csharp
 public SceneBuilderItem Item { get; }
@@ -48,7 +52,7 @@ public SceneBuilderItem Item { get; }
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L63)
 
 ### ThumbnailPending {#thumbnailpending}
 
@@ -60,7 +64,7 @@ public bool ThumbnailPending { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L66)
 
 ## Methods
 
@@ -72,17 +76,21 @@ Re-reads the scene-dependent state: the badge and the dimmed "already there" loo
 public void RefreshState()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L82)
 
 ### RefreshThumbnail() {#refreshthumbnail}
+
+Fetches the thumbnail again, for a card whose preview was still baking.
 
 ```csharp
 public void RefreshThumbnail()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L76)
 
 ### SetSelected(bool) {#setselected-boolean}
+
+Draws the card as selected or not.
 
 ```csharp
 public void SetSelected(bool selected)
@@ -92,7 +100,7 @@ public void SetSelected(bool selected)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `selected` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
+| `selected` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to draw it as selected. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L70)
 

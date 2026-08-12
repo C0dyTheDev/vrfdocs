@@ -8,7 +8,7 @@ description: 'One line in the log list.'
 
 # VRFLogRow
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L26)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L33)
 
 One line in the log list. Rows are recycled by the ListView, so everything is built once in
 the constructor and only re-pointed at another entry in [`Bind(VRFLogEntry, VRFLogRowContext, int, VRFLogEntry)`](/api/vrframework-core-editors-logging/VRFLogRow#bind-vrflogentry-vrflogrowcontext-int32-vrflogentry).
@@ -25,11 +25,13 @@ public sealed class VRFLogRow : VisualElement, IEventHandler, IResolvedStyle, IT
 
 ### VRFLogRow() {#ctor}
 
+Builds an empty row, ready to be bound to an entry.
+
 ```csharp
 public VRFLogRow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L44)
 
 ## Properties
 
@@ -43,11 +45,13 @@ public VRFLogEntry Entry { get; }
 
 **Returns** [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L82)
 
 ## Methods
 
 ### Bind(VRFLogEntry, VRFLogRowContext, int, VRFLogEntry) {#bind-vrflogentry-vrflogrowcontext-int32-vrflogentry}
+
+Fills the row in for one entry.
 
 ```csharp
 public void Bind(VRFLogEntry entry, VRFLogRowContext context, int collapsed, VRFLogEntry previous)
@@ -57,10 +61,10 @@ public void Bind(VRFLogEntry entry, VRFLogRowContext context, int collapsed, VRF
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entry` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) |  |
-| `context` | [`VRFLogRowContext`](/api/vrframework-core-editors-logging/VRFLogRowContext) |  |
-| `collapsed` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `previous` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) |  |
+| `entry` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) | Entry to show. |
+| `context` | [`VRFLogRowContext`](/api/vrframework-core-editors-logging/VRFLogRowContext) | Display options shared by every row. |
+| `collapsed` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | How many identical lines this row stands for. |
+| `previous` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) | The line above this one, needed for the delta time column. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L89)
 

@@ -28,18 +28,22 @@ public class OpenCodeChatWindow : EditorWindow
 
 ### CreateGUI() {#creategui}
 
+Builds the window: the transcript, the prompt box and the toolbar.
+
 ```csharp
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L75)
 
 ### ShowWindow() {#showwindow}
+
+Opens the OpenCode chat window.
 
 ```csharp
 [MenuItem("VRFramework/OpenCode Assistant", priority = 63)]
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L64)
 

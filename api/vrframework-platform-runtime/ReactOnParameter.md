@@ -22,6 +22,8 @@ public class ReactOnParameter : MonoBehaviour
 
 ### expectedValue {#expectedvalue}
 
+Value the parameter is compared against.
+
 ```csharp
 [SerializeField]
 public string expectedValue
@@ -29,9 +31,11 @@ public string expectedValue
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L15)
 
 ### OnCorrectParameterValue {#oncorrectparametervalue}
+
+Raised when the parameter matches the expected value.
 
 ```csharp
 public UnityEvent OnCorrectParameterValue
@@ -39,9 +43,11 @@ public UnityEvent OnCorrectParameterValue
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L18)
 
 ### OnWrongParameterValue {#onwrongparametervalue}
+
+Raised when the parameter is present but different.
 
 ```csharp
 public UnityEvent OnWrongParameterValue
@@ -49,9 +55,11 @@ public UnityEvent OnWrongParameterValue
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L20)
 
 ### parameterName {#parametername}
+
+Name of the parameter to read.
 
 ```csharp
 [SerializeField]
@@ -60,5 +68,5 @@ public string parameterName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L13)
 

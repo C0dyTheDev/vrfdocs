@@ -8,7 +8,7 @@ description: 'A place the Assets category can pull from.'
 
 # IAssetSource
 
-**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L65)
+**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L82)
 
 A place the Assets category can pull from. Implement this to plug in your own database - the
 window finds it through [`AssetSources`](/api/vrframework-core-editors-scenebuilding/AssetSources) with no other changes.
@@ -23,15 +23,19 @@ public interface IAssetSource
 
 ### DisplayName {#displayname}
 
+Name shown for the source in the toolbar.
+
 ```csharp
 string DisplayName { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L87)
 
 ### Id {#id}
+
+Stable identity of the source.
 
 ```csharp
 string Id { get; }
@@ -39,7 +43,7 @@ string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L85)
 
 ### IsConfigured {#isconfigured}
 
@@ -51,9 +55,11 @@ bool IsConfigured { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L92)
 
 ### Order {#order}
+
+Sort weight among the sources. Lower comes first.
 
 ```csharp
 int Order { get; }
@@ -61,7 +67,7 @@ int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L89)
 
 ### StatusLabel {#statuslabel}
 
@@ -73,7 +79,7 @@ string StatusLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L95)
 
 ## Methods
 
@@ -87,7 +93,7 @@ IEnumerable<AssetEntry> GetEntries()
 
 **Returns** `IEnumerable<AssetEntry>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L98)
 
 ### Refresh() {#refresh}
 
@@ -97,7 +103,7 @@ Drops any cache and re-reads the underlying database.
 void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L101)
 
 ### Resolve(AssetEntry) {#resolve-assetentry}
 
@@ -116,5 +122,5 @@ Object Resolve(AssetEntry entry)
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L107)
 

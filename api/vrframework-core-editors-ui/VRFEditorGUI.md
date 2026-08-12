@@ -62,7 +62,7 @@ public static int ButtonRow(params GUIContent[] buttons)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L194)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L198)
 
 ### Divider(float) {#divider-single}
 
@@ -78,7 +78,7 @@ public static void Divider(float spacing = 4)
 | --- | --- | --- |
 | `spacing` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L147)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L151)
 
 ### DrawPill(string, Color) {#drawpill-string-color}
 
@@ -95,7 +95,7 @@ public static void DrawPill(string text, Color color)
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `color` | [`Color`](https://docs.unity3d.com/ScriptReference/Color.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L111)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L115)
 
 ### EventsSection(string, string, bool) {#eventssection-string-string-boolean}
 
@@ -116,7 +116,7 @@ public static VRFEditorGUI.SectionScope EventsSection(string prefsKey, string ti
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L140)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L144)
 
 ### HeaderBar(string, string, int) {#headerbar-string-string-int32}
 
@@ -155,7 +155,7 @@ public static void Hint(string text)
 | --- | --- | --- |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L186)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L190)
 
 ### MixedValueNotice(string) {#mixedvaluenotice-string}
 
@@ -172,7 +172,7 @@ public static void MixedValueNotice(string fieldLabel)
 | --- | --- | --- |
 | `fieldLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L159)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L163)
 
 ### Section(string, string, bool) {#section-string-string-boolean}
 
@@ -193,7 +193,7 @@ public static VRFEditorGUI.SectionScope Section(string prefsKey, string title, b
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L131)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L135)
 
 ### TagField(SerializedProperty, string) {#tagfield-serializedproperty-string}
 
@@ -212,5 +212,5 @@ public static void TagField(SerializedProperty property, string label)
 | `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) |  |
 | `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L171)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L175)
 

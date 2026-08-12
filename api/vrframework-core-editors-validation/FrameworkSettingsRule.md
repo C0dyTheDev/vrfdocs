@@ -23,7 +23,7 @@ public class FrameworkSettingsRule : ValidationRule
 
 ### Category {#category}
 
-Group heading in the window. Rules that share a category are listed together.
+Heading the findings of this rule are grouped under.
 
 ```csharp
 public override string Category { get; }
@@ -31,11 +31,11 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L20)
 
 ### Order {#order}
 
-Lower runs, and lists, first.
+Where these findings sit in the report. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -43,9 +43,11 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L24)
 
 ### Scope {#scope}
+
+Whether the rule checks the project or the open scene.
 
 ```csharp
 public override ValidationScope Scope { get; }
@@ -53,11 +55,13 @@ public override ValidationScope Scope { get; }
 
 **Returns** [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L22)
 
 ## Methods
 
 ### Validate(ValidationReport) {#validate-validationreport}
+
+Runs the check and reports what it finds.
 
 ```csharp
 public override void Validate(ValidationReport report)
@@ -67,7 +71,7 @@ public override void Validate(ValidationReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L28)
 

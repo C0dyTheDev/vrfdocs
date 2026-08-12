@@ -8,7 +8,7 @@ description: 'One delivery waiting its turn.'
 
 # QueuedReport
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L40)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L47)
 
 One delivery waiting its turn.
 
@@ -31,9 +31,11 @@ public bool AcceptAnySuccess
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L67)
 
 ### Json {#json}
+
+The JSON body.
 
 ```csharp
 public string Json
@@ -41,7 +43,7 @@ public string Json
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L52)
 
 ### Label {#label}
 
@@ -53,7 +55,7 @@ public string Label
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L58)
 
 ### Method {#method}
 
@@ -65,7 +67,7 @@ public string Method
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L55)
 
 ### Ordinal {#ordinal}
 
@@ -77,9 +79,11 @@ public int Ordinal
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L61)
 
 ### Url {#url}
+
+Where the delivery is sent.
 
 ```csharp
 public string Url
@@ -87,11 +91,13 @@ public string Url
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L50)
 
 ## Properties
 
 ### Attempts {#attempts}
+
+How many times this delivery has been attempted.
 
 ```csharp
 public int Attempts { get; }
@@ -99,5 +105,5 @@ public int Attempts { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L70)
 

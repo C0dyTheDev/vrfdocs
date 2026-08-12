@@ -23,15 +23,19 @@ public class Parameters : ScriptableObject
 
 ### maxGameTimeDefault {#maxgametimedefault}
 
+The maximum play time used when the platform does not supply one, in seconds.
+
 ```csharp
 public int maxGameTimeDefault
 ```
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/Parameters.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/Parameters.cs#L15)
 
 ### parameters {#parameters}
+
+The parameters the app expects, with the values to fall back on.
 
 ```csharp
 public List<Parameter> parameters
@@ -39,9 +43,11 @@ public List<Parameter> parameters
 
 **Returns** `List<Parameter>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/Parameters.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/Parameters.cs#L17)
 
 ### useMaxGameTime {#usemaxgametime}
+
+Whether the session is cut short by a maximum play time.
 
 ```csharp
 public bool useMaxGameTime
@@ -49,5 +55,5 @@ public bool useMaxGameTime
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/Parameters.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/Parameters.cs#L13)
 

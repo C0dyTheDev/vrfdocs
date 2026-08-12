@@ -25,6 +25,8 @@ public class DetailsPanel : VisualElement, IEventHandler, IResolvedStyle, ITrans
 
 ### DetailsPanel(Action, Action) {#ctor-action-action}
 
+Builds the details panel.
+
 ```csharp
 public DetailsPanel(Action onAfterAction, Action onClose)
 ```
@@ -33,14 +35,16 @@ public DetailsPanel(Action onAfterAction, Action onClose)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `onAfterAction` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
-| `onClose` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
+| `onAfterAction` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | Called once an action has run, so the window can refresh. |
+| `onClose` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | Called when the panel is closed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L26)
 
 ## Properties
 
 ### Current {#current}
+
+The entry currently shown, or null when the panel is empty.
 
 ```csharp
 public SceneBuilderItem Current { get; }
@@ -48,7 +52,7 @@ public SceneBuilderItem Current { get; }
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L83)
 
 ## Methods
 
@@ -60,9 +64,11 @@ Re-evaluates action enabled states after the scene changed.
 public void RefreshState()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L115)
 
 ### Show(SceneBuilderItem) {#show-scenebuilderitem}
+
+Shows one entry: its description, details and actions.
 
 ```csharp
 public void Show(SceneBuilderItem item)
@@ -72,7 +78,7 @@ public void Show(SceneBuilderItem item)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) |  |
+| `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) | Entry to show, or null to clear the panel. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L87)
 

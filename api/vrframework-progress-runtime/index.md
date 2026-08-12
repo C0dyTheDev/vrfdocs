@@ -12,24 +12,24 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`BlockSaveData`](/api/vrframework-progress-runtime/BlockSaveData) |  |
-| [`Condition`](/api/vrframework-progress-runtime/Condition) |  |
-| [`ConditionalEnqueue`](/api/vrframework-progress-runtime/ConditionalEnqueue) |  |
-| [`ConditionalEvent`](/api/vrframework-progress-runtime/ConditionalEvent) |  |
-| [`ConstantEnqueue`](/api/vrframework-progress-runtime/ConstantEnqueue) |  |
+| [`BlockSaveData`](/api/vrframework-progress-runtime/BlockSaveData) | What the graph editor remembers about a block, kept with the block itself. |
+| [`Condition`](/api/vrframework-progress-runtime/Condition) | Base of the scenario branching components: a set of flags the scene ticks off through UnityEvents, combined into one verdict by ConditionMode/api/vrframework-progress-runtime/Condi |
+| [`ConditionalEnqueue`](/api/vrframework-progress-runtime/ConditionalEnqueue) | Branches the scenario on its condition: queues one block when the flags add up, another when they do not. |
+| [`ConditionalEvent`](/api/vrframework-progress-runtime/ConditionalEvent) | Raises one of two events depending on whether its flags add up - branching within a scene, where ConditionalEnqueue/api/vrframework-progress-runtime/ConditionalEnqueue branches the |
+| [`ConstantEnqueue`](/api/vrframework-progress-runtime/ConstantEnqueue) | Queues a block unconditionally. |
 | [`EnqueueLogic`](/api/vrframework-progress-runtime/EnqueueLogic) | Shared by the enqueue components. |
 | [`GraphUpdater`](/api/vrframework-progress-runtime/GraphUpdater) | Coalesces graph redraw requests, so everything that dirties the scenario within one tick costs a single redraw. |
-| [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) |  |
-| [`ProgressManager`](/api/vrframework-progress-runtime/ProgressManager) |  |
-| [`ProgressStep`](/api/vrframework-progress-runtime/ProgressStep) |  |
-| [`RenamableBehaviour`](/api/vrframework-progress-runtime/RenamableBehaviour) |  |
-| [`Scenario`](/api/vrframework-progress-runtime/Scenario) |  |
-| [`ScenarioObjectRenamer`](/api/vrframework-progress-runtime/ScenarioObjectRenamer) |  |
+| [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) | A group of steps that run one after another. |
+| [`ProgressManager`](/api/vrframework-progress-runtime/ProgressManager) | The progress module: runs the scenario. |
+| [`ProgressStep`](/api/vrframework-progress-runtime/ProgressStep) | One thing the trainee is asked to do. |
+| [`RenamableBehaviour`](/api/vrframework-progress-runtime/RenamableBehaviour) | Base of the scenario objects whose name is kept in step with their object name. |
+| [`Scenario`](/api/vrframework-progress-runtime/Scenario) | The root of a scene's scenario. |
+| [`ScenarioObjectRenamer`](/api/vrframework-progress-runtime/ScenarioObjectRenamer) | Keeps the scenario objects named after their position: "01 Name" for a block and "01-02 Name" for a step, so the hierarchy reads in run order. |
 
 ## Enums
 
 | Name | Summary |
 | --- | --- |
 | [`ConditionMode`](/api/vrframework-progress-runtime/ConditionMode) | How the flags of a Condition/api/vrframework-progress-runtime/Condition combine into one verdict. |
-| [`QueueLocations`](/api/vrframework-progress-runtime/QueueLocations) |  |
+| [`QueueLocations`](/api/vrframework-progress-runtime/QueueLocations) | Where a queued block is put. |
 

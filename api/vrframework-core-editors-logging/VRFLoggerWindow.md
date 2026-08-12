@@ -26,18 +26,22 @@ public class VRFLoggerWindow : EditorWindow
 
 ### CreateGUI() {#creategui}
 
+Builds the window: toolbar, list, details pane and their bindings.
+
 ```csharp
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerWindow.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerWindow.cs#L51)
 
 ### ShowWindow() {#showwindow}
+
+Opens the VRF Logger window.
 
 ```csharp
 [MenuItem("VRFramework/Logger", priority = 62)]
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerWindow.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerWindow.cs#L79)
 

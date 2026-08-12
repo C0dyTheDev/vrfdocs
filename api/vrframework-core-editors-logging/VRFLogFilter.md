@@ -24,15 +24,19 @@ public sealed class VRFLogFilter
 
 ### hiddenChannels {#hiddenchannels}
 
+Channels the user has switched off.
+
 ```csharp
 public readonly HashSet<string> hiddenChannels
 ```
 
 **Returns** `HashSet<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L18)
 
 ### showDebug {#showdebug}
+
+Whether internal debug lines are shown.
 
 ```csharp
 public bool showDebug
@@ -40,9 +44,11 @@ public bool showDebug
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L24)
 
 ### showError {#showerror}
+
+Whether error lines are shown.
 
 ```csharp
 public bool showError
@@ -50,9 +56,11 @@ public bool showError
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L26)
 
 ### showInfo {#showinfo}
+
+Whether informational lines are shown.
 
 ```csharp
 public bool showInfo
@@ -60,9 +68,11 @@ public bool showInfo
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L29)
 
 ### showWarning {#showwarning}
+
+Whether warning lines are shown.
 
 ```csharp
 public bool showWarning
@@ -70,11 +80,13 @@ public bool showWarning
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L31)
 
 ## Properties
 
 ### CompiledRegex {#compiledregex}
+
+The compiled pattern while regex mode is on, or null.
 
 ```csharp
 public Regex CompiledRegex { get; }
@@ -82,7 +94,7 @@ public Regex CompiledRegex { get; }
 
 **Returns** [`Regex`](https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L41)
 
 ### Error {#error}
 
@@ -94,9 +106,11 @@ public string Error { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L35)
 
 ### HasTextFilter {#hastextfilter}
+
+Whether anything is typed in the search box.
 
 ```csharp
 public bool HasTextFilter { get; }
@@ -104,7 +118,7 @@ public bool HasTextFilter { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L44)
 
 ### IncludeTerms {#includeterms}
 
@@ -116,9 +130,11 @@ public IReadOnlyList<string> IncludeTerms { get; }
 
 **Returns** `IReadOnlyList<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L38)
 
 ### MatchCase {#matchcase}
+
+Whether the search is case sensitive.
 
 ```csharp
 public bool MatchCase { get; set; }
@@ -126,9 +142,11 @@ public bool MatchCase { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L61)
 
 ### Search {#search}
+
+The search text. Setting it re-parses the terms and the pattern.
 
 ```csharp
 public string Search { get; set; }
@@ -136,9 +154,11 @@ public string Search { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L47)
 
 ### UseRegex {#useregex}
+
+Whether the search text is read as a regular expression.
 
 ```csharp
 public bool UseRegex { get; set; }
@@ -146,11 +166,13 @@ public bool UseRegex { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L74)
 
 ## Methods
 
 ### Matches(VRFLogEntry) {#matches-vrflogentry}
+
+Whether one entry passes every part of the filter.
 
 ```csharp
 public bool Matches(VRFLogEntry entry)
@@ -160,13 +182,15 @@ public bool Matches(VRFLogEntry entry)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entry` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) |  |
+| `entry` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) | Entry to test. |
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the window should show it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L103)
 
 ### ShowsLevel(VRFLogLevel) {#showslevel-vrfloglevel}
+
+Whether lines of a severity are shown at all.
 
 ```csharp
 public bool ShowsLevel(VRFLogLevel level)
@@ -176,9 +200,9 @@ public bool ShowsLevel(VRFLogLevel level)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) |  |
+| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) | Severity to test. |
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when that severity is switched on.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L89)
 

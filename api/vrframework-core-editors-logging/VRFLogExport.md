@@ -36,9 +36,11 @@ public static void Save(IReadOnlyList<VRFLogEntry> entries, string extension)
 | `entries` | `IReadOnlyList<VRFLogEntry>` |  |
 | `extension` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L87)
 
 ### ToCsv(IReadOnlyList\<VRFLogEntry>) {#tocsv-vrflogentry}
+
+Writes the entries out as CSV, one row each.
 
 ```csharp
 public static string ToCsv(IReadOnlyList<VRFLogEntry> entries)
@@ -48,13 +50,15 @@ public static string ToCsv(IReadOnlyList<VRFLogEntry> entries)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entries` | `IReadOnlyList<VRFLogEntry>` |  |
+| `entries` | `IReadOnlyList<VRFLogEntry>` | Entries to export. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The CSV text.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L39)
 
 ### ToJson(IReadOnlyList\<VRFLogEntry>) {#tojson-vrflogentry}
+
+Writes the entries out as JSON.
 
 ```csharp
 public static string ToJson(IReadOnlyList<VRFLogEntry> entries)
@@ -64,13 +68,15 @@ public static string ToJson(IReadOnlyList<VRFLogEntry> entries)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entries` | `IReadOnlyList<VRFLogEntry>` |  |
+| `entries` | `IReadOnlyList<VRFLogEntry>` | Entries to export. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The JSON text.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L61)
 
 ### ToText(IReadOnlyList\<VRFLogEntry>, bool) {#totext-vrflogentry-boolean}
+
+Writes the entries out as plain text, one line each.
 
 ```csharp
 public static string ToText(IReadOnlyList<VRFLogEntry> entries, bool includeStackTraces)
@@ -80,10 +86,10 @@ public static string ToText(IReadOnlyList<VRFLogEntry> entries, bool includeStac
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entries` | `IReadOnlyList<VRFLogEntry>` |  |
-| `includeStackTraces` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
+| `entries` | `IReadOnlyList<VRFLogEntry>` | Entries to export. |
+| `includeStackTraces` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to append each entry's stack trace. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The exported text.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogExport.cs#L19)
 

@@ -44,7 +44,7 @@ public static bool AutoStartServer { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L42)
 
 ### ExecutablePath {#executablepath}
 
@@ -68,9 +68,11 @@ public static string LastSessionId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L73)
 
 ### ModelId {#modelid}
+
+ID of the model last chosen in the picker.
 
 ```csharp
 public static string ModelId { get; set; }
@@ -78,9 +80,11 @@ public static string ModelId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L35)
 
 ### ProviderId {#providerid}
+
+ID of the provider last chosen in the picker.
 
 ```csharp
 public static string ProviderId { get; set; }
@@ -88,7 +92,7 @@ public static string ProviderId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L28)
 
 ### RefreshAssetsWhenIdle {#refreshassetswhenidle}
 
@@ -101,7 +105,7 @@ public static bool RefreshAssetsWhenIdle { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L66)
 
 ### ShowReasoning {#showreasoning}
 
@@ -113,7 +117,7 @@ public static bool ShowReasoning { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L49)
 
 ### ShowToolCalls {#showtoolcalls}
 
@@ -125,5 +129,5 @@ public static bool ShowToolCalls { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L56)
 

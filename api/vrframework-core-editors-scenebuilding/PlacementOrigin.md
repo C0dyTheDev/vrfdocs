@@ -8,7 +8,7 @@ description: 'How an item ended up being placed.'
 
 # PlacementOrigin
 
-**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L25)
+**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L30)
 
 How an item ended up being placed. Cards can be dropped in the Scene view (world position
 known), on a hierarchy entry (parent known) or activated straight from the details panel
@@ -22,7 +22,7 @@ public enum PlacementOrigin
 
 | Name | Value | Description |
 | --- | --- | --- |
-| `Hierarchy` | 2 |  |
-| `SceneView` | 1 |  |
-| `Window` | 0 |  |
+| `Hierarchy` | 2 | Dropped onto a hierarchy entry, so a parent is known. |
+| `SceneView` | 1 | Dropped into the Scene view, so a world position is known. |
+| `Window` | 0 | Activated from the window itself, so nothing is known about where it goes. |
 

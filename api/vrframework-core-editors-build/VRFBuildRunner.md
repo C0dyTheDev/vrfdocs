@@ -26,13 +26,15 @@ public static class VRFBuildRunner
 
 ### LogPrefix {#logprefix}
 
+Prefix every build log line carries, so a build is easy to pick out of the console.
+
 ```csharp
 public const string LogPrefix = "[VRF Build]"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L20)
 
 ## Methods
 
@@ -55,7 +57,7 @@ public static VRFBuildContext Apply(BuildProfile profile, VRFBuildSettings setti
 
 **Returns** [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L62)
 
 ### Describe(BuildProfile, VRFBuildSettings, VRFBuildContext) {#describe-buildprofile-vrfbuildsettings-vrfbuildcontext}
 
@@ -75,7 +77,7 @@ public static string Describe(BuildProfile profile, VRFBuildSettings settings, V
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L77)
 
 ### DescribeErrors(ValidationReport) {#describeerrors-validationreport}
 
@@ -94,7 +96,7 @@ public static string DescribeErrors(ValidationReport report)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L98)
 
 ### LogWarnings(ValidationReport, BuildProfile) {#logwarnings-validationreport-buildprofile}
 
@@ -111,7 +113,7 @@ public static void LogWarnings(ValidationReport report, BuildProfile profile)
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L115)
 
 ### TryResolveActive(out BuildProfile, out VRFBuildSettings, out string) {#tryresolveactive-buildprofile-vrfbuildsettings-string}
 
@@ -132,5 +134,5 @@ public static bool TryResolveActive(out BuildProfile profile, out VRFBuildSettin
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L26)
 

@@ -28,11 +28,13 @@ public class MyData
 
 ### scenes {#scenes}
 
+The scenes this build offers the platform.
+
 ```csharp
 public List<PlatformScene> scenes
 ```
 
 **Returns** `List<PlatformScene>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L18)
 

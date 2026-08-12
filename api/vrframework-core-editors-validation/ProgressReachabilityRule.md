@@ -8,7 +8,7 @@ description: 'Walks the scenario the way the manager does - start block, then wh
 
 # ProgressReachabilityRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L296)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L320)
 
 Walks the scenario the way the manager does - start block, then whatever each step queues -
 and reports the blocks nothing can reach.
@@ -23,7 +23,7 @@ public class ProgressReachabilityRule : ValidationRule
 
 ### Category {#category}
 
-Group heading in the window. Rules that share a category are listed together.
+Heading the findings of this rule are grouped under.
 
 ```csharp
 public override string Category { get; }
@@ -31,11 +31,11 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L298)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L323)
 
 ### Order {#order}
 
-Lower runs, and lists, first.
+Where these findings sit in the report. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -43,24 +43,25 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L299)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L325)
 
 ## Methods
 
 ### AppliesTo() {#appliesto}
 
-False to skip the rule entirely. A module rule returns false when the open scene has no
-such module, so a scene that simply does not use it is never reported as broken.
+Whether this rule has anything to check right now.
 
 ```csharp
 public override bool AppliesTo()
 ```
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the check should run.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L301)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L329)
 
 ### Validate(ValidationReport) {#validate-validationreport}
+
+Runs the check and reports what it finds.
 
 ```csharp
 public override void Validate(ValidationReport report)
@@ -70,7 +71,7 @@ public override void Validate(ValidationReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L307)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L337)
 

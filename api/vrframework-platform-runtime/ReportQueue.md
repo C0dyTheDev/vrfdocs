@@ -8,7 +8,7 @@ description: 'Delivers reports one at a time and in the order they were queued: 
 
 # ReportQueue
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L72)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L82)
 
 Delivers reports one at a time and in the order they were queued: the next one is only sent
 once the platform has confirmed the one before it. Reports describe a session that is still
@@ -27,6 +27,8 @@ public class ReportQueue
 
 ### ReportQueue(ReportSettings, Object) {#ctor-reportsettings-object}
 
+Builds a queue.
+
 ```csharp
 public ReportQueue(ReportSettings settings, Object context = null)
 ```
@@ -35,14 +37,16 @@ public ReportQueue(ReportSettings settings, Object context = null)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `settings` | [`ReportSettings`](/api/vrframework-platform-runtime/ReportSettings) |  |
-| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
+| `settings` | [`ReportSettings`](/api/vrframework-platform-runtime/ReportSettings) | Delivery settings. Null uses the defaults. |
+| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object the queue's log lines are attributed to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L96)
 
 ## Properties
 
 ### IsIdle {#isidle}
+
+True when nothing is queued and nothing is being sent.
 
 ```csharp
 public bool IsIdle { get; }
@@ -50,7 +54,7 @@ public bool IsIdle { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L106)
 
 ### PendingCount {#pendingcount}
 
@@ -62,11 +66,13 @@ public int PendingCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L90)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L103)
 
 ## Methods
 
 ### Enqueue(QueuedReport) {#enqueue-queuedreport}
+
+Puts a delivery at the back of the queue. One without a URL is refused and logged.
 
 ```csharp
 public void Enqueue(QueuedReport report)
@@ -76,9 +82,9 @@ public void Enqueue(QueuedReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `report` | [`QueuedReport`](/api/vrframework-platform-runtime/QueuedReport) |  |
+| `report` | [`QueuedReport`](/api/vrframework-platform-runtime/QueuedReport) | Delivery to queue. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L118)
 
 ### Run() {#run}
 
@@ -88,9 +94,9 @@ The worker. Runs for as long as the session does - start it once and leave it be
 public IEnumerator Run()
 ```
 
-**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
+**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that never completes - it is the queue's worker loop.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L136)
 
 ### WaitUntilEmpty(float) {#waituntilempty-single}
 
@@ -105,11 +111,11 @@ public IEnumerator WaitUntilEmpty(float timeout)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `timeout` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
+| `timeout` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long to wait, in seconds, before carrying on regardless. |
 
-**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
+**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the queue empties or the wait runs out.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L177)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L198)
 
 ## Events
 
@@ -123,7 +129,7 @@ public event Action<QueuedReport> Delivered
 
 **Returns** `Action<QueuedReport>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L95)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L109)
 
 ### Dropped {#dropped}
 
@@ -135,5 +141,5 @@ public event Action<QueuedReport> Dropped
 
 **Returns** `Action<QueuedReport>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L112)
 

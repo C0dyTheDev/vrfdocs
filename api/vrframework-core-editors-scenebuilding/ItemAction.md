@@ -8,7 +8,7 @@ description: 'A named button shown in the details panel.'
 
 # ItemAction
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L57)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L70)
 
 A named button shown in the details panel. Actions are the non-drag way of using an item.
 
@@ -22,6 +22,8 @@ public class ItemAction
 
 ### ItemAction(string, Action) {#ctor-string-action}
 
+Builds an action.
+
 ```csharp
 public ItemAction(string label, Action execute)
 ```
@@ -30,14 +32,16 @@ public ItemAction(string label, Action execute)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `execute` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
+| `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the button. |
+| `execute` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | What the button does. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L75)
 
 ## Properties
 
 ### Enabled {#enabled}
+
+Whether the button is clickable right now.
 
 ```csharp
 public bool Enabled { get; }
@@ -45,9 +49,11 @@ public bool Enabled { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L95)
 
 ### Execute {#execute}
+
+What the button does.
 
 ```csharp
 public Action Execute { get; }
@@ -55,9 +61,11 @@ public Action Execute { get; }
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L84)
 
 ### IsDestructive {#isdestructive}
+
+Whether the action destroys something, and so is drawn as a warning.
 
 ```csharp
 public bool IsDestructive { get; set; }
@@ -65,9 +73,11 @@ public bool IsDestructive { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L92)
 
 ### IsEnabled {#isenabled}
+
+Decides whether the button is clickable. Null means always.
 
 ```csharp
 public Func<bool> IsEnabled { get; set; }
@@ -75,9 +85,11 @@ public Func<bool> IsEnabled { get; set; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L88)
 
 ### IsPrimary {#isprimary}
+
+Whether this is the item's main action, and so is drawn first.
 
 ```csharp
 public bool IsPrimary { get; set; }
@@ -85,9 +97,11 @@ public bool IsPrimary { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L90)
 
 ### Label {#label}
+
+Text on the button.
 
 ```csharp
 public string Label { get; }
@@ -95,9 +109,11 @@ public string Label { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L82)
 
 ### Tooltip {#tooltip}
+
+Tooltip shown on hover.
 
 ```csharp
 public string Tooltip { get; set; }
@@ -105,5 +121,5 @@ public string Tooltip { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L86)
 

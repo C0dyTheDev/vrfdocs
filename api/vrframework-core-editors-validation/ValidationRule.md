@@ -46,9 +46,11 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L22)
 
 ### Scope {#scope}
+
+Whether the rule checks the project or the open scene.
 
 ```csharp
 public virtual ValidationScope Scope { get; }
@@ -56,7 +58,7 @@ public virtual ValidationScope Scope { get; }
 
 **Returns** [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L19)
 
 ## Methods
 
@@ -71,9 +73,11 @@ public virtual bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L28)
 
 ### Validate(ValidationReport) {#validate-validationreport}
+
+Runs the check and reports what it finds.
 
 ```csharp
 public abstract void Validate(ValidationReport report)
@@ -83,7 +87,7 @@ public abstract void Validate(ValidationReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L35)
 

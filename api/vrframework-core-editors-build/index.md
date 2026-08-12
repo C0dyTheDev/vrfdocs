@@ -13,9 +13,9 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`MyData`](/api/vrframework-core-editors-build/MyData) | The platform's view of an application: the scenes it may launch and the parameters each of them takes. |
-| [`Param`](/api/vrframework-core-editors-build/Param) |  |
+| [`Param`](/api/vrframework-core-editors-build/Param) | One parameter of a scene, as the platform's own UI needs to describe it. |
 | [`PlatformDataSetting`](/api/vrframework-core-editors-build/PlatformDataSetting) | What this build offers the platform: the scenes it can launch and the parameters each of them accepts. |
-| [`PlatformScene`](/api/vrframework-core-editors-build/PlatformScene) |  |
+| [`PlatformScene`](/api/vrframework-core-editors-build/PlatformScene) | One scene the platform may launch, and the parameters it takes. |
 | [`ProductIdentitySetting`](/api/vrframework-core-editors-build/ProductIdentitySetting) | Who the build says it is: the company and product it ships under, and the version it reports. |
 | [`ProductionBuildSetting`](/api/vrframework-core-editors-build/ProductionBuildSetting) | Whether this profile builds for the platform or for a desk. |
 | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) | What a setting is handed when it is applied: the profile it belongs to, the player settings that profile actually builds with, and the one place StreamingAssets is written. |

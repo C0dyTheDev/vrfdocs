@@ -28,6 +28,8 @@ public abstract class LanguageInstanceEditor : VRFComponentEditor
 
 ### LanguageInstanceEditor(LangType) {#ctor-langtype}
 
+Builds the editor for one kind of translation asset.
+
 ```csharp
 protected LanguageInstanceEditor(LangType type)
 ```
@@ -36,13 +38,15 @@ protected LanguageInstanceEditor(LangType type)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `type` | [`LangType`](/api/vrframework-core-runtime/LangType) |  |
+| `type` | [`LangType`](/api/vrframework-core-runtime/LangType) | Kind of localized content the asset holds. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L27)
 
 ## Fields
 
 ### didUpdate {#didupdate}
+
+Whether the entries have been reloaded since the asset last changed.
 
 ```csharp
 protected bool didUpdate
@@ -50,9 +54,11 @@ protected bool didUpdate
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L21)
 
 ### type {#type}
+
+Which kind of translation asset this editor draws.
 
 ```csharp
 protected LangType type
@@ -60,13 +66,13 @@ protected LangType type
 
 **Returns** [`LangType`](/api/vrframework-core-runtime/LangType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L23)
 
 ## Properties
 
 ### HeaderSubtitle {#headersubtitle}
 
-One-line description under the title. Null hides the line.
+Subtitle shown under the component header.
 
 ```csharp
 protected override string HeaderSubtitle { get; }
@@ -74,11 +80,11 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L42)
 
 ### HeaderTitle {#headertitle}
 
-Name shown in the header. Defaults to the component's type name, nicified.
+Title shown in the component header.
 
 ```csharp
 protected override string HeaderTitle { get; }
@@ -86,11 +92,11 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L33)
 
 ### PrefsKey {#prefskey}
 
-Prefix for this inspector's collapsed-section preferences.
+Key the inspector's expanded sections are remembered under.
 
 ```csharp
 protected override string PrefsKey { get; }
@@ -98,49 +104,57 @@ protected override string PrefsKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L46)
 
 ## Methods
 
 ### DrawBody() {#drawbody}
 
-Everything below the header. Draw with [`Prop(string)`](/api/vrframework-core-editors-ui/VRFComponentEditor#prop-string) and the section helpers.
+Draws the component's own inspector body.
 
 ```csharp
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L70)
 
 ### OnDisable() {#ondisable}
+
+Releases what the inspector bound while it was open.
 
 ```csharp
 protected override void OnDisable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L60)
 
 ### OnEnable() {#onenable}
+
+Binds the inspector to the component's serialized properties.
 
 ```csharp
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L49)
 
 ### ProcessLanguageInstance() {#processlanguageinstance}
+
+Rebuilds the lookup maps of this editor's own kind of content.
 
 ```csharp
 protected abstract void ProcessLanguageInstance()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L162)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L173)
 
 ### ReloadOwnType() {#reloadowntype}
+
+Reloads this editor's kind of content and marks the graph for a redraw.
 
 ```csharp
 protected void ReloadOwnType()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L164)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L176)
 

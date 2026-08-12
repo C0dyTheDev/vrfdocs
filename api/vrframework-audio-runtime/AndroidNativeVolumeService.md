@@ -23,15 +23,19 @@ public class AndroidNativeVolumeService
 
 ### GetSystemVolume() {#getsystemvolume}
 
+Reads the device media volume. Android only, and 0 in the editor.
+
 ```csharp
 public float GetSystemVolume()
 ```
 
-**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The media volume as 0 to 1.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L67)
 
 ### SetSystemVolume(float) {#setsystemvolume-single}
+
+Sets the device media volume, showing the system volume UI. Android only.
 
 ```csharp
 public void SetSystemVolume(float volumeValue)
@@ -41,7 +45,7 @@ public void SetSystemVolume(float volumeValue)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `volumeValue` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
+| `volumeValue` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Volume as 0 to 1. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L77)
 

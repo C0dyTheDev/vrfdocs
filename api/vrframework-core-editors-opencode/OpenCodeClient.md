@@ -56,7 +56,7 @@ public static Task Abort(string sessionId)
 
 **Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L103)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L106)
 
 ### CreateSession(string) {#createsession-string}
 
@@ -78,6 +78,8 @@ public static Task<string> CreateSession(string title)
 
 ### DeleteSession(string) {#deletesession-string}
 
+Deletes a session on the OpenCode server.
+
 ```csharp
 public static Task DeleteSession(string sessionId)
 ```
@@ -86,11 +88,11 @@ public static Task DeleteSession(string sessionId)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Session to delete. |
 
-**Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)
+**Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task) - A task that completes once the server has answered.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L59)
 
 ### GetDefaultZenModel() {#getdefaultzenmodel}
 
@@ -103,7 +105,7 @@ public static Task<string> GetDefaultZenModel()
 
 **Returns** `Task<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L178)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L181)
 
 ### GetMessages(string) {#getmessages-string}
 
@@ -121,7 +123,7 @@ public static Task<JArray> GetMessages(string sessionId)
 
 **Returns** `Task<JArray>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L112)
 
 ### ListAgents() {#listagents}
 
@@ -133,7 +135,7 @@ public static Task<List<string>> ListAgents()
 
 **Returns** `Task<List<string>>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L131)
 
 ### ListModels() {#listmodels}
 
@@ -146,7 +148,7 @@ public static Task<List<OpenCodeModel>> ListModels()
 
 **Returns** `Task<List<OpenCodeModel>>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L148)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L151)
 
 ### ListSessions() {#listsessions}
 
@@ -178,7 +180,7 @@ public static Task RespondToPermission(string sessionId, string requestId, strin
 
 **Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L118)
 
 ### SendPrompt(string, string, string, string, string, IEnumerable\<OpenCodeAttachment>) {#sendprompt-string-string-string-string-string-opencodeattachment}
 
@@ -204,5 +206,5 @@ public static Task<bool> SendPrompt(string sessionId, string text, string agent,
 
 **Returns** `Task<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L70)
 

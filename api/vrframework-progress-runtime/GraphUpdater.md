@@ -26,9 +26,12 @@ public class GraphUpdater : MonoBehaviour
 
 ### SetDirty() {#setdirty}
 
+Asks for a graph redraw. Every call within one tick is coalesced into a single one. Does
+nothing in a build.
+
 ```csharp
 public static void SetDirty()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/GraphUpdater.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/GraphUpdater.cs#L21)
 

@@ -24,7 +24,7 @@ public class LanguageManagerEditor : VRFComponentEditor
 
 ### HeaderSubtitle {#headersubtitle}
 
-One-line description under the title. Null hides the line.
+Subtitle shown under the component header.
 
 ```csharp
 protected override string HeaderSubtitle { get; }
@@ -32,11 +32,11 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L17)
 
 ### HeaderTitle {#headertitle}
 
-Name shown in the header. Defaults to the component's type name, nicified.
+Title shown in the component header.
 
 ```csharp
 protected override string HeaderTitle { get; }
@@ -44,33 +44,37 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L15)
 
 ## Methods
 
 ### DrawBody() {#drawbody}
 
-Everything below the header. Draw with [`Prop(string)`](/api/vrframework-core-editors-ui/VRFComponentEditor#prop-string) and the section helpers.
+Draws the component's own inspector body.
 
 ```csharp
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L34)
 
 ### OnDisable() {#ondisable}
+
+Releases what the inspector bound while it was open.
 
 ```csharp
 protected override void OnDisable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L27)
 
 ### OnEnable() {#onenable}
+
+Binds the inspector to the component's serialized properties.
 
 ```csharp
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L20)
 

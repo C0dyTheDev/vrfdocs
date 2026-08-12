@@ -20,6 +20,8 @@ public readonly struct VRFLogSource.Frame
 
 ### Frame(string, string, int) {#ctor-string-string-int32}
 
+Builds a parsed stack frame.
+
 ```csharp
 public Frame(string text, string file, int line)
 ```
@@ -28,15 +30,17 @@ public Frame(string text, string file, int line)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `file` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `line` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
+| `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The frame as written in the stack trace. |
+| `file` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Project relative path of the file. |
+| `line` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Line number within that file. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L166)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L173)
 
 ## Fields
 
 ### File {#file}
+
+Project relative path of the file, or empty when it could not be resolved.
 
 ```csharp
 public readonly string File
@@ -44,9 +48,11 @@ public readonly string File
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L163)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L165)
 
 ### Line {#line}
+
+Line number within that file.
 
 ```csharp
 public readonly int Line
@@ -54,9 +60,11 @@ public readonly int Line
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L164)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L167)
 
 ### Text {#text}
+
+The frame as written in the stack trace.
 
 ```csharp
 public readonly string Text
@@ -64,11 +72,13 @@ public readonly string Text
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L162)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L163)
 
 ## Properties
 
 ### CanOpen {#canopen}
+
+Whether the frame points at a file that can be opened.
 
 ```csharp
 public bool CanOpen { get; }
@@ -76,5 +86,5 @@ public bool CanOpen { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L173)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L181)
 

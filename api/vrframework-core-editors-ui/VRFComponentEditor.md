@@ -97,7 +97,7 @@ protected static bool Agree(SerializedProperty property)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L110)
 
 ### AllTrue(SerializedProperty) {#alltrue-serializedproperty}
 
@@ -117,7 +117,7 @@ protected static bool AllTrue(SerializedProperty property)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L120)
 
 ### AnyTarget\<T>(Func\<T, bool>) {#anytarget-1-boolean}
 
@@ -143,7 +143,7 @@ protected bool AnyTarget<T>(Func<T, bool> predicate) where T : class
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L100)
 
 ### DrawBody() {#drawbody}
 
@@ -153,7 +153,7 @@ Everything below the header. Draw with [`Prop(string)`](/api/vrframework-core-ed
 protected abstract void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L63)
 
 ### EventsSection(string, string, bool) {#eventssection-string-string-boolean}
 
@@ -173,7 +173,7 @@ protected VRFEditorGUI.SectionScope EventsSection(string key = "events", string 
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L129)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L132)
 
 ### Field(string, string, bool) {#field-string-string-boolean}
 
@@ -191,33 +191,37 @@ protected void Field(string propertyName, string label = null, bool includeChild
 | `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `includeChildren` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L84)
 
 ### OnDisable() {#ondisable}
+
+Releases what the inspector bound while it was open.
 
 ```csharp
 protected virtual void OnDisable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L45)
 
 ### OnEnable() {#onenable}
+
+Binds the inspector to the component's serialized properties.
 
 ```csharp
 protected virtual void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L38)
 
 ### OnInspectorGUI() {#oninspectorgui}
 
-Implement this function to make a custom inspector.
+Draws the inspector.
 
 ```csharp
 public override void OnInspectorGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L51)
 
 ### Prop(string) {#prop-string}
 
@@ -237,7 +241,7 @@ protected SerializedProperty Prop(string propertyName)
 
 **Returns** [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L70)
 
 ### Section(string, string, bool) {#section-string-string-boolean}
 
@@ -257,5 +261,5 @@ protected VRFEditorGUI.SectionScope Section(string key, string title, bool defau
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L123)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L126)
 

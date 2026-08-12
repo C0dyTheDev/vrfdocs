@@ -29,6 +29,8 @@ public class PlatformManager : VRModule, IPlatformService
 
 ### buildSettings {#buildsettings}
 
+Build flags read from StreamingAssets/BuildSettings.json.
+
 ```csharp
 [HideInInspector]
 public BuildSettings buildSettings
@@ -36,9 +38,11 @@ public BuildSettings buildSettings
 
 **Returns** [`BuildSettings`](/api/vrframework-core-runtime/BuildSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L31)
 
 ### completed {#completed}
+
+Whether the session counts as passed. Reported to the platform at the end.
 
 ```csharp
 public bool completed
@@ -46,9 +50,11 @@ public bool completed
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L42)
 
 ### gameTime {#gametime}
+
+How long the session has been running, in seconds.
 
 ```csharp
 public float gameTime
@@ -56,9 +62,11 @@ public float gameTime
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L40)
 
 ### maxGameTime {#maxgametime}
+
+The time budget for the session, in seconds.
 
 ```csharp
 public float maxGameTime
@@ -66,9 +74,11 @@ public float maxGameTime
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L38)
 
 ### parameters {#parameters}
+
+The parameters this app expects from the platform, with their defaults.
 
 ```csharp
 public Parameters parameters
@@ -76,9 +86,11 @@ public Parameters parameters
 
 **Returns** [`Parameters`](/api/vrframework-platform-runtime/Parameters)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L25)
 
 ### platformData {#platformdata}
+
+What the platform sent when it launched the app: session, URLs and language.
 
 ```csharp
 [HideInInspector]
@@ -87,9 +99,11 @@ public PlatformData platformData
 
 **Returns** [`PlatformData`](/api/vrframework-platform-runtime/PlatformData)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L33)
 
 ### reportSettings {#reportsettings}
+
+How reports are packaged and how hard delivery is retried.
 
 ```csharp
 public ReportSettings reportSettings
@@ -97,9 +111,11 @@ public ReportSettings reportSettings
 
 **Returns** [`ReportSettings`](/api/vrframework-platform-runtime/ReportSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L28)
 
 ### useMaxGameTime {#usemaxgametime}
+
+Whether the session ends by itself once the time budget runs out.
 
 ```csharp
 public bool useMaxGameTime
@@ -107,14 +123,13 @@ public bool useMaxGameTime
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L36)
 
 ## Properties
 
 ### DefaultInitOrder {#defaultinitorder}
 
-The order this module needs relative to the others when InitOrder does not
-separate them - e.g. Platform must supply the language before Localization reads it.
+Initialises first, since the language, parameters and build flags it loads are read by the rest.
 
 ```csharp
 public override int DefaultInitOrder { get; }
@@ -122,7 +137,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L56)
 
 ### Reports {#reports}
 
@@ -134,7 +149,7 @@ public ReportQueue Reports { get; }
 
 **Returns** [`ReportQueue`](/api/vrframework-platform-runtime/ReportQueue)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L52)
 
 ## Methods
 
@@ -154,7 +169,7 @@ public IEnumerator ApplicationEnd(bool gameTimeRanOut = false)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L399)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L433)
 
 ### ApplyParameterDefaults() {#applyparameterdefaults}
 
@@ -164,7 +179,7 @@ Seeds every parameter with its configured default until the platform overrides i
 protected virtual void ApplyParameterDefaults()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L168)
 
 ### BuildEnvelope(string, int) {#buildenvelope-string-int32}
 
@@ -186,9 +201,12 @@ protected virtual string BuildEnvelope(string reportBody, int ordinal)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L477)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L511)
 
 ### CompleteSession(bool) {#completesession-boolean}
+
+Ends the session: contributes the session values, sends the final report, waits for the queue
+to drain and raises [`CompletionFinished`](/api/vrframework-platform-runtime/PlatformManager#completionfinished). Ignored once the session has ended.
 
 ```csharp
 public void CompleteSession(bool success)
@@ -198,9 +216,9 @@ public void CompleteSession(bool success)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `success` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
+| `success` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the session counts as passed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L123)
 
 ### ContributeSessionValues() {#contributesessionvalues}
 
@@ -213,27 +231,34 @@ with [`SetValue(string, object)`](/api/vrframework-core-runtime/PlatformReport#s
 protected virtual void ContributeSessionValues()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L430)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L464)
 
 ### ForceApplicationEnd() {#forceapplicationend}
+
+Ends the session as passed, for a UnityEvent that has to finish the app early.
 
 ```csharp
 public void ForceApplicationEnd()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L390)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L424)
 
 ### GetLanguage() {#getlanguage}
+
+The language the session should run in: the platform's own choice, otherwise the "language"
+parameter.
 
 ```csharp
 public string GetLanguage()
 ```
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The language name, or null when neither names one.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L82)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L102)
 
 ### GetParameter(string) {#getparameter-string}
+
+Reads a session parameter, as the platform set it or as it was defaulted.
 
 ```csharp
 public string GetParameter(string name)
@@ -243,11 +268,11 @@ public string GetParameter(string name)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Parameter name, as listed in the Parameters asset. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The value, or null when no such parameter is defined.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L80)
 
 ### LoadBuildSettings() {#loadbuildsettings}
 
@@ -259,23 +284,29 @@ protected virtual IEnumerator LoadBuildSettings()
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L277)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L310)
 
 ### OnCleanup() {#oncleanup}
+
+Drops the progress and minigame subscriptions and unregisters the module.
 
 ```csharp
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L255)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L288)
 
 ### OnInit() {#oninit}
+
+Registers the module as [`IPlatformService`](/api/vrframework-core-runtime/IPlatformService), survives scene loads, starts the
+report queue and reads the platform intent. A second manager arriving with a later scene stands
+down in favour of the one already running.
 
 ```csharp
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L104)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L136)
 
 ### OnTimeLimitExceeded() {#ontimelimitexceeded}
 
@@ -285,7 +316,7 @@ The session ran past its time budget. Records the outcome as "not in time" and e
 protected virtual void OnTimeLimitExceeded()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L193)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L225)
 
 ### ParsePlatformData() {#parseplatformdata}
 
@@ -297,7 +328,7 @@ protected virtual bool ParsePlatformData()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the app was launched by the platform
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L313)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L346)
 
 ### SendReport() {#sendreport}
 
@@ -309,9 +340,11 @@ sends them one at a time in the order they were made.
 public void SendReport()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L443)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L477)
 
 ### SetInfoText(string) {#setinfotext-string}
+
+Sets the status line reported alongside the session.
 
 ```csharp
 public void SetInfoText(string text)
@@ -321,9 +354,9 @@ public void SetInfoText(string text)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text to report. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L113)
 
 ### ThisSceneEnd() {#thissceneend}
 
@@ -334,11 +367,13 @@ so the platform never hears the scene is finished before it has the results.
 public void ThisSceneEnd()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L491)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L525)
 
 ## Events
 
 ### CompletionFinished {#completionfinished}
+
+Raised once the reports have drained and the session is over.
 
 ```csharp
 public event Action CompletionFinished
@@ -346,9 +381,11 @@ public event Action CompletionFinished
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L75)
 
 ### CompletionStarted {#completionstarted}
+
+Raised when session completion begins.
 
 ```csharp
 public event Action CompletionStarted
@@ -356,9 +393,11 @@ public event Action CompletionStarted
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L73)
 
 ### SessionInitialized {#sessioninitialized}
+
+Raised once the platform handshake has finished.
 
 ```csharp
 public event Action SessionInitialized
@@ -366,5 +405,5 @@ public event Action SessionInitialized
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L71)
 

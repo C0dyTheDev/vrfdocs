@@ -25,6 +25,8 @@ public class SetupStep
 
 ### SetupStep(string, Action, Func\<bool>, float) {#ctor-string-action-boolean-single}
 
+Builds a setup step.
+
 ```csharp
 public SetupStep(string title, Action run, Func<bool> isFinished = null, float timeoutSeconds = 120)
 ```
@@ -33,12 +35,12 @@ public SetupStep(string title, Action run, Func<bool> isFinished = null, float t
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `run` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
-| `isFinished` | `Func<bool>` |  |
-| `timeoutSeconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
+| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What the console line for the step says. |
+| `run` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The work itself. |
+| `isFinished` | `Func<bool>` | Polled until it answers true, for work Unity finishes asynchronously. |
+| `timeoutSeconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long the step may take before it counts as failed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L21)
 
 ## Properties
 
@@ -55,9 +57,11 @@ public Func<bool> IsFinished { get; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L41)
 
 ### Run {#run}
+
+The work the step performs.
 
 ```csharp
 public Action Run { get; }
@@ -65,9 +69,11 @@ public Action Run { get; }
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L33)
 
 ### TimeoutSeconds {#timeoutseconds}
+
+How long the step may take before the runner gives up on it, in seconds.
 
 ```csharp
 public float TimeoutSeconds { get; }
@@ -75,7 +81,7 @@ public float TimeoutSeconds { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L44)
 
 ### Title {#title}
 
@@ -87,5 +93,5 @@ public string Title { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L30)
 

@@ -61,7 +61,7 @@ asynchronously and then raced its own callback.
 public static void ImportSamples()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L234)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L238)
 
 ### ImportTextMeshProResources() {#importtextmeshproresources}
 
@@ -75,25 +75,29 @@ scenes, prefabs and scripts into every project.
 public static void ImportTextMeshProResources()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L180)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L182)
 
 ### RequiredPackagesResolved() {#requiredpackagesresolved}
+
+Whether every package the framework needs is present and resolved.
 
 ```csharp
 public static bool RequiredPackagesResolved()
 ```
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when nothing is missing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L136)
 
 ### TextMeshProResourcesImported() {#textmeshproresourcesimported}
+
+Whether the TextMeshPro essential resources have been imported into the project.
 
 ```csharp
 public static bool TextMeshProResourcesImported()
 ```
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when they are present.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L204)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L208)
 

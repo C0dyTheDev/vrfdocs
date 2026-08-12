@@ -8,7 +8,7 @@ description: 'Finds every setting type an editor assembly defines.'
 
 # VRFBuildSettingTypes
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L141)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L147)
 
 Finds every setting type an editor assembly defines.
 
@@ -22,13 +22,15 @@ public static class VRFBuildSettingTypes
 
 ### All {#all}
 
+Every setting type found in the editor assemblies, cached.
+
 ```csharp
 public static IReadOnlyList<Type> All { get; }
 ```
 
 **Returns** `IReadOnlyList<Type>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L145)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L152)
 
 ## Methods
 
@@ -48,13 +50,15 @@ public static VRFBuildSetting Create(Type type)
 
 **Returns** [`VRFBuildSetting`](/api/vrframework-core-editors-build/VRFBuildSetting)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L160)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L168)
 
 ### Invalidate() {#invalidate}
+
+Forgets the cached type list, so a recompile is picked up.
 
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L154)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L162)
 

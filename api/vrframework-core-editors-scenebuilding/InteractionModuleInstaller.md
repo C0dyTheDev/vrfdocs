@@ -8,7 +8,7 @@ description: 'The full XR rig plus the module that owns every shared reference o
 
 # InteractionModuleInstaller
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L187)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L257)
 
 The full XR rig plus the module that owns every shared reference other modules reach for.
 
@@ -22,7 +22,7 @@ public class InteractionModuleInstaller : ModuleInstaller
 
 ### Creates {#creates}
 
-Extra objects the installer creates, listed in the details panel.
+Puts the progress module and an empty scenario into the scene.
 
 ```csharp
 public override string[] Creates { get; }
@@ -30,9 +30,11 @@ public override string[] Creates { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L201)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L279)
 
 ### Description {#description}
+
+One line explaining what this is.
 
 ```csharp
 public override string Description { get; }
@@ -40,9 +42,11 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L193)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L267)
 
 ### DisplayName {#displayname}
+
+Name shown for this in the window.
 
 ```csharp
 public override string DisplayName { get; }
@@ -50,9 +54,11 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L190)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L262)
 
 ### Id {#id}
+
+Stable identity of this entry.
 
 ```csharp
 public override string Id { get; }
@@ -60,11 +66,11 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L189)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L260)
 
 ### ModuleType {#moduletype}
 
-Component this installer creates. Drives the "already in scene" check and the icon.
+The module type this installer puts in the scene.
 
 ```csharp
 public override Type ModuleType { get; }
@@ -72,9 +78,11 @@ public override Type ModuleType { get; }
 
 **Returns** [`Type`](https://learn.microsoft.com/dotnet/api/system.type)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L199)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L275)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -82,9 +90,11 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L191)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L264)
 
 ### Tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public override string[] Tags { get; }
@@ -92,15 +102,13 @@ public override string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L198)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L273)
 
 ## Methods
 
 ### Install(Transform) {#install-transform}
 
-Performs the install. `parentOverride`is the transform a drag and drop
-landed on; installers are free to ignore it when the framework dictates the location.
-Returns the primary object created, or null when nothing was created.
+Puts this into the open scene.
 
 ```csharp
 public override GameObject Install(Transform parentOverride)
@@ -110,9 +118,9 @@ public override GameObject Install(Transform parentOverride)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `parentOverride` | [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) |  |
+| `parentOverride` | [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) | Object to parent what is created under, or null for the usual place. |
 
-**Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
+**Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) - The object that was created, or null when nothing was.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L207)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L288)
 

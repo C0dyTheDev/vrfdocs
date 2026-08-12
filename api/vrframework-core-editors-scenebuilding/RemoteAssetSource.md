@@ -52,15 +52,19 @@ public class RemoteAssetSource : IAssetSource
 
 ### DisplayName {#displayname}
 
+Name shown for this in the window.
+
 ```csharp
 public string DisplayName { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L57)
 
 ### Id {#id}
+
+Stable identity of this entry.
 
 ```csharp
 public string Id { get; }
@@ -68,11 +72,11 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L55)
 
 ### IsConfigured {#isconfigured}
 
-False hides the source completely, e.g. a remote database with no URL set.
+Whether a manifest URL is configured. Without one the source is hidden.
 
 ```csharp
 public bool IsConfigured { get; }
@@ -80,9 +84,11 @@ public bool IsConfigured { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L62)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public int Order { get; }
@@ -90,11 +96,11 @@ public int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L59)
 
 ### StatusLabel {#statuslabel}
 
-Human readable state shown in the toolbar, e.g. "cached, 214 entries".
+State of the manifest as shown in the toolbar, e.g. how many entries are cached.
 
 ```csharp
 public string StatusLabel { get; }
@@ -102,21 +108,21 @@ public string StatusLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L65)
 
 ## Methods
 
 ### GetEntries() {#getentries}
 
-Entries currently known. Must not block - kick off async work and return what you have.
+The entries of the cached manifest, fetching it in the background when it is stale.
 
 ```csharp
 public IEnumerable<AssetEntry> GetEntries()
 ```
 
-**Returns** `IEnumerable<AssetEntry>`
+**Returns** `IEnumerable<AssetEntry>` - One entry per remote asset.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L78)
 
 ### GetThumbnail(AssetEntry) {#getthumbnail-assetentry}
 
@@ -135,9 +141,11 @@ public Texture2D GetThumbnail(AssetEntry entry)
 
 **Returns** [`Texture2D`](https://docs.unity3d.com/ScriptReference/Texture2D.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L126)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L146)
 
 ### IsThumbnailPending(AssetEntry) {#isthumbnailpending-assetentry}
+
+Whether the entry's thumbnail is still being fetched, so the card should keep polling.
 
 ```csharp
 public bool IsThumbnailPending(AssetEntry entry)
@@ -147,26 +155,26 @@ public bool IsThumbnailPending(AssetEntry entry)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) |  |
+| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry to check. |
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the thumbnail is on its way.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L146)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L169)
 
 ### Refresh() {#refresh}
 
-Drops any cache and re-reads the underlying database.
+Drops the cached manifest and fetches it again.
 
 ```csharp
 public void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L87)
 
 ### Resolve(AssetEntry) {#resolve-assetentry}
 
-Makes the entry available as a real project asset, downloading and importing it if needed.
-Returns null when the asset could not be made available.
+Makes a remote entry available as a project asset, downloading and importing it when it is not
+there yet.
 
 ```csharp
 public Object Resolve(AssetEntry entry)
@@ -176,11 +184,11 @@ public Object Resolve(AssetEntry entry)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) |  |
+| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry to resolve. |
 
-**Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
+**Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) - The imported asset, or null when it could not be made available.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L88)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L108)
 
 ## Events
 
@@ -194,5 +202,5 @@ public static event Action Changed
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/RemoteAssetSource.cs#L140)
 

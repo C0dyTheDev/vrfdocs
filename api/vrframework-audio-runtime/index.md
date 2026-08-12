@@ -13,7 +13,7 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`AndroidNativeVolumeService`](/api/vrframework-audio-runtime/AndroidNativeVolumeService) | Helper class for automatically setting the system volume with a script |
-| [`AudioManager`](/api/vrframework-audio-runtime/AudioManager) |  |
-| [`AudioQueueElement`](/api/vrframework-audio-runtime/AudioQueueElement) |  |
-| [`PlayAudio`](/api/vrframework-audio-runtime/PlayAudio) |  |
+| [`AudioManager`](/api/vrframework-audio-runtime/AudioManager) | The audio module. |
+| [`AudioQueueElement`](/api/vrframework-audio-runtime/AudioQueueElement) | One entry in an AudioSourcehttps://docs.unity3d.com/ScriptReference/AudioSource.html queue: the clip and the ID it was queued under. |
+| [`PlayAudio`](/api/vrframework-audio-runtime/PlayAudio) | Plays one audio slot on demand and raises AfterAudio/api/vrframework-audio-runtime/PlayAudioafteraudio when it is done - the plain way to hang voice over off a scenario step or a U |
 

@@ -28,15 +28,19 @@ public static class AssetCategories
 
 ### ModelFilter {#modelfilter}
 
+Project search filter that finds models.
+
 ```csharp
 public const string ModelFilter = "t:Model"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L28)
 
 ### Models {#models}
+
+Models: the things a scene is furnished with.
 
 ```csharp
 public const string Models = "Models"
@@ -44,9 +48,11 @@ public const string Models = "Models"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L21)
 
 ### SoundFilter {#soundfilter}
+
+Project search filter that finds audio clips.
 
 ```csharp
 public const string SoundFilter = "t:AudioClip"
@@ -54,9 +60,11 @@ public const string SoundFilter = "t:AudioClip"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L30)
 
 ### Sounds {#sounds}
+
+Sounds: clips a scene plays.
 
 ```csharp
 public const string Sounds = "Sounds"
@@ -64,9 +72,11 @@ public const string Sounds = "Sounds"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L23)
 
 ### TextureFilter {#texturefilter}
+
+Project search filter that finds textures.
 
 ```csharp
 public const string TextureFilter = "t:Texture2D"
@@ -74,9 +84,11 @@ public const string TextureFilter = "t:Texture2D"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L32)
 
 ### Textures {#textures}
+
+Textures: images a scene is dressed with.
 
 ```csharp
 public const string Textures = "Textures"
@@ -84,5 +96,5 @@ public const string Textures = "Textures"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L25)
 

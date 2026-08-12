@@ -27,13 +27,15 @@ public static class OpenCodeEventStream
 
 ### IsConnected {#isconnected}
 
+Whether the event stream is currently connected to the server.
+
 ```csharp
 public static bool IsConnected { get; }
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L35)
 
 ## Methods
 
@@ -45,7 +47,7 @@ Begins listening. Safe to call repeatedly; only the first call connects.
 public static void Start()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L47)
 
 ### Stop() {#stop}
 
@@ -55,7 +57,7 @@ Stops listening and drops anything not yet replayed.
 public static void Stop()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L63)
 
 ## Events
 
@@ -69,7 +71,7 @@ public static event Action ConnectionChanged
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L44)
 
 ### EventReceived {#eventreceived}
 
@@ -82,5 +84,5 @@ public static event Action<JObject> EventReceived
 
 **Returns** `Action<JObject>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L41)
 

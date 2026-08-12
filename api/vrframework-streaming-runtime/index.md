@@ -12,7 +12,7 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`ImageDataHolder`](/api/vrframework-streaming-runtime/ImageDataHolder) |  |
-| [`Sender`](/api/vrframework-streaming-runtime/Sender) |  |
-| [`StreamManager`](/api/vrframework-streaming-runtime/StreamManager) |  |
+| [`ImageDataHolder`](/api/vrframework-streaming-runtime/ImageDataHolder) | Cuts one encoded frame into datagram sized parts, each carrying a header the receiver reassembles the frame from: format version, frame ID, total image length, part index and data |
+| [`Sender`](/api/vrframework-streaming-runtime/Sender) | Sends encoded frames to the viewer over UDP and listens for its heartbeat, which is how the stream knows whether anyone is watching. |
+| [`StreamManager`](/api/vrframework-streaming-runtime/StreamManager) | Streams what a camera sees to a viewer on the network: renders to a texture, reads it back off the GPU without stalling the frame, encodes it as JPEG on a worker thread and sends i |
 

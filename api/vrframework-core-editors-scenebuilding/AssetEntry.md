@@ -8,7 +8,7 @@ description: 'One record in an asset database.'
 
 # AssetEntry
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L34)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L40)
 
 One record in an asset database. Deliberately transport agnostic: a local source fills in
 [`LocalPath`](/api/vrframework-core-editors-scenebuilding/AssetEntry#localpath) and nothing else, a remote source fills in the URLs and resolves
@@ -24,13 +24,15 @@ public class AssetEntry
 
 ### Author {#author}
 
+Who made the asset, when the source says.
+
 ```csharp
 public string Author
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L43)
 
 ### Category {#category}
 
@@ -42,9 +44,11 @@ public string Category
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L46)
 
 ### Description {#description}
+
+One line describing the asset.
 
 ```csharp
 public string Description
@@ -52,9 +56,11 @@ public string Description
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L49)
 
 ### DownloadUrl {#downloadurl}
+
+Where the asset is downloaded from, for a remote entry.
 
 ```csharp
 public string DownloadUrl
@@ -62,9 +68,11 @@ public string DownloadUrl
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L51)
 
 ### Id {#id}
+
+Stable identity of the entry within its source.
 
 ```csharp
 public string Id
@@ -72,7 +80,7 @@ public string Id
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L53)
 
 ### LocalPath {#localpath}
 
@@ -84,9 +92,11 @@ public string LocalPath
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L56)
 
 ### Name {#name}
+
+Name shown on the card.
 
 ```csharp
 public string Name
@@ -94,9 +104,11 @@ public string Name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L59)
 
 ### SizeBytes {#sizebytes}
+
+Size of the asset in bytes, or 0 when the source does not say.
 
 ```csharp
 public long SizeBytes
@@ -104,9 +116,11 @@ public long SizeBytes
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L61)
 
 ### Tags {#tags}
+
+Extra words the search box matches against.
 
 ```csharp
 public string[] Tags
@@ -114,9 +128,11 @@ public string[] Tags
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L64)
 
 ### ThumbnailUrl {#thumbnailurl}
+
+Where the card thumbnail is fetched from, for a remote entry.
 
 ```csharp
 public string ThumbnailUrl
@@ -124,9 +140,11 @@ public string ThumbnailUrl
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L67)
 
 ### Version {#version}
+
+Version of the asset, when the source keeps one.
 
 ```csharp
 public string Version
@@ -134,11 +152,13 @@ public string Version
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L69)
 
 ## Properties
 
 ### IsLocal {#islocal}
+
+Whether the asset is already in the project.
 
 ```csharp
 public bool IsLocal { get; }
@@ -146,9 +166,11 @@ public bool IsLocal { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L72)
 
 ### SizeLabel {#sizelabel}
+
+Size as shown on the card, or null when the size is unknown.
 
 ```csharp
 public string SizeLabel { get; }
@@ -156,5 +178,5 @@ public string SizeLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L75)
 

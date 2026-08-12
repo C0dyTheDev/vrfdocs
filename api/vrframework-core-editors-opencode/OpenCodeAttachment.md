@@ -26,13 +26,15 @@ public class OpenCodeAttachment
 
 ### Bytes {#bytes}
 
+Size of the file in bytes.
+
 ```csharp
 public long Bytes { get; }
 ```
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L67)
 
 ### DisplayPath {#displaypath}
 
@@ -44,9 +46,11 @@ public string DisplayPath { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L73)
 
 ### FileName {#filename}
+
+File name without its folder.
 
 ```csharp
 public string FileName { get; }
@@ -54,9 +58,11 @@ public string FileName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L70)
 
 ### IsImage {#isimage}
+
+Whether the attachment is an image, and so can be shown inline.
 
 ```csharp
 public bool IsImage { get; }
@@ -64,9 +70,11 @@ public bool IsImage { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L65)
 
 ### Mime {#mime}
+
+MIME type of the attached file.
 
 ```csharp
 public string Mime { get; }
@@ -74,7 +82,7 @@ public string Mime { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L63)
 
 ### Path {#path}
 
@@ -100,7 +108,7 @@ public string Url { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L91)
 
 ## Methods
 
@@ -123,5 +131,5 @@ public static bool TryCreate(string path, out OpenCodeAttachment attachment, out
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L97)
 

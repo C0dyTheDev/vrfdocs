@@ -29,18 +29,20 @@ public class VRFrameworkSettingsProvider : SettingsProvider
 
 ### CreateSettingsProviders() {#createsettingsproviders}
 
+Builds one settings provider per VR Framework page.
+
 ```csharp
 [SettingsProviderGroup]
 public static SettingsProvider[] CreateSettingsProviders()
 ```
 
-**Returns** [`SettingsProvider[]`](https://docs.unity3d.com/ScriptReference/SettingsProvider[].html)
+**Returns** [`SettingsProvider[]`](https://docs.unity3d.com/ScriptReference/SettingsProvider[].html) - The providers Unity should show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L324)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L329)
 
 ### OnActivate(string, VisualElement) {#onactivate-string-visualelement}
 
-Use this function to implement a handler for when the user clicks on the Settings in the Settings window. You can fetch a settings Asset or set up UIElements UI from this function.
+Builds the settings page when the user opens it.
 
 ```csharp
 public override void OnActivate(string searchContext, VisualElement rootElement)
@@ -50,10 +52,10 @@ public override void OnActivate(string searchContext, VisualElement rootElement)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `searchContext` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Search context in the search box on the Settings window. |
-| `rootElement` | [`VisualElement`](https://docs.unity3d.com/ScriptReference/UIElements.VisualElement.html) | Root of the UIElements tree. If you add to this root, the SettingsProvider uses UIElements instead of calling SettingsProvider.OnGUI to build the UI. If you do not add to this VisualElement, then you must use the IMGUI to build the UI. |
+| `searchContext` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text typed in the settings search box. |
+| `rootElement` | [`VisualElement`](https://docs.unity3d.com/ScriptReference/UIElements.VisualElement.html) | Root element of the page. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L77)
 
 ### OnDeactivate() {#ondeactivate}
 
@@ -64,5 +66,5 @@ change, which writes the asset to disk on each keystroke in a text field.
 public override void OnDeactivate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L103)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L106)
 

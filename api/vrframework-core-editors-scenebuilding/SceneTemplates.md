@@ -8,7 +8,7 @@ description: 'Every template available: the framework''s own, plus any SceneTemp
 
 # SceneTemplates
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L131)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L138)
 
 Every template available: the framework's own, plus any [`SceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/SceneTemplateAsset)
 authored in the project.
@@ -23,17 +23,21 @@ public static class SceneTemplates
 
 ### All {#all}
 
+Every scene template found in the editor assemblies, cached.
+
 ```csharp
 public static IReadOnlyList<SceneTemplate> All { get; }
 ```
 
 **Returns** `IReadOnlyList<SceneTemplate>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L143)
 
 ## Methods
 
 ### Find(string) {#find-string}
+
+Finds a template by its identity.
 
 ```csharp
 public static SceneTemplate Find(string id)
@@ -43,17 +47,19 @@ public static SceneTemplate Find(string id)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Identity to look for. |
 
-**Returns** [`SceneTemplate`](/api/vrframework-core-editors-scenebuilding/SceneTemplate)
+**Returns** [`SceneTemplate`](/api/vrframework-core-editors-scenebuilding/SceneTemplate) - The template, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L149)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L161)
 
 ### Invalidate() {#invalidate}
+
+Forgets the cached templates, so a recompile or a new asset is picked up.
 
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L144)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L153)
 

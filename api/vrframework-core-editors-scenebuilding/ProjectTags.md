@@ -27,6 +27,8 @@ public static class ProjectTags
 
 ### EnsureLayer(string) {#ensurelayer-string}
 
+Adds a layer to the project if it does not have it yet.
+
 ```csharp
 public static void EnsureLayer(string layer)
 ```
@@ -35,11 +37,13 @@ public static void EnsureLayer(string layer)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `layer` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `layer` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Layer the framework needs. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ProjectTags.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ProjectTags.cs#L46)
 
 ### EnsureTag(string) {#ensuretag-string}
+
+Adds a tag to the project if it does not have it yet.
 
 ```csharp
 public static void EnsureTag(string tag)
@@ -49,7 +53,7 @@ public static void EnsureTag(string tag)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `tag` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `tag` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Tag the framework needs. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ProjectTags.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ProjectTags.cs#L23)
 

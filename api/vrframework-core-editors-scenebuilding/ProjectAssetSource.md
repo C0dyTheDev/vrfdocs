@@ -29,15 +29,19 @@ public class ProjectAssetSource : IAssetSource
 
 ### DisplayName {#displayname}
 
+Name shown for this in the window.
+
 ```csharp
 public string DisplayName { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L31)
 
 ### Id {#id}
+
+Stable identity of this entry.
 
 ```csharp
 public string Id { get; }
@@ -45,11 +49,11 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L29)
 
 ### IsConfigured {#isconfigured}
 
-False hides the source completely, e.g. a remote database with no URL set.
+Always true: the project itself is always available as a source.
 
 ```csharp
 public bool IsConfigured { get; }
@@ -57,9 +61,11 @@ public bool IsConfigured { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L35)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public int Order { get; }
@@ -67,11 +73,11 @@ public int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L33)
 
 ### StatusLabel {#statuslabel}
 
-Human readable state shown in the toolbar, e.g. "cached, 214 entries".
+How many entries were found, as shown in the toolbar.
 
 ```csharp
 public string StatusLabel { get; }
@@ -79,36 +85,35 @@ public string StatusLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L38)
 
 ## Methods
 
 ### GetEntries() {#getentries}
 
-Entries currently known. Must not block - kick off async work and return what you have.
+The assets found in the configured project folders.
 
 ```csharp
 public IEnumerable<AssetEntry> GetEntries()
 ```
 
-**Returns** `IEnumerable<AssetEntry>`
+**Returns** `IEnumerable<AssetEntry>` - One entry per asset.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L49)
 
 ### Refresh() {#refresh}
 
-Drops any cache and re-reads the underlying database.
+Searches the configured folders again.
 
 ```csharp
 public void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L55)
 
 ### Resolve(AssetEntry) {#resolve-assetentry}
 
-Makes the entry available as a real project asset, downloading and importing it if needed.
-Returns null when the asset could not be made available.
+The project asset behind an entry.
 
 ```csharp
 public Object Resolve(AssetEntry entry)
@@ -118,9 +123,9 @@ public Object Resolve(AssetEntry entry)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) |  |
+| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry to resolve. |
 
-**Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
+**Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) - The asset, or null when it could not be loaded.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ProjectAssetSource.cs#L66)
 

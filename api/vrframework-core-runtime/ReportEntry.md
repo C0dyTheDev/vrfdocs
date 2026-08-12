@@ -8,7 +8,7 @@ description: 'One key of the report and where it came from.'
 
 # ReportEntry
 
-**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L268)
+**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L278)
 
 One key of the report and where it came from. The source is there for the framework's own
 reporting on itself - duplicate keys, editor validation - and never reaches the platform.
@@ -21,6 +21,8 @@ public readonly struct ReportEntry
 
 ### ReportEntry(string, object, string, bool) {#ctor-string-object-string-boolean}
 
+Builds an entry.
+
 ```csharp
 public ReportEntry(string key, object value, string source, bool isLive)
 ```
@@ -29,12 +31,12 @@ public ReportEntry(string key, object value, string source, bool isLive)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `value` | [`object`](https://learn.microsoft.com/dotnet/api/system.object) |  |
-| `source` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `isLive` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
+| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Key of the entry. |
+| `value` | [`object`](https://learn.microsoft.com/dotnet/api/system.object) | Reported value. |
+| `source` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Human-readable origin, for the framework's own diagnostics. |
+| `isLive` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True when a contributor produced it now, false for a stored value. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L279)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L296)
 
 ## Fields
 
@@ -48,9 +50,11 @@ public readonly bool IsLive
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L277)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L289)
 
 ### Key {#key}
+
+Key this entry lands under in the report JSON.
 
 ```csharp
 public readonly string Key
@@ -58,7 +62,7 @@ public readonly string Key
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L270)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L281)
 
 ### Source {#source}
 
@@ -70,9 +74,11 @@ public readonly string Source
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L274)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L286)
 
 ### Value {#value}
+
+The reported value.
 
 ```csharp
 public readonly object Value
@@ -80,5 +86,5 @@ public readonly object Value
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L271)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L283)
 

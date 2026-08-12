@@ -24,21 +24,25 @@ public static class LocalizationPresence
 
 ### InScene {#inscene}
 
+Whether the open scene has a Localization module. Cached until the hierarchy changes.
+
 ```csharp
 public static bool InScene { get; }
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LocalizationPresence.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LocalizationPresence.cs#L22)
 
 ## Methods
 
 ### Invalidate() {#invalidate}
 
+Forgets the cached answer, so the next read searches the scene again.
+
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LocalizationPresence.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LocalizationPresence.cs#L36)
 

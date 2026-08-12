@@ -23,13 +23,15 @@ public static class SetupExtensions
 
 ### All {#all}
 
+Every setup extension found in the editor assemblies, cached.
+
 ```csharp
 public static IReadOnlyList<SetupExtension> All { get; }
 ```
 
 **Returns** `IReadOnlyList<SetupExtension>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L58)
 
 ## Methods
 
@@ -46,13 +48,15 @@ public static List<SetupStep> CollectSteps()
 
 **Returns** `List<SetupStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L79)
 
 ### Invalidate() {#invalidate}
+
+Forgets the cached extension list, so a recompile is picked up.
 
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L68)
 

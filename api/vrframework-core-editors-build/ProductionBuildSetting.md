@@ -47,13 +47,13 @@ public bool isProductionBuild
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L26)
 
 ## Properties
 
 ### Description {#description}
 
-One line under the title explaining what the setting decides.
+One line explaining what the setting decides.
 
 ```csharp
 public override string Description { get; }
@@ -61,11 +61,11 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L32)
 
 ### DisplayName {#displayname}
 
-Section title in the Build window and the inspector.
+Section title in the Build window.
 
 ```csharp
 public override string DisplayName { get; }
@@ -73,11 +73,11 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L29)
 
 ### Order {#order}
 
-Lower applies, and lists, first.
+Applies after product identity.
 
 ```csharp
 public override int Order { get; }
@@ -85,15 +85,13 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L35)
 
 ## Methods
 
 ### Apply(VRFBuildContext) {#apply-vrfbuildcontext}
 
-Applies the setting. Runs inside OnPreprocessBuild, and from "Apply Settings Now" in the
-Build window, so it must not assume a build is actually in progress -
-[`Report`](/api/vrframework-core-editors-build/VRFBuildContext#report) is null outside one.
+Writes BuildSettings.json into StreamingAssets for this build.
 
 ```csharp
 public override void Apply(VRFBuildContext context)
@@ -103,14 +101,13 @@ public override void Apply(VRFBuildContext context)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) |  |
+| `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) | The build being prepared. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L51)
 
 ### Validate(BuildProfile, ValidationReport) {#validate-buildprofile-validationreport}
 
-Problems with the way this setting is filled in. Errors stop the build before anything
-is written; warnings are shown but let it through.
+Reports anything that would make the production flag misleading.
 
 ```csharp
 public override void Validate(BuildProfile profile, ValidationReport report)
@@ -120,8 +117,8 @@ public override void Validate(BuildProfile profile, ValidationReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | The profile carrying this setting. Null only if the settings object is not on one yet, which a setting should tolerate rather than assume away. |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile carrying this setting. |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L40)
 

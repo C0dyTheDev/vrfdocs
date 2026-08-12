@@ -51,7 +51,7 @@ Forgets every contributor and every stored value.
 public static void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L108)
 
 ### Collect() {#collect}
 
@@ -62,9 +62,9 @@ stored values first, then what the live contributors say.
 public static List<ReportEntry> Collect()
 ```
 
-**Returns** `List<ReportEntry>`
+**Returns** `List<ReportEntry>` - One entry per report key, in write order.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L142)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L152)
 
 ### Freeze(IReportContributor) {#freeze-ireportcontributor}
 
@@ -80,9 +80,9 @@ public static void Freeze(IReportContributor contributor)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) |  |
+| `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | Contributor whose current value is kept behind. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L116)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L125)
 
 ### FreezeAll() {#freezeall}
 
@@ -93,7 +93,7 @@ replaced and the session carries on.
 public static void FreezeAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L127)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L136)
 
 ### GetValue(string) {#getvalue-string}
 
@@ -107,11 +107,11 @@ public static object GetValue(string key)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Key to read. |
 
-**Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object)
+**Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object) - The stored value, or null when the key holds none.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L92)
 
 ### Register(IReportContributor) {#register-ireportcontributor}
 
@@ -126,9 +126,9 @@ public static void Register(IReportContributor contributor)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) |  |
+| `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | Contributor to announce. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L48)
 
 ### Remove(string) {#remove-string}
 
@@ -142,9 +142,9 @@ public static void Remove(string key)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Key to remove. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L99)
 
 ### SetValue(string, object) {#setvalue-string-object}
 
@@ -160,12 +160,14 @@ public static void SetValue(string key, object value)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `value` | [`object`](https://learn.microsoft.com/dotnet/api/system.object) |  |
+| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Key it lands under in the report JSON. |
+| `value` | [`object`](https://learn.microsoft.com/dotnet/api/system.object) | Anything JSON can hold, or a [`RawJson`](/api/vrframework-core-runtime/RawJson) when it is already written. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L74)
 
 ### Unregister(IReportContributor) {#unregister-ireportcontributor}
+
+Withdraws a contributor. Its frozen values, if any, stay in the report.
 
 ```csharp
 public static void Unregister(IReportContributor contributor)
@@ -175,7 +177,7 @@ public static void Unregister(IReportContributor contributor)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) |  |
+| `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | Contributor to withdraw. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L60)
 

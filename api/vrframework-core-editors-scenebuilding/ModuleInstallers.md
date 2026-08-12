@@ -8,7 +8,7 @@ description: 'Discovers every installer in the loaded editor assemblies, so proj
 
 # ModuleInstallers
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L81)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L89)
 
 Discovers every installer in the loaded editor assemblies, so projects can add their own by
 subclassing [`ModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ModuleInstaller).
@@ -23,17 +23,21 @@ public static class ModuleInstallers
 
 ### All {#all}
 
+Every module installer found in the editor assemblies, cached.
+
 ```csharp
 public static IReadOnlyList<ModuleInstaller> All { get; }
 ```
 
 **Returns** `IReadOnlyList<ModuleInstaller>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L94)
 
 ## Methods
 
 ### Find(string) {#find-string}
+
+Finds an installer by its identity.
 
 ```csharp
 public static ModuleInstaller Find(string id)
@@ -43,17 +47,19 @@ public static ModuleInstaller Find(string id)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Identity to look for. |
 
-**Returns** [`ModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ModuleInstaller)
+**Returns** [`ModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ModuleInstaller) - The installer, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L112)
 
 ### Invalidate() {#invalidate}
+
+Forgets the cached installers, so a recompile is picked up.
 
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L94)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L104)
 

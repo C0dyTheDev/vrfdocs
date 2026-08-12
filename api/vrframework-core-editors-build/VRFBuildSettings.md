@@ -67,6 +67,8 @@ public IReadOnlyList<VRFBuildSetting> Settings { get; }
 
 ### Add(VRFBuildSetting) {#add-vrfbuildsetting}
 
+Adds a setting to the profile. Null is ignored.
+
 ```csharp
 public void Add(VRFBuildSetting setting)
 ```
@@ -75,11 +77,13 @@ public void Add(VRFBuildSetting setting)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `setting` | [`VRFBuildSetting`](/api/vrframework-core-editors-build/VRFBuildSetting) |  |
+| `setting` | [`VRFBuildSetting`](/api/vrframework-core-editors-build/VRFBuildSetting) | Setting to add. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L63)
 
 ### Get\<T>() {#get-1}
+
+The setting of a given type carried by this profile.
 
 ```csharp
 public T Get<T>() where T : VRFBuildSetting
@@ -89,13 +93,15 @@ public T Get<T>() where T : VRFBuildSetting
 
 | Name | Description |
 | --- | --- |
-| `T` |  |
+| `T` | Setting type to look for. |
 
-**Returns** `T`
+**Returns** `T` - The setting, or null when the profile carries none of that type.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L48)
 
 ### Has(Type) {#has-type}
+
+Whether a setting of that exact type is already carried.
 
 ```csharp
 public bool Has(Type type)
@@ -105,11 +111,11 @@ public bool Has(Type type)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `type` | [`Type`](https://learn.microsoft.com/dotnet/api/system.type) |  |
+| `type` | [`Type`](https://learn.microsoft.com/dotnet/api/system.type) | Setting type to look for. |
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when one is present.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L56)
 
 ### Validate(BuildProfile) {#validate-buildprofile}
 
@@ -128,5 +134,5 @@ public ValidationReport Validate(BuildProfile profile)
 
 **Returns** [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L99)
 

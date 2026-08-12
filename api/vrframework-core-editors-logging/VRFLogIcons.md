@@ -23,6 +23,8 @@ public static class VRFLogIcons
 
 ### ForLevel(VRFLogLevel) {#forlevel-vrfloglevel}
 
+The icon shown for a severity.
+
 ```csharp
 public static Texture ForLevel(VRFLogLevel level)
 ```
@@ -31,9 +33,9 @@ public static Texture ForLevel(VRFLogLevel level)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) |  |
+| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) | Severity to look up. |
 
-**Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
+**Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html) - Its icon.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogIcons.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogIcons.cs#L14)
 

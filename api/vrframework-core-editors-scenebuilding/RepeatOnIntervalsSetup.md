@@ -8,7 +8,7 @@ description: 'Repeating tick.'
 
 # RepeatOnIntervalsSetup
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L315)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L417)
 
 Repeating tick.
 
@@ -22,11 +22,7 @@ public class RepeatOnIntervalsSetup : ComponentSetup
 
 ### Components {#components}
 
-Components added, in order, with the characteristic script last - that is the one the
-card takes its icon from. Empty for prefab-backed setups.
-Order matters beyond the icon: several framework behaviours pop a modal "which collider
-do you want?" dialog from Reset when they find no collider, so the collider has to be in
-the list before them.
+The components this setup adds.
 
 ```csharp
 public override Type[] Components { get; }
@@ -34,9 +30,11 @@ public override Type[] Components { get; }
 
 **Returns** [`Type[]`](https://learn.microsoft.com/dotnet/api/system.type[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L328)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L438)
 
 ### Description {#description}
+
+One line explaining what this is.
 
 ```csharp
 public override string Description { get; }
@@ -44,9 +42,11 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L323)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L431)
 
 ### DisplayName {#displayname}
+
+Name shown for this in the window.
 
 ```csharp
 public override string DisplayName { get; }
@@ -54,9 +54,11 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L318)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L422)
 
 ### Group {#group}
+
+Sub-grouping this entry is listed under inside its category.
 
 ```csharp
 public override string Group { get; }
@@ -64,9 +66,11 @@ public override string Group { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L319)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L424)
 
 ### Id {#id}
+
+Stable identity of this entry.
 
 ```csharp
 public override string Id { get; }
@@ -74,11 +78,11 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L317)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L420)
 
 ### ObjectName {#objectname}
 
-Name given to the GameObject when the setup creates one.
+Name given to the object this creates.
 
 ```csharp
 public override string ObjectName { get; }
@@ -86,9 +90,11 @@ public override string ObjectName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L321)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L428)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -96,9 +102,11 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L320)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L426)
 
 ### Tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public override string[] Tags { get; }
@@ -106,5 +114,5 @@ public override string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L327)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L436)
 

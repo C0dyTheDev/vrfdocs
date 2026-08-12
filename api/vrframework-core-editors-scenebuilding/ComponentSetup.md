@@ -41,9 +41,11 @@ public virtual Type[] Components { get; }
 
 **Returns** [`Type[]`](https://learn.microsoft.com/dotnet/api/system.type[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L45)
 
 ### Description {#description}
+
+One line explaining what this is.
 
 ```csharp
 public virtual string Description { get; }
@@ -51,9 +53,11 @@ public virtual string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L27)
 
 ### DisplayName {#displayname}
+
+Name shown on the card.
 
 ```csharp
 public abstract string DisplayName { get; }
@@ -61,9 +65,11 @@ public abstract string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L24)
 
 ### Group {#group}
+
+Sub-grouping this entry is listed under inside its category.
 
 ```csharp
 public virtual string Group { get; }
@@ -71,9 +77,11 @@ public virtual string Group { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L29)
 
 ### Icon {#icon}
+
+Icon shown on the card.
 
 ```csharp
 public virtual Texture Icon { get; }
@@ -81,9 +89,11 @@ public virtual Texture Icon { get; }
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L57)
 
 ### Id {#id}
+
+Stable identity of the setup.
 
 ```csharp
 public abstract string Id { get; }
@@ -91,9 +101,11 @@ public abstract string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L22)
 
 ### IsPrefabBacked {#isprefabbacked}
+
+Whether the setup drops a prefab rather than building an object from components.
 
 ```csharp
 public bool IsPrefabBacked { get; }
@@ -101,7 +113,7 @@ public bool IsPrefabBacked { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L51)
 
 ### ObjectName {#objectname}
 
@@ -113,9 +125,11 @@ public virtual string ObjectName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L36)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public virtual int Order { get; }
@@ -123,7 +137,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L33)
 
 ### Prefab {#prefab}
 
@@ -135,7 +149,7 @@ public virtual GameObject Prefab { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L48)
 
 ### PrimaryComponent {#primarycomponent}
 
@@ -147,9 +161,11 @@ public Type PrimaryComponent { get; }
 
 **Returns** [`Type`](https://learn.microsoft.com/dotnet/api/system.type)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L54)
 
 ### Tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public virtual string[] Tags { get; }
@@ -157,7 +173,7 @@ public virtual string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L31)
 
 ## Methods
 
@@ -178,7 +194,7 @@ public GameObject ApplyTo(GameObject target)
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L102)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L110)
 
 ### Configure(GameObject) {#configure-gameobject}
 
@@ -196,9 +212,11 @@ public virtual void Configure(GameObject target)
 | --- | --- | --- |
 | `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L80)
 
 ### ConfigureCollider(GameObject, bool) {#configurecollider-gameobject-boolean}
+
+Gives an object a collider sized to its renderer, adding one when it has none.
 
 ```csharp
 protected static void ConfigureCollider(GameObject target, bool isTrigger)
@@ -208,12 +226,14 @@ protected static void ConfigureCollider(GameObject target, bool isTrigger)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) |  |
-| `isTrigger` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
+| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object to give a collider. |
+| `isTrigger` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the collider is a trigger. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L208)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L222)
 
 ### ConfigureHighlight(GameObject) {#configurehighlight-gameobject}
+
+Gives an object the framework's highlight, disabled and coloured from the settings.
 
 ```csharp
 protected static void ConfigureHighlight(GameObject target)
@@ -223,9 +243,9 @@ protected static void ConfigureHighlight(GameObject target)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) |  |
+| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object to give a highlight. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L218)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L236)
 
 ### Create(Transform) {#create-transform}
 
@@ -243,7 +263,7 @@ public GameObject Create(Transform parent)
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L133)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L141)
 
 ### IsSatisfiedBy(GameObject) {#issatisfiedby-gameobject}
 
@@ -261,7 +281,7 @@ public bool IsSatisfiedBy(GameObject target)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L85)
 
 ### Place(PlacementContext) {#place-placementcontext}
 
@@ -280,7 +300,7 @@ public GameObject Place(PlacementContext context)
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L149)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L157)
 
 ### Prepare() {#prepare}
 
@@ -291,7 +311,7 @@ during their own Reset - a tag, a layer, a physics setting.
 public virtual void Prepare()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L71)
 
 ### ValidComponents() {#validcomponents}
 
@@ -304,5 +324,5 @@ protected IEnumerable<Type> ValidComponents()
 
 **Returns** `IEnumerable<Type>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L195)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L203)
 

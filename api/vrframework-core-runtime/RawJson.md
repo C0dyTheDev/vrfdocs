@@ -22,6 +22,8 @@ public readonly struct RawJson
 
 ### RawJson(string) {#ctor-string}
 
+Wraps already formed JSON.
+
 ```csharp
 public RawJson(string json)
 ```
@@ -30,13 +32,15 @@ public RawJson(string json)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `json` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `json` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | JSON text. Not validated, and not escaped. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L39)
 
 ## Fields
 
 ### Json {#json}
+
+The JSON text, written into the report exactly as it stands.
 
 ```csharp
 public readonly string Json
@@ -44,17 +48,19 @@ public readonly string Json
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L35)
 
 ## Methods
 
 ### ToString() {#tostring}
 
+The JSON text.
+
 ```csharp
 public override string ToString()
 ```
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The wrapped JSON.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L46)
 

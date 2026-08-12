@@ -30,10 +30,12 @@ public class VRFBuildWindow : EditorWindow
 
 ### Open() {#open}
 
+Opens the VRF Build window.
+
 ```csharp
 [MenuItem("VRFramework/Build", priority = 41)]
 public static void Open()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildWindow.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildWindow.cs#L71)
 

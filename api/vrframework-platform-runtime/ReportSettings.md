@@ -23,6 +23,8 @@ public class ReportSettings
 
 ### acceptedStatusCodes {#acceptedstatuscodes}
 
+Response codes that count as delivered. Anything else is retried, then given up on.
+
 ```csharp
 [Tooltip("Response codes that count as delivered. Anything else is retried, then given up on.")]
 public List<long> acceptedStatusCodes
@@ -30,9 +32,11 @@ public List<long> acceptedStatusCodes
 
 **Returns** `List<long>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L27)
 
 ### drainTimeout {#draintimeout}
+
+Seconds the end of the session waits for the queue to empty before carrying on anyway.
 
 ```csharp
 [Tooltip("Seconds the end of the session waits for the queue to empty before carrying on anyway.")]
@@ -41,9 +45,11 @@ public float drainTimeout
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L43)
 
 ### maxAttempts {#maxattempts}
+
+How many times one report is sent before the queue gives up and moves on.
 
 ```csharp
 [Tooltip("How many times one report is sent before the queue gives up and moves on.")]
@@ -52,9 +58,11 @@ public int maxAttempts
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L31)
 
 ### odkryvaniId {#odkryvaniid}
+
+Sent as "OdkryvaniId". The platform expects the field to be there.
 
 ```csharp
 [Tooltip("Sent as \"OdkryvaniId\". The platform expects the field to be there.")]
@@ -63,9 +71,11 @@ public int odkryvaniId
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L23)
 
 ### reportVersion {#reportversion}
+
+Version of the report format, written into the envelope the platform reads.
 
 ```csharp
 [Tooltip("Version of the report format. Goes into the envelope the platform reads.")]
@@ -74,9 +84,11 @@ public string reportVersion
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L19)
 
 ### requestTimeout {#requesttimeout}
+
+Seconds a single request may take before it counts as failed.
 
 ```csharp
 [Tooltip("Seconds a single request may take before it counts as failed.")]
@@ -85,9 +97,11 @@ public int requestTimeout
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L39)
 
 ### retryDelay {#retrydelay}
+
+Seconds before a retry. Each further attempt waits a multiple of this.
 
 ```csharp
 [Tooltip("Seconds before a retry. Each further attempt waits a multiple of this.")]
@@ -96,5 +110,5 @@ public float retryDelay
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L35)
 

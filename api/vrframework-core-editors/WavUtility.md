@@ -22,6 +22,8 @@ public static class WavUtility
 
 ### FromAudioClip(AudioClip) {#fromaudioclip-audioclip}
 
+Encodes a clip as a WAV file, header included.
+
 ```csharp
 public static byte[] FromAudioClip(AudioClip clip)
 ```
@@ -30,9 +32,9 @@ public static byte[] FromAudioClip(AudioClip clip)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `clip` | [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) |  |
+| `clip` | [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) | Clip to encode. |
 
-**Returns** [`byte[]`](https://learn.microsoft.com/dotnet/api/system.byte[])
+**Returns** [`byte[]`](https://learn.microsoft.com/dotnet/api/system.byte[]) - The WAV file contents.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/WavUtility.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/WavUtility.cs#L15)
 

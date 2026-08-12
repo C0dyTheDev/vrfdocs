@@ -26,15 +26,19 @@ public class VRFLogStore : ScriptableSingleton<VRFLogStore>
 
 ### DebugCount {#debugcount}
 
+How many internal debug lines are held.
+
 ```csharp
 public int DebugCount { get; }
 ```
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L39)
 
 ### Entries {#entries}
+
+Every captured line, oldest first.
 
 ```csharp
 public IReadOnlyList<VRFLogEntry> Entries { get; }
@@ -42,9 +46,11 @@ public IReadOnlyList<VRFLogEntry> Entries { get; }
 
 **Returns** `IReadOnlyList<VRFLogEntry>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L31)
 
 ### ErrorCount {#errorcount}
+
+How many error lines are held.
 
 ```csharp
 public int ErrorCount { get; }
@@ -52,9 +58,11 @@ public int ErrorCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L37)
 
 ### InfoCount {#infocount}
+
+How many informational lines are held.
 
 ```csharp
 public int InfoCount { get; }
@@ -62,9 +70,11 @@ public int InfoCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L33)
 
 ### TotalCount {#totalcount}
+
+How many lines are held in total.
 
 ```csharp
 public int TotalCount { get; }
@@ -72,9 +82,11 @@ public int TotalCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L41)
 
 ### WarningCount {#warningcount}
+
+How many warning lines are held.
 
 ```csharp
 public int WarningCount { get; }
@@ -82,7 +94,7 @@ public int WarningCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L35)
 
 ## Methods
 
@@ -96,15 +108,17 @@ public List<string> Channels()
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L227)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L236)
 
 ### Clear() {#clear}
+
+Empties the buffer and resets every count.
 
 ```csharp
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L195)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L204)
 
 ### Flush() {#flush}
 
@@ -114,9 +128,11 @@ Writes the buffer to Library so it is still there after the reload.
 public void Flush()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L206)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L215)
 
 ### SetUnityConsoleCapture(bool) {#setunityconsolecapture-boolean}
+
+Whether lines logged straight to the Unity console are captured as well.
 
 ```csharp
 public static void SetUnityConsoleCapture(bool enabled)
@@ -126,9 +142,9 @@ public static void SetUnityConsoleCapture(bool enabled)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `enabled` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
+| `enabled` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to capture them. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L130)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L138)
 
 ## Events
 
@@ -142,5 +158,5 @@ public static event Action Changed
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L44)
 

@@ -52,14 +52,16 @@ Repaints every open window. Called when a run finishes and nothing else would.
 public static void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L101)
 
 ### ShowWindow() {#showwindow}
+
+Opens the package setup window.
 
 ```csharp
 [MenuItem("VRFramework/Set Up Project for VR", priority = 21)]
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L90)
 

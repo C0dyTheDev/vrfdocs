@@ -8,7 +8,7 @@ description: 'One label/value row in the details panel.'
 
 # DetailField
 
-**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L78)
+**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L101)
 
 One label/value row in the details panel.
 
@@ -20,6 +20,8 @@ public readonly struct DetailField
 
 ### DetailField(string, string) {#ctor-string-string}
 
+Builds a detail row.
+
 ```csharp
 public DetailField(string label, string value)
 ```
@@ -28,14 +30,16 @@ public DetailField(string label, string value)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Label on the left. |
+| `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Value on the right. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L106)
 
 ## Properties
 
 ### Label {#label}
+
+Label on the left.
 
 ```csharp
 public string Label { get; }
@@ -43,9 +47,11 @@ public string Label { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L113)
 
 ### Value {#value}
+
+Value on the right.
 
 ```csharp
 public string Value { get; }
@@ -53,5 +59,5 @@ public string Value { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L115)
 

@@ -42,10 +42,12 @@ public static ValidationReport Run(ValidationScope? only = null)
 
 ### ValidateToConsole() {#validatetoconsole}
 
+Runs every rule and writes what they find to the Unity console.
+
 ```csharp
 [MenuItem("VRFramework/Validate to Console", priority = 61)]
 public static void ValidateToConsole()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/VRFValidator.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/VRFValidator.cs#L51)
 

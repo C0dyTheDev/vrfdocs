@@ -39,13 +39,15 @@ public static Color Accent { get; }
 
 ### Border {#border}
 
+Colour of the one pixel border around a group.
+
 ```csharp
 public static Color Border { get; }
 ```
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L59)
 
 ### EventAccent {#eventaccent}
 
@@ -61,15 +63,19 @@ public static Color EventAccent { get; }
 
 ### EventsBackground {#eventsbackground}
 
+Background of a group of UnityEvents.
+
 ```csharp
 public static Color EventsBackground { get; }
 ```
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L57)
 
 ### HeaderBackground {#headerbackground}
+
+Background of a component header.
 
 ```csharp
 public static Color HeaderBackground { get; }
@@ -77,7 +83,7 @@ public static Color HeaderBackground { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L53)
 
 ### HeaderBox {#headerbox}
 
@@ -89,7 +95,7 @@ public static GUIStyle HeaderBox { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L77)
 
 ### HeaderSubtitle {#headersubtitle}
 
@@ -101,7 +107,7 @@ public static GUIStyle HeaderSubtitle { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L97)
 
 ### HeaderTitle {#headertitle}
 
@@ -113,7 +119,7 @@ public static GUIStyle HeaderTitle { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L82)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L87)
 
 ### HeadingFont {#headingfont}
 
@@ -126,7 +132,7 @@ public static Font HeadingFont { get; }
 
 **Returns** [`Font`](https://docs.unity3d.com/ScriptReference/Font.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L67)
 
 ### Hint {#hint}
 
@@ -138,7 +144,7 @@ public static GUIStyle Hint { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L132)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L137)
 
 ### MiniButton {#minibutton}
 
@@ -150,9 +156,11 @@ public static GUIStyle MiniButton { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L142)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L147)
 
 ### MutedText {#mutedtext}
+
+Colour of secondary text, e.g. a subtitle.
 
 ```csharp
 public static Color MutedText { get; }
@@ -160,7 +168,7 @@ public static Color MutedText { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L61)
 
 ### Pill {#pill}
 
@@ -172,9 +180,11 @@ public static GUIStyle Pill { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L122)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L127)
 
 ### SectionBackground {#sectionbackground}
+
+Background of a settings group.
 
 ```csharp
 public static Color SectionBackground { get; }
@@ -182,7 +192,7 @@ public static Color SectionBackground { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L55)
 
 ### SectionBox {#sectionbox}
 
@@ -194,7 +204,7 @@ public static GUIStyle SectionBox { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L102)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L107)
 
 ### SectionHeader {#sectionheader}
 
@@ -206,7 +216,7 @@ public static GUIStyle SectionHeader { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L117)
 
 ### WarnAccent {#warnaccent}
 
@@ -238,5 +248,5 @@ public static Texture2D Solid(Color color)
 
 **Returns** [`Texture2D`](https://docs.unity3d.com/ScriptReference/Texture2D.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L164)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L169)
 

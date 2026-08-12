@@ -27,6 +27,8 @@ public class ComponentSetupAsset : ScriptableObject
 
 ### addAudioSource {#addaudiosource}
 
+Whether an audio source is added.
+
 ```csharp
 [Header("SCRIPT PACK - AUDIO")]
 public bool addAudioSource
@@ -34,9 +36,11 @@ public bool addAudioSource
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L97)
 
 ### addRigidbody {#addrigidbody}
+
+Whether a rigidbody is added.
 
 ```csharp
 [Header("SCRIPT PACK - PHYSICS")]
@@ -45,9 +49,11 @@ public bool addRigidbody
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L84)
 
 ### audioPlayOnAwake {#audioplayonawake}
+
+Whether that audio source plays as soon as the scene starts.
 
 ```csharp
 public bool audioPlayOnAwake
@@ -55,9 +61,11 @@ public bool audioPlayOnAwake
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L100)
 
 ### audioSpatialBlend {#audiospatialblend}
+
+Spatial blend of that audio source, as 0 for 2D and 1 for 3D.
 
 ```csharp
 [Range(0, 1)]
@@ -67,9 +75,11 @@ public float audioSpatialBlend
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L104)
 
 ### collider {#collider}
+
+Collider added to the object, if any.
 
 ```csharp
 public ComponentSetupAsset.ColliderShape collider
@@ -77,9 +87,11 @@ public ComponentSetupAsset.ColliderShape collider
 
 **Returns** [`ComponentSetupAsset.ColliderShape`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset.ColliderShape)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L92)
 
 ### colliderIsTrigger {#collideristrigger}
+
+Whether that collider is a trigger.
 
 ```csharp
 public bool colliderIsTrigger
@@ -87,9 +99,11 @@ public bool colliderIsTrigger
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L94)
 
 ### description {#description}
+
+One line describing the setup.
 
 ```csharp
 [TextArea(2, 6)]
@@ -99,9 +113,11 @@ public string description
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L54)
 
 ### displayName {#displayname}
+
+Name shown on the card. Empty uses the asset's own name.
 
 ```csharp
 [Tooltip("Shown on the card. Falls back to the asset name when empty.")]
@@ -110,9 +126,11 @@ public string displayName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L50)
 
 ### group {#group}
+
+Sub-grouping this entry is listed under inside its category.
 
 ```csharp
 [Tooltip("Sub-group inside the Components category, used by the group filter.")]
@@ -121,9 +139,11 @@ public string group
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L58)
 
 ### kind {#kind}
+
+Whether the setup builds an object or drops a prefab.
 
 ```csharp
 public ComponentSetupAsset.SetupKind kind
@@ -131,9 +151,11 @@ public ComponentSetupAsset.SetupKind kind
 
 **Returns** [`ComponentSetupAsset.SetupKind`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset.SetupKind)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L68)
 
 ### objectName {#objectname}
+
+Name given to the object this creates. Empty uses the display name.
 
 ```csharp
 [Header("SCRIPT PACK")]
@@ -143,9 +165,11 @@ public string objectName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L77)
 
 ### order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 [Tooltip("Lower sorts first. Framework setups sit between 0 and 100.")]
@@ -154,9 +178,11 @@ public int order
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L65)
 
 ### prefab {#prefab}
+
+Prefab dropped when the setup is prefab backed.
 
 ```csharp
 [Header("PREFAB")]
@@ -166,9 +192,11 @@ public GameObject prefab
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L72)
 
 ### rigidbodyIsKinematic {#rigidbodyiskinematic}
+
+Whether that rigidbody is kinematic.
 
 ```csharp
 public bool rigidbodyIsKinematic
@@ -176,9 +204,11 @@ public bool rigidbodyIsKinematic
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L87)
 
 ### rigidbodyUseGravity {#rigidbodyusegravity}
+
+Whether that rigidbody is pulled by gravity.
 
 ```csharp
 public bool rigidbodyUseGravity
@@ -186,9 +216,11 @@ public bool rigidbodyUseGravity
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L89)
 
 ### scripts {#scripts}
+
+The scripts added to the object, in order.
 
 ```csharp
 [Tooltip("The scripts that belong together. Added in this order; the last one drives the icon.")]
@@ -197,9 +229,11 @@ public MonoScript[] scripts
 
 **Returns** [`MonoScript[]`](https://docs.unity3d.com/ScriptReference/MonoScript[].html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L81)
 
 ### tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public string[] tags
@@ -207,11 +241,13 @@ public string[] tags
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L61)
 
 ## Properties
 
 ### ObjectName {#objectname}
+
+Name given to the object this creates.
 
 ```csharp
 public string ObjectName { get; }
@@ -219,9 +255,11 @@ public string ObjectName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L110)
 
 ### Title {#title}
+
+Name shown in the window.
 
 ```csharp
 public string Title { get; }
@@ -229,7 +267,7 @@ public string Title { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L107)
 
 ## Methods
 
@@ -244,7 +282,7 @@ public IEnumerable<Type> ComponentTypes()
 
 **Returns** `IEnumerable<Type>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L118)
 
 ### Configure(GameObject) {#configure-gameobject}
 
@@ -260,7 +298,7 @@ public void Configure(GameObject target)
 | --- | --- | --- |
 | `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L153)
 
 ### FindAll() {#findall}
 
@@ -272,5 +310,5 @@ public static IEnumerable<ComponentSetupAsset> FindAll()
 
 **Returns** `IEnumerable<ComponentSetupAsset>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L165)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L198)
 

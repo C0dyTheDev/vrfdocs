@@ -8,7 +8,7 @@ description: 'Runs a list of SetupStep/api/vrframework-core-editors-setup/SetupS
 
 # SetupRunner
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L167)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L196)
 
 Runs a list of [`SetupStep`](/api/vrframework-core-editors-setup/SetupStep) one at a time, across the script reloads that setting
 a project up unavoidably causes.
@@ -33,13 +33,15 @@ public static class SetupRunner
 
 ### IsRunning {#isrunning}
 
+Whether a setup sequence is running right now.
+
 ```csharp
 public static bool IsRunning { get; }
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L183)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L213)
 
 ### Progress {#progress}
 
@@ -52,7 +54,7 @@ public static SetupProgress Progress { get; }
 
 **Returns** [`SetupProgress`](/api/vrframework-core-editors-setup/SetupProgress)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L189)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L219)
 
 ### RunningFor {#runningfor}
 
@@ -64,7 +66,7 @@ public static float RunningFor { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L227)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L257)
 
 ### RunningStep {#runningstep}
 
@@ -76,7 +78,7 @@ public static SetupStep RunningStep { get; }
 
 **Returns** [`SetupStep`](/api/vrframework-core-editors-setup/SetupStep)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L214)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L244)
 
 ## Methods
 
@@ -95,7 +97,7 @@ public static void Abort(string reason)
 | --- | --- | --- |
 | `reason` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L280)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L310)
 
 ### Cancel() {#cancel}
 
@@ -105,7 +107,7 @@ Drops the sequence on the floor. Whatever already ran stays applied.
 public static void Cancel()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L308)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L338)
 
 ### ReportFailure(string) {#reportfailure-string}
 
@@ -121,7 +123,7 @@ public static void ReportFailure(string message)
 | --- | --- | --- |
 | `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L286)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L316)
 
 ### Resume(string, Func\<IEnumerable\<SetupStep>>, Action\<SetupOutcome>) {#resume-string-setupstep-setupoutcome}
 
@@ -140,7 +142,7 @@ public static void Resume(string sequenceId, Func<IEnumerable<SetupStep>> sequen
 | `sequence` | `Func<IEnumerable<SetupStep>>` |  |
 | `finished` | `Action<SetupOutcome>` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L260)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L290)
 
 ### SetSummary(string) {#setsummary-string}
 
@@ -158,7 +160,7 @@ public static void SetSummary(string text)
 | --- | --- | --- |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L342)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L372)
 
 ### Start(string, IEnumerable\<SetupStep>, Action\<SetupOutcome>) {#start-string-setupstep-setupoutcome}
 
@@ -177,5 +179,5 @@ public static void Start(string sequenceId, IEnumerable<SetupStep> sequence, Act
 | `sequence` | `IEnumerable<SetupStep>` |  |
 | `finished` | `Action<SetupOutcome>` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L235)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L265)
 

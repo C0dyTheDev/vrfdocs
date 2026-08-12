@@ -12,32 +12,32 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`AudioModuleRule`](/api/vrframework-core-editors-validation/AudioModuleRule) |  |
-| [`BuildTargetRule`](/api/vrframework-core-editors-validation/BuildTargetRule) |  |
+| [`AudioModuleRule`](/api/vrframework-core-editors-validation/AudioModuleRule) | Checks the audio module's setup: its default source and success sound. |
+| [`BuildTargetRule`](/api/vrframework-core-editors-validation/BuildTargetRule) | Checks that the project builds for a target the framework supports. |
 | [`DuplicateModuleRule`](/api/vrframework-core-editors-validation/DuplicateModuleRule) | Two modules of the same type both register the same service, and RuntimeRegistry keeps whichever registered last. |
 | [`FrameworkSettingsRule`](/api/vrframework-core-editors-validation/FrameworkSettingsRule) | The VRFrameworkSettings asset every project is expected to carry, and the pieces of it that other parts of the framework read at runtime. |
-| [`InteractionModuleRule`](/api/vrframework-core-editors-validation/InteractionModuleRule) |  |
-| [`LocalizationModuleRule`](/api/vrframework-core-editors-validation/LocalizationModuleRule) |  |
-| [`MinigamesModuleRule`](/api/vrframework-core-editors-validation/MinigamesModuleRule) |  |
-| [`MistakesModuleRule`](/api/vrframework-core-editors-validation/MistakesModuleRule) |  |
+| [`InteractionModuleRule`](/api/vrframework-core-editors-validation/InteractionModuleRule) | Checks the interaction module's setup: the rig references it hands to everything else. |
+| [`LocalizationModuleRule`](/api/vrframework-core-editors-validation/LocalizationModuleRule) | Checks the localization module's setup: its config and translation assets. |
+| [`MinigamesModuleRule`](/api/vrframework-core-editors-validation/MinigamesModuleRule) | Checks the minigames module's setup: its set of parts and their scenes. |
+| [`MistakesModuleRule`](/api/vrframework-core-editors-validation/MistakesModuleRule) | Checks the mistakes module's setup: its checkpoints and scene name. |
 | [`ModuleRule<T>`](/api/vrframework-core-editors-validation/ModuleRule`1) | A rule that only runs when its module is in the open scene, so a scene that simply does not use that module is never reported as broken. |
-| [`PhysicsRule`](/api/vrframework-core-editors-validation/PhysicsRule) |  |
-| [`PlatformModuleRule`](/api/vrframework-core-editors-validation/PlatformModuleRule) |  |
-| [`PlayerSettingsRule`](/api/vrframework-core-editors-validation/PlayerSettingsRule) |  |
-| [`ProgressEnqueueRule`](/api/vrframework-core-editors-validation/ProgressEnqueueRule) |  |
+| [`PhysicsRule`](/api/vrframework-core-editors-validation/PhysicsRule) | Checks the physics settings the framework's grabbing relies on. |
+| [`PlatformModuleRule`](/api/vrframework-core-editors-validation/PlatformModuleRule) | Checks the platform module's setup: its parameters asset and report settings. |
+| [`PlayerSettingsRule`](/api/vrframework-core-editors-validation/PlayerSettingsRule) | Checks the player settings a VR build needs. |
+| [`ProgressEnqueueRule`](/api/vrframework-core-editors-validation/ProgressEnqueueRule) | Checks the branching: that every enqueue points at a block, and none of them is empty. |
 | [`ProgressLayoutRule`](/api/vrframework-core-editors-validation/ProgressLayoutRule) | Where blocks and steps sit in the hierarchy, and whether their object names still match the order the manager reads them in. |
 | [`ProgressReachabilityRule`](/api/vrframework-core-editors-validation/ProgressReachabilityRule) | Walks the scenario the way the manager does - start block, then whatever each step queues - and reports the blocks nothing can reach. |
-| [`ProgressSetupRule`](/api/vrframework-core-editors-validation/ProgressSetupRule) |  |
-| [`RenderingRule`](/api/vrframework-core-editors-validation/RenderingRule) |  |
+| [`ProgressSetupRule`](/api/vrframework-core-editors-validation/ProgressSetupRule) | Checks that the scene has a scenario and a progress module wired to a start block. |
+| [`RenderingRule`](/api/vrframework-core-editors-validation/RenderingRule) | Checks the render pipeline settings VR needs to run smoothly. |
 | [`ReportContributorRule`](/api/vrframework-core-editors-validation/ReportContributorRule) | What this scene adds to the session report. |
-| [`SceneCameraRule`](/api/vrframework-core-editors-validation/SceneCameraRule) |  |
-| [`SceneInBuildRule`](/api/vrframework-core-editors-validation/SceneInBuildRule) |  |
-| [`SceneScaffoldRule`](/api/vrframework-core-editors-validation/SceneScaffoldRule) |  |
-| [`ScriptExecutionOrderRule`](/api/vrframework-core-editors-validation/ScriptExecutionOrderRule) |  |
+| [`SceneCameraRule`](/api/vrframework-core-editors-validation/SceneCameraRule) | Checks the scene's cameras: that there is one, and that it is the rig's. |
+| [`SceneInBuildRule`](/api/vrframework-core-editors-validation/SceneInBuildRule) | Checks that the open scene is in the build settings, so it can actually be loaded. |
+| [`SceneScaffoldRule`](/api/vrframework-core-editors-validation/SceneScaffoldRule) | Checks that the open scene has the objects a framework scene is built from. |
+| [`ScriptExecutionOrderRule`](/api/vrframework-core-editors-validation/ScriptExecutionOrderRule) | Checks that the framework's scripts run in the order the runtime expects. |
 | [`ServiceDependencyRule`](/api/vrframework-core-editors-validation/ServiceDependencyRule) | Steps set up to speak with nothing in the scene able to play them. |
-| [`StreamingAssetsRule`](/api/vrframework-core-editors-validation/StreamingAssetsRule) |  |
-| [`StreamingModuleRule`](/api/vrframework-core-editors-validation/StreamingModuleRule) |  |
-| [`TagsAndLayersRule`](/api/vrframework-core-editors-validation/TagsAndLayersRule) |  |
+| [`StreamingAssetsRule`](/api/vrframework-core-editors-validation/StreamingAssetsRule) | Checks the StreamingAssets files the platform module reads at runtime. |
+| [`StreamingModuleRule`](/api/vrframework-core-editors-validation/StreamingModuleRule) | Checks the streaming module's setup: the camera it streams. |
+| [`TagsAndLayersRule`](/api/vrframework-core-editors-validation/TagsAndLayersRule) | Checks that the tags and layers the framework's interaction relies on exist. |
 | [`ValidationIssue`](/api/vrframework-core-editors-validation/ValidationIssue) | One thing the validator found and, where the fix is unambiguous, the single click that applies it. |
 | [`ValidationIssueView`](/api/vrframework-core-editors-validation/ValidationIssueView) | One issue as a card: severity accent and icon, the headline, what it costs at runtime, how to put it right, and the buttons that jump to the object or apply the fix. |
 | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | What rules write their findings into. |
@@ -47,12 +47,12 @@ sidebar_position: 0
 | [`ValidatorWindow`](/api/vrframework-core-editors-validation/ValidatorWindow) | One window for everything the framework can check about the project and the open scene. |
 | [`VRCoreRule`](/api/vrframework-core-editors-validation/VRCoreRule) | VRCore drives the whole init sequence off one serialized array. |
 | [`VRFValidator`](/api/vrframework-core-editors-validation/VRFValidator) | Runs every discovered rule and hands back one report. |
-| [`XrSetupRule`](/api/vrframework-core-editors-validation/XrSetupRule) |  |
+| [`XrSetupRule`](/api/vrframework-core-editors-validation/XrSetupRule) | Checks the XR setup: the plug-in providers and the features the rig needs. |
 
 ## Enums
 
 | Name | Summary |
 | --- | --- |
-| [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope) |  |
-| [`ValidationSeverity`](/api/vrframework-core-editors-validation/ValidationSeverity) |  |
+| [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope) | What part of the project a rule looks at. |
+| [`ValidationSeverity`](/api/vrframework-core-editors-validation/ValidationSeverity) | How much a validator finding matters. |
 

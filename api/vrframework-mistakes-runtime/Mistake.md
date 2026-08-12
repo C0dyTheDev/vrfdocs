@@ -23,6 +23,8 @@ public class Mistake
 
 ### Mistake(string, string) {#ctor-string-string}
 
+Builds a checkpoint, not yet done.
+
 ```csharp
 public Mistake(string mistakeName, string displayName)
 ```
@@ -31,14 +33,16 @@ public Mistake(string mistakeName, string displayName)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `mistakeName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `displayName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `mistakeName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name it is ticked off by. |
+| `displayName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name shown in the results. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L26)
 
 ## Fields
 
 ### displayName {#displayname}
+
+Name shown in the results, which may be a whole sentence.
 
 ```csharp
 [Space(5)]
@@ -48,9 +52,11 @@ public string displayName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L21)
 
 ### done {#done}
+
+Whether it has been done correctly.
 
 ```csharp
 [SerializeField]
@@ -59,9 +65,11 @@ public bool done
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L18)
 
 ### mistakeName {#mistakename}
+
+Name the checkpoint is ticked off by, from script or a UnityEvent.
 
 ```csharp
 [SerializeField]
@@ -70,5 +78,5 @@ public string mistakeName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L15)
 

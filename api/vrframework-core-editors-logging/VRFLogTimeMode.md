@@ -20,9 +20,9 @@ public enum VRFLogTimeMode
 
 | Name | Value | Description |
 | --- | --- | --- |
-| `Clock` | 1 |  |
-| `Delta` | 3 |  |
-| `Frame` | 4 |  |
-| `None` | 0 |  |
-| `SinceStartup` | 2 |  |
+| `Clock` | 1 | Wall clock time of the line. |
+| `Delta` | 3 | Time since the line before it. |
+| `Frame` | 4 | Frame number the line was logged on. |
+| `None` | 0 | No time column. |
+| `SinceStartup` | 2 | Seconds since the editor started playing. |
 

@@ -8,7 +8,7 @@ description: 'Two modules of the same type both register the same service, and R
 
 # DuplicateModuleRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L131)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L140)
 
 Two modules of the same type both register the same service, and RuntimeRegistry keeps
 whichever registered last.
@@ -23,7 +23,7 @@ public class DuplicateModuleRule : ValidationRule
 
 ### Category {#category}
 
-Group heading in the window. Rules that share a category are listed together.
+Heading the findings of this rule are grouped under.
 
 ```csharp
 public override string Category { get; }
@@ -31,11 +31,11 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L133)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L143)
 
 ### Order {#order}
 
-Lower runs, and lists, first.
+Where these findings sit in the report. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -43,11 +43,13 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L145)
 
 ## Methods
 
 ### Validate(ValidationReport) {#validate-validationreport}
+
+Runs the check and reports what it finds.
 
 ```csharp
 public override void Validate(ValidationReport report)
@@ -57,7 +59,7 @@ public override void Validate(ValidationReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/SceneRules.cs#L149)
 

@@ -13,75 +13,75 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`AudioEditor`](/api/vrframework-core-editors/AudioEditor) | Audio Clip Editor window Editor The code is pretty self explanatory, it is a third party code |
-| [`BackgroundGrid`](/api/vrframework-core-editors/BackgroundGrid) |  |
-| [`BlockPort`](/api/vrframework-core-editors/BlockPort) |  |
-| [`BlockPortDot`](/api/vrframework-core-editors/BlockPortDot) |  |
-| [`BlockPortHole`](/api/vrframework-core-editors/BlockPortHole) |  |
-| [`BlockView`](/api/vrframework-core-editors/BlockView) |  |
-| [`BlockViewHeader`](/api/vrframework-core-editors/BlockViewHeader) |  |
+| [`BackgroundGrid`](/api/vrframework-core-editors/BackgroundGrid) | The grid drawn behind the graph, which is what makes panning and zooming legible. |
+| [`BlockPort`](/api/vrframework-core-editors/BlockPort) | Base of the two kinds of port on a block node: the hole a line attaches to, and the colour that follows whatever is connected to it. |
+| [`BlockPortDot`](/api/vrframework-core-editors/BlockPortDot) | The dot drawn inside a port hole, which is what makes a connected port read as filled. |
+| [`BlockPortHole`](/api/vrframework-core-editors/BlockPortHole) | The socket of a port: what a line attaches to and what a dragged line snaps onto. |
+| [`BlockView`](/api/vrframework-core-editors/BlockView) | One block as a node on the progress graph: a header, one input port and an output port per step. |
+| [`BlockViewHeader`](/api/vrframework-core-editors/BlockViewHeader) | The title bar of a block node: its number, its name, and the colour that says what it is. |
 | [`CameraRecenterEditor`](/api/vrframework-core-editors/CameraRecenterEditor) | Editor for the CameraRecenter script - gives the object a recognisable hierarchy icon. |
 | [`ComponentTogglerEditor`](/api/vrframework-core-editors/ComponentTogglerEditor) | Editor for ComponentToggler script. |
-| [`ConfirmDialog`](/api/vrframework-core-editors/ConfirmDialog) |  |
-| [`DateLabel`](/api/vrframework-core-editors/DateLabel) |  |
+| [`ConfirmDialog`](/api/vrframework-core-editors/ConfirmDialog) | A small yes or no window, used before anything in the graph deletes a scene object. |
+| [`DateLabel`](/api/vrframework-core-editors/DateLabel) | The corner label showing when the graph was last redrawn. |
 | [`DebugOnlyDrawer`](/api/vrframework-core-editors/DebugOnlyDrawer) | Makes the property show only in Debug Mode, which is the VRF_DEBUG define - the same switch that decides whether the framework logs its own internals. |
-| [`DraggedPortHole`](/api/vrframework-core-editors/DraggedPortHole) |  |
-| [`EdgeTypeDialog`](/api/vrframework-core-editors/EdgeTypeDialog) |  |
+| [`DraggedPortHole`](/api/vrframework-core-editors/DraggedPortHole) | The loose end of a line while it is being dragged: follows the pointer, and colours itself for what dropping it there would do - connect, refuse, or delete. |
+| [`EdgeTypeDialog`](/api/vrframework-core-editors/EdgeTypeDialog) | Asks which kind of enqueue a new connection stands for - unconditional, or the true or false branch of the step's condition. |
 | [`GrabbableObjectEditor`](/api/vrframework-core-editors/GrabbableObjectEditor) | Editor for GrabbableObject script. |
 | [`HighlightEditor`](/api/vrframework-core-editors/HighlightEditor) | Editor for the Highlight script |
-| [`HintLabel`](/api/vrframework-core-editors/HintLabel) |  |
-| [`Hints`](/api/vrframework-core-editors/Hints) |  |
-| [`InputPort`](/api/vrframework-core-editors/InputPort) |  |
-| [`LanguageAttributeDrawer`](/api/vrframework-core-editors/LanguageAttributeDrawer) |  |
-| [`LanguageAudioEditor`](/api/vrframework-core-editors/LanguageAudioEditor) |  |
-| [`LanguageAudioListDrawer`](/api/vrframework-core-editors/LanguageAudioListDrawer) |  |
-| [`LanguageComponent`](/api/vrframework-core-editors/LanguageComponent) |  |
-| [`LanguageDialog`](/api/vrframework-core-editors/LanguageDialog) |  |
-| [`LanguageDrawer`](/api/vrframework-core-editors/LanguageDrawer) |  |
-| [`LanguageElementDrawer`](/api/vrframework-core-editors/LanguageElementDrawer) |  |
+| [`HintLabel`](/api/vrframework-core-editors/HintLabel) | The status bar of the graph window, showing what the element under the pointer can do. |
+| [`Hints`](/api/vrframework-core-editors/Hints) | The status bar hints of the graph window, one per thing the pointer can be over. |
+| [`InputPort`](/api/vrframework-core-editors/InputPort) | The port on the left of a block node: where the lines that queue this block arrive. |
+| [`LanguageAttributeDrawer`](/api/vrframework-core-editors/LanguageAttributeDrawer) | Draws a Language string field as a translation picker. |
+| [`LanguageAudioEditor`](/api/vrframework-core-editors/LanguageAudioEditor) | Inspector for an audio translation asset. |
+| [`LanguageAudioListDrawer`](/api/vrframework-core-editors/LanguageAudioListDrawer) | Draws an entry of an audio translation asset. |
+| [`LanguageComponent`](/api/vrframework-core-editors/LanguageComponent) | The translation picker itself: the button showing which entry a field points at, the dialog it opens, and the shortcuts to the translation asset behind it. |
+| [`LanguageDialog`](/api/vrframework-core-editors/LanguageDialog) | The window that picks a translation entry: lists the entries of one translation asset, with search, sorting and filters for translated and untranslated ones. |
+| [`LanguageDrawer`](/api/vrframework-core-editors/LanguageDrawer) | Draws one language of the language config: its name, and its ID in Debug Mode. |
+| [`LanguageElementDrawer`](/api/vrframework-core-editors/LanguageElementDrawer) | Draws one language's slot of a translation entry: the language name and its content. |
 | [`LanguageInstanceEditor`](/api/vrframework-core-editors/LanguageInstanceEditor) | Shared editor for the three localization instance assets. |
-| [`LanguageListDrawer`](/api/vrframework-core-editors/LanguageListDrawer) |  |
+| [`LanguageListDrawer`](/api/vrframework-core-editors/LanguageListDrawer) | Draws one entry of a translation asset: its name, and a row per language, filtered by the asset's search text and language toggles. |
 | [`LanguageManagerEditor`](/api/vrframework-core-editors/LanguageManagerEditor) | Editor for the LanguageManager script. |
-| [`LanguageSpriteEditor`](/api/vrframework-core-editors/LanguageSpriteEditor) |  |
-| [`LanguageSpriteListDrawer`](/api/vrframework-core-editors/LanguageSpriteListDrawer) |  |
-| [`LanguageTextEditor`](/api/vrframework-core-editors/LanguageTextEditor) |  |
-| [`LanguageTextListDrawer`](/api/vrframework-core-editors/LanguageTextListDrawer) |  |
-| [`Line`](/api/vrframework-core-editors/Line) |  |
-| [`LineDeleter`](/api/vrframework-core-editors/LineDeleter) |  |
+| [`LanguageSpriteEditor`](/api/vrframework-core-editors/LanguageSpriteEditor) | Inspector for a sprite translation asset. |
+| [`LanguageSpriteListDrawer`](/api/vrframework-core-editors/LanguageSpriteListDrawer) | Draws an entry of a sprite translation asset. |
+| [`LanguageTextEditor`](/api/vrframework-core-editors/LanguageTextEditor) | Inspector for a text translation asset. |
+| [`LanguageTextListDrawer`](/api/vrframework-core-editors/LanguageTextListDrawer) | Draws an entry of a text translation asset. |
+| [`Line`](/api/vrframework-core-editors/Line) | A connection drawn between two ports of the graph: it leaves a step's output port and arrives at a block's input port, which is the enqueue that step performs. |
+| [`LineDeleter`](/api/vrframework-core-editors/LineDeleter) | The bin a line is dropped onto to delete the connection it stands for. |
 | [`LocalizationPresence`](/api/vrframework-core-editors/LocalizationPresence) | Tracks whether the open scene has a Localization module, so drawers can decide between the translation picker and a plain asset field without searching on every repaint. |
 | [`MetaPicoSwitcher`](/api/vrframework-core-editors/MetaPicoSwitcher) | A toggle in the main toolbar that swaps the project between the Meta and the Pico OpenXR stacks: which vendor feature set is on for Android, which loader Standalone uses for link p |
 | [`MinigameManagerEditor`](/api/vrframework-core-editors/MinigameManagerEditor) | Editor for MinigamesManager script. |
-| [`NameChangeDetector`](/api/vrframework-core-editors/NameChangeDetector) |  |
-| [`OutputPort`](/api/vrframework-core-editors/OutputPort) |  |
-| [`ParamDrawer`](/api/vrframework-core-editors/ParamDrawer) |  |
+| [`NameChangeDetector`](/api/vrframework-core-editors/NameChangeDetector) | Watches the hierarchy for a renamed scenario object and keeps the component's own name, the order prefixes and the graph in step with it. |
+| [`OutputPort`](/api/vrframework-core-editors/OutputPort) | One step of a block, drawn as a row with a port on the right: the lines leaving it are the blocks that step queues. |
+| [`ParamDrawer`](/api/vrframework-core-editors/ParamDrawer) | Draws one platform parameter: its name, type and the values it offers. |
 | [`ParametersEditor`](/api/vrframework-core-editors/ParametersEditor) | Editor for Parameters scriptable object. |
-| [`PlatformSceneDrawer`](/api/vrframework-core-editors/PlatformSceneDrawer) |  |
+| [`PlatformSceneDrawer`](/api/vrframework-core-editors/PlatformSceneDrawer) | Draws one scene the platform may launch, with its parameters folded underneath. |
 | [`PlayAudioEditor`](/api/vrframework-core-editors/PlayAudioEditor) | Editor for PlayAudio script |
-| [`ProgressButton`](/api/vrframework-core-editors/ProgressButton) |  |
-| [`ProgressChildElement`](/api/vrframework-core-editors/ProgressChildElement) |  |
-| [`ProgressEditor`](/api/vrframework-core-editors/ProgressEditor) |  |
-| [`ProgressElement`](/api/vrframework-core-editors/ProgressElement) |  |
-| [`ProgressElements`](/api/vrframework-core-editors/ProgressElements) |  |
-| [`ProgressInteractions`](/api/vrframework-core-editors/ProgressInteractions) |  |
-| [`ProgressLabel`](/api/vrframework-core-editors/ProgressLabel) |  |
+| [`ProgressButton`](/api/vrframework-core-editors/ProgressButton) | A button on the graph canvas, wrapped so it carries a status bar hint of its own. |
+| [`ProgressChildElement`](/api/vrframework-core-editors/ProgressChildElement) | A graph element laid out by its parent rather than positioned on the canvas itself - headers, port holders and the like. |
+| [`ProgressEditor`](/api/vrframework-core-editors/ProgressEditor) | The Progress Graph Editor window: the scene's scenario drawn as a node graph, one node per block and one line per enqueue. |
+| [`ProgressElement`](/api/vrframework-core-editors/ProgressElement) | Base of everything drawn on the progress graph canvas: positioned absolutely, and able to say what the status bar shows while the pointer is over it. |
+| [`ProgressElements`](/api/vrframework-core-editors/ProgressElements) | What the graph window is currently showing: the block nodes, the lines between them and what is selected. |
+| [`ProgressInteractions`](/api/vrframework-core-editors/ProgressInteractions) | What the graph does when the user finishes a gesture: reconnecting a line, drawing a new one, creating a block or a step, and moving what is selected. |
+| [`ProgressLabel`](/api/vrframework-core-editors/ProgressLabel) | A label on the graph canvas, wrapped so it carries a status bar hint of its own. |
 | [`ProgressManagerEditor`](/api/vrframework-core-editors/ProgressManagerEditor) | Editor for the ProgressManager script. |
 | [`ProgressStepEditor`](/api/vrframework-core-editors/ProgressStepEditor) | Editor for the ProgressStep script. |
-| [`ProgressTextField`](/api/vrframework-core-editors/ProgressTextField) |  |
+| [`ProgressTextField`](/api/vrframework-core-editors/ProgressTextField) | A text field on the graph canvas, wrapped so it carries a status bar hint of its own. |
 | [`ReactOnParameterEditor`](/api/vrframework-core-editors/ReactOnParameterEditor) | Editor for ReactOnParameter script. |
-| [`ResourceAssetManager`](/api/vrframework-core-editors/ResourceAssetManager) |  |
+| [`ResourceAssetManager`](/api/vrframework-core-editors/ResourceAssetManager) | Writes generated assets into the project's Resources folder, creating it as needed. |
 | [`ScenarioEditor`](/api/vrframework-core-editors/ScenarioEditor) | Editor for the Scenario script. |
 | [`SceneBuilder`](/api/vrframework-core-editors/SceneBuilder) | Browses everything that can go into a scene - modules, prefabs, external assets, scene templates and framework components - and gets it there by button or by drag and drop. |
-| [`SearchablePopup`](/api/vrframework-core-editors/SearchablePopup) |  |
-| [`SelectionBox`](/api/vrframework-core-editors/SelectionBox) |  |
+| [`SearchablePopup`](/api/vrframework-core-editors/SearchablePopup) | A popup list with a search box, for picking one item out of a long list. |
+| [`SelectionBox`](/api/vrframework-core-editors/SelectionBox) | The rubber band drawn while dragging across empty canvas to select several blocks at once. |
 | [`ShowOnlyDrawer`](/api/vrframework-core-editors/ShowOnlyDrawer) | Makes the property uneditable from the Editor |
 | [`SnapDropZoneEditor`](/api/vrframework-core-editors/SnapDropZoneEditor) | Editor for the SnapDropZone script. |
-| [`StepHighlight`](/api/vrframework-core-editors/StepHighlight) |  |
+| [`StepHighlight`](/api/vrframework-core-editors/StepHighlight) | The marker showing where a dragged step would land if it were dropped now. |
 | [`ToggleSelectEditor`](/api/vrframework-core-editors/ToggleSelectEditor) | Editor for ToggleSelect script. |
 | [`TriggerActionEditor`](/api/vrframework-core-editors/TriggerActionEditor) | Editor for TriggerAction script. |
 | [`TriggerStayEditor`](/api/vrframework-core-editors/TriggerStayEditor) | Editor for TriggerStay script. |
-| [`UntranslatedAudioElementDrawer`](/api/vrframework-core-editors/UntranslatedAudioElementDrawer) |  |
-| [`UntranslatedElementDrawer`](/api/vrframework-core-editors/UntranslatedElementDrawer) |  |
-| [`UntranslatedSpriteElementDrawer`](/api/vrframework-core-editors/UntranslatedSpriteElementDrawer) |  |
-| [`UntranslatedTextElementDrawer`](/api/vrframework-core-editors/UntranslatedTextElementDrawer) |  |
+| [`UntranslatedAudioElementDrawer`](/api/vrframework-core-editors/UntranslatedAudioElementDrawer) | Draws an untranslated audio entry. |
+| [`UntranslatedElementDrawer`](/api/vrframework-core-editors/UntranslatedElementDrawer) | Draws an entry that is the same in every language: its name and its single value. |
+| [`UntranslatedSpriteElementDrawer`](/api/vrframework-core-editors/UntranslatedSpriteElementDrawer) | Draws an untranslated sprite entry. |
+| [`UntranslatedTextElementDrawer`](/api/vrframework-core-editors/UntranslatedTextElementDrawer) | Draws an untranslated text entry. |
 | [`VRFEditorIcons`](/api/vrframework-core-editors/VRFEditorIcons) | The framework's one cache of Unity's built-in editor icons, shared by every VRF window. |
 | [`VRFrameworkDebugMode`](/api/vrframework-core-editors/VRFrameworkDebugMode) | Debug Mode is the VRF_DEBUG scripting define and nothing else. |
 | [`VRFrameworkSettings`](/api/vrframework-core-editors/VRFrameworkSettings) | This is a scriptable object for global VRF settings. |
@@ -92,12 +92,12 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`IDraggable`](/api/vrframework-core-editors/IDraggable) |  |
+| [`IDraggable`](/api/vrframework-core-editors/IDraggable) | An element of the progress graph the user can drag about the canvas. |
 
 ## Enums
 
 | Name | Summary |
 | --- | --- |
-| [`BlockType`](/api/vrframework-core-editors/BlockType) |  |
-| [`LineType`](/api/vrframework-core-editors/LineType) |  |
+| [`BlockType`](/api/vrframework-core-editors/BlockType) | What a block is in the run, which decides how its node is coloured on the graph. |
+| [`LineType`](/api/vrframework-core-editors/LineType) | What a connection on the graph stands for, which decides its colour. |
 

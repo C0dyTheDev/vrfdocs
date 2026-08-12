@@ -23,15 +23,19 @@ public class ValidationReport
 
 ### ErrorCount {#errorcount}
 
+How many findings are errors.
+
 ```csharp
 public int ErrorCount { get; }
 ```
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L21)
 
 ### InfoCount {#infocount}
+
+How many findings are informational.
 
 ```csharp
 public int InfoCount { get; }
@@ -39,9 +43,11 @@ public int InfoCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L25)
 
 ### IsClean {#isclean}
+
+Whether nothing was found at all.
 
 ```csharp
 public bool IsClean { get; }
@@ -49,9 +55,11 @@ public bool IsClean { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L28)
 
 ### Issues {#issues}
+
+Everything found so far, in the order it was reported.
 
 ```csharp
 public IReadOnlyList<ValidationIssue> Issues { get; }
@@ -59,9 +67,11 @@ public IReadOnlyList<ValidationIssue> Issues { get; }
 
 **Returns** `IReadOnlyList<ValidationIssue>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L18)
 
 ### WarningCount {#warningcount}
+
+How many findings are warnings.
 
 ```csharp
 public int WarningCount { get; }
@@ -69,11 +79,13 @@ public int WarningCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L23)
 
 ## Methods
 
 ### Add(ValidationSeverity, string, string, string, Object, Action, string) {#add-validationseverity-string-string-string-object-action-string}
+
+Reports a finding at a given severity, stamped with the rule currently running.
 
 ```csharp
 public void Add(ValidationSeverity severity, string title, string message, string fix, Object target = null, Action autoFix = null, string autoFixLabel = "Fix")
@@ -83,17 +95,19 @@ public void Add(ValidationSeverity severity, string title, string message, strin
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `severity` | [`ValidationSeverity`](/api/vrframework-core-editors-validation/ValidationSeverity) |  |
-| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
-| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `severity` | [`ValidationSeverity`](/api/vrframework-core-editors-validation/ValidationSeverity) | How much the finding matters. |
+| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The headline, in one line. |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The detail. |
+| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What to do about it by hand. |
+| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping and select, when one object owns it. |
+| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that fixes it, when the fix is unambiguous. |
+| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L84)
 
 ### Error(string, string, string, Object, Action, string) {#error-string-string-string-object-action-string}
+
+Reports something that will not work at runtime.
 
 ```csharp
 public void Error(string title, string message, string fix, Object target = null, Action autoFix = null, string autoFixLabel = "Fix")
@@ -103,16 +117,18 @@ public void Error(string title, string message, string fix, Object target = null
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
-| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The headline: what is wrong, in one line. |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What happens at runtime if this is left alone. |
+| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What to do about it by hand. |
+| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping and select, when one object owns the problem. |
+| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that fixes it, when the fix is unambiguous. |
+| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L44)
 
 ### Info(string, string, string, Object, Action, string) {#info-string-string-string-object-action-string}
+
+Reports something worth knowing about, where nothing is actually broken.
 
 ```csharp
 public void Info(string title, string message, string fix, Object target = null, Action autoFix = null, string autoFixLabel = "Fix")
@@ -122,16 +138,18 @@ public void Info(string title, string message, string fix, Object target = null,
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
-| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The headline, in one line. |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The detail. |
+| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What to do about it, if anything. |
+| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping and select, when one object owns it. |
+| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that applies it, when there is one. |
+| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L70)
 
 ### Warning(string, string, string, Object, Action, string) {#warning-string-string-string-object-action-string}
+
+Reports something that works but not the way the framework expects.
 
 ```csharp
 public void Warning(string title, string message, string fix, Object target = null, Action autoFix = null, string autoFixLabel = "Fix")
@@ -141,12 +159,12 @@ public void Warning(string title, string message, string fix, Object target = nu
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
-| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The headline: what is wrong, in one line. |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What happens at runtime if this is left alone. |
+| `fix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What to do about it by hand. |
+| `target` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping and select, when one object owns the problem. |
+| `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that fixes it, when the fix is unambiguous. |
+| `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L57)
 

@@ -25,15 +25,19 @@ public sealed class ValidationIssueView : VisualElement, IEventHandler, IResolve
 
 ### ValidationIssueView() {#ctor}
 
+Builds an empty row, ready to be bound to a finding.
+
 ```csharp
 public ValidationIssueView()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L24)
 
 ## Methods
 
 ### Bind(ValidationIssue, Action\<ValidationIssue>) {#bind-validationissue-validationissue}
+
+Fills the row in for one finding.
 
 ```csharp
 public void Bind(ValidationIssue value, Action<ValidationIssue> fixRequested)
@@ -43,10 +47,10 @@ public void Bind(ValidationIssue value, Action<ValidationIssue> fixRequested)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `value` | [`ValidationIssue`](/api/vrframework-core-editors-validation/ValidationIssue) |  |
-| `fixRequested` | `Action<ValidationIssue>` |  |
+| `value` | [`ValidationIssue`](/api/vrframework-core-editors-validation/ValidationIssue) | Finding to show. |
+| `fixRequested` | `Action<ValidationIssue>` | Called with the finding when the user clicks its fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L72)
 
 ### IconFor(ValidationSeverity) {#iconfor-validationseverity}
 
@@ -64,5 +68,5 @@ public static Texture IconFor(ValidationSeverity severity)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L105)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L109)
 

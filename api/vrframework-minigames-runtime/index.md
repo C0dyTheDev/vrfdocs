@@ -12,7 +12,7 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`Minigame`](/api/vrframework-minigames-runtime/Minigame) |  |
-| [`MinigameManager`](/api/vrframework-minigames-runtime/MinigameManager) |  |
-| [`MinigameSet`](/api/vrframework-minigames-runtime/MinigameSet) |  |
+| [`Minigame`](/api/vrframework-minigames-runtime/Minigame) | One part of a minigame session: its scenes, its clock, and where failing it leads. |
+| [`MinigameManager`](/api/vrframework-minigames-runtime/MinigameManager) | The minigames module. |
+| [`MinigameSet`](/api/vrframework-minigames-runtime/MinigameSet) | The parts a minigame session is made of, and how far through them it is. |
 

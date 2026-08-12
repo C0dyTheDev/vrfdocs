@@ -8,7 +8,7 @@ description: 'Everything an item needs to know about the place it is being dropp
 
 # PlacementContext
 
-**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L35)
+**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L43)
 
 Everything an item needs to know about the place it is being dropped into.
 
@@ -28,9 +28,11 @@ public GameObject DropUpon
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L49)
 
 ### HasWorldPosition {#hasworldposition}
+
+Whether [`WorldPosition`](/api/vrframework-core-editors-scenebuilding/PlacementContext#worldposition) means anything for this drop.
 
 ```csharp
 public bool HasWorldPosition
@@ -38,9 +40,11 @@ public bool HasWorldPosition
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L57)
 
 ### Origin {#origin}
+
+Where the drop came from.
 
 ```csharp
 public PlacementOrigin Origin
@@ -48,7 +52,7 @@ public PlacementOrigin Origin
 
 **Returns** [`PlacementOrigin`](/api/vrframework-core-editors-scenebuilding/PlacementOrigin)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L46)
 
 ### Parent {#parent}
 
@@ -60,9 +64,11 @@ public Transform Parent
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L52)
 
 ### WorldPosition {#worldposition}
+
+Where in the world the drop happened.
 
 ```csharp
 public Vector3 WorldPosition
@@ -70,17 +76,19 @@ public Vector3 WorldPosition
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L55)
 
 ## Methods
 
 ### FromWindow() {#fromwindow}
 
+A context for an item activated from the window, with no drop target.
+
 ```csharp
 public static PlacementContext FromWindow()
 ```
 
-**Returns** [`PlacementContext`](/api/vrframework-core-editors-scenebuilding/PlacementContext)
+**Returns** [`PlacementContext`](/api/vrframework-core-editors-scenebuilding/PlacementContext) - The placement context.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L61)
 

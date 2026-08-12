@@ -22,15 +22,19 @@ public class VRFrameworkSettings : ScriptableObject
 
 ### customSettingsPath {#customsettingspath}
 
+Where the project's settings asset lives.
+
 ```csharp
 public const string customSettingsPath = "Assets/Resources/VRFrameworkSettings.asset"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L12)
 
 ### grabbableHighlightColor {#grabbablehighlightcolor}
+
+Colour a grabbable object is highlighted in.
 
 ```csharp
 [SerializeField]
@@ -39,9 +43,11 @@ public Color grabbableHighlightColor
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L24)
 
 ### highlightMaterial {#highlightmaterial}
+
+Material used by the framework's highlight in transparency mode.
 
 ```csharp
 [Header("INTERACTION SETTINGS")]
@@ -51,9 +57,11 @@ public Material highlightMaterial
 
 **Returns** [`Material`](https://docs.unity3d.com/ScriptReference/Material.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L21)
 
 ### isPico {#ispico}
+
+Whether the project builds for PICO rather than Meta.
 
 ```csharp
 [Header("PLATFORM SETTINGS")]
@@ -62,9 +70,11 @@ public bool isPico
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L17)
 
 ### isSetUp {#issetup}
+
+Whether the framework's project setup has been run.
 
 ```csharp
 public bool isSetUp
@@ -72,9 +82,11 @@ public bool isSetUp
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L33)
 
 ### leftCustomPosePrefab {#leftcustomposeprefab}
+
+Prefab used as the left hand's authored grab pose.
 
 ```csharp
 [SerializeField]
@@ -83,9 +95,11 @@ public GameObject leftCustomPosePrefab
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L28)
 
 ### rightCustomPosePrefab {#rightcustomposeprefab}
+
+Prefab used as the right hand's authored grab pose.
 
 ```csharp
 [SerializeField]
@@ -94,9 +108,11 @@ public GameObject rightCustomPosePrefab
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L30)
 
 ### snapDropZoneHighlightColor {#snapdropzonehighlightcolor}
+
+Colour a snap drop zone is highlighted in.
 
 ```csharp
 [SerializeField]
@@ -105,7 +121,7 @@ public Color snapDropZoneHighlightColor
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L26)
 
 ## Methods
 
@@ -125,15 +141,17 @@ public static string GetAssetBasePath<T>()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L88)
 
 ### GetSerializedSettings() {#getserializedsettings}
+
+The settings asset wrapped for serialized property access, creating it if needed.
 
 ```csharp
 public static VRFrameworkSettings GetSerializedSettings()
 ```
 
-**Returns** [`VRFrameworkSettings`](/api/vrframework-core-editors/VRFrameworkSettings)
+**Returns** [`VRFrameworkSettings`](/api/vrframework-core-editors/VRFrameworkSettings) - The project's settings.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L75)
 

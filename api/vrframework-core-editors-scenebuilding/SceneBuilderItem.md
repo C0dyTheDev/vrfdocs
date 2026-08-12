@@ -8,7 +8,7 @@ description: 'A single entry in the Scene Builder.'
 
 # SceneBuilderItem
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L94)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L122)
 
 A single entry in the Scene Builder. Catalogs produce these; the window only ever talks to
 this type, so adding a new content source never touches UI code.
@@ -23,6 +23,8 @@ public class SceneBuilderItem
 
 ### SceneBuilderItem(string, string, SceneBuilderItemKind) {#ctor-string-string-scenebuilderitemkind}
 
+Builds an entry.
+
 ```csharp
 public SceneBuilderItem(string id, string displayName, SceneBuilderItemKind kind)
 ```
@@ -31,15 +33,17 @@ public SceneBuilderItem(string id, string displayName, SceneBuilderItemKind kind
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `displayName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `kind` | [`SceneBuilderItemKind`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItemKind) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Stable identity, unique within its catalog. |
+| `displayName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name shown on the card. |
+| `kind` | [`SceneBuilderItemKind`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItemKind) | What the entry fundamentally is. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L131)
 
 ## Properties
 
 ### Actions {#actions}
+
+The buttons offered in the details panel.
 
 ```csharp
 public IReadOnlyList<ItemAction> Actions { get; }
@@ -47,9 +51,11 @@ public IReadOnlyList<ItemAction> Actions { get; }
 
 **Returns** `IReadOnlyList<ItemAction>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L180)
 
 ### CanBePlaced {#canbeplaced}
+
+Whether the entry can be dragged into the scene at all.
 
 ```csharp
 public bool CanBePlaced { get; }
@@ -57,7 +63,7 @@ public bool CanBePlaced { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L146)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L185)
 
 ### CanPlace {#canplace}
 
@@ -69,9 +75,11 @@ public Func<PlacementContext, bool> CanPlace { get; set; }
 
 **Returns** `Func<PlacementContext, bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L177)
 
 ### Description {#description}
+
+One line shown under the name in the details panel.
 
 ```csharp
 public string Description { get; set; }
@@ -79,9 +87,11 @@ public string Description { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L147)
 
 ### Details {#details}
+
+The label and value rows shown in the details panel.
 
 ```csharp
 public IReadOnlyList<DetailField> Details { get; }
@@ -89,9 +99,11 @@ public IReadOnlyList<DetailField> Details { get; }
 
 **Returns** `IReadOnlyList<DetailField>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L144)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L182)
 
 ### DisplayName {#displayname}
+
+Name shown on the card.
 
 ```csharp
 public string DisplayName { get; }
@@ -99,7 +111,7 @@ public string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L142)
 
 ### Group {#group}
 
@@ -111,7 +123,7 @@ public string Group { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L150)
 
 ### Id {#id}
 
@@ -123,7 +135,7 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L139)
 
 ### IsAlreadyInScene {#isalreadyinscene}
 
@@ -135,9 +147,11 @@ public Func<bool> IsAlreadyInScene { get; set; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L171)
 
 ### Kind {#kind}
+
+What the entry fundamentally is.
 
 ```csharp
 public SceneBuilderItemKind Kind { get; }
@@ -145,7 +159,7 @@ public SceneBuilderItemKind Kind { get; }
 
 **Returns** [`SceneBuilderItemKind`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItemKind)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L144)
 
 ### Payload {#payload}
 
@@ -157,7 +171,7 @@ public Object Payload { get; set; }
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L156)
 
 ### PayloadType {#payloadtype}
 
@@ -169,7 +183,7 @@ public Type PayloadType { get; set; }
 
 **Returns** [`Type`](https://learn.microsoft.com/dotnet/api/system.type)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L123)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L159)
 
 ### Place {#place}
 
@@ -181,7 +195,7 @@ public Action<PlacementContext> Place { get; set; }
 
 **Returns** `Action<PlacementContext>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L138)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L174)
 
 ### StatusLabel {#statuslabel}
 
@@ -193,9 +207,11 @@ public Func<string> StatusLabel { get; set; }
 
 **Returns** `Func<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L132)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L168)
 
 ### Tags {#tags}
+
+Extra words the search box matches against.
 
 ```csharp
 public string[] Tags { get; set; }
@@ -203,7 +219,7 @@ public string[] Tags { get; set; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L153)
 
 ### Thumbnail {#thumbnail}
 
@@ -215,7 +231,7 @@ public Func<Texture> Thumbnail { get; set; }
 
 **Returns** `Func<Texture>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L126)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L162)
 
 ### ThumbnailPending {#thumbnailpending}
 
@@ -227,11 +243,13 @@ public Func<bool> ThumbnailPending { get; set; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L129)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L165)
 
 ## Methods
 
 ### AcceptsPlacement(PlacementContext) {#acceptsplacement-placementcontext}
+
+Whether the entry accepts being dropped where the drop is happening.
 
 ```csharp
 public bool AcceptsPlacement(PlacementContext context)
@@ -241,13 +259,15 @@ public bool AcceptsPlacement(PlacementContext context)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `context` | [`PlacementContext`](/api/vrframework-core-editors-scenebuilding/PlacementContext) |  |
+| `context` | [`PlacementContext`](/api/vrframework-core-editors-scenebuilding/PlacementContext) | Where the drop is happening. |
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the drop may go ahead.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L160)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L209)
 
 ### AddAction(ItemAction) {#addaction-itemaction}
+
+Adds a button to the details panel.
 
 ```csharp
 public SceneBuilderItem AddAction(ItemAction action)
@@ -257,13 +277,15 @@ public SceneBuilderItem AddAction(ItemAction action)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `action` | [`ItemAction`](/api/vrframework-core-editors-scenebuilding/ItemAction) |  |
+| `action` | [`ItemAction`](/api/vrframework-core-editors-scenebuilding/ItemAction) | Action to add. Null is ignored. |
 
-**Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
+**Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) - This item, so calls can be chained.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L148)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L190)
 
 ### AddDetail(string, string) {#adddetail-string-string}
+
+Adds a label and value row to the details panel.
 
 ```csharp
 public SceneBuilderItem AddDetail(string label, string value)
@@ -273,12 +295,12 @@ public SceneBuilderItem AddDetail(string label, string value)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Label on the left. |
+| `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Value on the right. An empty value adds nothing. |
 
-**Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
+**Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) - This item, so calls can be chained.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L154)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L200)
 
 ### Matches(string) {#matches-string}
 
@@ -296,5 +318,5 @@ public bool Matches(string query)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L169)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L218)
 

@@ -8,7 +8,7 @@ description: 'Steps set up to speak with nothing in the scene able to play them.
 
 # ServiceDependencyRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L392)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L449)
 
 Steps set up to speak with nothing in the scene able to play them. Neither stops the scene
 from running; they explain why something quietly does nothing.
@@ -23,7 +23,7 @@ public class ServiceDependencyRule : ValidationRule
 
 ### Category {#category}
 
-Group heading in the window. Rules that share a category are listed together.
+Heading the findings of this rule are grouped under.
 
 ```csharp
 public override string Category { get; }
@@ -31,11 +31,11 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L394)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L452)
 
 ### Order {#order}
 
-Lower runs, and lists, first.
+Where these findings sit in the report. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -43,11 +43,13 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L395)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L454)
 
 ## Methods
 
 ### Validate(ValidationReport) {#validate-validationreport}
+
+Runs the check and reports what it finds.
 
 ```csharp
 public override void Validate(ValidationReport report)
@@ -57,7 +59,7 @@ public override void Validate(ValidationReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L397)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L458)
 

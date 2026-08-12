@@ -8,7 +8,7 @@ description: 'Data that we expect from Platform'
 
 # PlatformData
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L524)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L558)
 
 Data that we expect from Platform
 
@@ -23,15 +23,19 @@ public class PlatformData
 
 ### finishedUrl {#finishedurl}
 
+Where the scene-finished call is sent.
+
 ```csharp
 public string finishedUrl
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L531)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L570)
 
 ### lang {#lang}
+
+Language the platform asked the session to run in.
 
 ```csharp
 public string lang
@@ -39,9 +43,11 @@ public string lang
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L532)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L572)
 
 ### reportsUrl {#reportsurl}
+
+Where reports are posted.
 
 ```csharp
 public string reportsUrl
@@ -49,9 +55,11 @@ public string reportsUrl
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L529)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L566)
 
 ### scene {#scene}
+
+Scene the platform asked the app to run.
 
 ```csharp
 public string scene
@@ -59,9 +67,11 @@ public string scene
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L527)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L562)
 
 ### sessionId {#sessionid}
+
+ID of this session, sent back with every report.
 
 ```csharp
 public string sessionId
@@ -69,9 +79,11 @@ public string sessionId
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L528)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L564)
 
 ### sessionUrl {#sessionurl}
+
+Where the session itself is addressed.
 
 ```csharp
 public string sessionUrl
@@ -79,5 +91,5 @@ public string sessionUrl
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L530)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L568)
 

@@ -33,7 +33,7 @@ that level available on the two platforms the framework ships to.
 public static void ConfigureGraphicsAndQuality()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L162)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L164)
 
 ### ConfigurePhysicsAndTime() {#configurephysicsandtime}
 
@@ -44,7 +44,7 @@ there is nothing to write until those layers exist.
 public static void ConfigurePhysicsAndTime()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L219)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L221)
 
 ### ConfigurePlayerSettings() {#configureplayersettings}
 
@@ -56,15 +56,17 @@ Unity's default, so re-running this on a real project does not rename the app.
 public static void ConfigurePlayerSettings()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L263)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L266)
 
 ### ConfigureScriptExecutionOrder() {#configurescriptexecutionorder}
+
+Puts the framework's scripts into the execution order the runtime expects.
 
 ```csharp
 public static void ConfigureScriptExecutionOrder()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L241)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L244)
 
 ### ConfigureTagsAndLayers() {#configuretagsandlayers}
 
@@ -75,7 +77,7 @@ both, and Unity logs an error for each one that does not exist.
 public static void ConfigureTagsAndLayers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L209)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L211)
 
 ### CopyFrameworkContent() {#copyframeworkcontent}
 
@@ -86,7 +88,7 @@ a project can edit them without the changes belonging to the package.
 public static void CopyFrameworkContent()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L102)
 
 ### CreateStreamingAssets() {#createstreamingassets}
 
@@ -98,7 +100,7 @@ described about itself.
 public static void CreateStreamingAssets()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L368)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L371)
 
 ### FetchGitignore() {#fetchgitignore}
 
@@ -110,7 +112,7 @@ considers an asset - so it is written with File rather than through the asset da
 public static void FetchGitignore()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L416)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L419)
 
 ### GitignoreFetched() {#gitignorefetched}
 
@@ -124,17 +126,19 @@ public static bool GitignoreFetched()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L428)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L431)
 
 ### IsOnAndroid() {#isonandroid}
+
+Whether the active build target is Android.
 
 ```csharp
 public static bool IsOnAndroid()
 ```
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True on Android.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L93)
 
 ### SwitchToAndroid() {#switchtoandroid}
 

@@ -8,7 +8,7 @@ description: 'Adapter that lets an authored asset behave exactly like a framewor
 
 # AuthoredSceneTemplate
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L123)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L135)
 
 Adapter that lets an authored asset behave exactly like a framework template. It has no
 parameterless constructor on purpose, so type discovery skips it.
@@ -23,6 +23,8 @@ public class AuthoredSceneTemplate : SceneTemplate
 
 ### AuthoredSceneTemplate(SceneTemplateAsset) {#ctor-scenetemplateasset}
 
+Wraps an authored asset as a template the window can use.
+
 ```csharp
 public AuthoredSceneTemplate(SceneTemplateAsset asset)
 ```
@@ -31,13 +33,15 @@ public AuthoredSceneTemplate(SceneTemplateAsset asset)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `asset` | [`SceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/SceneTemplateAsset) |  |
+| `asset` | [`SceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/SceneTemplateAsset) | The authored template. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L125)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L139)
 
 ## Properties
 
 ### Asset {#asset}
+
+The asset this template was authored in.
 
 ```csharp
 public SceneTemplateAsset Asset { get; }
@@ -45,9 +49,11 @@ public SceneTemplateAsset Asset { get; }
 
 **Returns** [`SceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/SceneTemplateAsset)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L130)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L145)
 
 ### Description {#description}
+
+One line explaining what this is.
 
 ```csharp
 public override string Description { get; }
@@ -55,9 +61,11 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L152)
 
 ### DisplayName {#displayname}
+
+Name shown for this in the window.
 
 ```csharp
 public override string DisplayName { get; }
@@ -65,9 +73,11 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L133)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L150)
 
 ### IconName {#iconname}
+
+Icon name understood by Unity's built-in icon lookup.
 
 ```csharp
 public override string IconName { get; }
@@ -75,9 +85,11 @@ public override string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L138)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L159)
 
 ### Id {#id}
+
+Stable identity of this entry.
 
 ```csharp
 public override string Id { get; }
@@ -85,11 +97,11 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L132)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L148)
 
 ### InstallerIds {#installerids}
 
-Installer ids run in order. Unknown ids are reported and skipped.
+The installers this template runs, in order.
 
 ```csharp
 public override string[] InstallerIds { get; }
@@ -97,9 +109,11 @@ public override string[] InstallerIds { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L163)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -107,11 +121,11 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L156)
 
 ### Prefabs {#prefabs}
 
-Prefabs instantiated after the installers have run. Optional.
+The asset behind this template, so it can be pinged in the project.
 
 ```csharp
 public override GameObject[] Prefabs { get; }
@@ -119,11 +133,11 @@ public override GameObject[] Prefabs { get; }
 
 **Returns** [`GameObject[]`](https://docs.unity3d.com/ScriptReference/GameObject[].html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L144)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L167)
 
 ### Source {#source}
 
-The asset behind this template, when it came from one.
+The asset behind this template, so it can be pinged in the project.
 
 ```csharp
 public override Object Source { get; }
@@ -131,9 +145,11 @@ public override Object Source { get; }
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L147)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L171)
 
 ### Tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public override string[] Tags { get; }
@@ -141,5 +157,5 @@ public override string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplateAsset.cs#L154)
 

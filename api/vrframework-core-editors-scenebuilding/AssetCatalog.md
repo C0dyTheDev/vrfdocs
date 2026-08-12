@@ -26,7 +26,7 @@ public class AssetCatalog : SceneBuilderCatalog, ISceneBuilderCatalog
 
 ### Description {#description}
 
-One line shown under the search box when the category is open.
+One line explaining what this is.
 
 ```csharp
 public override string Description { get; }
@@ -34,9 +34,11 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L25)
 
 ### DisplayName {#displayname}
+
+Name shown for this in the window.
 
 ```csharp
 public override string DisplayName { get; }
@@ -44,11 +46,11 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L18)
 
 ### EmptyMessage {#emptymessage}
 
-Shown instead of the grid when the category yields nothing.
+Shown instead of the grid when this yields nothing.
 
 ```csharp
 public override string EmptyMessage { get; }
@@ -56,11 +58,11 @@ public override string EmptyMessage { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L33)
 
 ### IconName {#iconname}
 
-Icon name understood by `IconContent(string)`. May be null.
+Icon name understood by Unity's built-in icon lookup.
 
 ```csharp
 public override string IconName { get; }
@@ -68,11 +70,11 @@ public override string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L22)
 
 ### Id {#id}
 
-Stable identity used to remember the last selected category.
+Stable identity of this entry.
 
 ```csharp
 public override string Id { get; }
@@ -80,11 +82,11 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L16)
 
 ### IsAvailable {#isavailable}
 
-False hides the category, e.g. a remote source with no URL configured.
+Whether this is offered at all right now.
 
 ```csharp
 public override bool IsAvailable { get; }
@@ -92,11 +94,11 @@ public override bool IsAvailable { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L30)
 
 ### Order {#order}
 
-Sort weight in the sidebar. Lower is higher up.
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -104,19 +106,19 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L20)
 
 ## Methods
 
 ### GetItems() {#getitems}
 
-Built fresh on every refresh. Keep it cheap or cache internally.
+The entries of this category, built fresh on every refresh.
 
 ```csharp
 public override IEnumerable<SceneBuilderItem> GetItems()
 ```
 
-**Returns** `IEnumerable<SceneBuilderItem>`
+**Returns** `IEnumerable<SceneBuilderItem>` - The items to show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L39)
 

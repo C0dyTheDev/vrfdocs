@@ -13,26 +13,26 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`AudioCue`](/api/vrframework-core-runtime/AudioCue) | An audio slot is authored either as a translation ID or as a plain AudioClip - which one is decided by whether the scene has a Localization module, both in the Inspector and here. |
-| [`BuildSettings`](/api/vrframework-core-runtime/BuildSettings) |  |
-| [`DebugOnlyAttribute`](/api/vrframework-core-runtime/DebugOnlyAttribute) |  |
-| [`InvokeDelayed`](/api/vrframework-core-runtime/InvokeDelayed) |  |
-| [`LanguageAttribute`](/api/vrframework-core-runtime/LanguageAttribute) |  |
-| [`MistakeScene`](/api/vrframework-core-runtime/MistakeScene) |  |
+| [`BuildSettings`](/api/vrframework-core-runtime/BuildSettings) | Build flags baked into the player, so a build can tell at runtime how it was produced. |
+| [`DebugOnlyAttribute`](/api/vrframework-core-runtime/DebugOnlyAttribute) | Marks a serialized field as visible in the Inspector only while Debug Mode is on, which is the VRF_DEBUG define. |
+| [`InvokeDelayed`](/api/vrframework-core-runtime/InvokeDelayed) | Raises an event once, a set time after the component is enabled, then disables itself. |
+| [`LanguageAttribute`](/api/vrframework-core-runtime/LanguageAttribute) | Turns a string field into a translation ID picker in the Inspector, listing the entries of the language instance named by type/api/vrframework-core-runtime/LanguageAttributetype. |
+| [`MistakeScene`](/api/vrframework-core-runtime/MistakeScene) | The mistake results of one scene, as frozen at the end of it. |
 | [`PlatformReport`](/api/vrframework-core-runtime/PlatformReport) | Everything the session report is made of. |
-| [`RepeatOnIntervals`](/api/vrframework-core-runtime/RepeatOnIntervals) |  |
+| [`RepeatOnIntervals`](/api/vrframework-core-runtime/RepeatOnIntervals) | Raises an event over and over on a fixed interval, with a separate delay before the first one - for nudges and reminders that should not fire the moment the scene starts. |
 | [`ReportContributor`](/api/vrframework-core-runtime/ReportContributor) | The shortcut for a component that adds something to the session report: fill in GetReportValue/api/vrframework-core-runtime/ReportContributorgetreportvalue and the value shows up u |
 | [`RuntimeRegistry`](/api/vrframework-core-runtime/RuntimeRegistry) | The one place to obtain a service: Get<T>/api/vrframework-core-runtime/RuntimeRegistryget-1 when it must already be there, Resolve<T>Action<T>, Func<T, bool>/api/vrframework-core-r |
-| [`SceneChanger`](/api/vrframework-core-runtime/SceneChanger) |  |
+| [`SceneChanger`](/api/vrframework-core-runtime/SceneChanger) | Loads another scene on demand, optionally fading the view out first. |
 | [`SceneCompletion`](/api/vrframework-core-runtime/SceneCompletion) | Standalone-scene fallback: quits the application when progress finishes. |
-| [`SceneCut`](/api/vrframework-core-runtime/SceneCut) |  |
-| [`ShowOnlyAttribute`](/api/vrframework-core-runtime/ShowOnlyAttribute) |  |
-| [`SpriteChanger`](/api/vrframework-core-runtime/SpriteChanger) |  |
-| [`SpriteVariant`](/api/vrframework-core-runtime/SpriteVariant) |  |
+| [`SceneCut`](/api/vrframework-core-runtime/SceneCut) | A hard cut in VR: fades the view to black, raises OnCut/api/vrframework-core-runtime/SceneCutoncut while the player cannot see - move the rig or swap the set there - then fades bac |
+| [`ShowOnlyAttribute`](/api/vrframework-core-runtime/ShowOnlyAttribute) | Marks a serialized field as read only in the Inspector: the value is shown but cannot be edited. |
+| [`SpriteChanger`](/api/vrframework-core-runtime/SpriteChanger) | Swaps the texture of a mesh between localized sprites - a poster or a screen that shows a different image per language and per step. |
+| [`SpriteVariant`](/api/vrframework-core-runtime/SpriteVariant) | One entry of a SpriteChanger/api/vrframework-core-runtime/SpriteChanger: a translation ID of a localized sprite. |
 | [`Util`](/api/vrframework-core-runtime/Util) | Utility Class - this contains helper methods for VRF development and especially the custom logging methods |
-| [`VisionFader`](/api/vrframework-core-runtime/VisionFader) |  |
-| [`VRCore`](/api/vrframework-core-runtime/VRCore) |  |
+| [`VisionFader`](/api/vrframework-core-runtime/VisionFader) | The black quad in front of the camera used to hide transitions, with an optional logo fading in over it. |
+| [`VRCore`](/api/vrframework-core-runtime/VRCore) | The scene's startup conductor. |
 | [`VRFLog`](/api/vrframework-core-runtime/VRFLog) | The framework's log bus. |
-| [`VRModule`](/api/vrframework-core-runtime/VRModule) |  |
+| [`VRModule`](/api/vrframework-core-runtime/VRModule) | Base class of every framework module. |
 
 ## Structs
 
@@ -46,19 +46,19 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`IAudioService`](/api/vrframework-core-runtime/IAudioService) |  |
-| [`IInteractionService`](/api/vrframework-core-runtime/IInteractionService) |  |
-| [`ILocalizationService`](/api/vrframework-core-runtime/ILocalizationService) |  |
-| [`IMinigameService`](/api/vrframework-core-runtime/IMinigameService) |  |
-| [`IMistakesService`](/api/vrframework-core-runtime/IMistakesService) |  |
-| [`IPlatformService`](/api/vrframework-core-runtime/IPlatformService) |  |
-| [`IProgressService`](/api/vrframework-core-runtime/IProgressService) |  |
+| [`IAudioService`](/api/vrframework-core-runtime/IAudioService) | What the framework expects of an audio module: a queue per AudioSource and coroutines that run for exactly as long as the audio does. |
+| [`IInteractionService`](/api/vrframework-core-runtime/IInteractionService) | What the framework expects of an interaction module: the rig's camera and hands, the vision fader used for transitions, and recentering the player. |
+| [`ILocalizationService`](/api/vrframework-core-runtime/ILocalizationService) | What the framework expects of a localization module: the current language, and lookups from a translation ID to text, audio or a sprite. |
+| [`IMinigameService`](/api/vrframework-core-runtime/IMinigameService) | What the framework expects of a minigame module: a timed run split into parts, each of which is either finished in time or not. |
+| [`IMistakesService`](/api/vrframework-core-runtime/IMistakesService) | What the framework expects of a mistakes module: named checkpoints that a scene ticks off, and per scene results collected for the session report. |
+| [`IPlatformService`](/api/vrframework-core-runtime/IPlatformService) | What the framework expects of a platform module: the handshake with whatever LMS or launcher started the session - its parameters, the language it asks for, and the report and comp |
+| [`IProgressService`](/api/vrframework-core-runtime/IProgressService) | What the framework expects of a progress module: a run that can be started and stopped, and that says when it has finished. |
 | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | One slice of the session report. |
 
 ## Enums
 
 | Name | Summary |
 | --- | --- |
-| [`LangType`](/api/vrframework-core-runtime/LangType) |  |
+| [`LangType`](/api/vrframework-core-runtime/LangType) | The kinds of localized content a language instance can hold. |
 | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) | Severity of a framework log line. |
 

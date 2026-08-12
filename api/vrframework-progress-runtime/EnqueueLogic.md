@@ -24,6 +24,8 @@ public static class EnqueueLogic
 
 ### EnqueueBlock(bool, QueueLocations, ProgressBlock, Object) {#enqueueblock-boolean-queuelocations-progressblock-object}
 
+Queues a block on the registered progress manager.
+
 ```csharp
 public static void EnqueueBlock(bool deleteStepQueue, QueueLocations queueLocation, ProgressBlock blockToEnqueue, Object context = null)
 ```
@@ -32,10 +34,10 @@ public static void EnqueueBlock(bool deleteStepQueue, QueueLocations queueLocati
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `deleteStepQueue` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
-| `queueLocation` | [`QueueLocations`](/api/vrframework-progress-runtime/QueueLocations) |  |
-| `blockToEnqueue` | [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) |  |
-| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
+| `deleteStepQueue` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to drop everything lined up behind the running step first. |
+| `queueLocation` | [`QueueLocations`](/api/vrframework-progress-runtime/QueueLocations) | Whether the block goes at the back of the queue or next. |
+| `blockToEnqueue` | [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) | Block to queue. |
+| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object the log lines are attributed to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Process/EnqueueLogic.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Process/EnqueueLogic.cs#L17)
 

@@ -27,13 +27,15 @@ public static class VRFrameworkDebugMode
 
 ### Define {#define}
 
+The scripting define that switches framework debug logging on.
+
 ```csharp
 public const string Define = "VRF_DEBUG"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L19)
 
 ## Properties
 
@@ -49,7 +51,7 @@ public static bool Enabled { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L35)
 
 ### Requested {#requested}
 
@@ -63,7 +65,7 @@ public static bool Requested { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L49)
 
 ## Methods
 
@@ -83,5 +85,5 @@ public static void Set(bool enabled)
 | --- | --- | --- |
 | `enabled` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L56)
 

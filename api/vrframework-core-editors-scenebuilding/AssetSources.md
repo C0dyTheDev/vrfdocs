@@ -8,7 +8,7 @@ description: 'Discovers every asset source in the loaded editor assemblies.'
 
 # AssetSources
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L93)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L113)
 
 Discovers every asset source in the loaded editor assemblies.
 
@@ -22,15 +22,19 @@ public static class AssetSources
 
 ### All {#all}
 
+Every asset source found in the editor assemblies, cached.
+
 ```csharp
 public static IReadOnlyList<IAssetSource> All { get; }
 ```
 
 **Returns** `IReadOnlyList<IAssetSource>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L118)
 
 ### Configured {#configured}
+
+The sources that are set up enough to be shown.
 
 ```csharp
 public static IEnumerable<IAssetSource> Configured { get; }
@@ -38,23 +42,27 @@ public static IEnumerable<IAssetSource> Configured { get; }
 
 **Returns** `IEnumerable<IAssetSource>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L128)
 
 ## Methods
 
 ### Invalidate() {#invalidate}
 
+Forgets the cached sources, so a recompile or a settings change is picked up.
+
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L131)
 
 ### RefreshAll() {#refreshall}
+
+Asks every source to drop its cache and read its database again.
 
 ```csharp
 public static void RefreshAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L137)
 

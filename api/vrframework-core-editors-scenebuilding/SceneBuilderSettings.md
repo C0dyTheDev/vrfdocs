@@ -23,6 +23,8 @@ public class SceneBuilderSettings : ScriptableObject
 
 ### assetFolders {#assetfolders}
 
+Folders the asset catalog searches.
+
 ```csharp
 [Header("ASSETS - LOCAL SOURCE")]
 [Tooltip("Folders indexed by the local asset source. Models, sounds and textures only.")]
@@ -31,9 +33,11 @@ public List<string> assetFolders
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L29)
 
 ### cardSize {#cardsize}
+
+Size of the cards in the grid, in pixels.
 
 ```csharp
 [Header("WINDOW")]
@@ -43,9 +47,11 @@ public float cardSize
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L49)
 
 ### includeFrameworkPrefabs {#includeframeworkprefabs}
+
+Whether the framework's own prefabs are offered alongside the project's.
 
 ```csharp
 [Tooltip("Also list prefabs that ship inside the VR Framework package.")]
@@ -54,9 +60,11 @@ public bool includeFrameworkPrefabs
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L24)
 
 ### lastCategoryId {#lastcategoryid}
+
+Category the window was left on, so it opens where it was.
 
 ```csharp
 public string lastCategoryId
@@ -64,9 +72,11 @@ public string lastCategoryId
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L52)
 
 ### prefabFolders {#prefabfolders}
+
+Folders the prefab catalog searches.
 
 ```csharp
 [Header("PREFABS")]
@@ -76,9 +86,11 @@ public List<string> prefabFolders
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L20)
 
 ### remoteAuthorization {#remoteauthorization}
+
+Authorization header sent with remote requests, when the source needs one.
 
 ```csharp
 [Tooltip("Optional value sent as the Authorization header when talking to the remote database.")]
@@ -87,9 +99,11 @@ public string remoteAuthorization
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L38)
 
 ### remoteCacheSeconds {#remotecacheseconds}
+
+How long a fetched remote manifest is reused before it is fetched again, in seconds.
 
 ```csharp
 [Tooltip("Seconds before a cached remote manifest is considered stale.")]
@@ -98,9 +112,11 @@ public int remoteCacheSeconds
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L46)
 
 ### remoteDownloadFolder {#remotedownloadfolder}
+
+Folder downloaded remote assets are written to.
 
 ```csharp
 [Tooltip("Where downloaded remote assets are imported to.")]
@@ -109,9 +125,11 @@ public string remoteDownloadFolder
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L42)
 
 ### remoteManifestUrl {#remotemanifesturl}
+
+Address of the remote asset manifest. Empty hides the remote category.
 
 ```csharp
 [Header("ASSETS - REMOTE SOURCE")]
@@ -121,9 +139,11 @@ public string remoteManifestUrl
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L34)
 
 ### SettingsPath {#settingspath}
+
+Where the settings asset lives in the project.
 
 ```csharp
 public const string SettingsPath = "Assets/Editor/VRFSceneBuilderSettings.asset"
@@ -131,11 +151,13 @@ public const string SettingsPath = "Assets/Editor/VRFSceneBuilderSettings.asset"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L14)
 
 ## Properties
 
 ### Instance {#instance}
+
+The settings asset, created on first use.
 
 ```csharp
 public static SceneBuilderSettings Instance { get; }
@@ -143,17 +165,19 @@ public static SceneBuilderSettings Instance { get; }
 
 **Returns** [`SceneBuilderSettings`](/api/vrframework-core-editors-scenebuilding/SceneBuilderSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L55)
 
 ## Methods
 
 ### Save() {#save}
 
+Writes the settings back to disk.
+
 ```csharp
 public void Save()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L81)
 
 ### ValidFolders(IEnumerable\<string>, string) {#validfolders-string-string}
 
@@ -173,5 +197,5 @@ public static string[] ValidFolders(IEnumerable<string> folders, string fallback
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L91)
 

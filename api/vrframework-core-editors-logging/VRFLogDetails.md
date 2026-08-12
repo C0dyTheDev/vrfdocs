@@ -25,15 +25,19 @@ public sealed class VRFLogDetails : VisualElement, IEventHandler, IResolvedStyle
 
 ### VRFLogDetails() {#ctor}
 
+Builds the details pane.
+
 ```csharp
 public VRFLogDetails()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogDetails.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogDetails.cs#L26)
 
 ## Methods
 
 ### Show(VRFLogEntry) {#show-vrflogentry}
+
+Shows one entry in full: its message, where it came from and its stack trace.
 
 ```csharp
 public void Show(VRFLogEntry selected)
@@ -43,7 +47,7 @@ public void Show(VRFLogEntry selected)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `selected` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) |  |
+| `selected` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) | Entry to show, or null to clear the pane. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogDetails.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogDetails.cs#L83)
 

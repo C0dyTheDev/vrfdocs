@@ -8,7 +8,7 @@ description: 'How a sequence ended, handed to the caller''s completion callback.
 
 # SetupOutcome
 
-**Struct** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L41)
+**Struct** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L48)
 
 How a sequence ended, handed to the caller's completion callback.
 
@@ -20,6 +20,8 @@ public readonly struct SetupOutcome
 
 ### SetupOutcome(int, int, string) {#ctor-int32-int32-string}
 
+Builds an outcome.
+
 ```csharp
 public SetupOutcome(int stepCount, int failures, string abortedBecause)
 ```
@@ -28,15 +30,17 @@ public SetupOutcome(int stepCount, int failures, string abortedBecause)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `stepCount` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `failures` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `abortedBecause` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `stepCount` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | How many steps the sequence had. |
+| `failures` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | How many of them failed. |
+| `abortedBecause` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Why the sequence stopped early, or null when it ran to the end. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L54)
 
 ## Properties
 
 ### Aborted {#aborted}
+
+Whether the sequence stopped early.
 
 ```csharp
 public bool Aborted { get; }
@@ -44,7 +48,7 @@ public bool Aborted { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L71)
 
 ### AbortedBecause {#abortedbecause}
 
@@ -56,9 +60,11 @@ public string AbortedBecause { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L68)
 
 ### Clean {#clean}
+
+Whether the sequence ran to the end with nothing failing.
 
 ```csharp
 public bool Clean { get; }
@@ -66,7 +72,7 @@ public bool Clean { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L73)
 
 ### Failures {#failures}
 
@@ -78,9 +84,11 @@ public int Failures { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L65)
 
 ### StepCount {#stepcount}
+
+How many steps the sequence had.
 
 ```csharp
 public int StepCount { get; }
@@ -88,5 +96,5 @@ public int StepCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L62)
 

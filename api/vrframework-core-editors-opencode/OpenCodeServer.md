@@ -29,13 +29,15 @@ public static class OpenCodeServer
 
 ### BaseUrl {#baseurl}
 
+Address of the local server, or null while it is not running.
+
 ```csharp
 public static string BaseUrl { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L49)
 
 ### IsRunning {#isrunning}
 
@@ -49,7 +51,7 @@ public static bool IsRunning { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L56)
 
 ### Port {#port}
 
@@ -73,7 +75,7 @@ public static string StartupLog { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L70)
 
 ### WorkingDirectory {#workingdirectory}
 
@@ -85,7 +87,7 @@ public static string WorkingDirectory { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L59)
 
 ## Methods
 
@@ -100,7 +102,7 @@ public static Task<bool> EnsureRunning()
 
 **Returns** `Task<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L88)
 
 ### Shutdown() {#shutdown}
 
@@ -110,7 +112,7 @@ Stops the server and forgets it. Called on editor quit, and from the window's St
 public static void Shutdown()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L222)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L223)
 
 ## Events
 
@@ -124,5 +126,5 @@ public static event Action StateChanged
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeServer.cs#L82)
 

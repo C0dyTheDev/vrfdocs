@@ -12,37 +12,37 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`CameraFollowerEditor`](/api/vrframework-core-editors-defaults/CameraFollowerEditor) |  |
-| [`CameraLookCheckEditor`](/api/vrframework-core-editors-defaults/CameraLookCheckEditor) |  |
+| [`CameraFollowerEditor`](/api/vrframework-core-editors-defaults/CameraFollowerEditor) | Default framework inspector for CameraFollower/api/vrframework-interaction-runtime/CameraFollower. |
+| [`CameraLookCheckEditor`](/api/vrframework-core-editors-defaults/CameraLookCheckEditor) | Default framework inspector for CameraLookCheck/api/vrframework-interaction-runtime/CameraLookCheck. |
 | [`ConditionDefaultEditor`](/api/vrframework-core-editors-defaults/ConditionDefaultEditor) | Progress conditions. |
-| [`ConstantEnqueueEditor`](/api/vrframework-core-editors-defaults/ConstantEnqueueEditor) |  |
-| [`CounterEditor`](/api/vrframework-core-editors-defaults/CounterEditor) |  |
-| [`CustomGrabPoseEditor`](/api/vrframework-core-editors-defaults/CustomGrabPoseEditor) |  |
-| [`EventHolderEditor`](/api/vrframework-core-editors-defaults/EventHolderEditor) |  |
-| [`FingerControllerEditor`](/api/vrframework-core-editors-defaults/FingerControllerEditor) |  |
-| [`GeneratePositionsEditor`](/api/vrframework-core-editors-defaults/GeneratePositionsEditor) |  |
-| [`GrabHandEditor`](/api/vrframework-core-editors-defaults/GrabHandEditor) |  |
-| [`GraphUpdaterEditor`](/api/vrframework-core-editors-defaults/GraphUpdaterEditor) |  |
-| [`HandVisualSolverEditor`](/api/vrframework-core-editors-defaults/HandVisualSolverEditor) |  |
-| [`InvokeDelayedEditor`](/api/vrframework-core-editors-defaults/InvokeDelayedEditor) |  |
-| [`LanguageConfigEditor`](/api/vrframework-core-editors-defaults/LanguageConfigEditor) |  |
-| [`LocalizedSpriteEditor`](/api/vrframework-core-editors-defaults/LocalizedSpriteEditor) |  |
-| [`LocalizedTextEditor`](/api/vrframework-core-editors-defaults/LocalizedTextEditor) |  |
-| [`LocalizedTextureEditor`](/api/vrframework-core-editors-defaults/LocalizedTextureEditor) |  |
-| [`MiddlePointCalculatorEditor`](/api/vrframework-core-editors-defaults/MiddlePointCalculatorEditor) |  |
-| [`MinigameSetEditor`](/api/vrframework-core-editors-defaults/MinigameSetEditor) |  |
-| [`MistakePlatformEditor`](/api/vrframework-core-editors-defaults/MistakePlatformEditor) |  |
-| [`ObjectDestroyerEditor`](/api/vrframework-core-editors-defaults/ObjectDestroyerEditor) |  |
+| [`ConstantEnqueueEditor`](/api/vrframework-core-editors-defaults/ConstantEnqueueEditor) | Default framework inspector for ConstantEnqueue/api/vrframework-progress-runtime/ConstantEnqueue. |
+| [`CounterEditor`](/api/vrframework-core-editors-defaults/CounterEditor) | Default framework inspector for Counter. |
+| [`CustomGrabPoseEditor`](/api/vrframework-core-editors-defaults/CustomGrabPoseEditor) | Default framework inspector for CustomGrabPose/api/vrframework-interaction-runtime/CustomGrabPose. |
+| [`EventHolderEditor`](/api/vrframework-core-editors-defaults/EventHolderEditor) | Default framework inspector for EventHolder. |
+| [`FingerControllerEditor`](/api/vrframework-core-editors-defaults/FingerControllerEditor) | Default framework inspector for FingerController/api/vrframework-interaction-runtime/FingerController. |
+| [`GeneratePositionsEditor`](/api/vrframework-core-editors-defaults/GeneratePositionsEditor) | Default framework inspector for GeneratePositions. |
+| [`GrabHandEditor`](/api/vrframework-core-editors-defaults/GrabHandEditor) | Default framework inspector for GrabHand/api/vrframework-interaction-runtime/GrabHand. |
+| [`GraphUpdaterEditor`](/api/vrframework-core-editors-defaults/GraphUpdaterEditor) | Default framework inspector for GraphUpdater/api/vrframework-progress-runtime/GraphUpdater. |
+| [`HandVisualSolverEditor`](/api/vrframework-core-editors-defaults/HandVisualSolverEditor) | Default framework inspector for HandVisualSolver/api/vrframework-interaction-runtime/HandVisualSolver. |
+| [`InvokeDelayedEditor`](/api/vrframework-core-editors-defaults/InvokeDelayedEditor) | Default framework inspector for InvokeDelayed/api/vrframework-core-runtime/InvokeDelayed. |
+| [`LanguageConfigEditor`](/api/vrframework-core-editors-defaults/LanguageConfigEditor) | Default framework inspector for LanguageConfig/api/vrframework-localization-runtime/LanguageConfig. |
+| [`LocalizedSpriteEditor`](/api/vrframework-core-editors-defaults/LocalizedSpriteEditor) | Default framework inspector for LocalizedSprite/api/vrframework-localization-runtime/LocalizedSprite. |
+| [`LocalizedTextEditor`](/api/vrframework-core-editors-defaults/LocalizedTextEditor) | Default framework inspector for LocalizedText/api/vrframework-localization-runtime/LocalizedText. |
+| [`LocalizedTextureEditor`](/api/vrframework-core-editors-defaults/LocalizedTextureEditor) | Default framework inspector for LocalizedTexture/api/vrframework-localization-runtime/LocalizedTexture. |
+| [`MiddlePointCalculatorEditor`](/api/vrframework-core-editors-defaults/MiddlePointCalculatorEditor) | Default framework inspector for MiddlePointCalculator. |
+| [`MinigameSetEditor`](/api/vrframework-core-editors-defaults/MinigameSetEditor) | Default framework inspector for MinigameSet/api/vrframework-minigames-runtime/MinigameSet. |
+| [`MistakePlatformEditor`](/api/vrframework-core-editors-defaults/MistakePlatformEditor) | Default framework inspector for MistakePlatform/api/vrframework-mistakes-runtime/MistakePlatform. |
+| [`ObjectDestroyerEditor`](/api/vrframework-core-editors-defaults/ObjectDestroyerEditor) | Default framework inspector for ObjectDestroyer. |
 | [`RenamableBehaviourDefaultEditor`](/api/vrframework-core-editors-defaults/RenamableBehaviourDefaultEditor) | Objects that rename themselves with the hierarchy, such as ProgressBlock. |
-| [`RepeatOnIntervalsEditor`](/api/vrframework-core-editors-defaults/RepeatOnIntervalsEditor) |  |
+| [`RepeatOnIntervalsEditor`](/api/vrframework-core-editors-defaults/RepeatOnIntervalsEditor) | Default framework inspector for RepeatOnIntervals/api/vrframework-core-runtime/RepeatOnIntervals. |
 | [`ReportContributorDefaultEditor`](/api/vrframework-core-editors-defaults/ReportContributorDefaultEditor) | Everything an app adds to the session report. |
-| [`RootPositionEditor`](/api/vrframework-core-editors-defaults/RootPositionEditor) |  |
-| [`SceneChangerEditor`](/api/vrframework-core-editors-defaults/SceneChangerEditor) |  |
-| [`SceneCompletionEditor`](/api/vrframework-core-editors-defaults/SceneCompletionEditor) |  |
-| [`SceneCutEditor`](/api/vrframework-core-editors-defaults/SceneCutEditor) |  |
-| [`SpriteChangerEditor`](/api/vrframework-core-editors-defaults/SpriteChangerEditor) |  |
-| [`StreamManagerEditor`](/api/vrframework-core-editors-defaults/StreamManagerEditor) |  |
-| [`VisionFaderEditor`](/api/vrframework-core-editors-defaults/VisionFaderEditor) |  |
-| [`VRCoreEditor`](/api/vrframework-core-editors-defaults/VRCoreEditor) |  |
+| [`RootPositionEditor`](/api/vrframework-core-editors-defaults/RootPositionEditor) | Default framework inspector for RootPosition/api/vrframework-interaction-runtime/RootPosition. |
+| [`SceneChangerEditor`](/api/vrframework-core-editors-defaults/SceneChangerEditor) | Default framework inspector for SceneChanger/api/vrframework-core-runtime/SceneChanger. |
+| [`SceneCompletionEditor`](/api/vrframework-core-editors-defaults/SceneCompletionEditor) | Default framework inspector for SceneCompletion/api/vrframework-core-runtime/SceneCompletion. |
+| [`SceneCutEditor`](/api/vrframework-core-editors-defaults/SceneCutEditor) | Default framework inspector for SceneCut/api/vrframework-core-runtime/SceneCut. |
+| [`SpriteChangerEditor`](/api/vrframework-core-editors-defaults/SpriteChangerEditor) | Default framework inspector for SpriteChanger/api/vrframework-core-runtime/SpriteChanger. |
+| [`StreamManagerEditor`](/api/vrframework-core-editors-defaults/StreamManagerEditor) | Default framework inspector for StreamManager/api/vrframework-streaming-runtime/StreamManager. |
+| [`VisionFaderEditor`](/api/vrframework-core-editors-defaults/VisionFaderEditor) | Default framework inspector for VisionFader/api/vrframework-core-runtime/VisionFader. |
+| [`VRCoreEditor`](/api/vrframework-core-editors-defaults/VRCoreEditor) | Default framework inspector for VRCore/api/vrframework-core-runtime/VRCore. |
 | [`VRModuleDefaultEditor`](/api/vrframework-core-editors-defaults/VRModuleDefaultEditor) | Every framework module - AudioManager, PlatformManager, InteractionModule and so on. |
 

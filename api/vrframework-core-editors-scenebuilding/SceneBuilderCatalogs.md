@@ -8,7 +8,7 @@ description: 'Discovers every catalog in the loaded editor assemblies.'
 
 # SceneBuilderCatalogs
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L57)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L67)
 
 Discovers every catalog in the loaded editor assemblies. Instances are cached until an
 explicit invalidate, because a domain reload rebuilds the list anyway.
@@ -23,15 +23,19 @@ public static class SceneBuilderCatalogs
 
 ### All {#all}
 
+Every catalog found in the editor assemblies, cached.
+
 ```csharp
 public static IReadOnlyList<ISceneBuilderCatalog> All { get; }
 ```
 
 **Returns** `IReadOnlyList<ISceneBuilderCatalog>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L72)
 
 ### Available {#available}
+
+The catalogs that currently want to be shown.
 
 ```csharp
 public static IEnumerable<ISceneBuilderCatalog> Available { get; }
@@ -39,11 +43,13 @@ public static IEnumerable<ISceneBuilderCatalog> Available { get; }
 
 **Returns** `IEnumerable<ISceneBuilderCatalog>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L82)
 
 ## Methods
 
 ### Find(string) {#find-string}
+
+Finds a catalog by its identity.
 
 ```csharp
 public static ISceneBuilderCatalog Find(string id)
@@ -53,17 +59,19 @@ public static ISceneBuilderCatalog Find(string id)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Identity to look for. |
 
-**Returns** [`ISceneBuilderCatalog`](/api/vrframework-core-editors-scenebuilding/ISceneBuilderCatalog)
+**Returns** [`ISceneBuilderCatalog`](/api/vrframework-core-editors-scenebuilding/ISceneBuilderCatalog) - The catalog, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L93)
 
 ### Invalidate() {#invalidate}
+
+Forgets the cached catalogs, so a recompile or a settings change is picked up.
 
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L85)
 

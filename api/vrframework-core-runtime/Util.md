@@ -22,6 +22,9 @@ public static class Util
 
 ### GetRandomPointInside(Collider) {#getrandompointinside-collider}
 
+A random world space point inside a box, sphere or capsule collider. Any other collider type
+logs an error and falls back to the collider's own position.
+
 ```csharp
 public static Vector3 GetRandomPointInside(this Collider collider)
 ```
@@ -30,13 +33,15 @@ public static Vector3 GetRandomPointInside(this Collider collider)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `collider` | [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) |  |
+| `collider` | [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) | Collider to sample. |
 
-**Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
+**Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html) - A point inside the collider, or [`zero`](https://docs.unity3d.com/ScriptReference/Vector3.zero.html) when the collider is null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L198)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L247)
 
 ### Log(string, string, Object, string, string, int, string) {#log-string-string-object-string-string-int32-string}
+
+Writes an informational framework line to the Unity console and to [`VRFLog`](/api/vrframework-core-runtime/VRFLog).
 
 ```csharp
 public static void Log(string message, string prefix = "<color=#cecece><size=15><b>VRFramework: </b></size></color>", Object context = null, string channel = null, string callerFile = "", int callerLine = 0, string callerMember = "")
@@ -46,15 +51,15 @@ public static void Log(string message, string prefix = "<color=#cecece><size=15>
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text to log, without the "VRFramework: " prefix. |
+| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Rich text prepended in the editor console. Ignored in a player build. |
+| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping in the hierarchy when the console entry is clicked. |
+| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Grouping label for the VRF Logger window. Defaults to the calling file name. |
+| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - source file of the call site. |
+| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
+| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L32)
 
 ### LogDebug(string, string, Object, string, string, int, string) {#logdebug-string-string-object-string-string-int32-string}
 
@@ -74,17 +79,19 @@ public static void LogDebug(string message, string prefix = "<color=#7f9fb0><siz
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text to log, without the "VRFramework: " prefix. |
+| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Rich text prepended in the editor console. Ignored in a player build. |
+| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping in the hierarchy when the console entry is clicked. |
+| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Grouping label for the VRF Logger window. Defaults to the calling file name. |
+| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - source file of the call site. |
+| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
+| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L97)
 
 ### LogError(string, string, Object, string, string, int, string) {#logerror-string-string-object-string-string-int32-string}
+
+Writes an error framework line to the Unity console and to [`VRFLog`](/api/vrframework-core-runtime/VRFLog).
 
 ```csharp
 public static void LogError(string message, string prefix = "<color=#ce2714><size=15><b>VRFramework: </b></size></color>", Object context = null, string channel = null, string callerFile = "", int callerLine = 0, string callerMember = "")
@@ -94,17 +101,19 @@ public static void LogError(string message, string prefix = "<color=#ce2714><siz
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text to log, without the "VRFramework: " prefix. |
+| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Rich text prepended in the editor console. Ignored in a player build. |
+| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping in the hierarchy when the console entry is clicked. |
+| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Grouping label for the VRF Logger window. Defaults to the calling file name. |
+| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - source file of the call site. |
+| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
+| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L72)
 
 ### LogWarning(string, string, Object, string, string, int, string) {#logwarning-string-string-object-string-string-int32-string}
+
+Writes a warning framework line to the Unity console and to [`VRFLog`](/api/vrframework-core-runtime/VRFLog).
 
 ```csharp
 public static void LogWarning(string message, string prefix = "<color=#cea925><size=15><b>VRFramework: </b></size></color>", Object context = null, string channel = null, string callerFile = "", int callerLine = 0, string callerMember = "")
@@ -114,17 +123,20 @@ public static void LogWarning(string message, string prefix = "<color=#cea925><s
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
-| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text to log, without the "VRFramework: " prefix. |
+| `prefix` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Rich text prepended in the editor console. Ignored in a player build. |
+| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to ping in the hierarchy when the console entry is clicked. |
+| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Grouping label for the VRF Logger window. Defaults to the calling file name. |
+| `callerFile` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - source file of the call site. |
+| `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
+| `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L52)
 
 ### Remap(float, float, float, float, float) {#remap-single-single-single-single-single}
+
+Linearly remaps a value from one range onto another. Values outside the source range are not
+clamped, they extrapolate.
 
 ```csharp
 public static float Remap(this float value, float from1, float to1, float from2, float to2)
@@ -134,17 +146,19 @@ public static float Remap(this float value, float from1, float to1, float from2,
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `value` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
-| `from1` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
-| `to1` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
-| `from2` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
-| `to2` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
+| `value` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Value expressed in the source range. |
+| `from1` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Source range start. |
+| `to1` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Source range end. |
+| `from2` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Target range start. |
+| `to2` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Target range end. |
 
-**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The value expressed in the target range.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L255)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L317)
 
 ### Shuffle\<T>(IList\<T>) {#shuffle-1-0}
+
+Reorders a list in place, using Unity's random generator.
 
 ```csharp
 public static void Shuffle<T>(this IList<T> list)
@@ -154,17 +168,20 @@ public static void Shuffle<T>(this IList<T> list)
 
 | Name | Description |
 | --- | --- |
-| `T` |  |
+| `T` | Element type. |
 
 **Parameters**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `list` | `IList<T>` |  |
+| `list` | `IList<T>` | List to shuffle. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L246)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L298)
 
 ### ToLiteral(string) {#toliteral-string}
+
+Escapes a string into a C# source literal, surrounding quotes included. Characters outside
+printable ASCII are written as UTF-16 escape sequences. Used when the framework generates code.
 
 ```csharp
 public static string ToLiteral(string input)
@@ -174,9 +191,9 @@ public static string ToLiteral(string input)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `input` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `input` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Raw string to escape. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The quoted, escaped literal.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L184)
 

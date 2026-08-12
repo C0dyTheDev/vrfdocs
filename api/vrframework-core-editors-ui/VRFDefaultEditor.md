@@ -31,11 +31,11 @@ public class VRFDefaultEditor : VRFComponentEditor
 
 ### DrawBody() {#drawbody}
 
-Everything below the header. Draw with [`Prop(string)`](/api/vrframework-core-editors-ui/VRFComponentEditor#prop-string) and the section helpers.
+Draws the component's own inspector body.
 
 ```csharp
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditor.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditor.cs#L22)
 

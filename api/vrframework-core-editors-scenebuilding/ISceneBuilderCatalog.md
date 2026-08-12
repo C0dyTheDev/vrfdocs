@@ -31,9 +31,11 @@ string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L21)
 
 ### DisplayName {#displayname}
+
+Name shown for the category in the sidebar.
 
 ```csharp
 string DisplayName { get; }
@@ -41,7 +43,7 @@ string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L18)
 
 ### EmptyMessage {#emptymessage}
 
@@ -53,7 +55,7 @@ string EmptyMessage { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L33)
 
 ### IconName {#iconname}
 
@@ -65,7 +67,7 @@ string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L27)
 
 ### Id {#id}
 
@@ -89,7 +91,7 @@ bool IsAvailable { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L30)
 
 ### Order {#order}
 
@@ -101,7 +103,7 @@ int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L24)
 
 ## Methods
 
@@ -115,5 +117,5 @@ IEnumerable<SceneBuilderItem> GetItems()
 
 **Returns** `IEnumerable<SceneBuilderItem>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L36)
 

@@ -8,7 +8,7 @@ description: 'One selectable model, flattened out of the provider list for the d
 
 # OpenCodeModel
 
-**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L228)
+**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L231)
 
 One selectable model, flattened out of the provider list for the dropdown.
 
@@ -20,6 +20,8 @@ public readonly struct OpenCodeModel
 
 ### OpenCodeModel(string, string, string, string) {#ctor-string-string-string-string}
 
+Builds a model entry.
+
 ```csharp
 public OpenCodeModel(string providerId, string modelId, string providerName, string modelName)
 ```
@@ -28,12 +30,12 @@ public OpenCodeModel(string providerId, string modelId, string providerName, str
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `providerId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `modelId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `providerName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `modelName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `providerId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID of the provider. |
+| `modelId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID of the model. |
+| `providerName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Provider name as shown. |
+| `modelName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Model name as shown. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L230)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L238)
 
 ## Properties
 
@@ -47,9 +49,11 @@ public string DisplayPath { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L244)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L256)
 
 ### ModelId {#modelid}
+
+ID of the model.
 
 ```csharp
 public string ModelId { get; }
@@ -57,9 +61,11 @@ public string ModelId { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L239)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L249)
 
 ### ModelName {#modelname}
+
+Model name as shown in the picker.
 
 ```csharp
 public string ModelName { get; }
@@ -67,9 +73,11 @@ public string ModelName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L241)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L253)
 
 ### ProviderId {#providerid}
+
+ID of the provider serving the model.
 
 ```csharp
 public string ProviderId { get; }
@@ -77,9 +85,11 @@ public string ProviderId { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L238)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L247)
 
 ### ProviderName {#providername}
+
+Provider name as shown in the picker.
 
 ```csharp
 public string ProviderName { get; }
@@ -87,5 +97,5 @@ public string ProviderName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L240)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L251)
 

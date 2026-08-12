@@ -31,7 +31,7 @@ public static bool AutoRevalidate { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L36)
 
 ### CollapsedGroups {#collapsedgroups}
 
@@ -43,7 +43,7 @@ public static IEnumerable<string> CollapsedGroups { get; set; }
 
 **Returns** `IEnumerable<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L57)
 
 ### Scope {#scope}
 
@@ -55,9 +55,11 @@ public static int Scope { get; set; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L43)
 
 ### Search {#search}
+
+The search text, as last typed.
 
 ```csharp
 public static string Search { get; set; }
@@ -65,9 +67,11 @@ public static string Search { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L50)
 
 ### ShowError {#showerror}
+
+Whether errors are shown.
 
 ```csharp
 public static bool ShowError { get; set; }
@@ -75,9 +79,11 @@ public static bool ShowError { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L15)
 
 ### ShowInfo {#showinfo}
+
+Whether informational findings are shown.
 
 ```csharp
 public static bool ShowInfo { get; set; }
@@ -85,9 +91,11 @@ public static bool ShowInfo { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L29)
 
 ### ShowWarning {#showwarning}
+
+Whether warnings are shown.
 
 ```csharp
 public static bool ShowWarning { get; set; }
@@ -95,5 +103,5 @@ public static bool ShowWarning { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L22)
 

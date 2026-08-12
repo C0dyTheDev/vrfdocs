@@ -12,38 +12,38 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`CameraFollower`](/api/vrframework-interaction-runtime/CameraFollower) |  |
-| [`CameraLookCheck`](/api/vrframework-interaction-runtime/CameraLookCheck) |  |
-| [`CameraRecenter`](/api/vrframework-interaction-runtime/CameraRecenter) |  |
-| [`CustomGrabPose`](/api/vrframework-interaction-runtime/CustomGrabPose) |  |
-| [`Finger`](/api/vrframework-interaction-runtime/Finger) |  |
-| [`FingerController`](/api/vrframework-interaction-runtime/FingerController) |  |
-| [`FingerSetting`](/api/vrframework-interaction-runtime/FingerSetting) |  |
-| [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) |  |
-| [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) |  |
-| [`HandVisualSolver`](/api/vrframework-interaction-runtime/HandVisualSolver) |  |
-| [`Highlight`](/api/vrframework-interaction-runtime/Highlight) |  |
-| [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) |  |
-| [`InteractionModule`](/api/vrframework-interaction-runtime/InteractionModule) |  |
-| [`PhysicalFinger`](/api/vrframework-interaction-runtime/PhysicalFinger) |  |
-| [`RootPosition`](/api/vrframework-interaction-runtime/RootPosition) |  |
-| [`SnapDropZone`](/api/vrframework-interaction-runtime/SnapDropZone) |  |
-| [`ToggleSelect`](/api/vrframework-interaction-runtime/ToggleSelect) |  |
-| [`TransformPair`](/api/vrframework-interaction-runtime/TransformPair) |  |
-| [`TriggerAction`](/api/vrframework-interaction-runtime/TriggerAction) |  |
-| [`TriggerStay`](/api/vrframework-interaction-runtime/TriggerStay) |  |
+| [`CameraFollower`](/api/vrframework-interaction-runtime/CameraFollower) | Keeps an object in front of the player, following the head's yaw only and easing into place, so a panel or a hint stays readable without swinging with every head tilt. |
+| [`CameraLookCheck`](/api/vrframework-interaction-runtime/CameraLookCheck) | Raises an event once the player has looked at this object for long enough - used to confirm the player has actually seen something before a step continues. |
+| [`CameraRecenter`](/api/vrframework-interaction-runtime/CameraRecenter) | A place to put the player. |
+| [`CustomGrabPose`](/api/vrframework-interaction-runtime/CustomGrabPose) | Marks up one way of holding an object: where the hand attaches and which pose it takes. |
+| [`Finger`](/api/vrframework-interaction-runtime/Finger) | One finger of the hand mesh: its joints, and whether it is currently frozen. |
+| [`FingerController`](/api/vrframework-interaction-runtime/FingerController) | Sits on one finger of the hand and reports to GrabHand/api/vrframework-interaction-runtime/GrabHand when that finger touches an object within reach, which is what the physical grab |
+| [`FingerSetting`](/api/vrframework-interaction-runtime/FingerSetting) | Whether one finger takes part in a grab. |
+| [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Makes an object grabbable by the framework's hands. |
+| [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | One hand of the rig, and the framework's own grabbing logic. |
+| [`HandVisualSolver`](/api/vrframework-interaction-runtime/HandVisualSolver) | Drives the visible hand mesh from the tracked hand, joint by joint, and can freeze individual fingers or the whole pose - which is what lets a held object keep the hand wrapped aro |
+| [`Highlight`](/api/vrframework-interaction-runtime/Highlight) | Highlights an object and, by default, everything under it - either by replacing its materials with a transparent highlight shader or by pulsing an overlay colour over them. |
+| [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | What a highlighted renderer looked like before it was highlighted, so Highlight/api/vrframework-interaction-runtime/Highlight can put it back exactly as it was. |
+| [`InteractionModule`](/api/vrframework-interaction-runtime/InteractionModule) | The interaction module. |
+| [`PhysicalFinger`](/api/vrframework-interaction-runtime/PhysicalFinger) | Pairs a finger with the collider component that reports its contacts. |
+| [`RootPosition`](/api/vrframework-interaction-runtime/RootPosition) | Watches hand tracking coming and going and hides whatever a hand is holding while that hand is untracked, so a held object does not float about on its own. |
+| [`SnapDropZone`](/api/vrframework-interaction-runtime/SnapDropZone) | A place an object belongs. |
+| [`ToggleSelect`](/api/vrframework-interaction-runtime/ToggleSelect) | A trigger that flips between selected and deselected each time a matching object enters it, raising one of two events - a switch the player operates by reaching into it. |
+| [`TransformPair`](/api/vrframework-interaction-runtime/TransformPair) | Maps one bone of the tracked hand onto the matching bone of the hand mesh. |
+| [`TriggerAction`](/api/vrframework-interaction-runtime/TriggerAction) | Raises events when a matching object enters or leaves this trigger. |
+| [`TriggerStay`](/api/vrframework-interaction-runtime/TriggerStay) | Requires a matching object to stay inside this trigger for a set time before completing - for holding a tool against a workpiece, or standing somewhere long enough to count. |
 
 ## Enums
 
 | Name | Summary |
 | --- | --- |
-| [`FingerType`](/api/vrframework-interaction-runtime/FingerType) |  |
-| [`GrabType`](/api/vrframework-interaction-runtime/GrabType) |  |
-| [`HandType`](/api/vrframework-interaction-runtime/HandType) |  |
-| [`Highlight.HighlightType`](/api/vrframework-interaction-runtime/Highlight.HighlightType) |  |
-| [`SnapIdentification`](/api/vrframework-interaction-runtime/SnapIdentification) |  |
-| [`SnapMode`](/api/vrframework-interaction-runtime/SnapMode) |  |
-| [`ToggleSelect.IdType`](/api/vrframework-interaction-runtime/ToggleSelect.IdType) |  |
-| [`TriggerIdentification`](/api/vrframework-interaction-runtime/TriggerIdentification) |  |
-| [`TriggerStayMode`](/api/vrframework-interaction-runtime/TriggerStayMode) |  |
+| [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | The fingers of a hand, as flags, so a grabbable can ask for any combination of them. |
+| [`GrabType`](/api/vrframework-interaction-runtime/GrabType) | The ways an object can be picked up. |
+| [`HandType`](/api/vrframework-interaction-runtime/HandType) | Which of the player's two hands a component belongs to. |
+| [`Highlight.HighlightType`](/api/vrframework-interaction-runtime/Highlight.HighlightType) | How the highlight is drawn. |
+| [`SnapIdentification`](/api/vrframework-interaction-runtime/SnapIdentification) | What a SnapDropZone/api/vrframework-interaction-runtime/SnapDropZone matches candidates on. |
+| [`SnapMode`](/api/vrframework-interaction-runtime/SnapMode) | Whether a snapped object may be taken out of the zone again. |
+| [`ToggleSelect.IdType`](/api/vrframework-interaction-runtime/ToggleSelect.IdType) | What the trigger matches entering objects on. |
+| [`TriggerIdentification`](/api/vrframework-interaction-runtime/TriggerIdentification) | What a trigger matches objects on. |
+| [`TriggerStayMode`](/api/vrframework-interaction-runtime/TriggerStayMode) | What leaving a TriggerStay/api/vrframework-interaction-runtime/TriggerStay early does to the time counted so far. |
 

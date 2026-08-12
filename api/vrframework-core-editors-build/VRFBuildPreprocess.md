@@ -29,7 +29,7 @@ public class VRFBuildPreprocess : IPreprocessBuildWithReport, IOrderedCallback
 
 ### callbackOrder {#callbackorder}
 
-Returns a numeric value that determines the order in which the build callback is invoked.
+Where this hook runs among Unity's build callbacks.
 
 ```csharp
 public int callbackOrder { get; }
@@ -37,13 +37,14 @@ public int callbackOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildPreprocess.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildPreprocess.cs#L19)
 
 ## Methods
 
 ### OnPreprocessBuild(BuildReport) {#onpreprocessbuild-buildreport}
 
-Implement this method to receive a callback before the build is started.
+Validates and applies the active profile's framework settings as a build starts. Errors stop
+the build before anything is written.
 
 ```csharp
 public void OnPreprocessBuild(BuildReport report)
@@ -53,7 +54,7 @@ public void OnPreprocessBuild(BuildReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `report` | [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html) | A report containing information about the build, such as its target platform and output path. |
+| `report` | [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html) | Unity's report for the build being started. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildPreprocess.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildPreprocess.cs#L26)
 

@@ -8,7 +8,7 @@ description: 'A tool call the agent may not make until the user allows it.'
 
 # OpenCodePermission
 
-**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L376)
+**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L406)
 
 A tool call the agent may not make until the user allows it.
 
@@ -20,6 +20,8 @@ public readonly struct OpenCodePermission
 
 ### OpenCodePermission(string, string, string) {#ctor-string-string-string}
 
+Builds a permission request.
+
 ```csharp
 public OpenCodePermission(string id, string action, string detail)
 ```
@@ -28,11 +30,11 @@ public OpenCodePermission(string id, string action, string detail)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `action` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `detail` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID the server gave the request. |
+| `action` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What the agent is asking to do. |
+| `detail` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The specifics of the request, e.g. the command or path. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L378)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L412)
 
 ## Properties
 
@@ -46,7 +48,7 @@ public string Action { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L388)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L423)
 
 ### Detail {#detail}
 
@@ -58,9 +60,11 @@ public string Detail { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L391)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L426)
 
 ### Id {#id}
+
+ID the server gave the request.
 
 ```csharp
 public string Id { get; }
@@ -68,5 +72,5 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L385)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L420)
 

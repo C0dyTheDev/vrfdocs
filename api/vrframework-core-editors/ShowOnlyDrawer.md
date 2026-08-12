@@ -23,7 +23,7 @@ public class ShowOnlyDrawer : PropertyDrawer
 
 ### GetPropertyHeight(SerializedProperty, GUIContent) {#getpropertyheight-serializedproperty-guicontent}
 
-Override this method to specify how tall the GUI for this field is in pixels.
+Height of the drawn property, unchanged from the default drawer.
 
 ```csharp
 public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -33,16 +33,16 @@ public override float GetPropertyHeight(SerializedProperty property, GUIContent 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | The SerializedProperty to make the custom GUI for. |
-| `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | The label of this property. |
+| `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | Property being measured. |
+| `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | Label of the property. |
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The height in pixels.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Attribute/ShowOnlyDrawer.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Attribute/ShowOnlyDrawer.cs#L27)
 
 ### OnGUI(Rect, SerializedProperty, GUIContent) {#ongui-rect-serializedproperty-guicontent}
 
-Override this method to make your own IMGUI based GUI for the property.
+Draws the property with input disabled, so it reads as a value but cannot be edited.
 
 ```csharp
 public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -52,9 +52,9 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `position` | [`Rect`](https://docs.unity3d.com/ScriptReference/Rect.html) | Rectangle on the screen to use for the property GUI. |
-| `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | The SerializedProperty to make the custom GUI for. |
-| `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | The label of this property. |
+| `position` | [`Rect`](https://docs.unity3d.com/ScriptReference/Rect.html) | Rect to draw in. |
+| `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | Property being drawn. |
+| `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | Label of the property. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Attribute/ShowOnlyDrawer.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Attribute/ShowOnlyDrawer.cs#L16)
 

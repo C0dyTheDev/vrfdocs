@@ -22,9 +22,11 @@ public readonly struct VRFEditorGUI.BandRegionScope : IDisposable
 
 ### Dispose() {#dispose}
 
+Puts the previous band back.
+
 ```csharp
 public void Dispose()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L104)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L108)
 

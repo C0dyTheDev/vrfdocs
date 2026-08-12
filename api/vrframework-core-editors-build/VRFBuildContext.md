@@ -23,6 +23,8 @@ public sealed class VRFBuildContext
 
 ### VRFBuildContext(BuildProfile, VRFBuildSettings, BuildReport) {#ctor-buildprofile-vrfbuildsettings-buildreport}
 
+Builds the context handed to each setting as it is applied.
+
 ```csharp
 public VRFBuildContext(BuildProfile profile, VRFBuildSettings settings, BuildReport report)
 ```
@@ -31,11 +33,11 @@ public VRFBuildContext(BuildProfile profile, VRFBuildSettings settings, BuildRep
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) |  |
-| `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) |  |
-| `report` | [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html) |  |
+| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile being built. |
+| `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) | Framework settings of that profile. |
+| `report` | [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html) | Unity's build report, or null outside a build. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L80)
 
 ## Fields
 
@@ -68,9 +70,11 @@ public PlayerSettings PlayerSettings { get; }
 
 **Returns** [`PlayerSettings`](https://docs.unity3d.com/ScriptReference/PlayerSettings.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L107)
 
 ### Profile {#profile}
+
+The profile being built.
 
 ```csharp
 public BuildProfile Profile { get; }
@@ -78,7 +82,7 @@ public BuildProfile Profile { get; }
 
 **Returns** [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L88)
 
 ### Report {#report}
 
@@ -90,9 +94,11 @@ public BuildReport Report { get; }
 
 **Returns** [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L93)
 
 ### Settings {#settings}
+
+The framework settings of that profile.
 
 ```csharp
 public VRFBuildSettings Settings { get; }
@@ -100,7 +106,7 @@ public VRFBuildSettings Settings { get; }
 
 **Returns** [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L90)
 
 ### WrittenFiles {#writtenfiles}
 
@@ -112,7 +118,7 @@ public IReadOnlyList<string> WrittenFiles { get; }
 
 **Returns** `IReadOnlyList<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L90)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L96)
 
 ## Methods
 
@@ -133,7 +139,7 @@ public void SetPlayerSetting(string propertyName, string value, Action fallback)
 | `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `fallback` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L123)
 
 ### WriteStreamingAsset(string, string) {#writestreamingasset-string-string}
 
@@ -150,5 +156,5 @@ public void WriteStreamingAsset(string fileName, string contents)
 | `fileName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `contents` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L104)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L110)
 

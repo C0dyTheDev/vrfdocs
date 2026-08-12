@@ -8,7 +8,7 @@ description: 'Every setup available: the framework''s own, plus any ComponentSet
 
 # ComponentSetups
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L238)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L256)
 
 Every setup available: the framework's own, plus any [`ComponentSetupAsset`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset)
 authored in the project. Cached until something invalidates it.
@@ -23,17 +23,21 @@ public static class ComponentSetups
 
 ### All {#all}
 
+Every component setup found in the editor assemblies, cached.
+
 ```csharp
 public static IReadOnlyList<ComponentSetup> All { get; }
 ```
 
 **Returns** `IReadOnlyList<ComponentSetup>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L242)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L261)
 
 ## Methods
 
 ### Find(string) {#find-string}
+
+Finds a setup by its identity.
 
 ```csharp
 public static ComponentSetup Find(string id)
@@ -43,17 +47,19 @@ public static ComponentSetup Find(string id)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Identity to look for. |
 
-**Returns** [`ComponentSetup`](/api/vrframework-core-editors-scenebuilding/ComponentSetup)
+**Returns** [`ComponentSetup`](/api/vrframework-core-editors-scenebuilding/ComponentSetup) - The setup, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L256)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L282)
 
 ### Invalidate() {#invalidate}
+
+Forgets the cached setups, so a recompile or a new asset is picked up.
 
 ```csharp
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L251)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L271)
 

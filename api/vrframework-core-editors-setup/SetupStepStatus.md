@@ -8,7 +8,7 @@ description: 'Where one step of a sequence has got to.'
 
 # SetupStepStatus
 
-**Enum** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L63)
+**Enum** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L77)
 
 Where one step of a sequence has got to.
 

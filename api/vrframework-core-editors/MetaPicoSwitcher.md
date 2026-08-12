@@ -27,12 +27,14 @@ public static class MetaPicoSwitcher
 
 ### CreateToggle() {#createtoggle}
 
+Builds the main toolbar switch between the Meta and PICO XR setups.
+
 ```csharp
 [MainToolbarElement("VR Framework/Pico Mode", defaultDockPosition = MainToolbarDockPosition.Right)]
 public static MainToolbarElement CreateToggle()
 ```
 
-**Returns** [`MainToolbarElement`](https://docs.unity3d.com/ScriptReference/Toolbars.MainToolbarElement.html)
+**Returns** [`MainToolbarElement`](https://docs.unity3d.com/ScriptReference/Toolbars.MainToolbarElement.html) - The toolbar element.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/MetaPicoSwitcher.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/MetaPicoSwitcher.cs#L74)
 

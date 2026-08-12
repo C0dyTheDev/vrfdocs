@@ -24,15 +24,19 @@ public class PlatformDataSetting : VRFBuildSetting
 
 ### FileName {#filename}
 
+Name of the file written into StreamingAssets.
+
 ```csharp
 public const string FileName = "MyData.json"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L15)
 
 ### myData {#mydata}
+
+The scenes and parameters offered to the platform.
 
 ```csharp
 [Tooltip("The scenes this build exposes to the platform, and the parameters each one takes.")]
@@ -41,13 +45,13 @@ public MyData myData
 
 **Returns** [`MyData`](/api/vrframework-core-editors-build/MyData)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L19)
 
 ## Properties
 
 ### Description {#description}
 
-One line under the title explaining what the setting decides.
+One line explaining what the setting decides.
 
 ```csharp
 public override string Description { get; }
@@ -55,11 +59,11 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L25)
 
 ### DisplayName {#displayname}
 
-Section title in the Build window and the inspector.
+Section title in the Build window.
 
 ```csharp
 public override string DisplayName { get; }
@@ -67,11 +71,11 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L22)
 
 ### Order {#order}
 
-Lower applies, and lists, first.
+Applies after product identity and the production flag.
 
 ```csharp
 public override int Order { get; }
@@ -79,15 +83,13 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L28)
 
 ## Methods
 
 ### Apply(VRFBuildContext) {#apply-vrfbuildcontext}
 
-Applies the setting. Runs inside OnPreprocessBuild, and from "Apply Settings Now" in the
-Build window, so it must not assume a build is actually in progress -
-[`Report`](/api/vrframework-core-editors-build/VRFBuildContext#report) is null outside one.
+Writes the platform data into StreamingAssets for this build.
 
 ```csharp
 public override void Apply(VRFBuildContext context)
@@ -97,14 +99,13 @@ public override void Apply(VRFBuildContext context)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) |  |
+| `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) | The build being prepared. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L65)
 
 ### Validate(BuildProfile, ValidationReport) {#validate-buildprofile-validationreport}
 
-Problems with the way this setting is filled in. Errors stop the build before anything
-is written; warnings are shown but let it through.
+Reports scenes and parameters that are incomplete or would confuse the platform.
 
 ```csharp
 public override void Validate(BuildProfile profile, ValidationReport report)
@@ -114,8 +115,8 @@ public override void Validate(BuildProfile profile, ValidationReport report)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | The profile carrying this setting. Null only if the settings object is not on one yet, which a setting should tolerate rather than assume away. |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile carrying this setting. |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L33)
 

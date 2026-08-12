@@ -40,9 +40,12 @@ public static bool IsSet(string key, AudioClip clip)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/AudioCue.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/AudioCue.cs#L33)
 
 ### PlayAndWait(IAudioService, AudioSource, string, AudioClip) {#playandwait-iaudioservice-audiosource-string-audioclip}
+
+Plays whichever of the two slots the scene is set up for and yields until it finishes. Does
+nothing when there is no audio service.
 
 ```csharp
 public static IEnumerator PlayAndWait(IAudioService audio, AudioSource source, string key, AudioClip clip)
@@ -52,12 +55,12 @@ public static IEnumerator PlayAndWait(IAudioService audio, AudioSource source, s
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `audio` | [`IAudioService`](/api/vrframework-core-runtime/IAudioService) |  |
-| `source` | [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) |  |
-| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `clip` | [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) |  |
+| `audio` | [`IAudioService`](/api/vrframework-core-runtime/IAudioService) | Audio service to play through. |
+| `source` | [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) | Source to play on. |
+| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Translation ID, used when the scene has the Localization module. |
+| `clip` | [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) | Plain clip, used when it has not. |
 
-**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
+**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the audio has finished playing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/AudioCue.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/AudioCue.cs#L22)
 

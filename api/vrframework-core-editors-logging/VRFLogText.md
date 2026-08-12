@@ -41,9 +41,11 @@ public static Color ChannelColor(string channel)
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L55)
 
 ### Hex(Color) {#hex-color}
+
+A colour as the hex string rich text expects.
 
 ```csharp
 public static string Hex(Color color)
@@ -53,13 +55,15 @@ public static string Hex(Color color)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `color` | [`Color`](https://docs.unity3d.com/ScriptReference/Color.html) |  |
+| `color` | [`Color`](https://docs.unity3d.com/ScriptReference/Color.html) | Colour to convert. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The hex string, without the leading hash.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L72)
 
 ### LevelColor(VRFLogLevel) {#levelcolor-vrfloglevel}
+
+The colour a severity is drawn in.
 
 ```csharp
 public static Color LevelColor(VRFLogLevel level)
@@ -69,11 +73,11 @@ public static Color LevelColor(VRFLogLevel level)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) |  |
+| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) | Severity to look up. |
 
-**Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
+**Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html) - Its colour.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L35)
 
 ### Render(string, VRFLogFilter, bool) {#render-string-vrflogfilter-boolean}
 
@@ -93,7 +97,7 @@ public static string Render(string message, VRFLogFilter filter, bool colorize)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L87)
 
 ### Strip(string) {#strip-string}
 
@@ -111,5 +115,5 @@ public static string Strip(string text)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L78)
 

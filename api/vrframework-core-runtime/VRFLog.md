@@ -8,7 +8,7 @@ description: 'The framework''s log bus.'
 
 # VRFLog
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L78)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L99)
 
 The framework's log bus. [`Util`](/api/vrframework-core-runtime/Util) pushes every VRF log line through here on its way
 to the Unity console; anything that wants to collect them - the VRF Logger window, an in-game
@@ -34,7 +34,7 @@ public static bool CaptureStackTraces
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L105)
 
 ## Properties
 
@@ -49,9 +49,11 @@ public static bool Forwarding { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L119)
 
 ### HasListeners {#haslisteners}
+
+True while at least one collector is subscribed to [`Emitted`](/api/vrframework-core-runtime/VRFLog#emitted).
 
 ```csharp
 public static bool HasListeners { get; }
@@ -59,7 +61,7 @@ public static bool HasListeners { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L122)
 
 ## Methods
 
@@ -85,7 +87,7 @@ public static void Emit(VRFLogLevel level, string message, string channel = null
 | `member` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `skipFrames` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L128)
 
 ## Events
 
@@ -99,5 +101,5 @@ public static event Action<VRFLogRecord> Emitted
 
 **Returns** `Action<VRFLogRecord>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L113)
 

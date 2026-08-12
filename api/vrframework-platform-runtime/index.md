@@ -12,7 +12,7 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`Parameter`](/api/vrframework-platform-runtime/Parameter) |  |
+| [`Parameter`](/api/vrframework-platform-runtime/Parameter) | One session parameter: the name the platform sends it under, and its value. |
 | [`Parameters`](/api/vrframework-platform-runtime/Parameters) | Scriptable object for defining parameters that we expect to come from the Platform |
 | [`PlatformData`](/api/vrframework-platform-runtime/PlatformData) | Data that we expect from Platform |
 | [`PlatformManager`](/api/vrframework-platform-runtime/PlatformManager) | Owns the platform session: build settings, incoming platform data, parameters, the max game time budget and the outgoing reports. |

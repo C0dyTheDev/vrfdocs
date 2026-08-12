@@ -8,7 +8,7 @@ description: 'A captured log line as the window stores it.'
 
 # VRFLogEntry
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L22)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L27)
 
 A captured log line as the window stores it. Serializable so the whole buffer survives a
 domain reload with the rest of [`VRFLogStore`](/api/vrframework-core-editors-logging/VRFLogStore), which is why this is a class with
@@ -25,15 +25,19 @@ public class VRFLogEntry
 
 ### channel {#channel}
 
+Grouping label, usually the source file the line came from.
+
 ```csharp
 public string channel
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L37)
 
 ### context {#context}
+
+Object the line was logged against, if any.
 
 ```csharp
 public Object context
@@ -41,7 +45,7 @@ public Object context
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L53)
 
 ### external {#external}
 
@@ -53,9 +57,11 @@ public bool external
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L56)
 
 ### file {#file}
+
+Source file of the call site.
 
 ```csharp
 public string file
@@ -63,9 +69,11 @@ public string file
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L41)
 
 ### frame {#frame}
+
+Frame the line was logged on.
 
 ```csharp
 public int frame
@@ -73,9 +81,11 @@ public int frame
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L45)
 
 ### id {#id}
+
+Position of the line in the capture order.
 
 ```csharp
 public int id
@@ -83,9 +93,11 @@ public int id
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L31)
 
 ### level {#level}
+
+Severity of the line.
 
 ```csharp
 public VRFLogLevel level
@@ -93,9 +105,11 @@ public VRFLogLevel level
 
 **Returns** [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L33)
 
 ### line {#line}
+
+Line number of the call site.
 
 ```csharp
 public int line
@@ -103,9 +117,11 @@ public int line
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L43)
 
 ### member {#member}
+
+Member the line was logged from.
 
 ```csharp
 public string member
@@ -113,9 +129,11 @@ public string member
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L39)
 
 ### message {#message}
+
+The message as it was logged.
 
 ```csharp
 public string message
@@ -123,9 +141,11 @@ public string message
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L35)
 
 ### stackTrace {#stacktrace}
+
+Stack trace, when one was captured.
 
 ```csharp
 public string stackTrace
@@ -133,9 +153,11 @@ public string stackTrace
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L51)
 
 ### ticks {#ticks}
+
+Wall clock ticks when the line was logged.
 
 ```csharp
 public long ticks
@@ -143,9 +165,11 @@ public long ticks
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L49)
 
 ### time {#time}
+
+Seconds since startup when the line was logged.
 
 ```csharp
 public double time
@@ -153,7 +177,7 @@ public double time
 
 **Returns** [`double`](https://learn.microsoft.com/dotnet/api/system.double)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L47)
 
 ## Properties
 
@@ -167,7 +191,7 @@ public string CollapseKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L69)
 
 ### FirstLine {#firstline}
 
@@ -179,7 +203,7 @@ public string FirstLine { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L72)
 
 ### SearchText {#searchtext}
 
@@ -191,7 +215,7 @@ public string SearchText { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L66)
 
 ### SourceLabel {#sourcelabel}
 
@@ -203,9 +227,11 @@ public string SourceLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L86)
 
 ### Timestamp {#timestamp}
+
+Wall clock time the line was logged at.
 
 ```csharp
 public DateTime Timestamp { get; }
@@ -213,11 +239,13 @@ public DateTime Timestamp { get; }
 
 **Returns** [`DateTime`](https://learn.microsoft.com/dotnet/api/system.datetime)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L63)
 
 ## Methods
 
 ### TimeText(VRFLogTimeMode, VRFLogEntry) {#timetext-vrflogtimemode-vrflogentry}
+
+The time column as written for one display mode.
 
 ```csharp
 public string TimeText(VRFLogTimeMode mode, VRFLogEntry previous)
@@ -227,12 +255,12 @@ public string TimeText(VRFLogTimeMode mode, VRFLogEntry previous)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `mode` | [`VRFLogTimeMode`](/api/vrframework-core-editors-logging/VRFLogTimeMode) |  |
-| `previous` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) |  |
+| `mode` | [`VRFLogTimeMode`](/api/vrframework-core-editors-logging/VRFLogTimeMode) | How the time is written. |
+| `previous` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) | The line above this one, needed for the delta mode. |
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The text of the time column.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L99)
 
 ### ToLine() {#toline}
 
@@ -244,5 +272,5 @@ public string ToLine()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L118)
 

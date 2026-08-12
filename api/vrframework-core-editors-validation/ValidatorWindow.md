@@ -24,18 +24,22 @@ public class ValidatorWindow : EditorWindow
 
 ### CreateGUI() {#creategui}
 
+Builds the window: toolbar, findings list and their bindings.
+
 ```csharp
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorWindow.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorWindow.cs#L38)
 
 ### ShowWindow() {#showwindow}
+
+Opens the VRF Validator window.
 
 ```csharp
 [MenuItem("VRFramework/Validator", priority = 60)]
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorWindow.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorWindow.cs#L63)
 

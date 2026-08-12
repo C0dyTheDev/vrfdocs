@@ -29,15 +29,19 @@ public abstract class SceneTemplate
 
 ### Description {#description}
 
+One line explaining what this is.
+
 ```csharp
 public virtual string Description { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L26)
 
 ### DisplayName {#displayname}
+
+Name shown on the card.
 
 ```csharp
 public abstract string DisplayName { get; }
@@ -45,9 +49,11 @@ public abstract string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L23)
 
 ### IconName {#iconname}
+
+Icon name understood by Unity's built-in icon lookup.
 
 ```csharp
 public virtual string IconName { get; }
@@ -55,9 +61,11 @@ public virtual string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L32)
 
 ### Id {#id}
+
+Stable identity of the template.
 
 ```csharp
 public abstract string Id { get; }
@@ -65,7 +73,7 @@ public abstract string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L21)
 
 ### InstallerIds {#installerids}
 
@@ -77,9 +85,11 @@ public abstract string[] InstallerIds { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L35)
 
 ### Installers {#installers}
+
+The installers this template runs, resolved from their identities.
 
 ```csharp
 public IEnumerable<ModuleInstaller> Installers { get; }
@@ -87,7 +97,7 @@ public IEnumerable<ModuleInstaller> Installers { get; }
 
 **Returns** `IEnumerable<ModuleInstaller>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L44)
 
 ### IsFullyApplied {#isfullyapplied}
 
@@ -100,9 +110,11 @@ public bool IsFullyApplied { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L53)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public virtual int Order { get; }
@@ -110,7 +122,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L30)
 
 ### Prefabs {#prefabs}
 
@@ -122,7 +134,7 @@ public virtual GameObject[] Prefabs { get; }
 
 **Returns** [`GameObject[]`](https://docs.unity3d.com/ScriptReference/GameObject[].html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L38)
 
 ### Source {#source}
 
@@ -134,9 +146,11 @@ public virtual Object Source { get; }
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L41)
 
 ### Tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public virtual string[] Tags { get; }
@@ -144,7 +158,7 @@ public virtual string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L28)
 
 ## Methods
 
@@ -158,7 +172,7 @@ twice.
 public virtual void Apply()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L67)
 
 ### Replace() {#replace}
 
@@ -169,5 +183,5 @@ caller is responsible for confirming with the user first.
 public void Replace()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L98)
 

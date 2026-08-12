@@ -70,9 +70,11 @@ public static VRFBuildSettings Attach(BuildProfile profile, params VRFBuildSetti
 
 **Returns** [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L91)
 
 ### Get(BuildProfile) {#get-buildprofile}
+
+The framework settings carried by a build profile, creating them if it has none yet.
 
 ```csharp
 public static VRFBuildSettings Get(BuildProfile profile)
@@ -82,13 +84,15 @@ public static VRFBuildSettings Get(BuildProfile profile)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) |  |
+| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile to read. |
 
-**Returns** [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings)
+**Returns** [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) - That profile's framework settings.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L28)
 
 ### Has(BuildProfile) {#has-buildprofile}
+
+Whether a profile already carries framework settings.
 
 ```csharp
 public static bool Has(BuildProfile profile)
@@ -98,11 +102,11 @@ public static bool Has(BuildProfile profile)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) |  |
+| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile to check. |
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when it does.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L77)
 
 ### Normalize(VRFBuildSettings) {#normalize-vrfbuildsettings}
 
@@ -123,7 +127,7 @@ public static void Normalize(VRFBuildSettings settings)
 | --- | --- | --- |
 | `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L59)
 
 ### OwnerOf(VRFBuildSettings) {#ownerof-vrfbuildsettings}
 
@@ -142,9 +146,11 @@ public static BuildProfile OwnerOf(VRFBuildSettings settings)
 
 **Returns** [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L42)
 
 ### Remove(BuildProfile) {#remove-buildprofile}
+
+Takes the framework settings back off a profile.
 
 ```csharp
 public static void Remove(BuildProfile profile)
@@ -154,11 +160,13 @@ public static void Remove(BuildProfile profile)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) |  |
+| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile to strip. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L116)
 
 ### Save(BuildProfile, VRFBuildSettings) {#save-buildprofile-vrfbuildsettings}
+
+Writes a profile's framework settings back to disk.
 
 ```csharp
 public static void Save(BuildProfile profile, VRFBuildSettings settings)
@@ -168,8 +176,8 @@ public static void Save(BuildProfile profile, VRFBuildSettings settings)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) |  |
-| `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) |  |
+| `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile the settings belong to. |
+| `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) | Settings to save. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L129)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L140)
 

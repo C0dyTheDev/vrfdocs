@@ -22,15 +22,19 @@ public sealed class VRFLogRowContext
 
 ### colorize {#colorize}
 
+Whether messages are tinted, or drawn as plain text.
+
 ```csharp
 public bool colorize
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L10)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L11)
 
 ### expanded {#expanded}
+
+Whether rows show the whole message rather than its first line.
 
 ```csharp
 public bool expanded
@@ -38,9 +42,11 @@ public bool expanded
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L13)
 
 ### filter {#filter}
+
+The filter in force, whose search terms are highlighted.
 
 ```csharp
 public VRFLogFilter filter
@@ -48,9 +54,11 @@ public VRFLogFilter filter
 
 **Returns** [`VRFLogFilter`](/api/vrframework-core-editors-logging/VRFLogFilter)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L15)
 
 ### fontSize {#fontsize}
+
+Font size of the row text.
 
 ```csharp
 public int fontSize
@@ -58,9 +66,11 @@ public int fontSize
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L17)
 
 ### showChannel {#showchannel}
+
+Whether the channel column is shown.
 
 ```csharp
 public bool showChannel
@@ -68,9 +78,11 @@ public bool showChannel
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L19)
 
 ### showSource {#showsource}
+
+Whether the source column is shown.
 
 ```csharp
 public bool showSource
@@ -78,9 +90,11 @@ public bool showSource
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L21)
 
 ### timeMode {#timemode}
+
+How the time column is written.
 
 ```csharp
 public VRFLogTimeMode timeMode
@@ -88,7 +102,7 @@ public VRFLogTimeMode timeMode
 
 **Returns** [`VRFLogTimeMode`](/api/vrframework-core-editors-logging/VRFLogTimeMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L23)
 
 ## Properties
 
@@ -102,5 +116,5 @@ public float RowHeight { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L26)
 

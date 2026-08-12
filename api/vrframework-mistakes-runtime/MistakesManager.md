@@ -8,7 +8,7 @@ description: 'Tracks this scene''s checkpoints and accumulates the finished scen
 
 # MistakesManager
 
-**Class** · namespace `VRFramework.Mistakes.Runtime` · assembly `VRFramework.Mistakes.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L32)
+**Class** · namespace `VRFramework.Mistakes.Runtime` · assembly `VRFramework.Mistakes.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L38)
 
 Tracks this scene's checkpoints and accumulates the finished scene results for the report,
 which it contributes under "Mistakes".
@@ -33,9 +33,11 @@ public MistakePlatform mistakePlatform
 
 **Returns** [`MistakePlatform`](/api/vrframework-mistakes-runtime/MistakePlatform)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L47)
 
 ### mistakes {#mistakes}
+
+The checkpoints of this scene.
 
 ```csharp
 [Space(10)]
@@ -44,9 +46,11 @@ public List<Mistake> mistakes
 
 **Returns** `List<Mistake>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L50)
 
 ### sceneName {#scenename}
+
+Name the results are filed under. Defaults to the active scene's name.
 
 ```csharp
 public string sceneName
@@ -54,14 +58,13 @@ public string sceneName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L53)
 
 ## Properties
 
 ### DefaultInitOrder {#defaultinitorder}
 
-The order this module needs relative to the others when InitOrder does not
-separate them - e.g. Platform must supply the language before Localization reads it.
+Initialises after localization, before progress.
 
 ```csharp
 public override int DefaultInitOrder { get; }
@@ -69,12 +72,11 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L56)
 
 ### ReportKey {#reportkey}
 
-The key this contribution lands under in the report JSON. Two contributors claiming the
-same key is a conflict: the framework says so and the last one collected wins.
+Key the results land under in the session report.
 
 ```csharp
 public string ReportKey { get; }
@@ -82,11 +84,13 @@ public string ReportKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L101)
 
 ## Methods
 
 ### AddNewMistake(string) {#addnewmistake-string}
+
+Adds a checkpoint at runtime, using the same text for tracking and for display.
 
 ```csharp
 public void AddNewMistake(string mistakeName)
@@ -96,11 +100,13 @@ public void AddNewMistake(string mistakeName)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `mistakeName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `mistakeName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the checkpoint. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L210)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L238)
 
 ### CanRecordMistake(string) {#canrecordmistake-string}
+
+Override to refuse checkpoints under conditions of the app's own.
 
 ```csharp
 protected virtual bool CanRecordMistake(string name)
@@ -110,11 +116,11 @@ protected virtual bool CanRecordMistake(string name)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Checkpoint being ticked off. |
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True to let it be recorded.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L167)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L188)
 
 ### CheckMistake(string) {#checkmistake-string}
 
@@ -130,17 +136,21 @@ public void CheckMistake(string name)
 | --- | --- | --- |
 | `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L59)
 
 ### Clear() {#clear}
+
+Drops every recorded result and unticks every checkpoint of this scene.
 
 ```csharp
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L114)
 
 ### CreateSceneResult(string) {#createsceneresult-string}
+
+Builds this scene's result out of its checkpoints. Override to score a scene differently.
 
 ```csharp
 protected virtual MistakeScene CreateSceneResult(string scene)
@@ -150,11 +160,11 @@ protected virtual MistakeScene CreateSceneResult(string scene)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `scene` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `scene` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the scene being closed. |
 
-**Returns** [`MistakeScene`](/api/vrframework-core-runtime/MistakeScene)
+**Returns** [`MistakeScene`](/api/vrframework-core-runtime/MistakeScene) - The result to append to the session.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L172)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L196)
 
 ### GetReportValue() {#getreportvalue}
 
@@ -168,35 +178,44 @@ public object GetReportValue()
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L108)
 
 ### GetSceneResults() {#getsceneresults}
+
+The results recorded so far, one entry per scene finished this session.
 
 ```csharp
 public List<MistakeScene> GetSceneResults()
 ```
 
-**Returns** `List<MistakeScene>`
+**Returns** `List<MistakeScene>` - The session's scene results.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L95)
 
 ### OnCleanup() {#oncleanup}
+
+Unregisters the module, unless another one has taken over the service in the meantime.
 
 ```csharp
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L152)
 
 ### OnInit() {#oninit}
+
+Registers the module as [`IMistakesService`](/api/vrframework-core-runtime/IMistakesService), hands the session results to the
+report, and takes the scene name if none was set.
 
 ```csharp
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L116)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L133)
 
 ### OnSceneFinalized(string) {#onscenefinalized-string}
+
+Called once a scene result has been recorded. Override to report it somewhere else.
 
 ```csharp
 protected virtual void OnSceneFinalized(string scene)
@@ -206,9 +225,9 @@ protected virtual void OnSceneFinalized(string scene)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `scene` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `scene` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the scene that was closed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L193)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L219)
 
 ### RecordOutcome(string) {#recordoutcome-string}
 
@@ -224,7 +243,7 @@ public void RecordOutcome(string onTime)
 | --- | --- | --- |
 | `onTime` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L84)
 
 ### UncheckMistake(string) {#uncheckmistake-string}
 
@@ -240,5 +259,5 @@ public void UncheckMistake(string name)
 | --- | --- | --- |
 | `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L74)
 

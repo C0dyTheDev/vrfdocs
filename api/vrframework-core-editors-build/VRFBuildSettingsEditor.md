@@ -28,11 +28,11 @@ public class VRFBuildSettingsEditor : Editor
 
 ### OnInspectorGUI() {#oninspectorgui}
 
-Implement this function to make a custom inspector.
+Draws the framework settings of a build profile, section by section.
 
 ```csharp
 public override void OnInspectorGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettingsEditor.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettingsEditor.cs#L37)
 

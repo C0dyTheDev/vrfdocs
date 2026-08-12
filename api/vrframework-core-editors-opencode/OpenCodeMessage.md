@@ -8,7 +8,7 @@ description: 'One turn in the transcript - a user prompt, or an assistant reply 
 
 # OpenCodeMessage
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L259)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L263)
 
 One turn in the transcript - a user prompt, or an assistant reply and its tool calls.
 
@@ -22,6 +22,8 @@ public class OpenCodeMessage
 
 ### OpenCodeMessage(string) {#ctor-string}
 
+Builds a message.
+
 ```csharp
 public OpenCodeMessage(string id)
 ```
@@ -30,13 +32,15 @@ public OpenCodeMessage(string id)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID the server gave the message. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L264)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L270)
 
 ## Properties
 
 ### Agent {#agent}
+
+Agent that produced it, when the server named one.
 
 ```csharp
 public string Agent { get; set; }
@@ -44,9 +48,11 @@ public string Agent { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L271)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L280)
 
 ### Error {#error}
+
+Error the server reported for this message, if any.
 
 ```csharp
 public string Error { get; set; }
@@ -54,9 +60,11 @@ public string Error { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L273)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L284)
 
 ### Id {#id}
+
+ID the server gave the message.
 
 ```csharp
 public string Id { get; }
@@ -64,9 +72,11 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L269)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L276)
 
 ### IsUser {#isuser}
+
+Whether the message came from the user.
 
 ```csharp
 public bool IsUser { get; }
@@ -74,9 +84,11 @@ public bool IsUser { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L277)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L290)
 
 ### ModelId {#modelid}
+
+Model that produced it, when the server named one.
 
 ```csharp
 public string ModelId { get; set; }
@@ -84,9 +96,11 @@ public string ModelId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L272)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L282)
 
 ### Parts {#parts}
+
+The parts the message is made of, in order.
 
 ```csharp
 public IReadOnlyList<OpenCodePart> Parts { get; }
@@ -94,7 +108,7 @@ public IReadOnlyList<OpenCodePart> Parts { get; }
 
 **Returns** `IReadOnlyList<OpenCodePart>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L275)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L287)
 
 ### PlainText {#plaintext}
 
@@ -106,9 +120,11 @@ public string PlainText { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L280)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L293)
 
 ### Role {#role}
+
+Who sent it: "user" or "assistant".
 
 ```csharp
 public string Role { get; set; }
@@ -116,7 +132,7 @@ public string Role { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L270)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L278)
 
 ## Methods
 
@@ -135,9 +151,11 @@ public void AppendToPart(string partId, string delta)
 | `partId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `delta` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L335)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L350)
 
 ### UpsertPart(JObject) {#upsertpart-jobject}
+
+Adds a part from the server, or updates the one already held under that ID.
 
 ```csharp
 public void UpsertPart(JObject source)
@@ -147,7 +165,7 @@ public void UpsertPart(JObject source)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `source` | `JObject` |  |
+| `source` | `JObject` | The part as the server sent it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L285)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L300)
 

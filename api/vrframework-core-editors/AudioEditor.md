@@ -23,10 +23,12 @@ public class AudioEditor : EditorWindow
 
 ### ShowWindow() {#showwindow}
 
+Opens the Audio Clip Editor window.
+
 ```csharp
 [MenuItem("VRFramework/Authoring/Audio Clip Editor", false, 80)]
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/AudioEditor.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/AudioEditor.cs#L121)
 

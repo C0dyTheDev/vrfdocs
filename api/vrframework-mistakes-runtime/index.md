@@ -13,6 +13,6 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`Mistake`](/api/vrframework-mistakes-runtime/Mistake) | A single checkpoint the trainee is expected to get right in this scene. |
-| [`MistakePlatform`](/api/vrframework-mistakes-runtime/MistakePlatform) |  |
+| [`MistakePlatform`](/api/vrframework-mistakes-runtime/MistakePlatform) | An authoring asset listing the scenes a session is made of and the checkpoints they carry. |
 | [`MistakesManager`](/api/vrframework-mistakes-runtime/MistakesManager) | Tracks this scene's checkpoints and accumulates the finished scene results for the report, which it contributes under "Mistakes". |
 

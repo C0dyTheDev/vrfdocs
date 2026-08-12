@@ -8,7 +8,7 @@ description: 'A run of assistant output: prose, hidden reasoning, or one tool in
 
 # OpenCodePart
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L343)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L358)
 
 A run of assistant output: prose, hidden reasoning, or one tool invocation.
 
@@ -22,6 +22,8 @@ public class OpenCodePart
 
 ### OpenCodePart(string, string) {#ctor-string-string}
 
+Builds a message part.
+
 ```csharp
 public OpenCodePart(string id, string type)
 ```
@@ -30,10 +32,10 @@ public OpenCodePart(string id, string type)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `type` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID the server gave the part. |
+| `type` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Kind of part, e.g. text or a tool call. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L345)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L363)
 
 ## Properties
 
@@ -47,9 +49,11 @@ public string FileName { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L365)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L391)
 
 ### Id {#id}
+
+ID the server gave the part.
 
 ```csharp
 public string Id { get; }
@@ -57,9 +61,11 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L351)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L370)
 
 ### Input {#input}
+
+Input the tool was called with.
 
 ```csharp
 public string Input { get; set; }
@@ -67,9 +73,11 @@ public string Input { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L358)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L383)
 
 ### IsFailed {#isfailed}
+
+Whether the part ended in an error.
 
 ```csharp
 public bool IsFailed { get; }
@@ -77,9 +85,11 @@ public bool IsFailed { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L372)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L402)
 
 ### IsImage {#isimage}
+
+Whether the part is an image, and so can be shown inline.
 
 ```csharp
 public bool IsImage { get; }
@@ -87,9 +97,11 @@ public bool IsImage { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L369)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L397)
 
 ### IsRunning {#isrunning}
+
+Whether the part is still being worked on.
 
 ```csharp
 public bool IsRunning { get; }
@@ -97,7 +109,7 @@ public bool IsRunning { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L371)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L400)
 
 ### IsSynthetic {#issynthetic}
 
@@ -109,9 +121,11 @@ public bool IsSynthetic { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L362)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L388)
 
 ### Mime {#mime}
+
+MIME type, for a file part.
 
 ```csharp
 public string Mime { get; set; }
@@ -119,9 +133,11 @@ public string Mime { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L367)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L394)
 
 ### Output {#output}
+
+Output the tool returned.
 
 ```csharp
 public string Output { get; set; }
@@ -129,9 +145,11 @@ public string Output { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L359)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L385)
 
 ### Status {#status}
+
+State of the part: pending, running, done or error.
 
 ```csharp
 public string Status { get; set; }
@@ -139,9 +157,11 @@ public string Status { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L356)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L379)
 
 ### Text {#text}
+
+Text of the part, as far as it has streamed in.
 
 ```csharp
 public string Text { get; set; }
@@ -149,9 +169,11 @@ public string Text { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L353)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L374)
 
 ### Title {#title}
+
+One line describing the part, as shown in the transcript.
 
 ```csharp
 public string Title { get; set; }
@@ -159,9 +181,11 @@ public string Title { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L357)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L381)
 
 ### Tool {#tool}
+
+Name of the tool, for a tool call part.
 
 ```csharp
 public string Tool { get; set; }
@@ -169,9 +193,11 @@ public string Tool { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L355)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L377)
 
 ### Type {#type}
+
+Kind of part, e.g. text or a tool call.
 
 ```csharp
 public string Type { get; set; }
@@ -179,5 +205,5 @@ public string Type { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L352)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L372)
 

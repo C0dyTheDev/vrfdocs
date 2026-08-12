@@ -8,7 +8,7 @@ description: 'Highlight on its own, for objects that are pointed out but not han
 
 # HighlightSetup
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L173)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L223)
 
 Highlight on its own, for objects that are pointed out but not handled.
 
@@ -22,11 +22,7 @@ public class HighlightSetup : ComponentSetup
 
 ### Components {#components}
 
-Components added, in order, with the characteristic script last - that is the one the
-card takes its icon from. Empty for prefab-backed setups.
-Order matters beyond the icon: several framework behaviours pop a modal "which collider
-do you want?" dialog from Reset when they find no collider, so the collider has to be in
-the list before them.
+The components this setup adds.
 
 ```csharp
 public override Type[] Components { get; }
@@ -34,9 +30,11 @@ public override Type[] Components { get; }
 
 **Returns** [`Type[]`](https://learn.microsoft.com/dotnet/api/system.type[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L187)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L245)
 
 ### Description {#description}
+
+One line explaining what this is.
 
 ```csharp
 public override string Description { get; }
@@ -44,9 +42,11 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L181)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L237)
 
 ### DisplayName {#displayname}
+
+Name shown for this in the window.
 
 ```csharp
 public override string DisplayName { get; }
@@ -54,9 +54,11 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L176)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L228)
 
 ### Group {#group}
+
+Sub-grouping this entry is listed under inside its category.
 
 ```csharp
 public override string Group { get; }
@@ -64,9 +66,11 @@ public override string Group { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L177)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L230)
 
 ### Id {#id}
+
+Stable identity of this entry.
 
 ```csharp
 public override string Id { get; }
@@ -74,11 +78,11 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L175)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L226)
 
 ### ObjectName {#objectname}
 
-Name given to the GameObject when the setup creates one.
+Name given to the object this creates.
 
 ```csharp
 public override string ObjectName { get; }
@@ -86,9 +90,11 @@ public override string ObjectName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L179)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L234)
 
 ### Order {#order}
+
+Sort weight in the window. Lower comes first.
 
 ```csharp
 public override int Order { get; }
@@ -96,9 +102,11 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L178)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L232)
 
 ### Tags {#tags}
+
+Words the search box matches against.
 
 ```csharp
 public override string[] Tags { get; }
@@ -106,15 +114,13 @@ public override string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L185)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L242)
 
 ## Methods
 
 ### Configure(GameObject) {#configure-gameobject}
 
-Fills in the settings that make this a setup rather than a bare AddComponent. Runs after
-every component exists, and runs again when the setup is applied to an object that
-already had some of them, so it must be safe to repeat.
+Applies this setup to an object.
 
 ```csharp
 public override void Configure(GameObject target)
@@ -124,7 +130,7 @@ public override void Configure(GameObject target)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) |  |
+| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object being set up. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L189)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L249)
 

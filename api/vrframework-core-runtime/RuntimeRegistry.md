@@ -52,13 +52,18 @@ public static bool RegistrationComplete { get; }
 
 ### Clear() {#clear}
 
+Drops every registration and reopens registration. Called between play sessions.
+
 ```csharp
 public static void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L76)
 
 ### Get\<T>() {#get-1}
+
+The service registered under `T`, or null when nothing has registered one.
+Use [`Resolve<T>(Action<T>, Func<T, bool>)`](/api/vrframework-core-runtime/RuntimeRegistry#resolve-1-0-boolean) instead while the scene may still be starting up.
 
 ```csharp
 public static T Get<T>() where T : class
@@ -68,11 +73,11 @@ public static T Get<T>() where T : class
 
 | Name | Description |
 | --- | --- |
-| `T` |  |
+| `T` | Service interface to look up. |
 
-**Returns** `T`
+**Returns** `T` - The registered implementation, or null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L70)
 
 ### MarkRegistrationComplete() {#markregistrationcomplete}
 
@@ -82,9 +87,12 @@ Called by VRCore once every module in the scene has been initialised.
 public static void MarkRegistrationComplete()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L85)
 
 ### Register\<T>(T) {#register-1-0}
+
+Publishes a service under `T`. Registering a second object for the same
+service replaces the first and logs a warning - a scene usually has one module of each kind.
 
 ```csharp
 public static void Register<T>(T service) where T : class
@@ -94,15 +102,15 @@ public static void Register<T>(T service) where T : class
 
 | Name | Description |
 | --- | --- |
-| `T` |  |
+| `T` | Service interface it is published under. |
 
 **Parameters**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `service` | `T` |  |
+| `service` | `T` | Implementation to publish. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L42)
 
 ### Resolve\<T>(Action\<T>, Func\<T, bool>) {#resolve-1-0-boolean}
 
@@ -119,18 +127,18 @@ public static IEnumerator Resolve<T>(Action<T> onResolved, Func<T, bool> until =
 
 | Name | Description |
 | --- | --- |
-| `T` |  |
+| `T` | Service interface to wait for. |
 
 **Parameters**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `onResolved` | `Action<T>` |  |
-| `until` | `Func<T, bool>` |  |
+| `onResolved` | `Action<T>` | Called with the service, or with null when the scene has none. |
+| `until` | `Func<T, bool>` | Optional extra condition the service must satisfy, e.g. having loaded its data. |
 
-**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
+**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the service is handed over.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L95)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L114)
 
 ### ResolveLocalization(Action\<ILocalizationService>) {#resolvelocalization-ilocalizationservice}
 
@@ -144,13 +152,15 @@ public static IEnumerator ResolveLocalization(Action<ILocalizationService> onRes
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `onResolved` | `Action<ILocalizationService>` |  |
+| `onResolved` | `Action<ILocalizationService>` | Called with the loaded localization service, or with null when the scene has none. |
 
-**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
+**Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once localization is settled.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L158)
 
 ### Unregister\<T>() {#unregister-1}
+
+Withdraws the service registered under `T`, if there is one.
 
 ```csharp
 public static void Unregister<T>() where T : class
@@ -160,7 +170,7 @@ public static void Unregister<T>() where T : class
 
 | Name | Description |
 | --- | --- |
-| `T` |  |
+| `T` | Service interface to withdraw. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L59)
 

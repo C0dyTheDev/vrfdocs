@@ -21,9 +21,9 @@ public enum SceneBuilderItemKind
 
 | Name | Value | Description |
 | --- | --- | --- |
-| `Asset` | 2 |  |
-| `Component` | 4 |  |
-| `Module` | 0 |  |
-| `Prefab` | 1 |  |
-| `Template` | 3 |  |
+| `Asset` | 2 | A project asset, e.g. a model or a material. |
+| `Component` | 4 | A component to add to an existing object. |
+| `Module` | 0 | A framework module the scene can be given. |
+| `Prefab` | 1 | A prefab to drop into the scene. |
+| `Template` | 3 | A whole scene template. |
 

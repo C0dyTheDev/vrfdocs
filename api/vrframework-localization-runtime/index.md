@@ -12,24 +12,24 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
-| [`Language`](/api/vrframework-localization-runtime/Language) |  |
-| [`LanguageAudioElement`](/api/vrframework-localization-runtime/LanguageAudioElement) |  |
-| [`LanguageAudioInstance`](/api/vrframework-localization-runtime/LanguageAudioInstance) |  |
-| [`LanguageAudioList`](/api/vrframework-localization-runtime/LanguageAudioList) |  |
-| [`LanguageConfig`](/api/vrframework-localization-runtime/LanguageConfig) |  |
-| [`LanguageInstanceFilters`](/api/vrframework-localization-runtime/LanguageInstanceFilters) |  |
-| [`LanguageManager`](/api/vrframework-localization-runtime/LanguageManager) |  |
-| [`LanguageProcessor`](/api/vrframework-localization-runtime/LanguageProcessor) |  |
-| [`LanguageSpriteElement`](/api/vrframework-localization-runtime/LanguageSpriteElement) |  |
-| [`LanguageSpriteInstance`](/api/vrframework-localization-runtime/LanguageSpriteInstance) |  |
-| [`LanguageSpriteList`](/api/vrframework-localization-runtime/LanguageSpriteList) |  |
-| [`LanguageTextElement`](/api/vrframework-localization-runtime/LanguageTextElement) |  |
-| [`LanguageTextInstance`](/api/vrframework-localization-runtime/LanguageTextInstance) |  |
-| [`LanguageTextList`](/api/vrframework-localization-runtime/LanguageTextList) |  |
-| [`LocalizedSprite`](/api/vrframework-localization-runtime/LocalizedSprite) |  |
-| [`LocalizedText`](/api/vrframework-localization-runtime/LocalizedText) |  |
-| [`LocalizedTexture`](/api/vrframework-localization-runtime/LocalizedTexture) |  |
-| [`UntranslatedAudioElement`](/api/vrframework-localization-runtime/UntranslatedAudioElement) |  |
-| [`UntranslatedSpriteElement`](/api/vrframework-localization-runtime/UntranslatedSpriteElement) |  |
-| [`UntranslatedTextElement`](/api/vrframework-localization-runtime/UntranslatedTextElement) |  |
+| [`Language`](/api/vrframework-localization-runtime/Language) | One language of the project: how it is written, and the ID everything else refers to it by. |
+| [`LanguageAudioElement`](/api/vrframework-localization-runtime/LanguageAudioElement) | One language's version of a translated audio clip. |
+| [`LanguageAudioInstance`](/api/vrframework-localization-runtime/LanguageAudioInstance) | An asset holding translated audio: one entry per clip, each with a slot per language, plus the clips that are the same everywhere. |
+| [`LanguageAudioList`](/api/vrframework-localization-runtime/LanguageAudioList) | One translated clip across every language: the name it is picked by, and one entry per language. |
+| [`LanguageConfig`](/api/vrframework-localization-runtime/LanguageConfig) | The project's language list. |
+| [`LanguageInstanceFilters`](/api/vrframework-localization-runtime/LanguageInstanceFilters) | The search text and per language visibility of a translation asset's Inspector, kept one set per LangType/api/vrframework-core-runtime/LangType so the view of each asset survives b |
+| [`LanguageManager`](/api/vrframework-localization-runtime/LanguageManager) | The localization module. |
+| [`LanguageProcessor`](/api/vrframework-localization-runtime/LanguageProcessor) | Turns the translation assets into the lookup maps the framework reads at runtime: one map per kind, from translation ID to the entry for the current language, plus the pick lists t |
+| [`LanguageSpriteElement`](/api/vrframework-localization-runtime/LanguageSpriteElement) | One language's version of a translated sprite. |
+| [`LanguageSpriteInstance`](/api/vrframework-localization-runtime/LanguageSpriteInstance) | An asset holding translated sprites: one entry per image, each with a slot per language, plus the images that are the same everywhere. |
+| [`LanguageSpriteList`](/api/vrframework-localization-runtime/LanguageSpriteList) | One translated sprite across every language: the name it is picked by, and one entry per language. |
+| [`LanguageTextElement`](/api/vrframework-localization-runtime/LanguageTextElement) | One language's version of a translated string. |
+| [`LanguageTextInstance`](/api/vrframework-localization-runtime/LanguageTextInstance) | An asset holding translated strings: one entry per text, each with a slot per language, plus the strings that are the same everywhere. |
+| [`LanguageTextList`](/api/vrframework-localization-runtime/LanguageTextList) | One translated string across every language: the name it is picked by, and one entry per language. |
+| [`LocalizedSprite`](/api/vrframework-localization-runtime/LocalizedSprite) | Puts a localized sprite onto the SpriteRenderer it sits on, and puts the authored one back when it is destroyed. |
+| [`LocalizedText`](/api/vrframework-localization-runtime/LocalizedText) | Puts a localized string into the TextMeshPro component it sits on, and puts the authored text back when it is destroyed. |
+| [`LocalizedTexture`](/api/vrframework-localization-runtime/LocalizedTexture) | Puts a localized sprite onto one material of the mesh it sits on, optionally as the emission map too, and puts the authored texture back when it is destroyed. |
+| [`UntranslatedAudioElement`](/api/vrframework-localization-runtime/UntranslatedAudioElement) | A clip that is the same in every language and so is stored once, outside the translations. |
+| [`UntranslatedSpriteElement`](/api/vrframework-localization-runtime/UntranslatedSpriteElement) | A sprite that is the same in every language and so is stored once, outside the translations. |
+| [`UntranslatedTextElement`](/api/vrframework-localization-runtime/UntranslatedTextElement) | A string that is the same in every language and so is stored once, outside the translations. |
 

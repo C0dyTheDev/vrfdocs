@@ -35,7 +35,7 @@ public string Error { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L35)
 
 ### IsBusy {#isbusy}
 
@@ -47,9 +47,11 @@ public bool IsBusy { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L32)
 
 ### Messages {#messages}
+
+The messages exchanged so far, oldest first.
 
 ```csharp
 public IReadOnlyList<OpenCodeMessage> Messages { get; }
@@ -57,9 +59,11 @@ public IReadOnlyList<OpenCodeMessage> Messages { get; }
 
 **Returns** `IReadOnlyList<OpenCodeMessage>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L27)
 
 ### Permissions {#permissions}
+
+Permission requests still waiting for an answer.
 
 ```csharp
 public IReadOnlyList<OpenCodePermission> Permissions { get; }
@@ -67,9 +71,11 @@ public IReadOnlyList<OpenCodePermission> Permissions { get; }
 
 **Returns** `IReadOnlyList<OpenCodePermission>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L29)
 
 ### SessionId {#sessionid}
+
+ID of the session this conversation belongs to.
 
 ```csharp
 public string SessionId { get; }
@@ -77,7 +83,7 @@ public string SessionId { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L24)
 
 ## Methods
 
@@ -96,15 +102,17 @@ public void Apply(JObject serverEvent)
 | --- | --- | --- |
 | `serverEvent` | `JObject` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L88)
 
 ### Clear() {#clear}
+
+Drops every message and permission request, leaving the conversation empty.
 
 ```csharp
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L48)
 
 ### DismissPermission(string) {#dismisspermission-string}
 
@@ -120,7 +128,7 @@ public void DismissPermission(string requestId)
 | --- | --- | --- |
 | `requestId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L236)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L240)
 
 ### LoadHistory(JArray) {#loadhistory-jarray}
 
@@ -138,7 +146,7 @@ public void LoadHistory(JArray history)
 | --- | --- | --- |
 | `history` | `JArray` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L63)
 
 ### SetSession(string) {#setsession-string}
 
@@ -154,7 +162,7 @@ public void SetSession(string sessionId)
 | --- | --- | --- |
 | `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L41)
 
 ## Events
 
@@ -168,5 +176,5 @@ public event Action Changed
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L38)
 

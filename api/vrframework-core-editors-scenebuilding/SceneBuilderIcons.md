@@ -42,11 +42,13 @@ public static Texture Builtin(string iconName)
 
 ### ClearCaches() {#clearcaches}
 
+Drops every cached icon and thumbnail, so they are built again on next use.
+
 ```csharp
 public static void ClearCaches()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L151)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L152)
 
 ### ForModuleType(Type) {#formoduletype-type}
 

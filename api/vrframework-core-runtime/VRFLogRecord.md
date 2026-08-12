@@ -8,7 +8,7 @@ description: 'One framework log line, carrying everything a viewer needs to disp
 
 # VRFLogRecord
 
-**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L29)
+**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L32)
 
 One framework log line, carrying everything a viewer needs to display, filter and navigate
 back to it. The caller file, line and member are filled in by the compiler at the call site
@@ -22,6 +22,8 @@ public readonly struct VRFLogRecord
 
 ### VRFLogRecord(VRFLogLevel, string, string, string, string, int, int, double, long, string, Object) {#ctor-vrfloglevel-string-string-string-string-int32-int32-double-int64-string-object}
 
+Builds a record. Normally called by [`Emit(VRFLogLevel, string, string, Object, string, int, string, int)`](/api/vrframework-core-runtime/VRFLog#emit-vrfloglevel-string-string-object-string-int32-string-int32) rather than directly.
+
 ```csharp
 public VRFLogRecord(VRFLogLevel level, string message, string channel, string member, string file, int line, int frame, double time, long ticks, string stackTrace, Object context)
 ```
@@ -30,19 +32,19 @@ public VRFLogRecord(VRFLogLevel level, string message, string channel, string me
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) |  |
-| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `member` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `file` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `line` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `frame` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
-| `time` | [`double`](https://learn.microsoft.com/dotnet/api/system.double) |  |
-| `ticks` | [`long`](https://learn.microsoft.com/dotnet/api/system.int64) |  |
-| `stackTrace` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
+| `level` | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) | Severity of the line. |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Message as the caller wrote it. |
+| `channel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Grouping label, usually the caller's file name. |
+| `member` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Member the line was logged from. |
+| `file` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Source file path of the call site. |
+| `line` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Line number of the call site. |
+| `frame` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Frame the line was logged on. |
+| `time` | [`double`](https://learn.microsoft.com/dotnet/api/system.double) | Seconds since startup. |
+| `ticks` | [`long`](https://learn.microsoft.com/dotnet/api/system.int64) | Wall clock ticks at the time of logging. |
+| `stackTrace` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Captured stack trace, or null. |
+| `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object the line was logged against, or null. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L76)
 
 ## Fields
 
@@ -56,9 +58,11 @@ public readonly string Channel
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L41)
 
 ### Context {#context}
+
+Object the line was logged against, if any. Clicking the entry pings it.
 
 ```csharp
 public readonly Object Context
@@ -66,9 +70,11 @@ public readonly Object Context
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L62)
 
 ### File {#file}
+
+Source file path of the call site.
 
 ```csharp
 public readonly string File
@@ -76,9 +82,11 @@ public readonly string File
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L46)
 
 ### Frame {#frame}
+
+Frame the line was logged on, or 0 when logged off the main thread.
 
 ```csharp
 public readonly int Frame
@@ -86,9 +94,11 @@ public readonly int Frame
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L50)
 
 ### Level {#level}
+
+Severity this line was logged at.
 
 ```csharp
 public readonly VRFLogLevel Level
@@ -96,9 +106,11 @@ public readonly VRFLogLevel Level
 
 **Returns** [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L35)
 
 ### Line {#line}
+
+Line number of the call site.
 
 ```csharp
 public readonly int Line
@@ -106,9 +118,11 @@ public readonly int Line
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L48)
 
 ### Member {#member}
+
+Member the line was logged from.
 
 ```csharp
 public readonly string Member
@@ -116,7 +130,7 @@ public readonly string Member
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L44)
 
 ### Message {#message}
 
@@ -128,7 +142,7 @@ public readonly string Message
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L38)
 
 ### StackTrace {#stacktrace}
 
@@ -140,7 +154,7 @@ public readonly string StackTrace
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L59)
 
 ### Ticks {#ticks}
 
@@ -152,7 +166,7 @@ public readonly long Ticks
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L56)
 
 ### Time {#time}
 
@@ -164,5 +178,5 @@ public readonly double Time
 
 **Returns** [`double`](https://learn.microsoft.com/dotnet/api/system.double)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L53)
 

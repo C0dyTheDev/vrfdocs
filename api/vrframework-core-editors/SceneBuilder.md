@@ -26,11 +26,13 @@ public class SceneBuilder : EditorWindow
 
 ### CreateGUI() {#creategui}
 
+Builds the window: the category sidebar, the card grid and the details panel.
+
 ```csharp
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L57)
 
 ### NotifyContentChanged() {#notifycontentchanged}
 
@@ -41,7 +43,7 @@ edited or deleted - so every open window rebuilds its grid.
 public static void NotifyContentChanged()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L109)
 
 ### NotifySceneChanged() {#notifyscenechanged}
 
@@ -52,14 +54,16 @@ Called after anything installs into the scene so every open window re-reads the
 public static void NotifySceneChanged()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L100)
 
 ### ShowWindow() {#showwindow}
+
+Opens the Scene Builder window.
 
 ```csharp
 [MenuItem("VRFramework/Scene Builder", priority = 40)]
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L87)
 
