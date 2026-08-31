@@ -34,7 +34,7 @@
   --vrf-rule: rgba(43, 43, 43, 0.26);
   --vrf-rule-soft: rgba(43, 43, 43, 0.13);
   --vrf-grid-major: rgba(43, 43, 43, 0.035);
-  --vrf-grid-minor: rgba(43, 43, 43, 0.012);
+  --vrf-grid-minor: rgba(43, 43, 43, 0.018);
   --vrf-grain-opacity: 0.035;
 
   /* Drafting metrics. */
@@ -66,8 +66,8 @@
 
   --vrf-rule: rgba(231, 228, 221, 0.24);
   --vrf-rule-soft: rgba(231, 228, 221, 0.12);
-  --vrf-grid-major: rgba(231, 228, 221, 0.06);
-  --vrf-grid-minor: rgba(231, 228, 221, 0.03);
+  --vrf-grid-major: rgba(231, 228, 221, 0.03);
+  --vrf-grid-minor: rgba(231, 228, 221, 0.01);
   --vrf-grain-opacity: 0.045;
   --vrf-sheet-shadow: 4px 4px 0 var(--vrf-rule-soft);
 
