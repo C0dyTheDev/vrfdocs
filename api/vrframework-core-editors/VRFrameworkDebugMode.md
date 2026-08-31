@@ -8,7 +8,7 @@ description: 'Debug Mode is the VRF_DEBUG scripting define and nothing else.'
 
 # VRFrameworkDebugMode
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L16)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkDebugMode.cs#L16)
 
 Debug Mode is the VRF_DEBUG scripting define and nothing else. One switch decides both what
 the framework logs about itself (see Util.LogDebug) and which [DebugOnly] fields the
@@ -35,7 +35,7 @@ public const string Define = "VRF_DEBUG"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkDebugMode.cs#L19)
 
 ## Properties
 
@@ -51,7 +51,7 @@ public static bool Enabled { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkDebugMode.cs#L35)
 
 ### Requested {#requested}
 
@@ -65,7 +65,7 @@ public static bool Requested { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkDebugMode.cs#L49)
 
 ## Methods
 
@@ -85,5 +85,5 @@ public static void Set(bool enabled)
 | --- | --- | --- |
 | `enabled` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkDebugMode.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkDebugMode.cs#L56)
 

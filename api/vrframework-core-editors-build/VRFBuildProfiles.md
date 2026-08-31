@@ -8,7 +8,7 @@ description: 'The framework''s dealings with Unity''s build profiles, in one pla
 
 # VRFBuildProfiles
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L17)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L17)
 
 The framework's dealings with Unity's build profiles, in one place.
 
@@ -36,7 +36,7 @@ public static BuildProfile Active { get; }
 
 **Returns** [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L20)
 
 ### All {#all}
 
@@ -48,7 +48,7 @@ public static IReadOnlyList<BuildProfile> All { get; }
 
 **Returns** `IReadOnlyList<BuildProfile>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L23)
 
 ## Methods
 
@@ -70,7 +70,7 @@ public static VRFBuildSettings Attach(BuildProfile profile, params VRFBuildSetti
 
 **Returns** [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L91)
 
 ### Get(BuildProfile) {#get-buildprofile}
 
@@ -88,7 +88,7 @@ public static VRFBuildSettings Get(BuildProfile profile)
 
 **Returns** [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) - That profile's framework settings.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L28)
 
 ### Has(BuildProfile) {#has-buildprofile}
 
@@ -106,7 +106,7 @@ public static bool Has(BuildProfile profile)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when it does.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L77)
 
 ### Normalize(VRFBuildSettings) {#normalize-vrfbuildsettings}
 
@@ -127,7 +127,7 @@ public static void Normalize(VRFBuildSettings settings)
 | --- | --- | --- |
 | `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L59)
 
 ### OwnerOf(VRFBuildSettings) {#ownerof-vrfbuildsettings}
 
@@ -146,7 +146,7 @@ public static BuildProfile OwnerOf(VRFBuildSettings settings)
 
 **Returns** [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L42)
 
 ### Remove(BuildProfile) {#remove-buildprofile}
 
@@ -162,7 +162,7 @@ public static void Remove(BuildProfile profile)
 | --- | --- | --- |
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile to strip. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L116)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L116)
 
 ### Save(BuildProfile, VRFBuildSettings) {#save-buildprofile-vrfbuildsettings}
 
@@ -179,5 +179,5 @@ public static void Save(BuildProfile profile, VRFBuildSettings settings)
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile the settings belong to. |
 | `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) | Settings to save. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfiles.cs#L140)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfiles.cs#L140)
 

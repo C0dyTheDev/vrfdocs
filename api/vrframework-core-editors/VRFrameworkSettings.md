@@ -8,7 +8,7 @@ description: 'This is a scriptable object for global VRF settings.'
 
 # VRFrameworkSettings
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L9)
 
 This is a scriptable object for global VRF settings.
 
@@ -30,7 +30,7 @@ public const string customSettingsPath = "Assets/Resources/VRFrameworkSettings.a
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L12)
 
 ### grabbableHighlightColor {#grabbablehighlightcolor}
 
@@ -43,7 +43,7 @@ public Color grabbableHighlightColor
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L24)
 
 ### highlightMaterial {#highlightmaterial}
 
@@ -57,7 +57,7 @@ public Material highlightMaterial
 
 **Returns** [`Material`](https://docs.unity3d.com/ScriptReference/Material.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L21)
 
 ### isPico {#ispico}
 
@@ -70,7 +70,7 @@ public bool isPico
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L17)
 
 ### isSetUp {#issetup}
 
@@ -82,7 +82,7 @@ public bool isSetUp
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L33)
 
 ### leftCustomPosePrefab {#leftcustomposeprefab}
 
@@ -95,7 +95,7 @@ public GameObject leftCustomPosePrefab
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L28)
 
 ### rightCustomPosePrefab {#rightcustomposeprefab}
 
@@ -108,7 +108,7 @@ public GameObject rightCustomPosePrefab
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L30)
 
 ### snapDropZoneHighlightColor {#snapdropzonehighlightcolor}
 
@@ -121,7 +121,7 @@ public Color snapDropZoneHighlightColor
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L26)
 
 ## Methods
 
@@ -141,7 +141,7 @@ public static string GetAssetBasePath<T>()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L88)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L88)
 
 ### GetSerializedSettings() {#getserializedsettings}
 
@@ -153,5 +153,5 @@ public static VRFrameworkSettings GetSerializedSettings()
 
 **Returns** [`VRFrameworkSettings`](/api/vrframework-core-editors/VRFrameworkSettings) - The project's settings.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettings.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettings.cs#L75)
 

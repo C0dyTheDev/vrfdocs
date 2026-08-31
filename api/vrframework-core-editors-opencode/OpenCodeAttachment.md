@@ -8,7 +8,7 @@ description: 'One file queued to go out with the next message.'
 
 # OpenCodeAttachment
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L13)
 
 One file queued to go out with the next message.
 The server reads attachments off disk itself rather than taking their bytes, so an
@@ -34,7 +34,7 @@ public long Bytes { get; }
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L67)
 
 ### DisplayPath {#displaypath}
 
@@ -46,7 +46,7 @@ public string DisplayPath { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L73)
 
 ### FileName {#filename}
 
@@ -58,7 +58,7 @@ public string FileName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L70)
 
 ### IsImage {#isimage}
 
@@ -70,7 +70,7 @@ public bool IsImage { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L65)
 
 ### Mime {#mime}
 
@@ -82,7 +82,7 @@ public string Mime { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L63)
 
 ### Path {#path}
 
@@ -94,7 +94,7 @@ public string Path { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L60)
 
 ### Url {#url}
 
@@ -108,7 +108,7 @@ public string Url { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L91)
 
 ## Methods
 
@@ -131,5 +131,5 @@ public static bool TryCreate(string path, out OpenCodeAttachment attachment, out
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeAttachment.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeAttachment.cs#L97)
 

@@ -12,6 +12,7 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
+| [`FrameworkDefaults`](/api/vrframework-core-editors-setup/FrameworkDefaults) | What a set-up project looks like, in one place. |
 | [`PackageContentSetup`](/api/vrframework-core-editors-setup/PackageContentSetup) | The parts of the setup that bring content in from outside the project: packages the framework depends on but does not ship, the TextMesh Pro resources, and the XR samples the frame |
 | [`PackageSetup`](/api/vrframework-core-editors-setup/PackageSetup) | Takes a project from empty to buildable on an Android headset in one menu item. |
 | [`PackageSetupWindow`](/api/vrframework-core-editors-setup/PackageSetupWindow) | The face of "Set Up Project for VR": what the run is about to do, what it is doing now, and what each step ended up reporting. |

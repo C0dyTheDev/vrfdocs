@@ -8,7 +8,7 @@ description: 'The status bar hints of the graph window, one per thing the pointe
 
 # Hints
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L3)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L3)
 
 The status bar hints of the graph window, one per thing the pointer can be over.
 
@@ -30,7 +30,7 @@ public const string AddStep = "Click to add an empty step to the end of this blo
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L26)
 
 ### ConnectInput {#connectinput}
 
@@ -42,7 +42,7 @@ public const string ConnectInput = "Drag to connect this block as a result of an
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L29)
 
 ### ConnectOutput {#connectoutput}
 
@@ -54,7 +54,7 @@ public const string ConnectOutput = "Drag to connect this block as a start of an
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L31)
 
 ### DragBlock {#dragblock}
 
@@ -66,7 +66,7 @@ public const string DragBlock = "Drag to move this block"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L9)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L9)
 
 ### DragLine {#dragline}
 
@@ -78,7 +78,7 @@ public const string DragLine = "Drag to reconnect this line (from selected side)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L11)
 
 ### DragStep {#dragstep}
 
@@ -90,7 +90,7 @@ public const string DragStep = "Drag to move this step to a different position o
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L13)
 
 ### None {#none}
 
@@ -102,7 +102,7 @@ public const string None = ""
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L6)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L6)
 
 ### RenameBlock {#renameblock}
 
@@ -114,7 +114,7 @@ public const string RenameBlock = "Click to rename this block"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L16)
 
 ### RenameStep {#renamestep}
 
@@ -126,7 +126,7 @@ public const string RenameStep = "Click to rename this step"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L18)
 
 ### SelectBlock {#selectblock}
 
@@ -138,7 +138,7 @@ public const string SelectBlock = "Double-click to select this block in scenevie
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L21)
 
 ### SelectStep {#selectstep}
 
@@ -150,5 +150,5 @@ public const string SelectStep = "Double-click to select this step in sceneview"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/Hints.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/Hints.cs#L23)
 

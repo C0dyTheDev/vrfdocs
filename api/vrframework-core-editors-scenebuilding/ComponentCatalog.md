@@ -8,7 +8,7 @@ description: 'Predefined setups rather than raw scripts: a card here is a prefab
 
 # ComponentCatalog
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L14)
 
 Predefined setups rather than raw scripts: a card here is a prefab, or a pack of components
 with the settings that make them work already applied. Dropping "Grabbable Object" on a model
@@ -37,7 +37,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L26)
 
 ### DisplayName {#displayname}
 
@@ -49,7 +49,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L19)
 
 ### EmptyMessage {#emptymessage}
 
@@ -61,7 +61,7 @@ public override string EmptyMessage { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L31)
 
 ### IconName {#iconname}
 
@@ -73,7 +73,7 @@ public override string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L23)
 
 ### Id {#id}
 
@@ -85,7 +85,7 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L17)
 
 ### Order {#order}
 
@@ -97,7 +97,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L21)
 
 ## Methods
 
@@ -111,5 +111,5 @@ public override IEnumerable<SceneBuilderItem> GetItems()
 
 **Returns** `IEnumerable<SceneBuilderItem>` - The items to show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/ComponentCatalog.cs#L37)
 

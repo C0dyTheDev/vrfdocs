@@ -8,7 +8,7 @@ description: 'Raises an event over and over on a fixed interval, with a separate
 
 # RepeatOnIntervals
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/TimedEvents/RepeatOnIntervals.cs#L9)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/TimedEvents/RepeatOnIntervals.cs#L9)
 
 Raises an event over and over on a fixed interval, with a separate delay before the first one -
 for nudges and reminders that should not fire the moment the scene starts.
@@ -32,5 +32,5 @@ public UnityEvent Repeat
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/TimedEvents/RepeatOnIntervals.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/TimedEvents/RepeatOnIntervals.cs#L18)
 

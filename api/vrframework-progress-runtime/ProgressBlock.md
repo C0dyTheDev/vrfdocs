@@ -8,7 +8,7 @@ description: 'A group of steps that run one after another.'
 
 # ProgressBlock
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressBlock.cs#L14)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L14)
 
 A group of steps that run one after another. Blocks are queued whole, and their steps are
 handed their turn one at a time by [`ProgressManager`](/api/vrframework-progress-runtime/ProgressManager). A block sits under the
@@ -35,7 +35,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressBlock.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L19)
 
 ### saveData {#savedata}
 
@@ -48,7 +48,7 @@ public BlockSaveData saveData
 
 **Returns** [`BlockSaveData`](/api/vrframework-progress-runtime/BlockSaveData)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressBlock.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L23)
 
 ## Methods
 
@@ -69,7 +69,19 @@ public List<ProgressStep> CacheSteps(bool reload = true)
 
 **Returns** `List<ProgressStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressBlock.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L62)
+
+### CreateNewStepObject() {#createnewstepobject}
+
+Editor only. Creates a step object under this block, with undo support.
+
+```csharp
+public ProgressStep CreateNewStepObject()
+```
+
+**Returns** [`ProgressStep`](/api/vrframework-progress-runtime/ProgressStep) - The new step.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L108)
 
 ### GetStepObjects() {#getstepobjects}
 
@@ -81,7 +93,7 @@ public List<ProgressStep> GetStepObjects()
 
 **Returns** `List<ProgressStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressBlock.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L49)
 
 ### OnObjectNameChange() {#onobjectnamechange}
 
@@ -91,7 +103,7 @@ Takes the object's name as the block's name after a rename in the hierarchy.
 public override void OnObjectNameChange()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressBlock.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L42)
 
 ### PrepareSteps() {#preparesteps}
 
@@ -103,5 +115,5 @@ never ran its Awake, so the manager calls this as it queues one.
 public void PrepareSteps()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressBlock.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressBlock.cs#L78)
 

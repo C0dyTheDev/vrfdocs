@@ -8,7 +8,7 @@ description: 'What the framework expects of a localization module: the current l
 
 # ILocalizationService
 
-**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L10)
+**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L10)
 
 What the framework expects of a localization module: the current language, and lookups from a
 translation ID to text, audio or a sprite. Implemented by LanguageManager, obtained from
@@ -32,7 +32,7 @@ bool IsLoaded { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L15)
 
 ### Language {#language}
 
@@ -44,7 +44,7 @@ string Language { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L13)
 
 ## Methods
 
@@ -64,7 +64,7 @@ AudioClip GetAudio(string key)
 
 **Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) - The clip, or null when the ID is unknown.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L23)
 
 ### GetSprite(string) {#getsprite-string}
 
@@ -82,7 +82,7 @@ Sprite GetSprite(string key)
 
 **Returns** [`Sprite`](https://docs.unity3d.com/ScriptReference/Sprite.html) - The sprite, or null when the ID is unknown.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L27)
 
 ### GetText(string) {#gettext-string}
 
@@ -100,7 +100,7 @@ string GetText(string key)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The translated text, or a fallback when the ID is unknown.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L19)
 
 ### SelectLanguage(string) {#selectlanguage-string}
 
@@ -116,7 +116,7 @@ void SelectLanguage(string language)
 | --- | --- | --- |
 | `language` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Language to switch to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L32)
 
 ## Events
 
@@ -130,5 +130,5 @@ event Action OnLanguageChanged
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ILocalizationService.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ILocalizationService.cs#L29)
 

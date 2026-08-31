@@ -8,7 +8,7 @@ description: 'A chat window for the OpenCode agent, working inside the open Unit
 
 # OpenCodeChatWindow
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L21)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeChatWindow.cs#L21)
 
 A chat window for the OpenCode agent, working inside the open Unity project.
 The layout is a single column - transcript above, prompt box below - because the window is
@@ -34,7 +34,7 @@ Builds the window: the transcript, the prompt box and the toolbar.
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeChatWindow.cs#L75)
 
 ### ShowWindow() {#showwindow}
 
@@ -45,5 +45,5 @@ Opens the OpenCode chat window.
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeChatWindow.cs#L64)
 

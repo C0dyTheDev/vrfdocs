@@ -8,7 +8,7 @@ description: 'Whether this profile builds for the platform or for a desk.'
 
 # ProductionBuildSetting
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L17)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L17)
 
 Whether this profile builds for the platform or for a desk.
 
@@ -36,7 +36,7 @@ public const string FileName = "BuildSettings.json"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L21)
 
 ### isProductionBuild {#isproductionbuild}
 
@@ -47,7 +47,7 @@ public bool isProductionBuild
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L26)
 
 ## Properties
 
@@ -61,7 +61,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L32)
 
 ### DisplayName {#displayname}
 
@@ -73,7 +73,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L29)
 
 ### Order {#order}
 
@@ -85,7 +85,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L35)
 
 ## Methods
 
@@ -103,7 +103,7 @@ public override void Apply(VRFBuildContext context)
 | --- | --- | --- |
 | `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) | The build being prepared. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L51)
 
 ### Validate(BuildProfile, ValidationReport) {#validate-buildprofile-validationreport}
 
@@ -120,5 +120,5 @@ public override void Validate(BuildProfile profile, ValidationReport report)
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile carrying this setting. |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductionBuildSetting.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductionBuildSetting.cs#L40)
 

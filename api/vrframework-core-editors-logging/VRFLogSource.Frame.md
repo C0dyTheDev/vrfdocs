@@ -8,7 +8,7 @@ description: 'One parsed line of a stack trace.'
 
 # VRFLogSource.Frame
 
-**Struct** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L160)
+**Struct** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L160)
 
 One parsed line of a stack trace.
 
@@ -34,7 +34,7 @@ public Frame(string text, string file, int line)
 | `file` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Project relative path of the file. |
 | `line` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Line number within that file. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L173)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L173)
 
 ## Fields
 
@@ -48,7 +48,7 @@ public readonly string File
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L165)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L165)
 
 ### Line {#line}
 
@@ -60,7 +60,7 @@ public readonly int Line
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L167)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L167)
 
 ### Text {#text}
 
@@ -72,7 +72,7 @@ public readonly string Text
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L163)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L163)
 
 ## Properties
 
@@ -86,5 +86,5 @@ public bool CanOpen { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L181)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L181)
 

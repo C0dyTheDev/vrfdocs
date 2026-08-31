@@ -8,7 +8,7 @@ description: 'One block as a node on the progress graph: a header, one input por
 
 # BlockView
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L12)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L12)
 
 One block as a node on the progress graph: a header, one input port and an output port per
 step. Dragging it moves the block; right-clicking offers to delete it, scene object and all.
@@ -37,7 +37,7 @@ public BlockView(ProgressBlock progressBlock)
 | --- | --- | --- |
 | `progressBlock` | [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) | Block in the scene this node stands for. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L34)
 
 ## Fields
 
@@ -51,7 +51,7 @@ public InputPort input
 
 **Returns** [`InputPort`](/api/vrframework-core-editors/InputPort)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L22)
 
 ### outputs {#outputs}
 
@@ -63,7 +63,7 @@ public List<OutputPort> outputs
 
 **Returns** `List<OutputPort>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L26)
 
 ### progressBlock {#progressblock}
 
@@ -75,7 +75,7 @@ public ProgressBlock progressBlock
 
 **Returns** [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L28)
 
 ## Properties
 
@@ -89,7 +89,7 @@ public int blockNumber { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L94)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L92)
 
 ## Methods
 
@@ -107,7 +107,7 @@ public void Move(Vector2 pos)
 | --- | --- | --- |
 | `pos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | How far to move it, in canvas pixels. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L105)
 
 ### SetPosition(Vector2) {#setposition-vector2}
 
@@ -123,5 +123,5 @@ public void SetPosition(Vector2 pos)
 | --- | --- | --- |
 | `pos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where to put it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockView.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockView.cs#L112)
 

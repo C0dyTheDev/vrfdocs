@@ -8,7 +8,7 @@ description: 'Audio Clip Editor window Editor The code is pretty self explanator
 
 # AudioEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/AudioEditor.cs#L11)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Audio/AudioEditor.cs#L11)
 
 Audio Clip Editor window Editor
 The code is pretty self explanatory, it is a third party code
@@ -30,5 +30,5 @@ Opens the Audio Clip Editor window.
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/AudioEditor.cs#L121)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Audio/AudioEditor.cs#L121)
 

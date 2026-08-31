@@ -8,7 +8,7 @@ description: 'The one place the framework''s inspectors get their colours and GU
 
 # VRFEditorStyles
 
-**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L15)
 
 The one place the framework's inspectors get their colours and GUIStyles from. Every VRF
 editor draws the same header, the same section boxes and the same accent, so a component
@@ -35,7 +35,7 @@ public static Color Accent { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L44)
 
 ### Border {#border}
 
@@ -47,7 +47,7 @@ public static Color Border { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L59)
 
 ### EventAccent {#eventaccent}
 
@@ -59,7 +59,7 @@ public static Color EventAccent { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L47)
 
 ### EventsBackground {#eventsbackground}
 
@@ -71,7 +71,7 @@ public static Color EventsBackground { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L57)
 
 ### HeaderBackground {#headerbackground}
 
@@ -83,7 +83,7 @@ public static Color HeaderBackground { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L53)
 
 ### HeaderBox {#headerbox}
 
@@ -95,7 +95,7 @@ public static GUIStyle HeaderBox { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L77)
 
 ### HeaderSubtitle {#headersubtitle}
 
@@ -107,7 +107,7 @@ public static GUIStyle HeaderSubtitle { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L97)
 
 ### HeaderTitle {#headertitle}
 
@@ -119,7 +119,7 @@ public static GUIStyle HeaderTitle { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L87)
 
 ### HeadingFont {#headingfont}
 
@@ -132,7 +132,7 @@ public static Font HeadingFont { get; }
 
 **Returns** [`Font`](https://docs.unity3d.com/ScriptReference/Font.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L67)
 
 ### Hint {#hint}
 
@@ -144,7 +144,7 @@ public static GUIStyle Hint { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L137)
 
 ### MiniButton {#minibutton}
 
@@ -156,7 +156,7 @@ public static GUIStyle MiniButton { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L147)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L147)
 
 ### MutedText {#mutedtext}
 
@@ -168,7 +168,7 @@ public static Color MutedText { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L61)
 
 ### Pill {#pill}
 
@@ -180,7 +180,7 @@ public static GUIStyle Pill { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L127)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L127)
 
 ### SectionBackground {#sectionbackground}
 
@@ -192,7 +192,7 @@ public static Color SectionBackground { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L55)
 
 ### SectionBox {#sectionbox}
 
@@ -204,7 +204,7 @@ public static GUIStyle SectionBox { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L107)
 
 ### SectionHeader {#sectionheader}
 
@@ -216,7 +216,7 @@ public static GUIStyle SectionHeader { get; }
 
 **Returns** [`GUIStyle`](https://docs.unity3d.com/ScriptReference/GUIStyle.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L117)
 
 ### WarnAccent {#warnaccent}
 
@@ -228,7 +228,7 @@ public static Color WarnAccent { get; }
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L50)
 
 ## Methods
 
@@ -248,5 +248,5 @@ public static Texture2D Solid(Color color)
 
 **Returns** [`Texture2D`](https://docs.unity3d.com/ScriptReference/Texture2D.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorStyles.cs#L169)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorStyles.cs#L169)
 

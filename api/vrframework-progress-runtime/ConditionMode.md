@@ -8,7 +8,7 @@ description: 'How the flags of a Condition/api/vrframework-progress-runtime/Cond
 
 # ConditionMode
 
-**Enum** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L7)
+**Enum** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L7)
 
 How the flags of a [`Condition`](/api/vrframework-progress-runtime/Condition) combine into one verdict.
 

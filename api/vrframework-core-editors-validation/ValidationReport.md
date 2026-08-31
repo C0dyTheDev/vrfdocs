@@ -8,7 +8,7 @@ description: 'What rules write their findings into.'
 
 # ValidationReport
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L10)
 
 What rules write their findings into. The runner stamps each issue with the rule that raised
 it, so a rule only ever has to describe the problem itself.
@@ -31,7 +31,7 @@ public int ErrorCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L21)
 
 ### InfoCount {#infocount}
 
@@ -43,7 +43,7 @@ public int InfoCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L25)
 
 ### IsClean {#isclean}
 
@@ -55,7 +55,7 @@ public bool IsClean { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L28)
 
 ### Issues {#issues}
 
@@ -67,7 +67,7 @@ public IReadOnlyList<ValidationIssue> Issues { get; }
 
 **Returns** `IReadOnlyList<ValidationIssue>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L18)
 
 ### WarningCount {#warningcount}
 
@@ -79,7 +79,7 @@ public int WarningCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L23)
 
 ## Methods
 
@@ -103,7 +103,7 @@ public void Add(ValidationSeverity severity, string title, string message, strin
 | `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that fixes it, when the fix is unambiguous. |
 | `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L84)
 
 ### Error(string, string, string, Object, Action, string) {#error-string-string-string-object-action-string}
 
@@ -124,7 +124,7 @@ public void Error(string title, string message, string fix, Object target = null
 | `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that fixes it, when the fix is unambiguous. |
 | `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L44)
 
 ### Info(string, string, string, Object, Action, string) {#info-string-string-string-object-action-string}
 
@@ -145,7 +145,7 @@ public void Info(string title, string message, string fix, Object target = null,
 | `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that applies it, when there is one. |
 | `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L70)
 
 ### Warning(string, string, string, Object, Action, string) {#warning-string-string-string-object-action-string}
 
@@ -166,5 +166,5 @@ public void Warning(string title, string message, string fix, Object target = nu
 | `autoFix` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The one click that fixes it, when the fix is unambiguous. |
 | `autoFixLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text on the fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationReport.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationReport.cs#L57)
 

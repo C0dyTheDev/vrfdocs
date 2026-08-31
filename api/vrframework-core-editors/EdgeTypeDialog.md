@@ -8,7 +8,7 @@ description: 'Asks which kind of enqueue a new connection stands for - unconditi
 
 # EdgeTypeDialog
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Dialog/EdgeTypeDialog.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Dialog/EdgeTypeDialog.cs#L10)
 
 Asks which kind of enqueue a new connection stands for - unconditional, or the true or false
 branch of the step's condition.
@@ -39,5 +39,5 @@ public static int ShowDialog(string title, string message, ProgressStep step)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - The chosen [`LineType`](/api/vrframework-core-editors/LineType) as an int, or a negative value when cancelled.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Dialog/EdgeTypeDialog.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Dialog/EdgeTypeDialog.cs#L87)
 

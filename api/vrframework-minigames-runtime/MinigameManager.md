@@ -8,7 +8,7 @@ description: 'The minigames module.'
 
 # MinigameManager
 
-**Class** · namespace `VRFramework.Minigames.Runtime` · assembly `VRFramework.Minigames.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L20)
+**Class** · namespace `VRFramework.Minigames.Runtime` · assembly `VRFramework.Minigames.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L20)
 
 The minigames module. Runs a training session split into parts, each a scene of its own with
 its own clock: counts the time down, records whether the part was finished in time, and loads
@@ -39,7 +39,7 @@ public TMP_Text counterText
 
 **Returns** `TMP_Text`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L28)
 
 ### minigames {#minigames}
 
@@ -52,7 +52,7 @@ public MinigameSet minigames
 
 **Returns** [`MinigameSet`](/api/vrframework-minigames-runtime/MinigameSet)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L24)
 
 ### onFail {#onfail}
 
@@ -64,7 +64,7 @@ public UnityEvent onFail
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L32)
 
 ### onTime {#ontime}
 
@@ -77,7 +77,7 @@ public string onTime
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L38)
 
 ### partsText {#partstext}
 
@@ -90,7 +90,7 @@ public TMP_Text partsText
 
 **Returns** `TMP_Text`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L30)
 
 ### shouldUseTime {#shouldusetime}
 
@@ -102,7 +102,7 @@ public bool shouldUseTime
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L26)
 
 ### timeRemaining {#timeremaining}
 
@@ -114,7 +114,7 @@ public float timeRemaining
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L36)
 
 ## Properties
 
@@ -128,7 +128,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L48)
 
 ### IsEndScene {#isendscene}
 
@@ -140,7 +140,7 @@ public bool IsEndScene { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L80)
 
 ### Outcome {#outcome}
 
@@ -152,7 +152,7 @@ public string Outcome { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L82)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L82)
 
 ## Methods
 
@@ -165,7 +165,7 @@ loading that scene.
 public void FailedPart()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L90)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L90)
 
 ### NextPart() {#nextpart}
 
@@ -176,7 +176,7 @@ part. On the final part nothing is loaded and session shutdown takes over.
 public void NextPart()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L120)
 
 ### OnCleanup() {#oncleanup}
 
@@ -186,7 +186,7 @@ Unregisters the module, unless another one has taken over the service in the mea
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L174)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L174)
 
 ### OnInit() {#oninit}
 
@@ -197,7 +197,7 @@ itself off when there is no set to run.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L151)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L151)
 
 ### OnTimerExpired() {#ontimerexpired}
 
@@ -207,7 +207,7 @@ Called when the clock reaches zero. Override to replace what failing on time doe
 protected virtual void OnTimerExpired()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L181)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L181)
 
 ### SelectNextPart(int) {#selectnextpart-int32}
 
@@ -225,7 +225,7 @@ protected virtual Minigame SelectNextPart(int partIndex)
 
 **Returns** [`Minigame`](/api/vrframework-minigames-runtime/Minigame) - The part to load.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L225)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L225)
 
 ### StartTimer() {#starttimer}
 
@@ -235,7 +235,7 @@ Starts the countdown, unless this manager is set to untimed.
 public void StartTimer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L100)
 
 ### StopTimer() {#stoptimer}
 
@@ -245,7 +245,7 @@ Stops the countdown where it stands.
 public void StopTimer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L109)
 
 ### TransitionScene(string) {#transitionscene-string}
 
@@ -263,7 +263,7 @@ protected virtual IEnumerator TransitionScene(string sceneName)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the scene has loaded.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L253)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L253)
 
 ## Events
 
@@ -277,5 +277,5 @@ public event Action<string> OutcomeRecorded
 
 **Returns** `Action<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameManager.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameManager.cs#L84)
 

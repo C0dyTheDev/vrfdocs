@@ -8,7 +8,7 @@ description: 'Puts a localized string into the TextMeshPro component it sits on,
 
 # LocalizedText
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LocalizedText.cs#L11)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LocalizedText.cs#L11)
 
 Puts a localized string into the TextMeshPro component it sits on, and puts the authored text
 back when it is destroyed. Leaves the text alone when the scene has no Localization module.
@@ -36,5 +36,5 @@ protected virtual void ApplyText(string value)
 | --- | --- | --- |
 | `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The resolved text, or "[Missing Translation]" when the slot is empty. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LocalizedText.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LocalizedText.cs#L49)
 

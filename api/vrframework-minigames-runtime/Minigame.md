@@ -8,7 +8,7 @@ description: 'One part of a minigame session: its scenes, its clock, and where f
 
 # Minigame
 
-**Class** · namespace `VRFramework.Minigames.Runtime` · assembly `VRFramework.Minigames.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L24)
+**Class** · namespace `VRFramework.Minigames.Runtime` · assembly `VRFramework.Minigames.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L24)
 
 One part of a minigame session: its scenes, its clock, and where failing it leads.
 
@@ -32,7 +32,7 @@ public int onFailedReturnToLevel
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L41)
 
 ### realTime {#realtime}
 
@@ -44,7 +44,7 @@ public float realTime
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L28)
 
 ### scenesToLoadNames {#scenestoloadnames}
 
@@ -57,7 +57,7 @@ public string[] scenesToLoadNames
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L37)
 
 ### shownTime {#showntime}
 
@@ -70,7 +70,7 @@ public float shownTime
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L33)
 
 ## Methods
 
@@ -84,5 +84,5 @@ public string GetRandomSceneName()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - Name of the scene to load.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L45)
 

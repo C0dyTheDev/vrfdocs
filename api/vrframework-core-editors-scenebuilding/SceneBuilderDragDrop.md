@@ -8,7 +8,7 @@ description: 'Carries a Scene Builder item through Unity''s drag and drop system
 
 # SceneBuilderDragDrop
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/SceneBuilderDragDrop.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/SceneBuilderDragDrop.cs#L15)
 
 Carries a Scene Builder item through Unity's drag and drop system and drops it into the
 Scene view or the hierarchy.
@@ -38,7 +38,7 @@ public static SceneBuilderItem Current { get; }
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/SceneBuilderDragDrop.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/SceneBuilderDragDrop.cs#L39)
 
 ## Methods
 
@@ -57,5 +57,5 @@ public static void Begin(SceneBuilderItem item)
 | --- | --- | --- |
 | `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/SceneBuilderDragDrop.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/SceneBuilderDragDrop.cs#L45)
 

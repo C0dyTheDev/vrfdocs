@@ -8,7 +8,7 @@ description: 'Default framework inspector for SceneChanger/api/vrframework-core-
 
 # SceneChangerEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L108)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L108)
 
 Default framework inspector for [`SceneChanger`](/api/vrframework-core-runtime/SceneChanger).
 

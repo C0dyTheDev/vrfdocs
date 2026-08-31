@@ -8,7 +8,7 @@ description: 'The audio module.'
 
 # AudioManager
 
-**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L34)
+**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L34)
 
 The audio module. Keeps a queue per [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) so clips never talk over each
 other, resolves localized audio through the Localization module, and can set the device volume
@@ -38,7 +38,7 @@ public bool setSystemVolumeOnStart
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L46)
 
 ### startVolume {#startvolume}
 
@@ -50,7 +50,7 @@ public float startVolume
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L49)
 
 ## Properties
 
@@ -64,7 +64,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L57)
 
 ### DefaultSource {#defaultsource}
 
@@ -76,7 +76,7 @@ public AudioSource DefaultSource { get; }
 
 **Returns** [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L60)
 
 ## Methods
 
@@ -89,7 +89,7 @@ volume is not the framework's to change. Override to set the volume some other w
 protected virtual void ApplySystemVolume()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L258)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L258)
 
 ### ClearQueue(AudioSource) {#clearqueue-audiosource}
 
@@ -105,7 +105,7 @@ public void ClearQueue(AudioSource source)
 | --- | --- | --- |
 | `source` | [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) | Source whose queue is dropped. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L114)
 
 ### ClearQueueAndStop(AudioSource) {#clearqueueandstop-audiosource}
 
@@ -121,7 +121,7 @@ public void ClearQueueAndStop(AudioSource source)
 | --- | --- | --- |
 | `source` | [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) | Source to stop. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L121)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L121)
 
 ### ConfigureSource(AudioSource) {#configuresource-audiosource}
 
@@ -137,7 +137,7 @@ protected virtual void ConfigureSource(AudioSource source)
 | --- | --- | --- |
 | `source` | [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) | Source about to be used, which may be null when none was assigned. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L229)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L229)
 
 ### OnCleanup() {#oncleanup}
 
@@ -147,7 +147,7 @@ Unregisters the module, unless another one has taken over the service in the mea
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L221)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L221)
 
 ### OnInit() {#oninit}
 
@@ -158,7 +158,7 @@ the startup volume.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L202)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L202)
 
 ### OnPlaybackCompleted(int) {#onplaybackcompleted-int32}
 
@@ -174,7 +174,7 @@ protected virtual void OnPlaybackCompleted(int token)
 | --- | --- | --- |
 | `token` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Queue ID of the clip that finished. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L250)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L250)
 
 ### OnPlaybackStarted(int, AudioClip) {#onplaybackstarted-int32-audioclip}
 
@@ -191,7 +191,7 @@ protected virtual void OnPlaybackStarted(int token, AudioClip clip)
 | `token` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Queue ID of the clip. |
 | `clip` | [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) | Clip that started. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L244)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L244)
 
 ### PlayAndWait(AudioSource, string) {#playandwait-audiosource-string}
 
@@ -211,7 +211,7 @@ public IEnumerator PlayAndWait(AudioSource source, string audioKey)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the clip has finished.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L159)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L159)
 
 ### PlayClipAndWait(AudioSource, AudioClip) {#playclipandwait-audiosource-audioclip}
 
@@ -230,7 +230,7 @@ public IEnumerator PlayClipAndWait(AudioSource source, AudioClip clip)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the clip has finished.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L187)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L187)
 
 ### PlaySuccessAndWait(AudioSource) {#playsuccessandwait-audiosource}
 
@@ -249,7 +249,7 @@ public IEnumerator PlaySuccessAndWait(AudioSource source)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the sound has finished.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L178)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L178)
 
 ### QueueClip(AudioSource, AudioClip) {#queueclip-audiosource-audioclip}
 
@@ -269,7 +269,7 @@ public int QueueClip(AudioSource source, AudioClip clip)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - The queue ID of the clip, or -1 when it was refused.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L69)
 
 ### StillInQueue(AudioSource, int) {#stillinqueue-audiosource-int32}
 
@@ -288,7 +288,7 @@ public bool StillInQueue(AudioSource source, int id)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the clip is still waiting its turn.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L142)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L142)
 
 ### ValidateClip(AudioClip) {#validateclip-audioclip}
 
@@ -306,5 +306,5 @@ protected virtual bool ValidateClip(AudioClip clip)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True to let the clip through, false to drop it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L236)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L236)
 

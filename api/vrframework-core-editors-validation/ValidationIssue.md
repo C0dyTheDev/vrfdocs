@@ -8,7 +8,7 @@ description: 'One thing the validator found and, where the fix is unambiguous, t
 
 # ValidationIssue
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L32)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L32)
 
 One thing the validator found and, where the fix is unambiguous, the single click that
 applies it.
@@ -31,7 +31,7 @@ public Action AutoFix
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L35)
 
 ### AutoFixLabel {#autofixlabel}
 
@@ -43,7 +43,7 @@ public string AutoFixLabel
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L38)
 
 ### Category {#category}
 
@@ -55,7 +55,7 @@ public string Category
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L41)
 
 ### Fix {#fix}
 
@@ -67,7 +67,7 @@ public string Fix
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L44)
 
 ### Message {#message}
 
@@ -79,7 +79,7 @@ public string Message
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L47)
 
 ### Scope {#scope}
 
@@ -91,7 +91,7 @@ public ValidationScope Scope
 
 **Returns** [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L50)
 
 ### Severity {#severity}
 
@@ -103,7 +103,7 @@ public ValidationSeverity Severity
 
 **Returns** [`ValidationSeverity`](/api/vrframework-core-editors-validation/ValidationSeverity)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L52)
 
 ### Target {#target}
 
@@ -115,7 +115,7 @@ public Object Target
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L55)
 
 ### Title {#title}
 
@@ -127,7 +127,7 @@ public string Title
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L58)
 
 ## Properties
 
@@ -141,5 +141,5 @@ public bool HasAutoFix { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L61)
 

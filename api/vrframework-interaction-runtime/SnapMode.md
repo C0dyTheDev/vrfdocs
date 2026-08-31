@@ -8,7 +8,7 @@ description: 'Whether a snapped object may be taken out of the zone again.'
 
 # SnapMode
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L318)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L35)
 
 Whether a snapped object may be taken out of the zone again.
 
@@ -20,6 +20,6 @@ public enum SnapMode
 
 | Name | Value | Description |
 | --- | --- | --- |
-| `Normal` | 0 | The object stays in the zone once snapped. |
-| `Repick` | 1 | The object may be taken out again, which reopens the zone. |
+| `Normal` | 0 | It stays. The grabbable is switched off, so no hand can take it back. |
+| `Repick` | 1 | It may be picked straight back up, which empties the zone. |
 

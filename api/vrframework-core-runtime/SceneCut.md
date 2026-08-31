@@ -8,7 +8,7 @@ description: 'A hard cut in VR: fades the view to black, raises OnCut/api/vrfram
 
 # SceneCut
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/SceneCut.cs#L11)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Camera/SceneCut.cs#L11)
 
 A hard cut in VR: fades the view to black, raises [`OnCut`](/api/vrframework-core-runtime/SceneCut#oncut) while the player cannot
 see - move the rig or swap the set there - then fades back in. Falls back to raising the events
@@ -32,7 +32,7 @@ public UnityEvent OnCut
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/SceneCut.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Camera/SceneCut.cs#L14)
 
 ### OnFadeOut {#onfadeout}
 
@@ -44,7 +44,7 @@ public UnityEvent OnFadeOut
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/SceneCut.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Camera/SceneCut.cs#L16)
 
 ## Methods
 
@@ -56,5 +56,5 @@ Starts the cut: fade out, [`OnCut`](/api/vrframework-core-runtime/SceneCut#oncut
 public void Cut()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/SceneCut.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Camera/SceneCut.cs#L19)
 

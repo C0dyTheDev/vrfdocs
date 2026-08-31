@@ -12,26 +12,59 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
+| [`AutoPoseSettings`](/api/vrframework-interaction-runtime/AutoPoseSettings) | Tuning for the search. |
+| [`AutoPoseSolver`](/api/vrframework-interaction-runtime/AutoPoseSolver) | Closes each finger of a hand mesh onto whatever it is holding, stopping each one where it first touches. |
 | [`CameraFollower`](/api/vrframework-interaction-runtime/CameraFollower) | Keeps an object in front of the player, following the head's yaw only and easing into place, so a panel or a hint stays readable without swinging with every head tilt. |
 | [`CameraLookCheck`](/api/vrframework-interaction-runtime/CameraLookCheck) | Raises an event once the player has looked at this object for long enough - used to confirm the player has actually seen something before a step continues. |
-| [`CameraRecenter`](/api/vrframework-interaction-runtime/CameraRecenter) | A place to put the player. |
-| [`CustomGrabPose`](/api/vrframework-interaction-runtime/CustomGrabPose) | Marks up one way of holding an object: where the hand attaches and which pose it takes. |
+| [`CustomGrabPose`](/api/vrframework-interaction-runtime/CustomGrabPose) | Marks a hand that is standing in for the player's while a pose is authored on a grip point. |
 | [`Finger`](/api/vrframework-interaction-runtime/Finger) | One finger of the hand mesh: its joints, and whether it is currently frozen. |
 | [`FingerController`](/api/vrframework-interaction-runtime/FingerController) | Sits on one finger of the hand and reports to GrabHand/api/vrframework-interaction-runtime/GrabHand when that finger touches an object within reach, which is what the physical grab |
 | [`FingerSetting`](/api/vrframework-interaction-runtime/FingerSetting) | Whether one finger takes part in a grab. |
+| [`FistGenerator`](/api/vrframework-interaction-runtime/FistGenerator) | Builds a closed-hand pose from the shape of the hand itself, so nothing has to be authored for a grabbable to be auto posed. |
+| [`FistSettings`](/api/vrframework-interaction-runtime/FistSettings) | How the generated fist is shaped. |
 | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Makes an object grabbable by the framework's hands. |
 | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | One hand of the rig, and the framework's own grabbing logic. |
+| [`GripConstraint`](/api/vrframework-interaction-runtime/GripConstraint) | Limits how the object may move while it is held by the grip point this sits on. |
+| [`GripConstraintOneAxis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis) | Lets the object turn about one axis, or slide along one, while this grip point is held. |
+| [`GripConstraintOneAxis.Limit`](/api/vrframework-interaction-runtime/GripConstraintOneAxis.Limit) | One end of the travel: where it is, and what happens when the object gets there. |
+| [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint) | A place on a grabbable where a hand may attach, who may attach there, and what the hand does once it has - including the shape it takes, when that has been authored. |
+| [`GripPose`](/api/vrframework-interaction-runtime/GripPose) | One authored hand shape at one GripPoint/api/vrframework-interaction-runtime/GripPoint: where the hand sits relative to the point, and what its fingers do once it is there. |
+| [`GripSequence`](/api/vrframework-interaction-runtime/GripSequence) | Joins several mechanisms into one path: which may be worked, in what order, and what happens along the way. |
+| [`GripSequence.Stage`](/api/vrframework-interaction-runtime/GripSequence.Stage) | One place along one mechanism, and what happens when the mechanism gets there. |
+| [`HandPose`](/api/vrframework-interaction-runtime/HandPose) | A hand shape, stored as local bone rotations and matched onto a hand mesh by bone name. |
+| [`HandPoseSide`](/api/vrframework-interaction-runtime/HandPoseSide) | One hand's worth of a pose. |
+| [`HandSkeleton`](/api/vrframework-interaction-runtime/HandSkeleton) | The fingers of a hand as bones that can be posed, whatever the hand happens to be. |
+| [`HandSkeleton.SkeletonFinger`](/api/vrframework-interaction-runtime/HandSkeleton.SkeletonFinger) | One finger: the bones it is made of and the name each is stored under. |
+| [`HandSkinRadius`](/api/vrframework-interaction-runtime/HandSkinRadius) | How thick a hand is along each of its bones, measured off the mesh that will be drawn. |
 | [`HandVisualSolver`](/api/vrframework-interaction-runtime/HandVisualSolver) | Drives the visible hand mesh from the tracked hand, joint by joint, and can freeze individual fingers or the whole pose - which is what lets a held object keep the hand wrapped aro |
 | [`Highlight`](/api/vrframework-interaction-runtime/Highlight) | Highlights an object and, by default, everything under it - either by replacing its materials with a transparent highlight shader or by pulsing an overlay colour over them. |
 | [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | What a highlighted renderer looked like before it was highlighted, so Highlight/api/vrframework-interaction-runtime/Highlight can put it back exactly as it was. |
+| [`HoldSettings`](/api/vrframework-interaction-runtime/HoldSettings) |  |
 | [`InteractionModule`](/api/vrframework-interaction-runtime/InteractionModule) | The interaction module. |
 | [`PhysicalFinger`](/api/vrframework-interaction-runtime/PhysicalFinger) | Pairs a finger with the collider component that reports its contacts. |
+| [`PhysicsFinger`](/api/vrframework-interaction-runtime/PhysicsFinger) | One finger's own body: a small rigidbody chasing the tip of a tracked finger, which the world can stop and which can push things about. |
+| [`PhysicsFingers`](/api/vrframework-interaction-runtime/PhysicsFingers) | Gives a hand's fingers bodies of their own, so they can push things about, be stopped by the world, and hold the hand off whatever they land on. |
+| [`PhysicsHand`](/api/vrframework-interaction-runtime/PhysicsHand) | The middle layer of the three-layer hand: a real rigidbody that chases the tracked hand with clamped force instead of being teleported onto it. |
+| [`PhysicsHold`](/api/vrframework-interaction-runtime/PhysicsHold) | One hand holding one object, without ever teleporting it. |
+| [`PlayerRecenter`](/api/vrframework-interaction-runtime/PlayerRecenter) | A place to put the player. |
+| [`PokeButton`](/api/vrframework-interaction-runtime/PokeButton) | A surface that travels when it is pressed: a button, a key, a pedal, a plunger. |
+| [`PokeInteractable`](/api/vrframework-interaction-runtime/PokeInteractable) | A surface fingers stop on and that says when they are on it: petting, stroking, smearing, and a button being pressed. |
 | [`RootPosition`](/api/vrframework-interaction-runtime/RootPosition) | Watches hand tracking coming and going and hides whatever a hand is holding while that hand is untracked, so a held object does not float about on its own. |
 | [`SnapDropZone`](/api/vrframework-interaction-runtime/SnapDropZone) | A place an object belongs. |
+| [`ThrowSettings`](/api/vrframework-interaction-runtime/ThrowSettings) | Tuning for the velocity an object is given when it leaves the hand. |
+| [`ThrowSolver`](/api/vrframework-interaction-runtime/ThrowSolver) | Keeps a short history of a mover's world pose and derives the velocity to hand over to a released object. |
 | [`ToggleSelect`](/api/vrframework-interaction-runtime/ToggleSelect) | A trigger that flips between selected and deselected each time a matching object enters it, raising one of two events - a switch the player operates by reaching into it. |
 | [`TransformPair`](/api/vrframework-interaction-runtime/TransformPair) | Maps one bone of the tracked hand onto the matching bone of the hand mesh. |
 | [`TriggerAction`](/api/vrframework-interaction-runtime/TriggerAction) | Raises events when a matching object enters or leaves this trigger. |
 | [`TriggerStay`](/api/vrframework-interaction-runtime/TriggerStay) | Requires a matching object to stay inside this trigger for a set time before completing - for holding a tool against a workpiece, or standing somewhere long enough to count. |
+
+## Structs
+
+| Name | Summary |
+| --- | --- |
+| [`FingerSolve`](/api/vrframework-interaction-runtime/FingerSolve) | How far one finger got before it met the object, and whether it met it at all. |
+| [`PokeContact`](/api/vrframework-interaction-runtime/PokeContact) | One finger pressing on one surface: where it landed, which way the surface faces there, and how far past it the player's own finger actually got. |
+| [`PosedBone`](/api/vrframework-interaction-runtime/PosedBone) | One bone of a stored hand pose: which bone, and the local rotation it takes. |
 
 ## Enums
 
@@ -39,11 +72,23 @@ sidebar_position: 0
 | --- | --- |
 | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | The fingers of a hand, as flags, so a grabbable can ask for any combination of them. |
 | [`GrabType`](/api/vrframework-interaction-runtime/GrabType) | The ways an object can be picked up. |
+| [`GripConstraint.Moves`](/api/vrframework-interaction-runtime/GripConstraint.Moves) | What a constraint moves when the hand works it. |
+| [`GripConstraintOneAxis.Axis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis.Axis) | Which of the pivot's three axes the motion runs along or about. |
+| [`GripConstraintOneAxis.Motion`](/api/vrframework-interaction-runtime/GripConstraintOneAxis.Motion) | Whether the object travels in a straight line or turns. |
+| [`GripFingers`](/api/vrframework-interaction-runtime/GripFingers) | What the fingers do when a hand takes this grip point. |
+| [`GripRole`](/api/vrframework-interaction-runtime/GripRole) | Which part a grip point plays when the object is held by two hands. |
+| [`GripSequence.Order`](/api/vrframework-interaction-runtime/GripSequence.Order) | Whether the stages have to be worked in the order they are listed. |
+| [`HandFilter`](/api/vrframework-interaction-runtime/HandFilter) | Which hands a grip point will accept. |
 | [`HandType`](/api/vrframework-interaction-runtime/HandType) | Which of the player's two hands a component belongs to. |
+| [`HandVisualSolver.HandSide`](/api/vrframework-interaction-runtime/HandVisualSolver.HandSide) | Which hand a mesh is, or Auto to work it out from the hand itself. |
 | [`Highlight.HighlightType`](/api/vrframework-interaction-runtime/Highlight.HighlightType) | How the highlight is drawn. |
-| [`SnapIdentification`](/api/vrframework-interaction-runtime/SnapIdentification) | What a SnapDropZone/api/vrframework-interaction-runtime/SnapDropZone matches candidates on. |
+| [`HoldRole`](/api/vrframework-interaction-runtime/HoldRole) | What part one hand plays in a hold. |
+| [`HoldSnap`](/api/vrframework-interaction-runtime/HoldSnap) | Where a held object is placed at the moment it is taken. |
+| [`SnapAccepts`](/api/vrframework-interaction-runtime/SnapAccepts) | What a SnapDropZone/api/vrframework-interaction-runtime/SnapDropZone will take. |
 | [`SnapMode`](/api/vrframework-interaction-runtime/SnapMode) | Whether a snapped object may be taken out of the zone again. |
+| [`SnapWhen`](/api/vrframework-interaction-runtime/SnapWhen) | When a zone takes an object that is inside it. |
 | [`ToggleSelect.IdType`](/api/vrframework-interaction-runtime/ToggleSelect.IdType) | What the trigger matches entering objects on. |
 | [`TriggerIdentification`](/api/vrframework-interaction-runtime/TriggerIdentification) | What a trigger matches objects on. |
 | [`TriggerStayMode`](/api/vrframework-interaction-runtime/TriggerStayMode) | What leaving a TriggerStay/api/vrframework-interaction-runtime/TriggerStay early does to the time counted so far. |
+| [`TwoHandMode`](/api/vrframework-interaction-runtime/TwoHandMode) | How two hands on one object divide the work between them. |
 

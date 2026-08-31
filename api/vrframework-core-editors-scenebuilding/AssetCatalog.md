@@ -8,10 +8,11 @@ description: 'Models, sounds and textures from every configured IAssetSource/api
 
 # AssetCatalog
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L14)
 
 Models, sounds and textures from every configured [`IAssetSource`](/api/vrframework-core-editors-scenebuilding/IAssetSource), merged into
-one browsable list. Local assets place straight away; remote ones download on first use.
+one browsable list. In a stock install that is the organisation's Unity Asset Manager
+library alone: assets already imported place straight away, the rest import on first use.
 The scope is deliberately narrow - see [`AssetCategories`](/api/vrframework-core-editors-scenebuilding/AssetCategories).
 
 ```csharp
@@ -34,7 +35,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L26)
 
 ### DisplayName {#displayname}
 
@@ -46,7 +47,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L19)
 
 ### EmptyMessage {#emptymessage}
 
@@ -58,7 +59,19 @@ public override string EmptyMessage { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L38)
+
+### GroupLabel {#grouplabel}
+
+What the group filter is filtering by here - these groups are asset types.
+
+```csharp
+public override string GroupLabel { get; }
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L32)
 
 ### IconName {#iconname}
 
@@ -70,7 +83,7 @@ public override string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L23)
 
 ### Id {#id}
 
@@ -82,7 +95,7 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L17)
 
 ### IsAvailable {#isavailable}
 
@@ -94,7 +107,7 @@ public override bool IsAvailable { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L35)
 
 ### Order {#order}
 
@@ -106,7 +119,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L21)
 
 ## Methods
 
@@ -120,5 +133,5 @@ public override IEnumerable<SceneBuilderItem> GetItems()
 
 **Returns** `IEnumerable<SceneBuilderItem>` - The items to show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L44)
 

@@ -8,7 +8,7 @@ description: 'One entry in an AudioSourcehttps://docs.unity3d.com/ScriptReferenc
 
 # AudioQueueElement
 
-**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L8)
+**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L8)
 
 One entry in an [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) queue: the clip and the ID it was queued under.
 
@@ -35,7 +35,7 @@ public AudioQueueElement(int id, AudioClip clip)
 | `id` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Queue ID of the entry. |
 | `clip` | [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) | Clip to play. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L18)
 
 ## Fields
 
@@ -49,7 +49,7 @@ public AudioClip clip
 
 **Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L11)
 
 ### id {#id}
 
@@ -61,5 +61,5 @@ public int id
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AudioManager.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AudioManager.cs#L13)
 

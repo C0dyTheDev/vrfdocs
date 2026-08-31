@@ -261,6 +261,11 @@ function runDocfx(projects, ymlDir) {
           src: path.dirname(project.csproj).replace(/\\/g, '/'),
         })),
         dest: ymlDir.replace(/\\/g, '/'),
+        // Unity writes the `<DefineConstants>` (UNITY_EDITOR and friends) into a
+        // single `Debug|AnyCPU` property group and never generates a Release one,
+        // so building the default Release configuration drops every define and
+        // code behind `#if UNITY_EDITOR` disappears mid-compile.
+        properties: {Configuration: 'Debug', Platform: 'AnyCPU'},
         // Public surface only - the API reference documents what consumers can
         // call, not the internals.
         filter: null,

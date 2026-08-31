@@ -8,7 +8,7 @@ description: 'Makes sure the tags and layers a setup depends on exist before the
 
 # ProjectTags
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ProjectTags.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ProjectTags.cs#L14)
 
 Makes sure the tags and layers a setup depends on exist before the components that read them
 are added. GrabbableObject.Reset assigns the "Grabbable" tag and layer, and Unity logs an
@@ -39,7 +39,7 @@ public static void EnsureLayer(string layer)
 | --- | --- | --- |
 | `layer` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Layer the framework needs. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ProjectTags.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ProjectTags.cs#L46)
 
 ### EnsureTag(string) {#ensuretag-string}
 
@@ -55,5 +55,5 @@ public static void EnsureTag(string tag)
 | --- | --- | --- |
 | `tag` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Tag the framework needs. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ProjectTags.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ProjectTags.cs#L23)
 

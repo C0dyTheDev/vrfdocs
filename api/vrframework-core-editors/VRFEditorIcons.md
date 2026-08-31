@@ -8,7 +8,7 @@ description: 'The framework''s one cache of Unity''s built-in editor icons, shar
 
 # VRFEditorIcons
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFEditorIcons.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFEditorIcons.cs#L13)
 
 The framework's one cache of Unity's built-in editor icons, shared by every VRF window.
 IconContent is not free and it throws on names that do not exist in the running editor
@@ -40,7 +40,7 @@ public static Texture Builtin(string iconName)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFEditorIcons.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFEditorIcons.cs#L21)
 
 ### ClearCache() {#clearcache}
 
@@ -50,5 +50,5 @@ Drops the cache. Icons change with the editor skin, so a theme switch wants this
 public static void ClearCache()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFEditorIcons.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFEditorIcons.cs#L43)
 

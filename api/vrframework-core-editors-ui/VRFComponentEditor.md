@@ -8,7 +8,7 @@ description: 'Base class for the framework''s inspectors.'
 
 # VRFComponentEditor
 
-**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L20)
+**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L20)
 
 Base class for the framework's inspectors. It draws the shared header, keeps the
 serializedObject bookkeeping in one place, and hands subclasses the helpers they need to
@@ -27,7 +27,7 @@ public abstract class VRFComponentEditor : Editor
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) ← [`ScriptableObject`](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) ← [`Editor`](https://docs.unity3d.com/ScriptReference/Editor.html) ← `VRFComponentEditor`
 
-**Derived:** [`CameraRecenterEditor`](/api/vrframework-core-editors/CameraRecenterEditor), [`ComponentTogglerEditor`](/api/vrframework-core-editors/ComponentTogglerEditor), [`GrabbableObjectEditor`](/api/vrframework-core-editors/GrabbableObjectEditor), [`HighlightEditor`](/api/vrframework-core-editors/HighlightEditor), [`LanguageInstanceEditor`](/api/vrframework-core-editors/LanguageInstanceEditor), [`LanguageManagerEditor`](/api/vrframework-core-editors/LanguageManagerEditor), [`MinigameManagerEditor`](/api/vrframework-core-editors/MinigameManagerEditor), [`ParametersEditor`](/api/vrframework-core-editors/ParametersEditor), [`PlayAudioEditor`](/api/vrframework-core-editors/PlayAudioEditor), [`ProgressManagerEditor`](/api/vrframework-core-editors/ProgressManagerEditor), [`ProgressStepEditor`](/api/vrframework-core-editors/ProgressStepEditor), [`ReactOnParameterEditor`](/api/vrframework-core-editors/ReactOnParameterEditor), [`ScenarioEditor`](/api/vrframework-core-editors/ScenarioEditor), [`SnapDropZoneEditor`](/api/vrframework-core-editors/SnapDropZoneEditor), [`ToggleSelectEditor`](/api/vrframework-core-editors/ToggleSelectEditor), [`TriggerActionEditor`](/api/vrframework-core-editors/TriggerActionEditor), [`TriggerStayEditor`](/api/vrframework-core-editors/TriggerStayEditor), [`VRFDefaultEditor`](/api/vrframework-core-editors-ui/VRFDefaultEditor)
+**Derived:** [`ComponentTogglerEditor`](/api/vrframework-core-editors/ComponentTogglerEditor), [`GrabbableObjectEditor`](/api/vrframework-core-editors/GrabbableObjectEditor), [`HighlightEditor`](/api/vrframework-core-editors/HighlightEditor), [`GripConstraintOneAxisEditor`](/api/vrframework-core-editors-interaction/GripConstraintOneAxisEditor), [`GripPointEditor`](/api/vrframework-core-editors-interaction/GripPointEditor), [`GripSequenceEditor`](/api/vrframework-core-editors-interaction/GripSequenceEditor), [`LanguageInstanceEditor`](/api/vrframework-core-editors/LanguageInstanceEditor), [`LanguageManagerEditor`](/api/vrframework-core-editors/LanguageManagerEditor), [`MinigameManagerEditor`](/api/vrframework-core-editors/MinigameManagerEditor), [`PlatformConfigEditor`](/api/vrframework-core-editors/PlatformConfigEditor), [`PlayAudioEditor`](/api/vrframework-core-editors/PlayAudioEditor), [`PlayerRecenterEditor`](/api/vrframework-core-editors/PlayerRecenterEditor), [`ProgressManagerEditor`](/api/vrframework-core-editors/ProgressManagerEditor), [`ProgressStepEditor`](/api/vrframework-core-editors/ProgressStepEditor), [`ReactOnParameterEditor`](/api/vrframework-core-editors/ReactOnParameterEditor), [`ScenarioEditor`](/api/vrframework-core-editors/ScenarioEditor), [`SnapDropZoneEditor`](/api/vrframework-core-editors/SnapDropZoneEditor), [`ToggleSelectEditor`](/api/vrframework-core-editors/ToggleSelectEditor), [`TriggerActionEditor`](/api/vrframework-core-editors/TriggerActionEditor), [`TriggerStayEditor`](/api/vrframework-core-editors/TriggerStayEditor), [`VRFDefaultEditor`](/api/vrframework-core-editors-ui/VRFDefaultEditor)
 
 ## Properties
 
@@ -41,7 +41,7 @@ protected virtual string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L29)
 
 ### HeaderTitle {#headertitle}
 
@@ -53,7 +53,7 @@ protected virtual string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L25)
 
 ### IsMultiEditing {#ismultiediting}
 
@@ -65,7 +65,7 @@ protected bool IsMultiEditing { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L35)
 
 ### PrefsKey {#prefskey}
 
@@ -77,7 +77,7 @@ protected virtual string PrefsKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L32)
 
 ## Methods
 
@@ -97,7 +97,7 @@ protected static bool Agree(SerializedProperty property)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L110)
 
 ### AllTrue(SerializedProperty) {#alltrue-serializedproperty}
 
@@ -117,7 +117,7 @@ protected static bool AllTrue(SerializedProperty property)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L120)
 
 ### AnyTarget\<T>(Func\<T, bool>) {#anytarget-1-boolean}
 
@@ -143,7 +143,7 @@ protected bool AnyTarget<T>(Func<T, bool> predicate) where T : class
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L100)
 
 ### DrawBody() {#drawbody}
 
@@ -153,7 +153,7 @@ Everything below the header. Draw with [`Prop(string)`](/api/vrframework-core-ed
 protected abstract void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L63)
 
 ### EventsSection(string, string, bool) {#eventssection-string-string-boolean}
 
@@ -173,7 +173,7 @@ protected VRFEditorGUI.SectionScope EventsSection(string key = "events", string 
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L132)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L132)
 
 ### Field(string, string, bool) {#field-string-string-boolean}
 
@@ -191,7 +191,7 @@ protected void Field(string propertyName, string label = null, bool includeChild
 | `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `includeChildren` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L84)
 
 ### OnDisable() {#ondisable}
 
@@ -201,7 +201,7 @@ Releases what the inspector bound while it was open.
 protected virtual void OnDisable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L45)
 
 ### OnEnable() {#onenable}
 
@@ -211,7 +211,7 @@ Binds the inspector to the component's serialized properties.
 protected virtual void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L38)
 
 ### OnInspectorGUI() {#oninspectorgui}
 
@@ -221,7 +221,7 @@ Draws the inspector.
 public override void OnInspectorGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L51)
 
 ### Prop(string) {#prop-string}
 
@@ -241,7 +241,7 @@ protected SerializedProperty Prop(string propertyName)
 
 **Returns** [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L70)
 
 ### Section(string, string, bool) {#section-string-string-boolean}
 
@@ -261,5 +261,5 @@ protected VRFEditorGUI.SectionScope Section(string key, string title, bool defau
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFComponentEditor.cs#L126)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFComponentEditor.cs#L126)
 

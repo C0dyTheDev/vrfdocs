@@ -8,7 +8,7 @@ description: 'Draws an entry of a sprite translation asset.'
 
 # LanguageSpriteListDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L174)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L174)
 
 Draws an entry of a sprite translation asset.
 
@@ -29,5 +29,5 @@ Builds the sprite entry drawer.
 public LanguageSpriteListDrawer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L178)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L178)
 

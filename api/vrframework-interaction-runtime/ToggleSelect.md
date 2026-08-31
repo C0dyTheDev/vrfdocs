@@ -8,7 +8,7 @@ description: 'A trigger that flips between selected and deselected each time a m
 
 # ToggleSelect
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ToggleSelect.cs#L14)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ToggleSelect.cs#L14)
 
 A trigger that flips between selected and deselected each time a matching object enters it,
 raising one of two events - a switch the player operates by reaching into it.
@@ -32,7 +32,7 @@ public string collisionId
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ToggleSelect.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ToggleSelect.cs#L30)
 
 ### identification {#identification}
 
@@ -45,7 +45,7 @@ public ToggleSelect.IdType identification
 
 **Returns** [`ToggleSelect.IdType`](/api/vrframework-interaction-runtime/ToggleSelect.IdType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ToggleSelect.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ToggleSelect.cs#L28)
 
 ### onDeselect {#ondeselect}
 
@@ -57,7 +57,7 @@ public UnityEvent onDeselect
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ToggleSelect.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ToggleSelect.cs#L35)
 
 ### onSelect {#onselect}
 
@@ -69,7 +69,7 @@ public UnityEvent onSelect
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ToggleSelect.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ToggleSelect.cs#L33)
 
 ### selected {#selected}
 
@@ -81,5 +81,5 @@ public bool selected
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ToggleSelect.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ToggleSelect.cs#L26)
 

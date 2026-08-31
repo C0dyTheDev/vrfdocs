@@ -8,7 +8,7 @@ description: 'Streams what a camera sees to a viewer on the network: renders to 
 
 # StreamManager
 
-**Class** · namespace `VRFramework.Streaming.Runtime` · assembly `VRFramework.Streaming.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L14)
+**Class** · namespace `VRFramework.Streaming.Runtime` · assembly `VRFramework.Streaming.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/StreamManager.cs#L14)
 
 Streams what a camera sees to a viewer on the network: renders to a texture, reads it back off
 the GPU without stalling the frame, encodes it as JPEG on a worker thread and sends it over UDP.
@@ -32,7 +32,7 @@ public int FPS
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/StreamManager.cs#L17)
 
 ### height {#height}
 
@@ -44,7 +44,7 @@ public int height
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/StreamManager.cs#L21)
 
 ### quality {#quality}
 
@@ -56,7 +56,7 @@ public int quality
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/StreamManager.cs#L23)
 
 ### streamCamera {#streamcamera}
 
@@ -68,7 +68,7 @@ public Camera streamCamera
 
 **Returns** [`Camera`](https://docs.unity3d.com/ScriptReference/Camera.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/StreamManager.cs#L26)
 
 ### width {#width}
 
@@ -80,5 +80,5 @@ public int width
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/StreamManager.cs#L19)
 

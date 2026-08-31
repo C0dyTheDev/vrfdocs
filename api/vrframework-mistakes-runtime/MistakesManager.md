@@ -8,7 +8,7 @@ description: 'Tracks this scene''s checkpoints and accumulates the finished scen
 
 # MistakesManager
 
-**Class** · namespace `VRFramework.Mistakes.Runtime` · assembly `VRFramework.Mistakes.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L38)
+**Class** · namespace `VRFramework.Mistakes.Runtime` · assembly `VRFramework.Mistakes.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L38)
 
 Tracks this scene's checkpoints and accumulates the finished scene results for the report,
 which it contributes under "Mistakes".
@@ -33,7 +33,7 @@ public MistakePlatform mistakePlatform
 
 **Returns** [`MistakePlatform`](/api/vrframework-mistakes-runtime/MistakePlatform)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L47)
 
 ### mistakes {#mistakes}
 
@@ -46,7 +46,7 @@ public List<Mistake> mistakes
 
 **Returns** `List<Mistake>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L50)
 
 ### sceneName {#scenename}
 
@@ -58,7 +58,7 @@ public string sceneName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L53)
 
 ## Properties
 
@@ -72,7 +72,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L56)
 
 ### ReportKey {#reportkey}
 
@@ -84,7 +84,7 @@ public string ReportKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L101)
 
 ## Methods
 
@@ -102,7 +102,7 @@ public void AddNewMistake(string mistakeName)
 | --- | --- | --- |
 | `mistakeName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the checkpoint. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L238)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L238)
 
 ### CanRecordMistake(string) {#canrecordmistake-string}
 
@@ -120,7 +120,7 @@ protected virtual bool CanRecordMistake(string name)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True to let it be recorded.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L188)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L188)
 
 ### CheckMistake(string) {#checkmistake-string}
 
@@ -136,7 +136,7 @@ public void CheckMistake(string name)
 | --- | --- | --- |
 | `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L59)
 
 ### Clear() {#clear}
 
@@ -146,7 +146,7 @@ Drops every recorded result and unticks every checkpoint of this scene.
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L114)
 
 ### CreateSceneResult(string) {#createsceneresult-string}
 
@@ -164,7 +164,7 @@ protected virtual MistakeScene CreateSceneResult(string scene)
 
 **Returns** [`MistakeScene`](/api/vrframework-core-runtime/MistakeScene) - The result to append to the session.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L196)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L196)
 
 ### GetReportValue() {#getreportvalue}
 
@@ -178,7 +178,7 @@ public object GetReportValue()
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L108)
 
 ### GetSceneResults() {#getsceneresults}
 
@@ -190,7 +190,7 @@ public List<MistakeScene> GetSceneResults()
 
 **Returns** `List<MistakeScene>` - The session's scene results.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L95)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L95)
 
 ### OnCleanup() {#oncleanup}
 
@@ -200,7 +200,7 @@ Unregisters the module, unless another one has taken over the service in the mea
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L152)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L152)
 
 ### OnInit() {#oninit}
 
@@ -211,7 +211,7 @@ report, and takes the scene name if none was set.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L133)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L133)
 
 ### OnSceneFinalized(string) {#onscenefinalized-string}
 
@@ -227,7 +227,7 @@ protected virtual void OnSceneFinalized(string scene)
 | --- | --- | --- |
 | `scene` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the scene that was closed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L219)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L219)
 
 ### RecordOutcome(string) {#recordoutcome-string}
 
@@ -243,7 +243,7 @@ public void RecordOutcome(string onTime)
 | --- | --- | --- |
 | `onTime` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L84)
 
 ### UncheckMistake(string) {#uncheckmistake-string}
 
@@ -259,5 +259,5 @@ public void UncheckMistake(string name)
 | --- | --- | --- |
 | `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakesManager.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakesManager.cs#L74)
 

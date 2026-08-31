@@ -8,7 +8,7 @@ description: 'Turns the translation assets into the lookup maps the framework re
 
 # LanguageProcessor
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L13)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L13)
 
 Turns the translation assets into the lookup maps the framework reads at runtime: one map per
 kind, from translation ID to the entry for the current language, plus the pick lists the
@@ -32,7 +32,7 @@ public static List<(string guid, string name, int index)> displayAudio
 
 **Returns** `List<(string guid, string name, int index)>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L27)
 
 ### displaySprite {#displaysprite}
 
@@ -44,7 +44,7 @@ public static List<(string guid, string name, int index)> displaySprite
 
 **Returns** `List<(string guid, string name, int index)>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L34)
 
 ### displayText {#displaytext}
 
@@ -56,7 +56,7 @@ public static List<(string guid, string name, int index)> displayText
 
 **Returns** `List<(string guid, string name, int index)>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L20)
 
 ### idToAudioMap {#idtoaudiomap}
 
@@ -68,7 +68,7 @@ public static Dictionary<string, (LanguageAudioList elem, LanguageAudioElement v
 
 **Returns** `Dictionary<string, (LanguageAudioList elem, LanguageAudioElement value)>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L23)
 
 ### idToAudioMapUntranslated {#idtoaudiomapuntranslated}
 
@@ -80,7 +80,7 @@ public static Dictionary<string, UntranslatedAudioElement> idToAudioMapUntransla
 
 **Returns** `Dictionary<string, UntranslatedAudioElement>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L25)
 
 ### idToSpriteMap {#idtospritemap}
 
@@ -92,7 +92,7 @@ public static Dictionary<string, (LanguageSpriteList elem, LanguageSpriteElement
 
 **Returns** `Dictionary<string, (LanguageSpriteList elem, LanguageSpriteElement value)>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L30)
 
 ### idToSpriteMapUntranslated {#idtospritemapuntranslated}
 
@@ -104,7 +104,7 @@ public static Dictionary<string, UntranslatedSpriteElement> idToSpriteMapUntrans
 
 **Returns** `Dictionary<string, UntranslatedSpriteElement>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L32)
 
 ### idToTextMap {#idtotextmap}
 
@@ -116,7 +116,7 @@ public static Dictionary<string, (LanguageTextList elem, LanguageTextElement val
 
 **Returns** `Dictionary<string, (LanguageTextList elem, LanguageTextElement value)>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L16)
 
 ### idToTextMapUntranslated {#idtotextmapuntranslated}
 
@@ -128,7 +128,7 @@ public static Dictionary<string, UntranslatedTextElement> idToTextMapUntranslate
 
 **Returns** `Dictionary<string, UntranslatedTextElement>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L18)
 
 ## Methods
 
@@ -140,7 +140,7 @@ Empties all three sets of maps and pick lists.
 public static void ClearAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L44)
 
 ### ClearAudio() {#clearaudio}
 
@@ -150,7 +150,7 @@ Empties the audio maps and pick list.
 public static void ClearAudio()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L63)
 
 ### ClearSprite() {#clearsprite}
 
@@ -160,7 +160,7 @@ Empties the sprite maps and pick list.
 public static void ClearSprite()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L73)
 
 ### ClearText() {#cleartext}
 
@@ -170,7 +170,7 @@ Empties the text maps and pick list.
 public static void ClearText()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L53)
 
 ### GetEmptyName(LangType) {#getemptyname-langtype}
 
@@ -188,7 +188,7 @@ public static string GetEmptyName(LangType t)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The placeholder label, e.g. "[silence]" for audio.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L289)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L289)
 
 ### UpdateAll() {#updateall}
 
@@ -199,7 +199,7 @@ scene has no language manager.
 public static void UpdateAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L87)
 
 ### UpdateAudio() {#updateaudio}
 
@@ -210,7 +210,7 @@ slots when they are missing and reissuing an ID when two entries share one.
 public static void UpdateAudio()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L165)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L165)
 
 ### UpdateSprite() {#updatesprite}
 
@@ -221,7 +221,7 @@ language slots when they are missing and reissuing an ID when two entries share 
 public static void UpdateSprite()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L227)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L227)
 
 ### UpdateText() {#updatetext}
 
@@ -232,5 +232,5 @@ slots when they are missing and reissuing an ID when two entries share one.
 public static void UpdateText()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L103)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/LanguageProcessor.cs#L103)
 

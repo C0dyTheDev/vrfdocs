@@ -8,7 +8,7 @@ description: 'Builds the rich text a log row actually displays: search hits high
 
 # VRFLogText
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L16)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogText.cs#L16)
 
 Builds the rich text a log row actually displays: search hits highlighted, and numbers,
 quoted values and bracketed tags tinted so a long message can be read at a glance.
@@ -41,7 +41,7 @@ public static Color ChannelColor(string channel)
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogText.cs#L55)
 
 ### Hex(Color) {#hex-color}
 
@@ -59,7 +59,7 @@ public static string Hex(Color color)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The hex string, without the leading hash.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogText.cs#L72)
 
 ### LevelColor(VRFLogLevel) {#levelcolor-vrfloglevel}
 
@@ -77,7 +77,7 @@ public static Color LevelColor(VRFLogLevel level)
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html) - Its colour.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogText.cs#L35)
 
 ### Render(string, VRFLogFilter, bool) {#render-string-vrflogfilter-boolean}
 
@@ -97,7 +97,7 @@ public static string Render(string message, VRFLogFilter filter, bool colorize)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogText.cs#L87)
 
 ### Strip(string) {#strip-string}
 
@@ -115,5 +115,5 @@ public static string Strip(string text)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogText.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogText.cs#L78)
 

@@ -8,7 +8,7 @@ description: 'Base class of every framework module.'
 
 # VRModule
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L10)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L10)
 
 Base class of every framework module. VRCore finds the modules sitting in the scene, sorts them
 by init order and calls [`OnInit()`](/api/vrframework-core-runtime/VRModule#oninit) on each; a module reports itself usable by calling
@@ -36,7 +36,7 @@ public int InitOrder
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L17)
 
 ### IsRequired {#isrequired}
 
@@ -49,7 +49,7 @@ public bool IsRequired
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L23)
 
 ## Properties
 
@@ -64,7 +64,7 @@ public virtual int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L29)
 
 ### IsReady {#isready}
 
@@ -76,7 +76,7 @@ public bool IsReady { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L32)
 
 ## Methods
 
@@ -89,7 +89,7 @@ VRCore when the scene is torn down.
 public virtual void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L46)
 
 ### OnInit() {#oninit}
 
@@ -100,7 +100,7 @@ Where the module starts itself up: register services, read settings, and finish 
 public abstract void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L40)
 
 ### SetReady() {#setready}
 
@@ -111,7 +111,7 @@ startup. Calling it a second time is ignored and logs a warning.
 protected void SetReady()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L54)
 
 ## Events
 
@@ -125,5 +125,5 @@ public event Action OnModuleReady
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRModule.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRModule.cs#L34)
 

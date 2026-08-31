@@ -26,6 +26,7 @@ sidebar_position: 0
 | [`SceneCompletion`](/api/vrframework-core-runtime/SceneCompletion) | Standalone-scene fallback: quits the application when progress finishes. |
 | [`SceneCut`](/api/vrframework-core-runtime/SceneCut) | A hard cut in VR: fades the view to black, raises OnCut/api/vrframework-core-runtime/SceneCutoncut while the player cannot see - move the rig or swap the set there - then fades bac |
 | [`ShowOnlyAttribute`](/api/vrframework-core-runtime/ShowOnlyAttribute) | Marks a serialized field as read only in the Inspector: the value is shown but cannot be edited. |
+| [`ShutdownRelay`](/api/vrframework-core-runtime/ShutdownRelay) | The Unity half of the platform's remote lifecycle protocol. |
 | [`SpriteChanger`](/api/vrframework-core-runtime/SpriteChanger) | Swaps the texture of a mesh between localized sprites - a poster or a screen that shows a different image per language and per step. |
 | [`SpriteVariant`](/api/vrframework-core-runtime/SpriteVariant) | One entry of a SpriteChanger/api/vrframework-core-runtime/SpriteChanger: a translation ID of a localized sprite. |
 | [`Util`](/api/vrframework-core-runtime/Util) | Utility Class - this contains helper methods for VRF development and especially the custom logging methods |

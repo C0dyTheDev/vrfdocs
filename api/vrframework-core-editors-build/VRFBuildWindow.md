@@ -8,7 +8,7 @@ description: 'One place to see what each build profile builds: the profiles in t
 
 # VRFBuildWindow
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildWindow.cs#L20)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildWindow.cs#L20)
 
 One place to see what each build profile builds: the profiles in the project on the left,
 the VRF settings of the selected one on the right, and the actions that apply them.
@@ -37,5 +37,5 @@ Opens the VRF Build window.
 public static void Open()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildWindow.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildWindow.cs#L71)
 

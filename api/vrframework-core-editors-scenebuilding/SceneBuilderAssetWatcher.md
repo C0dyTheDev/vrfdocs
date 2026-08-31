@@ -8,7 +8,7 @@ description: 'Keeps the authored content in step with the project.'
 
 # SceneBuilderAssetWatcher
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneBuilderAssetWatcher.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneBuilderAssetWatcher.cs#L10)
 
 Keeps the authored content in step with the project. Setups and templates live in assets
 now, so creating, editing or deleting one has to reach any open Scene Builder - otherwise a

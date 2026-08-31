@@ -8,7 +8,7 @@ description: 'What a Scene Builder entry fundamentally is.'
 
 # SceneBuilderItemKind
 
-**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L11)
+**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L11)
 
 What a Scene Builder entry fundamentally is. Drives the badge colour and the default
 placement behaviour when a catalog does not supply its own.

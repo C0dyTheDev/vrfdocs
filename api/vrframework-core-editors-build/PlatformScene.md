@@ -8,7 +8,7 @@ description: 'One scene the platform may launch, and the parameters it takes.'
 
 # PlatformScene
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L22)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L22)
 
 One scene the platform may launch, and the parameters it takes.
 
@@ -31,7 +31,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L26)
 
 ### parameters {#parameters}
 
@@ -43,7 +43,7 @@ public List<Param> parameters
 
 **Returns** `List<Param>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L30)
 
 ### value {#value}
 
@@ -55,5 +55,5 @@ public string value
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L28)
 

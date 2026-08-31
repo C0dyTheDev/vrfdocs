@@ -8,7 +8,7 @@ description: 'The rubber band drawn while dragging across empty canvas to select
 
 # SelectionBox
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L7)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L7)
 
 The rubber band drawn while dragging across empty canvas to select several blocks at once.
 
@@ -30,7 +30,7 @@ Builds the selection box.
 public SelectionBox()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L18)
 
 ## Fields
 
@@ -44,7 +44,7 @@ public Vector2 end
 
 **Returns** [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L10)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L10)
 
 ### scale {#scale}
 
@@ -56,7 +56,7 @@ public float scale
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L13)
 
 ### start {#start}
 
@@ -68,7 +68,7 @@ public Vector2 start
 
 **Returns** [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L15)
 
 ## Methods
 
@@ -86,7 +86,7 @@ public void Move(Vector2 delta)
 | --- | --- | --- |
 | `delta` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | How far to move it, in canvas pixels. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L25)
 
 ### SetPosition(Vector2) {#setposition-vector2}
 
@@ -102,7 +102,7 @@ public void SetPosition(Vector2 pos)
 | --- | --- | --- |
 | `pos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where to put it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L32)
 
 ### StartDrag(Vector2) {#startdrag-vector2}
 
@@ -118,5 +118,5 @@ public void StartDrag(Vector2 mousePos)
 | --- | --- | --- |
 | `mousePos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where the drag started. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Mesh/SelectionBox.cs#L94)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Mesh/SelectionBox.cs#L94)
 

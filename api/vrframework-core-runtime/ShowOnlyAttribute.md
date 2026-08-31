@@ -8,7 +8,7 @@ description: 'Marks a serialized field as read only in the Inspector: the value 
 
 # ShowOnlyAttribute
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/Attributes/ShowOnlyAttribute.cs#L8)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/Attributes/ShowOnlyAttribute.cs#L8)
 
 Marks a serialized field as read only in the Inspector: the value is shown but cannot be edited.
 Drawn by ShowOnlyDrawer.

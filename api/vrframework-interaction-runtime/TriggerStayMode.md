@@ -8,7 +8,7 @@ description: 'What leaving a TriggerStay/api/vrframework-interaction-runtime/Tri
 
 # TriggerStayMode
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L186)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L153)
 
 What leaving a [`TriggerStay`](/api/vrframework-interaction-runtime/TriggerStay) early does to the time counted so far.
 

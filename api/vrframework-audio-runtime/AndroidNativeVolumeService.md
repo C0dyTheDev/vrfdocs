@@ -8,7 +8,7 @@ description: 'Helper class for automatically setting the system volume with a sc
 
 # AndroidNativeVolumeService
 
-**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L9)
+**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L9)
 
 Helper class for automatically setting the system volume with a script
 
@@ -31,7 +31,7 @@ public float GetSystemVolume()
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The media volume as 0 to 1.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L67)
 
 ### SetSystemVolume(float) {#setsystemvolume-single}
 
@@ -47,5 +47,5 @@ public void SetSystemVolume(float volumeValue)
 | --- | --- | --- |
 | `volumeValue` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Volume as 0 to 1. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/AndroidNativeVolumeService.cs#L77)
 

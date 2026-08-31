@@ -8,7 +8,7 @@ description: 'The Progress Graph Editor window: the scene''s scenario drawn as a
 
 # ProgressEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Window/ProgressEditor.cs#L19)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Window/ProgressEditor.cs#L19)
 
 The Progress Graph Editor window: the scene's scenario drawn as a node graph, one node per
 block and one line per enqueue. Blocks and steps can be created, renamed, rewired and moved
@@ -32,7 +32,7 @@ public static ProgressEditor i
 
 **Returns** [`ProgressEditor`](/api/vrframework-core-editors/ProgressEditor)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Window/ProgressEditor.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Window/ProgressEditor.cs#L24)
 
 ## Methods
 
@@ -44,7 +44,7 @@ Builds the window: canvas, grid, status bar, and the graph itself.
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Window/ProgressEditor.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Window/ProgressEditor.cs#L74)
 
 ### OpenWindow() {#openwindow}
 
@@ -55,7 +55,7 @@ Opens the Progress Graph Editor window.
 public static void OpenWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Window/ProgressEditor.cs#L329)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Window/ProgressEditor.cs#L329)
 
 ### RecordCreate(Object, string) {#recordcreate-object-string}
 
@@ -72,7 +72,7 @@ public static void RecordCreate(Object obj, string text)
 | `obj` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object that was created. |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the change, as shown in the undo history. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Window/ProgressEditor.cs#L491)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Window/ProgressEditor.cs#L491)
 
 ### RecordDestroy(Object) {#recorddestroy-object}
 
@@ -88,7 +88,7 @@ public static void RecordDestroy(Object obj)
 | --- | --- | --- |
 | `obj` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object to destroy. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Window/ProgressEditor.cs#L483)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Window/ProgressEditor.cs#L483)
 
 ### RecordUndo(Object, string) {#recordundo-object-string}
 
@@ -105,5 +105,5 @@ public static void RecordUndo(Object obj, string text)
 | `obj` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object about to change. |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the change, as shown in the undo history. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Window/ProgressEditor.cs#L476)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Window/ProgressEditor.cs#L476)
 

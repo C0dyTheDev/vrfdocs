@@ -8,7 +8,7 @@ description: 'One language''s version of a translated audio clip.'
 
 # LanguageAudioElement
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L12)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L12)
 
 One language's version of a translated audio clip.
 
@@ -35,7 +35,7 @@ public LanguageAudioElement(Language language)
 | --- | --- | --- |
 | `language` | [`Language`](/api/vrframework-localization-runtime/Language) | Language this entry belongs to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L22)
 
 ## Fields
 
@@ -50,7 +50,7 @@ public AudioClip element
 
 **Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L18)
 
 ### language {#language}
 
@@ -63,5 +63,5 @@ public Language language
 
 **Returns** [`Language`](/api/vrframework-localization-runtime/Language)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L16)
 

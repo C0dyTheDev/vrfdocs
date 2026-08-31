@@ -8,7 +8,7 @@ description: 'A place the Assets category can pull from.'
 
 # IAssetSource
 
-**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L82)
+**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L99)
 
 A place the Assets category can pull from. Implement this to plug in your own database - the
 window finds it through [`AssetSources`](/api/vrframework-core-editors-scenebuilding/AssetSources) with no other changes.
@@ -17,7 +17,7 @@ window finds it through [`AssetSources`](/api/vrframework-core-editors-scenebuil
 public interface IAssetSource
 ```
 
-**Derived:** [`ProjectAssetSource`](/api/vrframework-core-editors-scenebuilding/ProjectAssetSource), [`RemoteAssetSource`](/api/vrframework-core-editors-scenebuilding/RemoteAssetSource)
+**Derived:** [`AssetManagerSource`](/api/vrframework-core-editors-scenebuilding/AssetManagerSource)
 
 ## Properties
 
@@ -31,7 +31,7 @@ string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L104)
 
 ### Id {#id}
 
@@ -43,7 +43,7 @@ string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L102)
 
 ### IsConfigured {#isconfigured}
 
@@ -55,7 +55,7 @@ bool IsConfigured { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L109)
 
 ### Order {#order}
 
@@ -67,7 +67,7 @@ int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L106)
 
 ### StatusLabel {#statuslabel}
 
@@ -79,7 +79,7 @@ string StatusLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L95)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L112)
 
 ## Methods
 
@@ -93,7 +93,7 @@ IEnumerable<AssetEntry> GetEntries()
 
 **Returns** `IEnumerable<AssetEntry>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L115)
 
 ### Refresh() {#refresh}
 
@@ -103,7 +103,7 @@ Drops any cache and re-reads the underlying database.
 void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L118)
 
 ### Resolve(AssetEntry) {#resolve-assetentry}
 
@@ -122,5 +122,5 @@ Object Resolve(AssetEntry entry)
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L124)
 

@@ -8,7 +8,7 @@ description: 'The platform''s view of an application: the scenes it may launch a
 
 # MyData
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L14)
 
 The platform's view of an application: the scenes it may launch and the parameters each of
 them takes. Written to StreamingAssets/MyData.json by [`PlatformDataSetting`](/api/vrframework-core-editors-build/PlatformDataSetting) so
@@ -36,5 +36,5 @@ public List<PlatformScene> scenes
 
 **Returns** `List<PlatformScene>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L18)
 

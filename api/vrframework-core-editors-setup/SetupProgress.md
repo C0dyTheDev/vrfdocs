@@ -8,7 +8,7 @@ description: 'What a sequence has done so far: one status, note and duration per
 
 # SetupProgress
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L106)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L106)
 
 What a sequence has done so far: one status, note and duration per step, plus how it ended.
 
@@ -39,7 +39,7 @@ public string abortedBecause
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L128)
 
 ### durations {#durations}
 
@@ -51,7 +51,7 @@ public List<float> durations
 
 **Returns** `List<float>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L118)
 
 ### failures {#failures}
 
@@ -63,7 +63,7 @@ public int failures
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L124)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L124)
 
 ### finished {#finished}
 
@@ -75,7 +75,7 @@ public bool finished
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L126)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L126)
 
 ### index {#index}
 
@@ -87,7 +87,7 @@ public int index
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L121)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L121)
 
 ### notes {#notes}
 
@@ -99,7 +99,7 @@ public List<string> notes
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L116)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L116)
 
 ### states {#states}
 
@@ -111,7 +111,7 @@ public List<int> states
 
 **Returns** `List<int>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L114)
 
 ### summary {#summary}
 
@@ -123,7 +123,7 @@ public string summary
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L131)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L131)
 
 ### titles {#titles}
 
@@ -135,7 +135,7 @@ public List<string> titles
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L112)
 
 ## Properties
 
@@ -149,7 +149,7 @@ public bool Aborted { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L137)
 
 ### Count {#count}
 
@@ -161,7 +161,7 @@ public int Count { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L134)
 
 ### Settled {#settled}
 
@@ -173,7 +173,7 @@ public int Settled { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L140)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L140)
 
 ## Methods
 
@@ -193,7 +193,7 @@ public float DurationOf(int step)
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L176)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L176)
 
 ### NoteOf(int) {#noteof-int32}
 
@@ -211,7 +211,7 @@ public string NoteOf(int step)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L170)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L170)
 
 ### StatusOf(int) {#statusof-int32}
 
@@ -229,7 +229,7 @@ public SetupStepStatus StatusOf(int step)
 
 **Returns** [`SetupStepStatus`](/api/vrframework-core-editors-setup/SetupStepStatus) - Its status, or Pending when there is no such step.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L164)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L164)
 
 ### TitleOf(int) {#titleof-int32}
 
@@ -247,5 +247,5 @@ public string TitleOf(int step)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - Its title, or an empty string when there is no such step.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L156)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L156)
 

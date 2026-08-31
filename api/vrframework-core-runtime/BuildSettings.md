@@ -8,7 +8,7 @@ description: 'Build flags baked into the player, so a build can tell at runtime 
 
 # BuildSettings
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/BuildSettings.cs#L7)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/BuildSettings.cs#L7)
 
 Build flags baked into the player, so a build can tell at runtime how it was produced.
 
@@ -31,5 +31,5 @@ public bool isProductionBuild
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/BuildSettings.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/BuildSettings.cs#L11)
 

@@ -8,7 +8,7 @@ description: 'The window that picks a translation entry: lists the entries of on
 
 # LanguageDialog
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageDialog.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageDialog.cs#L14)
 
 The window that picks a translation entry: lists the entries of one translation asset, with
 search, sorting and filters for translated and untranslated ones.
@@ -40,5 +40,5 @@ public static LanguageDialog ShowDialog(int selected, List<(string guid, string 
 
 **Returns** [`LanguageDialog`](/api/vrframework-core-editors/LanguageDialog) - The open dialog.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageDialog.cs#L293)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageDialog.cs#L293)
 

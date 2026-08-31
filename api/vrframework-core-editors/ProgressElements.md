@@ -8,7 +8,7 @@ description: 'What the graph window is currently showing: the block nodes, the l
 
 # ProgressElements
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L14)
 
 What the graph window is currently showing: the block nodes, the lines between them and what is
 selected. Builds the whole picture from the scene's scenario and rebuilds it on demand.
@@ -31,7 +31,7 @@ public Dictionary<ProgressBlock, BlockView> blockLinks
 
 **Returns** `Dictionary<ProgressBlock, BlockView>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L18)
 
 ### blocks {#blocks}
 
@@ -43,7 +43,7 @@ public List<BlockView> blocks
 
 **Returns** `List<BlockView>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L20)
 
 ### inputLines {#inputlines}
 
@@ -55,7 +55,7 @@ public Dictionary<BlockView, List<Line>> inputLines
 
 **Returns** `Dictionary<BlockView, List<Line>>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L24)
 
 ### lines {#lines}
 
@@ -67,7 +67,7 @@ public List<Line> lines
 
 **Returns** `List<Line>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L26)
 
 ### outputLines {#outputlines}
 
@@ -79,7 +79,7 @@ public Dictionary<BlockView, List<Line>> outputLines
 
 **Returns** `Dictionary<BlockView, List<Line>>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L29)
 
 ### selected {#selected}
 
@@ -91,7 +91,7 @@ public List<IDraggable> selected
 
 **Returns** `List<IDraggable>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L32)
 
 ## Properties
 
@@ -105,7 +105,7 @@ public static ProgressManager progress { get; set; }
 
 **Returns** [`ProgressManager`](/api/vrframework-progress-runtime/ProgressManager)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L35)
 
 ## Methods
 
@@ -125,7 +125,7 @@ public BlockView AddBlock(ProgressBlock progressBlock)
 
 **Returns** [`BlockView`](/api/vrframework-core-editors/BlockView) - The new node.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L50)
 
 ### AddLine(InputPort, OutputPort, LineType) {#addline-inputport-outputport-linetype}
 
@@ -145,7 +145,7 @@ public Line AddLine(InputPort inputPort, OutputPort outputPort, LineType type)
 
 **Returns** [`Line`](/api/vrframework-core-editors/Line) - The new line.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L64)
 
 ### ClearAll() {#clearall}
 
@@ -155,7 +155,7 @@ Takes every node and line off the canvas and forgets them.
 public void ClearAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L98)
 
 ### FindClosestBlockToPosition(Vector2) {#findclosestblocktoposition-vector2}
 
@@ -173,7 +173,7 @@ public BlockView FindClosestBlockToPosition(Vector2 pos)
 
 **Returns** [`BlockView`](/api/vrframework-core-editors/BlockView) - The nearest node, or null when the canvas is empty.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L377)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L377)
 
 ### OutputLinesOfPort(OutputPort) {#outputlinesofport-outputport}
 
@@ -191,7 +191,7 @@ public List<Line> OutputLinesOfPort(OutputPort outputPort)
 
 **Returns** `List<Line>` - Its outgoing lines.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L369)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L369)
 
 ### RecalculateSelection(SelectionBox) {#recalculateselection-selectionbox}
 
@@ -207,7 +207,7 @@ public void RecalculateSelection(SelectionBox selection)
 | --- | --- | --- |
 | `selection` | [`SelectionBox`](/api/vrframework-core-editors/SelectionBox) | The rubber band. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L233)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L233)
 
 ### Redraw() {#redraw}
 
@@ -218,7 +218,7 @@ node coloured for what it is in the run.
 public void Redraw()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L273)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L273)
 
 ### ResetSelection() {#resetselection}
 
@@ -228,7 +228,7 @@ Clears the selection.
 public void ResetSelection()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L254)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L254)
 
 ### SetDirty() {#setdirty}
 
@@ -238,7 +238,7 @@ Asks for a redraw on the next tick.
 public void SetDirty()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L262)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L262)
 
 ### UpdateHintText(VisualElement) {#updatehinttext-visualelement}
 
@@ -254,5 +254,5 @@ public void UpdateHintText(VisualElement elem)
 | --- | --- | --- |
 | `elem` | [`VisualElement`](https://docs.unity3d.com/ScriptReference/UIElements.VisualElement.html) | Element under the pointer. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressElements.cs#L399)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressElements.cs#L399)
 

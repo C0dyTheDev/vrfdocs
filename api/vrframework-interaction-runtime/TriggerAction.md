@@ -8,7 +8,7 @@ description: 'Raises events when a matching object enters or leaves this trigger
 
 # TriggerAction
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L15)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L15)
 
 Raises events when a matching object enters or leaves this trigger. Repeated entries are held
 off for a moment, so an object jittering on the boundary fires once rather than many times.
@@ -33,7 +33,7 @@ public string id
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L20)
 
 ### identification {#identification}
 
@@ -45,7 +45,7 @@ public TriggerIdentification identification
 
 **Returns** [`TriggerIdentification`](/api/vrframework-interaction-runtime/TriggerIdentification)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L18)
 
 ### identificationObject {#identificationobject}
 
@@ -57,7 +57,7 @@ public GameObject identificationObject
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L22)
 
 ### OnEnter {#onenter}
 
@@ -69,7 +69,7 @@ public UnityEvent OnEnter
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L25)
 
 ### OnExit {#onexit}
 
@@ -81,7 +81,7 @@ public UnityEvent OnExit
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L27)
 
 ## Methods
 
@@ -99,7 +99,7 @@ protected virtual void OnTriggerEntered(Collider other)
 | --- | --- | --- |
 | `other` | [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) | Collider that entered. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L102)
 
 ### OnTriggerMatched(Collider) {#ontriggermatched-collider}
 
@@ -117,5 +117,5 @@ protected virtual bool OnTriggerMatched(Collider other)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when it is one this trigger cares about.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L123)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L90)
 

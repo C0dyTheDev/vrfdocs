@@ -8,7 +8,7 @@ description: 'A single entry in the Scene Builder.'
 
 # SceneBuilderItem
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L122)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L122)
 
 A single entry in the Scene Builder. Catalogs produce these; the window only ever talks to
 this type, so adding a new content source never touches UI code.
@@ -37,7 +37,7 @@ public SceneBuilderItem(string id, string displayName, SceneBuilderItemKind kind
 | `displayName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name shown on the card. |
 | `kind` | [`SceneBuilderItemKind`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItemKind) | What the entry fundamentally is. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L131)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L131)
 
 ## Properties
 
@@ -51,7 +51,7 @@ public IReadOnlyList<ItemAction> Actions { get; }
 
 **Returns** `IReadOnlyList<ItemAction>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L180)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L187)
 
 ### CanBePlaced {#canbeplaced}
 
@@ -63,7 +63,7 @@ public bool CanBePlaced { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L185)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L192)
 
 ### CanPlace {#canplace}
 
@@ -75,7 +75,7 @@ public Func<PlacementContext, bool> CanPlace { get; set; }
 
 **Returns** `Func<PlacementContext, bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L177)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L184)
 
 ### Description {#description}
 
@@ -87,7 +87,7 @@ public string Description { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L147)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L147)
 
 ### Details {#details}
 
@@ -99,7 +99,7 @@ public IReadOnlyList<DetailField> Details { get; }
 
 **Returns** `IReadOnlyList<DetailField>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L182)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L189)
 
 ### DisplayName {#displayname}
 
@@ -111,7 +111,7 @@ public string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L142)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L142)
 
 ### Group {#group}
 
@@ -123,7 +123,7 @@ public string Group { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L150)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L150)
 
 ### Id {#id}
 
@@ -135,7 +135,7 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L139)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L139)
 
 ### IsAlreadyInScene {#isalreadyinscene}
 
@@ -147,7 +147,7 @@ public Func<bool> IsAlreadyInScene { get; set; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L171)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L178)
 
 ### Kind {#kind}
 
@@ -159,7 +159,7 @@ public SceneBuilderItemKind Kind { get; }
 
 **Returns** [`SceneBuilderItemKind`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItemKind)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L144)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L144)
 
 ### Payload {#payload}
 
@@ -171,7 +171,7 @@ public Object Payload { get; set; }
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L156)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L163)
 
 ### PayloadType {#payloadtype}
 
@@ -183,7 +183,7 @@ public Type PayloadType { get; set; }
 
 **Returns** [`Type`](https://learn.microsoft.com/dotnet/api/system.type)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L159)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L166)
 
 ### Place {#place}
 
@@ -195,7 +195,7 @@ public Action<PlacementContext> Place { get; set; }
 
 **Returns** `Action<PlacementContext>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L174)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L181)
 
 ### StatusLabel {#statuslabel}
 
@@ -207,7 +207,7 @@ public Func<string> StatusLabel { get; set; }
 
 **Returns** `Func<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L168)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L175)
 
 ### Tags {#tags}
 
@@ -219,7 +219,7 @@ public string[] Tags { get; set; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L153)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L160)
 
 ### Thumbnail {#thumbnail}
 
@@ -231,7 +231,7 @@ public Func<Texture> Thumbnail { get; set; }
 
 **Returns** `Func<Texture>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L162)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L169)
 
 ### ThumbnailPending {#thumbnailpending}
 
@@ -243,7 +243,21 @@ public Func<bool> ThumbnailPending { get; set; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L165)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L172)
+
+### TypeLabel {#typelabel}
+
+What the entry is, in one word - "Prefabs", "Sounds" - stamped on the card so a mixed
+grid reads without hovering. Null leaves the card unstamped, which is right for a
+category whose entries are all the same thing.
+
+```csharp
+public string TypeLabel { get; set; }
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L157)
 
 ## Methods
 
@@ -263,7 +277,7 @@ public bool AcceptsPlacement(PlacementContext context)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the drop may go ahead.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L209)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L216)
 
 ### AddAction(ItemAction) {#addaction-itemaction}
 
@@ -281,7 +295,7 @@ public SceneBuilderItem AddAction(ItemAction action)
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) - This item, so calls can be chained.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L190)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L197)
 
 ### AddDetail(string, string) {#adddetail-string-string}
 
@@ -300,7 +314,7 @@ public SceneBuilderItem AddDetail(string label, string value)
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) - This item, so calls can be chained.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L200)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L207)
 
 ### Matches(string) {#matches-string}
 
@@ -318,5 +332,5 @@ public bool Matches(string query)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L218)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L225)
 

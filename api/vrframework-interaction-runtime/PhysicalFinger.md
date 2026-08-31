@@ -8,7 +8,7 @@ description: 'Pairs a finger with the collider component that reports its contac
 
 # PhysicalFinger
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L415)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabHand.cs#L841)
 
 Pairs a finger with the collider component that reports its contacts.
 
@@ -31,7 +31,7 @@ public FingerController finger
 
 **Returns** [`FingerController`](/api/vrframework-interaction-runtime/FingerController)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L421)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabHand.cs#L847)
 
 ### fingerType {#fingertype}
 
@@ -43,5 +43,5 @@ public FingerType fingerType
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L419)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabHand.cs#L845)
 

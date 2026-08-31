@@ -8,7 +8,7 @@ description: 'Draws an untranslated sprite entry.'
 
 # UntranslatedSpriteElementDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L114)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L114)
 
 Draws an untranslated sprite entry.
 
@@ -29,5 +29,5 @@ Builds the sprite entry drawer.
 public UntranslatedSpriteElementDrawer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L118)
 

@@ -8,7 +8,7 @@ description: 'One turn in the transcript - a user prompt, or an assistant reply 
 
 # OpenCodeMessage
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L263)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L263)
 
 One turn in the transcript - a user prompt, or an assistant reply and its tool calls.
 
@@ -34,7 +34,7 @@ public OpenCodeMessage(string id)
 | --- | --- | --- |
 | `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID the server gave the message. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L270)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L270)
 
 ## Properties
 
@@ -48,7 +48,7 @@ public string Agent { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L280)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L280)
 
 ### Error {#error}
 
@@ -60,7 +60,7 @@ public string Error { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L284)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L284)
 
 ### Id {#id}
 
@@ -72,7 +72,7 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L276)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L276)
 
 ### IsUser {#isuser}
 
@@ -84,7 +84,7 @@ public bool IsUser { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L290)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L290)
 
 ### ModelId {#modelid}
 
@@ -96,7 +96,7 @@ public string ModelId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L282)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L282)
 
 ### Parts {#parts}
 
@@ -108,7 +108,7 @@ public IReadOnlyList<OpenCodePart> Parts { get; }
 
 **Returns** `IReadOnlyList<OpenCodePart>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L287)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L287)
 
 ### PlainText {#plaintext}
 
@@ -120,7 +120,7 @@ public string PlainText { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L293)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L293)
 
 ### Role {#role}
 
@@ -132,7 +132,7 @@ public string Role { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L278)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L278)
 
 ## Methods
 
@@ -151,7 +151,7 @@ public void AppendToPart(string partId, string delta)
 | `partId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `delta` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L350)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L350)
 
 ### UpsertPart(JObject) {#upsertpart-jobject}
 
@@ -167,5 +167,5 @@ public void UpsertPart(JObject source)
 | --- | --- | --- |
 | `source` | `JObject` | The part as the server sent it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L300)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L300)
 

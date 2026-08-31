@@ -8,7 +8,7 @@ description: 'Setup steps a project adds to the end of "Set Up Project for VR".'
 
 # SetupExtension
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L34)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L34)
 
 Setup steps a project adds to the end of "Set Up Project for VR". Subclass this anywhere in an
 editor assembly and it is picked up automatically - the same way a project adds validator
@@ -54,7 +54,7 @@ public virtual string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L40)
 
 ### Order {#order}
 
@@ -66,7 +66,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L37)
 
 ## Methods
 
@@ -81,5 +81,5 @@ public abstract IEnumerable<SetupStep> Steps()
 
 **Returns** `IEnumerable<SetupStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L46)
 

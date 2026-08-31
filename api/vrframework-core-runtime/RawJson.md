@@ -8,7 +8,7 @@ description: 'A report value that is already JSON and goes into the report untou
 
 # RawJson
 
-**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L32)
+**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IReportContributor.cs#L32)
 
 A report value that is already JSON and goes into the report untouched. Everything else is
 escaped and serialized by the framework, which is what a contributor normally wants - reach
@@ -34,7 +34,7 @@ public RawJson(string json)
 | --- | --- | --- |
 | `json` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | JSON text. Not validated, and not escaped. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IReportContributor.cs#L39)
 
 ## Fields
 
@@ -48,7 +48,7 @@ public readonly string Json
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IReportContributor.cs#L35)
 
 ## Methods
 
@@ -62,5 +62,5 @@ public override string ToString()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The wrapped JSON.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IReportContributor.cs#L46)
 

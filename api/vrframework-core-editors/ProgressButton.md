@@ -8,7 +8,7 @@ description: 'A button on the graph canvas, wrapped so it carries a status bar h
 
 # ProgressButton
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressButton.cs#L5)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressButton.cs#L5)
 
 A button on the graph canvas, wrapped so it carries a status bar hint of its own.
 
@@ -30,7 +30,7 @@ Builds a button.
 public ProgressButton()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressButton.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressButton.cs#L36)
 
 ### ProgressButton(Button) {#ctor-button}
 
@@ -46,7 +46,7 @@ public ProgressButton(Button button)
 | --- | --- | --- |
 | `button` | [`Button`](https://docs.unity3d.com/ScriptReference/UIElements.Button.html) | Button to wrap. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressButton.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressButton.cs#L21)
 
 ### ProgressButton(string, Button) {#ctor-string-button}
 
@@ -63,7 +63,7 @@ public ProgressButton(string hint, Button button)
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 | `button` | [`Button`](https://docs.unity3d.com/ScriptReference/UIElements.Button.html) | Button to wrap. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressButton.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressButton.cs#L13)
 
 ### ProgressButton(string) {#ctor-string}
 
@@ -79,7 +79,7 @@ public ProgressButton(string hint)
 | --- | --- | --- |
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressButton.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressButton.cs#L29)
 
 ## Fields
 
@@ -93,5 +93,5 @@ public Button button
 
 **Returns** [`Button`](https://docs.unity3d.com/ScriptReference/UIElements.Button.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressButton.cs#L8)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressButton.cs#L8)
 

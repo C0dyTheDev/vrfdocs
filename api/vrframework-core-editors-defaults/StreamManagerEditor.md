@@ -8,7 +8,7 @@ description: 'Default framework inspector for StreamManager/api/vrframework-stre
 
 # StreamManagerEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L267)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L302)
 
 Default framework inspector for [`StreamManager`](/api/vrframework-streaming-runtime/StreamManager).
 

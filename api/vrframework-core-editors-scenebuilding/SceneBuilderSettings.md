@@ -8,10 +8,12 @@ description: 'Per-project Scene Builder configuration.'
 
 # SceneBuilderSettings
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L11)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L12)
 
 Per-project Scene Builder configuration. Lives in the consuming project (not the package)
 so an installed UPM copy stays read-only. Created on first access.
+The Assets category is not configured here: it reads the organisation's Asset Manager
+library from fixed settings baked into the source, so every project sees the same library.
 
 ```csharp
 public class SceneBuilderSettings : ScriptableObject
@@ -20,20 +22,6 @@ public class SceneBuilderSettings : ScriptableObject
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) ← [`ScriptableObject`](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) ← `SceneBuilderSettings`
 
 ## Fields
-
-### assetFolders {#assetfolders}
-
-Folders the asset catalog searches.
-
-```csharp
-[Header("ASSETS - LOCAL SOURCE")]
-[Tooltip("Folders indexed by the local asset source. Models, sounds and textures only.")]
-public List<string> assetFolders
-```
-
-**Returns** `List<string>`
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L29)
 
 ### cardSize {#cardsize}
 
@@ -47,20 +35,7 @@ public float cardSize
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L49)
-
-### includeFrameworkPrefabs {#includeframeworkprefabs}
-
-Whether the framework's own prefabs are offered alongside the project's.
-
-```csharp
-[Tooltip("Also list prefabs that ship inside the VR Framework package.")]
-public bool includeFrameworkPrefabs
-```
-
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L20)
 
 ### lastCategoryId {#lastcategoryid}
 
@@ -72,74 +47,7 @@ public string lastCategoryId
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L52)
-
-### prefabFolders {#prefabfolders}
-
-Folders the prefab catalog searches.
-
-```csharp
-[Header("PREFABS")]
-[Tooltip("Folders scanned for prefabs. Leave empty to scan the whole Assets folder.")]
-public List<string> prefabFolders
-```
-
-**Returns** `List<string>`
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L20)
-
-### remoteAuthorization {#remoteauthorization}
-
-Authorization header sent with remote requests, when the source needs one.
-
-```csharp
-[Tooltip("Optional value sent as the Authorization header when talking to the remote database.")]
-public string remoteAuthorization
-```
-
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L38)
-
-### remoteCacheSeconds {#remotecacheseconds}
-
-How long a fetched remote manifest is reused before it is fetched again, in seconds.
-
-```csharp
-[Tooltip("Seconds before a cached remote manifest is considered stale.")]
-public int remoteCacheSeconds
-```
-
-**Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L46)
-
-### remoteDownloadFolder {#remotedownloadfolder}
-
-Folder downloaded remote assets are written to.
-
-```csharp
-[Tooltip("Where downloaded remote assets are imported to.")]
-public string remoteDownloadFolder
-```
-
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L42)
-
-### remoteManifestUrl {#remotemanifesturl}
-
-Address of the remote asset manifest. Empty hides the remote category.
-
-```csharp
-[Header("ASSETS - REMOTE SOURCE")]
-[Tooltip("URL of the JSON manifest describing the external asset database. Empty disables the source.")]
-public string remoteManifestUrl
-```
-
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L23)
 
 ### SettingsPath {#settingspath}
 
@@ -151,7 +59,7 @@ public const string SettingsPath = "Assets/Editor/VRFSceneBuilderSettings.asset"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L15)
 
 ## Properties
 
@@ -165,7 +73,7 @@ public static SceneBuilderSettings Instance { get; }
 
 **Returns** [`SceneBuilderSettings`](/api/vrframework-core-editors-scenebuilding/SceneBuilderSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L26)
 
 ## Methods
 
@@ -177,25 +85,5 @@ Writes the settings back to disk.
 public void Save()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L81)
-
-### ValidFolders(IEnumerable\<string>, string) {#validfolders-string-string}
-
-Search roots for the given folder list, dropping anything that no longer exists so
-AssetDatabase.FindAssets does not warn.
-
-```csharp
-public static string[] ValidFolders(IEnumerable<string> folders, string fallback = "Assets")
-```
-
-**Parameters**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `folders` | `IEnumerable<string>` |  |
-| `fallback` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-
-**Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L52)
 

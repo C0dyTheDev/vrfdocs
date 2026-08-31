@@ -8,7 +8,7 @@ description: 'What the framework expects of a platform module: the handshake wit
 
 # IPlatformService
 
-**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L9)
+**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L10)
 
 What the framework expects of a platform module: the handshake with whatever LMS or launcher
 started the session - its parameters, the language it asks for, and the report and completion
@@ -32,7 +32,7 @@ bool IsReady { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L13)
 
 ## Methods
 
@@ -50,7 +50,7 @@ void CompleteSession(bool success)
 | --- | --- | --- |
 | `success` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the session counts as passed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L25)
 
 ### GetLanguage() {#getlanguage}
 
@@ -62,7 +62,7 @@ string GetLanguage()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The language name, or null when the platform did not ask for one.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L28)
 
 ### GetParameter(string) {#getparameter-string}
 
@@ -80,7 +80,7 @@ string GetParameter(string name)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The value, or null when the platform did not supply it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L17)
 
 ### SendReport() {#sendreport}
 
@@ -92,7 +92,7 @@ report before then. Reports are delivered one at a time, in the order they were 
 void SendReport()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L35)
 
 ### SetInfoText(string) {#setinfotext-string}
 
@@ -108,7 +108,7 @@ void SetInfoText(string text)
 | --- | --- | --- |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text to display. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L20)
 
 ## Events
 
@@ -122,7 +122,7 @@ event Action CompletionFinished
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L42)
 
 ### CompletionStarted {#completionstarted}
 
@@ -134,7 +134,7 @@ event Action CompletionStarted
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L40)
 
 ### SessionInitialized {#sessioninitialized}
 
@@ -146,5 +146,5 @@ event Action SessionInitialized
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IPlatformService.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IPlatformService.cs#L38)
 

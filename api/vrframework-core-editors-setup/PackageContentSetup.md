@@ -8,7 +8,7 @@ description: 'The parts of the setup that bring content in from outside the proj
 
 # PackageContentSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L22)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageContentSetup.cs#L22)
 
 The parts of the setup that bring content in from outside the project: packages the framework
 depends on but does not ship, the TextMesh Pro resources, and the XR samples the framework's
@@ -34,7 +34,7 @@ so the package manager resolves and reloads once instead of once per package.
 public static void AddRequiredPackages()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageContentSetup.cs#L118)
 
 ### AllowPreReleasePackages() {#allowprereleasepackages}
 
@@ -49,7 +49,7 @@ editor being reachable by an agent fails behind it.
 public static void AllowPreReleasePackages()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageContentSetup.cs#L67)
 
 ### ImportSamples() {#importsamples}
 
@@ -61,7 +61,7 @@ asynchronously and then raced its own callback.
 public static void ImportSamples()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L238)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageContentSetup.cs#L216)
 
 ### ImportTextMeshProResources() {#importtextmeshproresources}
 
@@ -75,7 +75,7 @@ scenes, prefabs and scripts into every project.
 public static void ImportTextMeshProResources()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L182)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageContentSetup.cs#L160)
 
 ### RequiredPackagesResolved() {#requiredpackagesresolved}
 
@@ -87,7 +87,7 @@ public static bool RequiredPackagesResolved()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when nothing is missing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageContentSetup.cs#L136)
 
 ### TextMeshProResourcesImported() {#textmeshproresourcesimported}
 
@@ -99,5 +99,5 @@ public static bool TextMeshProResourcesImported()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when they are present.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L208)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageContentSetup.cs#L186)
 

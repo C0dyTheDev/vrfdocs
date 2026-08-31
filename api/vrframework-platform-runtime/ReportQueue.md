@@ -8,7 +8,7 @@ description: 'Delivers reports one at a time and in the order they were queued: 
 
 # ReportQueue
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L82)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L82)
 
 Delivers reports one at a time and in the order they were queued: the next one is only sent
 once the platform has confirmed the one before it. Reports describe a session that is still
@@ -40,7 +40,7 @@ public ReportQueue(ReportSettings settings, Object context = null)
 | `settings` | [`ReportSettings`](/api/vrframework-platform-runtime/ReportSettings) | Delivery settings. Null uses the defaults. |
 | `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object the queue's log lines are attributed to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L96)
 
 ## Properties
 
@@ -54,7 +54,7 @@ public bool IsIdle { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L106)
 
 ### PendingCount {#pendingcount}
 
@@ -66,7 +66,7 @@ public int PendingCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L103)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L103)
 
 ## Methods
 
@@ -84,7 +84,7 @@ public void Enqueue(QueuedReport report)
 | --- | --- | --- |
 | `report` | [`QueuedReport`](/api/vrframework-platform-runtime/QueuedReport) | Delivery to queue. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L118)
 
 ### Run() {#run}
 
@@ -96,7 +96,7 @@ public IEnumerator Run()
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that never completes - it is the queue's worker loop.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L136)
 
 ### WaitUntilEmpty(float) {#waituntilempty-single}
 
@@ -115,7 +115,7 @@ public IEnumerator WaitUntilEmpty(float timeout)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the queue empties or the wait runs out.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L198)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L198)
 
 ## Events
 
@@ -129,7 +129,7 @@ public event Action<QueuedReport> Delivered
 
 **Returns** `Action<QueuedReport>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L109)
 
 ### Dropped {#dropped}
 
@@ -141,5 +141,5 @@ public event Action<QueuedReport> Dropped
 
 **Returns** `Action<QueuedReport>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L112)
 

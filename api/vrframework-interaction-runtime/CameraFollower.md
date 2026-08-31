@@ -8,7 +8,7 @@ description: 'Keeps an object in front of the player, following the head''s yaw 
 
 # CameraFollower
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraFollower.cs#L10)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CameraFollower.cs#L10)
 
 Keeps an object in front of the player, following the head's yaw only and easing into place, so
 a panel or a hint stays readable without swinging with every head tilt.
@@ -31,7 +31,7 @@ public float distance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraFollower.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CameraFollower.cs#L13)
 
 ### height {#height}
 
@@ -43,7 +43,7 @@ public float height
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraFollower.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CameraFollower.cs#L15)
 
 ### smoothSpeed {#smoothspeed}
 
@@ -55,5 +55,5 @@ public float smoothSpeed
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraFollower.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CameraFollower.cs#L17)
 

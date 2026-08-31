@@ -8,7 +8,7 @@ description: 'The socket of a port: what a line attaches to and what a dragged l
 
 # BlockPortHole
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/BlockPortHole.cs#L3)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/BlockPortHole.cs#L3)
 
 The socket of a port: what a line attaches to and what a dragged line snaps onto.
 
@@ -32,5 +32,5 @@ Builds the hole and its dot.
 public BlockPortHole()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/BlockPortHole.cs#L9)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/BlockPortHole.cs#L9)
 

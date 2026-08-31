@@ -8,7 +8,7 @@ description: 'The one place to obtain a service: Get<T>/api/vrframework-core-run
 
 # RuntimeRegistry
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L11)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L11)
 
 The one place to obtain a service: [`Get<T>()`](/api/vrframework-core-runtime/RuntimeRegistry#get-1) when it must already be there,
 [`Resolve<T>(Action<T>, Func<T, bool>)`](/api/vrframework-core-runtime/RuntimeRegistry#resolve-1-0-boolean) when it may still be starting up or may not exist at all.
@@ -31,7 +31,7 @@ public static float ResolveTimeout
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L18)
 
 ## Properties
 
@@ -46,7 +46,7 @@ public static bool RegistrationComplete { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L24)
 
 ## Methods
 
@@ -58,7 +58,7 @@ Drops every registration and reopens registration. Called between play sessions.
 public static void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L76)
 
 ### Get\<T>() {#get-1}
 
@@ -77,7 +77,7 @@ public static T Get<T>() where T : class
 
 **Returns** `T` - The registered implementation, or null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L70)
 
 ### MarkRegistrationComplete() {#markregistrationcomplete}
 
@@ -87,7 +87,7 @@ Called by VRCore once every module in the scene has been initialised.
 public static void MarkRegistrationComplete()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L85)
 
 ### Register\<T>(T) {#register-1-0}
 
@@ -110,7 +110,7 @@ public static void Register<T>(T service) where T : class
 | --- | --- | --- |
 | `service` | `T` | Implementation to publish. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L42)
 
 ### Resolve\<T>(Action\<T>, Func\<T, bool>) {#resolve-1-0-boolean}
 
@@ -138,7 +138,7 @@ public static IEnumerator Resolve<T>(Action<T> onResolved, Func<T, bool> until =
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the service is handed over.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L114)
 
 ### ResolveLocalization(Action\<ILocalizationService>) {#resolvelocalization-ilocalizationservice}
 
@@ -156,7 +156,7 @@ public static IEnumerator ResolveLocalization(Action<ILocalizationService> onRes
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once localization is settled.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L158)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L158)
 
 ### Unregister\<T>() {#unregister-1}
 
@@ -172,5 +172,5 @@ public static void Unregister<T>() where T : class
 | --- | --- |
 | `T` | Service interface to withdraw. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/RuntimeRegistry.cs#L59)
 

@@ -8,7 +8,7 @@ description: 'Base of the scenario objects whose name is kept in step with their
 
 # RenamableBehaviour
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/RenamableBehaviour.cs#L9)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/RenamableBehaviour.cs#L9)
 
 Base of the scenario objects whose name is kept in step with their object name. The renamer
 prefixes those objects with their order, e.g. "[01-02]  Name", and this strips it back off.
@@ -35,7 +35,7 @@ public const string OrderSeparator = "–"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/RenamableBehaviour.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/RenamableBehaviour.cs#L16)
 
 ## Properties
 
@@ -49,7 +49,7 @@ public string previousName { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/RenamableBehaviour.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/RenamableBehaviour.cs#L23)
 
 ## Methods
 
@@ -63,7 +63,7 @@ public string GetObjectName()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/RenamableBehaviour.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/RenamableBehaviour.cs#L30)
 
 ### OnObjectNameChange() {#onobjectnamechange}
 
@@ -73,7 +73,7 @@ Called when the object has been renamed in the hierarchy.
 public abstract void OnObjectNameChange()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/RenamableBehaviour.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/RenamableBehaviour.cs#L27)
 
 ### UpdatePreviousName() {#updatepreviousname}
 
@@ -83,7 +83,7 @@ Takes the current name as the one to compare against from now on.
 public void UpdatePreviousName()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/RenamableBehaviour.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/RenamableBehaviour.cs#L46)
 
 ### WasNameChanged() {#wasnamechanged}
 
@@ -95,5 +95,5 @@ public bool WasNameChanged()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the name differs from [`previousName`](/api/vrframework-progress-runtime/RenamableBehaviour#previousname).
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/RenamableBehaviour.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/RenamableBehaviour.cs#L40)
 

@@ -8,7 +8,7 @@ description: 'Runs every discovered rule and hands back one report.'
 
 # VRFValidator
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/VRFValidator.cs#L12)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/VRFValidator.cs#L12)
 
 Runs every discovered rule and hands back one report. [`ValidatorWindow`](/api/vrframework-core-editors-validation/ValidatorWindow) is the
 usual front end; [`ValidateToConsole()`](/api/vrframework-core-editors-validation/VRFValidator#validatetoconsole) is there for a build step or a quick look.
@@ -38,7 +38,7 @@ public static ValidationReport Run(ValidationScope? only = null)
 
 **Returns** [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/VRFValidator.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/VRFValidator.cs#L18)
 
 ### ValidateToConsole() {#validatetoconsole}
 
@@ -49,5 +49,5 @@ Runs every rule and writes what they find to the Unity console.
 public static void ValidateToConsole()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/VRFValidator.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/VRFValidator.cs#L51)
 

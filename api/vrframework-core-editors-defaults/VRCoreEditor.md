@@ -8,7 +8,7 @@ description: 'Default framework inspector for VRCore/api/vrframework-core-runtim
 
 # VRCoreEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L143)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L143)
 
 Default framework inspector for [`VRCore`](/api/vrframework-core-runtime/VRCore).
 

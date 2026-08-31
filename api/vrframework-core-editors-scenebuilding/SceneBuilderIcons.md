@@ -8,7 +8,7 @@ description: 'Thumbnail resolution for every kind of item.'
 
 # SceneBuilderIcons
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L14)
 
 Thumbnail resolution for every kind of item. Asset previews bake asynchronously, so callers
 poll [`IsPreviewPending(Object)`](/api/vrframework-core-editors-scenebuilding/SceneBuilderIcons#ispreviewpending-object) and refresh their card until it turns false.
@@ -38,7 +38,7 @@ public static Texture Builtin(string iconName)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L56)
 
 ### ClearCaches() {#clearcaches}
 
@@ -48,7 +48,7 @@ Drops every cached icon and thumbnail, so they are built again on next use.
 public static void ClearCaches()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L152)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L195)
 
 ### ForModuleType(Type) {#formoduletype-type}
 
@@ -66,7 +66,7 @@ public static Texture ForModuleType(Type type)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L171)
 
 ### ForType(Type) {#fortype-type}
 
@@ -84,7 +84,7 @@ public static Texture ForType(Type type)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L124)
 
 ### Framework(string) {#framework-string}
 
@@ -103,14 +103,40 @@ public static Texture Framework(string iconName)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L35)
+
+### FullPreview(Object) {#fullpreview-object}
+
+Full rendered preview of an asset, or null when Unity has not produced one. Asking for
+it is what queues the bake, so a caller that gets null should poll
+[`IsPreviewPending(Object)`](/api/vrframework-core-editors-scenebuilding/SceneBuilderIcons#ispreviewpending-object) and ask again.
+
+```csharp
+public static Texture FullPreview(Object asset)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `asset` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
+
+**Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L66)
 
 ### IsPreviewPending(Object) {#ispreviewpending-object}
 
-True while this asset's preview may still arrive. The per-asset query was retired in the
-EntityId migration, so this pairs "no full preview yet" with the global "previews are
-still baking" flag. It converges either way: once the bake queue drains the answer is
-false, whether or not the asset ever produces a preview.
+True while this asset's preview may still arrive, so the caller should ask for it again
+shortly.
+The per-asset query was retired in the EntityId migration and the global
+[`IsLoadingAssetPreviews()`](https://docs.unity3d.com/ScriptReference/AssetPreview.IsLoadingAssetPreviews.html) flag cannot stand in for it: it reads
+false on the very frame the bake is queued, which stopped callers polling before the
+first preview had a chance to arrive and left them showing the mini thumbnail for good.
+So the wait is counted per asset instead. Each poll re-requests the preview - which is
+also what keeps the bake queued - and the asset is given
+`PreviewPollBudget`tries before we accept that it has no preview to give,
+which is the honest answer for a prefab whose mesh is missing.
 
 ```csharp
 public static bool IsPreviewPending(Object asset)
@@ -124,7 +150,26 @@ public static bool IsPreviewPending(Object asset)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L102)
+
+### MiniThumbnail(Object) {#minithumbnail-object}
+
+The small type icon Unity always has for an asset - the prefab, mesh or clip icon. Never
+a picture of the asset itself, so it is the last resort rather than a preview.
+
+```csharp
+public static Texture MiniThumbnail(Object asset)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `asset` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
+
+**Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L75)
 
 ### Preview(Object) {#preview-object}
 
@@ -143,5 +188,5 @@ public static Texture Preview(Object asset)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L84)
 

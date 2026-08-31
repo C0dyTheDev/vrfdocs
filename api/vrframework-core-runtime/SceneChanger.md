@@ -8,7 +8,7 @@ description: 'Loads another scene on demand, optionally fading the view out firs
 
 # SceneChanger
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/QualityOfLife/SceneChanger.cs#L10)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/QualityOfLife/SceneChanger.cs#L10)
 
 Loads another scene on demand, optionally fading the view out first. Warns and cuts instead when
 the fade is asked for but the scene has no vision fader.
@@ -29,5 +29,5 @@ Starts the scene change.
 public void ChangeScene()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/QualityOfLife/SceneChanger.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/QualityOfLife/SceneChanger.cs#L16)
 

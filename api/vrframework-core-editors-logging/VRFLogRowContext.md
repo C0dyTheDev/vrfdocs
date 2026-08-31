@@ -8,7 +8,7 @@ description: 'Display options shared by every row, owned by the window and read 
 
 # VRFLogRowContext
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L8)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L8)
 
 Display options shared by every row, owned by the window and read on bind.
 
@@ -30,7 +30,7 @@ public bool colorize
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L11)
 
 ### expanded {#expanded}
 
@@ -42,7 +42,7 @@ public bool expanded
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L13)
 
 ### filter {#filter}
 
@@ -54,7 +54,7 @@ public VRFLogFilter filter
 
 **Returns** [`VRFLogFilter`](/api/vrframework-core-editors-logging/VRFLogFilter)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L15)
 
 ### fontSize {#fontsize}
 
@@ -66,7 +66,7 @@ public int fontSize
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L17)
 
 ### showChannel {#showchannel}
 
@@ -78,7 +78,7 @@ public bool showChannel
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L19)
 
 ### showSource {#showsource}
 
@@ -90,7 +90,7 @@ public bool showSource
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L21)
 
 ### timeMode {#timemode}
 
@@ -102,7 +102,7 @@ public VRFLogTimeMode timeMode
 
 **Returns** [`VRFLogTimeMode`](/api/vrframework-core-editors-logging/VRFLogTimeMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L23)
 
 ## Properties
 
@@ -116,5 +116,5 @@ public float RowHeight { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L26)
 

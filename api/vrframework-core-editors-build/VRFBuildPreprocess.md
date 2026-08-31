@@ -8,7 +8,7 @@ description: 'Prepares a build from the settings on the active build profile: th
 
 # VRFBuildPreprocess
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildPreprocess.cs#L16)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildPreprocess.cs#L16)
 
 Prepares a build from the settings on the active build profile: the player settings it ships
 under, and the files in StreamingAssets the runtime reads back.
@@ -37,7 +37,7 @@ public int callbackOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildPreprocess.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildPreprocess.cs#L19)
 
 ## Methods
 
@@ -56,5 +56,5 @@ public void OnPreprocessBuild(BuildReport report)
 | --- | --- | --- |
 | `report` | [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html) | Unity's report for the build being started. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildPreprocess.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildPreprocess.cs#L26)
 

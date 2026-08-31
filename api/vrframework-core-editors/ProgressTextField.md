@@ -8,7 +8,7 @@ description: 'A text field on the graph canvas, wrapped so it carries a status b
 
 # ProgressTextField
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressTextField.cs#L5)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressTextField.cs#L5)
 
 A text field on the graph canvas, wrapped so it carries a status bar hint of its own.
 
@@ -30,7 +30,7 @@ Builds a field.
 public ProgressTextField()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressTextField.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressTextField.cs#L36)
 
 ### ProgressTextField(string, TextField) {#ctor-string-textfield}
 
@@ -47,7 +47,7 @@ public ProgressTextField(string hint, TextField textField)
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 | `textField` | [`TextField`](https://docs.unity3d.com/ScriptReference/UIElements.TextField.html) | Field to wrap. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressTextField.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressTextField.cs#L13)
 
 ### ProgressTextField(string) {#ctor-string}
 
@@ -63,7 +63,7 @@ public ProgressTextField(string hint)
 | --- | --- | --- |
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressTextField.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressTextField.cs#L29)
 
 ### ProgressTextField(TextField) {#ctor-textfield}
 
@@ -79,7 +79,7 @@ public ProgressTextField(TextField textField)
 | --- | --- | --- |
 | `textField` | [`TextField`](https://docs.unity3d.com/ScriptReference/UIElements.TextField.html) | Field to wrap. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressTextField.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressTextField.cs#L21)
 
 ## Properties
 
@@ -93,5 +93,5 @@ public string value { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressTextField.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressTextField.cs#L43)
 

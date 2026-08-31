@@ -8,7 +8,7 @@ description: 'What a highlighted renderer looked like before it was highlighted,
 
 # HighlightData
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HighlightData.cs#L8)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HighlightData.cs#L8)
 
 What a highlighted renderer looked like before it was highlighted, so [`Highlight`](/api/vrframework-interaction-runtime/Highlight)
 can put it back exactly as it was.
@@ -31,7 +31,7 @@ public Color[] colors
 
 **Returns** [`Color[]`](https://docs.unity3d.com/ScriptReference/Color[].html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HighlightData.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HighlightData.cs#L12)
 
 ### objRenderer {#objrenderer}
 
@@ -43,7 +43,7 @@ public Renderer objRenderer
 
 **Returns** [`Renderer`](https://docs.unity3d.com/ScriptReference/Renderer.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HighlightData.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HighlightData.cs#L16)
 
 ### originalMaterials {#originalmaterials}
 
@@ -55,7 +55,7 @@ public Material[] originalMaterials
 
 **Returns** [`Material[]`](https://docs.unity3d.com/ScriptReference/Material[].html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HighlightData.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HighlightData.cs#L18)
 
 ### transparencyMaterials {#transparencymaterials}
 
@@ -67,5 +67,5 @@ public Material[] transparencyMaterials
 
 **Returns** [`Material[]`](https://docs.unity3d.com/ScriptReference/Material[].html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HighlightData.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HighlightData.cs#L22)
 

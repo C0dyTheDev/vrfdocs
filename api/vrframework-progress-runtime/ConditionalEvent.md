@@ -8,7 +8,7 @@ description: 'Raises one of two events depending on whether its flags add up - b
 
 # ConditionalEvent
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/ConditionalEvent.cs#L9)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/ConditionalEvent.cs#L9)
 
 Raises one of two events depending on whether its flags add up - branching within a scene,
 where [`ConditionalEnqueue`](/api/vrframework-progress-runtime/ConditionalEnqueue) branches the scenario itself.
@@ -29,5 +29,5 @@ Weighs the flags up and raises the event of whichever branch won.
 public override void Evaluate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/ConditionalEvent.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/ConditionalEvent.cs#L16)
 

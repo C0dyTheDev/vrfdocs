@@ -8,7 +8,7 @@ description: 'One translated clip across every language: the name it is picked b
 
 # LanguageAudioList
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L12)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L12)
 
 One translated clip across every language: the name it is picked by, and one entry per language.
 
@@ -29,7 +29,7 @@ Builds an entry with one slot per configured language.
 public LanguageAudioList()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L25)
 
 ## Fields
 
@@ -44,7 +44,7 @@ public LanguageAudioElement[] elements
 
 **Returns** `LanguageAudioElement[]`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L18)
 
 ### name {#name}
 
@@ -57,7 +57,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L16)
 
 ## Properties
 
@@ -72,7 +72,7 @@ public string guid { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L36)
 
 ## Methods
 
@@ -86,7 +86,7 @@ public static LanguageAudioElement[] GenerateElements()
 
 **Returns** `LanguageAudioElement[]` - One empty element per language, or an empty array when there is no language manager.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L59)
 
 ### RegenerateList() {#regeneratelist}
 
@@ -97,5 +97,5 @@ clips over by language ID so nothing already assigned is lost.
 public void RegenerateList()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioList.cs#L75)
 

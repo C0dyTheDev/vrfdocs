@@ -8,7 +8,7 @@ description: 'Watches hand tracking coming and going and hides whatever a hand i
 
 # RootPosition
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/RootPosition.cs#L15)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/RootPosition.cs#L15)
 
 Watches hand tracking coming and going and hides whatever a hand is holding while that hand is
 untracked, so a held object does not float about on its own. The renderers are put back exactly
@@ -32,7 +32,7 @@ public UnityEvent OnLeftHandTrackingAcquired
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/RootPosition.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/RootPosition.cs#L22)
 
 ### OnLeftHandTrackingLost {#onlefthandtrackinglost}
 
@@ -44,7 +44,7 @@ public UnityEvent OnLeftHandTrackingLost
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/RootPosition.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/RootPosition.cs#L24)
 
 ### OnRightHandTrackingAcquired {#onrighthandtrackingacquired}
 
@@ -56,7 +56,7 @@ public UnityEvent OnRightHandTrackingAcquired
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/RootPosition.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/RootPosition.cs#L18)
 
 ### OnRightHandTrackingLost {#onrighthandtrackinglost}
 
@@ -68,5 +68,5 @@ public UnityEvent OnRightHandTrackingLost
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/RootPosition.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/RootPosition.cs#L20)
 

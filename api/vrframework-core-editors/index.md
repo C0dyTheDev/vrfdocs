@@ -19,7 +19,6 @@ sidebar_position: 0
 | [`BlockPortHole`](/api/vrframework-core-editors/BlockPortHole) | The socket of a port: what a line attaches to and what a dragged line snaps onto. |
 | [`BlockView`](/api/vrframework-core-editors/BlockView) | One block as a node on the progress graph: a header, one input port and an output port per step. |
 | [`BlockViewHeader`](/api/vrframework-core-editors/BlockViewHeader) | The title bar of a block node: its number, its name, and the colour that says what it is. |
-| [`CameraRecenterEditor`](/api/vrframework-core-editors/CameraRecenterEditor) | Editor for the CameraRecenter script - gives the object a recognisable hierarchy icon. |
 | [`ComponentTogglerEditor`](/api/vrframework-core-editors/ComponentTogglerEditor) | Editor for ComponentToggler script. |
 | [`ConfirmDialog`](/api/vrframework-core-editors/ConfirmDialog) | A small yes or no window, used before anything in the graph deletes a scene object. |
 | [`DateLabel`](/api/vrframework-core-editors/DateLabel) | The corner label showing when the graph was last redrawn. |
@@ -39,6 +38,7 @@ sidebar_position: 0
 | [`LanguageDrawer`](/api/vrframework-core-editors/LanguageDrawer) | Draws one language of the language config: its name, and its ID in Debug Mode. |
 | [`LanguageElementDrawer`](/api/vrframework-core-editors/LanguageElementDrawer) | Draws one language's slot of a translation entry: the language name and its content. |
 | [`LanguageInstanceEditor`](/api/vrframework-core-editors/LanguageInstanceEditor) | Shared editor for the three localization instance assets. |
+| [`LanguageInstanceFilters`](/api/vrframework-core-editors/LanguageInstanceFilters) | The search text and per language visibility of a translation asset's inspector, kept one set per kind of content so the view survives being closed and reopened. |
 | [`LanguageListDrawer`](/api/vrframework-core-editors/LanguageListDrawer) | Draws one entry of a translation asset: its name, and a row per language, filtered by the asset's search text and language toggles. |
 | [`LanguageManagerEditor`](/api/vrframework-core-editors/LanguageManagerEditor) | Editor for the LanguageManager script. |
 | [`LanguageSpriteEditor`](/api/vrframework-core-editors/LanguageSpriteEditor) | Inspector for a sprite translation asset. |
@@ -48,14 +48,14 @@ sidebar_position: 0
 | [`Line`](/api/vrframework-core-editors/Line) | A connection drawn between two ports of the graph: it leaves a step's output port and arrives at a block's input port, which is the enqueue that step performs. |
 | [`LineDeleter`](/api/vrframework-core-editors/LineDeleter) | The bin a line is dropped onto to delete the connection it stands for. |
 | [`LocalizationPresence`](/api/vrframework-core-editors/LocalizationPresence) | Tracks whether the open scene has a Localization module, so drawers can decide between the translation picker and a plain asset field without searching on every repaint. |
-| [`MetaPicoSwitcher`](/api/vrframework-core-editors/MetaPicoSwitcher) | A toggle in the main toolbar that swaps the project between the Meta and the Pico OpenXR stacks: which vendor feature set is on for Android, which loader Standalone uses for link p |
 | [`MinigameManagerEditor`](/api/vrframework-core-editors/MinigameManagerEditor) | Editor for MinigamesManager script. |
 | [`NameChangeDetector`](/api/vrframework-core-editors/NameChangeDetector) | Watches the hierarchy for a renamed scenario object and keeps the component's own name, the order prefixes and the graph in step with it. |
 | [`OutputPort`](/api/vrframework-core-editors/OutputPort) | One step of a block, drawn as a row with a port on the right: the lines leaving it are the blocks that step queues. |
 | [`ParamDrawer`](/api/vrframework-core-editors/ParamDrawer) | Draws one platform parameter: its name, type and the values it offers. |
-| [`ParametersEditor`](/api/vrframework-core-editors/ParametersEditor) | Editor for Parameters scriptable object. |
+| [`PlatformConfigEditor`](/api/vrframework-core-editors/PlatformConfigEditor) | Editor for PlatformConfig scriptable object. |
 | [`PlatformSceneDrawer`](/api/vrframework-core-editors/PlatformSceneDrawer) | Draws one scene the platform may launch, with its parameters folded underneath. |
 | [`PlayAudioEditor`](/api/vrframework-core-editors/PlayAudioEditor) | Editor for PlayAudio script |
+| [`PlayerRecenterEditor`](/api/vrframework-core-editors/PlayerRecenterEditor) | Editor for the PlayerRecenter script - gives the object a recognisable hierarchy icon. |
 | [`ProgressButton`](/api/vrframework-core-editors/ProgressButton) | A button on the graph canvas, wrapped so it carries a status bar hint of its own. |
 | [`ProgressChildElement`](/api/vrframework-core-editors/ProgressChildElement) | A graph element laid out by its parent rather than positioned on the canvas itself - headers, port holders and the like. |
 | [`ProgressEditor`](/api/vrframework-core-editors/ProgressEditor) | The Progress Graph Editor window: the scene's scenario drawn as a node graph, one node per block and one line per enqueue. |
@@ -67,7 +67,6 @@ sidebar_position: 0
 | [`ProgressStepEditor`](/api/vrframework-core-editors/ProgressStepEditor) | Editor for the ProgressStep script. |
 | [`ProgressTextField`](/api/vrframework-core-editors/ProgressTextField) | A text field on the graph canvas, wrapped so it carries a status bar hint of its own. |
 | [`ReactOnParameterEditor`](/api/vrframework-core-editors/ReactOnParameterEditor) | Editor for ReactOnParameter script. |
-| [`ResourceAssetManager`](/api/vrframework-core-editors/ResourceAssetManager) | Writes generated assets into the project's Resources folder, creating it as needed. |
 | [`ScenarioEditor`](/api/vrframework-core-editors/ScenarioEditor) | Editor for the Scenario script. |
 | [`SceneBuilder`](/api/vrframework-core-editors/SceneBuilder) | Browses everything that can go into a scene - modules, prefabs, external assets, scene templates and framework components - and gets it there by button or by drag and drop. |
 | [`SearchablePopup`](/api/vrframework-core-editors/SearchablePopup) | A popup list with a search box, for picking one item out of a long list. |

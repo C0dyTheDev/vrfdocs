@@ -12,6 +12,7 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
+| [`CountToggle`](/api/vrframework-core-editors-ui/CountToggle) | Icon plus running count, the way the Unity console shows its severity switches. |
 | [`VRFComponentEditor`](/api/vrframework-core-editors-ui/VRFComponentEditor) | Base class for the framework's inspectors. |
 | [`VRFDefaultEditor`](/api/vrframework-core-editors-ui/VRFDefaultEditor) | The styled inspector a VRF script gets when it has no hand-written editor of its own. |
 | [`VRFEditorGUI`](/api/vrframework-core-editors-ui/VRFEditorGUI) | The drawing vocabulary shared by every VRF inspector: one header strip, collapsible section boxes, and the notices that explain a multi-object selection. |

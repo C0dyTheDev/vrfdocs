@@ -8,7 +8,7 @@ description: 'Sends encoded frames to the viewer over UDP and listens for its he
 
 # Sender
 
-**Class** · namespace `VRFramework.Streaming.Runtime` · assembly `VRFramework.Streaming.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L11)
+**Class** · namespace `VRFramework.Streaming.Runtime` · assembly `VRFramework.Streaming.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L11)
 
 Sends encoded frames to the viewer over UDP and listens for its heartbeat, which is how the
 stream knows whether anyone is watching.
@@ -29,7 +29,7 @@ Opens the socket and resolves the viewer's endpoint.
 public Sender()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L34)
 
 ## Fields
 
@@ -43,7 +43,7 @@ public UdpClient client
 
 **Returns** [`UdpClient`](https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L22)
 
 ### lastTickReceived {#lasttickreceived}
 
@@ -55,7 +55,7 @@ public long lastTickReceived
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L25)
 
 ### RECEIVER_ADDRESS {#receiver-address}
 
@@ -67,7 +67,7 @@ public static string RECEIVER_ADDRESS
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L16)
 
 ### RECEIVER_PORT {#receiver-port}
 
@@ -79,7 +79,7 @@ public static int RECEIVER_PORT
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L14)
 
 ### running {#running}
 
@@ -91,7 +91,7 @@ public bool running
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L29)
 
 ### SENDER_PORT {#sender-port}
 
@@ -103,7 +103,7 @@ public static int SENDER_PORT
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L18)
 
 ## Properties
 
@@ -117,7 +117,7 @@ public virtual bool StreamingRunning { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L44)
 
 ## Methods
 
@@ -137,7 +137,7 @@ public virtual void SendImage(int frameId, byte[] data)
 | `frameId` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Number of the frame. |
 | `data` | [`byte[]`](https://learn.microsoft.com/dotnet/api/system.byte[]) | The JPEG encoded frame. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L52)
 
 ### TickReceiver() {#tickreceiver}
 
@@ -148,5 +148,5 @@ meant to be run on a thread of its own.
 public void TickReceiver()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/Sender.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/Sender.cs#L71)
 

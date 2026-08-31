@@ -8,7 +8,7 @@ description: 'Takes a project from empty to buildable on an Android headset in o
 
 # PackageSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L21)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetup.cs#L21)
 
 Takes a project from empty to buildable on an Android headset in one menu item.
 This used to be three menu items that had to be clicked in order, because switching platform,
@@ -41,7 +41,7 @@ the console the setup is reporting into.
 public static void ApplyEditorLayout()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetup.cs#L58)
 
 ### Begin() {#begin}
 
@@ -52,7 +52,7 @@ the answer was yes.
 public static void Begin()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetup.cs#L39)
 
 ### Preview() {#preview}
 
@@ -65,5 +65,5 @@ public static IReadOnlyList<SetupStep> Preview()
 
 **Returns** `IReadOnlyList<SetupStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetup.cs#L48)
 

@@ -8,7 +8,7 @@ description: 'The status bar of the graph window, showing what the element under
 
 # HintLabel
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/HintLabel.cs#L5)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/HintLabel.cs#L5)
 
 The status bar of the graph window, showing what the element under the pointer can do.
 
@@ -30,7 +30,7 @@ Builds the label.
 public HintLabel()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/HintLabel.cs#L10)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/HintLabel.cs#L12)
 
 ## Methods
 
@@ -48,5 +48,5 @@ public void UpdateText(string newText)
 | --- | --- | --- |
 | `newText` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint to show, or an empty string to clear it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/HintLabel.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/HintLabel.cs#L29)
 

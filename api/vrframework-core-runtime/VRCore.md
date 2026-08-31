@@ -8,12 +8,18 @@ description: 'The scene''s startup conductor.'
 
 # VRCore
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRCore.cs#L14)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRCore.cs#L20)
 
 The scene's startup conductor. Holds the modules the scene is built from, initialises them in
 order, waits for each required one to report ready, then closes registration so anything asking
 [`RuntimeRegistry`](/api/vrframework-core-runtime/RuntimeRegistry) for a missing service gets a straight answer instead of hanging.
 Cleanup runs in reverse order when the scene is torn down.
+It also brings the app's side of the platform's remote lifecycle protocol with it: on Awake it
+creates the [`ShutdownRelay`](/api/vrframework-core-runtime/ShutdownRelay) on an object of its own that outlives the scene, and
+runs the same module cleanup when the platform asks the app to close - so a remote shutdown
+tears the scene down properly instead of killing the process mid-session. Nothing has to be
+placed in a scene for that to work: a VRCore is in every scene, so the first one to load puts
+the relay in the session and the ones after it find it already there.
 
 ```csharp
 public class VRCore : MonoBehaviour
@@ -33,7 +39,7 @@ public UnityEvent BeforeModulesInit
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRCore.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRCore.cs#L25)
 
 ## Events
 
@@ -47,5 +53,5 @@ public event Action CoreReady
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/VRCore.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/VRCore.cs#L77)
 

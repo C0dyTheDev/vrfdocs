@@ -33,6 +33,11 @@ sidebar_position: 0
 | [`MinigameSetEditor`](/api/vrframework-core-editors-defaults/MinigameSetEditor) | Default framework inspector for MinigameSet/api/vrframework-minigames-runtime/MinigameSet. |
 | [`MistakePlatformEditor`](/api/vrframework-core-editors-defaults/MistakePlatformEditor) | Default framework inspector for MistakePlatform/api/vrframework-mistakes-runtime/MistakePlatform. |
 | [`ObjectDestroyerEditor`](/api/vrframework-core-editors-defaults/ObjectDestroyerEditor) | Default framework inspector for ObjectDestroyer. |
+| [`PhysicsFingerEditor`](/api/vrframework-core-editors-defaults/PhysicsFingerEditor) | Default framework inspector for PhysicsFinger/api/vrframework-interaction-runtime/PhysicsFinger. |
+| [`PhysicsFingersEditor`](/api/vrframework-core-editors-defaults/PhysicsFingersEditor) | Default framework inspector for PhysicsFingers/api/vrframework-interaction-runtime/PhysicsFingers. |
+| [`PhysicsHandEditor`](/api/vrframework-core-editors-defaults/PhysicsHandEditor) | Default framework inspector for PhysicsHand/api/vrframework-interaction-runtime/PhysicsHand. |
+| [`PokeButtonEditor`](/api/vrframework-core-editors-defaults/PokeButtonEditor) | Default framework inspector for PokeButton/api/vrframework-interaction-runtime/PokeButton. |
+| [`PokeInteractableEditor`](/api/vrframework-core-editors-defaults/PokeInteractableEditor) | Default framework inspector for PokeInteractable/api/vrframework-interaction-runtime/PokeInteractable. |
 | [`RenamableBehaviourDefaultEditor`](/api/vrframework-core-editors-defaults/RenamableBehaviourDefaultEditor) | Objects that rename themselves with the hierarchy, such as ProgressBlock. |
 | [`RepeatOnIntervalsEditor`](/api/vrframework-core-editors-defaults/RepeatOnIntervalsEditor) | Default framework inspector for RepeatOnIntervals/api/vrframework-core-runtime/RepeatOnIntervals. |
 | [`ReportContributorDefaultEditor`](/api/vrframework-core-editors-defaults/ReportContributorDefaultEditor) | Everything an app adds to the session report. |

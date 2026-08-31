@@ -8,7 +8,7 @@ description: 'One key of the report and where it came from.'
 
 # ReportEntry
 
-**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L278)
+**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L277)
 
 One key of the report and where it came from. The source is there for the framework's own
 reporting on itself - duplicate keys, editor validation - and never reaches the platform.
@@ -36,7 +36,7 @@ public ReportEntry(string key, object value, string source, bool isLive)
 | `source` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Human-readable origin, for the framework's own diagnostics. |
 | `isLive` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True when a contributor produced it now, false for a stored value. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L296)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L295)
 
 ## Fields
 
@@ -50,7 +50,7 @@ public readonly bool IsLive
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L289)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L288)
 
 ### Key {#key}
 
@@ -62,7 +62,7 @@ public readonly string Key
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L281)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L280)
 
 ### Source {#source}
 
@@ -74,7 +74,7 @@ public readonly string Source
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L286)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L285)
 
 ### Value {#value}
 
@@ -86,5 +86,5 @@ public readonly object Value
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L283)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L282)
 

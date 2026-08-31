@@ -8,7 +8,7 @@ description: 'The shortcut for a component that adds something to the session re
 
 # ReportContributor
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L17)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ReportContributor.cs#L17)
 
 The shortcut for a component that adds something to the session report: fill in
 [`GetReportValue()`](/api/vrframework-core-runtime/ReportContributor#getreportvalue) and the value shows up under this component's key.
@@ -42,7 +42,7 @@ protected string reportKey
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ReportContributor.cs#L22)
 
 ## Properties
 
@@ -56,7 +56,7 @@ public virtual string ReportKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ReportContributor.cs#L25)
 
 ## Methods
 
@@ -68,7 +68,7 @@ Registers the component with [`PlatformReport`](/api/vrframework-core-runtime/Pl
 protected virtual void Awake()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ReportContributor.cs#L34)
 
 ### GetReportValue() {#getreportvalue}
 
@@ -80,7 +80,7 @@ public abstract object GetReportValue()
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object) - The value to report, or null to leave the key out.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ReportContributor.cs#L31)
 
 ### OnDestroy() {#ondestroy}
 
@@ -91,5 +91,5 @@ overriding.
 protected virtual void OnDestroy()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ReportContributor.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ReportContributor.cs#L43)
 

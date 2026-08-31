@@ -8,7 +8,7 @@ description: 'What the framework expects of a progress module: a run that can be
 
 # IProgressService
 
-**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IProgressService.cs#L8)
+**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IProgressService.cs#L8)
 
 What the framework expects of a progress module: a run that can be started and stopped, and that
 says when it has finished. Obtained from [`RuntimeRegistry`](/api/vrframework-core-runtime/RuntimeRegistry).
@@ -31,7 +31,7 @@ bool IsRunning { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IProgressService.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IProgressService.cs#L11)
 
 ## Methods
 
@@ -43,7 +43,7 @@ Starts the progress graph from its entry point.
 void StartProgress()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IProgressService.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IProgressService.cs#L13)
 
 ### StopProgress() {#stopprogress}
 
@@ -53,7 +53,7 @@ Stops the progress graph where it stands.
 void StopProgress()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IProgressService.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IProgressService.cs#L15)
 
 ## Events
 
@@ -67,7 +67,7 @@ event Action ProgressCompleted
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IProgressService.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IProgressService.cs#L19)
 
 ### ProgressStarted {#progressstarted}
 
@@ -79,5 +79,5 @@ event Action ProgressStarted
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IProgressService.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IProgressService.cs#L17)
 

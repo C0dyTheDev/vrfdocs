@@ -8,7 +8,7 @@ description: 'An authoring asset listing the scenes a session is made of and the
 
 # MistakePlatform
 
-**Class** · namespace `VRFramework.Mistakes.Runtime` · assembly `VRFramework.Mistakes.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakePlatform.cs#L10)
+**Class** · namespace `VRFramework.Mistakes.Runtime` · assembly `VRFramework.Mistakes.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakePlatform.cs#L10)
 
 An authoring asset listing the scenes a session is made of and the checkpoints they carry.
 Referenced from scenes for configuration; the results themselves are kept by the module.
@@ -33,5 +33,5 @@ public List<MistakeScene> mistakeScenes
 
 **Returns** `List<MistakeScene>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Mistakes/MistakePlatform.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Mistakes/MistakePlatform.cs#L14)
 

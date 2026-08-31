@@ -8,7 +8,7 @@ description: 'An asset holding translated strings: one entry per text, each with
 
 # LanguageTextInstance
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L17)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L17)
 
 An asset holding translated strings: one entry per text, each with a slot per language, plus
 the strings that are the same everywhere. Referenced by the Localization module and picked
@@ -35,7 +35,7 @@ public List<LanguageTextList> languageEntries
 
 **Returns** `List<LanguageTextList>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L22)
 
 ### untranslatedEntries {#untranslatedentries}
 
@@ -48,7 +48,7 @@ public List<UntranslatedTextElement> untranslatedEntries
 
 **Returns** `List<UntranslatedTextElement>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L24)
 
 ## Methods
 
@@ -61,5 +61,5 @@ translations already written. Run after a language is added, removed or reordere
 public void CheckForLanguageChanges()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextInstance.cs#L76)
 

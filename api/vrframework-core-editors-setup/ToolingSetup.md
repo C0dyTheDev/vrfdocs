@@ -8,7 +8,7 @@ description: 'The half of the setup that is about the machine rather than the pr
 
 # ToolingSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L32)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L32)
 
 The half of the setup that is about the machine rather than the project: the agent tooling the
 framework ships a window for, and the editor layout that arranges those windows.
@@ -42,7 +42,7 @@ outlives the window and comes straight back with it.
 public static void ApplyEditorLayout()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L709)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L709)
 
 ### ConfigureOpenCode() {#configureopencode}
 
@@ -58,7 +58,7 @@ written, and a copy of the old one is kept beside it.
 public static void ConfigureOpenCode()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L546)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L546)
 
 ### EnableUnityMcpBridge() {#enableunitymcpbridge}
 
@@ -70,7 +70,7 @@ does not have the AI Assistant package.
 public static void EnableUnityMcpBridge()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L496)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L496)
 
 ### InstallOpenCode() {#installopencode}
 
@@ -82,7 +82,7 @@ rather than blocking the editor.
 public static void InstallOpenCode()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L98)
 
 ### InstallUnityMcpRelay() {#installunitymcprelay}
 
@@ -95,7 +95,7 @@ points at something that exists.
 public static void InstallUnityMcpRelay()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L445)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L445)
 
 ### OpenCodeInstalled() {#opencodeinstalled}
 
@@ -109,7 +109,7 @@ public static bool OpenCodeInstalled()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L177)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L177)
 
 ### WriteAgentsFile() {#writeagentsfile}
 
@@ -121,5 +121,5 @@ its own rules to it.
 public static void WriteAgentsFile()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L671)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ToolingSetup.cs#L671)
 

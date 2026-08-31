@@ -8,7 +8,7 @@ description: 'Draws an untranslated text entry.'
 
 # UntranslatedTextElementDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L124)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L124)
 
 Draws an untranslated text entry.
 
@@ -29,5 +29,5 @@ Builds the text entry drawer.
 public UntranslatedTextElementDrawer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L128)
 

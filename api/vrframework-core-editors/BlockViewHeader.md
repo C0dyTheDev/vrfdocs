@@ -8,7 +8,7 @@ description: 'The title bar of a block node: its number, its name, and the colou
 
 # BlockViewHeader
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockViewHeader.cs#L8)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockViewHeader.cs#L8)
 
 The title bar of a block node: its number, its name, and the colour that says what it is.
 
@@ -37,7 +37,7 @@ public BlockViewHeader(string numberText, string titleText)
 | `numberText` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The block's number, as shown. |
 | `titleText` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The block's name. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockViewHeader.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockViewHeader.cs#L30)
 
 ## Methods
 
@@ -55,5 +55,5 @@ public void UpdateType(BlockType blockType)
 | --- | --- | --- |
 | `blockType` | [`BlockType`](/api/vrframework-core-editors/BlockType) | What the block is. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockViewHeader.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockViewHeader.cs#L86)
 

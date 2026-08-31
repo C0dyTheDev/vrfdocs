@@ -8,7 +8,7 @@ description: 'Tracks whether the open scene has a Localization module, so drawer
 
 # LocalizationPresence
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LocalizationPresence.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LocalizationPresence.cs#L10)
 
 Tracks whether the open scene has a Localization module, so drawers can decide between
 the translation picker and a plain asset field without searching on every repaint.
@@ -32,7 +32,7 @@ public static bool InScene { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LocalizationPresence.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LocalizationPresence.cs#L22)
 
 ## Methods
 
@@ -44,5 +44,5 @@ Forgets the cached answer, so the next read searches the scene again.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LocalizationPresence.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LocalizationPresence.cs#L36)
 

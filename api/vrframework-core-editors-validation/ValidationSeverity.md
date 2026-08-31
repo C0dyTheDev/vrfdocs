@@ -8,7 +8,7 @@ description: 'How much a validator finding matters.'
 
 # ValidationSeverity
 
-**Enum** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L6)
+**Enum** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L6)
 
 How much a validator finding matters.
 

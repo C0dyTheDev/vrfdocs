@@ -8,7 +8,7 @@ description: 'One translated string across every language: the name it is picked
 
 # LanguageTextList
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L12)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L12)
 
 One translated string across every language: the name it is picked by, and one entry per language.
 
@@ -35,7 +35,7 @@ public LanguageTextList(string name)
 | --- | --- | --- |
 | `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name the entry is picked by. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L26)
 
 ## Fields
 
@@ -50,7 +50,7 @@ public LanguageTextElement[] elements
 
 **Returns** `LanguageTextElement[]`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L18)
 
 ### name {#name}
 
@@ -63,7 +63,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L16)
 
 ## Properties
 
@@ -78,7 +78,7 @@ public string guid { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L39)
 
 ## Methods
 
@@ -92,7 +92,7 @@ public static LanguageTextElement[] GenerateElements()
 
 **Returns** `LanguageTextElement[]` - One empty element per language, or an empty array when there is no language manager.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L62)
 
 ### RegenerateList() {#regeneratelist}
 
@@ -103,5 +103,5 @@ translations over by language ID so nothing already written is lost.
 public void RegenerateList()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextList.cs#L78)
 

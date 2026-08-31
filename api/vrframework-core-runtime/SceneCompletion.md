@@ -8,7 +8,7 @@ description: 'Standalone-scene fallback: quits the application when progress fin
 
 # SceneCompletion
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/SceneCompletion.cs#L9)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/SceneCompletion.cs#L9)
 
 Standalone-scene fallback: quits the application when progress finishes.
 Stands down if a PlatformManager is present, since that module owns session shutdown.

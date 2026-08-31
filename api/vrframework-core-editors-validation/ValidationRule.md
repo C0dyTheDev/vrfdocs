@@ -8,7 +8,7 @@ description: 'One area the validator knows how to check.'
 
 # ValidationRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L13)
 
 One area the validator knows how to check. Subclass this anywhere in an editor assembly and
 it is picked up automatically - that is how a project adds checks of its own to the window,
@@ -20,7 +20,7 @@ public abstract class ValidationRule
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `ValidationRule`
 
-**Derived:** [`BuildTargetRule`](/api/vrframework-core-editors-validation/BuildTargetRule), [`DuplicateModuleRule`](/api/vrframework-core-editors-validation/DuplicateModuleRule), [`FrameworkSettingsRule`](/api/vrframework-core-editors-validation/FrameworkSettingsRule), [`ModuleRule<T>`](/api/vrframework-core-editors-validation/ModuleRule`1), [`PhysicsRule`](/api/vrframework-core-editors-validation/PhysicsRule), [`PlayerSettingsRule`](/api/vrframework-core-editors-validation/PlayerSettingsRule), [`ProgressEnqueueRule`](/api/vrframework-core-editors-validation/ProgressEnqueueRule), [`ProgressLayoutRule`](/api/vrframework-core-editors-validation/ProgressLayoutRule), [`ProgressReachabilityRule`](/api/vrframework-core-editors-validation/ProgressReachabilityRule), [`ProgressSetupRule`](/api/vrframework-core-editors-validation/ProgressSetupRule), [`RenderingRule`](/api/vrframework-core-editors-validation/RenderingRule), [`ReportContributorRule`](/api/vrframework-core-editors-validation/ReportContributorRule), [`SceneCameraRule`](/api/vrframework-core-editors-validation/SceneCameraRule), [`SceneInBuildRule`](/api/vrframework-core-editors-validation/SceneInBuildRule), [`SceneScaffoldRule`](/api/vrframework-core-editors-validation/SceneScaffoldRule), [`ScriptExecutionOrderRule`](/api/vrframework-core-editors-validation/ScriptExecutionOrderRule), [`ServiceDependencyRule`](/api/vrframework-core-editors-validation/ServiceDependencyRule), [`StreamingAssetsRule`](/api/vrframework-core-editors-validation/StreamingAssetsRule), [`TagsAndLayersRule`](/api/vrframework-core-editors-validation/TagsAndLayersRule), [`VRCoreRule`](/api/vrframework-core-editors-validation/VRCoreRule), [`XrSetupRule`](/api/vrframework-core-editors-validation/XrSetupRule)
+**Derived:** [`AndroidPluginRule`](/api/vrframework-core-editors-validation/AndroidPluginRule), [`BuildTargetRule`](/api/vrframework-core-editors-validation/BuildTargetRule), [`DuplicateModuleRule`](/api/vrframework-core-editors-validation/DuplicateModuleRule), [`FrameworkSettingsRule`](/api/vrframework-core-editors-validation/FrameworkSettingsRule), [`GrabHandRule`](/api/vrframework-core-editors-validation/GrabHandRule), [`GrabbableGripRule`](/api/vrframework-core-editors-validation/GrabbableGripRule), [`ModuleRule<T>`](/api/vrframework-core-editors-validation/ModuleRule`1), [`OrphanGripPointRule`](/api/vrframework-core-editors-validation/OrphanGripPointRule), [`PhysicsRule`](/api/vrframework-core-editors-validation/PhysicsRule), [`PlayerSettingsRule`](/api/vrframework-core-editors-validation/PlayerSettingsRule), [`PokeRule`](/api/vrframework-core-editors-validation/PokeRule), [`ProgressEnqueueRule`](/api/vrframework-core-editors-validation/ProgressEnqueueRule), [`ProgressLayoutRule`](/api/vrframework-core-editors-validation/ProgressLayoutRule), [`ProgressReachabilityRule`](/api/vrframework-core-editors-validation/ProgressReachabilityRule), [`ProgressSetupRule`](/api/vrframework-core-editors-validation/ProgressSetupRule), [`RenderingRule`](/api/vrframework-core-editors-validation/RenderingRule), [`ReportContributorRule`](/api/vrframework-core-editors-validation/ReportContributorRule), [`SceneCameraRule`](/api/vrframework-core-editors-validation/SceneCameraRule), [`SceneInBuildRule`](/api/vrframework-core-editors-validation/SceneInBuildRule), [`SceneScaffoldRule`](/api/vrframework-core-editors-validation/SceneScaffoldRule), [`ScriptExecutionOrderRule`](/api/vrframework-core-editors-validation/ScriptExecutionOrderRule), [`ServiceDependencyRule`](/api/vrframework-core-editors-validation/ServiceDependencyRule), [`SnapDropZoneRule`](/api/vrframework-core-editors-validation/SnapDropZoneRule), [`StreamingAssetsRule`](/api/vrframework-core-editors-validation/StreamingAssetsRule), [`TagsAndLayersRule`](/api/vrframework-core-editors-validation/TagsAndLayersRule), [`VRCoreRule`](/api/vrframework-core-editors-validation/VRCoreRule), [`XrSetupRule`](/api/vrframework-core-editors-validation/XrSetupRule)
 
 ## Properties
 
@@ -34,7 +34,7 @@ public abstract string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L16)
 
 ### Order {#order}
 
@@ -46,7 +46,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L22)
 
 ### Scope {#scope}
 
@@ -58,7 +58,7 @@ public virtual ValidationScope Scope { get; }
 
 **Returns** [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L19)
 
 ## Methods
 
@@ -73,7 +73,7 @@ public virtual bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L28)
 
 ### Validate(ValidationReport) {#validate-validationreport}
 
@@ -89,5 +89,5 @@ public abstract void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L35)
 

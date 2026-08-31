@@ -8,7 +8,7 @@ description: 'Highlights an object and, by default, everything under it - either
 
 # Highlight
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L14)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L14)
 
 Highlights an object and, by default, everything under it - either by replacing its materials
 with a transparent highlight shader or by pulsing an overlay colour over them. Enabling and
@@ -33,7 +33,7 @@ public Color color
 
 **Returns** [`Color`](https://docs.unity3d.com/ScriptReference/Color.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L31)
 
 ### frequency {#frequency}
 
@@ -46,7 +46,7 @@ public float frequency
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L33)
 
 ### highlightShaderMaterial {#highlightshadermaterial}
 
@@ -58,7 +58,7 @@ public Material highlightShaderMaterial
 
 **Returns** [`Material`](https://docs.unity3d.com/ScriptReference/Material.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L38)
 
 ### intensity {#intensity}
 
@@ -71,7 +71,7 @@ public float intensity
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L35)
 
 ### type {#type}
 
@@ -83,7 +83,7 @@ public Highlight.HighlightType type
 
 **Returns** [`Highlight.HighlightType`](/api/vrframework-interaction-runtime/Highlight.HighlightType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L27)
 
 ## Methods
 
@@ -101,7 +101,7 @@ protected virtual void Apply(HighlightData data)
 | --- | --- | --- |
 | `data` | [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | The renderer being highlighted, and what it looked like beforehand. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L87)
 
 ### Clear(HighlightData) {#clear-highlightdata}
 
@@ -117,7 +117,7 @@ protected virtual void Clear(HighlightData data)
 | --- | --- | --- |
 | `data` | [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | The renderer being restored, and what it looked like beforehand. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L97)
 
 ### UpdateTransparencyMode(HighlightData) {#updatetransparencymode-highlightdata}
 
@@ -133,5 +133,5 @@ public void UpdateTransparencyMode(HighlightData data)
 | --- | --- | --- |
 | `data` | [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | The renderer to update. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L180)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L180)
 

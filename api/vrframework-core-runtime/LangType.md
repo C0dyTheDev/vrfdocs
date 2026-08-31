@@ -8,7 +8,7 @@ description: 'The kinds of localized content a language instance can hold.'
 
 # LangType
 
-**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/LangType.cs#L3)
+**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/LangType.cs#L3)
 
 The kinds of localized content a language instance can hold.
 

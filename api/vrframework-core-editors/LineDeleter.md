@@ -8,7 +8,7 @@ description: 'The bin a line is dropped onto to delete the connection it stands 
 
 # LineDeleter
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/LineDeleter.cs#L5)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/LineDeleter.cs#L5)
 
 The bin a line is dropped onto to delete the connection it stands for.
 
@@ -30,5 +30,5 @@ Builds the bin element.
 public LineDeleter()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/LineDeleter.cs#L8)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/LineDeleter.cs#L8)
 

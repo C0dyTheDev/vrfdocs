@@ -8,7 +8,7 @@ description: 'Makes an object grabbable by the framework''s hands.'
 
 # GrabbableObject
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L20)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L21)
 
 Makes an object grabbable by the framework's hands. Says how it may be picked up, which fingers
 that takes and where the hands sit on it, and takes the object's physics over while it is held,
@@ -26,6 +26,44 @@ public class GrabbableObject : MonoBehaviour
 
 ## Fields
 
+### allowTwoHands {#allowtwohands}
+
+Whether a second hand may join an object the first is already holding, rather than taking it.
+
+This is the two-hand grab, and there is no mode to enter: the object keeps a list of grips,
+a second hand appends to it and a hand letting go removes from it. Both work mid-hold, in
+either order, with no re-grab. The hold has always supported it - one target and one write
+however many hands are on the object - and this is the layer that was still refusing.
+
+On by default, which is a change: an object that is genuinely one-handed - a cup, a pistol -
+says so by turning it off. The failure mode of the default is grabbing a mug with both
+hands, which is odd; the failure mode of the reverse is a headline feature nobody can reach.
+
+```csharp
+public bool allowTwoHands
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L45)
+
+### breakDistance {#breakdistance}
+
+How far the hand may be dragged from where the player's real hand is before the object is let
+go, in metres. Zero never lets go.
+
+The hand stays on what it holds, so an object stopped by the world stops the hand with it and
+the player's real hand carries on without it. That is wanted up to a point and absurd past
+one: a hand left half a room behind reads as gone rather than as holding something.
+
+```csharp
+public float breakDistance
+```
+
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L100)
+
 ### canBeGrabbed {#canbegrabbed}
 
 Whether the object may be grabbed at all. See [`CanBeGrabbed()`](/api/vrframework-interaction-runtime/GrabbableObject#canbegrabbed).
@@ -36,7 +74,7 @@ public bool canBeGrabbed
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L162)
 
 ### canSwapHands {#canswaphands}
 
@@ -48,7 +86,7 @@ public bool canSwapHands
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L29)
 
 ### coll {#coll}
 
@@ -61,31 +99,7 @@ public Collider coll
 
 **Returns** [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L53)
-
-### currentGrabHand {#currentgrabhand}
-
-The hand currently holding the object, or null.
-
-```csharp
-public GrabHand currentGrabHand
-```
-
-**Returns** [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L56)
-
-### customGrabPoses {#customgrabposes}
-
-The authored poses, indexed by [`HandType`](/api/vrframework-interaction-runtime/HandType): left first, then right.
-
-```csharp
-public CustomGrabPose[] customGrabPoses
-```
-
-**Returns** `CustomGrabPose[]`
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L150)
 
 ### fingersNeededToGrab {#fingersneededtograb}
 
@@ -97,7 +111,27 @@ public FingerType fingersNeededToGrab
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L68)
+
+### grabColliders {#grabcolliders}
+
+The colliders a hand may take this object by. Empty means any collider on it or under it.
+
+A grabbable is usually one component on a parent with its shape spread over several child
+colliders, and which of those a hand may grab is a content decision the framework cannot
+guess. A rifle wants its stock and grip; it does not want the scope, the sling loop, or the
+trigger guard that happens to have a collider for a different reason.
+
+Left empty the object behaves as it always did and every collider counts, so this costs
+existing content nothing until someone fills it in.
+
+```csharp
+public List<Collider> grabColliders
+```
+
+**Returns** `List<Collider>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L65)
 
 ### grabDistance {#grabdistance}
 
@@ -109,7 +143,7 @@ public float grabDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L74)
 
 ### grabType {#grabtype}
 
@@ -121,7 +155,74 @@ public GrabType grabType
 
 **Returns** [`GrabType`](/api/vrframework-interaction-runtime/GrabType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L25)
+
+### gripPoints {#grippoints}
+
+Where hands may attach, or empty for an object with no right way to be held.
+
+Collected from the children on `Start()`, so adding a grip point is adding a
+component and nothing else has to be kept in step. Filled in the inspector it is used as
+given, which is the escape hatch for an object that wants only some of its gripPoints live.
+
+```csharp
+public List<GripPoint> gripPoints
+```
+
+**Returns** `List<GripPoint>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L110)
+
+### grips {#grips}
+
+The hands holding this object, in the order they took it. Empty when nothing is holding it.
+
+A list rather than a field, and that is the whole of two-hand grab. Note what it is not: a
+set of constraints each getting their own say. One entry or two, the object is written to
+exactly once per step, which is why a second hand cannot fight the first.
+
+```csharp
+public List<GrabHand> grips
+```
+
+**Returns** `List<GrabHand>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L160)
+
+### gripTieDistance {#griptiedistance}
+
+How close two gripPoints have to be, in metres, before priority decides between them rather than
+distance.
+
+Exact distance ties do not happen in floating point, so without a margin priority would
+never apply at all. Five centimetres is about the width of a palm: inside that the hand has
+not really chosen, and the object's own idea of which grip matters should win.
+
+```csharp
+public float gripTieDistance
+```
+
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L121)
+
+### holdSettings {#holdsettings}
+
+How this object behaves in the hand: its strength, its damping, how far it may be pulled out of
+the grip, and how two hands share it.
+
+Per object, because it is a property of the thing. A barrel and a shotgun are held
+differently, a light cup and a loaded crate resist differently, and none of that belongs to
+the hand that happens to have picked it up.
+
+```csharp
+[Header("Physical hold")]
+public HoldSettings holdSettings
+```
+
+**Returns** [`HoldSettings`](/api/vrframework-interaction-runtime/HoldSettings)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L86)
 
 ### OnGrab {#ongrab}
 
@@ -133,7 +234,7 @@ public UnityEvent OnGrab
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L141)
 
 ### OnRelease {#onrelease}
 
@@ -145,7 +246,7 @@ public UnityEvent OnRelease
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L143)
 
 ### OnSwapHands {#onswaphands}
 
@@ -157,7 +258,7 @@ public UnityEvent OnSwapHands
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L145)
 
 ### permanentGrab {#permanentgrab}
 
@@ -169,7 +270,7 @@ public bool permanentGrab
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L27)
 
 ### pinchDistance {#pinchdistance}
 
@@ -181,7 +282,7 @@ public float pinchDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L72)
 
 ### rb {#rb}
 
@@ -194,21 +295,150 @@ public Rigidbody rb
 
 **Returns** [`Rigidbody`](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L148)
 
-### useCustomGrabPoses {#usecustomgrabposes}
+### requiresTwoHands {#requirestwohands}
 
-Whether the hands take an authored pose on this object instead of snapping to its origin.
+Whether the object needs both hands and is dropped the moment either lets go. For things too
+big or too heavy to carry one-handed.
 
 ```csharp
-public bool useCustomGrabPoses
+public bool requiresTwoHands
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L51)
+
+### throwSettings {#throwsettings}
+
+How this object leaves the hand when it is let go.
+
+```csharp
+public ThrowSettings throwSettings
+```
+
+**Returns** [`ThrowSettings`](/api/vrframework-interaction-runtime/ThrowSettings)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L89)
+
+### useAutoPose {#useautopose}
+
+Whether the fingers close onto this object's shape when it is picked up, instead of following
+the tracked hand through it.
+
+The whole of what a plain grabbable says about hands, and it needs no authoring: the shape
+a closed hand takes is a property of the hand, so it lives on the hand prefab, and this is
+only the object saying it wants the solve.
+
+An authored shape is not here. It belongs to a place on the object rather than to the
+object, so it lives on a [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint) - add one where the hand should land and
+pose it there. A point that has been reached for decides for itself, and this is what the
+rest of the object falls back on.
+
+```csharp
+public bool useAutoPose
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L138)
+
+## Properties
+
+### HasGripToSpare {#hasgriptospare}
+
+Whether another hand may still take hold of this object.
+
+```csharp
+public bool HasGripToSpare { get; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L414)
+
+### HasSomewhereToHold {#hassomewheretohold}
+
+Whether this object has anywhere left to be held.
+
+True for the ordinary object, which has no grip points and is taken wherever it is
+touched. An object that has them has said those are the places it may be held; switch all
+of them off and it has said there are none, so it refuses rather than falling back to
+being grabbed by its shape.
+
+```csharp
+public bool HasSomewhereToHold { get; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L494)
+
+### IsHeld {#isheld}
+
+Whether any hand is holding this object.
+
+```csharp
+public bool IsHeld { get; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L398)
+
+### PrimaryGrip {#primarygrip}
+
+The hand that took the object first, or null. Where a single hand has to be named - the hand a
+one-handed object is in, or the one that keeps it when a second lets go - this is the one.
+
+```csharp
+public GrabHand PrimaryGrip { get; }
+```
+
+**Returns** [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L404)
 
 ## Methods
+
+### AcceptsGrabBy(Collider) {#acceptsgrabby-collider}
+
+Whether a hand touching this collider is allowed to take the object by it.
+
+```csharp
+public bool AcceptsGrabBy(Collider collider)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `collider` | [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) | Collider the hand is touching. |
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L344)
+
+### AttachPointFor(GrabHand, Vector3) {#attachpointfor-grabhand-vector3}
+
+Where a hand should end up on this object, when the object says. Null leaves the placement to
+the hold's own snap, which is the ordinary case.
+
+```csharp
+public Transform AttachPointFor(GrabHand hand, Vector3 from)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `hand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand being placed. |
+| `from` | [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html) | Where the hand's grip is, in world space. |
+
+**Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L333)
 
 ### CanBeGrabbed() {#canbegrabbed}
 
@@ -220,12 +450,58 @@ public virtual bool CanBeGrabbed()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when a hand may pick the object up right now.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L234)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L511)
+
+### ChooseGripPoint(GrabHand, Vector3) {#choosegrippoint-grabhand-vector3}
+
+Picks the grip point a hand should attach to: the one it will accept that is nearest the hand,
+with priority breaking a tie.
+
+Nearest rather than first, because a hand reaching for the foregrip of a rifle has said
+where it wants to be by reaching there. Priority exists for the case where that is genuinely
+ambiguous - one hand arriving at the middle of a two-handed thing should land on the grip,
+not on whichever end the maths preferred.
+
+```csharp
+public GripPoint ChooseGripPoint(GrabHand hand, Vector3 from)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `hand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand asking. |
+| `from` | [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html) | Where the hand's grip is, in world space. |
+
+**Returns** [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint) - The grip point to use, or null when the object has none this hand may take.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L289)
+
+### CollectGrabColliders(List\<Collider>) {#collectgrabcolliders-collider}
+
+The colliders that stand for this object's shape when a hand closes onto it.
+
+The grab whitelist when there is one, because a hand that may only take a rifle by its
+grips should not have its fingers stopped by the barrel. Otherwise every solid collider
+under the object: triggers are left out, since a trigger is a region rather than a surface
+and a finger closing onto one would stop in mid-air.
+
+```csharp
+public void CollectGrabColliders(List<Collider> into)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `into` | `List<Collider>` | List filled with the colliders. Cleared first. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L364)
 
 ### CopySettingsFrom(GrabbableObject) {#copysettingsfrom-grabbableobject}
 
-Copies every grab setting from another grabbable, poses included. Used when a tool is swapped
-for a copy of itself that should behave the same way.
+Copies every grab setting from another grabbable. Used when a tool is swapped for a copy of
+itself that should behave the same way.
 
 ```csharp
 public void CopySettingsFrom(GrabbableObject other)
@@ -237,7 +513,27 @@ public void CopySettingsFrom(GrabbableObject other)
 | --- | --- | --- |
 | `other` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Grabbable to copy from. Null does nothing. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L157)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L255)
+
+### For(Collider) {#for-collider}
+
+The grabbable a collider belongs to, or null. Walks up from the collider, so a shape spread
+over child objects still reaches the component on the parent - which it did not before, and is
+why an object whose collider sat on its mesh child could not be picked up at all.
+
+```csharp
+public static GrabbableObject For(Collider collider)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `collider` | [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) | Collider to resolve. |
+
+**Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L392)
 
 ### Grabbed(GrabHand) {#grabbed-grabhand}
 
@@ -254,7 +550,25 @@ public void Grabbed(GrabHand grabHand)
 | --- | --- | --- |
 | `grabHand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand taking the object. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L193)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L440)
+
+### IsHeldBy(GrabHand) {#isheldby-grabhand}
+
+Whether a particular hand is one of the ones holding this object.
+
+```csharp
+public bool IsHeldBy(GrabHand hand)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `hand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand to look for. |
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L408)
 
 ### OnGrabbed(GrabHand) {#ongrabbed-grabhand}
 
@@ -270,7 +584,7 @@ protected virtual void OnGrabbed(GrabHand grabHand)
 | --- | --- | --- |
 | `grabHand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand that took the object. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L241)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L520)
 
 ### OnReleased() {#onreleased}
 
@@ -280,26 +594,32 @@ Override to react to this object being let go.
 protected virtual void OnReleased()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L247)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L526)
 
-### Released() {#released}
+### Released(GrabHand) {#released-grabhand}
 
 Called by [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) as the object is let go: puts gravity, mass and the trigger
 flag back as they were. Not meant to be called from app code - use the hand.
 
 ```csharp
-public void Released()
+public void Released(GrabHand grabHand = null)
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L218)
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `grabHand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand letting go, or null for a release that names no hand. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L463)
 
 ### ReleaseObject() {#releaseobject}
 
-Makes whichever hand holds this object let go of it. Does nothing when it is not held.
+Makes every hand holding this object let go of it. Does nothing when it is not held.
 
 ```csharp
 public void ReleaseObject()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L177)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L419)
 

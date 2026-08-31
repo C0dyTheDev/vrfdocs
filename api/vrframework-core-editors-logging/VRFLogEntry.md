@@ -8,7 +8,7 @@ description: 'A captured log line as the window stores it.'
 
 # VRFLogEntry
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L27)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L27)
 
 A captured log line as the window stores it. Serializable so the whole buffer survives a
 domain reload with the rest of [`VRFLogStore`](/api/vrframework-core-editors-logging/VRFLogStore), which is why this is a class with
@@ -33,7 +33,7 @@ public string channel
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L37)
 
 ### context {#context}
 
@@ -45,7 +45,7 @@ public Object context
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L53)
 
 ### external {#external}
 
@@ -57,7 +57,7 @@ public bool external
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L56)
 
 ### file {#file}
 
@@ -69,7 +69,7 @@ public string file
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L41)
 
 ### frame {#frame}
 
@@ -81,7 +81,7 @@ public int frame
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L45)
 
 ### id {#id}
 
@@ -93,7 +93,7 @@ public int id
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L31)
 
 ### level {#level}
 
@@ -105,7 +105,7 @@ public VRFLogLevel level
 
 **Returns** [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L33)
 
 ### line {#line}
 
@@ -117,7 +117,7 @@ public int line
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L43)
 
 ### member {#member}
 
@@ -129,7 +129,7 @@ public string member
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L39)
 
 ### message {#message}
 
@@ -141,7 +141,7 @@ public string message
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L35)
 
 ### stackTrace {#stacktrace}
 
@@ -153,7 +153,7 @@ public string stackTrace
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L51)
 
 ### ticks {#ticks}
 
@@ -165,7 +165,7 @@ public long ticks
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L49)
 
 ### time {#time}
 
@@ -177,7 +177,7 @@ public double time
 
 **Returns** [`double`](https://learn.microsoft.com/dotnet/api/system.double)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L47)
 
 ## Properties
 
@@ -191,7 +191,7 @@ public string CollapseKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L69)
 
 ### FirstLine {#firstline}
 
@@ -203,7 +203,7 @@ public string FirstLine { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L72)
 
 ### SearchText {#searchtext}
 
@@ -215,7 +215,7 @@ public string SearchText { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L66)
 
 ### SourceLabel {#sourcelabel}
 
@@ -227,7 +227,7 @@ public string SourceLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L86)
 
 ### Timestamp {#timestamp}
 
@@ -239,7 +239,7 @@ public DateTime Timestamp { get; }
 
 **Returns** [`DateTime`](https://learn.microsoft.com/dotnet/api/system.datetime)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L63)
 
 ## Methods
 
@@ -260,7 +260,7 @@ public string TimeText(VRFLogTimeMode mode, VRFLogEntry previous)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The text of the time column.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L99)
 
 ### ToLine() {#toline}
 
@@ -272,5 +272,5 @@ public string ToLine()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L118)
 

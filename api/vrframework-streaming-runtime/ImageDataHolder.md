@@ -8,7 +8,7 @@ description: 'Cuts one encoded frame into datagram sized parts, each carrying a 
 
 # ImageDataHolder
 
-**Class** · namespace `VRFramework.Streaming.Runtime` · assembly `VRFramework.Streaming.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/ImageDataHolder.cs#L10)
+**Class** · namespace `VRFramework.Streaming.Runtime` · assembly `VRFramework.Streaming.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/ImageDataHolder.cs#L10)
 
 Cuts one encoded frame into datagram sized parts, each carrying a header the receiver
 reassembles the frame from: format version, frame ID, total image length, part index and data
@@ -37,7 +37,7 @@ public ImageDataHolder(int frameId, byte[] imageData)
 | `frameId` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Number of the frame, so the receiver can tell frames apart. |
 | `imageData` | [`byte[]`](https://learn.microsoft.com/dotnet/api/system.byte[]) | The JPEG encoded frame. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/ImageDataHolder.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/ImageDataHolder.cs#L23)
 
 ## Fields
 
@@ -51,7 +51,7 @@ public const int HEADER_LENGTH = 17
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/ImageDataHolder.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/ImageDataHolder.cs#L16)
 
 ### MAX_PART_SIZE {#max-part-size}
 
@@ -63,7 +63,7 @@ public const int MAX_PART_SIZE = 8000
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/ImageDataHolder.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/ImageDataHolder.cs#L13)
 
 ## Properties
 
@@ -77,5 +77,5 @@ public virtual IList<byte[]> Parts { get; }
 
 **Returns** `IList<byte[]>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/ImageDataHolder.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Streaming/ImageDataHolder.cs#L29)
 

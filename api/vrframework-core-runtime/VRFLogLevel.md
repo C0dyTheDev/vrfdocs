@@ -8,7 +8,7 @@ description: 'Severity of a framework log line.'
 
 # VRFLogLevel
 
-**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L11)
+**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L11)
 
 Severity of a framework log line. Debug sits last rather than first so the numbers already
 written into a persisted log buffer keep meaning what they meant.

@@ -8,7 +8,7 @@ description: 'Every framework module - AudioManager, PlatformManager, Interactio
 
 # VRModuleDefaultEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L27)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L27)
 
 Every framework module - AudioManager, PlatformManager, InteractionModule and so on.
 

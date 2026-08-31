@@ -8,7 +8,7 @@ description: 'One slice of the session report.'
 
 # IReportContributor
 
-**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L11)
+**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IReportContributor.cs#L11)
 
 One slice of the session report. Anything can supply one - a module, a plain component, a
 class of the app's own - and the report the platform receives is the sum of them, so what
@@ -36,7 +36,7 @@ string ReportKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IReportContributor.cs#L17)
 
 ## Methods
 
@@ -52,5 +52,5 @@ object GetReportValue()
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IReportContributor.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IReportContributor.cs#L24)
 

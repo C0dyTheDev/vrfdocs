@@ -13,8 +13,9 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`AssetCatalog`](/api/vrframework-core-editors-scenebuilding/AssetCatalog) | Models, sounds and textures from every configured IAssetSource/api/vrframework-core-editors-scenebuilding/IAssetSource, merged into one browsable list. |
-| [`AssetCategories`](/api/vrframework-core-editors-scenebuilding/AssetCategories) | The kinds of asset the Assets category deals in. |
+| [`AssetCategories`](/api/vrframework-core-editors-scenebuilding/AssetCategories) | The kinds of asset the Assets category deals in - what an entry is, shown on the card and offered as the type filter. |
 | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | One record in an asset database. |
+| [`AssetManagerSource`](/api/vrframework-core-editors-scenebuilding/AssetManagerSource) | The organisation's Unity Asset Manager library, browsed in place and imported on demand. |
 | [`AssetSources`](/api/vrframework-core-editors-scenebuilding/AssetSources) | Discovers every asset source in the loaded editor assemblies. |
 | [`AudioEmitterSetup`](/api/vrframework-core-editors-scenebuilding/AudioEmitterSetup) | A positional sound the framework can play by localisation key. |
 | [`AudioModuleInstaller`](/api/vrframework-core-editors-scenebuilding/AudioModuleInstaller) | Puts the audio module into the scene, on the managers marker. |
@@ -30,18 +31,15 @@ sidebar_position: 0
 | [`CoreInstaller`](/api/vrframework-core-editors-scenebuilding/CoreInstaller) | VRCore on its own, for scenes that already have a hierarchy. |
 | [`CounterSetup`](/api/vrframework-core-editors-scenebuilding/CounterSetup) | Counts up to a target and fires. |
 | [`DetailsPanel`](/api/vrframework-core-editors-scenebuilding/DetailsPanel) | The right hand panel. |
-| [`EmptyVrSceneTemplate`](/api/vrframework-core-editors-scenebuilding/EmptyVrSceneTemplate) | A scene with the marker hierarchy, a light and VRCore, and no modules chosen yet. |
 | [`EventHolderSetup`](/api/vrframework-core-editors-scenebuilding/EventHolderSetup) | A named bag of UnityEvents other systems can call into. |
 | [`GrabbableSetup`](/api/vrframework-core-editors-scenebuilding/GrabbableSetup) | Everything an object needs before a hand can pick it up. |
 | [`HighlightSetup`](/api/vrframework-core-editors-scenebuilding/HighlightSetup) | Highlight on its own, for objects that are pointed out but not handled. |
 | [`InteractionModuleInstaller`](/api/vrframework-core-editors-scenebuilding/InteractionModuleInstaller) | The full XR rig plus the module that owns every shared reference other modules reach for. |
-| [`InteractionSandboxTemplate`](/api/vrframework-core-editors-scenebuilding/InteractionSandboxTemplate) | The installers this template runs, in order. |
 | [`InvokeDelayedSetup`](/api/vrframework-core-editors-scenebuilding/InvokeDelayedSetup) | Delayed one-shot. |
 | [`ItemAction`](/api/vrframework-core-editors-scenebuilding/ItemAction) | A named button shown in the details panel. |
 | [`ItemCard`](/api/vrframework-core-editors-scenebuilding/ItemCard) | One tile in the results grid. |
 | [`LocalizationModuleInstaller`](/api/vrframework-core-editors-scenebuilding/LocalizationModuleInstaller) | Puts the localization module into the scene, on the managers marker. |
 | [`LocalizedTextSetup`](/api/vrframework-core-editors-scenebuilding/LocalizedTextSetup) | World-space text that follows the active language. |
-| [`MinigameSceneTemplate`](/api/vrframework-core-editors-scenebuilding/MinigameSceneTemplate) | A scene set up as one timed part of a minigame chain. |
 | [`MinigamesModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MinigamesModuleInstaller) | Puts the minigames module into the scene, on the managers marker. |
 | [`MistakesModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MistakesModuleInstaller) | Puts the mistakes module into the scene, on the managers marker. |
 | [`ModuleCatalog`](/api/vrframework-core-editors-scenebuilding/ModuleCatalog) | Every framework module that can be installed into the open scene, one card per module. |
@@ -49,11 +47,8 @@ sidebar_position: 0
 | [`ModuleInstallers`](/api/vrframework-core-editors-scenebuilding/ModuleInstallers) | Discovers every installer in the loaded editor assemblies, so projects can add their own by subclassing ModuleInstaller/api/vrframework-core-editors-scenebuilding/ModuleInstaller. |
 | [`ObjectDestroyerSetup`](/api/vrframework-core-editors-scenebuilding/ObjectDestroyerSetup) | Destroys objects on cue. |
 | [`PlatformModuleInstaller`](/api/vrframework-core-editors-scenebuilding/PlatformModuleInstaller) | Puts the platform module into the scene, on the managers marker. |
-| [`PrefabCatalog`](/api/vrframework-core-editors-scenebuilding/PrefabCatalog) | Prefabs from the project and from the framework package, grouped by the folder they live in. |
 | [`ProgressModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ProgressModuleInstaller) | Puts the progress module and an empty scenario into the scene. |
-| [`ProjectAssetSource`](/api/vrframework-core-editors-scenebuilding/ProjectAssetSource) | Indexes the art assets that already live in the project. |
 | [`ProjectTags`](/api/vrframework-core-editors-scenebuilding/ProjectTags) | Makes sure the tags and layers a setup depends on exist before the components that read them are added. |
-| [`RemoteAssetSource`](/api/vrframework-core-editors-scenebuilding/RemoteAssetSource) | Reads an external asset database described by a JSON manifest and imports its assets on demand. |
 | [`RepeatOnIntervalsSetup`](/api/vrframework-core-editors-scenebuilding/RepeatOnIntervalsSetup) | Repeating tick. |
 | [`SceneBuilderAssetWatcher`](/api/vrframework-core-editors-scenebuilding/SceneBuilderAssetWatcher) | Keeps the authored content in step with the project. |
 | [`SceneBuilderCatalog`](/api/vrframework-core-editors-scenebuilding/SceneBuilderCatalog) | Convenience base so catalogs only implement what they care about. |
@@ -65,15 +60,15 @@ sidebar_position: 0
 | [`SceneChangerSetup`](/api/vrframework-core-editors-scenebuilding/SceneChangerSetup) | Loads another scene. |
 | [`SceneScaffold`](/api/vrframework-core-editors-scenebuilding/SceneScaffold) | The marker hierarchy every VR Framework scene is built on, plus the helpers installers use to place themselves. |
 | [`SceneScaffoldInstaller`](/api/vrframework-core-editors-scenebuilding/SceneScaffoldInstaller) | The marker hierarchy plus VRCore and a directional light. |
-| [`SceneTemplate`](/api/vrframework-core-editors-scenebuilding/SceneTemplate) | A reusable scene setup: an ordered list of installers plus any prefabs that come with them. |
-| [`SceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/SceneTemplateAsset) | A scene template authored in the project rather than in code. |
+| [`SceneTemplate`](/api/vrframework-core-editors-scenebuilding/SceneTemplate) | A reusable scene setup: a captured scene, an ordered list of installers, and any prefabs that come with them. |
 | [`SceneTemplateCatalog`](/api/vrframework-core-editors-scenebuilding/SceneTemplateCatalog) | Reusable scene setups. |
-| [`SceneTemplates`](/api/vrframework-core-editors-scenebuilding/SceneTemplates) | Every template available: the framework's own, plus any SceneTemplateAsset/api/vrframework-core-editors-scenebuilding/SceneTemplateAsset authored in the project. |
+| [`SceneTemplates`](/api/vrframework-core-editors-scenebuilding/SceneTemplates) | Every template available: the framework's own, plus any VRFSceneTemplateAsset/api/vrframework-core-editors-scenebuilding/VRFSceneTemplateAsset authored in the project. |
 | [`SnapDropZoneSetup`](/api/vrframework-core-editors-scenebuilding/SnapDropZoneSetup) | The receiving half of a grab interaction. |
+| [`ThumbnailCache`](/api/vrframework-core-editors-scenebuilding/ThumbnailCache) | Card pictures for entries that are not in the project yet, fetched once and kept under Library/ so reopening the window is free. |
 | [`ToggleSelectSetup`](/api/vrframework-core-editors-scenebuilding/ToggleSelectSetup) | A collider that flips a state on and off. |
-| [`TrainingSceneTemplate`](/api/vrframework-core-editors-scenebuilding/TrainingSceneTemplate) | The full production scene: rig, audio, localization, platform, scenario and mistakes. |
 | [`TriggerAreaSetup`](/api/vrframework-core-editors-scenebuilding/TriggerAreaSetup) | Fires once on enter and once on exit. |
 | [`TriggerStayAreaSetup`](/api/vrframework-core-editors-scenebuilding/TriggerStayAreaSetup) | Fires while something remains inside. |
+| [`VRFSceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/VRFSceneTemplateAsset) | A scene template authored in the project rather than in code: which installers to run and which prefabs to drop. |
 
 ## Structs
 
@@ -87,6 +82,8 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`IAssetSource`](/api/vrframework-core-editors-scenebuilding/IAssetSource) | A place the Assets category can pull from. |
+| [`IAssetThumbnailSource`](/api/vrframework-core-editors-scenebuilding/IAssetThumbnailSource) | A source that carries its own card thumbnails, for entries that are not in the project yet and so have no Unity preview. |
+| [`IAsyncAssetSource`](/api/vrframework-core-editors-scenebuilding/IAsyncAssetSource) | A source that cannot make an entry available without letting the editor keep running - a database whose import work is driven by the editor loop, so blocking on it would deadlock. |
 | [`ISceneBuilderCatalog`](/api/vrframework-core-editors-scenebuilding/ISceneBuilderCatalog) | One entry in the Scene Builder's left panel. |
 
 ## Enums

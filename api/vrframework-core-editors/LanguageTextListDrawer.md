@@ -8,7 +8,7 @@ description: 'Draws an entry of a text translation asset.'
 
 # LanguageTextListDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L184)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L184)
 
 Draws an entry of a text translation asset.
 
@@ -29,5 +29,5 @@ Builds the text entry drawer.
 public LanguageTextListDrawer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L188)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L188)
 

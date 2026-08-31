@@ -8,7 +8,7 @@ description: 'Inspector for a text translation asset.'
 
 # LanguageTextEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L232)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L232)
 
 Inspector for a text translation asset.
 
@@ -29,7 +29,7 @@ Builds the text inspector.
 public LanguageTextEditor()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L236)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L236)
 
 ## Methods
 
@@ -41,5 +41,5 @@ Rebuilds the text lookup maps.
 protected override void ProcessLanguageInstance()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L241)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L241)
 

@@ -8,7 +8,7 @@ description: 'The fingers of a hand, as flags, so a grabbable can ask for any co
 
 # FingerType
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FingerController.cs#L39)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FingerController.cs#L50)
 
 The fingers of a hand, as flags, so a grabbable can ask for any combination of them.
 

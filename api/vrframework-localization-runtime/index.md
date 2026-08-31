@@ -17,7 +17,6 @@ sidebar_position: 0
 | [`LanguageAudioInstance`](/api/vrframework-localization-runtime/LanguageAudioInstance) | An asset holding translated audio: one entry per clip, each with a slot per language, plus the clips that are the same everywhere. |
 | [`LanguageAudioList`](/api/vrframework-localization-runtime/LanguageAudioList) | One translated clip across every language: the name it is picked by, and one entry per language. |
 | [`LanguageConfig`](/api/vrframework-localization-runtime/LanguageConfig) | The project's language list. |
-| [`LanguageInstanceFilters`](/api/vrframework-localization-runtime/LanguageInstanceFilters) | The search text and per language visibility of a translation asset's Inspector, kept one set per LangType/api/vrframework-core-runtime/LangType so the view of each asset survives b |
 | [`LanguageManager`](/api/vrframework-localization-runtime/LanguageManager) | The localization module. |
 | [`LanguageProcessor`](/api/vrframework-localization-runtime/LanguageProcessor) | Turns the translation assets into the lookup maps the framework reads at runtime: one map per kind, from translation ID to the entry for the current language, plus the pick lists t |
 | [`LanguageSpriteElement`](/api/vrframework-localization-runtime/LanguageSpriteElement) | One language's version of a translated sprite. |

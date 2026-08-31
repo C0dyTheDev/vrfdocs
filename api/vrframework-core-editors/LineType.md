@@ -8,7 +8,7 @@ description: 'What a connection on the graph stands for, which decides its colou
 
 # LineType
 
-**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/LineType.cs#L3)
+**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/LineType.cs#L3)
 
 What a connection on the graph stands for, which decides its colour.
 

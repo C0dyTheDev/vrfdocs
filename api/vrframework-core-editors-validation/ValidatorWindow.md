@@ -8,7 +8,7 @@ description: 'One window for everything the framework can check about the projec
 
 # ValidatorWindow
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorWindow.cs#L16)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorWindow.cs#L17)
 
 One window for everything the framework can check about the project and the open scene.
 It owns no checks of its own: rules are discovered through [`ValidationRules`](/api/vrframework-core-editors-validation/ValidationRules), so
@@ -30,7 +30,7 @@ Builds the window: toolbar, findings list and their bindings.
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorWindow.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorWindow.cs#L39)
 
 ### ShowWindow() {#showwindow}
 
@@ -41,5 +41,5 @@ Opens the VRF Validator window.
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorWindow.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorWindow.cs#L64)
 

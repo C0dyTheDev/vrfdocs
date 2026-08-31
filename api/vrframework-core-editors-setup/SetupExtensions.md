@@ -8,7 +8,7 @@ description: 'Finds every setup extension in the loaded editor assemblies and fl
 
 # SetupExtensions
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L53)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L53)
 
 Finds every setup extension in the loaded editor assemblies and flattens them into one list of
 steps for [`PackageSetup`](/api/vrframework-core-editors-setup/PackageSetup) to append to its own.
@@ -31,7 +31,7 @@ public static IReadOnlyList<SetupExtension> All { get; }
 
 **Returns** `IReadOnlyList<SetupExtension>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L58)
 
 ## Methods
 
@@ -48,7 +48,7 @@ public static List<SetupStep> CollectSteps()
 
 **Returns** `List<SetupStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L79)
 
 ### Invalidate() {#invalidate}
 
@@ -58,5 +58,5 @@ Forgets the cached extension list, so a recompile is picked up.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupExtension.cs#L68)
 

@@ -8,7 +8,7 @@ description: 'Typed calls against the opencode server''s HTTP API.'
 
 # OpenCodeClient
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L17)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L17)
 
 Typed calls against the opencode server's HTTP API.
 Responses stay as `JToken`rather than becoming generated DTOs: the payloads are
@@ -36,7 +36,7 @@ public const string ZenProviderId = "opencode"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L24)
 
 ## Methods
 
@@ -56,7 +56,7 @@ public static Task Abort(string sessionId)
 
 **Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L106)
 
 ### CreateSession(string) {#createsession-string}
 
@@ -74,7 +74,7 @@ public static Task<string> CreateSession(string title)
 
 **Returns** `Task<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L29)
 
 ### DeleteSession(string) {#deletesession-string}
 
@@ -92,7 +92,7 @@ public static Task DeleteSession(string sessionId)
 
 **Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task) - A task that completes once the server has answered.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L59)
 
 ### GetDefaultZenModel() {#getdefaultzenmodel}
 
@@ -105,7 +105,7 @@ public static Task<string> GetDefaultZenModel()
 
 **Returns** `Task<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L181)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L181)
 
 ### GetMessages(string) {#getmessages-string}
 
@@ -123,7 +123,7 @@ public static Task<JArray> GetMessages(string sessionId)
 
 **Returns** `Task<JArray>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L112)
 
 ### ListAgents() {#listagents}
 
@@ -135,7 +135,7 @@ public static Task<List<string>> ListAgents()
 
 **Returns** `Task<List<string>>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L131)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L131)
 
 ### ListModels() {#listmodels}
 
@@ -148,7 +148,7 @@ public static Task<List<OpenCodeModel>> ListModels()
 
 **Returns** `Task<List<OpenCodeModel>>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L151)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L151)
 
 ### ListSessions() {#listsessions}
 
@@ -160,7 +160,7 @@ public static Task<List<(string Id, string Title)>> ListSessions()
 
 **Returns** `Task<List<(string Id, string Title)>>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L37)
 
 ### RespondToPermission(string, string, string) {#respondtopermission-string-string-string}
 
@@ -180,7 +180,7 @@ public static Task RespondToPermission(string sessionId, string requestId, strin
 
 **Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L118)
 
 ### SendPrompt(string, string, string, string, string, IEnumerable\<OpenCodeAttachment>) {#sendprompt-string-string-string-string-string-opencodeattachment}
 
@@ -206,5 +206,5 @@ public static Task<bool> SendPrompt(string sessionId, string text, string agent,
 
 **Returns** `Task<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeClient.cs#L70)
 

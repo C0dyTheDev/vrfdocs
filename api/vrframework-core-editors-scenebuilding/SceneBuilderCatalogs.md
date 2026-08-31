@@ -8,7 +8,7 @@ description: 'Discovers every catalog in the loaded editor assemblies.'
 
 # SceneBuilderCatalogs
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L67)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L75)
 
 Discovers every catalog in the loaded editor assemblies. Instances are cached until an
 explicit invalidate, because a domain reload rebuilds the list anyway.
@@ -31,7 +31,7 @@ public static IReadOnlyList<ISceneBuilderCatalog> All { get; }
 
 **Returns** `IReadOnlyList<ISceneBuilderCatalog>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L80)
 
 ### Available {#available}
 
@@ -43,7 +43,7 @@ public static IEnumerable<ISceneBuilderCatalog> Available { get; }
 
 **Returns** `IEnumerable<ISceneBuilderCatalog>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L82)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L90)
 
 ## Methods
 
@@ -63,7 +63,7 @@ public static ISceneBuilderCatalog Find(string id)
 
 **Returns** [`ISceneBuilderCatalog`](/api/vrframework-core-editors-scenebuilding/ISceneBuilderCatalog) - The catalog, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L101)
 
 ### Invalidate() {#invalidate}
 
@@ -73,5 +73,5 @@ Forgets the cached catalogs, so a recompile or a settings change is picked up.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L93)
 

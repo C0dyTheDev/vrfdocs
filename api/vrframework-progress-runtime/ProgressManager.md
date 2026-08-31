@@ -8,7 +8,7 @@ description: 'The progress module: runs the scenario.'
 
 # ProgressManager
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L17)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L17)
 
 The progress module: runs the scenario. Holds a queue of steps, hands the head of it its turn,
 and advances when that step reports complete - so a scene plays out as a sequence rather than
@@ -38,7 +38,7 @@ public string EndSoundKey
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L25)
 
 ### startBlock {#startblock}
 
@@ -51,7 +51,7 @@ public ProgressBlock startBlock
 
 **Returns** [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L21)
 
 ## Properties
 
@@ -65,7 +65,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L53)
 
 ### IsRunning {#isrunning}
 
@@ -77,7 +77,7 @@ public bool IsRunning { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L56)
 
 ### IsStopped {#isstopped}
 
@@ -89,7 +89,7 @@ public bool IsStopped { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L49)
 
 ### PendingSteps {#pendingsteps}
 
@@ -101,7 +101,7 @@ public IReadOnlyCollection<ProgressStep> PendingSteps { get; }
 
 **Returns** `IReadOnlyCollection<ProgressStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L46)
 
 ## Methods
 
@@ -113,7 +113,7 @@ Override to seed the queue from a different source than startBlock.
 protected virtual void BuildInitialQueue()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L133)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L133)
 
 ### ClearPendingSteps() {#clearpendingsteps}
 
@@ -124,7 +124,7 @@ enqueued next replaces the rest of the run instead of extending it.
 public void ClearPendingSteps()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L256)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L256)
 
 ### EnqueueBlock(ProgressBlock, bool) {#enqueueblock-progressblock-boolean}
 
@@ -142,7 +142,7 @@ public void EnqueueBlock(ProgressBlock block, bool end)
 | `block` | [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) | Block to queue. |
 | `end` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to queue it at the back, false to queue it next. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L208)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L208)
 
 ### FinishProgress() {#finishprogress}
 
@@ -155,7 +155,7 @@ public IEnumerator FinishProgress()
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L272)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L272)
 
 ### OnBlockCompleted(ProgressBlock) {#onblockcompleted-progressblock}
 
@@ -171,7 +171,7 @@ protected virtual void OnBlockCompleted(ProgressBlock block)
 | --- | --- | --- |
 | `block` | [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L336)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L336)
 
 ### OnCleanup() {#oncleanup}
 
@@ -181,7 +181,7 @@ Unregisters the module, unless another one has taken over the service in the mea
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L126)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L126)
 
 ### OnInit() {#oninit}
 
@@ -191,7 +191,7 @@ Registers the module as [`IProgressService`](/api/vrframework-core-runtime/IProg
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L107)
 
 ### OnNotifyStepComplete(ProgressStep) {#onnotifystepcomplete-progressstep}
 
@@ -208,7 +208,7 @@ public void OnNotifyStepComplete(ProgressStep completedStep)
 | --- | --- | --- |
 | `completedStep` | [`ProgressStep`](/api/vrframework-progress-runtime/ProgressStep) | The step reporting in. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L295)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L295)
 
 ### OnQueueEmptied() {#onqueueemptied}
 
@@ -218,7 +218,7 @@ Override to replace the end-of-progress flow.
 protected virtual void OnQueueEmptied()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L197)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L197)
 
 ### SelectNextStep() {#selectnextstep}
 
@@ -231,7 +231,7 @@ protected virtual ProgressStep SelectNextStep()
 
 **Returns** [`ProgressStep`](/api/vrframework-progress-runtime/ProgressStep)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L146)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L146)
 
 ### StartProgress() {#startprogress}
 
@@ -242,7 +242,7 @@ while a run is going abandons that run and starts over.
 public void StartProgress()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L66)
 
 ### StopProgress() {#stopprogress}
 
@@ -252,7 +252,7 @@ Stops the scenario where it stands. No further step is processed until it is sta
 public void StopProgress()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L96)
 
 ## Events
 
@@ -266,7 +266,7 @@ public event Action ProgressCompleted
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L60)
 
 ### ProgressStarted {#progressstarted}
 
@@ -278,5 +278,5 @@ public event Action ProgressStarted
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressManager.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressManager.cs#L58)
 

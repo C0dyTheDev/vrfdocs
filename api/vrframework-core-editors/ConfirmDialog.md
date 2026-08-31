@@ -8,7 +8,7 @@ description: 'A small yes or no window, used before anything in the graph delete
 
 # ConfirmDialog
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Dialog/ConfirmDialog.cs#L7)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Dialog/ConfirmDialog.cs#L6)
 
 A small yes or no window, used before anything in the graph deletes a scene object.
 
@@ -38,7 +38,7 @@ public static bool ShowDialog(string title, string message, Vector2 pos)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the user confirmed.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Dialog/ConfirmDialog.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Dialog/ConfirmDialog.cs#L64)
 
 ### ShowDialog(string, string) {#showdialog-string-string}
 
@@ -57,5 +57,5 @@ public static bool ShowDialog(string title, string message)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the user confirmed.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Dialog/ConfirmDialog.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Dialog/ConfirmDialog.cs#L54)
 

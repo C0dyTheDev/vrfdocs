@@ -8,7 +8,7 @@ description: 'How the time column is written.'
 
 # VRFLogTimeMode
 
-**Enum** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L8)
+**Enum** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L8)
 
 How the time column is written.
 

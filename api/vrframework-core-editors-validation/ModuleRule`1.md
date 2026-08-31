@@ -8,7 +8,7 @@ description: 'A rule that only runs when its module is in the open scene, so a s
 
 # ModuleRule\<T>
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L66)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L66)
 
 A rule that only runs when its module is in the open scene, so a scene that simply does not
 use that module is never reported as broken.
@@ -39,7 +39,7 @@ protected T Module { get; }
 
 **Returns** `T`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L69)
 
 ## Methods
 
@@ -53,7 +53,7 @@ public override bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the check should run.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L73)
 
 ### Serialized() {#serialized}
 
@@ -65,5 +65,5 @@ protected SerializedObject Serialized()
 
 **Returns** [`SerializedObject`](https://docs.unity3d.com/ScriptReference/SerializedObject.html) - The serialized module, or null when the scene has none.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L81)
 

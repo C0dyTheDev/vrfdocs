@@ -8,7 +8,7 @@ description: 'One issue as a card: severity accent and icon, the headline, what 
 
 # ValidationIssueView
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L11)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssueView.cs#L11)
 
 One issue as a card: severity accent and icon, the headline, what it costs at runtime, how to
 put it right, and the buttons that jump to the object or apply the fix.
@@ -31,7 +31,7 @@ Builds an empty row, ready to be bound to a finding.
 public ValidationIssueView()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssueView.cs#L24)
 
 ## Methods
 
@@ -50,7 +50,7 @@ public void Bind(ValidationIssue value, Action<ValidationIssue> fixRequested)
 | `value` | [`ValidationIssue`](/api/vrframework-core-editors-validation/ValidationIssue) | Finding to show. |
 | `fixRequested` | `Action<ValidationIssue>` | Called with the finding when the user clicks its fix button. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssueView.cs#L72)
 
 ### IconFor(ValidationSeverity) {#iconfor-validationseverity}
 
@@ -68,5 +68,5 @@ public static Texture IconFor(ValidationSeverity severity)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssueView.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssueView.cs#L109)
 

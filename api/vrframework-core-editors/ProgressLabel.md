@@ -8,7 +8,7 @@ description: 'A label on the graph canvas, wrapped so it carries a status bar hi
 
 # ProgressLabel
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressLabel.cs#L5)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressLabel.cs#L5)
 
 A label on the graph canvas, wrapped so it carries a status bar hint of its own.
 
@@ -30,7 +30,7 @@ Builds a label.
 public ProgressLabel()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressLabel.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressLabel.cs#L36)
 
 ### ProgressLabel(Label) {#ctor-label}
 
@@ -46,7 +46,7 @@ public ProgressLabel(Label label)
 | --- | --- | --- |
 | `label` | [`Label`](https://docs.unity3d.com/ScriptReference/UIElements.Label.html) | Label to wrap. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressLabel.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressLabel.cs#L21)
 
 ### ProgressLabel(string, Label) {#ctor-string-label}
 
@@ -63,7 +63,7 @@ public ProgressLabel(string hint, Label label)
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 | `label` | [`Label`](https://docs.unity3d.com/ScriptReference/UIElements.Label.html) | Label to wrap. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressLabel.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressLabel.cs#L13)
 
 ### ProgressLabel(string) {#ctor-string}
 
@@ -79,7 +79,7 @@ public ProgressLabel(string hint)
 | --- | --- | --- |
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressLabel.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressLabel.cs#L29)
 
 ## Fields
 
@@ -93,7 +93,7 @@ public Label label
 
 **Returns** [`Label`](https://docs.unity3d.com/ScriptReference/UIElements.Label.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressLabel.cs#L8)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressLabel.cs#L8)
 
 ## Properties
 
@@ -107,5 +107,5 @@ public string text { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/ProgressLabel.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/ProgressLabel.cs#L43)
 

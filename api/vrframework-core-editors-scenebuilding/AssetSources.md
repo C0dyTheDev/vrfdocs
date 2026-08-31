@@ -8,7 +8,7 @@ description: 'Discovers every asset source in the loaded editor assemblies.'
 
 # AssetSources
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L113)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L170)
 
 Discovers every asset source in the loaded editor assemblies.
 
@@ -30,7 +30,7 @@ public static IReadOnlyList<IAssetSource> All { get; }
 
 **Returns** `IReadOnlyList<IAssetSource>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L175)
 
 ### Configured {#configured}
 
@@ -42,7 +42,7 @@ public static IEnumerable<IAssetSource> Configured { get; }
 
 **Returns** `IEnumerable<IAssetSource>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L185)
 
 ## Methods
 
@@ -54,7 +54,17 @@ Forgets the cached sources, so a recompile or a settings change is picked up.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L131)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L194)
+
+### NotifyChanged() {#notifychanged}
+
+Tells any open window that what a source offers has changed.
+
+```csharp
+public static void NotifyChanged()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L200)
 
 ### RefreshAll() {#refreshall}
 
@@ -64,5 +74,39 @@ Asks every source to drop its cache and read its database again.
 public static void RefreshAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L221)
+
+### SanitiseFileName(string) {#sanitisefilename-string}
+
+Turns a value into something safe to use as a single file or folder name. Used for cache
+files named after an entry, where the entry's own name is not under our control.
+
+```csharp
+public static string SanitiseFileName(string value)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Value to make safe. |
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The value with every path character replaced.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L211)
+
+## Events
+
+### Changed {#changed}
+
+Raised whenever a source's entries change - a database finished loading, a thumbnail
+arrived, an import completed - so an open window rebuilds its grid.
+
+```csharp
+public static event Action Changed
+```
+
+**Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L191)
 

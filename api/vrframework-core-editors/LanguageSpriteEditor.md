@@ -8,7 +8,7 @@ description: 'Inspector for a sprite translation asset.'
 
 # LanguageSpriteEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L215)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L215)
 
 Inspector for a sprite translation asset.
 
@@ -29,7 +29,7 @@ Builds the sprite inspector.
 public LanguageSpriteEditor()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L219)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L219)
 
 ## Methods
 
@@ -41,5 +41,5 @@ Rebuilds the sprite lookup maps.
 protected override void ProcessLanguageInstance()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L224)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L224)
 

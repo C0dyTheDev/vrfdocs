@@ -8,7 +8,7 @@ description: 'Everything the setup writes into the project itself: the framework
 
 # ProjectSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L20)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L20)
 
 Everything the setup writes into the project itself: the framework's own template assets, the
 project settings a VR build needs, the two StreamingAssets files the platform reads on start,
@@ -22,7 +22,35 @@ public static class ProjectSetup
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `ProjectSetup`
 
+## Fields
+
+### AppEventsPath {#appeventspath}
+
+Where the installed plugin lives, for the validator to check and point at.
+
+```csharp
+public const string AppEventsPath = "Assets/Plugins/Android/com/cievr/shutdown/AppEvents.java"
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L32)
+
 ## Methods
+
+### AndroidPluginIsCurrent() {#androidpluginiscurrent}
+
+Whether the project carries the framework's current copy of the shutdown plugin. False
+when the file is missing or when a project has edited it - both leave the app unable to
+hold up its end of the protocol. What the validator reports on.
+
+```csharp
+public static bool AndroidPluginIsCurrent()
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the installed plugin matches the package's.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L418)
 
 ### ConfigureGraphicsAndQuality() {#configuregraphicsandquality}
 
@@ -33,7 +61,7 @@ that level available on the two platforms the framework ships to.
 public static void ConfigureGraphicsAndQuality()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L164)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L152)
 
 ### ConfigurePhysicsAndTime() {#configurephysicsandtime}
 
@@ -44,7 +72,7 @@ there is nothing to write until those layers exist.
 public static void ConfigurePhysicsAndTime()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L221)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L209)
 
 ### ConfigurePlayerSettings() {#configureplayersettings}
 
@@ -56,7 +84,7 @@ Unity's default, so re-running this on a real project does not rename the app.
 public static void ConfigurePlayerSettings()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L266)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L269)
 
 ### ConfigureScriptExecutionOrder() {#configurescriptexecutionorder}
 
@@ -66,7 +94,7 @@ Puts the framework's scripts into the execution order the runtime expects.
 public static void ConfigureScriptExecutionOrder()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L244)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L247)
 
 ### ConfigureTagsAndLayers() {#configuretagsandlayers}
 
@@ -77,7 +105,7 @@ both, and Unity logs an error for each one that does not exist.
 public static void ConfigureTagsAndLayers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L211)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L199)
 
 ### CopyFrameworkContent() {#copyframeworkcontent}
 
@@ -88,7 +116,7 @@ a project can edit them without the changes belonging to the package.
 public static void CopyFrameworkContent()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L102)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L90)
 
 ### CreateStreamingAssets() {#createstreamingassets}
 
@@ -100,7 +128,7 @@ described about itself.
 public static void CreateStreamingAssets()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L371)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L453)
 
 ### FetchGitignore() {#fetchgitignore}
 
@@ -112,7 +140,7 @@ considers an asset - so it is written with File rather than through the asset da
 public static void FetchGitignore()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L419)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L501)
 
 ### GitignoreFetched() {#gitignorefetched}
 
@@ -126,7 +154,22 @@ public static bool GitignoreFetched()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L431)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L513)
+
+### InstallAndroidPlugins() {#installandroidplugins}
+
+Installs the Java behind the platform's remote lifecycle protocol - the receivers for
+ACTION_SHUTDOWN and ACTION_GET_RUNNING_APPS, and the broadcasts that answer them. Without
+this file on disk [`ShutdownRelay`](/api/vrframework-core-runtime/ShutdownRelay) finds no class to call and the headset
+management service can neither discover the app nor close it remotely.
+The framework's copy wins on every run: the class is one half of a protocol whose other
+half lives in the platform, so a project editing it would only break the pairing.
+
+```csharp
+public static void InstallAndroidPlugins()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L377)
 
 ### IsOnAndroid() {#isonandroid}
 
@@ -138,7 +181,7 @@ public static bool IsOnAndroid()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True on Android.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L81)
 
 ### SwitchToAndroid() {#switchtoandroid}
 
@@ -149,5 +192,5 @@ platform, so this is a step of its own with the rest of the sequence waiting beh
 public static void SwitchToAndroid()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L72)
 

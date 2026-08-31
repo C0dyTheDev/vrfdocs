@@ -8,7 +8,7 @@ description: 'What the graph does when the user finishes a gesture: reconnecting
 
 # ProgressInteractions
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressInteractions.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressInteractions.cs#L13)
 
 What the graph does when the user finishes a gesture: reconnecting a line, drawing a new one,
 creating a block or a step, and moving what is selected. Each of these edits the scene objects
@@ -36,7 +36,7 @@ public static void BlocksMove(BlockView block)
 | --- | --- | --- |
 | `block` | [`BlockView`](/api/vrframework-core-editors/BlockView) | Node that moved. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressInteractions.cs#L333)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressInteractions.cs#L333)
 
 ### CreateNewBlockObject(Vector2) {#createnewblockobject-vector2}
 
@@ -52,7 +52,7 @@ public static void CreateNewBlockObject(Vector2 mousePosition)
 | --- | --- | --- |
 | `mousePosition` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where the node is placed, in canvas coordinates. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressInteractions.cs#L289)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressInteractions.cs#L289)
 
 ### CreateNewStepObject(ProgressBlock) {#createnewstepobject-progressblock}
 
@@ -68,7 +68,7 @@ public static void CreateNewStepObject(ProgressBlock parent)
 | --- | --- | --- |
 | `parent` | [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock) | Block to add the step to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressInteractions.cs#L317)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressInteractions.cs#L317)
 
 ### LineCreate(bool) {#linecreate-boolean}
 
@@ -85,7 +85,7 @@ public static void LineCreate(bool checkForConnections)
 | --- | --- | --- |
 | `checkForConnections` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to attach the line to the port under the pointer. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressInteractions.cs#L203)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressInteractions.cs#L203)
 
 ### LineReconnect(bool, Line, bool) {#linereconnect-boolean-line-boolean}
 
@@ -104,7 +104,7 @@ public static void LineReconnect(bool checkForConnections, Line line, bool force
 | `line` | [`Line`](/api/vrframework-core-editors/Line) | The line being dragged. |
 | `forceDelete` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to delete the connection whatever it was dropped on. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressInteractions.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressInteractions.cs#L29)
 
 ### UpdateHintText(VisualElement) {#updatehinttext-visualelement}
 
@@ -120,5 +120,5 @@ public static void UpdateHintText(VisualElement target)
 | --- | --- | --- |
 | `target` | [`VisualElement`](https://docs.unity3d.com/ScriptReference/UIElements.VisualElement.html) | Element under the pointer. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/ProgressInteractions.cs#L351)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/ProgressInteractions.cs#L351)
 

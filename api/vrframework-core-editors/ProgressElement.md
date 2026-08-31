@@ -8,7 +8,7 @@ description: 'Base of everything drawn on the progress graph canvas: positioned 
 
 # ProgressElement
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressElement.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressElement.cs#L9)
 
 Base of everything drawn on the progress graph canvas: positioned absolutely, and able to say
 what the status bar shows while the pointer is over it.
@@ -33,7 +33,7 @@ Builds an element positioned on the canvas.
 public ProgressElement()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressElement.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressElement.cs#L16)
 
 ### ProgressElement(string) {#ctor-string}
 
@@ -49,7 +49,7 @@ protected ProgressElement(string hint)
 | --- | --- | --- |
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressElement.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressElement.cs#L23)
 
 ## Fields
 
@@ -63,7 +63,7 @@ protected string hint
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressElement.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressElement.cs#L12)
 
 ## Properties
 
@@ -77,7 +77,7 @@ public ProgressElement pparent { get; }
 
 **Returns** [`ProgressElement`](/api/vrframework-core-editors/ProgressElement)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressElement.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressElement.cs#L30)
 
 ## Methods
 
@@ -95,5 +95,5 @@ public void SetBorderColor(Color color)
 | --- | --- | --- |
 | `color` | [`Color`](https://docs.unity3d.com/ScriptReference/Color.html) | Colour to use. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressElement.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressElement.cs#L36)
 

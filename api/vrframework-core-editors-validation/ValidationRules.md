@@ -8,7 +8,7 @@ description: 'Finds every rule in the loaded editor assemblies.'
 
 # ValidationRules
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L39)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L39)
 
 Finds every rule in the loaded editor assemblies.
 
@@ -30,7 +30,7 @@ public static IReadOnlyList<ValidationRule> All { get; }
 
 **Returns** `IReadOnlyList<ValidationRule>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L44)
 
 ## Methods
 
@@ -42,5 +42,5 @@ Forgets the cached rule list, so a recompile is picked up.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L54)
 

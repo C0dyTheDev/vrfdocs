@@ -12,18 +12,23 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
+| [`AndroidPluginRule`](/api/vrframework-core-editors-validation/AndroidPluginRule) | Checks the Java behind the platform's remote lifecycle protocol. |
 | [`AudioModuleRule`](/api/vrframework-core-editors-validation/AudioModuleRule) | Checks the audio module's setup: its default source and success sound. |
 | [`BuildTargetRule`](/api/vrframework-core-editors-validation/BuildTargetRule) | Checks that the project builds for a target the framework supports. |
 | [`DuplicateModuleRule`](/api/vrframework-core-editors-validation/DuplicateModuleRule) | Two modules of the same type both register the same service, and RuntimeRegistry keeps whichever registered last. |
 | [`FrameworkSettingsRule`](/api/vrframework-core-editors-validation/FrameworkSettingsRule) | The VRFrameworkSettings asset every project is expected to carry, and the pieces of it that other parts of the framework read at runtime. |
+| [`GrabbableGripRule`](/api/vrframework-core-editors-validation/GrabbableGripRule) | Checks the grip model on every grabbable in the open scene: how it may be taken, by which colliders, and where hands attach. |
+| [`GrabHandRule`](/api/vrframework-core-editors-validation/GrabHandRule) | Checks that the hands in the scene can actually hold what they grab. |
 | [`InteractionModuleRule`](/api/vrframework-core-editors-validation/InteractionModuleRule) | Checks the interaction module's setup: the rig references it hands to everything else. |
 | [`LocalizationModuleRule`](/api/vrframework-core-editors-validation/LocalizationModuleRule) | Checks the localization module's setup: its config and translation assets. |
 | [`MinigamesModuleRule`](/api/vrframework-core-editors-validation/MinigamesModuleRule) | Checks the minigames module's setup: its set of parts and their scenes. |
 | [`MistakesModuleRule`](/api/vrframework-core-editors-validation/MistakesModuleRule) | Checks the mistakes module's setup: its checkpoints and scene name. |
 | [`ModuleRule<T>`](/api/vrframework-core-editors-validation/ModuleRule`1) | A rule that only runs when its module is in the open scene, so a scene that simply does not use that module is never reported as broken. |
+| [`OrphanGripPointRule`](/api/vrframework-core-editors-validation/OrphanGripPointRule) | Checks grip points that are not part of any grabbable. |
 | [`PhysicsRule`](/api/vrframework-core-editors-validation/PhysicsRule) | Checks the physics settings the framework's grabbing relies on. |
-| [`PlatformModuleRule`](/api/vrframework-core-editors-validation/PlatformModuleRule) | Checks the platform module's setup: its parameters asset and report settings. |
+| [`PlatformModuleRule`](/api/vrframework-core-editors-validation/PlatformModuleRule) | Checks the platform module's setup: its config asset and report settings. |
 | [`PlayerSettingsRule`](/api/vrframework-core-editors-validation/PlayerSettingsRule) | Checks the player settings a VR build needs. |
+| [`PokeRule`](/api/vrframework-core-editors-validation/PokeRule) | Checks the poke surfaces in the open scene, and that there is a hand able to touch them. |
 | [`ProgressEnqueueRule`](/api/vrframework-core-editors-validation/ProgressEnqueueRule) | Checks the branching: that every enqueue points at a block, and none of them is empty. |
 | [`ProgressLayoutRule`](/api/vrframework-core-editors-validation/ProgressLayoutRule) | Where blocks and steps sit in the hierarchy, and whether their object names still match the order the manager reads them in. |
 | [`ProgressReachabilityRule`](/api/vrframework-core-editors-validation/ProgressReachabilityRule) | Walks the scenario the way the manager does - start block, then whatever each step queues - and reports the blocks nothing can reach. |
@@ -35,6 +40,7 @@ sidebar_position: 0
 | [`SceneScaffoldRule`](/api/vrframework-core-editors-validation/SceneScaffoldRule) | Checks that the open scene has the objects a framework scene is built from. |
 | [`ScriptExecutionOrderRule`](/api/vrframework-core-editors-validation/ScriptExecutionOrderRule) | Checks that the framework's scripts run in the order the runtime expects. |
 | [`ServiceDependencyRule`](/api/vrframework-core-editors-validation/ServiceDependencyRule) | Steps set up to speak with nothing in the scene able to play them. |
+| [`SnapDropZoneRule`](/api/vrframework-core-editors-validation/SnapDropZoneRule) | Checks holders that can never take anything. |
 | [`StreamingAssetsRule`](/api/vrframework-core-editors-validation/StreamingAssetsRule) | Checks the StreamingAssets files the platform module reads at runtime. |
 | [`StreamingModuleRule`](/api/vrframework-core-editors-validation/StreamingModuleRule) | Checks the streaming module's setup: the camera it streams. |
 | [`TagsAndLayersRule`](/api/vrframework-core-editors-validation/TagsAndLayersRule) | Checks that the tags and layers the framework's interaction relies on exist. |

@@ -8,7 +8,7 @@ description: 'Base of the scenario branching components: a set of flags the scen
 
 # Condition
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L21)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L21)
 
 Base of the scenario branching components: a set of flags the scene ticks off through
 UnityEvents, combined into one verdict by [`ConditionMode`](/api/vrframework-progress-runtime/ConditionMode). What that verdict does
@@ -35,7 +35,7 @@ protected List<bool> conditions
 
 **Returns** `List<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L31)
 
 ### mode {#mode}
 
@@ -48,7 +48,7 @@ protected ConditionMode mode
 
 **Returns** [`ConditionMode`](/api/vrframework-progress-runtime/ConditionMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L24)
 
 ### requiredCount {#requiredcount}
 
@@ -62,7 +62,7 @@ protected int requiredCount
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L28)
 
 ## Methods
 
@@ -74,7 +74,7 @@ Weighs the flags up and acts on the verdict. Wired to a UnityEvent, or run by th
 public abstract void Evaluate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L40)
 
 ### EvaluateBranch() {#evaluatebranch}
 
@@ -86,7 +86,7 @@ protected bool EvaluateBranch()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the condition holds.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L44)
 
 ### OnBeforeSerialize() {#onbeforeserialize}
 
@@ -96,7 +96,7 @@ Serialization callback. Nothing to prepare.
 public void OnBeforeSerialize()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L34)
 
 ### SetBoolFalse(int) {#setboolfalse-int32}
 
@@ -112,7 +112,7 @@ public void SetBoolFalse(int index)
 | --- | --- | --- |
 | `index` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the flag in the list. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L66)
 
 ### SetBoolTrue(int) {#setbooltrue-int32}
 
@@ -128,5 +128,5 @@ public void SetBoolTrue(int index)
 | --- | --- | --- |
 | `index` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the flag in the list. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L59)
 

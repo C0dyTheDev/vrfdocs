@@ -8,11 +8,19 @@ description: 'A place an object belongs.'
 
 # SnapDropZone
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L17)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L60)
 
-A place an object belongs. Accepts whichever object matches its identification, eases it into
-place and holds it there, raising events either side. In Repick mode the object may be taken
-out again; in Normal mode it stays put for good.
+A place an object belongs. Takes whatever it accepts, eases it into its seat and holds it there,
+raising events either side.
+
+Only ever a place to put something. What a socketed object then *is* - scenery, a
+mechanism, a thing that lights up - is the author's business, and [`OnSnap`](/api/vrframework-interaction-runtime/SnapDropZone#onsnap) is
+where that is decided. A zone that switched mechanisms on by itself would be deciding it for
+everybody, and most things dropped into a holder are just being put down.
+
+An object inside the zone is taken out of the hand holding it, because putting something away
+is aiming it at its place and letting the place do the rest. A holder that things are carried
+past rather than to can be told to wait for the hand to let go instead.
 
 Adding this in the editor also sets up a trigger collider and a highlight.
 
@@ -24,69 +32,42 @@ public class SnapDropZone : MonoBehaviour
 
 ## Fields
 
-### identification {#identification}
-
-Name or tag to match, depending on [`identificationMode`](/api/vrframework-interaction-runtime/SnapDropZone#identificationmode).
+### accepts {#accepts}
 
 ```csharp
-public string identification
+[Tooltip("What this will take.\n\nOne Object takes only the object named below. By Tag takes anything carrying the tag below, which is how one holder accepts any of a set of things.")]
+public SnapAccepts accepts
 ```
 
-**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+**Returns** [`SnapAccepts`](/api/vrframework-interaction-runtime/SnapAccepts)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L24)
-
-### identificationMode {#identificationmode}
-
-What the zone matches candidates on.
-
-```csharp
-public SnapIdentification identificationMode
-```
-
-**Returns** [`SnapIdentification`](/api/vrframework-interaction-runtime/SnapIdentification)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L22)
-
-### identificationObject {#identificationobject}
-
-The one object accepted when matching by object.
-
-```csharp
-public GameObject identificationObject
-```
-
-**Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L26)
-
-### lerpDuration {#lerpduration}
-
-How long the object takes to ease into place, in seconds.
-
-```csharp
-public float lerpDuration
-```
-
-**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L81)
 
 ### mode {#mode}
 
-Whether a snapped object may be taken out again.
-
 ```csharp
+[Tooltip("Whether a snapped object may be taken back out.\n\nNormal is one use: the grabbable is switched off once it is in, and no hand can take it again.\n\nRepick leaves it grabbable, and a hand taking it empties the zone for the next thing.")]
 public SnapMode mode
 ```
 
 **Returns** [`SnapMode`](/api/vrframework-interaction-runtime/SnapMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L67)
+
+### only {#only}
+
+```csharp
+[Tooltip("The one object this takes. Only read when Accepts is One Object.")]
+public GrabbableObject only
+```
+
+**Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L84)
 
 ### OnSnap {#onsnap}
 
-Raised once an object has finished snapping into place.
+Raised once an object has finished easing into its seat.
 
 ```csharp
 public UnityEvent OnSnap
@@ -94,11 +75,11 @@ public UnityEvent OnSnap
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L115)
 
 ### OnUnsnap {#onunsnap}
 
-Raised when a snapped object leaves a Repick zone.
+Raised when a snapped object leaves the zone.
 
 ```csharp
 public UnityEvent OnUnsnap
@@ -106,117 +87,205 @@ public UnityEvent OnUnsnap
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L118)
 
-### pos {#pos}
-
-Whether position is snapped. Only read when [`useCustomSnapTransform`](/api/vrframework-interaction-runtime/SnapDropZone#usecustomsnaptransform) is set.
+### seat {#seat}
 
 ```csharp
-public bool pos
+[Tooltip("Where a snapped object ends up, and what it is parented to.\n\nLeave empty to use this object. Name a child when the trigger that catches the object is bigger than the place it goes, which is usual: a holder is easier to hit than it is deep.")]
+public Transform seat
+```
+
+**Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L93)
+
+### seatDuration {#seatduration}
+
+```csharp
+[Tooltip("How long an object takes to ease into its seat, in seconds. Zero puts it there at once.")]
+public float seatDuration
+```
+
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L96)
+
+### snapPosition {#snapposition}
+
+```csharp
+[Tooltip("Whether the object is moved onto the seat. Off leaves it standing where it was dropped.")]
+public bool snapPosition
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L106)
 
-### rot {#rot}
-
-Whether rotation is snapped. Only read when [`useCustomSnapTransform`](/api/vrframework-interaction-runtime/SnapDropZone#usecustomsnaptransform) is set.
+### snapRotation {#snaprotation}
 
 ```csharp
-public bool rot
+[Tooltip("Whether the object is turned to match the seat. Off leaves it however it was dropped.")]
+public bool snapRotation
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L109)
 
-### sca {#sca}
-
-Whether scale is snapped. Only read when [`useCustomSnapTransform`](/api/vrframework-interaction-runtime/SnapDropZone#usecustomsnaptransform) is set.
+### snapScale {#snapscale}
 
 ```csharp
-public bool sca
+[Tooltip("Whether the object takes the seat's scale. Off leaves it the size it already was.")]
+public bool snapScale
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L112)
 
-### useCustomSnapTransform {#usecustomsnaptransform}
-
-Whether only the ticked parts of the transform are snapped, leaving the rest as they are.
+### tagged {#tagged}
 
 ```csharp
-public bool useCustomSnapTransform
+[Tooltip("The tag this takes. Only read when Accepts is By Tag.")]
+public string tagged
 ```
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L87)
+
+### takeAgainAfter {#takeagainafter}
+
+```csharp
+[Tooltip("How long after something is picked out of here before it may go back in, in seconds.\n\nA hand that has just taken something out is still inside the zone and is still fumbling with what it took. Without a wait, the smallest slip puts it straight back and the player has to fight the holder for their own object.")]
+public float takeAgainAfter
+```
+
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L103)
+
+### takes {#takes}
+
+```csharp
+[Tooltip("When this takes an object that is inside it.\n\nFrom The Hand takes it as soon as it is inside, out of the hand holding it - aim it at its place and the place does the rest.\n\nWhen Let Go waits for the hand to drop it inside. Use it for a holder that things are carried past on the way somewhere else, where taking one out of the hand would be a theft.")]
+public SnapWhen takes
+```
+
+**Returns** [`SnapWhen`](/api/vrframework-interaction-runtime/SnapWhen)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L75)
+
+## Properties
+
+### Seat {#seat}
+
+Where a snapped object ends up: the named seat, or this object.
+
+```csharp
+public Transform Seat { get; }
+```
+
+**Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L124)
+
+### Seated {#seated}
+
+What is snapped in here, or null.
+
+```csharp
+public GrabbableObject Seated { get; }
+```
+
+**Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L121)
 
 ## Methods
 
-### CanAccept(GameObject) {#canaccept-gameobject}
+### CanAccept(GrabbableObject) {#canaccept-grabbableobject}
 
 Override to change which objects this zone accepts.
 
 ```csharp
-protected virtual bool CanAccept(GameObject candidate)
+protected virtual bool CanAccept(GrabbableObject candidate)
 ```
 
 **Parameters**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `candidate` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object that entered the zone. |
+| `candidate` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Object that is in the zone and not held. |
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the zone should take it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L151)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L313)
 
-### OnSnapped(GameObject) {#onsnapped-gameobject}
+### Free() {#free}
+
+Lets the snapped object go, whether or not a hand is on it.
+
+What a Repick zone does by itself when a hand takes its object back, and what a Normal
+zone does only when something asks - which is how a one-use holder is opened again by a
+script, a reset or a later stage of whatever the scene is about.
+
+```csharp
+public void Free()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L442)
+
+### Offer(GrabbableObject) {#offer-grabbableobject}
+
+Offers an object to the zone, which takes it if it can.
+
+```csharp
+public bool Offer(GrabbableObject candidate)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `candidate` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | The object being offered. |
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True if the zone took it.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L278)
+
+### OnSnapped(GrabbableObject) {#onsnapped-grabbableobject}
 
 Override to react to a completed snap.
 
 ```csharp
-protected virtual void OnSnapped(GameObject snapped)
+protected virtual void OnSnapped(GrabbableObject snapped)
 ```
 
 **Parameters**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `snapped` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object that has just snapped into place. |
+| `snapped` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Object that has just settled into its seat. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L163)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L324)
 
-### OnUnsnapped(GameObject) {#onunsnapped-gameobject}
+### OnUnsnapped(GrabbableObject) {#onunsnapped-grabbableobject}
 
-Override to react to an object leaving a Repick zone.
+Override to react to an object leaving the zone.
 
 ```csharp
-protected virtual void OnUnsnapped(GameObject unsnapped)
+protected virtual void OnUnsnapped(GrabbableObject unsnapped)
 ```
 
 **Parameters**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `unsnapped` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object that has just left the zone. |
+| `unsnapped` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Object that has just left. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L171)
-
-### ReEnableSnap() {#reenablesnap}
-
-Opens the zone up again after a snapped object was taken out.
-
-```csharp
-public void ReEnableSnap()
-```
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L253)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L333)
 
 ### SetHighlight(bool) {#sethighlight-boolean}
 
@@ -224,14 +293,34 @@ Shows or hides the zone's own visuals - its highlight and renderers, and those o
 other than a snapped object.
 
 ```csharp
-public void SetHighlight(bool val)
+public void SetHighlight(bool show)
 ```
 
 **Parameters**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `val` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to show the zone, false to hide it. |
+| `show` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to show the zone, false to hide it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L290)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L489)
+
+### Step(float) {#step-single}
+
+Looks at what is in the zone and at what is snapped into it, and acts on either.
+
+Public because a trigger is not the only way an object arrives. A scene that starts with
+something already in its holder, an author previewing a layout, and a check running
+outside play mode all need to put one in without a collision to do it.
+
+```csharp
+public void Step(float sinceLast)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sinceLast` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Seconds since this was last stepped. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L243)
 

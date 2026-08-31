@@ -8,7 +8,7 @@ description: 'This script checks for a specific parameter value and acts accordi
 
 # ReactOnParameter
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L10)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReactOnParameter.cs#L10)
 
 This script checks for a specific parameter value and acts accordingly
 
@@ -31,7 +31,7 @@ public string expectedValue
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReactOnParameter.cs#L15)
 
 ### OnCorrectParameterValue {#oncorrectparametervalue}
 
@@ -43,7 +43,7 @@ public UnityEvent OnCorrectParameterValue
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReactOnParameter.cs#L18)
 
 ### OnWrongParameterValue {#onwrongparametervalue}
 
@@ -55,7 +55,7 @@ public UnityEvent OnWrongParameterValue
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReactOnParameter.cs#L20)
 
 ### parameterName {#parametername}
 
@@ -68,5 +68,5 @@ public string parameterName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReactOnParameter.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReactOnParameter.cs#L13)
 

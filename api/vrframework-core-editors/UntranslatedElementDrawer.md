@@ -8,7 +8,7 @@ description: 'Draws an entry that is the same in every language: its name and it
 
 # UntranslatedElementDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L9)
 
 Draws an entry that is the same in every language: its name and its single value.
 
@@ -36,7 +36,7 @@ protected UntranslatedElementDrawer(LangType type)
 | --- | --- | --- |
 | `type` | [`LangType`](/api/vrframework-core-runtime/LangType) | Kind of localized content. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L20)
 
 ## Fields
 
@@ -50,7 +50,7 @@ protected bool showDebug
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L13)
 
 ### type {#type}
 
@@ -62,7 +62,7 @@ protected LangType type
 
 **Returns** [`LangType`](/api/vrframework-core-runtime/LangType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L16)
 
 ## Methods
 
@@ -82,7 +82,7 @@ public override VisualElement CreatePropertyGUI(SerializedProperty property)
 
 **Returns** [`VisualElement`](https://docs.unity3d.com/ScriptReference/UIElements.VisualElement.html) - The element drawn for it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L28)
 
 ### GetPropertyHeight(SerializedProperty, GUIContent) {#getpropertyheight-serializedproperty-guicontent}
 
@@ -101,7 +101,7 @@ public override float GetPropertyHeight(SerializedProperty property, GUIContent 
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The height in pixels.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L85)
 
 ### OnGUI(Rect, SerializedProperty, GUIContent) {#ongui-rect-serializedproperty-guicontent}
 
@@ -119,5 +119,5 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
 | `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | The entry being drawn. |
 | `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | Label of the entry. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L45)
 

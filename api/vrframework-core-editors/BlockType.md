@@ -8,7 +8,7 @@ description: 'What a block is in the run, which decides how its node is coloured
 
 # BlockType
 
-**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockType.cs#L3)
+**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockType.cs#L3)
 
 What a block is in the run, which decides how its node is coloured on the graph.
 

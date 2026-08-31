@@ -8,7 +8,7 @@ description: 'Turns a build profile''s VRF settings into the state a build needs
 
 # VRFBuildRunner
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L17)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildRunner.cs#L17)
 
 Turns a build profile's VRF settings into the state a build needs, and says why it cannot
 when the profile is not ready.
@@ -34,7 +34,7 @@ public const string LogPrefix = "[VRF Build]"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildRunner.cs#L20)
 
 ## Methods
 
@@ -57,7 +57,7 @@ public static VRFBuildContext Apply(BuildProfile profile, VRFBuildSettings setti
 
 **Returns** [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildRunner.cs#L62)
 
 ### Describe(BuildProfile, VRFBuildSettings, VRFBuildContext) {#describe-buildprofile-vrfbuildsettings-vrfbuildcontext}
 
@@ -77,7 +77,7 @@ public static string Describe(BuildProfile profile, VRFBuildSettings settings, V
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildRunner.cs#L77)
 
 ### DescribeErrors(ValidationReport) {#describeerrors-validationreport}
 
@@ -96,7 +96,7 @@ public static string DescribeErrors(ValidationReport report)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildRunner.cs#L98)
 
 ### LogWarnings(ValidationReport, BuildProfile) {#logwarnings-validationreport-buildprofile}
 
@@ -113,7 +113,7 @@ public static void LogWarnings(ValidationReport report, BuildProfile profile)
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildRunner.cs#L115)
 
 ### TryResolveActive(out BuildProfile, out VRFBuildSettings, out string) {#tryresolveactive-buildprofile-vrfbuildsettings-string}
 
@@ -134,5 +134,5 @@ public static bool TryResolveActive(out BuildProfile profile, out VRFBuildSettin
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildRunner.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildRunner.cs#L26)
 

@@ -8,7 +8,7 @@ description: 'Turns a string field into a translation ID picker in the Inspector
 
 # LanguageAttribute
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L8)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L8)
 
 Turns a string field into a translation ID picker in the Inspector, listing the entries of the
 language instance named by [`type`](/api/vrframework-core-runtime/LanguageAttribute#type).
@@ -36,7 +36,7 @@ public LanguageAttribute(LangType type, string plainField = null)
 | `type` | [`LangType`](/api/vrframework-core-runtime/LangType) | Which language instance this ID belongs to. |
 | `plainField` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Optional name of a sibling field holding a plain Unity asset (e.g. an AudioClip). When the scene has no Localization module the Inspector draws that field instead of the translation picker, so only ever one audio slot is visible. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L17)
 
 ## Properties
 
@@ -50,7 +50,7 @@ public string plainField { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L26)
 
 ### type {#type}
 
@@ -62,5 +62,5 @@ public LangType type { get; }
 
 **Returns** [`LangType`](/api/vrframework-core-runtime/LangType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/Attributes/LanguageAttribute.cs#L24)
 

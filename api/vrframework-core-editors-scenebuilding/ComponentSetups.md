@@ -8,7 +8,7 @@ description: 'Every setup available: the framework''s own, plus any ComponentSet
 
 # ComponentSetups
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L256)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetup.cs#L254)
 
 Every setup available: the framework's own, plus any [`ComponentSetupAsset`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset)
 authored in the project. Cached until something invalidates it.
@@ -31,7 +31,7 @@ public static IReadOnlyList<ComponentSetup> All { get; }
 
 **Returns** `IReadOnlyList<ComponentSetup>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L261)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetup.cs#L259)
 
 ## Methods
 
@@ -51,7 +51,7 @@ public static ComponentSetup Find(string id)
 
 **Returns** [`ComponentSetup`](/api/vrframework-core-editors-scenebuilding/ComponentSetup) - The setup, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L282)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetup.cs#L280)
 
 ### Invalidate() {#invalidate}
 
@@ -61,5 +61,5 @@ Forgets the cached setups, so a recompile or a new asset is picked up.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L271)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetup.cs#L269)
 

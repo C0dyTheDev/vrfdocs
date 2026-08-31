@@ -8,7 +8,7 @@ description: 'One piece of work in a setup sequence, plus the question "is it fi
 
 # SetupStep
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L14)
 
 One piece of work in a setup sequence, plus the question "is it finished yet?".
 Most steps are done the moment [`Run`](/api/vrframework-core-editors-setup/SetupStep#run) returns. The ones that hand work to Unity -
@@ -40,7 +40,7 @@ public SetupStep(string title, Action run, Func<bool> isFinished = null, float t
 | `isFinished` | `Func<bool>` | Polled until it answers true, for work Unity finishes asynchronously. |
 | `timeoutSeconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long the step may take before it counts as failed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L21)
 
 ## Properties
 
@@ -57,7 +57,7 @@ public Func<bool> IsFinished { get; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L41)
 
 ### Run {#run}
 
@@ -69,7 +69,7 @@ public Action Run { get; }
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L33)
 
 ### TimeoutSeconds {#timeoutseconds}
 
@@ -81,7 +81,7 @@ public float TimeoutSeconds { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L44)
 
 ### Title {#title}
 
@@ -93,5 +93,5 @@ public string Title { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L30)
 

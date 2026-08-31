@@ -8,7 +8,7 @@ description: 'Reads the server''s server-sent event stream and replays it on the
 
 # OpenCodeEventStream
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L19)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeEventStream.cs#L19)
 
 Reads the server's server-sent event stream and replays it on the main thread.
 The read has to happen off the main thread - it blocks for as long as the agent is thinking -
@@ -35,7 +35,7 @@ public static bool IsConnected { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeEventStream.cs#L35)
 
 ## Methods
 
@@ -47,7 +47,7 @@ Begins listening. Safe to call repeatedly; only the first call connects.
 public static void Start()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeEventStream.cs#L47)
 
 ### Stop() {#stop}
 
@@ -57,7 +57,7 @@ Stops listening and drops anything not yet replayed.
 public static void Stop()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeEventStream.cs#L63)
 
 ## Events
 
@@ -71,7 +71,7 @@ public static event Action ConnectionChanged
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeEventStream.cs#L44)
 
 ### EventReceived {#eventreceived}
 
@@ -84,5 +84,5 @@ public static event Action<JObject> EventReceived
 
 **Returns** `Action<JObject>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeEventStream.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeEventStream.cs#L41)
 
