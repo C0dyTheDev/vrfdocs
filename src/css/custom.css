@@ -33,8 +33,8 @@
   /* Line work. */
   --vrf-rule: rgba(43, 43, 43, 0.26);
   --vrf-rule-soft: rgba(43, 43, 43, 0.13);
-  --vrf-grid-major: rgba(43, 43, 43, 0.07);
-  --vrf-grid-minor: rgba(43, 43, 43, 0.035);
+  --vrf-grid-major: rgba(43, 43, 43, 0.035);
+  --vrf-grid-minor: rgba(43, 43, 43, 0.012);
   --vrf-grain-opacity: 0.035;
 
   /* Drafting metrics. */
