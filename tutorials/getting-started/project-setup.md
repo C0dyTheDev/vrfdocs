@@ -9,7 +9,7 @@ VR Framework 4.0 installed through the **VR Framework Package Manager**.
 
 ## 0) Prerequisites
 
-- **Unity 6000.5** (the version this documentation was written against is **6000.5.10f1**).
+- **Unity 6000.5.10f1.
 - **Android Build Support** installed for that Unity version, including **OpenJDK** and **Android SDK
   & NDK Tools**. The setup checks for it and stops if it is missing.
 - Access to the VR Framework group on GitLab. If you do not have it, contact Michal Kulhánek.

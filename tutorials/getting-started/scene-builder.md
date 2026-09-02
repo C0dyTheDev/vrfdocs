@@ -74,13 +74,13 @@ Make one with **Save Scene as Template** once a scene is set up the way you want
 The scaffold creates a flat set of **marker objects** that everything else sorts itself into:
 
 ```
----ENVIRONMENT
-----LIGHTING
------CAMERA
-------SOUNDS
--------TELEPORTS
---------MANAGERS
----------SCENARIO
+ENVIRONMENT
+LIGHTING
+CAMERA
+SOUNDS
+TELEPORTS
+MANAGERS
+SCENARIO
 ```
 
 They are empty objects used as headers in the hierarchy - the framework places each new object after the

@@ -65,9 +65,3 @@ branching.
 - After building a scene with the **[Scene Builder](/tutorials/getting-started/scene-builder)**.
 - Before every build. **VRFramework** → **Validate to Console** does the same run without the window,
   which is what you want from a build step.
-
-## Adding your own checks
-
-The Validator owns no checks itself - it discovers them. A project adds its own by subclassing
-`ValidationRule` in an editor script and nothing else; it shows up in the window on the next
-recompile. A rule that throws is reported as a broken rule rather than taking the run down with it.

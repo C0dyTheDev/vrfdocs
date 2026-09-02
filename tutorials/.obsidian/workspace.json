@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "modules/localization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "localization"
             }
           }
         ]
@@ -189,5 +189,21 @@
     }
   },
   "active": "45385043cee6821e",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "modules/interaction.md",
+    "modules/audio.md",
+    "getting-started/validator.md",
+    "getting-started/ultimate-editor-enhancer-info.md",
+    "getting-started/scene-builder.md",
+    "getting-started/project-setup.md",
+    "tutorials/getting-started/scene-builder.md",
+    "tutorials/getting-started",
+    "tutorials",
+    "index.md",
+    "modules/sedU81oZH",
+    "additions/player-recenter.md",
+    "modules/streaming.md",
+    "modules/speech-recognition.md",
+    "modules/movement.md"
+  ]
 }
