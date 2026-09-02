@@ -26,71 +26,58 @@ Node.js >= 20.
 ## Commands
 
 ```bash
-npm install          # once
-npm run sync:vault   # regenerate tutorials/ from the Obsidian vault
-npm run gen:api      # regenerate api/ from the C# sources
+npm install            # once
+npm run docs:normalize # turn the Obsidian notes in tutorials/ into Docusaurus docs
+npm run docs:check     # same, but only reports - for CI
+npm run gen:api        # regenerate api/ from the C# sources
 npm start            # dev server on http://localhost:3000
 npm run build        # production build into build/
 npm run serve        # serve the production build locally
 npm run typecheck    # tsc
 ```
 
-## Tutorials: the vault sync
+## Tutorials: the vault
 
-`tutorials/` is **generated output and is wiped on every sync** - edit the notes
-in Obsidian, never the Markdown in this repo.
+`tutorials/` **is** the Obsidian vault - open that folder in Obsidian and write.
+Nothing is generated from anywhere else and nothing is wiped, so the Markdown in
+this repo is the source.
+
+Obsidian's own syntax is not quite Docusaurus's, so run this after writing:
 
 ```bash
-npm run sync:vault
-npm run sync:vault -- --vault "D:/somewhere/obsidian_vault/VRFramework"
+npm run docs:normalize        # fix the notes in place
+npm run docs:normalize -- --check   # report only, non-zero exit if work is due
+npm run docs:normalize -- --move    # also take the attachment out of the vault
 ```
 
-The vault location is resolved in this order:
+`scripts/vault-to-docs.mjs` edits the notes where they are:
 
-1. `--vault <path>`
-2. the `VRF_VAULT` environment variable
-3. `vault` in `vault.config.json` at the repo root - copy
-   `vault.config.example.json` to `vault.config.json` and edit it. That file is
-   gitignored, so every machine can point somewhere different.
-4. a few guesses relative to the repo (sibling `obsidian_vault/`, and the
-   current `..\..\!!CIE WORK\VRF\obsidian_vault\VRFramework`)
-
-Because the repo no longer sits next to the vault, option 3 is the one in use
-here - the vault itself stayed in `!!CIE WORK\VRF\obsidian_vault`. The `!` in
-that path is harmless: only webpack chokes on it, plain file reads do not.
-
-`scripts/sync-vault.mjs` does the Obsidian → Docusaurus translation:
-
-- copies every note under `<vault>/web` into `tutorials/`, kebab-casing the
-  file names (`Project Setup.md` → `getting-started/project-setup.md`)
-- strips the digital-garden front matter (`dg-publish`, `dg-home`, …) and writes
-  `id`, `title`, `sidebar_label` and `sidebar_position` instead
-- turns `[[Wikilinks]]` and `[[Note|Alias]]` into real Docusaurus links; links
-  that point at notes outside `web/` are rendered as plain text and reported as
-  a warning
-- turns `![[Image.png]]` embeds into image references, resolving the file
-  anywhere under `<vault>/img` and copying it to `static/img/vault/`;
-  `![[Image.png|661]]` becomes an `<img width="661">`
+- gives every note the `id`, `title` and `sidebar_label` the sidebar needs,
+  taking the title from the front matter, the first heading, or the file name
+- drops the front matter Docusaurus does not know (`dg-publish`, `cssclasses`,
+  anything else that is not a documented key)
+- turns `[[Wikilinks]]`, `[[Note|Alias]]` and `[[Note#Heading]]` into real
+  `/tutorials/...` links; one that resolves to nothing is left as plain text and
+  reported
+- turns `![[Image.png]]` embeds into image references and copies the attachment
+  into `static/img/vault/`; `![[Image.png|661]]` becomes an `<img width="661">`
 - writes a `_category_.json` per folder so the sidebar order is
   Getting Started → Modules → Additions → Onboarding
   (`CATEGORY_ORDER` in the script)
-- makes the note listed in `HOME_NOTES` (`VR Framework Docs`) the section
-  landing page at `/tutorials`
+- makes `index.md` the section landing page at `/tutorials`
 
-The script prints a warning list at the end - missing attachments and
-unresolved wikilinks show up there. One warning is expected today:
-`[[2Issue Tracker]]` referenced from `Modules/Localization.md` does not exist in
-the vault.
+It never deletes a note and never moves one. Attachments are copied rather than
+moved unless you pass `--move`, so a freshly pasted screenshot still renders in
+Obsidian until you decide otherwise.
 
 Notes are parsed as CommonMark, not MDX (`markdown.format: 'detect'` in
-`docusaurus.config.ts`), so `<` and `{` in the vault text cannot break the
-build.
+`docusaurus.config.ts`), so `<` and `{` in the note text cannot break the build.
 
 ### Adding a section to the tutorials
 
-Create the folder in the vault under `web/`, put the notes in it, run
-`npm run sync:vault`. If you want it in a specific position in the sidebar, add
-its name to `CATEGORY_ORDER` in `scripts/sync-vault.mjs`.
+Make the folder in `tutorials/`, put the notes in it, run
+`npm run docs:normalize`. For a specific place in the sidebar, add the folder's
+label to `CATEGORY_ORDER` in `scripts/vault-to-docs.mjs`.
 
 ## API section
 

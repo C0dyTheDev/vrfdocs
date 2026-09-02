@@ -1,4 +1,0 @@
-{
-  "_comment": "Copy to vault.config.json (gitignored) and point it at your Obsidian vault - the folder that contains web/ and img/. Relative paths are resolved from the repo root.",
-  "vault": "../../!!CIE WORK/VRF/obsidian_vault/VRFramework"
-}

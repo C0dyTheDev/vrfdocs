@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="The three layers of a VR Framework hand: tracked hand, physics hand, visual hand">
+  <defs>
+    <style>
+      .paper { fill: #faf9f6; stroke: rgba(43,43,43,0.18); }
+      .rule  { stroke: #2b2b2b; fill: none; stroke-width: 1.4; }
+      .soft  { stroke: rgba(43,43,43,0.35); fill: none; stroke-width: 1.1; stroke-dasharray: 5 4; }
+      .fillsoft { fill: rgba(43,43,43,0.05); }
+      .t     { font-family: ui-sans-serif, "Segoe UI", Helvetica, Arial, sans-serif; fill: #2b2b2b; }
+      .h     { font-size: 19px; font-weight: 600; }
+      .b     { font-size: 15px; }
+      .s     { font-size: 13px; fill: #6d685f; }
+      .n     { font-size: 12px; fill: #6d685f; font-style: italic; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b2b2b"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="899" height="399" rx="10" class="paper"/>
+
+  <text x="40" y="46" class="t h">One hand, three layers</text>
+  <text x="40" y="70" class="t s">The layer you see is the one physics actually solved.</text>
+
+  <!-- layer 1 -->
+  <g transform="translate(40,110)">
+    <rect x="0" y="0" width="250" height="118" rx="8" class="rule fillsoft"/>
+    <text x="20" y="34" class="t b">Tracked hand</text>
+    <text x="20" y="60" class="t s">The raw pose from the</text>
+    <text x="20" y="78" class="t s">headset. Never collides.</text>
+    <text x="20" y="102" class="t n">the truth about the real hand</text>
+  </g>
+
+  <!-- layer 2 -->
+  <g transform="translate(325,110)">
+    <rect x="0" y="0" width="250" height="118" rx="8" class="rule fillsoft"/>
+    <text x="20" y="34" class="t b">Physics hand</text>
+    <text x="20" y="60" class="t s">A rigidbody chasing it with</text>
+    <text x="20" y="78" class="t s">a limited force.</text>
+    <text x="20" y="102" class="t n">stops at walls, feels weight</text>
+  </g>
+
+  <!-- layer 3 -->
+  <g transform="translate(610,110)">
+    <rect x="0" y="0" width="250" height="118" rx="8" class="rule fillsoft"/>
+    <text x="20" y="34" class="t b">Visual hand</text>
+    <text x="20" y="60" class="t s">The mesh, drawn on the</text>
+    <text x="20" y="78" class="t s">physics hand.</text>
+    <text x="20" y="102" class="t n">what the trainee sees</text>
+  </g>
+
+  <path d="M 296 169 L 319 169" class="rule" marker-end="url(#arrow)"/>
+  <path d="M 581 169 L 604 169" class="rule" marker-end="url(#arrow)"/>
+  <text x="292" y="156" class="t s">chases</text>
+  <text x="577" y="156" class="t s">follows</text>
+
+  <!-- held object -->
+  <g transform="translate(325,268)">
+    <rect x="0" y="0" width="535" height="92" rx="8" class="soft"/>
+    <text x="20" y="34" class="t b">A held object</text>
+    <text x="20" y="60" class="t s">Driven by velocity towards where the hand wants it - so the world can stop it.</text>
+    <text x="20" y="80" class="t n">never parented into the palm, never teleported</text>
+  </g>
+  <path d="M 450 232 L 450 262" class="soft" marker-end="url(#arrow)"/>
+</svg>
