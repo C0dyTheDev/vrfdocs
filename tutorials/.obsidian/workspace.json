@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modules/localization.md",
+                "file": "getting-started/project-setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "localization"
+              "title": "project-setup"
             }
           }
         ]
@@ -190,11 +190,12 @@
   },
   "active": "45385043cee6821e",
   "lastOpenFiles": [
+    "getting-started/scene-builder.md",
+    "modules/localization.md",
     "modules/interaction.md",
     "modules/audio.md",
     "getting-started/validator.md",
     "getting-started/ultimate-editor-enhancer-info.md",
-    "getting-started/scene-builder.md",
     "getting-started/project-setup.md",
     "tutorials/getting-started/scene-builder.md",
     "tutorials/getting-started",
