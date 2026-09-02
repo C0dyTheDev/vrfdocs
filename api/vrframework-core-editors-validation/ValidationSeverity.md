@@ -8,7 +8,7 @@ description: 'How much a validator finding matters.'
 
 # ValidationSeverity
 
-**Enum** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L6)
+**Enum** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L6)
 
 How much a validator finding matters.
 
@@ -18,9 +18,21 @@ public enum ValidationSeverity
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Error` | 2 | Something will not work at runtime. |
-| `Info` | 0 | Worth knowing about. Nothing is broken. |
-| `Warning` | 1 | Works, but not the way the framework expects. Usually bites later. |
+### Error {#error}
+
+`Error = 2`
+
+Something will not work at runtime.
+
+### Info {#info}
+
+`Info = 0`
+
+Worth knowing about. Nothing is broken.
+
+### Warning {#warning}
+
+`Warning = 1`
+
+Works, but not the way the framework expects. Usually bites later.
 

@@ -8,7 +8,7 @@ description: 'The window that picks a translation entry: lists the entries of on
 
 # LanguageDialog
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageDialog.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageDialog.cs#L14)
 
 The window that picks a translation entry: lists the entries of one translation asset, with
 search, sorting and filters for translated and untranslated ones.
@@ -34,11 +34,11 @@ public static LanguageDialog ShowDialog(int selected, List<(string guid, string 
 | Name | Type | Description |
 | --- | --- | --- |
 | `selected` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the entry currently chosen. |
-| `displayedOptions` | `List<(string guid, string name, int index)>` |  |
-| `type` | [`LangType`](/api/vrframework-core-runtime/LangType) |  |
-| `onChange` | `Action<int>` |  |
+| `displayedOptions` | `List<(string guid, string name, int index)>` | The entries to choose from, as guid, name and position. |
+| `type` | [`LangType`](/api/vrframework-core-runtime/LangType) | What kind of entry is being chosen - text, audio or sprite. |
+| `onChange` | `Action<int>` | Called with the position of the entry the user picked. |
 
 **Returns** [`LanguageDialog`](/api/vrframework-core-editors/LanguageDialog) - The open dialog.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageDialog.cs#L293)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageDialog.cs#L296)
 

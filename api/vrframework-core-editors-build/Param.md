@@ -8,7 +8,7 @@ description: 'One parameter of a scene, as the platform''s own UI needs to descr
 
 # Param
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L34)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L34)
 
 One parameter of a scene, as the platform's own UI needs to describe it.
 
@@ -31,7 +31,7 @@ public bool filtered
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L44)
 
 ### name {#name}
 
@@ -43,7 +43,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L38)
 
 ### required {#required}
 
@@ -55,7 +55,7 @@ public bool required
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L42)
 
 ### type {#type}
 
@@ -67,7 +67,7 @@ public string type
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L40)
 
 ### values {#values}
 
@@ -79,5 +79,5 @@ public List<string> values
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/PlatformData.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/PlatformData.cs#L46)
 

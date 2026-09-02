@@ -8,7 +8,7 @@ description: 'Keeps a short history of a mover''s world pose and derives the vel
 
 # ThrowSolver
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L42)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L42)
 
 Keeps a short history of a mover's world pose and derives the velocity to hand over to a released
 object. Reads the median of the samples inside the window rather than the newest one, because the
@@ -37,7 +37,7 @@ public ThrowSolver(int capacity = 16)
 | --- | --- | --- |
 | `capacity` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | How many poses to keep. At 72 Hz, 16 covers a little over 0.2 s. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L53)
 
 ## Properties
 
@@ -51,7 +51,7 @@ public int SampleCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L63)
 
 ## Methods
 
@@ -63,7 +63,7 @@ Forgets every recorded pose. Call when tracking is lost, so stale motion is not 
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L66)
 
 ### Record(Vector3, Quaternion, float) {#record-vector3-quaternion-single}
 
@@ -81,7 +81,7 @@ public void Record(Vector3 position, Quaternion rotation, float time)
 | `rotation` | [`Quaternion`](https://docs.unity3d.com/ScriptReference/Quaternion.html) | World rotation of the mover. |
 | `time` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | The time the pose belongs to, normally the end of the current physics step. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L76)
 
 ### Solve(float, out Vector3, out Vector3) {#solve-single-vector3-vector3}
 
@@ -101,5 +101,5 @@ public bool Solve(float window, out Vector3 linear, out Vector3 angular)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - False when there is not enough history to derive anything, in which case both are zero.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L91)
 

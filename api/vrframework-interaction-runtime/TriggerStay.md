@@ -8,7 +8,7 @@ description: 'Requires a matching object to stay inside this trigger for a set t
 
 # TriggerStay
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L15)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L15)
 
 Requires a matching object to stay inside this trigger for a set time before completing - for
 holding a tool against a workpiece, or standing somewhere long enough to count.
@@ -33,7 +33,7 @@ public string id
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L23)
 
 ### identification {#identification}
 
@@ -45,7 +45,7 @@ public TriggerIdentification identification
 
 **Returns** [`TriggerIdentification`](/api/vrframework-interaction-runtime/TriggerIdentification)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L21)
 
 ### mode {#mode}
 
@@ -57,7 +57,7 @@ public TriggerStayMode mode
 
 **Returns** [`TriggerStayMode`](/api/vrframework-interaction-runtime/TriggerStayMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L18)
 
 ### OnBegin {#onbegin}
 
@@ -69,7 +69,7 @@ public UnityEvent OnBegin
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L28)
 
 ### OnComplete {#oncomplete}
 
@@ -81,7 +81,7 @@ public UnityEvent OnComplete
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L32)
 
 ### OnReset {#onreset}
 
@@ -93,7 +93,7 @@ public UnityEvent OnReset
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L30)
 
 ### timeToComplete {#timetocomplete}
 
@@ -105,5 +105,5 @@ public float timeToComplete
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L25)
 

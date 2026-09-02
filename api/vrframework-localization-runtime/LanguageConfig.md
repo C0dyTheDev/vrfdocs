@@ -8,7 +8,7 @@ description: 'The project''s language list.'
 
 # LanguageConfig
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageConfig.cs#L15)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageConfig.cs#L15)
 
 The project's language list. Every translation asset keeps one slot per language in here, and
 editing the list rebuilds those slots, matching the existing content by language ID rather
@@ -34,5 +34,5 @@ public List<Language> languages
 
 **Returns** `List<Language>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageConfig.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageConfig.cs#L19)
 

@@ -565,11 +565,25 @@ function renderMember(member, model, config) {
 
 function renderEnumFields(members, model) {
   if (!members.length) return '';
-  const rows = members.map(
-    (member) =>
-      `| \`${cell(member.name)}\` | ${cell(member.syntax?.content?.match(/=\s*(.+)$/)?.[1] ?? '')} | ${cell(mdText(member.summary, model))} |`,
-  );
-  return `## Fields\n\n| Name | Value | Description |\n| --- | --- | --- |\n${rows.join('\n')}\n`;
+
+  // A heading per value rather than a table row, because a heading is the only thing
+  // Docusaurus counts as an anchor: `<see cref="HandFilter.Either" />` resolves to this
+  // page plus `#either`, and an id written into a table cell survives into the HTML but
+  // is not registered, so the link is reported broken on every build.
+  const sections = members.map((member) => {
+    const value = member.syntax?.content?.match(/=\s*(.+)$/)?.[1]?.trim();
+    const summary = mdText(member.summary, model);
+
+    return [
+      `### ${member.name} {#${anchor(member.uid)}}\n`,
+      value ? `\`${member.name} = ${value}\`\n` : '',
+      summary ? `${summary}\n` : '',
+    ]
+      .filter(Boolean)
+      .join('\n');
+  });
+
+  return `## Fields\n\n${sections.join('\n')}`;
 }
 
 function renderTypePage(type, model, config) {

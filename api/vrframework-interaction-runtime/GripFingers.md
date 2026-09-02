@@ -8,7 +8,7 @@ description: 'What the fingers do when a hand takes this grip point.'
 
 # GripFingers
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L21)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L21)
 
 What the fingers do when a hand takes this grip point.
 
@@ -18,9 +18,21 @@ public enum GripFingers
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Auto` | 1 | Closed onto the object's shape, each finger stopping where it meets the surface. |
-| `Custom` | 2 | The shape authored here, on this point. |
-| `None` | 0 | Whatever the player's own hand is doing. The tracking is left alone. |
+### Auto {#auto}
+
+`Auto = 1`
+
+Closed onto the object's shape, each finger stopping where it meets the surface.
+
+### Custom {#custom}
+
+`Custom = 2`
+
+The shape authored here, on this point.
+
+### None {#none}
+
+`None = 0`
+
+Whatever the player's own hand is doing. The tracking is left alone.
 

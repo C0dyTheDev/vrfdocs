@@ -8,7 +8,7 @@ description: 'Marks a serialized field as visible in the Inspector only while De
 
 # DebugOnlyAttribute
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/Attributes/DebugOnlyAttribute.cs#L8)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/Attributes/DebugOnlyAttribute.cs#L8)
 
 Marks a serialized field as visible in the Inspector only while Debug Mode is on, which is the
 VRF_DEBUG define. Drawn by DebugOnlyDrawer.

@@ -8,7 +8,7 @@ description: 'Everything the session report is made of.'
 
 # PlatformReport
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L19)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L19)
 
 Everything the session report is made of. The report is not a fixed shape: it is whatever
 the [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor)s in the loaded scenes hand over, plus whatever was
@@ -39,7 +39,7 @@ public static bool AutoDiscover
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L31)
 
 ## Methods
 
@@ -51,7 +51,7 @@ Forgets every contributor and every stored value.
 public static void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L108)
 
 ### Collect() {#collect}
 
@@ -64,7 +64,7 @@ public static List<ReportEntry> Collect()
 
 **Returns** `List<ReportEntry>` - One entry per report key, in write order.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L152)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L152)
 
 ### Freeze(IReportContributor) {#freeze-ireportcontributor}
 
@@ -82,7 +82,7 @@ public static void Freeze(IReportContributor contributor)
 | --- | --- | --- |
 | `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | Contributor whose current value is kept behind. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L125)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L125)
 
 ### FreezeAll() {#freezeall}
 
@@ -93,7 +93,7 @@ replaced and the session carries on.
 public static void FreezeAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L136)
 
 ### GetValue(string) {#getvalue-string}
 
@@ -111,7 +111,7 @@ public static object GetValue(string key)
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object) - The stored value, or null when the key holds none.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L92)
 
 ### Register(IReportContributor) {#register-ireportcontributor}
 
@@ -128,7 +128,7 @@ public static void Register(IReportContributor contributor)
 | --- | --- | --- |
 | `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | Contributor to announce. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L48)
 
 ### Remove(string) {#remove-string}
 
@@ -144,7 +144,7 @@ public static void Remove(string key)
 | --- | --- | --- |
 | `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Key to remove. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L99)
 
 ### SetValue(string, object) {#setvalue-string-object}
 
@@ -163,7 +163,7 @@ public static void SetValue(string key, object value)
 | `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Key it lands under in the report JSON. |
 | `value` | [`object`](https://learn.microsoft.com/dotnet/api/system.object) | Anything JSON can hold, or a [`RawJson`](/api/vrframework-core-runtime/RawJson) when it is already written. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L74)
 
 ### Unregister(IReportContributor) {#unregister-ireportcontributor}
 
@@ -179,5 +179,5 @@ public static void Unregister(IReportContributor contributor)
 | --- | --- | --- |
 | `contributor` | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | Contributor to withdraw. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/PlatformReport.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/PlatformReport.cs#L60)
 

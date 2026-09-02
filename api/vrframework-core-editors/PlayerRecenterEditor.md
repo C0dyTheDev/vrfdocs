@@ -8,7 +8,7 @@ description: 'Editor for the PlayerRecenter script - gives the object a recognis
 
 # PlayerRecenterEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Camera/PlayerRecenterEditor.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Camera/PlayerRecenterEditor.cs#L12)
 
 Editor for the PlayerRecenter script - gives the object a recognisable hierarchy icon.
 
@@ -19,6 +19,21 @@ public class PlayerRecenterEditor : VRFComponentEditor
 ```
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) ← [`ScriptableObject`](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) ← [`Editor`](https://docs.unity3d.com/ScriptReference/Editor.html) ← [`VRFComponentEditor`](/api/vrframework-core-editors-ui/VRFComponentEditor) ← `PlayerRecenterEditor`
+
+## Fields
+
+### HierarchyIconName {#hierarchyiconname}
+
+The hierarchy icon a recenter's object gets. Shared, because a TeleportPoint is a
+recenter and reads as one in the hierarchy - see TeleportPointEditor.
+
+```csharp
+public const string HierarchyIconName = "LensFlare Gizmo"
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Camera/PlayerRecenterEditor.cs#L20)
 
 ## Properties
 
@@ -32,7 +47,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Camera/PlayerRecenterEditor.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Camera/PlayerRecenterEditor.cs#L25)
 
 ### HeaderTitle {#headertitle}
 
@@ -44,7 +59,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Camera/PlayerRecenterEditor.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Camera/PlayerRecenterEditor.cs#L23)
 
 ## Methods
 
@@ -56,7 +71,7 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Camera/PlayerRecenterEditor.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Camera/PlayerRecenterEditor.cs#L38)
 
 ### OnEnable() {#onenable}
 
@@ -66,5 +81,5 @@ Binds the inspector and gives the object its hierarchy icon.
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Camera/PlayerRecenterEditor.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Camera/PlayerRecenterEditor.cs#L28)
 

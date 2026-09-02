@@ -8,7 +8,7 @@ description: 'The operations that shape a ghost hand where it stands, at the gri
 
 # GrabPoseAuthoring
 
-**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L23)
+**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L24)
 
 The operations that shape a ghost hand where it stands, at the grip point it is going to hold.
 
@@ -53,7 +53,7 @@ public static CustomGrabPose Begin(GripPoint point, HandType hand)
 
 **Returns** [`CustomGrabPose`](/api/vrframework-interaction-runtime/CustomGrabPose) - The hand, or null when there is no prefab configured to make one from.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L48)
 
 ### BuildFist(CustomGrabPose) {#buildfist-customgrabpose}
 
@@ -71,7 +71,7 @@ public static int BuildFist(CustomGrabPose pose)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many bones were written.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L288)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L289)
 
 ### Cancel(GripPoint) {#cancel-grippoint}
 
@@ -87,7 +87,7 @@ public static void Cancel(GripPoint point)
 | --- | --- | --- |
 | `point` | [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint) | The grip point being authored. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L152)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L153)
 
 ### CloseOntoObject(GrabbableObject, CustomGrabPose, AutoPoseSettings, List\<FingerSolve>) {#closeontoobject-grabbableobject-customgrabpose-autoposesettings-fingersolve}
 
@@ -112,7 +112,7 @@ public static int CloseOntoObject(GrabbableObject grabbable, CustomGrabPose pose
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many fingers were posed.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L251)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L252)
 
 ### CurlOf(CustomGrabPose, FingerType) {#curlof-customgrabpose-fingertype}
 
@@ -134,7 +134,7 @@ public static float CurlOf(CustomGrabPose pose, FingerType finger)
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - 0 at the open hand, 1 at the fist.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L373)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L374)
 
 ### Editing(GripPoint) {#editing-grippoint}
 
@@ -152,7 +152,7 @@ public static CustomGrabPose Editing(GripPoint point)
 
 **Returns** [`CustomGrabPose`](/api/vrframework-interaction-runtime/CustomGrabPose) - The hand, or null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L116)
 
 ### End(GripPoint) {#end-grippoint}
 
@@ -170,7 +170,7 @@ public static bool End(GripPoint point)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when a pose was stored.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L138)
 
 ### Mirror(CustomGrabPose, CustomGrabPose) {#mirror-customgrabpose-customgrabpose}
 
@@ -207,7 +207,7 @@ public static int Mirror(CustomGrabPose from, CustomGrabPose to)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many bones were mirrored.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L432)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L433)
 
 ### MirrorTo(GripPoint, CustomGrabPose) {#mirrorto-grippoint-customgrabpose}
 
@@ -231,7 +231,7 @@ public static HandType? MirrorTo(GripPoint point, CustomGrabPose from)
 
 **Returns** `HandType?` - The side that was written, or null when it could not be.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L498)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L499)
 
 ### OpenHand(CustomGrabPose) {#openhand-customgrabpose}
 
@@ -249,7 +249,7 @@ public static int OpenHand(CustomGrabPose pose)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many bones were written.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L306)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L307)
 
 ### SetCurl(CustomGrabPose, FingerType, float) {#setcurl-customgrabpose-fingertype-single}
 
@@ -272,7 +272,7 @@ public static int SetCurl(CustomGrabPose pose, FingerType finger, float amount)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many bones were written.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L329)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L330)
 
 ### SideOf(CustomGrabPose) {#sideof-customgrabpose}
 
@@ -290,7 +290,7 @@ public static HandType SideOf(CustomGrabPose pose)
 
 **Returns** [`HandType`](/api/vrframework-interaction-runtime/HandType) - The side.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L231)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L232)
 
 ### SkeletonFor(CustomGrabPose) {#skeletonfor-customgrabpose}
 
@@ -308,5 +308,5 @@ public static HandSkeleton SkeletonFor(CustomGrabPose pose)
 
 **Returns** [`HandSkeleton`](/api/vrframework-interaction-runtime/HandSkeleton) - The skeleton, or null when the ghost has no bones that look like fingers.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseAuthoring.cs#L221)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseAuthoring.cs#L222)
 

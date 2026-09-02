@@ -8,7 +8,7 @@ description: 'Inspector for an audio translation asset.'
 
 # LanguageAudioEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L198)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L198)
 
 Inspector for an audio translation asset.
 
@@ -29,7 +29,7 @@ Builds the audio inspector.
 public LanguageAudioEditor()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L202)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L202)
 
 ## Methods
 
@@ -41,5 +41,5 @@ Rebuilds the audio lookup maps.
 protected override void ProcessLanguageInstance()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L207)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L207)
 

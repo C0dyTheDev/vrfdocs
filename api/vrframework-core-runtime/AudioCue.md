@@ -8,7 +8,7 @@ description: 'An audio slot is authored either as a translation ID or as a plain
 
 # AudioCue
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/AudioCue.cs#L11)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/AudioCue.cs#L11)
 
 An audio slot is authored either as a translation ID or as a plain AudioClip - which one
 is decided by whether the scene has a Localization module, both in the Inspector and here.
@@ -40,7 +40,7 @@ public static bool IsSet(string key, AudioClip clip)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/AudioCue.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/AudioCue.cs#L33)
 
 ### PlayAndWait(IAudioService, AudioSource, string, AudioClip) {#playandwait-iaudioservice-audiosource-string-audioclip}
 
@@ -62,5 +62,5 @@ public static IEnumerator PlayAndWait(IAudioService audio, AudioSource source, s
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the audio has finished playing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/AudioCue.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/AudioCue.cs#L22)
 

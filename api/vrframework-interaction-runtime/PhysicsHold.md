@@ -8,7 +8,7 @@ description: 'One hand holding one object, without ever teleporting it.'
 
 # PhysicsHold
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L298)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L298)
 
 One hand holding one object, without ever teleporting it. The object stays a full rigidbody the
 whole time, so it collides with the world, sweeps what it touches, and already has the right motion
@@ -40,7 +40,7 @@ public Vector3 AttachPositionInGrip { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L432)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L425)
 
 ### AttachRotationInGrip {#attachrotationingrip}
 
@@ -52,7 +52,7 @@ public Quaternion AttachRotationInGrip { get; }
 
 **Returns** [`Quaternion`](https://docs.unity3d.com/ScriptReference/Quaternion.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L435)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L428)
 
 ### Body {#body}
 
@@ -64,7 +64,7 @@ public Rigidbody Body { get; }
 
 **Returns** [`Rigidbody`](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L426)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L419)
 
 ### GripInBody {#gripinbody}
 
@@ -81,7 +81,7 @@ public Vector3 GripInBody { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L1356)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L1347)
 
 ### Hand {#hand}
 
@@ -93,7 +93,7 @@ public PhysicsHand Hand { get; }
 
 **Returns** [`PhysicsHand`](/api/vrframework-interaction-runtime/PhysicsHand)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L423)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L416)
 
 ### HandCount {#handcount}
 
@@ -105,7 +105,7 @@ public int HandCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L461)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L454)
 
 ### IsActive {#isactive}
 
@@ -117,7 +117,7 @@ public bool IsActive { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L444)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L437)
 
 ### IsAtLimit {#isatlimit}
 
@@ -130,7 +130,7 @@ public bool IsAtLimit { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L441)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L434)
 
 ### IsOverStrained {#isoverstrained}
 
@@ -142,7 +142,7 @@ public bool IsOverStrained { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L452)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L445)
 
 ### IsShared {#isshared}
 
@@ -154,7 +154,7 @@ public bool IsShared { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L472)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L465)
 
 ### IsShortHanded {#isshorthanded}
 
@@ -169,7 +169,7 @@ public bool IsShortHanded { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L480)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L473)
 
 ### PositionInGrip {#positioningrip}
 
@@ -184,7 +184,7 @@ public Vector3 PositionInGrip { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L507)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L500)
 
 ### Role {#role}
 
@@ -196,7 +196,7 @@ public HoldRole Role { get; }
 
 **Returns** [`HoldRole`](/api/vrframework-interaction-runtime/HoldRole)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L420)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L413)
 
 ### Strain {#strain}
 
@@ -208,7 +208,7 @@ public float Strain { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L449)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L442)
 
 ### TrackingError {#trackingerror}
 
@@ -221,7 +221,7 @@ public float TrackingError { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L491)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L484)
 
 ### TurnsTheHand {#turnsthehand}
 
@@ -235,7 +235,7 @@ public bool TurnsTheHand { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L1828)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L1743)
 
 ## Methods
 
@@ -260,7 +260,7 @@ public static PhysicsHold Attach(PhysicsHand hand, Rigidbody body, Transform anc
 
 **Returns** [`PhysicsHold`](/api/vrframework-interaction-runtime/PhysicsHold) - The hold, or null when the arguments do not describe a holdable pair.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L527)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L520)
 
 ### Release(ThrowSettings) {#release-throwsettings}
 
@@ -276,7 +276,7 @@ public void Release(ThrowSettings throwSettings = null)
 | --- | --- | --- |
 | `throwSettings` | [`ThrowSettings`](/api/vrframework-interaction-runtime/ThrowSettings) | How the release velocity is derived, or null to leave the object as it is. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L556)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L549)
 
 ### SettleWhenReleased(Rigidbody, bool, bool) {#settlewhenreleased-rigidbody-boolean-boolean}
 
@@ -299,5 +299,5 @@ public static void SettleWhenReleased(Rigidbody body, bool kinematic, bool gravi
 | `kinematic` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | What it should be when the last hand lets go. |
 | `gravity` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether it should fall when the last hand lets go. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L1752)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L1667)
 

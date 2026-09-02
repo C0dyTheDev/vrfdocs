@@ -8,7 +8,7 @@ description: 'A clip that is the same in every language and so is stored once, o
 
 # UntranslatedAudioElement
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L32)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L32)
 
 A clip that is the same in every language and so is stored once, outside the translations.
 
@@ -32,7 +32,7 @@ public AudioClip element
 
 **Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L38)
 
 ### name {#name}
 
@@ -45,7 +45,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L36)
 
 ## Properties
 
@@ -60,5 +60,5 @@ public string guid { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioElement.cs#L47)
 

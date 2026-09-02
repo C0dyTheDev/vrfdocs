@@ -33,6 +33,7 @@ sidebar_position: 0
 | [`VisionFader`](/api/vrframework-core-runtime/VisionFader) | The black quad in front of the camera used to hide transitions, with an optional logo fading in over it. |
 | [`VRCore`](/api/vrframework-core-runtime/VRCore) | The scene's startup conductor. |
 | [`VRFLog`](/api/vrframework-core-runtime/VRFLog) | The framework's log bus. |
+| [`VRFrameworkSettings`](/api/vrframework-core-runtime/VRFrameworkSettings) | This is a scriptable object for global VRF settings. |
 | [`VRModule`](/api/vrframework-core-runtime/VRModule) | Base class of every framework module. |
 
 ## Structs
@@ -52,9 +53,12 @@ sidebar_position: 0
 | [`ILocalizationService`](/api/vrframework-core-runtime/ILocalizationService) | What the framework expects of a localization module: the current language, and lookups from a translation ID to text, audio or a sprite. |
 | [`IMinigameService`](/api/vrframework-core-runtime/IMinigameService) | What the framework expects of a minigame module: a timed run split into parts, each of which is either finished in time or not. |
 | [`IMistakesService`](/api/vrframework-core-runtime/IMistakesService) | What the framework expects of a mistakes module: named checkpoints that a scene ticks off, and per scene results collected for the session report. |
+| [`IMovementService`](/api/vrframework-core-runtime/IMovementService) | What the framework expects of a movement module: getting the player from one marked standing place to another, and being switched off while a step needs the player to stay put. |
 | [`IPlatformService`](/api/vrframework-core-runtime/IPlatformService) | What the framework expects of a platform module: the handshake with whatever LMS or launcher started the session - its parameters, the language it asks for, and the report and comp |
 | [`IProgressService`](/api/vrframework-core-runtime/IProgressService) | What the framework expects of a progress module: a run that can be started and stopped, and that says when it has finished. |
 | [`IReportContributor`](/api/vrframework-core-runtime/IReportContributor) | One slice of the session report. |
+| [`ISpeechRecognitionService`](/api/vrframework-core-runtime/ISpeechRecognitionService) | What the framework expects of a speech recognition module: turn what the trainee says into text, and say when it is listening. |
+| [`IStreamingService`](/api/vrframework-core-runtime/IStreamingService) | What the framework expects of a streaming module: what a camera sees, sent to a trainer watching from outside the headset. |
 
 ## Enums
 

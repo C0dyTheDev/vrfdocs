@@ -8,7 +8,7 @@ description: 'WavUtility for Audio Clip Editor - can read and write audio files'
 
 # WavUtility
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Audio/WavUtility.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/WavUtility.cs#L10)
 
 WavUtility for Audio Clip Editor - can read and write audio files
 
@@ -36,5 +36,5 @@ public static byte[] FromAudioClip(AudioClip clip)
 
 **Returns** [`byte[]`](https://learn.microsoft.com/dotnet/api/system.byte[]) - The WAV file contents.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Audio/WavUtility.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Audio/WavUtility.cs#L15)
 

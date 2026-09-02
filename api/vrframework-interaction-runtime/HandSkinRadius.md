@@ -8,7 +8,7 @@ description: 'How thick a hand is along each of its bones, measured off the mesh
 
 # HandSkinRadius
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkinRadius.cs#L24)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkinRadius.cs#L24)
 
 How thick a hand is along each of its bones, measured off the mesh that will be drawn.
 
@@ -43,7 +43,7 @@ public const float Fallback = 0.008
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkinRadius.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkinRadius.cs#L27)
 
 ## Methods
 
@@ -65,7 +65,7 @@ public static float For(SkinnedMeshRenderer skin, Transform bone, float fallback
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The half-thickness.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkinRadius.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkinRadius.cs#L41)
 
 ### Forget() {#forget}
 
@@ -75,5 +75,5 @@ Forgets what was measured, for a rig that has been rebuilt.
 public static void Forget()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkinRadius.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkinRadius.cs#L51)
 

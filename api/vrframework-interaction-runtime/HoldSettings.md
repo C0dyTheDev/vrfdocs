@@ -7,7 +7,7 @@ sidebar_label: 'HoldSettings'
 
 # HoldSettings
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L71)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L71)
 
 ```csharp
 [Serializable]
@@ -34,7 +34,7 @@ public bool anchorAtGrip
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L195)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L195)
 
 ### breakForce {#breakforce}
 
@@ -48,7 +48,7 @@ public float breakForce
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L254)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L254)
 
 ### correctionGain {#correctiongain}
 
@@ -69,7 +69,7 @@ public float correctionGain
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L231)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L231)
 
 ### heldInterpolation {#heldinterpolation}
 
@@ -82,7 +82,7 @@ public RigidbodyInterpolation heldInterpolation
 
 **Returns** [`RigidbodyInterpolation`](https://docs.unity3d.com/ScriptReference/RigidbodyInterpolation.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L281)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L281)
 
 ### ignoreAllHands {#ignoreallhands}
 
@@ -98,7 +98,7 @@ public bool ignoreAllHands
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L269)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L269)
 
 ### ignoreHandCollision {#ignorehandcollision}
 
@@ -112,7 +112,7 @@ public bool ignoreHandCollision
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L260)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L260)
 
 ### maxAcceleration {#maxacceleration}
 
@@ -132,7 +132,7 @@ public float maxAcceleration
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L110)
 
 ### maxAngularAcceleration {#maxangularacceleration}
 
@@ -144,7 +144,7 @@ public float maxAngularAcceleration
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L113)
 
 ### maxAngularSpeed {#maxangularspeed}
 
@@ -158,7 +158,7 @@ public float maxAngularSpeed
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L241)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L241)
 
 ### maxGripTwist {#maxgriptwist}
 
@@ -178,7 +178,7 @@ public float maxGripTwist
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L171)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L171)
 
 ### maxOffset {#maxoffset}
 
@@ -199,7 +199,7 @@ public float maxOffset
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L129)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L129)
 
 ### maxOffsetAngle {#maxoffsetangle}
 
@@ -216,7 +216,7 @@ public float maxOffsetAngle
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L206)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L206)
 
 ### maxSnapDistance {#maxsnapdistance}
 
@@ -228,7 +228,7 @@ public float maxSnapDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L97)
 
 ### maxSpeed {#maxspeed}
 
@@ -240,7 +240,7 @@ public float maxSpeed
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L234)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L234)
 
 ### oneHandedStrength {#onehandedstrength}
 
@@ -258,7 +258,7 @@ public float oneHandedStrength
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L217)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L217)
 
 ### resistedSpeed {#resistedspeed}
 
@@ -275,7 +275,7 @@ public float resistedSpeed
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L140)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L140)
 
 ### resistedSpin {#resistedspin}
 
@@ -287,7 +287,7 @@ public float resistedSpin
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L143)
 
 ### slideWhileHeld {#slidewhileheld}
 
@@ -306,7 +306,7 @@ public bool slideWhileHeld
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L157)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L157)
 
 ### slipSpin {#slipspin}
 
@@ -324,7 +324,7 @@ public float slipSpin
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L183)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L183)
 
 ### snap {#snap}
 
@@ -338,7 +338,7 @@ public HoldSnap snap
 
 **Returns** [`HoldSnap`](/api/vrframework-interaction-runtime/HoldSnap)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L94)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L94)
 
 ### solverIterations {#solveriterations}
 
@@ -350,7 +350,7 @@ public int solverIterations
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L272)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L272)
 
 ### solverVelocityIterations {#solvervelocityiterations}
 
@@ -362,7 +362,7 @@ public int solverVelocityIterations
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L275)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L275)
 
 ### suspendGravity {#suspendgravity}
 
@@ -376,7 +376,7 @@ public bool suspendGravity
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L248)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L248)
 
 ### turnsTheHand {#turnsthehand}
 
@@ -391,5 +391,5 @@ public bool turnsTheHand
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L87)
 

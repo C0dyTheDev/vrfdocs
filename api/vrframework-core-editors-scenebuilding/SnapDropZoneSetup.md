@@ -8,7 +8,7 @@ description: 'The receiving half of a grab interaction.'
 
 # SnapDropZoneSetup
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L78)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L78)
 
 The receiving half of a grab interaction.
 
@@ -30,7 +30,7 @@ public override Type[] Components { get; }
 
 **Returns** [`Type[]`](https://learn.microsoft.com/dotnet/api/system.type[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L101)
 
 ### Description {#description}
 
@@ -42,7 +42,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L92)
 
 ### DisplayName {#displayname}
 
@@ -54,7 +54,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L83)
 
 ### Group {#group}
 
@@ -66,7 +66,7 @@ public override string Group { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L85)
 
 ### Id {#id}
 
@@ -78,7 +78,7 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L81)
 
 ### ObjectName {#objectname}
 
@@ -90,7 +90,7 @@ public override string ObjectName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L89)
 
 ### Order {#order}
 
@@ -102,7 +102,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L87)
 
 ### Tags {#tags}
 
@@ -114,7 +114,7 @@ public override string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L98)
 
 ## Methods
 
@@ -132,5 +132,5 @@ public override void Configure(GameObject target)
 | --- | --- | --- |
 | `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object being set up. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkSetups.cs#L108)
 

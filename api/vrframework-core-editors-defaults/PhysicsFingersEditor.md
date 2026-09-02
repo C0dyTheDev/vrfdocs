@@ -8,7 +8,7 @@ description: 'Default framework inspector for PhysicsFingers/api/vrframework-int
 
 # PhysicsFingersEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L203)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L204)
 
 Default framework inspector for [`PhysicsFingers`](/api/vrframework-interaction-runtime/PhysicsFingers).
 

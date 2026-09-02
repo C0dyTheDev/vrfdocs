@@ -8,7 +8,7 @@ description: 'How the flags of a Condition/api/vrframework-progress-runtime/Cond
 
 # ConditionMode
 
-**Enum** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Scripts/Condition.cs#L7)
+**Enum** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Scripts/Condition.cs#L7)
 
 How the flags of a [`Condition`](/api/vrframework-progress-runtime/Condition) combine into one verdict.
 
@@ -18,8 +18,15 @@ public enum ConditionMode
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `All` | 0 | Every flag has to be true. |
-| `AtLeast` | 1 | At least Required Count flags have to be true. Set it to 1 for an "any of" check. |
+### All {#all}
+
+`All = 0`
+
+Every flag has to be true.
+
+### AtLeast {#atleast}
+
+`AtLeast = 1`
+
+At least Required Count flags have to be true. Set it to 1 for an "any of" check.
 

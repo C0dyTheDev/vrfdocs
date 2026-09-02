@@ -8,7 +8,7 @@ description: 'The framework''s half of a build profile: everything the VR Framew
 
 # VRFBuildSettings
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L18)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L18)
 
 The framework's half of a build profile: everything the VR Framework needs to know about a
 build that Unity's own profile does not already carry.
@@ -35,7 +35,7 @@ public const string AssetName = "VRF Build Settings"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L21)
 
 ## Properties
 
@@ -51,7 +51,7 @@ public IEnumerable<VRFBuildSetting> InApplyOrder { get; }
 
 **Returns** `IEnumerable<VRFBuildSetting>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L40)
 
 ### Settings {#settings}
 
@@ -61,7 +61,7 @@ public IReadOnlyList<VRFBuildSetting> Settings { get; }
 
 **Returns** `IReadOnlyList<VRFBuildSetting>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L33)
 
 ## Methods
 
@@ -79,7 +79,7 @@ public void Add(VRFBuildSetting setting)
 | --- | --- | --- |
 | `setting` | [`VRFBuildSetting`](/api/vrframework-core-editors-build/VRFBuildSetting) | Setting to add. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L63)
 
 ### Get\<T>() {#get-1}
 
@@ -97,7 +97,7 @@ public T Get<T>() where T : VRFBuildSetting
 
 **Returns** `T` - The setting, or null when the profile carries none of that type.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L48)
 
 ### Has(Type) {#has-type}
 
@@ -115,7 +115,7 @@ public bool Has(Type type)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when one is present.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L56)
 
 ### Validate(BuildProfile) {#validate-buildprofile}
 
@@ -134,5 +134,5 @@ public ValidationReport Validate(BuildProfile profile)
 
 **Returns** [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettings.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettings.cs#L99)
 

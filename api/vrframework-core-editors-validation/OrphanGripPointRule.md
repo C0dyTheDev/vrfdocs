@@ -8,7 +8,7 @@ description: 'Checks grip points that are not part of any grabbable.'
 
 # OrphanGripPointRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/GripRules.cs#L501)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L489)
 
 Checks grip points that are not part of any grabbable.
 
@@ -38,7 +38,7 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/GripRules.cs#L504)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L492)
 
 ### Order {#order}
 
@@ -50,7 +50,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/GripRules.cs#L507)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L495)
 
 ## Methods
 
@@ -64,7 +64,7 @@ public override bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/GripRules.cs#L510)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L498)
 
 ### Validate(ValidationReport) {#validate-validationreport}
 
@@ -80,5 +80,5 @@ public override void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/GripRules.cs#L518)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L506)
 

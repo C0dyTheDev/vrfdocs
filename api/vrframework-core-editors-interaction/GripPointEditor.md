@@ -8,7 +8,7 @@ description: 'Inspector for GripPoint/api/vrframework-interaction-runtime/GripPo
 
 # GripPointEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripPointEditor.cs#L21)
+**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripPointEditor.cs#L21)
 
 Inspector for [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint), and the whole of authoring a hand pose.
 
@@ -40,7 +40,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripPointEditor.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripPointEditor.cs#L41)
 
 ### HeaderTitle {#headertitle}
 
@@ -52,7 +52,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripPointEditor.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripPointEditor.cs#L38)
 
 ## Methods
 
@@ -64,7 +64,7 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripPointEditor.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripPointEditor.cs#L69)
 
 ### OnDisable() {#ondisable}
 
@@ -74,7 +74,7 @@ Puts the hand away when the inspector closes, so it cannot be left behind in the
 protected override void OnDisable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripPointEditor.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripPointEditor.cs#L54)
 
 ### OnEnable() {#onenable}
 
@@ -84,5 +84,5 @@ Binds the inspector to the component's serialized properties.
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripPointEditor.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripPointEditor.cs#L44)
 

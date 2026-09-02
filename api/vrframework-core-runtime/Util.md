@@ -8,7 +8,7 @@ description: 'Utility Class - this contains helper methods for VRF development a
 
 # Util
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L17)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L17)
 
 Utility Class - this contains helper methods for VRF development and especially the custom logging methods
 
@@ -36,7 +36,7 @@ public static MonoScript FindMonoScriptByClass(string className)
 
 **Returns** [`MonoScript`](https://docs.unity3d.com/ScriptReference/MonoScript.html) - The matching script asset, or null when no asset defines that class.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L396)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L408)
 
 ### GetAssetBasePath\<T>() {#getassetbasepath-1}
 
@@ -55,7 +55,31 @@ public static string GetAssetBasePath<T>()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The package root path with a trailing slash, or null when nothing was found.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L329)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L341)
+
+### GetRandomElement\<T>(IList\<T>) {#getrandomelement-1-0}
+
+Returns a random element from a list.
+
+```csharp
+public static T GetRandomElement<T>(this IList<T> list)
+```
+
+**Type parameters**
+
+| Name | Description |
+| --- | --- |
+| `T` | Element type. |
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `list` | `IList<T>` | List to pick from. |
+
+**Returns** `T` - A random element from the list.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L313)
 
 ### GetRandomPointInside(Collider) {#getrandompointinside-collider}
 
@@ -74,7 +98,7 @@ public static Vector3 GetRandomPointInside(this Collider collider)
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html) - A point inside the collider, or [`zero`](https://docs.unity3d.com/ScriptReference/Vector3.zero.html) when the collider is null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L247)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L247)
 
 ### Log(string, string, Object, string, string, int, string) {#log-string-string-object-string-string-int32-string}
 
@@ -96,7 +120,7 @@ public static void Log(string message, string prefix = "<color=#cecece><size=15>
 | `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
 | `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L32)
 
 ### LogDebug(string, string, Object, string, string, int, string) {#logdebug-string-string-object-string-string-int32-string}
 
@@ -124,7 +148,7 @@ public static void LogDebug(string message, string prefix = "<color=#7f9fb0><siz
 | `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
 | `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L97)
 
 ### LogError(string, string, Object, string, string, int, string) {#logerror-string-string-object-string-string-int32-string}
 
@@ -146,7 +170,7 @@ public static void LogError(string message, string prefix = "<color=#ce2714><siz
 | `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
 | `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L72)
 
 ### LogWarning(string, string, Object, string, string, int, string) {#logwarning-string-string-object-string-string-int32-string}
 
@@ -168,7 +192,7 @@ public static void LogWarning(string message, string prefix = "<color=#cea925><s
 | `callerLine` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Filled in by the compiler - line of the call site. |
 | `callerMember` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Filled in by the compiler - member that logged. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L52)
 
 ### Remap(float, float, float, float, float) {#remap-single-single-single-single-single}
 
@@ -191,7 +215,7 @@ public static float Remap(this float value, float from1, float to1, float from2,
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The value expressed in the target range.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L317)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L329)
 
 ### Shuffle\<T>(IList\<T>) {#shuffle-1-0}
 
@@ -213,7 +237,7 @@ public static void Shuffle<T>(this IList<T> list)
 | --- | --- | --- |
 | `list` | `IList<T>` | List to shuffle. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L298)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L298)
 
 ### ToLiteral(string) {#toliteral-string}
 
@@ -232,5 +256,5 @@ public static string ToLiteral(string input)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The quoted, escaped literal.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Util.cs#L184)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Util.cs#L184)
 

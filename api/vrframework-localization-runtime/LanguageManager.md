@@ -8,7 +8,7 @@ description: 'The localization module.'
 
 # LanguageManager
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L20)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L20)
 
 The localization module. Holds the language config and the three translation assets, decides
 which language the session runs in - the platform's choice wins, otherwise the first configured
@@ -39,7 +39,7 @@ public LanguageAudioInstance audioInstance
 
 **Returns** [`LanguageAudioInstance`](/api/vrframework-localization-runtime/LanguageAudioInstance)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L28)
 
 ### config {#config}
 
@@ -51,7 +51,7 @@ public LanguageConfig config
 
 **Returns** [`LanguageConfig`](/api/vrframework-localization-runtime/LanguageConfig)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L24)
 
 ### dirtyAudio {#dirtyaudio}
 
@@ -63,7 +63,7 @@ public bool dirtyAudio
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L33)
 
 ### dirtySprite {#dirtysprite}
 
@@ -75,7 +75,7 @@ public bool dirtySprite
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L33)
 
 ### dirtyText {#dirtytext}
 
@@ -87,7 +87,7 @@ public bool dirtyText
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L33)
 
 ### spriteInstance {#spriteinstance}
 
@@ -99,7 +99,7 @@ public LanguageSpriteInstance spriteInstance
 
 **Returns** [`LanguageSpriteInstance`](/api/vrframework-localization-runtime/LanguageSpriteInstance)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L30)
 
 ### textInstance {#textinstance}
 
@@ -111,7 +111,7 @@ public LanguageTextInstance textInstance
 
 **Returns** [`LanguageTextInstance`](/api/vrframework-localization-runtime/LanguageTextInstance)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L26)
 
 ## Properties
 
@@ -125,7 +125,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L49)
 
 ### IsLoaded {#isloaded}
 
@@ -137,7 +137,7 @@ public bool IsLoaded { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L54)
 
 ### Language {#language}
 
@@ -149,7 +149,7 @@ public string Language { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L52)
 
 ### LanguageCount {#languagecount}
 
@@ -161,7 +161,7 @@ public int LanguageCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L45)
 
 ### LanguageIndex {#languageindex}
 
@@ -173,7 +173,7 @@ public int LanguageIndex { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L43)
 
 ## Methods
 
@@ -192,7 +192,7 @@ public void ChooseLanguage(int index)
 | --- | --- | --- |
 | `index` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Index into the config's language list. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L275)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L352)
 
 ### GetAudio(string) {#getaudio-string}
 
@@ -210,7 +210,26 @@ public AudioClip GetAudio(string key)
 
 **Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) - The clip, the untranslated fallback, or null when the ID is unknown.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L114)
+
+### GetAudioWithName(string) {#getaudiowithname-string}
+
+Looks up a localized audio clip by the name its entry is listed under, rather than by its
+translation ID.
+
+```csharp
+public AudioClip GetAudioWithName(string name)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the entry, as written in the audio asset. |
+
+**Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) - The clip, the untranslated fallback, or null when no entry has that name.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L151)
 
 ### GetLanguage(int) {#getlanguage-int32}
 
@@ -228,7 +247,7 @@ public Language GetLanguage(int index)
 
 **Returns** [`Language`](/api/vrframework-localization-runtime/Language) - The language, or null when the index is out of range.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L306)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L383)
 
 ### GetSprite(string) {#getsprite-string}
 
@@ -246,7 +265,26 @@ public Sprite GetSprite(string key)
 
 **Returns** [`Sprite`](https://docs.unity3d.com/ScriptReference/Sprite.html) - The sprite, the untranslated fallback, or null when the ID is unknown.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L124)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L124)
+
+### GetSpriteWithName(string) {#getspritewithname-string}
+
+Looks up a localized sprite by the name its entry is listed under, rather than by its
+translation ID.
+
+```csharp
+public Sprite GetSpriteWithName(string name)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the entry, as written in the sprite asset. |
+
+**Returns** [`Sprite`](https://docs.unity3d.com/ScriptReference/Sprite.html) - The sprite, the untranslated fallback, or null when no entry has that name.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L165)
 
 ### GetText(string) {#gettext-string}
 
@@ -264,7 +302,26 @@ public string GetText(string key)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The translated text, the untranslated fallback, or "[key]" when the ID is unknown.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L104)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L104)
+
+### GetTextWithName(string) {#gettextwithname-string}
+
+Looks up a localized string by the name its entry is listed under, rather than by its
+translation ID.
+
+```csharp
+public string GetTextWithName(string name)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the entry, as written in the text asset. |
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The translated text, the untranslated fallback, or "[name]" when no entry has that name.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L137)
 
 ### InvalidateAll() {#invalidateall}
 
@@ -274,7 +331,7 @@ Marks the text, audio and sprite maps as needing a rebuild.
 public void InvalidateAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L317)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L394)
 
 ### OnCleanup() {#oncleanup}
 
@@ -284,7 +341,7 @@ Unregisters the module.
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L145)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L214)
 
 ### OnInit() {#oninit}
 
@@ -295,7 +352,7 @@ the lookup maps.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L204)
 
 ### RaiseLanguageChanged() {#raiselanguagechanged}
 
@@ -305,7 +362,7 @@ Override to hook analytics or a custom UI refresh into language switches.
 protected virtual void RaiseLanguageChanged()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L193)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L262)
 
 ### ResolveAudio(string) {#resolveaudio-string}
 
@@ -323,7 +380,7 @@ protected virtual AudioClip ResolveAudio(string key)
 
 **Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html) - The clip to play, or null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L219)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L288)
 
 ### ResolveSprite(string) {#resolvesprite-string}
 
@@ -341,7 +398,7 @@ protected virtual Sprite ResolveSprite(string key)
 
 **Returns** [`Sprite`](https://docs.unity3d.com/ScriptReference/Sprite.html) - The sprite to show, or null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L237)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L306)
 
 ### ResolveText(string) {#resolvetext-string}
 
@@ -359,7 +416,7 @@ protected virtual string ResolveText(string key)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The text to display.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L201)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L270)
 
 ### SelectLanguage(string) {#selectlanguage-string}
 
@@ -376,7 +433,7 @@ public void SelectLanguage(string language)
 | --- | --- | --- |
 | `language` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Language name, as written in the config. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L64)
 
 ### TryGetAudio(string, out AudioClip) {#trygetaudio-string-audioclip}
 
@@ -395,7 +452,7 @@ public bool TryGetAudio(string key, out AudioClip value)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True only when the current language has its own entry for the key.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L357)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L434)
 
 ### TryGetSprite(string, out Sprite) {#trygetsprite-string-sprite}
 
@@ -414,7 +471,7 @@ public bool TryGetSprite(string key, out Sprite value)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True only when the current language has its own entry for the key.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L385)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L462)
 
 ### TryGetText(string, out string) {#trygettext-string-string}
 
@@ -434,7 +491,7 @@ public bool TryGetText(string key, out string value)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True only when the current language has its own entry for the key.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L329)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L406)
 
 ## Events
 
@@ -448,5 +505,5 @@ public event Action OnLanguageChanged
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageManager.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageManager.cs#L57)
 

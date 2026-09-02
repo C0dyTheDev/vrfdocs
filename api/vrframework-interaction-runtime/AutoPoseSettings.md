@@ -8,7 +8,7 @@ description: 'Tuning for the search.'
 
 # AutoPoseSettings
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L20)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L20)
 
 Tuning for the search. Lives on the hand, because it describes the hand's own geometry.
 
@@ -35,7 +35,7 @@ public bool closeFingersThatMissed
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L68)
 
 ### easeIn {#easein}
 
@@ -51,7 +51,7 @@ public float easeIn
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L57)
 
 ### measureFingersFromMesh {#measurefingersfrommesh}
 
@@ -69,7 +69,7 @@ public bool measureFingersFromMesh
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L43)
 
 ### probeRadius {#proberadius}
 
@@ -81,7 +81,7 @@ public float probeRadius
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L48)
 
 ### steps {#steps}
 
@@ -98,5 +98,5 @@ public int steps
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L31)
 

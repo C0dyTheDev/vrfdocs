@@ -8,7 +8,7 @@ description: 'The black quad in front of the camera used to hide transitions, wi
 
 # VisionFader
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Camera/VisionFader.cs#L9)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L9)
 
 The black quad in front of the camera used to hide transitions, with an optional logo fading in
 over it. Sits on the rig and is driven through the interaction module.
@@ -29,7 +29,7 @@ Fades the view to black. Interrupts a fade already running.
 public void FadeIn()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Camera/VisionFader.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L53)
 
 ### FadeOut() {#fadeout}
 
@@ -39,5 +39,5 @@ Fades the view back to clear and disables the quad afterwards. Interrupts a fade
 public void FadeOut()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Camera/VisionFader.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L61)
 

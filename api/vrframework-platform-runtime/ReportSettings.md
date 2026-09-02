@@ -8,7 +8,7 @@ description: 'How the report is packaged and how hard the queue tries to get it 
 
 # ReportSettings
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L14)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L14)
 
 How the report is packaged and how hard the queue tries to get it delivered.
 
@@ -32,7 +32,7 @@ public List<long> acceptedStatusCodes
 
 **Returns** `List<long>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L27)
 
 ### drainTimeout {#draintimeout}
 
@@ -45,7 +45,7 @@ public float drainTimeout
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L43)
 
 ### maxAttempts {#maxattempts}
 
@@ -58,7 +58,7 @@ public int maxAttempts
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L31)
 
 ### odkryvaniId {#odkryvaniid}
 
@@ -71,7 +71,7 @@ public int odkryvaniId
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L23)
 
 ### reportVersion {#reportversion}
 
@@ -84,7 +84,7 @@ public string reportVersion
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L19)
 
 ### requestTimeout {#requesttimeout}
 
@@ -97,7 +97,7 @@ public int requestTimeout
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L39)
 
 ### retryDelay {#retrydelay}
 
@@ -110,5 +110,5 @@ public float retryDelay
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportQueue.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportQueue.cs#L35)
 

@@ -8,7 +8,7 @@ description: 'Default framework inspector for MinigameSet/api/vrframework-miniga
 
 # MinigameSetEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L274)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L275)
 
 Default framework inspector for [`MinigameSet`](/api/vrframework-minigames-runtime/MinigameSet).
 

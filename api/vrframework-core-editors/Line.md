@@ -8,7 +8,7 @@ description: 'A connection drawn between two ports of the graph: it leaves a ste
 
 # Line
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L11)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L11)
 
 A connection drawn between two ports of the graph: it leaves a step's output port and arrives
 at a block's input port, which is the enqueue that step performs. Colour says which branch it
@@ -40,7 +40,7 @@ public Line(InputPort input, OutputPort output, LineType lineType)
 | `output` | [`OutputPort`](/api/vrframework-core-editors/OutputPort) | Port the line leaves from. |
 | `lineType` | [`LineType`](/api/vrframework-core-editors/LineType) | Which branch the connection stands for. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L38)
 
 ## Methods
 
@@ -58,7 +58,7 @@ public void ChangeDraggedPort(bool input)
 | --- | --- | --- |
 | `input` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to drag the arriving end, false to drag the leaving end. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L97)
 
 ### ContainsPoint(Vector2) {#containspoint-vector2}
 
@@ -77,7 +77,7 @@ public override bool ContainsPoint(Vector2 localPoint)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the point is on the drawn line.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L172)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L172)
 
 ### IsInputCloserToPos(Vector2) {#isinputclosertopos-vector2}
 
@@ -95,7 +95,7 @@ public bool IsInputCloserToPos(Vector2 pos)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the arriving end is the nearer one.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L249)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L249)
 
 ### Move(Vector2) {#move-vector2}
 
@@ -111,7 +111,7 @@ public void Move(Vector2 delta)
 | --- | --- | --- |
 | `delta` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | How far to move it, in canvas pixels. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L64)
 
 ### ResetDrag() {#resetdrag}
 
@@ -121,7 +121,7 @@ Puts both ends back on their ports after a drag.
 public void ResetDrag()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L89)
 
 ### SetPosition(Vector2) {#setposition-vector2}
 
@@ -137,7 +137,7 @@ public void SetPosition(Vector2 pos)
 | --- | --- | --- |
 | `pos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where to put it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L71)
 
 ### StartDrag(Vector2) {#startdrag-vector2}
 
@@ -153,7 +153,7 @@ public void StartDrag(Vector2 mousePos)
 | --- | --- | --- |
 | `mousePos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where the drag started. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L257)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L257)
 
 ### UpdatePosition() {#updateposition}
 
@@ -163,5 +163,5 @@ Redraws the line between wherever its two ends are now.
 public void UpdatePosition()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/Line.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/Line.cs#L110)
 

@@ -8,7 +8,7 @@ description: 'Editor for the ProgressStep script.'
 
 # ProgressStepEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ProgressStepEditor.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ProgressStepEditor.cs#L9)
 
 Editor for the ProgressStep script.
 
@@ -32,7 +32,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ProgressStepEditor.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ProgressStepEditor.cs#L16)
 
 ### HeaderTitle {#headertitle}
 
@@ -44,7 +44,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ProgressStepEditor.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ProgressStepEditor.cs#L14)
 
 ## Methods
 
@@ -56,5 +56,5 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ProgressStepEditor.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ProgressStepEditor.cs#L19)
 

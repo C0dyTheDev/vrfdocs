@@ -8,7 +8,7 @@ description: 'Turns the file paths and stack traces attached to a log line into 
 
 # VRFLogSource
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L16)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L16)
 
 Turns the file paths and stack traces attached to a log line into something clickable.
 Caller paths arrive as whatever absolute path the machine compiled with, so they are folded
@@ -38,7 +38,7 @@ public static string FileName(string path)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L143)
 
 ### FirstFrame(string) {#firstframe-string}
 
@@ -56,7 +56,7 @@ public static (string member, string file, int line) FirstFrame(string stackTrac
 
 **Returns** `(string member, string file, int line)`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L114)
 
 ### IsUsablePath(string) {#isusablepath-string}
 
@@ -75,7 +75,7 @@ public static bool IsUsablePath(string value)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L135)
 
 ### Open(string, int) {#open-string-int32}
 
@@ -92,7 +92,7 @@ public static void Open(string file, int line)
 | `file` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `line` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L57)
 
 ### Parse(string) {#parse-string}
 
@@ -110,7 +110,7 @@ public static List<VRFLogSource.Frame> Parse(string stackTrace)
 
 **Returns** `List<VRFLogSource.Frame>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L81)
 
 ### Ping(string) {#ping-string}
 
@@ -126,7 +126,7 @@ public static void Ping(string file)
 | --- | --- | --- |
 | `file` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L72)
 
 ### ToProjectPath(string) {#toprojectpath-string}
 
@@ -145,5 +145,5 @@ public static string ToProjectPath(string path)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogSource.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogSource.cs#L31)
 

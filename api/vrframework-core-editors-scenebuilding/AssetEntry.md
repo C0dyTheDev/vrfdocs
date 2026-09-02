@@ -8,7 +8,7 @@ description: 'One record in an asset database.'
 
 # AssetEntry
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L59)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L59)
 
 One record in an asset database. Deliberately transport agnostic: a local source fills in
 [`LocalPath`](/api/vrframework-core-editors-scenebuilding/AssetEntry#localpath) and nothing else, a remote source describes the asset and fills the
@@ -32,7 +32,7 @@ public string Author
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L62)
 
 ### Category {#category}
 
@@ -44,7 +44,7 @@ public string Category
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L65)
 
 ### Description {#description}
 
@@ -56,7 +56,7 @@ public string Description
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L68)
 
 ### Id {#id}
 
@@ -68,7 +68,7 @@ public string Id
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L70)
 
 ### LocalPath {#localpath}
 
@@ -80,7 +80,7 @@ public string LocalPath
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L73)
 
 ### Name {#name}
 
@@ -92,7 +92,7 @@ public string Name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L76)
 
 ### SizeBytes {#sizebytes}
 
@@ -104,7 +104,7 @@ public long SizeBytes
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L78)
 
 ### Tags {#tags}
 
@@ -116,7 +116,7 @@ public string[] Tags
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L81)
 
 ### ThumbnailUrl {#thumbnailurl}
 
@@ -128,7 +128,7 @@ public string ThumbnailUrl
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L84)
 
 ### Version {#version}
 
@@ -140,7 +140,7 @@ public string Version
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L86)
 
 ## Properties
 
@@ -154,7 +154,7 @@ public bool IsLocal { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L89)
 
 ### SizeLabel {#sizelabel}
 
@@ -166,5 +166,5 @@ public string SizeLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L92)
 

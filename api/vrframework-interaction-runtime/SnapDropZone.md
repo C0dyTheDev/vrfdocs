@@ -8,7 +8,7 @@ description: 'A place an object belongs.'
 
 # SnapDropZone
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L60)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L60)
 
 A place an object belongs. Takes whatever it accepts, eases it into its seat and holds it there,
 raising events either side.
@@ -41,7 +41,7 @@ public SnapAccepts accepts
 
 **Returns** [`SnapAccepts`](/api/vrframework-interaction-runtime/SnapAccepts)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L81)
 
 ### mode {#mode}
 
@@ -52,7 +52,7 @@ public SnapMode mode
 
 **Returns** [`SnapMode`](/api/vrframework-interaction-runtime/SnapMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L67)
 
 ### only {#only}
 
@@ -63,7 +63,7 @@ public GrabbableObject only
 
 **Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L84)
 
 ### OnSnap {#onsnap}
 
@@ -75,7 +75,7 @@ public UnityEvent OnSnap
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L115)
 
 ### OnUnsnap {#onunsnap}
 
@@ -87,7 +87,7 @@ public UnityEvent OnUnsnap
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L118)
 
 ### seat {#seat}
 
@@ -98,7 +98,7 @@ public Transform seat
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L93)
 
 ### seatDuration {#seatduration}
 
@@ -109,7 +109,7 @@ public float seatDuration
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L96)
 
 ### snapPosition {#snapposition}
 
@@ -120,7 +120,7 @@ public bool snapPosition
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L106)
 
 ### snapRotation {#snaprotation}
 
@@ -131,7 +131,7 @@ public bool snapRotation
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L109)
 
 ### snapScale {#snapscale}
 
@@ -142,7 +142,7 @@ public bool snapScale
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L112)
 
 ### tagged {#tagged}
 
@@ -153,7 +153,7 @@ public string tagged
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L87)
 
 ### takeAgainAfter {#takeagainafter}
 
@@ -164,7 +164,7 @@ public float takeAgainAfter
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L103)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L103)
 
 ### takes {#takes}
 
@@ -175,7 +175,7 @@ public SnapWhen takes
 
 **Returns** [`SnapWhen`](/api/vrframework-interaction-runtime/SnapWhen)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L75)
 
 ## Properties
 
@@ -189,7 +189,7 @@ public Transform Seat { get; }
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L124)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L124)
 
 ### Seated {#seated}
 
@@ -201,7 +201,7 @@ public GrabbableObject Seated { get; }
 
 **Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L121)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L121)
 
 ## Methods
 
@@ -221,7 +221,7 @@ protected virtual bool CanAccept(GrabbableObject candidate)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the zone should take it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L313)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L318)
 
 ### Free() {#free}
 
@@ -235,7 +235,7 @@ script, a reset or a later stage of whatever the scene is about.
 public void Free()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L442)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L447)
 
 ### Offer(GrabbableObject) {#offer-grabbableobject}
 
@@ -253,7 +253,7 @@ public bool Offer(GrabbableObject candidate)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True if the zone took it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L278)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L283)
 
 ### OnSnapped(GrabbableObject) {#onsnapped-grabbableobject}
 
@@ -269,7 +269,7 @@ protected virtual void OnSnapped(GrabbableObject snapped)
 | --- | --- | --- |
 | `snapped` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Object that has just settled into its seat. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L324)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L329)
 
 ### OnUnsnapped(GrabbableObject) {#onunsnapped-grabbableobject}
 
@@ -285,7 +285,7 @@ protected virtual void OnUnsnapped(GrabbableObject unsnapped)
 | --- | --- | --- |
 | `unsnapped` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Object that has just left. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L333)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L338)
 
 ### SetHighlight(bool) {#sethighlight-boolean}
 
@@ -302,7 +302,7 @@ public void SetHighlight(bool show)
 | --- | --- | --- |
 | `show` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to show the zone, false to hide it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L489)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L494)
 
 ### Step(float) {#step-single}
 
@@ -322,5 +322,5 @@ public void Step(float sinceLast)
 | --- | --- | --- |
 | `sinceLast` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Seconds since this was last stepped. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L243)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L248)
 

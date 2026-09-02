@@ -8,7 +8,7 @@ description: 'Adapter that lets an authored asset behave exactly like a framewor
 
 # AuthoredComponentSetup
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L214)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L210)
 
 Adapter that lets an authored asset behave exactly like a framework setup. It has no
 parameterless constructor on purpose, so type discovery skips it.
@@ -35,7 +35,7 @@ public AuthoredComponentSetup(ComponentSetupAsset asset)
 | --- | --- | --- |
 | `asset` | [`ComponentSetupAsset`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset) | The authored setup. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L218)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L214)
 
 ## Properties
 
@@ -49,7 +49,7 @@ public ComponentSetupAsset Asset { get; }
 
 **Returns** [`ComponentSetupAsset`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L224)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L220)
 
 ### Components {#components}
 
@@ -61,7 +61,7 @@ public override Type[] Components { get; }
 
 **Returns** [`Type[]`](https://learn.microsoft.com/dotnet/api/system.type[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L242)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L238)
 
 ### Description {#description}
 
@@ -73,7 +73,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L231)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L227)
 
 ### DisplayName {#displayname}
 
@@ -85,7 +85,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L229)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L225)
 
 ### Group {#group}
 
@@ -97,7 +97,7 @@ public override string Group { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L233)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L229)
 
 ### Id {#id}
 
@@ -109,7 +109,7 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L227)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L223)
 
 ### ObjectName {#objectname}
 
@@ -121,7 +121,7 @@ public override string ObjectName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L239)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L235)
 
 ### Order {#order}
 
@@ -133,7 +133,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L237)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L233)
 
 ### Prefab {#prefab}
 
@@ -145,7 +145,7 @@ public override GameObject Prefab { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L246)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L242)
 
 ### Tags {#tags}
 
@@ -157,7 +157,7 @@ public override string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L235)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L231)
 
 ## Methods
 
@@ -175,5 +175,5 @@ public override void Configure(GameObject target)
 | --- | --- | --- |
 | `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object being set up. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L251)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L247)
 

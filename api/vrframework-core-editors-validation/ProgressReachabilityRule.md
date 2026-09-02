@@ -8,7 +8,7 @@ description: 'Walks the scenario the way the manager does - start block, then wh
 
 # ProgressReachabilityRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProgressRules.cs#L319)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L319)
 
 Walks the scenario the way the manager does - start block, then whatever each step queues -
 and reports the blocks nothing can reach.
@@ -31,7 +31,7 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProgressRules.cs#L322)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L322)
 
 ### Order {#order}
 
@@ -43,7 +43,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProgressRules.cs#L324)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L324)
 
 ## Methods
 
@@ -57,7 +57,7 @@ public override bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the check should run.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProgressRules.cs#L328)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L328)
 
 ### Validate(ValidationReport) {#validate-validationreport}
 
@@ -73,5 +73,5 @@ public override void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProgressRules.cs#L336)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProgressRules.cs#L336)
 

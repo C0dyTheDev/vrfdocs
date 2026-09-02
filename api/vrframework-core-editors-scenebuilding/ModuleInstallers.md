@@ -8,7 +8,7 @@ description: 'Discovers every installer in the loaded editor assemblies, so proj
 
 # ModuleInstallers
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L89)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L89)
 
 Discovers every installer in the loaded editor assemblies, so projects can add their own by
 subclassing [`ModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ModuleInstaller).
@@ -31,7 +31,7 @@ public static IReadOnlyList<ModuleInstaller> All { get; }
 
 **Returns** `IReadOnlyList<ModuleInstaller>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L94)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L94)
 
 ## Methods
 
@@ -51,7 +51,7 @@ public static ModuleInstaller Find(string id)
 
 **Returns** [`ModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ModuleInstaller) - The installer, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L112)
 
 ### Invalidate() {#invalidate}
 
@@ -61,5 +61,5 @@ Forgets the cached installers, so a recompile is picked up.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L104)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L104)
 

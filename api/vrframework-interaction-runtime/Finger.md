@@ -8,7 +8,7 @@ description: 'One finger of the hand mesh: its joints, and whether it is current
 
 # Finger
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L18)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L18)
 
 One finger of the hand mesh: its joints, and whether it is currently frozen.
 
@@ -31,7 +31,7 @@ public FingerType fingerType
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L22)
 
 ### isLocked {#islocked}
 
@@ -43,7 +43,7 @@ public bool isLocked
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L24)
 
 ### joints {#joints}
 
@@ -55,5 +55,5 @@ public List<TransformPair> joints
 
 **Returns** `List<TransformPair>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L26)
 

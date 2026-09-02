@@ -8,7 +8,7 @@ description: 'Browses everything that can go into a scene - modules, prefabs, ex
 
 # SceneBuilder
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/SceneBuilder.cs#L21)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L21)
 
 Browses everything that can go into a scene - modules, prefabs, external assets, scene
 templates and framework components - and gets it there by button or by drag and drop.
@@ -32,7 +32,7 @@ Builds the window: the category sidebar, the card grid and the details panel.
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/SceneBuilder.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L58)
 
 ### NotifyContentChanged() {#notifycontentchanged}
 
@@ -43,7 +43,7 @@ edited or deleted - so every open window rebuilds its grid.
 public static void NotifyContentChanged()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/SceneBuilder.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L110)
 
 ### NotifySceneChanged() {#notifyscenechanged}
 
@@ -54,7 +54,7 @@ Called after anything installs into the scene so every open window re-reads the
 public static void NotifySceneChanged()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/SceneBuilder.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L101)
 
 ### ShowWindow() {#showwindow}
 
@@ -65,5 +65,5 @@ Opens the Scene Builder window.
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/SceneBuilder.cs#L88)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/SceneBuilder.cs#L88)
 

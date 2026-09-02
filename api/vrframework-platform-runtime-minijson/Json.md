@@ -8,7 +8,7 @@ description: 'This class encodes and decodes JSON strings.'
 
 # Json
 
-**Class** · namespace `VRFramework.Platform.Runtime.MiniJSON` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/MiniJSON.cs#L77)
+**Class** · namespace `VRFramework.Platform.Runtime.MiniJSON` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/MiniJSON.cs#L77)
 
 This class encodes and decodes JSON strings.
 Spec. details, see http://www.json.org/
@@ -39,7 +39,7 @@ public static object Deserialize(string json)
 
 **Returns** [`object`](https://learn.microsoft.com/dotnet/api/system.object) - An List&lt;object>, a Dictionary&lt;string, object>, a double, an integer,a string, null, true, or false
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/MiniJSON.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/MiniJSON.cs#L84)
 
 ### Serialize(object) {#serialize-object}
 
@@ -57,5 +57,5 @@ public static string Serialize(object obj)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - A JSON encoded string, or null if the object is not serializable
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/MiniJSON.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/MiniJSON.cs#L97)
 

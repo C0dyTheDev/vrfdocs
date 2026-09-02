@@ -8,7 +8,7 @@ description: 'How the highlight is drawn.'
 
 # Highlight.HighlightType
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/Highlight.cs#L17)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L17)
 
 How the highlight is drawn.
 
@@ -18,8 +18,15 @@ public enum Highlight.HighlightType
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `OverlayColor` | 1 | Keeps the materials and pulses a colour over them. |
-| `TransparentReplacement` | 0 | Swaps the materials for a transparent highlight shader. |
+### OverlayColor {#overlaycolor}
+
+`OverlayColor = 1`
+
+Keeps the materials and pulses a colour over them.
+
+### TransparentReplacement {#transparentreplacement}
+
+`TransparentReplacement = 0`
+
+Swaps the materials for a transparent highlight shader.
 

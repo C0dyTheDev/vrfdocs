@@ -8,7 +8,7 @@ description: 'Checks that the project builds for a target the framework supports
 
 # BuildTargetRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L67)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L67)
 
 Checks that the project builds for a target the framework supports.
 
@@ -30,7 +30,7 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L70)
 
 ### Order {#order}
 
@@ -42,7 +42,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L74)
 
 ### Scope {#scope}
 
@@ -54,7 +54,7 @@ public override ValidationScope Scope { get; }
 
 **Returns** [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L72)
 
 ## Methods
 
@@ -72,5 +72,5 @@ public override void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L78)
 

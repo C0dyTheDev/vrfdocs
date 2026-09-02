@@ -8,7 +8,7 @@ description: 'Editor for the Scenario script.'
 
 # ScenarioEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ScenarioEditor.cs#L11)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ScenarioEditor.cs#L11)
 
 Editor for the Scenario script.
 
@@ -32,7 +32,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ScenarioEditor.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ScenarioEditor.cs#L22)
 
 ### HeaderTitle {#headertitle}
 
@@ -44,7 +44,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ScenarioEditor.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ScenarioEditor.cs#L20)
 
 ## Methods
 
@@ -56,7 +56,7 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ScenarioEditor.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ScenarioEditor.cs#L32)
 
 ### OnEnable() {#onenable}
 
@@ -66,5 +66,5 @@ Binds the inspector and prepares the scenario's editor state.
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/ScenarioEditor.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/ScenarioEditor.cs#L25)
 

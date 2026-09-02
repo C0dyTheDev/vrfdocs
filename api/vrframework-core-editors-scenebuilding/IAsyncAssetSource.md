@@ -8,7 +8,7 @@ description: 'A source that cannot make an entry available without letting the e
 
 # IAsyncAssetSource
 
-**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L151)
+**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L151)
 
 A source that cannot make an entry available without letting the editor keep running - a
 database whose import work is driven by the editor loop, so blocking on it would deadlock.
@@ -39,7 +39,7 @@ bool IsResolving(AssetEntry entry)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the import runs.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L156)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L156)
 
 ### ResolveAsync(AssetEntry, Action\<Object>) {#resolveasync-assetentry-object}
 
@@ -57,5 +57,5 @@ void ResolveAsync(AssetEntry entry, Action<Object> completed)
 | `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry to resolve. |
 | `completed` | `Action<Object>` | Called with the imported asset, or null. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L164)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L164)
 

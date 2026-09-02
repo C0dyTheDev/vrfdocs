@@ -8,7 +8,7 @@ description: 'One block of build configuration carried by a build profile: what 
 
 # VRFBuildSetting
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L27)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L27)
 
 One block of build configuration carried by a build profile: what it is called, what it
 checks before a build starts, and what it does when one does.
@@ -43,7 +43,7 @@ public virtual string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L34)
 
 ### DisplayName {#displayname}
 
@@ -55,7 +55,7 @@ public abstract string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L31)
 
 ### IsUnique {#isunique}
 
@@ -68,7 +68,7 @@ public virtual bool IsUnique { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L43)
 
 ### Order {#order}
 
@@ -80,7 +80,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L37)
 
 ## Methods
 
@@ -100,7 +100,7 @@ public abstract void Apply(VRFBuildContext context)
 | --- | --- | --- |
 | `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L63)
 
 ### Validate(BuildProfile, ValidationReport) {#validate-buildprofile-validationreport}
 
@@ -116,7 +116,7 @@ public virtual void Validate(BuildProfile profile, ValidationReport report)
 | Name | Type | Description |
 | --- | --- | --- |
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | The profile carrying this setting. Null only if the settings object is not on one yet, which a setting should tolerate rather than assume away. |
-| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) |  |
+| `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L54)
 

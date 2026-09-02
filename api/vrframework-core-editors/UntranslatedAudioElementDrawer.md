@@ -8,7 +8,7 @@ description: 'Draws an untranslated audio entry.'
 
 # UntranslatedAudioElementDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L104)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L104)
 
 Draws an untranslated audio entry.
 
@@ -29,5 +29,5 @@ Builds the audio entry drawer.
 public UntranslatedAudioElementDrawer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/UntranslatedElementDrawer.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/UntranslatedElementDrawer.cs#L108)
 

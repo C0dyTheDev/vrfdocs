@@ -8,7 +8,7 @@ description: 'Draws the hand''s bones in the scene view so a grip can be posed b
 
 # GrabPoseHandles
 
-**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseHandles.cs#L20)
+**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseHandles.cs#L20)
 
 Draws the hand's bones in the scene view so a grip can be posed by grabbing them directly.
 
@@ -44,7 +44,7 @@ public static bool Draw(CustomGrabPose ghost)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when something was moved, so the inspector can re-read its sliders.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseHandles.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseHandles.cs#L44)
 
 ### Forget() {#forget}
 
@@ -54,5 +54,5 @@ Drops the current selection, for when the hand goes away.
 public static void Forget()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GrabPoseHandles.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GrabPoseHandles.cs#L34)
 

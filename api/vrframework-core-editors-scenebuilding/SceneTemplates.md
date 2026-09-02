@@ -8,7 +8,7 @@ description: 'Every template available: the framework''s own, plus any VRFSceneT
 
 # SceneTemplates
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneTemplate.cs#L206)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L206)
 
 Every template available: the framework's own, plus any [`VRFSceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/VRFSceneTemplateAsset)
 authored in the project.
@@ -31,7 +31,7 @@ public static IReadOnlyList<SceneTemplate> All { get; }
 
 **Returns** `IReadOnlyList<SceneTemplate>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneTemplate.cs#L211)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L211)
 
 ## Methods
 
@@ -51,7 +51,7 @@ public static SceneTemplate Find(string id)
 
 **Returns** [`SceneTemplate`](/api/vrframework-core-editors-scenebuilding/SceneTemplate) - The template, or null when none carries that identity.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneTemplate.cs#L229)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L229)
 
 ### Invalidate() {#invalidate}
 
@@ -61,5 +61,5 @@ Forgets the cached templates, so a recompile or a new asset is picked up.
 public static void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneTemplate.cs#L221)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneTemplate.cs#L221)
 

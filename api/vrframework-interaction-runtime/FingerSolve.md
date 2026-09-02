@@ -8,7 +8,7 @@ description: 'How far one finger got before it met the object, and whether it me
 
 # FingerSolve
 
-**Struct** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L7)
+**Struct** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L7)
 
 How far one finger got before it met the object, and whether it met it at all.
 
@@ -28,7 +28,7 @@ public float bend
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L13)
 
 ### contacted {#contacted}
 
@@ -40,7 +40,7 @@ public bool contacted
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L16)
 
 ### finger {#finger}
 
@@ -52,5 +52,5 @@ public FingerType finger
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L10)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L10)
 

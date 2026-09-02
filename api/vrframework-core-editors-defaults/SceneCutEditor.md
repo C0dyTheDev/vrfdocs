@@ -8,7 +8,7 @@ description: 'Default framework inspector for SceneCut/api/vrframework-core-runt
 
 # SceneCutEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L122)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L123)
 
 Default framework inspector for [`SceneCut`](/api/vrframework-core-runtime/SceneCut).
 

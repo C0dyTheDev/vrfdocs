@@ -8,7 +8,7 @@ description: 'Per-project Scene Builder configuration.'
 
 # SceneBuilderSettings
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L12)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L12)
 
 Per-project Scene Builder configuration. Lives in the consuming project (not the package)
 so an installed UPM copy stays read-only. Created on first access.
@@ -35,7 +35,7 @@ public float cardSize
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L20)
 
 ### lastCategoryId {#lastcategoryid}
 
@@ -47,7 +47,7 @@ public string lastCategoryId
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L23)
 
 ### SettingsPath {#settingspath}
 
@@ -59,7 +59,7 @@ public const string SettingsPath = "Assets/Editor/VRFSceneBuilderSettings.asset"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L15)
 
 ## Properties
 
@@ -73,7 +73,7 @@ public static SceneBuilderSettings Instance { get; }
 
 **Returns** [`SceneBuilderSettings`](/api/vrframework-core-editors-scenebuilding/SceneBuilderSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L26)
 
 ## Methods
 
@@ -85,5 +85,5 @@ Writes the settings back to disk.
 public void Save()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderSettings.cs#L52)
 

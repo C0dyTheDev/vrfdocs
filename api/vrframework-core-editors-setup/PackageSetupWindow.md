@@ -8,7 +8,7 @@ description: 'The face of "Set Up Project for VR": what the run is about to do, 
 
 # PackageSetupWindow
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetupWindow.cs#L23)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L23)
 
 The face of "Set Up Project for VR": what the run is about to do, what it is doing now, and
 what each step ended up reporting.
@@ -40,7 +40,7 @@ public static bool IsOpen { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetupWindow.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L41)
 
 ## Methods
 
@@ -52,7 +52,7 @@ Repaints every open window. Called when a run finishes and nothing else would.
 public static void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetupWindow.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L101)
 
 ### ShowWindow() {#showwindow}
 
@@ -63,5 +63,5 @@ Opens the package setup window.
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/PackageSetupWindow.cs#L90)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetupWindow.cs#L90)
 

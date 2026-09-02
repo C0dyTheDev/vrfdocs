@@ -8,7 +8,7 @@ description: 'Where a queued block is put.'
 
 # QueueLocations
 
-**Enum** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/Process/EnqueueLogic.cs#L44)
+**Enum** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/Process/EnqueueLogic.cs#L44)
 
 Where a queued block is put.
 
@@ -18,8 +18,15 @@ public enum QueueLocations
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `End` | 1 | Behind everything already waiting. |
-| `Start` | 0 | Right after the step running now, so it is what happens next. |
+### End {#end}
+
+`End = 1`
+
+Behind everything already waiting.
+
+### Start {#start}
+
+`Start = 0`
+
+Right after the step running now, so it is what happens next.
 

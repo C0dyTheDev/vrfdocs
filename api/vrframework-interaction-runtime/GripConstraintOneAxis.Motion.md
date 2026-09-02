@@ -8,7 +8,7 @@ description: 'Whether the object travels in a straight line or turns.'
 
 # GripConstraintOneAxis.Motion
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L22)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L22)
 
 Whether the object travels in a straight line or turns.
 
@@ -18,8 +18,15 @@ public enum GripConstraintOneAxis.Motion
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Slide` | 0 | Along an axis: a drawer, a bolt, a cell being drawn out. |
-| `Turn` | 1 | About an axis: a door, a dial, a valve, a cell being twisted. |
+### Slide {#slide}
+
+`Slide = 0`
+
+Along an axis: a drawer, a bolt, a cell being drawn out.
+
+### Turn {#turn}
+
+`Turn = 1`
+
+About an axis: a door, a dial, a valve, a cell being twisted.
 

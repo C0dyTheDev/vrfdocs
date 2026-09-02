@@ -8,7 +8,7 @@ description: 'One language''s version of a translated string.'
 
 # LanguageTextElement
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L11)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L11)
 
 One language's version of a translated string.
 
@@ -35,7 +35,7 @@ public LanguageTextElement(Language language)
 | --- | --- | --- |
 | `language` | [`Language`](/api/vrframework-localization-runtime/Language) | Language this entry belongs to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L21)
 
 ## Fields
 
@@ -50,7 +50,7 @@ public string element
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L17)
 
 ### language {#language}
 
@@ -63,5 +63,5 @@ public Language language
 
 **Returns** [`Language`](/api/vrframework-localization-runtime/Language)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Text/LanguageTextElement.cs#L15)
 

@@ -8,7 +8,7 @@ description: 'Default framework inspector for RepeatOnIntervals/api/vrframework-
 
 # RepeatOnIntervalsEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L101)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L102)
 
 Default framework inspector for [`RepeatOnIntervals`](/api/vrframework-core-runtime/RepeatOnIntervals).
 

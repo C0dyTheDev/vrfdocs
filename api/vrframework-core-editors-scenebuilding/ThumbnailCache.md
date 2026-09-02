@@ -8,7 +8,7 @@ description: 'Card pictures for entries that are not in the project yet, fetched
 
 # ThumbnailCache
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L15)
 
 Card pictures for entries that are not in the project yet, fetched once and kept under
 Library/ so reopening the window is free. Requests are fire and forget: the first call for
@@ -39,7 +39,7 @@ public ThumbnailCache(string folder)
 | --- | --- | --- |
 | `folder` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Project-relative folder the images are written to, e.g. Library/.... |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L27)
 
 ## Methods
 
@@ -53,7 +53,7 @@ another go.
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L80)
 
 ### Get(string, string) {#get-string-string}
 
@@ -73,7 +73,7 @@ public Texture2D Get(string id, string url)
 
 **Returns** [`Texture2D`](https://docs.unity3d.com/ScriptReference/Texture2D.html) - The picture, or null while it is on its way.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L39)
 
 ### IsPending(string) {#ispending-string}
 
@@ -91,5 +91,5 @@ public bool IsPending(string id)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the download runs.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/ThumbnailCache.cs#L70)
 

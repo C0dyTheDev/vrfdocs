@@ -8,7 +8,7 @@ description: 'Which hands a grip point will accept.'
 
 # HandFilter
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L8)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L8)
 
 Which hands a grip point will accept.
 
@@ -18,9 +18,21 @@ public enum HandFilter
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Either` | 0 | Either hand may use it. |
-| `Left` | 1 | The left hand only. |
-| `Right` | 2 | The right hand only. |
+### Either {#either}
+
+`Either = 0`
+
+Either hand may use it.
+
+### Left {#left}
+
+`Left = 1`
+
+The left hand only.
+
+### Right {#right}
+
+`Right = 2`
+
+The right hand only.
 

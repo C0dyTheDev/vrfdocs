@@ -8,7 +8,7 @@ description: 'The kinds of localized content a language instance can hold.'
 
 # LangType
 
-**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/LangType.cs#L3)
+**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/LangType.cs#L3)
 
 The kinds of localized content a language instance can hold.
 
@@ -18,9 +18,21 @@ public enum LangType
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Audio` | 0 | Voice over and other localized audio clips. |
-| `Sprite` | 2 | Localized images. |
-| `Text` | 1 | Localized strings. |
+### Audio {#audio}
+
+`Audio = 0`
+
+Voice over and other localized audio clips.
+
+### Sprite {#sprite}
+
+`Sprite = 2`
+
+Localized images.
+
+### Text {#text}
+
+`Text = 1`
+
+Localized strings.
 

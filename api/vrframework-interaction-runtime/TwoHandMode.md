@@ -8,7 +8,7 @@ description: 'How two hands on one object divide the work between them.'
 
 # TwoHandMode
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L54)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L54)
 
 How two hands on one object divide the work between them.
 
@@ -18,8 +18,19 @@ public enum TwoHandMode
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `PositionAndAim` | 1 | One hand holds it and the other steadies it, the way two hands hold a shotgun. The first hand to grab decides where the object is and how it is rolled; the second decides where it points. |
-| `Shared` | 0 | Both hands hold the object outright, the way two hands hold a barrel. Where the object points follows the line between the two grips, and it only turns about that line as far as both wrists turn together - twisting one wrist against the other does nothing at all, because in reality that hand would simply slip. |
+### PositionAndAim {#positionandaim}
+
+`PositionAndAim = 1`
+
+One hand holds it and the other steadies it, the way two hands hold a shotgun. The first hand
+to grab decides where the object is and how it is rolled; the second decides where it points.
+
+### Shared {#shared}
+
+`Shared = 0`
+
+Both hands hold the object outright, the way two hands hold a barrel. Where the object points
+follows the line between the two grips, and it only turns about that line as far as both wrists
+turn together - twisting one wrist against the other does nothing at all, because in reality
+that hand would simply slip.
 

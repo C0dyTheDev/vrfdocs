@@ -8,7 +8,7 @@ description: 'The marker hierarchy every VR Framework scene is built on, plus th
 
 # SceneScaffold
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L19)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L19)
 
 The marker hierarchy every VR Framework scene is built on, plus the helpers installers use
 to place themselves.
@@ -35,7 +35,7 @@ public const string Camera = "-----CAMERA"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L26)
 
 ### Environment {#environment}
 
@@ -47,7 +47,7 @@ public const string Environment = "---ENVIRONMENT"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L22)
 
 ### Lighting {#lighting}
 
@@ -59,7 +59,7 @@ public const string Lighting = "----LIGHTING"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L24)
 
 ### Managers {#managers}
 
@@ -71,7 +71,7 @@ public const string Managers = "--------MANAGERS"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L32)
 
 ### Markers {#markers}
 
@@ -83,7 +83,7 @@ public static readonly string[] Markers
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L37)
 
 ### Scenario {#scenario}
 
@@ -95,7 +95,7 @@ public const string Scenario = "---------SCENARIO"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L34)
 
 ### Sounds {#sounds}
 
@@ -107,7 +107,7 @@ public const string Sounds = "------SOUNDS"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L28)
 
 ### Teleports {#teleports}
 
@@ -119,7 +119,7 @@ public const string Teleports = "-------TELEPORTS"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L30)
 
 ## Methods
 
@@ -139,7 +139,7 @@ public static List<T> AllInActiveScene<T>() where T : Component
 
 **Returns** `List<T>` - The components found.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L286)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L309)
 
 ### ClearScene() {#clearscene}
 
@@ -149,7 +149,7 @@ Deletes every root object in the active scene. Callers must confirm with the use
 public static void ClearScene()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L192)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L215)
 
 ### CreateChild(string, Transform, params Type[]) {#createchild-string-transform-type}
 
@@ -170,7 +170,7 @@ public static GameObject CreateChild(string name, Transform parent, params Type[
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L155)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L178)
 
 ### CreateUnderMarker(string, string, params Type[]) {#createundermarker-string-string-type}
 
@@ -191,7 +191,7 @@ public static GameObject CreateUnderMarker(string name, string markerName, param
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L140)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L140)
 
 ### Ensure(string) {#ensure-string}
 
@@ -209,7 +209,7 @@ public static Transform Ensure(string markerName)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L49)
 
 ### EnsureAll() {#ensureall}
 
@@ -219,7 +219,7 @@ Creates whichever marker objects the open scene is missing, in the usual order.
 public static void EnsureAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L65)
 
 ### Exists(string) {#exists-string}
 
@@ -237,7 +237,7 @@ public static bool Exists(string markerName)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when it is there.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L86)
 
 ### Find(string) {#find-string}
 
@@ -255,7 +255,7 @@ public static Transform Find(string markerName)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L71)
 
 ### FindInActiveScene(Type) {#findinactivescene-type}
 
@@ -274,7 +274,7 @@ public static Component FindInActiveScene(Type componentType)
 
 **Returns** [`Component`](https://docs.unity3d.com/ScriptReference/Component.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L259)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L282)
 
 ### FindInActiveScene\<T>() {#findinactivescene-1}
 
@@ -292,7 +292,7 @@ public static T FindInActiveScene<T>() where T : Component
 
 **Returns** `T` - The component, or null when the scene has none.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L278)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L301)
 
 ### IsComplete() {#iscomplete}
 
@@ -304,7 +304,7 @@ public static bool IsComplete()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when none is missing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L93)
 
 ### MarkSceneDirty() {#markscenedirty}
 
@@ -314,7 +314,28 @@ Marks the open scene as changed, so Unity offers to save what was just built.
 public static void MarkSceneDirty()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L298)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L321)
+
+### PlaceUnderMarker(GameObject, string) {#placeundermarker-gameobject-string}
+
+Puts an object that already exists into a marker block, as a root object slotted in just
+after everything else belonging to that marker.
+
+What [`CreateUnderMarker(string, string, params Type[])`](/api/vrframework-core-editors-scenebuilding/SceneScaffold#createundermarker-string-string-type) does for something new. An installer whose object
+comes from a prefab has to instantiate it before it can be placed.
+
+```csharp
+public static void PlaceUnderMarker(GameObject go, string markerName)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `go` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | The object to place. It is detached from any parent first. |
+| `markerName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The marker block it belongs to. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L161)
 
 ### RefreshCoreModules() {#refreshcoremodules}
 
@@ -325,7 +346,7 @@ module so the serialized array never goes stale.
 public static void RefreshCoreModules()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L205)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L228)
 
 ### SetReference(Object, string, Object) {#setreference-object-string-object}
 
@@ -343,7 +364,7 @@ public static void SetReference(Object target, string propertyName, Object value
 | `propertyName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `value` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L235)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L258)
 
 ### Spawn(string, Transform, string, params Type[]) {#spawn-string-transform-string-type}
 
@@ -365,5 +386,5 @@ public static GameObject Spawn(string name, Transform parentOverride, string mar
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/SceneScaffold.cs#L173)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L196)
 

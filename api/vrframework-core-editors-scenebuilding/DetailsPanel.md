@@ -8,7 +8,7 @@ description: 'The right hand panel.'
 
 # DetailsPanel
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/DetailsPanel.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L10)
 
 The right hand panel. Expands the selected card into a full preview, description, detail
 rows, tags and the item's actions.
@@ -38,7 +38,7 @@ public DetailsPanel(Action onAfterAction, Action onClose)
 | `onAfterAction` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | Called once an action has run, so the window can refresh. |
 | `onClose` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | Called when the panel is closed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/DetailsPanel.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L26)
 
 ## Properties
 
@@ -52,7 +52,7 @@ public SceneBuilderItem Current { get; }
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/DetailsPanel.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L83)
 
 ## Methods
 
@@ -64,7 +64,7 @@ Re-evaluates action enabled states after the scene changed.
 public void RefreshState()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/DetailsPanel.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L115)
 
 ### Show(SceneBuilderItem) {#show-scenebuilderitem}
 
@@ -80,5 +80,5 @@ public void Show(SceneBuilderItem item)
 | --- | --- | --- |
 | `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) | Entry to show, or null to clear the panel. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/DetailsPanel.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/DetailsPanel.cs#L87)
 

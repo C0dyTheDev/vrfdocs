@@ -8,7 +8,7 @@ description: 'Draws an entry of an audio translation asset.'
 
 # LanguageAudioListDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L164)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L164)
 
 Draws an entry of an audio translation asset.
 
@@ -29,5 +29,5 @@ Builds the audio entry drawer.
 public LanguageAudioListDrawer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L168)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L168)
 

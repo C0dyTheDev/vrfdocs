@@ -8,7 +8,7 @@ description: 'One bone of a stored hand pose: which bone, and the local rotation
 
 # PosedBone
 
-**Struct** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L7)
+**Struct** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L7)
 
 One bone of a stored hand pose: which bone, and the local rotation it takes.
 
@@ -29,7 +29,7 @@ public string bone
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L11)
 
 ### rotation {#rotation}
 
@@ -41,5 +41,5 @@ public Quaternion rotation
 
 **Returns** [`Quaternion`](https://docs.unity3d.com/ScriptReference/Quaternion.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L14)
 

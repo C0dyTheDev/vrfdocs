@@ -8,7 +8,7 @@ description: 'Convenience base so catalogs only implement what they care about.'
 
 # SceneBuilderCatalog
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L48)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L48)
 
 Convenience base so catalogs only implement what they care about.
 
@@ -34,7 +34,7 @@ public virtual string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L55)
 
 ### DisplayName {#displayname}
 
@@ -46,7 +46,7 @@ public abstract string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L53)
 
 ### EmptyMessage {#emptymessage}
 
@@ -58,7 +58,7 @@ public virtual string EmptyMessage { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L65)
 
 ### GroupLabel {#grouplabel}
 
@@ -70,7 +70,7 @@ public virtual string GroupLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L61)
 
 ### IconName {#iconname}
 
@@ -82,7 +82,7 @@ public virtual string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L59)
 
 ### Id {#id}
 
@@ -94,7 +94,7 @@ public abstract string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L51)
 
 ### IsAvailable {#isavailable}
 
@@ -106,7 +106,7 @@ public virtual bool IsAvailable { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L63)
 
 ### Order {#order}
 
@@ -118,7 +118,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L57)
 
 ## Methods
 
@@ -132,5 +132,5 @@ public abstract IEnumerable<SceneBuilderItem> GetItems()
 
 **Returns** `IEnumerable<SceneBuilderItem>` - The items to show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/ISceneBuilderCatalog.cs#L68)
 

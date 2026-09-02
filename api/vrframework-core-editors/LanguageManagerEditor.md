@@ -8,7 +8,7 @@ description: 'Editor for the LanguageManager script.'
 
 # LanguageManagerEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageManagerEditor.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L10)
 
 Editor for the LanguageManager script.
 
@@ -32,7 +32,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageManagerEditor.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L17)
 
 ### HeaderTitle {#headertitle}
 
@@ -44,7 +44,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageManagerEditor.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L15)
 
 ## Methods
 
@@ -56,7 +56,7 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageManagerEditor.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L34)
 
 ### OnDisable() {#ondisable}
 
@@ -66,7 +66,7 @@ Releases what the inspector bound while it was open.
 protected override void OnDisable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageManagerEditor.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L27)
 
 ### OnEnable() {#onenable}
 
@@ -76,5 +76,5 @@ Binds the inspector to the component's serialized properties.
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageManagerEditor.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageManagerEditor.cs#L20)
 

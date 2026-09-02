@@ -8,7 +8,7 @@ description: 'One tile in the results grid.'
 
 # ItemCard
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/ItemCard.cs#L12)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L12)
 
 One tile in the results grid. Click selects it into the details panel, double click runs its
 primary action, dragging hands it to [`SceneBuilderDragDrop`](/api/vrframework-core-editors-scenebuilding/SceneBuilderDragDrop).
@@ -38,7 +38,7 @@ public ItemCard(SceneBuilderItem item, Action<SceneBuilderItem> onSelect)
 | `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) | Entry the card stands for. |
 | `onSelect` | `Action<SceneBuilderItem>` | Called with the entry when the card is clicked. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/ItemCard.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L26)
 
 ## Properties
 
@@ -52,7 +52,7 @@ public SceneBuilderItem Item { get; }
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/ItemCard.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L66)
 
 ### ThumbnailPending {#thumbnailpending}
 
@@ -64,7 +64,7 @@ public bool ThumbnailPending { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/ItemCard.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L69)
 
 ## Methods
 
@@ -76,7 +76,7 @@ Re-reads the scene-dependent state: the badge and the dimmed "already there" loo
 public void RefreshState()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/ItemCard.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L85)
 
 ### RefreshThumbnail() {#refreshthumbnail}
 
@@ -86,7 +86,7 @@ Fetches the thumbnail again, for a card whose preview was still baking.
 public void RefreshThumbnail()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/ItemCard.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L79)
 
 ### SetSelected(bool) {#setselected-boolean}
 
@@ -102,5 +102,5 @@ public void SetSelected(bool selected)
 | --- | --- | --- |
 | `selected` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to draw it as selected. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/UI/ItemCard.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L73)
 

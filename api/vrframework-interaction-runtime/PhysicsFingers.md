@@ -8,7 +8,7 @@ description: 'Gives a hand''s fingers bodies of their own, so they can push thin
 
 # PhysicsFingers
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L26)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L26)
 
 Gives a hand's fingers bodies of their own, so they can push things about, be stopped by the
 world, and hold the hand off whatever they land on.
@@ -47,7 +47,7 @@ public float brace
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L80)
 
 ### fingerMass {#fingermass}
 
@@ -61,7 +61,7 @@ public float fingerMass
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L51)
 
 ### letGo {#letgo}
 
@@ -77,7 +77,7 @@ public float letGo
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L92)
 
 ### reaction {#reaction}
 
@@ -94,7 +94,7 @@ public float reaction
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L67)
 
 ### recover {#recover}
 
@@ -109,7 +109,7 @@ public float recover
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L137)
 
 ### slack {#slack}
 
@@ -124,7 +124,7 @@ public float slack
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L102)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L102)
 
 ### solver {#solver}
 
@@ -137,7 +137,7 @@ public HandVisualSolver solver
 
 **Returns** [`HandVisualSolver`](/api/vrframework-interaction-runtime/HandVisualSolver)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L31)
 
 ### stopsOn {#stopson}
 
@@ -152,7 +152,7 @@ public LayerMask stopsOn
 
 **Returns** [`LayerMask`](https://docs.unity3d.com/ScriptReference/LayerMask.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L113)
 
 ### strength {#strength}
 
@@ -166,7 +166,7 @@ public float strength
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L41)
 
 ### sweep {#sweep}
 
@@ -180,7 +180,7 @@ public float sweep
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L124)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L124)
 
 ## Properties
 
@@ -194,7 +194,7 @@ public IReadOnlyList<PokeContact> Contacts { get; }
 
 **Returns** `IReadOnlyList<PokeContact>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L189)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L189)
 
 ### Depth {#depth}
 
@@ -206,7 +206,7 @@ public float Depth { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L205)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L205)
 
 ### Fingers {#fingers}
 
@@ -218,7 +218,7 @@ public IReadOnlyList<PhysicsFinger> Fingers { get; }
 
 **Returns** `IReadOnlyList<PhysicsFinger>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L173)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L173)
 
 ### Lean {#lean}
 
@@ -230,7 +230,7 @@ public Vector3 Lean { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L166)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L166)
 
 ### LeanedOn {#leanedon}
 
@@ -242,7 +242,7 @@ public Collider LeanedOn { get; }
 
 **Returns** [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L170)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L170)
 
 ## Methods
 
@@ -255,7 +255,7 @@ tracked shape already carried onto the physics hand, rather than the raw trackin
 public void Aim()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L290)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L290)
 
 ### Drive(float) {#drive-single}
 
@@ -271,7 +271,7 @@ public void Drive(float dt)
 | --- | --- | --- |
 | `dt` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Length of the step, in seconds. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L316)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L316)
 
 ### Ignoring(Rigidbody) {#ignoring-rigidbody}
 
@@ -289,7 +289,7 @@ public bool Ignoring(Rigidbody body)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the fingers pass through it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L223)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L223)
 
 ### Rebuild() {#rebuild}
 
@@ -300,7 +300,7 @@ belong to. Call it after the finger maps change.
 public void Rebuild()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L232)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L232)
 
 ### Refresh() {#refresh}
 
@@ -311,7 +311,7 @@ goes, and public so a scene built in the editor can say so without anything runn
 public void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L575)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L575)
 
 ### Release() {#release}
 
@@ -323,7 +323,7 @@ hand's fingers collide with them and are pushed about by a hand that no longer e
 public void Release()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L594)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L594)
 
 ### Report() {#report}
 
@@ -333,5 +333,5 @@ Works out what each blocked finger is pressing on, and tells any surface underne
 public void Report()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFingers.cs#L524)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFingers.cs#L524)
 

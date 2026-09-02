@@ -8,7 +8,7 @@ description: 'A source that carries its own card thumbnails, for entries that ar
 
 # IAssetThumbnailSource
 
-**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L132)
+**Interface** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L132)
 
 A source that carries its own card thumbnails, for entries that are not in the project yet
 and so have no Unity preview. Implement alongside [`IAssetSource`](/api/vrframework-core-editors-scenebuilding/IAssetSource); the browser
@@ -38,7 +38,7 @@ Texture2D GetThumbnail(AssetEntry entry)
 
 **Returns** [`Texture2D`](https://docs.unity3d.com/ScriptReference/Texture2D.html) - The thumbnail, or null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L137)
 
 ### IsThumbnailPending(AssetEntry) {#isthumbnailpending-assetentry}
 
@@ -56,5 +56,5 @@ bool IsThumbnailPending(AssetEntry entry)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the thumbnail is on its way.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L142)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L142)
 

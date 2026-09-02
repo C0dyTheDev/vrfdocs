@@ -8,7 +8,7 @@ description: 'A place on a grabbable where a hand may attach, who may attach the
 
 # GripPoint
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L80)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L80)
 
 A place on a grabbable where a hand may attach, who may attach there, and what the hand does once
 it has - including the shape it takes, when that has been authored.
@@ -45,7 +45,7 @@ public GrabType[] acceptedTypes
 
 **Returns** `GrabType[]`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L101)
 
 ### allowedHand {#allowedhand}
 
@@ -56,7 +56,7 @@ public HandFilter allowedHand
 
 **Returns** [`HandFilter`](/api/vrframework-interaction-runtime/HandFilter)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L83)
 
 ### fingers {#fingers}
 
@@ -67,7 +67,7 @@ public GripFingers fingers
 
 **Returns** [`GripFingers`](/api/vrframework-interaction-runtime/GripFingers)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L89)
 
 ### OnGrab {#ongrab}
 
@@ -79,7 +79,7 @@ public UnityEvent OnGrab
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L136)
 
 ### OnRelease {#onrelease}
 
@@ -91,7 +91,7 @@ public UnityEvent OnRelease
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L139)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L139)
 
 ### poses {#poses}
 
@@ -107,7 +107,7 @@ public List<GripPose> poses
 
 **Returns** `List<GripPose>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L122)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L122)
 
 ### priority {#priority}
 
@@ -118,7 +118,7 @@ public int priority
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L107)
 
 ### role {#role}
 
@@ -129,7 +129,7 @@ public GripRole role
 
 **Returns** [`GripRole`](/api/vrframework-interaction-runtime/GripRole)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L95)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L95)
 
 ### shared {#shared}
 
@@ -140,7 +140,7 @@ public bool shared
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L113)
 
 ## Properties
 
@@ -154,7 +154,7 @@ public bool Constrains { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L202)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L202)
 
 ### Constraints {#constraints}
 
@@ -173,7 +173,7 @@ public List<GripConstraint> Constraints { get; }
 
 **Returns** `List<GripConstraint>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L155)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L155)
 
 ### Grabbable {#grabbable}
 
@@ -185,7 +185,7 @@ public GrabbableObject Grabbable { get; }
 
 **Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L189)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L189)
 
 ### HeldBy {#heldby}
 
@@ -197,7 +197,7 @@ public GrabHand HeldBy { get; }
 
 **Returns** [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L142)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L142)
 
 ### MovesAPart {#movesapart}
 
@@ -209,7 +209,7 @@ public bool MovesAPart { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L218)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L218)
 
 ## Methods
 
@@ -230,7 +230,7 @@ public bool Accepts(GrabHand hand, GrabType grabType)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L287)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L287)
 
 ### Allowed(Pose) {#allowed-pose}
 
@@ -253,7 +253,7 @@ public Pose Allowed(Pose wanted)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L243)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L243)
 
 ### AttachFor(GrabHand) {#attachfor-grabhand}
 
@@ -275,7 +275,7 @@ public Transform AttachFor(GrabHand hand)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) - A transform for the hold to align to. Never null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L350)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L350)
 
 ### Compose(IReadOnlyList\<GripConstraint>, Pose) {#compose-gripconstraint-pose}
 
@@ -300,7 +300,7 @@ public static Pose Compose(IReadOnlyList<GripConstraint> constraints, Pose wante
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html) - The pose they allow between them, or `wanted`if none of them apply.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L261)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L261)
 
 ### HasPoseFor(HandType) {#hasposefor-handtype}
 
@@ -318,7 +318,7 @@ public bool HasPoseFor(HandType hand)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L335)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L335)
 
 ### PoseFor(HandType) {#posefor-handtype}
 
@@ -336,7 +336,7 @@ public GripPose PoseFor(HandType hand)
 
 **Returns** [`GripPose`](/api/vrframework-interaction-runtime/GripPose)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L308)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L308)
 
 ### PoseForOrNew(HandType) {#poseforornew-handtype}
 
@@ -354,5 +354,5 @@ public GripPose PoseForOrNew(HandType hand)
 
 **Returns** [`GripPose`](/api/vrframework-interaction-runtime/GripPose)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L320)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L320)
 

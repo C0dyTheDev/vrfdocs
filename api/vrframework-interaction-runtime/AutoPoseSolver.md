@@ -8,7 +8,7 @@ description: 'Closes each finger of a hand mesh onto whatever it is holding, sto
 
 # AutoPoseSolver
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L94)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L94)
 
 Closes each finger of a hand mesh onto whatever it is holding, stopping each one where it first
 touches.
@@ -63,7 +63,7 @@ public static int Solve(HandSkeleton hand, IReadOnlyDictionary<string, Quaternio
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many fingers were posed.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L155)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L155)
 
 ### Solve(HandVisualSolver, HandPose, IReadOnlyList\<Collider>, AutoPoseSettings, List\<FingerSolve>) {#solve-handvisualsolver-handpose-collider-autoposesettings-fingersolve}
 
@@ -85,5 +85,5 @@ public static int Solve(HandVisualSolver solver, HandPose closed, IReadOnlyList<
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many fingers were posed.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L130)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/AutoPoseSolver.cs#L130)
 

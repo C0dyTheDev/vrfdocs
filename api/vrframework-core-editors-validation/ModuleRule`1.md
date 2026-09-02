@@ -8,7 +8,7 @@ description: 'A rule that only runs when its module is in the open scene, so a s
 
 # ModuleRule\<T>
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L66)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L68)
 
 A rule that only runs when its module is in the open scene, so a scene that simply does not
 use that module is never reported as broken.
@@ -19,7 +19,7 @@ public abstract class ModuleRule<T> : ValidationRule where T : Component
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← [`ValidationRule`](/api/vrframework-core-editors-validation/ValidationRule) ← `ModuleRule<T>`
 
-**Derived:** [`AudioModuleRule`](/api/vrframework-core-editors-validation/AudioModuleRule), [`InteractionModuleRule`](/api/vrframework-core-editors-validation/InteractionModuleRule), [`LocalizationModuleRule`](/api/vrframework-core-editors-validation/LocalizationModuleRule), [`MinigamesModuleRule`](/api/vrframework-core-editors-validation/MinigamesModuleRule), [`MistakesModuleRule`](/api/vrframework-core-editors-validation/MistakesModuleRule), [`PlatformModuleRule`](/api/vrframework-core-editors-validation/PlatformModuleRule), [`StreamingModuleRule`](/api/vrframework-core-editors-validation/StreamingModuleRule)
+**Derived:** [`AudioModuleRule`](/api/vrframework-core-editors-validation/AudioModuleRule), [`InteractionModuleRule`](/api/vrframework-core-editors-validation/InteractionModuleRule), [`LocalizationModuleRule`](/api/vrframework-core-editors-validation/LocalizationModuleRule), [`MinigamesModuleRule`](/api/vrframework-core-editors-validation/MinigamesModuleRule), [`MistakesModuleRule`](/api/vrframework-core-editors-validation/MistakesModuleRule), [`MovementModuleRule`](/api/vrframework-core-editors-validation/MovementModuleRule), [`PlatformModuleRule`](/api/vrframework-core-editors-validation/PlatformModuleRule), [`SpeechRecognitionModuleRule`](/api/vrframework-core-editors-validation/SpeechRecognitionModuleRule), [`StreamingModuleRule`](/api/vrframework-core-editors-validation/StreamingModuleRule)
 
 **Type parameters**
 
@@ -39,7 +39,7 @@ protected T Module { get; }
 
 **Returns** `T`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L71)
 
 ## Methods
 
@@ -53,7 +53,7 @@ public override bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the check should run.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L75)
 
 ### Serialized() {#serialized}
 
@@ -65,5 +65,5 @@ protected SerializedObject Serialized()
 
 **Returns** [`SerializedObject`](https://docs.unity3d.com/ScriptReference/SerializedObject.html) - The serialized module, or null when the scene has none.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ModuleRules.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L83)
 

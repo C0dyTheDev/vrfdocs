@@ -8,7 +8,7 @@ description: 'The search text and per language visibility of a translation asset
 
 # LanguageInstanceFilters
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceFilters.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceFilters.cs#L13)
 
 The search text and per language visibility of a translation asset's inspector, kept one set
 per kind of content so the view survives being closed and reopened.
@@ -31,7 +31,7 @@ public Dictionary<string, bool> displayedLanguages
 
 **Returns** `Dictionary<string, bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceFilters.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceFilters.cs#L18)
 
 ### filter {#filter}
 
@@ -43,7 +43,7 @@ public string filter
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceFilters.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceFilters.cs#L20)
 
 ## Methods
 
@@ -63,7 +63,7 @@ public static LanguageInstanceFilters GetFilters(LangType type)
 
 **Returns** [`LanguageInstanceFilters`](/api/vrframework-core-editors/LanguageInstanceFilters) - That kind's filters.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceFilters.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceFilters.cs#L39)
 
 ### InitInstanceFilters(bool) {#initinstancefilters-boolean}
 
@@ -79,5 +79,5 @@ public static void InitInstanceFilters(bool force = false)
 | --- | --- | --- |
 | `force` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to rebuild them even when they already exist. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceFilters.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceFilters.cs#L25)
 

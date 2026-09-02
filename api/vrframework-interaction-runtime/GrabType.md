@@ -8,7 +8,7 @@ description: 'The ways an object can be picked up.'
 
 # GrabType
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L537)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L540)
 
 The ways an object can be picked up.
 
@@ -18,9 +18,21 @@ public enum GrabType
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `DistanceGrab` | 1 | Pressing the grab input while the object is within reach. |
-| `DistancePinch` | 0 | Pinching thumb and finger together while the object is within reach. |
-| `PhysicalGrab` | 2 | Closing the tracked fingers around the object itself. |
+### DistanceGrab {#distancegrab}
+
+`DistanceGrab = 1`
+
+Pressing the grab input while the object is within reach.
+
+### DistancePinch {#distancepinch}
+
+`DistancePinch = 0`
+
+Pinching thumb and finger together while the object is within reach.
+
+### PhysicalGrab {#physicalgrab}
+
+`PhysicalGrab = 2`
+
+Closing the tracked fingers around the object itself.
 

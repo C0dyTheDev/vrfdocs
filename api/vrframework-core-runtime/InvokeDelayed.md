@@ -8,7 +8,7 @@ description: 'Raises an event once, a set time after the component is enabled, t
 
 # InvokeDelayed
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/TimedEvents/InvokeDelay.cs#L9)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/TimedEvents/InvokeDelay.cs#L9)
 
 Raises an event once, a set time after the component is enabled, then disables itself. Enabling
 it again restarts the countdown.
@@ -31,5 +31,5 @@ public UnityEvent Event
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/TimedEvents/InvokeDelay.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/TimedEvents/InvokeDelay.cs#L12)
 

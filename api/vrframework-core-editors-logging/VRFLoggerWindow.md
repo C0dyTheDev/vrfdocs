@@ -8,7 +8,7 @@ description: 'A console for the framework''s own log lines.'
 
 # VRFLoggerWindow
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerWindow.cs#L19)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerWindow.cs#L19)
 
 A console for the framework's own log lines. Everything written through [`Util`](/api/vrframework-core-runtime/Util)
 arrives here as a structured record - severity, channel, call site, stack trace and context
@@ -32,7 +32,7 @@ Builds the window: toolbar, list, details pane and their bindings.
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerWindow.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerWindow.cs#L52)
 
 ### ShowWindow() {#showwindow}
 
@@ -43,5 +43,5 @@ Opens the VRF Logger window.
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerWindow.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerWindow.cs#L80)
 

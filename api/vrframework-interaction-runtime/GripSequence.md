@@ -8,7 +8,7 @@ description: 'Joins several mechanisms into one path: which may be worked, in wh
 
 # GripSequence
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L23)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L23)
 
 Joins several mechanisms into one path: which may be worked, in what order, and what happens along
 the way.
@@ -39,7 +39,7 @@ public UnityEvent onFinished
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L83)
 
 ### order {#order}
 
@@ -50,7 +50,7 @@ public GripSequence.Order order
 
 **Returns** [`GripSequence.Order`](/api/vrframework-interaction-runtime/GripSequence.Order)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L72)
 
 ### repeats {#repeats}
 
@@ -61,7 +61,7 @@ public bool repeats
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L80)
 
 ### stages {#stages}
 
@@ -72,7 +72,7 @@ public List<GripSequence.Stage> stages
 
 **Returns** `List<GripSequence.Stage>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L75)
 
 ## Properties
 
@@ -86,7 +86,7 @@ public int Current { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L86)
 
 ### IsFinished {#isfinished}
 
@@ -98,7 +98,7 @@ public bool IsFinished { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L89)
 
 ### Progress {#progress}
 
@@ -110,7 +110,7 @@ public float Progress { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L92)
 
 ## Methods
 
@@ -122,7 +122,7 @@ Puts the sequence back at its first stage, and locks everything past it again.
 public void Restart()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L155)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L155)
 
 ### Step() {#step}
 
@@ -138,5 +138,5 @@ grip point does.
 public void Step()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L114)
 

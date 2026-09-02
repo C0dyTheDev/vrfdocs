@@ -8,7 +8,7 @@ description: 'One language of the project: how it is written, and the ID everyth
 
 # Language
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageConfig.cs#L105)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageConfig.cs#L105)
 
 One language of the project: how it is written, and the ID everything else refers to it by.
 
@@ -36,7 +36,7 @@ public Language(string name, string guid)
 | `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Language name. |
 | `guid` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Stable ID of the language. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageConfig.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageConfig.cs#L118)
 
 ## Fields
 
@@ -51,7 +51,7 @@ public string guid
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageConfig.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageConfig.cs#L113)
 
 ### name {#name}
 
@@ -64,5 +64,5 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LanguageConfig.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LanguageConfig.cs#L109)
 

@@ -8,7 +8,7 @@ description: 'The Unity half of the platform''s remote lifecycle protocol.'
 
 # ShutdownRelay
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ShutdownRelay.cs#L19)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ShutdownRelay.cs#L19)
 
 The Unity half of the platform's remote lifecycle protocol. The headset management service
 broadcasts ACTION_SHUTDOWN to close an app remotely and ACTION_GET_RUNNING_APPS to find out
@@ -41,7 +41,7 @@ public const string ObjectName = "ShutdownManager"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ShutdownRelay.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ShutdownRelay.cs#L26)
 
 ## Properties
 
@@ -55,7 +55,7 @@ public static ShutdownRelay Instance { get; }
 
 **Returns** [`ShutdownRelay`](/api/vrframework-core-runtime/ShutdownRelay)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ShutdownRelay.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ShutdownRelay.cs#L35)
 
 ## Methods
 
@@ -70,7 +70,7 @@ public static ShutdownRelay Ensure()
 
 **Returns** [`ShutdownRelay`](/api/vrframework-core-runtime/ShutdownRelay) - The session's relay.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ShutdownRelay.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ShutdownRelay.cs#L83)
 
 ### OnRunningQuery(string) {#onrunningquery-string}
 
@@ -87,7 +87,7 @@ public void OnRunningQuery(string message)
 | --- | --- | --- |
 | `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Unused - UnitySendMessage always passes a string. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ShutdownRelay.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ShutdownRelay.cs#L98)
 
 ### OnShutdownRequested(string) {#onshutdownrequested-string}
 
@@ -105,7 +105,7 @@ public void OnShutdownRequested(string message)
 | --- | --- | --- |
 | `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Unused - UnitySendMessage always passes a string. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ShutdownRelay.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ShutdownRelay.cs#L109)
 
 ## Events
 
@@ -121,5 +121,5 @@ public event Action ShutdownRequested
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/ShutdownRelay.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ShutdownRelay.cs#L76)
 

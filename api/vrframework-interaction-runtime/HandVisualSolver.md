@@ -8,7 +8,7 @@ description: 'Drives the visible hand mesh from the tracked hand, joint by joint
 
 # HandVisualSolver
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L34)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L34)
 
 Drives the visible hand mesh from the tracked hand, joint by joint, and can freeze individual
 fingers or the whole pose - which is what lets a held object keep the hand wrapped around it
@@ -32,7 +32,7 @@ public AutoPoseSettings autoPose
 
 **Returns** [`AutoPoseSettings`](/api/vrframework-interaction-runtime/AutoPoseSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L123)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L123)
 
 ### closedPose {#closedpose}
 
@@ -54,7 +54,7 @@ public HandPose closedPose
 
 **Returns** [`HandPose`](/api/vrframework-interaction-runtime/HandPose)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L117)
 
 ### fingers {#fingers}
 
@@ -66,7 +66,7 @@ public List<Finger> fingers
 
 **Returns** `List<Finger>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L54)
 
 ### fist {#fist}
 
@@ -78,7 +78,7 @@ public FistSettings fist
 
 **Returns** [`FistSettings`](/api/vrframework-interaction-runtime/FistSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L120)
 
 ### physicsHand {#physicshand}
 
@@ -95,7 +95,7 @@ public PhysicsHand physicsHand
 
 **Returns** [`PhysicsHand`](/api/vrframework-interaction-runtime/PhysicsHand)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L68)
 
 ### poseLocked {#poselocked}
 
@@ -107,7 +107,7 @@ public bool poseLocked
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L57)
 
 ### side {#side}
 
@@ -125,7 +125,7 @@ public HandVisualSolver.HandSide side
 
 **Returns** [`HandVisualSolver.HandSide`](/api/vrframework-interaction-runtime/HandVisualSolver.HandSide)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L80)
 
 ### sourceRoot {#sourceroot}
 
@@ -137,7 +137,7 @@ public Transform sourceRoot
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L50)
 
 ### targetRoot {#targetroot}
 
@@ -149,7 +149,7 @@ public Transform targetRoot
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L52)
 
 ## Properties
 
@@ -163,7 +163,7 @@ public HandType handType { get; }
 
 **Returns** [`HandType`](/api/vrframework-interaction-runtime/HandType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L83)
 
 ### LastSolve {#lastsolve}
 
@@ -175,7 +175,7 @@ public IReadOnlyList<FingerSolve> LastSolve { get; }
 
 **Returns** `IReadOnlyList<FingerSolve>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L126)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L126)
 
 ### RestShape {#restshape}
 
@@ -187,7 +187,7 @@ public IReadOnlyDictionary<string, Quaternion> RestShape { get; }
 
 **Returns** `IReadOnlyDictionary<string, Quaternion>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L338)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L338)
 
 ## Methods
 
@@ -210,7 +210,7 @@ public int ApplyBones(IReadOnlyList<PosedBone> shape)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many bones were written.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L446)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L446)
 
 ### ApplyPose(HandPose, HandType?) {#applypose-handpose-handtype}
 
@@ -230,7 +230,7 @@ public int ApplyPose(HandPose pose, HandType? side = null)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many bones were written.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L523)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L523)
 
 ### ApplyPoseFrom(Transform) {#applyposefrom-transform}
 
@@ -247,7 +247,7 @@ public void ApplyPoseFrom(Transform poseRoot)
 | --- | --- | --- |
 | `poseRoot` | [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) | Root of the hierarchy the pose is read from. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L406)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L406)
 
 ### CancelAutoPose() {#cancelautopose}
 
@@ -257,7 +257,7 @@ Drops a pending solve, for a grab that ended before the frame did.
 public void CancelAutoPose()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L258)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L258)
 
 ### CapturePose(HandPose, HandType?) {#capturepose-handpose-handtype}
 
@@ -278,7 +278,7 @@ public void CapturePose(HandPose pose, HandType? side = null)
 | `pose` | [`HandPose`](/api/vrframework-interaction-runtime/HandPose) | Asset to write into. |
 | `side` | `HandType?` | Which side of the asset to fill. Defaults to this hand's own side. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L481)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L481)
 
 ### ClosedShape() {#closedshape}
 
@@ -291,7 +291,7 @@ public HandPose ClosedShape()
 
 **Returns** [`HandPose`](/api/vrframework-interaction-runtime/HandPose) - The pose, or null when the hand has no fingers mapped to build one from.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L307)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L307)
 
 ### ForgetGeneratedFist() {#forgetgeneratedfist}
 
@@ -301,7 +301,7 @@ Forgets the built fist, so the next grab builds it again. For the pose editor.
 public void ForgetGeneratedFist()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L330)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L330)
 
 ### IsFingerLocked(FingerType) {#isfingerlocked-fingertype}
 
@@ -319,7 +319,7 @@ public bool IsFingerLocked(FingerType fingerType)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when it is frozen, and false when it is following the tracking or is not mapped.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L551)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L551)
 
 ### LockAllFingers() {#lockallfingers}
 
@@ -329,7 +329,7 @@ Freezes every finger where it stands.
 public void LockAllFingers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L583)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L583)
 
 ### LockFinger(FingerType) {#lockfinger-fingertype}
 
@@ -345,7 +345,7 @@ public void LockFinger(FingerType fingerType)
 | --- | --- | --- |
 | `fingerType` | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | Finger to freeze. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L560)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L560)
 
 ### RequestAutoPose(GrabbableObject) {#requestautopose-grabbableobject}
 
@@ -363,7 +363,7 @@ public bool RequestAutoPose(GrabbableObject grabbable)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - False when the hand has nothing to close towards, so the caller can fall back.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L226)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L226)
 
 ### UnlockAllFingers() {#unlockallfingers}
 
@@ -373,7 +373,7 @@ Lets every finger follow the tracked hand again.
 public void UnlockAllFingers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L589)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L589)
 
 ### UnlockFinger(FingerType) {#unlockfinger-fingertype}
 
@@ -389,5 +389,5 @@ public void UnlockFinger(FingerType fingerType)
 | --- | --- | --- |
 | `fingerType` | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | Finger to release. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L572)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L572)
 

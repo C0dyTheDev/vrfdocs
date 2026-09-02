@@ -8,7 +8,7 @@ description: 'What a trigger matches objects on.'
 
 # TriggerIdentification
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerAction.cs#L125)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerAction.cs#L125)
 
 What a trigger matches objects on.
 
@@ -18,9 +18,21 @@ public enum TriggerIdentification
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Name` | 0 | The object's name. |
-| `Object` | 2 | One specific object. |
-| `Tag` | 1 | The object's tag. |
+### Name {#name}
+
+`Name = 0`
+
+The object's name.
+
+### Object {#object}
+
+`Object = 2`
+
+One specific object.
+
+### Tag {#tag}
+
+`Tag = 1`
+
+The object's tag.
 

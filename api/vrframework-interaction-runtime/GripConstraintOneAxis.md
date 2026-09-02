@@ -8,7 +8,7 @@ description: 'Lets the object turn about one axis, or slide along one, while thi
 
 # GripConstraintOneAxis
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L19)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L19)
 
 Lets the object turn about one axis, or slide along one, while this grip point is held.
 
@@ -37,7 +37,7 @@ public GripConstraintOneAxis.Axis axis
 
 **Returns** [`GripConstraintOneAxis.Axis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis.Axis)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L68)
 
 ### end {#end}
 
@@ -48,7 +48,7 @@ public GripConstraintOneAxis.Limit end
 
 **Returns** [`GripConstraintOneAxis.Limit`](/api/vrframework-interaction-runtime/GripConstraintOneAxis.Limit)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L74)
 
 ### motion {#motion}
 
@@ -59,7 +59,7 @@ public GripConstraintOneAxis.Motion motion
 
 **Returns** [`GripConstraintOneAxis.Motion`](/api/vrframework-interaction-runtime/GripConstraintOneAxis.Motion)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L65)
 
 ### start {#start}
 
@@ -70,7 +70,7 @@ public GripConstraintOneAxis.Limit start
 
 **Returns** [`GripConstraintOneAxis.Limit`](/api/vrframework-interaction-runtime/GripConstraintOneAxis.Limit)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L71)
 
 ## Properties
 
@@ -84,7 +84,7 @@ public Vector3 Along { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L89)
 
 ### Max {#max}
 
@@ -96,7 +96,7 @@ public float Max { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L83)
 
 ### Min {#min}
 
@@ -108,7 +108,7 @@ public float Min { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L80)
 
 ### Travel {#travel}
 
@@ -120,7 +120,7 @@ public override float Travel { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L86)
 
 ### Value {#value}
 
@@ -132,7 +132,7 @@ public float Value { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L77)
 
 ## Methods
 
@@ -153,7 +153,7 @@ protected override Pose Allow(Pose allowed, Pose wanted)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L114)
 
 ### At(Pose, float) {#at-pose-single}
 
@@ -176,7 +176,7 @@ public Pose At(Pose from, float value)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L176)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L176)
 
 ### Engaging() {#engaging}
 
@@ -186,7 +186,7 @@ Records where this had got to, so travel since is added to it rather than replac
 protected override void Engaging()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L105)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L105)
 
 ### Hold(Pose) {#hold-pose}
 
@@ -204,7 +204,7 @@ protected override Pose Hold(Pose allowed)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L161)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L161)
 
 ### MoveTo(float) {#moveto-single}
 
@@ -224,7 +224,7 @@ public void MoveTo(float value)
 | --- | --- | --- |
 | `value` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How far along, in metres or degrees. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L199)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L199)
 
 ### ReturnToRest() {#returntorest}
 
@@ -234,5 +234,5 @@ Puts the object back where it started, and lets go of whichever end it was at.
 public override void ReturnToRest()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L219)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L219)
 

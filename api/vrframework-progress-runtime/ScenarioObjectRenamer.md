@@ -8,7 +8,7 @@ description: 'Keeps the scenario objects named after their position: "01 Name" f
 
 # ScenarioObjectRenamer
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L13)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L13)
 
 Keeps the scenario objects named after their position: "[01]  Name" for a block and
 "[01-02]  Name" for a step, so the hierarchy reads in run order. Editor only.
@@ -37,7 +37,7 @@ public static void RenameBlockObject(ProgressBlock progressBlock, bool renameSte
 | `renameSteps` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to renumber its steps as well. |
 | `order` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the block in the scenario. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L43)
 
 ### RenameScenario(bool) {#renamescenario-boolean}
 
@@ -53,7 +53,7 @@ public static void RenameScenario(bool renameSteps)
 | --- | --- | --- |
 | `renameSteps` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to renumber the steps inside each block as well. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L17)
 
 ### RenameStepObject(ProgressStep, int, int) {#renamestepobject-progressstep-int32-int32}
 
@@ -71,5 +71,5 @@ public static void RenameStepObject(ProgressStep step, int blockIndex, int stepI
 | `blockIndex` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the step's block in the scenario. |
 | `stepIndex` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Position of the step in its block. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ScenarioObjectRenamer.cs#L58)
 

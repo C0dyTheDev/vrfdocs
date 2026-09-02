@@ -8,7 +8,7 @@ description: 'What the trigger matches entering objects on.'
 
 # ToggleSelect.IdType
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ToggleSelect.cs#L17)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ToggleSelect.cs#L17)
 
 What the trigger matches entering objects on.
 
@@ -18,8 +18,15 @@ public enum ToggleSelect.IdType
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Name` | 0 | The object's name. |
-| `Tag` | 1 | The object's tag. |
+### Name {#name}
+
+`Name = 0`
+
+The object's name.
+
+### Tag {#tag}
+
+`Tag = 1`
+
+The object's tag.
 

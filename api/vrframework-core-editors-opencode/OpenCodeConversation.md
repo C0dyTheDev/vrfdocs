@@ -8,7 +8,7 @@ description: 'The transcript of one session, rebuilt from the event stream.'
 
 # OpenCodeConversation
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L15)
 
 The transcript of one session, rebuilt from the event stream.
 The server describes a conversation as messages made of parts, and streams both as they
@@ -35,7 +35,7 @@ public string Error { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L35)
 
 ### IsBusy {#isbusy}
 
@@ -47,7 +47,7 @@ public bool IsBusy { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L32)
 
 ### Messages {#messages}
 
@@ -59,7 +59,7 @@ public IReadOnlyList<OpenCodeMessage> Messages { get; }
 
 **Returns** `IReadOnlyList<OpenCodeMessage>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L27)
 
 ### Permissions {#permissions}
 
@@ -71,7 +71,7 @@ public IReadOnlyList<OpenCodePermission> Permissions { get; }
 
 **Returns** `IReadOnlyList<OpenCodePermission>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L29)
 
 ### SessionId {#sessionid}
 
@@ -83,7 +83,7 @@ public string SessionId { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L24)
 
 ## Methods
 
@@ -102,7 +102,7 @@ public void Apply(JObject serverEvent)
 | --- | --- | --- |
 | `serverEvent` | `JObject` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L88)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L88)
 
 ### Clear() {#clear}
 
@@ -112,7 +112,7 @@ Drops every message and permission request, leaving the conversation empty.
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L48)
 
 ### DismissPermission(string) {#dismisspermission-string}
 
@@ -128,7 +128,7 @@ public void DismissPermission(string requestId)
 | --- | --- | --- |
 | `requestId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L240)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L240)
 
 ### LoadHistory(JArray) {#loadhistory-jarray}
 
@@ -146,7 +146,7 @@ public void LoadHistory(JArray history)
 | --- | --- | --- |
 | `history` | `JArray` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L63)
 
 ### SetSession(string) {#setsession-string}
 
@@ -162,7 +162,7 @@ public void SetSession(string sessionId)
 | --- | --- | --- |
 | `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L41)
 
 ## Events
 
@@ -176,5 +176,5 @@ public event Action Changed
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeConversation.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L38)
 

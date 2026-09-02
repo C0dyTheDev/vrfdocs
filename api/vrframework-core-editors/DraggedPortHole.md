@@ -8,7 +8,7 @@ description: 'The loose end of a line while it is being dragged: follows the poi
 
 # DraggedPortHole
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L9)
 
 The loose end of a line while it is being dragged: follows the pointer, and colours itself for
 what dropping it there would do - connect, refuse, or delete.
@@ -31,7 +31,7 @@ Builds the dragged end.
 public DraggedPortHole()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L24)
 
 ## Fields
 
@@ -45,7 +45,7 @@ public bool isInput
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L13)
 
 ### overlappedPort {#overlappedport}
 
@@ -57,7 +57,7 @@ public BlockPortHole overlappedPort
 
 **Returns** [`BlockPortHole`](/api/vrframework-core-editors/BlockPortHole)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L16)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Works out which port the pointer is over and recolours accordingly.
 public void CheckOverlappingPorts()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L119)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L119)
 
 ### Move(Vector2) {#move-vector2}
 
@@ -85,7 +85,7 @@ public void Move(Vector2 delta)
 | --- | --- | --- |
 | `delta` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | How far to move it, in canvas pixels. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L31)
 
 ### ResetColor() {#resetcolor}
 
@@ -95,7 +95,7 @@ Puts the colour back to neutral.
 public void ResetColor()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L69)
 
 ### SetColor(bool, bool) {#setcolor-boolean-boolean}
 
@@ -112,7 +112,7 @@ public void SetColor(bool success, bool fail)
 | `success` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True when the drop would connect. |
 | `fail` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True when the drop would be refused. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L46)
 
 ### SetDeleteColor() {#setdeletecolor}
 
@@ -122,7 +122,7 @@ Colours the end for a drop that would delete the connection.
 public void SetDeleteColor()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L77)
 
 ### SetPosition(Vector2) {#setposition-vector2}
 
@@ -138,7 +138,7 @@ public void SetPosition(Vector2 pos)
 | --- | --- | --- |
 | `pos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where to put it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L38)
 
 ### StartDrag(BlockPortHole, Vector2) {#startdrag-blockporthole-vector2}
 
@@ -155,5 +155,5 @@ public void StartDrag(BlockPortHole hole, Vector2 mousePos)
 | `hole` | [`BlockPortHole`](/api/vrframework-core-editors/BlockPortHole) | Port being picked up. |
 | `mousePos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where the drag started. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/DraggedPortHole.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/DraggedPortHole.cs#L87)
 

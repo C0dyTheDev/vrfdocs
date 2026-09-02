@@ -8,7 +8,7 @@ description: 'Checks the Java behind the platform''s remote lifecycle protocol.'
 
 # AndroidPluginRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L487)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L487)
 
 Checks the Java behind the platform's remote lifecycle protocol. The app answers the shutdown
 and discovery broadcasts through it, so a build without it cannot be closed or found remotely -
@@ -32,7 +32,7 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L490)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L490)
 
 ### Order {#order}
 
@@ -44,7 +44,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L494)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L494)
 
 ### Scope {#scope}
 
@@ -56,7 +56,7 @@ public override ValidationScope Scope { get; }
 
 **Returns** [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L492)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L492)
 
 ## Methods
 
@@ -74,5 +74,5 @@ public override void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/Rules/ProjectRules.cs#L498)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ProjectRules.cs#L498)
 

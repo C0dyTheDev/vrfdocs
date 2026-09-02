@@ -8,7 +8,7 @@ description: 'Where a held object is placed at the moment it is taken.'
 
 # HoldSnap
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHold.cs#L7)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHold.cs#L7)
 
 Where a held object is placed at the moment it is taken.
 
@@ -18,10 +18,30 @@ public enum HoldSnap
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `AnchorToGrip` | 3 | Aligned so a named anchor on the object meets the grip. Needs an anchor to be passed in. |
-| `CentreToGrip` | 2 | Centred on the grip point. Right for small objects that should disappear into a fist, wrong for anything long, which ends up skewered through the palm. |
-| `KeepPose` | 0 | Left exactly where it is. Honest, but the grab fires when the fingers close rather than when they touch, so the object stays wherever it happened to be - usually floating off the fist. |
-| `SurfaceToGrip` | 1 | Slid straight towards the grip until its surface reaches the grip point, keeping its rotation. This is what reads as having the thing in the palm, and it never spins an object in the hand. |
+### AnchorToGrip {#anchortogrip}
+
+`AnchorToGrip = 3`
+
+Aligned so a named anchor on the object meets the grip. Needs an anchor to be passed in.
+
+### CentreToGrip {#centretogrip}
+
+`CentreToGrip = 2`
+
+Centred on the grip point. Right for small objects that should disappear into a fist, wrong for
+anything long, which ends up skewered through the palm.
+
+### KeepPose {#keeppose}
+
+`KeepPose = 0`
+
+Left exactly where it is. Honest, but the grab fires when the fingers close rather than when
+they touch, so the object stays wherever it happened to be - usually floating off the fist.
+
+### SurfaceToGrip {#surfacetogrip}
+
+`SurfaceToGrip = 1`
+
+Slid straight towards the grip until its surface reaches the grip point, keeping its rotation.
+This is what reads as having the thing in the palm, and it never spins an object in the hand.
 

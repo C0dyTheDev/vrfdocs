@@ -8,15 +8,15 @@ description: 'The fingers of a hand as bones that can be posed, whatever the han
 
 # HandSkeleton
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L21)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L21)
 
 The fingers of a hand as bones that can be posed, whatever the hand happens to be.
 
 There are two kinds of hand in this framework and the pose tools have to work on both. The one
 the player wears is a mesh driven by a tracked skeleton, so a [`HandVisualSolver`](/api/vrframework-interaction-runtime/HandVisualSolver)
 holds it as pairs of bones: the tracked bone gives the name a pose is keyed by, and the mesh
-bone is what actually moves. The one used to author a grip is a ghost hand parented under the
-object, with no tracking behind it at all - there each bone is its own name.
+bone is what actually moves. The one used to author a grip is a ghost hand standing at the
+grip point, with no tracking behind it at all - there each bone is its own name.
 
 Both reduce to the same thing: a list of fingers, each a chain of bones from knuckle to tip,
 each bone carrying the name a pose stores it under. Solving a grip needs nothing else, so
@@ -41,7 +41,7 @@ public IReadOnlyList<HandSkeleton.SkeletonFinger> Fingers { get; }
 
 **Returns** `IReadOnlyList<HandSkeleton.SkeletonFinger>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L43)
 
 ### IsUsable {#isusable}
 
@@ -53,7 +53,7 @@ public bool IsUsable { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L46)
 
 ### root {#root}
 
@@ -65,7 +65,7 @@ public Transform root { get; }
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L31)
 
 ### side {#side}
 
@@ -77,7 +77,7 @@ public HandType side { get; }
 
 **Returns** [`HandType`](/api/vrframework-interaction-runtime/HandType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L34)
 
 ### skin {#skin}
 
@@ -89,7 +89,7 @@ public SkinnedMeshRenderer skin { get; }
 
 **Returns** [`SkinnedMeshRenderer`](https://docs.unity3d.com/ScriptReference/SkinnedMeshRenderer.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L40)
 
 ### solver {#solver}
 
@@ -101,7 +101,7 @@ public HandVisualSolver solver { get; }
 
 **Returns** [`HandVisualSolver`](/api/vrframework-interaction-runtime/HandVisualSolver)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L37)
 
 ## Methods
 
@@ -115,7 +115,7 @@ public List<Transform> Bones()
 
 **Returns** `List<Transform>` - The bones, in no particular order.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L233)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L233)
 
 ### FingerTypeOf(string) {#fingertypeof-string}
 
@@ -133,7 +133,7 @@ public static FingerType FingerTypeOf(string boneName)
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType) - The finger, or None when the name says nothing about one.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L143)
 
 ### From(HandVisualSolver) {#from-handvisualsolver}
 
@@ -151,7 +151,7 @@ public static HandSkeleton From(HandVisualSolver from)
 
 **Returns** [`HandSkeleton`](/api/vrframework-interaction-runtime/HandSkeleton) - The skeleton, or null when the hand has no finger maps to read.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L51)
 
 ### From(Transform, HandType?) {#from-transform-handtype}
 
@@ -174,7 +174,7 @@ public static HandSkeleton From(Transform boneRoot, HandType? side = null)
 
 **Returns** [`HandSkeleton`](/api/vrframework-interaction-runtime/HandSkeleton) - The skeleton, or null when nothing under the root looks like a finger.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L94)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L94)
 
 ### IsNotAFinger(string) {#isnotafinger-string}
 
@@ -192,7 +192,7 @@ public static bool IsNotAFinger(string boneName)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when no finger tool should move it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L159)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L159)
 
 ### Read() {#read}
 
@@ -204,7 +204,7 @@ public List<PosedBone> Read()
 
 **Returns** `List<PosedBone>` - One entry per bone.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L193)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L193)
 
 ### SideOf(Transform) {#sideof-transform}
 
@@ -222,7 +222,7 @@ public static HandType SideOf(Transform boneRoot)
 
 **Returns** [`HandType`](/api/vrframework-interaction-runtime/HandType) - The side, defaulting to right when the names say nothing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L174)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L174)
 
 ### Write(IReadOnlyDictionary\<string, Quaternion>) {#write-quaternion}
 
@@ -240,5 +240,5 @@ public int Write(IReadOnlyDictionary<string, Quaternion> shape)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - How many bones were written.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L211)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L211)
 

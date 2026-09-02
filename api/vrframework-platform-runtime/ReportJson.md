@@ -8,7 +8,7 @@ description: 'Writes what the contributors handed over as the JSON body of a rep
 
 # ReportJson
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportJson.cs#L20)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportJson.cs#L20)
 
 Writes what the contributors handed over as the JSON body of a report.
 
@@ -41,7 +41,7 @@ public static string BuildObject(IEnumerable<ReportEntry> entries)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportJson.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportJson.cs#L27)
 
 ### Serialize(object) {#serialize-object}
 
@@ -59,5 +59,5 @@ public static string Serialize(object value)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/ReportJson.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/ReportJson.cs#L46)
 

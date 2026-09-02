@@ -8,7 +8,7 @@ description: 'A settings group: bordered box, clickable header with an accent ma
 
 # VRFEditorGUI.SectionScope
 
-**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L225)
+**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L269)
 
 A settings group: bordered box, clickable header with an accent marker, indented body.
 Collapsed state lives in EditorPrefs so it survives selection changes and restarts.
@@ -33,7 +33,7 @@ public bool Visible { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L287)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L331)
 
 ## Methods
 
@@ -45,5 +45,5 @@ Closes the settings group.
 public void Dispose()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L290)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L334)
 

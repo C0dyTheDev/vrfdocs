@@ -8,7 +8,7 @@ description: 'The corner label showing when the graph was last redrawn.'
 
 # DateLabel
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/DateLabel.cs#L7)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/DateLabel.cs#L7)
 
 The corner label showing when the graph was last redrawn.
 
@@ -30,7 +30,7 @@ Builds the label.
 public DateLabel()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/DateLabel.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/DateLabel.cs#L12)
 
 ## Methods
 
@@ -42,5 +42,5 @@ Stamps the label with the current time.
 public void UpdateText()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Util/DateLabel.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Util/DateLabel.cs#L26)
 

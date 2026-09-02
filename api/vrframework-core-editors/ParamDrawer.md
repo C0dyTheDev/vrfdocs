@@ -8,7 +8,7 @@ description: 'Draws one platform parameter: its name, type and the values it off
 
 # ParamDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettingsDrawers.cs#L125)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsDrawers.cs#L125)
 
 Draws one platform parameter: its name, type and the values it offers.
 
@@ -38,7 +38,7 @@ public override float GetPropertyHeight(SerializedProperty property, GUIContent 
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The height in pixels.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettingsDrawers.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsDrawers.cs#L134)
 
 ### OnGUI(Rect, SerializedProperty, GUIContent) {#ongui-rect-serializedproperty-guicontent}
 
@@ -56,5 +56,5 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
 | `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | The record being drawn. |
 | `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | Label of the record. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFrameworkSettingsDrawers.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsDrawers.cs#L143)
 

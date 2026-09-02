@@ -8,7 +8,7 @@ description: 'Swaps the texture of a mesh between localized sprites - a poster o
 
 # SpriteChanger
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L12)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L12)
 
 Swaps the texture of a mesh between localized sprites - a poster or a screen that shows a
 different image per language and per step. Needs the Localization module and a material of its
@@ -33,7 +33,7 @@ public List<SpriteVariant> sprites
 
 **Returns** `List<SpriteVariant>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L16)
 
 ## Methods
 
@@ -45,7 +45,7 @@ Shows the next sprite in the list.
 public void NextSprite()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L96)
 
 ### PreviousSprite() {#previoussprite}
 
@@ -55,7 +55,7 @@ Shows the previous sprite in the list.
 public void PreviousSprite()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L102)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L102)
 
 ### SetSpriteIndex(int) {#setspriteindex-int32}
 
@@ -71,5 +71,5 @@ public void SetSpriteIndex(int n)
 | --- | --- | --- |
 | `n` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Index into [`sprites`](/api/vrframework-core-runtime/SpriteChanger#sprites). |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L109)
 

@@ -8,7 +8,7 @@ description: 'Which hand a mesh is, or Auto to work it out from the hand itself.
 
 # HandVisualSolver.HandSide
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandVisualSolver.cs#L37)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandVisualSolver.cs#L37)
 
 Which hand a mesh is, or Auto to work it out from the hand itself.
 
@@ -18,9 +18,21 @@ public enum HandVisualSolver.HandSide
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Auto` | 0 | Worked out from the physics hand, or from the bone names. |
-| `Left` | 1 | Stated outright: the left hand. |
-| `Right` | 2 | Stated outright: the right hand. |
+### Auto {#auto}
+
+`Auto = 0`
+
+Worked out from the physics hand, or from the bone names.
+
+### Left {#left}
+
+`Left = 1`
+
+Stated outright: the left hand.
+
+### Right {#right}
+
+`Right = 2`
+
+Stated outright: the right hand.
 

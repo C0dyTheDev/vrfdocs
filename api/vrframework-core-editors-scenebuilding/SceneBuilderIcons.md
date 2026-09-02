@@ -8,7 +8,7 @@ description: 'Thumbnail resolution for every kind of item.'
 
 # SceneBuilderIcons
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L14)
 
 Thumbnail resolution for every kind of item. Asset previews bake asynchronously, so callers
 poll [`IsPreviewPending(Object)`](/api/vrframework-core-editors-scenebuilding/SceneBuilderIcons#ispreviewpending-object) and refresh their card until it turns false.
@@ -38,7 +38,7 @@ public static Texture Builtin(string iconName)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L56)
 
 ### ClearCaches() {#clearcaches}
 
@@ -48,7 +48,7 @@ Drops every cached icon and thumbnail, so they are built again on next use.
 public static void ClearCaches()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L195)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L195)
 
 ### ForModuleType(Type) {#formoduletype-type}
 
@@ -66,7 +66,7 @@ public static Texture ForModuleType(Type type)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L171)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L171)
 
 ### ForType(Type) {#fortype-type}
 
@@ -84,7 +84,7 @@ public static Texture ForType(Type type)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L124)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L124)
 
 ### Framework(string) {#framework-string}
 
@@ -103,7 +103,7 @@ public static Texture Framework(string iconName)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L35)
 
 ### FullPreview(Object) {#fullpreview-object}
 
@@ -123,7 +123,7 @@ public static Texture FullPreview(Object asset)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L66)
 
 ### IsPreviewPending(Object) {#ispreviewpending-object}
 
@@ -150,7 +150,7 @@ public static bool IsPreviewPending(Object asset)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L102)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L102)
 
 ### MiniThumbnail(Object) {#minithumbnail-object}
 
@@ -169,7 +169,7 @@ public static Texture MiniThumbnail(Object asset)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L75)
 
 ### Preview(Object) {#preview-object}
 
@@ -188,5 +188,5 @@ public static Texture Preview(Object asset)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderIcons.cs#L84)
 

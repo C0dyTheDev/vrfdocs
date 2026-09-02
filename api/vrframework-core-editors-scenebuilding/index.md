@@ -45,6 +45,7 @@ sidebar_position: 0
 | [`ModuleCatalog`](/api/vrframework-core-editors-scenebuilding/ModuleCatalog) | Every framework module that can be installed into the open scene, one card per module. |
 | [`ModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ModuleInstaller) | Knows how to put one piece of the framework into the open scene. |
 | [`ModuleInstallers`](/api/vrframework-core-editors-scenebuilding/ModuleInstallers) | Discovers every installer in the loaded editor assemblies, so projects can add their own by subclassing ModuleInstaller/api/vrframework-core-editors-scenebuilding/ModuleInstaller. |
+| [`MovementModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MovementModuleInstaller) | Teleporting between marked standing places, plus the arc the player aims with. |
 | [`ObjectDestroyerSetup`](/api/vrframework-core-editors-scenebuilding/ObjectDestroyerSetup) | Destroys objects on cue. |
 | [`PlatformModuleInstaller`](/api/vrframework-core-editors-scenebuilding/PlatformModuleInstaller) | Puts the platform module into the scene, on the managers marker. |
 | [`ProgressModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ProgressModuleInstaller) | Puts the progress module and an empty scenario into the scene. |
@@ -64,6 +65,8 @@ sidebar_position: 0
 | [`SceneTemplateCatalog`](/api/vrframework-core-editors-scenebuilding/SceneTemplateCatalog) | Reusable scene setups. |
 | [`SceneTemplates`](/api/vrframework-core-editors-scenebuilding/SceneTemplates) | Every template available: the framework's own, plus any VRFSceneTemplateAsset/api/vrframework-core-editors-scenebuilding/VRFSceneTemplateAsset authored in the project. |
 | [`SnapDropZoneSetup`](/api/vrframework-core-editors-scenebuilding/SnapDropZoneSetup) | The receiving half of a grab interaction. |
+| [`SpeechRecognitionModuleInstaller`](/api/vrframework-core-editors-scenebuilding/SpeechRecognitionModuleInstaller) | Offline speech recognition plus the microphone it listens to. |
+| [`StreamingModuleInstaller`](/api/vrframework-core-editors-scenebuilding/StreamingModuleInstaller) | The trainer's view of the session: a camera the module renders itself, streamed off the headset over the network. |
 | [`ThumbnailCache`](/api/vrframework-core-editors-scenebuilding/ThumbnailCache) | Card pictures for entries that are not in the project yet, fetched once and kept under Library/ so reopening the window is free. |
 | [`ToggleSelectSetup`](/api/vrframework-core-editors-scenebuilding/ToggleSelectSetup) | A collider that flips a state on and off. |
 | [`TriggerAreaSetup`](/api/vrframework-core-editors-scenebuilding/TriggerAreaSetup) | Fires once on enter and once on exit. |

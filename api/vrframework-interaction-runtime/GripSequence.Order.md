@@ -8,7 +8,7 @@ description: 'Whether the stages have to be worked in the order they are listed.
 
 # GripSequence.Order
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripSequence.cs#L26)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L26)
 
 Whether the stages have to be worked in the order they are listed.
 
@@ -18,8 +18,17 @@ public enum GripSequence.Order
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `AnyOrder` | 1 | All of them live at once, each saying when it is reached and when it is left. Detents: a dial's stops, a valve's positions. Nothing gates anything. |
-| `InOrder` | 0 | Each stage before the next. A stage whose turn has not come has its mechanism switched off, so it does not move at all - a handle that will not turn until the latch is flipped. |
+### AnyOrder {#anyorder}
+
+`AnyOrder = 1`
+
+All of them live at once, each saying when it is reached and when it is left. Detents: a
+dial's stops, a valve's positions. Nothing gates anything.
+
+### InOrder {#inorder}
+
+`InOrder = 0`
+
+Each stage before the next. A stage whose turn has not come has its mechanism switched off,
+so it does not move at all - a handle that will not turn until the latch is flipped.
 

@@ -8,14 +8,14 @@ description: 'Makes an object grabbable by the framework''s hands.'
 
 # GrabbableObject
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L21)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L21)
 
 Makes an object grabbable by the framework's hands. Says how it may be picked up, which fingers
 that takes and where the hands sit on it, and takes the object's physics over while it is held,
 putting it back exactly as it was on release.
 
-Adding this in the editor also sets up what grabbing needs: a collider, a kinematic
-rigidbody, a disabled highlight, and the Grabbable tag and layer.
+Adding this in the editor also sets up what grabbing needs: a collider, a dynamic
+rigidbody with gravity, a disabled highlight, and the Grabbable tag and layer.
 
 ```csharp
 [Serializable]
@@ -45,7 +45,7 @@ public bool allowTwoHands
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L45)
 
 ### breakDistance {#breakdistance}
 
@@ -62,7 +62,7 @@ public float breakDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L100)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L100)
 
 ### canBeGrabbed {#canbegrabbed}
 
@@ -74,7 +74,7 @@ public bool canBeGrabbed
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L162)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L166)
 
 ### canSwapHands {#canswaphands}
 
@@ -86,11 +86,13 @@ public bool canSwapHands
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L29)
 
 ### coll {#coll}
 
-The object's collider, made a trigger while it is held.
+The object's collider, found at startup. Grabbing never changes what it is: a solid collider
+is stopped by what it meets while it is carried, and one authored as a trigger passes through
+the world instead. Both are held the same way.
 
 ```csharp
 [HideInInspector]
@@ -99,7 +101,7 @@ public Collider coll
 
 **Returns** [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L150)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L154)
 
 ### fingersNeededToGrab {#fingersneededtograb}
 
@@ -111,7 +113,7 @@ public FingerType fingersNeededToGrab
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L68)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L68)
 
 ### grabColliders {#grabcolliders}
 
@@ -131,7 +133,7 @@ public List<Collider> grabColliders
 
 **Returns** `List<Collider>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L65)
 
 ### grabDistance {#grabdistance}
 
@@ -143,7 +145,7 @@ public float grabDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L74)
 
 ### grabType {#grabtype}
 
@@ -155,7 +157,7 @@ public GrabType grabType
 
 **Returns** [`GrabType`](/api/vrframework-interaction-runtime/GrabType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L25)
 
 ### gripPoints {#grippoints}
 
@@ -171,7 +173,7 @@ public List<GripPoint> gripPoints
 
 **Returns** `List<GripPoint>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L110)
 
 ### grips {#grips}
 
@@ -187,7 +189,7 @@ public List<GrabHand> grips
 
 **Returns** `List<GrabHand>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L160)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L164)
 
 ### gripTieDistance {#griptiedistance}
 
@@ -204,7 +206,7 @@ public float gripTieDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L121)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L121)
 
 ### holdSettings {#holdsettings}
 
@@ -222,7 +224,7 @@ public HoldSettings holdSettings
 
 **Returns** [`HoldSettings`](/api/vrframework-interaction-runtime/HoldSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L86)
 
 ### OnGrab {#ongrab}
 
@@ -234,7 +236,7 @@ public UnityEvent OnGrab
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L141)
 
 ### OnRelease {#onrelease}
 
@@ -246,7 +248,7 @@ public UnityEvent OnRelease
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L143)
 
 ### OnSwapHands {#onswaphands}
 
@@ -258,7 +260,7 @@ public UnityEvent OnSwapHands
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L145)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L145)
 
 ### permanentGrab {#permanentgrab}
 
@@ -270,7 +272,7 @@ public bool permanentGrab
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L27)
 
 ### pinchDistance {#pinchdistance}
 
@@ -282,7 +284,7 @@ public float pinchDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L72)
 
 ### rb {#rb}
 
@@ -295,7 +297,7 @@ public Rigidbody rb
 
 **Returns** [`Rigidbody`](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L148)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L148)
 
 ### requiresTwoHands {#requirestwohands}
 
@@ -308,7 +310,7 @@ public bool requiresTwoHands
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L51)
 
 ### throwSettings {#throwsettings}
 
@@ -320,7 +322,7 @@ public ThrowSettings throwSettings
 
 **Returns** [`ThrowSettings`](/api/vrframework-interaction-runtime/ThrowSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L89)
 
 ### useAutoPose {#useautopose}
 
@@ -342,7 +344,7 @@ public bool useAutoPose
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L138)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L138)
 
 ## Properties
 
@@ -356,7 +358,7 @@ public bool HasGripToSpare { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L414)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L417)
 
 ### HasSomewhereToHold {#hassomewheretohold}
 
@@ -373,7 +375,7 @@ public bool HasSomewhereToHold { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L494)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L497)
 
 ### IsHeld {#isheld}
 
@@ -385,7 +387,7 @@ public bool IsHeld { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L398)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L401)
 
 ### PrimaryGrip {#primarygrip}
 
@@ -398,7 +400,7 @@ public GrabHand PrimaryGrip { get; }
 
 **Returns** [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L404)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L407)
 
 ## Methods
 
@@ -418,7 +420,7 @@ public bool AcceptsGrabBy(Collider collider)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L344)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L347)
 
 ### AttachPointFor(GrabHand, Vector3) {#attachpointfor-grabhand-vector3}
 
@@ -438,7 +440,7 @@ public Transform AttachPointFor(GrabHand hand, Vector3 from)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L333)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L336)
 
 ### CanBeGrabbed() {#canbegrabbed}
 
@@ -450,7 +452,7 @@ public virtual bool CanBeGrabbed()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when a hand may pick the object up right now.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L511)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L514)
 
 ### ChooseGripPoint(GrabHand, Vector3) {#choosegrippoint-grabhand-vector3}
 
@@ -475,7 +477,7 @@ public GripPoint ChooseGripPoint(GrabHand hand, Vector3 from)
 
 **Returns** [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint) - The grip point to use, or null when the object has none this hand may take.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L289)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L292)
 
 ### CollectGrabColliders(List\<Collider>) {#collectgrabcolliders-collider}
 
@@ -496,7 +498,7 @@ public void CollectGrabColliders(List<Collider> into)
 | --- | --- | --- |
 | `into` | `List<Collider>` | List filled with the colliders. Cleared first. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L364)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L367)
 
 ### CopySettingsFrom(GrabbableObject) {#copysettingsfrom-grabbableobject}
 
@@ -513,7 +515,7 @@ public void CopySettingsFrom(GrabbableObject other)
 | --- | --- | --- |
 | `other` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Grabbable to copy from. Null does nothing. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L255)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L258)
 
 ### For(Collider) {#for-collider}
 
@@ -533,7 +535,7 @@ public static GrabbableObject For(Collider collider)
 
 **Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L392)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L395)
 
 ### Grabbed(GrabHand) {#grabbed-grabhand}
 
@@ -550,7 +552,7 @@ public void Grabbed(GrabHand grabHand)
 | --- | --- | --- |
 | `grabHand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand taking the object. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L440)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L443)
 
 ### IsHeldBy(GrabHand) {#isheldby-grabhand}
 
@@ -568,7 +570,7 @@ public bool IsHeldBy(GrabHand hand)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L408)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L411)
 
 ### OnGrabbed(GrabHand) {#ongrabbed-grabhand}
 
@@ -584,7 +586,7 @@ protected virtual void OnGrabbed(GrabHand grabHand)
 | --- | --- | --- |
 | `grabHand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand that took the object. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L520)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L523)
 
 ### OnReleased() {#onreleased}
 
@@ -594,7 +596,7 @@ Override to react to this object being let go.
 protected virtual void OnReleased()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L526)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L529)
 
 ### Released(GrabHand) {#released-grabhand}
 
@@ -611,7 +613,7 @@ public void Released(GrabHand grabHand = null)
 | --- | --- | --- |
 | `grabHand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand letting go, or null for a release that names no hand. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L463)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L466)
 
 ### ReleaseObject() {#releaseobject}
 
@@ -621,5 +623,5 @@ Makes every hand holding this object let go of it. Does nothing when it is not h
 public void ReleaseObject()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GrabbableObject.cs#L419)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L422)
 

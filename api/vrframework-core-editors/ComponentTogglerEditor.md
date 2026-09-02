@@ -8,7 +8,7 @@ description: 'Editor for ComponentToggler script.'
 
 # ComponentTogglerEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L13)
 
 Editor for ComponentToggler script.
 
@@ -32,7 +32,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L23)
 
 ### HeaderTitle {#headertitle}
 
@@ -44,7 +44,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L21)
 
 ## Methods
 
@@ -56,7 +56,7 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L65)
 
 ### OnEnable() {#onenable}
 
@@ -66,5 +66,5 @@ Binds the inspector to the component's serialized properties.
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L26)
 

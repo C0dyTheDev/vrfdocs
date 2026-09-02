@@ -8,7 +8,7 @@ description: 'Decides which lines the window shows.'
 
 # VRFLogFilter
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L13)
 
 Decides which lines the window shows. The search box takes space separated terms that all have
 to match, "quoted phrases" for anything containing a space, and -minus terms to exclude, or a
@@ -32,7 +32,7 @@ public readonly HashSet<string> hiddenChannels
 
 **Returns** `HashSet<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L18)
 
 ### showDebug {#showdebug}
 
@@ -44,7 +44,7 @@ public bool showDebug
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L24)
 
 ### showError {#showerror}
 
@@ -56,7 +56,7 @@ public bool showError
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L26)
 
 ### showInfo {#showinfo}
 
@@ -68,7 +68,7 @@ public bool showInfo
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L29)
 
 ### showWarning {#showwarning}
 
@@ -80,7 +80,7 @@ public bool showWarning
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L31)
 
 ## Properties
 
@@ -94,7 +94,7 @@ public Regex CompiledRegex { get; }
 
 **Returns** [`Regex`](https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L41)
 
 ### Error {#error}
 
@@ -106,7 +106,7 @@ public string Error { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L35)
 
 ### HasTextFilter {#hastextfilter}
 
@@ -118,7 +118,7 @@ public bool HasTextFilter { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L44)
 
 ### IncludeTerms {#includeterms}
 
@@ -130,7 +130,7 @@ public IReadOnlyList<string> IncludeTerms { get; }
 
 **Returns** `IReadOnlyList<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L38)
 
 ### MatchCase {#matchcase}
 
@@ -142,7 +142,7 @@ public bool MatchCase { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L61)
 
 ### Search {#search}
 
@@ -154,7 +154,7 @@ public string Search { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L47)
 
 ### UseRegex {#useregex}
 
@@ -166,7 +166,7 @@ public bool UseRegex { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L74)
 
 ## Methods
 
@@ -186,7 +186,7 @@ public bool Matches(VRFLogEntry entry)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the window should show it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L103)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L103)
 
 ### ShowsLevel(VRFLogLevel) {#showslevel-vrfloglevel}
 
@@ -204,5 +204,5 @@ public bool ShowsLevel(VRFLogLevel level)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when that severity is switched on.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogFilter.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogFilter.cs#L89)
 

@@ -8,7 +8,7 @@ description: 'Limits how the object may move while it is held by the grip point 
 
 # GripConstraint
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L23)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L23)
 
 Limits how the object may move while it is held by the grip point this sits on.
 
@@ -44,7 +44,7 @@ public GripConstraint.Moves moves
 
 **Returns** [`GripConstraint.Moves`](/api/vrframework-interaction-runtime/GripConstraint.Moves)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L57)
 
 ### pivot {#pivot}
 
@@ -55,7 +55,7 @@ public Transform pivot
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L63)
 
 ## Properties
 
@@ -69,7 +69,7 @@ public virtual bool AtEnd { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L183)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L183)
 
 ### Body {#body}
 
@@ -81,7 +81,7 @@ public Transform Body { get; }
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L117)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L117)
 
 ### BodyAtRest {#bodyatrest}
 
@@ -93,7 +93,7 @@ public Pose BodyAtRest { get; }
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L140)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L140)
 
 ### Engaged {#engaged}
 
@@ -105,7 +105,7 @@ public bool Engaged { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L112)
 
 ### Locked {#locked}
 
@@ -118,7 +118,7 @@ public bool Locked { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L78)
 
 ### MovesAPart {#movesapart}
 
@@ -130,7 +130,7 @@ public bool MovesAPart { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L137)
 
 ### PivotAtRest {#pivotatrest}
 
@@ -145,7 +145,7 @@ public Pose PivotAtRest { get; }
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L161)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L161)
 
 ### Reference {#reference}
 
@@ -165,7 +165,7 @@ public Pose Reference { get; }
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L92)
 
 ### Travel {#travel}
 
@@ -177,7 +177,7 @@ public abstract float Travel { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L180)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L180)
 
 ## Methods
 
@@ -198,7 +198,7 @@ public Pose Add(Pose allowed, Pose wanted)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html) - The pose with this constraint's own freedom added.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L191)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L191)
 
 ### Allow(Pose, Pose) {#allow-pose-pose}
 
@@ -217,7 +217,7 @@ protected abstract Pose Allow(Pose allowed, Pose wanted)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L272)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L272)
 
 ### Direction(int) {#direction-int32}
 
@@ -235,7 +235,7 @@ protected static Vector3 Direction(int axis)
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L278)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L278)
 
 ### Disengage() {#disengage}
 
@@ -246,7 +246,7 @@ then. Called when the object is let go, and whenever a sequence holds this shut.
 public void Disengage()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L249)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L249)
 
 ### Engaging() {#engaging}
 
@@ -257,7 +257,7 @@ moment. Travel is measured from there, not from zero.
 protected virtual void Engaging()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L267)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L267)
 
 ### EnsureRest() {#ensurerest}
 
@@ -271,7 +271,7 @@ mechanism can be driven in the editor too.
 protected void EnsureRest()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L320)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L320)
 
 ### Fraction(float, float, float) {#fraction-single-single-single}
 
@@ -291,7 +291,7 @@ protected static float Fraction(float value, float min, float max)
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L307)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L307)
 
 ### Hold(Pose) {#hold-pose}
 
@@ -309,7 +309,7 @@ protected abstract Pose Hold(Pose allowed)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L275)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L275)
 
 ### ReturnToRest() {#returntorest}
 
@@ -319,7 +319,7 @@ Puts the object back where it started.
 public virtual void ReturnToRest()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L255)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L255)
 
 ### Signed(float) {#signed-single}
 
@@ -337,7 +337,7 @@ protected static float Signed(float degrees)
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L296)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L296)
 
 ### Twist(Quaternion, Vector3) {#twist-quaternion-vector3}
 
@@ -356,5 +356,5 @@ protected static float Twist(Quaternion rotation, Vector3 axis)
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraint.cs#L288)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraint.cs#L288)
 

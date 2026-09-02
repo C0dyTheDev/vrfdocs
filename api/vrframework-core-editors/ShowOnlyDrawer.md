@@ -8,7 +8,7 @@ description: 'Makes the property uneditable from the Editor'
 
 # ShowOnlyDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Attribute/ShowOnlyDrawer.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Attribute/ShowOnlyDrawer.cs#L9)
 
 Makes the property uneditable from the Editor
 
@@ -38,7 +38,7 @@ public override float GetPropertyHeight(SerializedProperty property, GUIContent 
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The height in pixels.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Attribute/ShowOnlyDrawer.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Attribute/ShowOnlyDrawer.cs#L27)
 
 ### OnGUI(Rect, SerializedProperty, GUIContent) {#ongui-rect-serializedproperty-guicontent}
 
@@ -56,5 +56,5 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
 | `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | Property being drawn. |
 | `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | Label of the property. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Attribute/ShowOnlyDrawer.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Attribute/ShowOnlyDrawer.cs#L16)
 

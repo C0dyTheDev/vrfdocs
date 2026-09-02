@@ -8,7 +8,7 @@ description: 'What the framework expects of a minigame module: a timed run split
 
 # IMinigameService
 
-**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L8)
+**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L8)
 
 What the framework expects of a minigame module: a timed run split into parts, each of which is
 either finished in time or not. Obtained from [`RuntimeRegistry`](/api/vrframework-core-runtime/RuntimeRegistry).
@@ -31,7 +31,7 @@ bool IsEndScene { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L11)
 
 ### Outcome {#outcome}
 
@@ -43,7 +43,7 @@ string Outcome { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L14)
 
 ## Methods
 
@@ -55,7 +55,7 @@ Closes the current part as failed.
 void FailedPart()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L23)
 
 ### NextPart() {#nextpart}
 
@@ -65,7 +65,7 @@ Closes the current part as finished in time and moves on to the next.
 void NextPart()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L21)
 
 ### StartTimer() {#starttimer}
 
@@ -75,7 +75,7 @@ Starts timing the current part.
 void StartTimer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L17)
 
 ### StopTimer() {#stoptimer}
 
@@ -85,7 +85,7 @@ Stops timing the current part.
 void StopTimer()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L19)
 
 ## Events
 
@@ -99,5 +99,5 @@ event Action<string> OutcomeRecorded
 
 **Returns** `Action<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IMinigameService.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMinigameService.cs#L25)
 

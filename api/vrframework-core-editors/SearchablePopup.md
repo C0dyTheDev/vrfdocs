@@ -8,7 +8,7 @@ description: 'A popup list with a search box, for picking one item out of a long
 
 # SearchablePopup
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L259)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L259)
 
 A popup list with a search box, for picking one item out of a long list.
 
@@ -30,7 +30,7 @@ public override Vector2 GetWindowSize()
 
 **Returns** [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) - The size in pixels.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L287)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L287)
 
 ### OnGUI(Rect) {#ongui-rect}
 
@@ -46,7 +46,7 @@ public override void OnGUI(Rect rect)
 | --- | --- | --- |
 | `rect` | [`Rect`](https://docs.unity3d.com/ScriptReference/Rect.html) | Rect to draw in. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L294)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L294)
 
 ### Show(Rect, string[], int, Action\<int, string>) {#show-rect-string-int32-string}
 
@@ -65,5 +65,5 @@ public static void Show(Rect rect, string[] items, int currentIndex, Action<int,
 | `currentIndex` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | Item selected when the popup opens. |
 | `onSelect` | `Action<int, string>` | Called with the position and text of the chosen item. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/QualityOfLife/ComponentTogglerEditor.cs#L280)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/QualityOfLife/ComponentTogglerEditor.cs#L280)
 

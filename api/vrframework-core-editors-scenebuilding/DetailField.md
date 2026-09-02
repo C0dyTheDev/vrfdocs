@@ -8,7 +8,7 @@ description: 'One label/value row in the details panel.'
 
 # DetailField
 
-**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L101)
+**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L101)
 
 One label/value row in the details panel.
 
@@ -33,7 +33,7 @@ public DetailField(string label, string value)
 | `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Label on the left. |
 | `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Value on the right. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L106)
 
 ## Properties
 
@@ -47,7 +47,7 @@ public string Label { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L113)
 
 ### Value {#value}
 
@@ -59,5 +59,5 @@ public string Value { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L115)
 

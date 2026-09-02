@@ -8,7 +8,7 @@ description: 'Default framework inspector for PokeInteractable/api/vrframework-i
 
 # PokeInteractableEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L224)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L225)
 
 Default framework inspector for [`PokeInteractable`](/api/vrframework-interaction-runtime/PokeInteractable).
 

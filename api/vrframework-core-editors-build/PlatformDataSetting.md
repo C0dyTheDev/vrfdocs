@@ -8,7 +8,7 @@ description: 'What this build offers the platform: the scenes it can launch and 
 
 # PlatformDataSetting
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L11)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L11)
 
 What this build offers the platform: the scenes it can launch and the parameters each of
 them accepts. Written to StreamingAssets so the platform can read it off the installed app.
@@ -32,7 +32,7 @@ public const string FileName = "MyData.json"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L15)
 
 ### myData {#mydata}
 
@@ -45,7 +45,7 @@ public MyData myData
 
 **Returns** [`MyData`](/api/vrframework-core-editors-build/MyData)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L19)
 
 ## Properties
 
@@ -59,7 +59,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L25)
 
 ### DisplayName {#displayname}
 
@@ -71,7 +71,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L22)
 
 ### Order {#order}
 
@@ -83,7 +83,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L28)
 
 ## Methods
 
@@ -101,7 +101,7 @@ public override void Apply(VRFBuildContext context)
 | --- | --- | --- |
 | `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) | The build being prepared. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L65)
 
 ### Validate(BuildProfile, ValidationReport) {#validate-buildprofile-validationreport}
 
@@ -118,5 +118,5 @@ public override void Validate(BuildProfile profile, ValidationReport report)
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile carrying this setting. |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/PlatformDataSetting.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/PlatformDataSetting.cs#L33)
 

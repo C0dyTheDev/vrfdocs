@@ -8,7 +8,7 @@ description: 'One area the validator knows how to check.'
 
 # ValidationRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L13)
 
 One area the validator knows how to check. Subclass this anywhere in an editor assembly and
 it is picked up automatically - that is how a project adds checks of its own to the window,
@@ -34,7 +34,7 @@ public abstract string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L16)
 
 ### Order {#order}
 
@@ -46,7 +46,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L22)
 
 ### Scope {#scope}
 
@@ -58,7 +58,7 @@ public virtual ValidationScope Scope { get; }
 
 **Returns** [`ValidationScope`](/api/vrframework-core-editors-validation/ValidationScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L19)
 
 ## Methods
 
@@ -73,7 +73,7 @@ public virtual bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L28)
 
 ### Validate(ValidationReport) {#validate-validationreport}
 
@@ -89,5 +89,5 @@ public abstract void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationRule.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationRule.cs#L35)
 

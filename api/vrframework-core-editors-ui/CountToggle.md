@@ -8,7 +8,7 @@ description: 'Icon plus running count, the way the Unity console shows its sever
 
 # CountToggle
 
-**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/CountToggle.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/CountToggle.cs#L13)
 
 Icon plus running count, the way the Unity console shows its severity switches. Built by hand
 rather than from ToolbarToggle so the icon sits before the number.
@@ -44,7 +44,7 @@ public CountToggle(string ussClass, Texture icon, string tooltipText, bool value
 | `value` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether it starts switched on. |
 | `onChange` | `Action<bool>` | Called when the user flips it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/CountToggle.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/CountToggle.cs#L26)
 
 ## Methods
 
@@ -62,5 +62,5 @@ public void SetCount(int count)
 | --- | --- | --- |
 | `count` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | How many entries of this kind there are. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/CountToggle.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/CountToggle.cs#L54)
 

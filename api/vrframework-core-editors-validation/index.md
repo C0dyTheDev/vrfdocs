@@ -24,6 +24,7 @@ sidebar_position: 0
 | [`MinigamesModuleRule`](/api/vrframework-core-editors-validation/MinigamesModuleRule) | Checks the minigames module's setup: its set of parts and their scenes. |
 | [`MistakesModuleRule`](/api/vrframework-core-editors-validation/MistakesModuleRule) | Checks the mistakes module's setup: its checkpoints and scene name. |
 | [`ModuleRule<T>`](/api/vrframework-core-editors-validation/ModuleRule`1) | A rule that only runs when its module is in the open scene, so a scene that simply does not use that module is never reported as broken. |
+| [`MovementModuleRule`](/api/vrframework-core-editors-validation/MovementModuleRule) | Checks the movement module's setup: whether the player has anywhere to go, and whether the arc can actually see the points. |
 | [`OrphanGripPointRule`](/api/vrframework-core-editors-validation/OrphanGripPointRule) | Checks grip points that are not part of any grabbable. |
 | [`PhysicsRule`](/api/vrframework-core-editors-validation/PhysicsRule) | Checks the physics settings the framework's grabbing relies on. |
 | [`PlatformModuleRule`](/api/vrframework-core-editors-validation/PlatformModuleRule) | Checks the platform module's setup: its config asset and report settings. |
@@ -41,6 +42,7 @@ sidebar_position: 0
 | [`ScriptExecutionOrderRule`](/api/vrframework-core-editors-validation/ScriptExecutionOrderRule) | Checks that the framework's scripts run in the order the runtime expects. |
 | [`ServiceDependencyRule`](/api/vrframework-core-editors-validation/ServiceDependencyRule) | Steps set up to speak with nothing in the scene able to play them. |
 | [`SnapDropZoneRule`](/api/vrframework-core-editors-validation/SnapDropZoneRule) | Checks holders that can never take anything. |
+| [`SpeechRecognitionModuleRule`](/api/vrframework-core-editors-validation/SpeechRecognitionModuleRule) | Checks the speech module's setup: where its audio comes from, whether the model was copied into the project, and whether the scene has anything listening for what it hears. |
 | [`StreamingAssetsRule`](/api/vrframework-core-editors-validation/StreamingAssetsRule) | Checks the StreamingAssets files the platform module reads at runtime. |
 | [`StreamingModuleRule`](/api/vrframework-core-editors-validation/StreamingModuleRule) | Checks the streaming module's setup: the camera it streams. |
 | [`TagsAndLayersRule`](/api/vrframework-core-editors-validation/TagsAndLayersRule) | Checks that the tags and layers the framework's interaction relies on exist. |

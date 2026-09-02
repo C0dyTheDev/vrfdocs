@@ -8,7 +8,7 @@ description: 'Everything the setup writes into the project itself: the framework
 
 # ProjectSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L20)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L20)
 
 Everything the setup writes into the project itself: the framework's own template assets, the
 project settings a VR build needs, the two StreamingAssets files the platform reads on start,
@@ -34,7 +34,7 @@ public const string AppEventsPath = "Assets/Plugins/Android/com/cievr/shutdown/A
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L32)
 
 ## Methods
 
@@ -50,7 +50,7 @@ public static bool AndroidPluginIsCurrent()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the installed plugin matches the package's.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L418)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L438)
 
 ### ConfigureGraphicsAndQuality() {#configuregraphicsandquality}
 
@@ -61,7 +61,7 @@ that level available on the two platforms the framework ships to.
 public static void ConfigureGraphicsAndQuality()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L152)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L172)
 
 ### ConfigurePhysicsAndTime() {#configurephysicsandtime}
 
@@ -72,7 +72,7 @@ there is nothing to write until those layers exist.
 public static void ConfigurePhysicsAndTime()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L209)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L229)
 
 ### ConfigurePlayerSettings() {#configureplayersettings}
 
@@ -84,7 +84,7 @@ Unity's default, so re-running this on a real project does not rename the app.
 public static void ConfigurePlayerSettings()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L269)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L289)
 
 ### ConfigureScriptExecutionOrder() {#configurescriptexecutionorder}
 
@@ -94,7 +94,7 @@ Puts the framework's scripts into the execution order the runtime expects.
 public static void ConfigureScriptExecutionOrder()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L247)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L267)
 
 ### ConfigureTagsAndLayers() {#configuretagsandlayers}
 
@@ -105,7 +105,7 @@ both, and Unity logs an error for each one that does not exist.
 public static void ConfigureTagsAndLayers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L199)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L219)
 
 ### CopyFrameworkContent() {#copyframeworkcontent}
 
@@ -116,7 +116,20 @@ a project can edit them without the changes belonging to the package.
 public static void CopyFrameworkContent()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L90)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L110)
+
+### CopySpeechModel() {#copyspeechmodel}
+
+Copies the speech model into StreamingAssets. Unity only serves StreamingAssets from the
+project, never from inside a package, so the model the package ships has to be brought
+across before the speech module can load it. It is ~96 MB and does not change, so an
+existing copy is left alone.
+
+```csharp
+public static void CopySpeechModel()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L515)
 
 ### CreateStreamingAssets() {#createstreamingassets}
 
@@ -128,7 +141,7 @@ described about itself.
 public static void CreateStreamingAssets()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L453)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L473)
 
 ### FetchGitignore() {#fetchgitignore}
 
@@ -140,7 +153,7 @@ considers an asset - so it is written with File rather than through the asset da
 public static void FetchGitignore()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L501)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L603)
 
 ### GitignoreFetched() {#gitignorefetched}
 
@@ -154,7 +167,7 @@ public static bool GitignoreFetched()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L513)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L615)
 
 ### InstallAndroidPlugins() {#installandroidplugins}
 
@@ -169,7 +182,7 @@ half lives in the platform, so a project editing it would only break the pairing
 public static void InstallAndroidPlugins()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L377)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L397)
 
 ### IsOnAndroid() {#isonandroid}
 
@@ -181,7 +194,21 @@ public static bool IsOnAndroid()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True on Android.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L101)
+
+### PrepareBakeryData() {#preparebakerydata}
+
+Bakery is vendored inside this package, which a project consumes read-only, so the one
+asset Bakery writes as it bakes - the global storage, holding the UV padding it has
+applied to every model - cannot live beside the plugin. It gets a copy in the project,
+seeded from the template the package ships.
+The local storage has no template: Bakery creates an empty one the first time it bakes.
+
+```csharp
+public static void PrepareBakeryData()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L554)
 
 ### SwitchToAndroid() {#switchtoandroid}
 
@@ -192,5 +219,5 @@ platform, so this is a step of its own with the rest of the sequence waiting beh
 public static void SwitchToAndroid()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/ProjectSetup.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L92)
 

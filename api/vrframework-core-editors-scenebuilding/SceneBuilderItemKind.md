@@ -8,7 +8,7 @@ description: 'What a Scene Builder entry fundamentally is.'
 
 # SceneBuilderItemKind
 
-**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L11)
+**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L11)
 
 What a Scene Builder entry fundamentally is. Drives the badge colour and the default
 placement behaviour when a catalog does not supply its own.
@@ -19,11 +19,33 @@ public enum SceneBuilderItemKind
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Asset` | 2 | A project asset, e.g. a model or a material. |
-| `Component` | 4 | A component to add to an existing object. |
-| `Module` | 0 | A framework module the scene can be given. |
-| `Prefab` | 1 | A prefab to drop into the scene. |
-| `Template` | 3 | A whole scene template. |
+### Asset {#asset}
+
+`Asset = 2`
+
+A project asset, e.g. a model or a material.
+
+### Component {#component}
+
+`Component = 4`
+
+A component to add to an existing object.
+
+### Module {#module}
+
+`Module = 0`
+
+A framework module the scene can be given.
+
+### Prefab {#prefab}
+
+`Prefab = 1`
+
+A prefab to drop into the scene.
+
+### Template {#template}
+
+`Template = 3`
+
+A whole scene template.
 

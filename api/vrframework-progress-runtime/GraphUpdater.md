@@ -8,7 +8,7 @@ description: 'Coalesces graph redraw requests, so everything that dirties the sc
 
 # GraphUpdater
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/GraphUpdater.cs#L13)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/GraphUpdater.cs#L13)
 
 Coalesces graph redraw requests, so everything that dirties the scenario within one tick
 costs a single redraw. The work is editor-only, but the component sits on the Scenario object
@@ -38,7 +38,7 @@ public void SetAction(Action action)
 | --- | --- | --- |
 | `action` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The redraw to run. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/GraphUpdater.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/GraphUpdater.cs#L75)
 
 ### SetDirty() {#setdirty}
 
@@ -49,5 +49,5 @@ nothing in a build.
 public static void SetDirty()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/GraphUpdater.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/GraphUpdater.cs#L21)
 

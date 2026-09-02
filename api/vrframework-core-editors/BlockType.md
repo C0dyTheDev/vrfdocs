@@ -8,7 +8,7 @@ description: 'What a block is in the run, which decides how its node is coloured
 
 # BlockType
 
-**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/BlockView/BlockType.cs#L3)
+**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/BlockView/BlockType.cs#L3)
 
 What a block is in the run, which decides how its node is coloured on the graph.
 
@@ -18,11 +18,33 @@ public enum BlockType
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `End` | 4 | Nothing leads on from here, so the scenario ends with it. |
-| `Error` | 3 | Wired up in a way that cannot work. |
-| `Standard` | 0 | Wired up on both sides: something leads here, and this leads somewhere. |
-| `Start` | 1 | The block the scenario starts from. |
-| `Unconnected` | 2 | Nothing leads here, so the run can never reach it. |
+### End {#end}
+
+`End = 4`
+
+Nothing leads on from here, so the scenario ends with it.
+
+### Error {#error}
+
+`Error = 3`
+
+Wired up in a way that cannot work.
+
+### Standard {#standard}
+
+`Standard = 0`
+
+Wired up on both sides: something leads here, and this leads somewhere.
+
+### Start {#start}
+
+`Start = 1`
+
+The block the scenario starts from.
+
+### Unconnected {#unconnected}
+
+`Unconnected = 2`
+
+Nothing leads here, so the run can never reach it.
 

@@ -8,7 +8,7 @@ description: 'Tuning for the velocity an object is given when it leaves the hand
 
 # ThrowSettings
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L9)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L9)
 
 Tuning for the velocity an object is given when it leaves the hand. Lives on the grabbable, so a
 ball can be tuned to fly and a crate to drop.
@@ -33,7 +33,7 @@ public float angularMultiplier
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L20)
 
 ### inheritHandSpin {#inherithandspin}
 
@@ -47,7 +47,7 @@ public bool inheritHandSpin
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L33)
 
 ### linearMultiplier {#linearmultiplier}
 
@@ -60,7 +60,7 @@ public float linearMultiplier
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L17)
 
 ### maxAngularSpeed {#maxangularspeed}
 
@@ -72,7 +72,7 @@ public float maxAngularSpeed
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L26)
 
 ### maxLinearSpeed {#maxlinearspeed}
 
@@ -84,7 +84,7 @@ public float maxLinearSpeed
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L23)
 
 ### velocityWindow {#velocitywindow}
 
@@ -98,5 +98,5 @@ public float velocityWindow
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/ThrowSolver.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/ThrowSolver.cs#L14)
 

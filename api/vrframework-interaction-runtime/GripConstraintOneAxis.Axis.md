@@ -8,7 +8,7 @@ description: 'Which of the pivot''s three axes the motion runs along or about.'
 
 # GripConstraintOneAxis.Axis
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L32)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripConstraintOneAxis.cs#L32)
 
 Which of the pivot's three axes the motion runs along or about.
 
@@ -18,9 +18,21 @@ public enum GripConstraintOneAxis.Axis
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `X` | 0 | The pivot's local X, its red arrow. |
-| `Y` | 1 | The pivot's local Y, its green arrow. |
-| `Z` | 2 | The pivot's local Z, its blue arrow. |
+### X {#x}
+
+`X = 0`
+
+The pivot's local X, its red arrow.
+
+### Y {#y}
+
+`Y = 1`
+
+The pivot's local Y, its green arrow.
+
+### Z {#z}
+
+`Z = 2`
+
+The pivot's local Z, its blue arrow.
 

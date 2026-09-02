@@ -8,7 +8,7 @@ description: 'Everything the Logger window remembers between sessions.'
 
 # VRFLoggerPrefs
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L10)
 
 Everything the Logger window remembers between sessions. These are viewing preferences of one
 developer rather than project settings, so they live in EditorPrefs and never touch the repo.
@@ -31,7 +31,7 @@ public static bool AutoScroll { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L64)
 
 ### Capacity {#capacity}
 
@@ -43,7 +43,7 @@ public static int Capacity { get; set; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L50)
 
 ### ClearOnPlay {#clearonplay}
 
@@ -55,7 +55,7 @@ public static bool ClearOnPlay { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L15)
 
 ### ClearOnRecompile {#clearonrecompile}
 
@@ -67,7 +67,7 @@ public static bool ClearOnRecompile { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L22)
 
 ### Collapse {#collapse}
 
@@ -79,7 +79,7 @@ public static bool Collapse { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L57)
 
 ### Colorize {#colorize}
 
@@ -91,7 +91,7 @@ public static bool Colorize { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L148)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L148)
 
 ### ErrorPause {#errorpause}
 
@@ -103,7 +103,7 @@ public static bool ErrorPause { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L43)
 
 ### ExpandedRows {#expandedrows}
 
@@ -115,7 +115,7 @@ public static bool ExpandedRows { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L141)
 
 ### FontSize {#fontsize}
 
@@ -127,7 +127,7 @@ public static int FontSize { get; set; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L155)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L155)
 
 ### HiddenChannels {#hiddenchannels}
 
@@ -139,7 +139,7 @@ public static IEnumerable<string> HiddenChannels { get; set; }
 
 **Returns** `IEnumerable<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L169)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L169)
 
 ### IncludeUnityConsole {#includeunityconsole}
 
@@ -151,7 +151,7 @@ public static bool IncludeUnityConsole { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L36)
 
 ### MatchCase {#matchcase}
 
@@ -163,7 +163,7 @@ public static bool MatchCase { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L113)
 
 ### PersistBetweenSessions {#persistbetweensessions}
 
@@ -175,7 +175,7 @@ public static bool PersistBetweenSessions { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L29)
 
 ### Search {#search}
 
@@ -187,7 +187,7 @@ public static string Search { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L99)
 
 ### ShowChannel {#showchannel}
 
@@ -199,7 +199,7 @@ public static bool ShowChannel { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L127)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L127)
 
 ### ShowDebug {#showdebug}
 
@@ -211,7 +211,7 @@ public static bool ShowDebug { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L92)
 
 ### ShowDetails {#showdetails}
 
@@ -223,7 +223,7 @@ public static bool ShowDetails { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L162)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L162)
 
 ### ShowError {#showerror}
 
@@ -235,7 +235,7 @@ public static bool ShowError { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L85)
 
 ### ShowInfo {#showinfo}
 
@@ -247,7 +247,7 @@ public static bool ShowInfo { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L71)
 
 ### ShowSource {#showsource}
 
@@ -259,7 +259,7 @@ public static bool ShowSource { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L134)
 
 ### ShowWarning {#showwarning}
 
@@ -271,7 +271,7 @@ public static bool ShowWarning { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L78)
 
 ### TimeMode {#timemode}
 
@@ -283,7 +283,7 @@ public static VRFLogTimeMode TimeMode { get; set; }
 
 **Returns** [`VRFLogTimeMode`](/api/vrframework-core-editors-logging/VRFLogTimeMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L120)
 
 ### UseRegex {#useregex}
 
@@ -295,5 +295,5 @@ public static bool UseRegex { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLoggerPrefs.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L106)
 

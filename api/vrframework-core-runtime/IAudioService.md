@@ -8,7 +8,7 @@ description: 'What the framework expects of an audio module: a queue per AudioSo
 
 # IAudioService
 
-**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L10)
+**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L10)
 
 What the framework expects of an audio module: a queue per AudioSource and coroutines that run
 for exactly as long as the audio does. Implemented by AudioManager, obtained from
@@ -32,7 +32,7 @@ AudioSource DefaultSource { get; }
 
 **Returns** [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L13)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L13)
 
 ## Methods
 
@@ -50,7 +50,7 @@ void ClearQueue(AudioSource source)
 | --- | --- | --- |
 | `source` | [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) | Source whose queue is dropped. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L23)
 
 ### ClearQueueAndStop(AudioSource) {#clearqueueandstop-audiosource}
 
@@ -66,7 +66,7 @@ void ClearQueueAndStop(AudioSource source)
 | --- | --- | --- |
 | `source` | [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html) | Source to stop. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L26)
 
 ### PlayAndWait(AudioSource, string) {#playandwait-audiosource-string}
 
@@ -85,7 +85,7 @@ IEnumerator PlayAndWait(AudioSource source, string audioKey)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the clip has finished.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L39)
 
 ### PlayClipAndWait(AudioSource, AudioClip) {#playclipandwait-audiosource-audioclip}
 
@@ -104,7 +104,7 @@ IEnumerator PlayClipAndWait(AudioSource source, AudioClip clip)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the clip has finished.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L45)
 
 ### PlaySuccessAndWait(AudioSource) {#playsuccessandwait-audiosource}
 
@@ -122,7 +122,7 @@ IEnumerator PlaySuccessAndWait(AudioSource source)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes when the sound has finished.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L50)
 
 ### QueueClip(AudioSource, AudioClip) {#queueclip-audiosource-audioclip}
 
@@ -141,7 +141,7 @@ int QueueClip(AudioSource source, AudioClip clip)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - The queue ID of the clip, or -1 when it was rejected and will never play.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L20)
 
 ### StillInQueue(AudioSource, int) {#stillinqueue-audiosource-int32}
 
@@ -160,5 +160,5 @@ bool StillInQueue(AudioSource source, int id)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the clip is still waiting its turn.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IAudioService.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IAudioService.cs#L33)
 

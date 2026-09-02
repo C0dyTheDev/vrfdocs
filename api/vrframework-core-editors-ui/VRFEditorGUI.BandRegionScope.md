@@ -8,7 +8,7 @@ description: 'Restores the previous band region when it goes out of scope.'
 
 # VRFEditorGUI.BandRegionScope
 
-**Struct** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L94)
+**Struct** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L94)
 
 Restores the previous band region when it goes out of scope.
 
@@ -28,5 +28,5 @@ Puts the previous band back.
 public void Dispose()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L108)
 

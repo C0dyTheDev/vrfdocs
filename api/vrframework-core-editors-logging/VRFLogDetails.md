@@ -8,7 +8,7 @@ description: 'The lower pane: the full message of the selected line, where it ca
 
 # VRFLogDetails
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogDetails.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogDetails.cs#L10)
 
 The lower pane: the full message of the selected line, where it came from, and its stack
 trace with every frame clickable straight into the code editor.
@@ -31,7 +31,7 @@ Builds the details pane.
 public VRFLogDetails()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogDetails.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogDetails.cs#L26)
 
 ## Methods
 
@@ -49,5 +49,5 @@ public void Show(VRFLogEntry selected)
 | --- | --- | --- |
 | `selected` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) | Entry to show, or null to clear the pane. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogDetails.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogDetails.cs#L83)
 

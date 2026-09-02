@@ -8,7 +8,7 @@ description: 'Plays one audio slot on demand and raises AfterAudio/api/vrframewo
 
 # PlayAudio
 
-**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/PlayAudio.cs#L12)
+**Class** · namespace `VRFramework.Audio.Runtime` · assembly `VRFramework.Audio.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/PlayAudio.cs#L12)
 
 Plays one audio slot on demand and raises [`AfterAudio`](/api/vrframework-audio-runtime/PlayAudio#afteraudio) when it is done - the plain
 way to hang voice over off a scenario step or a UnityEvent. The slot is authored either as a
@@ -32,7 +32,7 @@ public UnityEvent AfterAudio
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/PlayAudio.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/PlayAudio.cs#L27)
 
 ### audio {#audio}
 
@@ -45,7 +45,7 @@ public string audio
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/PlayAudio.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/PlayAudio.cs#L16)
 
 ### audioClip {#audioclip}
 
@@ -58,7 +58,7 @@ public AudioClip audioClip
 
 **Returns** [`AudioClip`](https://docs.unity3d.com/ScriptReference/AudioClip.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/PlayAudio.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/PlayAudio.cs#L20)
 
 ### customAudioSource {#customaudiosource}
 
@@ -70,7 +70,7 @@ public AudioSource customAudioSource
 
 **Returns** [`AudioSource`](https://docs.unity3d.com/ScriptReference/AudioSource.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/PlayAudio.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/PlayAudio.cs#L25)
 
 ### useCustomAudioSource {#usecustomaudiosource}
 
@@ -82,7 +82,7 @@ public bool useCustomAudioSource
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/PlayAudio.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/PlayAudio.cs#L23)
 
 ## Methods
 
@@ -95,5 +95,5 @@ stack up.
 public void Play()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Audio/PlayAudio.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Audio/PlayAudio.cs#L35)
 

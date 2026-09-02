@@ -8,7 +8,7 @@ description: 'An asset holding translated sprites: one entry per image, each wit
 
 # LanguageSpriteInstance
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L17)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L17)
 
 An asset holding translated sprites: one entry per image, each with a slot per language, plus
 the images that are the same everywhere. Referenced by the Localization module and picked from
@@ -35,7 +35,7 @@ public List<LanguageSpriteList> languageEntries
 
 **Returns** `List<LanguageSpriteList>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L22)
 
 ### untranslatedEntries {#untranslatedentries}
 
@@ -48,7 +48,7 @@ public List<UntranslatedSpriteElement> untranslatedEntries
 
 **Returns** `List<UntranslatedSpriteElement>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L24)
 
 ## Methods
 
@@ -61,5 +61,5 @@ sprites already assigned. Run after a language is added, removed or reordered.
 public void CheckForLanguageChanges()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteInstance.cs#L76)
 

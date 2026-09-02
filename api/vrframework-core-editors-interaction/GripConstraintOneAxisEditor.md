@@ -8,7 +8,7 @@ description: 'Inspector and scene handles for GripConstraintOneAxis/api/vrframew
 
 # GripConstraintOneAxisEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripConstraintOneAxisEditor.cs#L17)
+**Class** · namespace `VRFramework.Core.Editors.Interaction` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripConstraintOneAxisEditor.cs#L17)
 
 Inspector and scene handles for [`GripConstraintOneAxis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis).
 
@@ -37,7 +37,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripConstraintOneAxisEditor.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripConstraintOneAxisEditor.cs#L36)
 
 ### HeaderTitle {#headertitle}
 
@@ -49,7 +49,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripConstraintOneAxisEditor.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripConstraintOneAxisEditor.cs#L33)
 
 ## Methods
 
@@ -61,5 +61,5 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Interaction/GripConstraintOneAxisEditor.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Interaction/GripConstraintOneAxisEditor.cs#L39)
 

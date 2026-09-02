@@ -8,7 +8,7 @@ description: 'Who the build says it is: the company and product it ships under, 
 
 # ProductIdentitySetting
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L12)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L12)
 
 Who the build says it is: the company and product it ships under, and the version it
 reports. Applied to the player settings the active profile builds with.
@@ -24,6 +24,8 @@ public class ProductIdentitySetting : VRFBuildSetting
 
 ### autoIncrementVersion {#autoincrementversion}
 
+Whether the version is stepped up automatically after each build.
+
 ```csharp
 [Tooltip("Bumps the patch number on every build made with this profile, before the build runs. Off means the version only ever changes by hand.")]
 public bool autoIncrementVersion
@@ -31,7 +33,7 @@ public bool autoIncrementVersion
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L30)
 
 ### companyName {#companyname}
 
@@ -44,7 +46,7 @@ public string companyName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L17)
 
 ### productName {#productname}
 
@@ -57,7 +59,7 @@ public string productName
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L21)
 
 ### version {#version}
 
@@ -70,7 +72,7 @@ public string version
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L25)
 
 ## Properties
 
@@ -84,7 +86,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L36)
 
 ### DisplayName {#displayname}
 
@@ -96,7 +98,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L33)
 
 ### Order {#order}
 
@@ -108,7 +110,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L39)
 
 ## Methods
 
@@ -126,7 +128,7 @@ public override void Apply(VRFBuildContext context)
 | --- | --- | --- |
 | `context` | [`VRFBuildContext`](/api/vrframework-core-editors-build/VRFBuildContext) | The build being prepared. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L66)
 
 ### TryIncrement(string, out string) {#tryincrement-string-string}
 
@@ -145,7 +147,7 @@ public static bool TryIncrement(string version, out string incremented)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L83)
 
 ### Validate(BuildProfile, ValidationReport) {#validate-buildprofile-validationreport}
 
@@ -162,5 +164,5 @@ public override void Validate(BuildProfile profile, ValidationReport report)
 | `profile` | [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html) | Profile carrying this setting. |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/Settings/ProductIdentitySetting.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/Settings/ProductIdentitySetting.cs#L44)
 

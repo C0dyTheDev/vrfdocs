@@ -8,7 +8,7 @@ description: 'Draws one entry of a translation asset: its name, and a row per la
 
 # LanguageListDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L12)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L12)
 
 Draws one entry of a translation asset: its name, and a row per language, filtered by the
 asset's search text and language toggles.
@@ -37,7 +37,7 @@ protected LanguageListDrawer(LangType type)
 | --- | --- | --- |
 | `type` | [`LangType`](/api/vrframework-core-runtime/LangType) | Kind of localized content. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L24)
 
 ## Fields
 
@@ -51,7 +51,7 @@ protected LangType type
 
 **Returns** [`LangType`](/api/vrframework-core-runtime/LangType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L19)
 
 ## Methods
 
@@ -72,7 +72,7 @@ public override float GetPropertyHeight(SerializedProperty property, GUIContent 
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single) - The height in pixels.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L135)
 
 ### OnGUI(Rect, SerializedProperty, GUIContent) {#ongui-rect-serializedproperty-guicontent}
 
@@ -90,5 +90,5 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
 | `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | The entry being drawn. |
 | `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | Label of the entry. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageListDrawer.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageListDrawer.cs#L34)
 

@@ -8,7 +8,7 @@ description: 'Scriptable object holding what the app expects the platform to con
 
 # PlatformConfig
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformConfig.cs#L10)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformConfig.cs#L10)
 
 Scriptable object holding what the app expects the platform to configure for a session:
 the parameters it reads and the time budget it falls back on.
@@ -32,7 +32,7 @@ public int maxGameTimeDefault
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformConfig.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformConfig.cs#L16)
 
 ### parameters {#parameters}
 
@@ -44,7 +44,7 @@ public List<Parameter> parameters
 
 **Returns** `List<Parameter>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformConfig.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformConfig.cs#L18)
 
 ### useMaxGameTime {#usemaxgametime}
 
@@ -56,5 +56,5 @@ public bool useMaxGameTime
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformConfig.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformConfig.cs#L14)
 

@@ -8,7 +8,7 @@ description: 'What the framework expects of an interaction module: the rig''s ca
 
 # IInteractionService
 
-**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L9)
+**Interface** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L9)
 
 What the framework expects of an interaction module: the rig's camera and hands, the vision
 fader used for transitions, and recentering the player. Implemented by the Interaction module,
@@ -32,7 +32,7 @@ GameObject GrabHandL { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L14)
 
 ### GrabHandR {#grabhandr}
 
@@ -44,7 +44,7 @@ GameObject GrabHandR { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L16)
 
 ### MainCamera {#maincamera}
 
@@ -56,7 +56,7 @@ GameObject MainCamera { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L12)
 
 ### VisionFader {#visionfader}
 
@@ -68,7 +68,7 @@ VisionFader VisionFader { get; }
 
 **Returns** [`VisionFader`](/api/vrframework-core-runtime/VisionFader)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L18)
 
 ## Methods
 
@@ -80,7 +80,7 @@ Hides the tracked finger visuals, e.g. while the hands hold a tool.
 void DisableFingers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L20)
 
 ### EnableFingers() {#enablefingers}
 
@@ -90,7 +90,7 @@ Shows the tracked finger visuals again.
 void EnableFingers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L22)
 
 ### Recenter(Component, bool) {#recenter-component-boolean}
 
@@ -107,5 +107,5 @@ void Recenter(Component target, bool doRotation)
 | `target` | [`Component`](https://docs.unity3d.com/ScriptReference/Component.html) | Where the player is placed. |
 | `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face the target's forward direction. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Core/IInteractionService.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IInteractionService.cs#L26)
 

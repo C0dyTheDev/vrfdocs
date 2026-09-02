@@ -8,7 +8,7 @@ description: 'Shared editor for the three localization instance assets.'
 
 # LanguageInstanceEditor
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L18)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L18)
 
 Shared editor for the three localization instance assets.
 
@@ -40,7 +40,7 @@ protected LanguageInstanceEditor(LangType type)
 | --- | --- | --- |
 | `type` | [`LangType`](/api/vrframework-core-runtime/LangType) | Kind of localized content the asset holds. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L27)
 
 ## Fields
 
@@ -54,7 +54,7 @@ protected bool didUpdate
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L21)
 
 ### type {#type}
 
@@ -66,7 +66,7 @@ protected LangType type
 
 **Returns** [`LangType`](/api/vrframework-core-runtime/LangType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L23)
 
 ## Properties
 
@@ -80,7 +80,7 @@ protected override string HeaderSubtitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L42)
 
 ### HeaderTitle {#headertitle}
 
@@ -92,7 +92,7 @@ protected override string HeaderTitle { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L33)
 
 ### PrefsKey {#prefskey}
 
@@ -104,7 +104,7 @@ protected override string PrefsKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L46)
 
 ## Methods
 
@@ -116,7 +116,7 @@ Draws the component's own inspector body.
 protected override void DrawBody()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L70)
 
 ### OnDisable() {#ondisable}
 
@@ -126,7 +126,7 @@ Releases what the inspector bound while it was open.
 protected override void OnDisable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L60)
 
 ### OnEnable() {#onenable}
 
@@ -136,7 +136,7 @@ Binds the inspector to the component's serialized properties.
 protected override void OnEnable()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L49)
 
 ### ProcessLanguageInstance() {#processlanguageinstance}
 
@@ -146,7 +146,7 @@ Rebuilds the lookup maps of this editor's own kind of content.
 protected abstract void ProcessLanguageInstance()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L173)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L173)
 
 ### ReloadOwnType() {#reloadowntype}
 
@@ -156,5 +156,5 @@ Reloads this editor's kind of content and marks the graph for a redraw.
 protected void ReloadOwnType()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageInstanceEditor.cs#L176)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageInstanceEditor.cs#L176)
 

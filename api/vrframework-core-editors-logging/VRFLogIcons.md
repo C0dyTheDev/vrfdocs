@@ -8,7 +8,7 @@ description: 'Which icon stands for which log level.'
 
 # VRFLogIcons
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogIcons.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogIcons.cs#L9)
 
 Which icon stands for which log level. The icons themselves come from
 [`VRFEditorIcons`](/api/vrframework-core-editors/VRFEditorIcons), which is where the caching lives.
@@ -37,5 +37,5 @@ public static Texture ForLevel(VRFLogLevel level)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html) - Its icon.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogIcons.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogIcons.cs#L14)
 

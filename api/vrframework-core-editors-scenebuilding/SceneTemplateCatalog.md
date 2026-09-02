@@ -8,7 +8,7 @@ description: 'Reusable scene setups.'
 
 # SceneTemplateCatalog
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L15)
 
 Reusable scene setups. A template is never spent: apply it to as many scenes as you like,
 and apply it again to a scene you have already worked on - each installer tops up what is
@@ -37,7 +37,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L27)
 
 ### DisplayName {#displayname}
 
@@ -49,7 +49,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L20)
 
 ### EmptyMessage {#emptymessage}
 
@@ -61,7 +61,7 @@ public override string EmptyMessage { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L33)
 
 ### IconName {#iconname}
 
@@ -73,7 +73,7 @@ public override string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L24)
 
 ### Id {#id}
 
@@ -85,7 +85,7 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L18)
 
 ### Order {#order}
 
@@ -97,7 +97,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L22)
 
 ## Methods
 
@@ -111,5 +111,5 @@ public override IEnumerable<SceneBuilderItem> GetItems()
 
 **Returns** `IEnumerable<SceneBuilderItem>` - The items to show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/SceneTemplateCatalog.cs#L40)
 

@@ -8,7 +8,7 @@ description: 'The framework''s one cache of Unity''s built-in editor icons, shar
 
 # VRFEditorIcons
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFEditorIcons.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFEditorIcons.cs#L13)
 
 The framework's one cache of Unity's built-in editor icons, shared by every VRF window.
 IconContent is not free and it throws on names that do not exist in the running editor
@@ -22,6 +22,25 @@ public static class VRFEditorIcons
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `VRFEditorIcons`
 
 ## Methods
+
+### AssignHierarchyIcon(IEnumerable\<Object>, string) {#assignhierarchyicon-object-string}
+
+Gives every object being edited the named built-in icon in the hierarchy, so a script's
+objects are recognisable at a glance. Assigning dirties the object, so an editor should
+call this from OnEnable rather than from a repaint.
+
+```csharp
+public static void AssignHierarchyIcon(IEnumerable<Object> targets, string iconName)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `targets` | `IEnumerable<Object>` | The objects being edited, usually an editor's `targets`. |
+| `iconName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Name of the built-in icon, as understood by [`Builtin(string)`](/api/vrframework-core-editors/VRFEditorIcons#builtin-string). |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFEditorIcons.cs#L49)
 
 ### Builtin(string) {#builtin-string}
 
@@ -40,7 +59,7 @@ public static Texture Builtin(string iconName)
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFEditorIcons.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFEditorIcons.cs#L21)
 
 ### ClearCache() {#clearcache}
 
@@ -50,5 +69,5 @@ Drops the cache. Icons change with the editor skin, so a theme switch wants this
 public static void ClearCache()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/VRFEditorIcons.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFEditorIcons.cs#L60)
 

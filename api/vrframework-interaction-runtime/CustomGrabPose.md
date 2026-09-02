@@ -8,7 +8,7 @@ description: 'Marks a hand that is standing in for the player''s while a pose is
 
 # CustomGrabPose
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CustomGrabPose.cs#L14)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CustomGrabPose.cs#L14)
 
 Marks a hand that is standing in for the player's while a pose is authored on a grip point.
 
@@ -37,7 +37,7 @@ public GripPoint editingFor
 
 **Returns** [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CustomGrabPose.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CustomGrabPose.cs#L20)
 
 ### handPose {#handpose}
 
@@ -49,7 +49,7 @@ public Transform handPose
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CustomGrabPose.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CustomGrabPose.cs#L17)
 
 ## Properties
 
@@ -63,7 +63,7 @@ public Transform Bones { get; }
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CustomGrabPose.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CustomGrabPose.cs#L26)
 
 ### IsEditing {#isediting}
 
@@ -75,5 +75,5 @@ public bool IsEditing { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CustomGrabPose.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CustomGrabPose.cs#L23)
 

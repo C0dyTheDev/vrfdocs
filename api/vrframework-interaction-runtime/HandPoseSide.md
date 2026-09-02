@@ -8,7 +8,7 @@ description: 'One hand''s worth of a pose.'
 
 # HandPoseSide
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L22)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L22)
 
 One hand's worth of a pose. Kept per side rather than mirrored on the fly, because a rig whose
 left and right hands are not exact mirrors of each other would come out wrong every time it was
@@ -33,7 +33,7 @@ public List<PosedBone> bones
 
 **Returns** `List<PosedBone>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L29)
 
 ### isSet {#isset}
 
@@ -45,5 +45,5 @@ public bool isSet
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L26)
 

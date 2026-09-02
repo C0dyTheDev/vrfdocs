@@ -8,7 +8,7 @@ description: 'Draws one language''s slot of a translation entry: the language na
 
 # LanguageElementDrawer
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageElementDrawer.cs#L7)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageElementDrawer.cs#L7)
 
 Draws one language's slot of a translation entry: the language name and its content.
 
@@ -39,5 +39,5 @@ public override void OnGUI(Rect position, SerializedProperty property, GUIConten
 | `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) | The slot being drawn. |
 | `label` | [`GUIContent`](https://docs.unity3d.com/ScriptReference/GUIContent.html) | Label of the field. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageElementDrawer.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageElementDrawer.cs#L16)
 

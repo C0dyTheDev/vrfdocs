@@ -8,7 +8,7 @@ description: 'One thing the trainee is asked to do.'
 
 # ProgressStep
 
-**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L16)
+**Class** · namespace `VRFramework.Progress.Runtime` · assembly `VRFramework.Progress.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L16)
 
 One thing the trainee is asked to do. When its turn comes the step activates itself, raises its
 Before event, plays its instruction audio and then waits: it is over when something in the scene
@@ -36,7 +36,7 @@ public float delayToNext
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L42)
 
 ### InstructionKey {#instructionkey}
 
@@ -50,7 +50,7 @@ public string InstructionKey
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L27)
 
 ### isComplete {#iscomplete}
 
@@ -62,7 +62,7 @@ public bool isComplete
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L45)
 
 ### name {#name}
 
@@ -75,7 +75,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L21)
 
 ### PlaySuccessFeedback {#playsuccessfeedback}
 
@@ -89,7 +89,7 @@ public bool PlaySuccessFeedback
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L38)
 
 ## Properties
 
@@ -103,7 +103,7 @@ public bool HasStarted { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L68)
 
 ### parentBlock {#parentblock}
 
@@ -115,7 +115,7 @@ public ProgressBlock parentBlock { get; }
 
 **Returns** [`ProgressBlock`](/api/vrframework-progress-runtime/ProgressBlock)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L54)
 
 ## Methods
 
@@ -128,7 +128,7 @@ when it abandons a queue mid-run, so the step cannot report in against the new o
 public void Abandon()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L194)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L196)
 
 ### CanComplete() {#cancomplete}
 
@@ -140,7 +140,7 @@ protected virtual bool CanComplete()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L217)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L219)
 
 ### Complete() {#complete}
 
@@ -152,7 +152,7 @@ already complete, was never started, or [`CanComplete()`](/api/vrframework-progr
 public void Complete()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L130)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L132)
 
 ### OnCompleted() {#oncompleted}
 
@@ -162,7 +162,7 @@ Called after the enqueues run, before the queue advances.
 protected virtual void OnCompleted()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L223)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L225)
 
 ### OnEnter() {#onenter}
 
@@ -172,7 +172,7 @@ Called once the step becomes active, before its instruction audio.
 protected virtual void OnEnter()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L212)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L214)
 
 ### OnExit() {#onexit}
 
@@ -182,7 +182,7 @@ Called once the step has handed control back to the manager.
 protected virtual void OnExit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L228)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L230)
 
 ### OnObjectNameChange() {#onobjectnamechange}
 
@@ -192,7 +192,7 @@ Takes the object's name as the step's name after a rename in the hierarchy.
 public override void OnObjectNameChange()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L233)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L235)
 
 ### Process() {#process}
 
@@ -203,7 +203,7 @@ manager when the step's turn comes; a step that has already run ignores it.
 public void Process()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L87)
 
 ### ResetForQueue() {#resetforqueue}
 
@@ -214,5 +214,5 @@ manager as it queues the block.
 public void ResetForQueue()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Progress/ProgressStep.cs#L184)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Progress/ProgressStep.cs#L186)
 

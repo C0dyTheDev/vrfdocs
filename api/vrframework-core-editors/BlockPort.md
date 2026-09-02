@@ -8,7 +8,7 @@ description: 'Base of the two kinds of port on a block node: the hole a line att
 
 # BlockPort
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/BlockPort.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/BlockPort.cs#L10)
 
 Base of the two kinds of port on a block node: the hole a line attaches to, and the colour that
 follows whatever is connected to it.
@@ -39,7 +39,7 @@ public BlockPort(BlockView block)
 | --- | --- | --- |
 | `block` | [`BlockView`](/api/vrframework-core-editors/BlockView) | Node the port belongs to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/BlockPort.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/BlockPort.cs#L19)
 
 ## Methods
 
@@ -51,7 +51,7 @@ Colours the port as the end of the line being drawn right now.
 public void SetNewLineColor()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/BlockPort.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/BlockPort.cs#L64)
 
 ### UpdateColor(List\<Line>) {#updatecolor-line}
 
@@ -67,5 +67,5 @@ protected void UpdateColor(List<Line> lines)
 | --- | --- | --- |
 | `lines` | `List<Line>` | Lines currently attached. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Port/BlockPort.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Port/BlockPort.cs#L26)
 

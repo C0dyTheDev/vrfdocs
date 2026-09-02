@@ -8,7 +8,7 @@ description: 'A hand shape, stored as local bone rotations and matched onto a ha
 
 # HandPose
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L47)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L47)
 
 A hand shape, stored as local bone rotations and matched onto a hand mesh by bone name.
 
@@ -41,7 +41,7 @@ public const int CurrentVersion = 1
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L51)
 
 ### description {#description}
 
@@ -53,7 +53,7 @@ public string description
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L57)
 
 ### left {#left}
 
@@ -65,7 +65,7 @@ public HandPoseSide left
 
 **Returns** [`HandPoseSide`](/api/vrframework-interaction-runtime/HandPoseSide)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L60)
 
 ### right {#right}
 
@@ -77,7 +77,7 @@ public HandPoseSide right
 
 **Returns** [`HandPoseSide`](/api/vrframework-interaction-runtime/HandPoseSide)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L63)
 
 ### version {#version}
 
@@ -89,7 +89,7 @@ public int version
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L54)
 
 ## Methods
 
@@ -107,7 +107,7 @@ public void Clear(HandType handType)
 | --- | --- | --- |
 | `handType` | [`HandType`](/api/vrframework-interaction-runtime/HandType) | Which hand. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L120)
 
 ### For(HandType) {#for-handtype}
 
@@ -125,7 +125,7 @@ public HandPoseSide For(HandType handType)
 
 **Returns** [`HandPoseSide`](/api/vrframework-interaction-runtime/HandPoseSide) - That hand's side of the pose.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L73)
 
 ### Invalidate() {#invalidate}
 
@@ -135,7 +135,7 @@ Drops the cached lookups, so the next read rebuilds them.
 public void Invalidate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L131)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L131)
 
 ### IsSetFor(HandType) {#issetfor-handtype}
 
@@ -153,7 +153,7 @@ public bool IsSetFor(HandType handType)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when that side has been captured and holds at least one bone.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L81)
 
 ### SetBones(HandType, List\<PosedBone>) {#setbones-handtype-posedbone}
 
@@ -170,7 +170,7 @@ public void SetBones(HandType handType, List<PosedBone> bones)
 | `handType` | [`HandType`](/api/vrframework-interaction-runtime/HandType) | Which hand. |
 | `bones` | `List<PosedBone>` | The bones to store. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L107)
 
 ### TryGetRotation(HandType, string, out Quaternion) {#trygetrotation-handtype-string-quaternion}
 
@@ -190,5 +190,5 @@ public bool TryGetRotation(HandType handType, string bone, out Quaternion rotati
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the pose holds this bone.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandPose.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandPose.cs#L93)
 

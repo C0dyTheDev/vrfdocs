@@ -8,7 +8,7 @@ description: 'One finger: the bones it is made of and the name each is stored un
 
 # HandSkeleton.SkeletonFinger
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L275)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L275)
 
 One finger: the bones it is made of and the name each is stored under.
 
@@ -34,7 +34,7 @@ public SkeletonFinger(FingerType fingerType)
 | --- | --- | --- |
 | `fingerType` | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | Which finger this is. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L283)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L283)
 
 ## Properties
 
@@ -48,7 +48,7 @@ public int Count { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L292)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L292)
 
 ### fingerType {#fingertype}
 
@@ -60,7 +60,7 @@ public FingerType fingerType { get; }
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L289)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L289)
 
 ## Methods
 
@@ -79,7 +79,7 @@ public void Add(Transform bone, string name)
 | `bone` | [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) | The bone that moves. |
 | `name` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The name it is stored under. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L313)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L313)
 
 ### BoneAt(int) {#boneat-int32}
 
@@ -97,7 +97,7 @@ public Transform BoneAt(int index)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) - The bone.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L297)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L297)
 
 ### NameAt(int) {#nameat-int32}
 
@@ -115,5 +115,5 @@ public string NameAt(int index)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The name.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/HandSkeleton.cs#L305)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/HandSkeleton.cs#L305)
 

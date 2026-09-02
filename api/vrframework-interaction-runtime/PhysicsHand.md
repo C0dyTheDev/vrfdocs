@@ -8,7 +8,7 @@ description: 'The middle layer of the three-layer hand: a real rigidbody that ch
 
 # PhysicsHand
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L23)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L23)
 
 The middle layer of the three-layer hand: a real rigidbody that chases the tracked hand with
 clamped force instead of being teleported onto it. Because it is solved rather than placed, it
@@ -43,7 +43,7 @@ public float debugTargetDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L122)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L122)
 
 ### debugTargetPosition {#debugtargetposition}
 
@@ -55,7 +55,7 @@ public Vector3 debugTargetPosition
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L119)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L119)
 
 ### debugTrackedAngle {#debugtrackedangle}
 
@@ -69,7 +69,7 @@ public float debugTrackedAngle
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L135)
 
 ### debugTrackedDistance {#debugtrackeddistance}
 
@@ -82,7 +82,7 @@ public float debugTrackedDistance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L128)
 
 ### handType {#handtype}
 
@@ -94,7 +94,7 @@ public HandType handType
 
 **Returns** [`HandType`](/api/vrframework-interaction-runtime/HandType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L27)
 
 ## Properties
 
@@ -108,7 +108,7 @@ public Rigidbody Body { get; }
 
 **Returns** [`Rigidbody`](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L163)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L163)
 
 ### Braced {#braced}
 
@@ -120,7 +120,7 @@ public Vector3 Braced { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L290)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L290)
 
 ### FollowGain {#followgain}
 
@@ -134,7 +134,7 @@ public float FollowGain { get; set; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L265)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L265)
 
 ### FollowTarget {#followtarget}
 
@@ -146,7 +146,7 @@ public Transform FollowTarget { get; set; }
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L272)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L272)
 
 ### Grip {#grip}
 
@@ -158,7 +158,7 @@ public Transform Grip { get; }
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L166)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L166)
 
 ### GripOffset {#gripoffset}
 
@@ -171,7 +171,7 @@ public Vector3 GripOffset { get; set; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L172)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L172)
 
 ### GripPosition {#gripposition}
 
@@ -185,7 +185,7 @@ public Vector3 GripPosition { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L183)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L183)
 
 ### GripRotation {#griprotation}
 
@@ -197,7 +197,7 @@ public Quaternion GripRotation { get; }
 
 **Returns** [`Quaternion`](https://docs.unity3d.com/ScriptReference/Quaternion.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L187)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L187)
 
 ### Holds {#holds}
 
@@ -209,7 +209,7 @@ public IReadOnlyList<PhysicsHold> Holds { get; }
 
 **Returns** `IReadOnlyList<PhysicsHold>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L329)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L329)
 
 ### IsHolding {#isholding}
 
@@ -221,7 +221,7 @@ public bool IsHolding { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L332)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L332)
 
 ### IsTracking {#istracking}
 
@@ -233,7 +233,7 @@ public bool IsTracking { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L284)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L284)
 
 ### Push {#push}
 
@@ -245,7 +245,7 @@ public Vector3 Push { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L287)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L287)
 
 ### TargetDistance {#targetdistance}
 
@@ -257,7 +257,7 @@ public float TargetDistance { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L317)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L317)
 
 ### TrackedAngle {#trackedangle}
 
@@ -269,7 +269,7 @@ public float TrackedAngle { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L326)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L326)
 
 ### TrackedDistance {#trackeddistance}
 
@@ -282,7 +282,7 @@ public float TrackedDistance { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L323)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L323)
 
 ## Methods
 
@@ -308,7 +308,7 @@ public void Brace(Vector3 normal, float capacity)
 | `normal` | [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html) | Which way the surface faces. |
 | `capacity` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | The most of the hand's push the fingers can hold, in newtons. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L310)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L310)
 
 ### ClearReleaseHistory() {#clearreleasehistory}
 
@@ -318,7 +318,7 @@ Forgets the recorded movement history, so the next release throws nothing.
 public void ClearReleaseHistory()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L617)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L617)
 
 ### CommandedGrip(float) {#commandedgrip-single}
 
@@ -345,7 +345,7 @@ public Pose CommandedGrip(float stepEndTime)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L205)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L205)
 
 ### CommandedPose(float) {#commandedpose-single}
 
@@ -368,7 +368,7 @@ public Pose CommandedPose(float stepEndTime)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L223)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L223)
 
 ### Displace(Pose) {#displace-pose}
 
@@ -394,7 +394,7 @@ public Pose Displace(Pose tracked)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L245)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L245)
 
 ### InitialiseOutsidePlayMode() {#initialiseoutsideplaymode}
 
@@ -405,7 +405,7 @@ outside play mode, where Awake and OnEnable never ran.
 public void InitialiseOutsidePlayMode()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L413)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L413)
 
 ### SampleTracking(float) {#sampletracking-single}
 
@@ -423,7 +423,7 @@ public void SampleTracking(float now)
 | --- | --- | --- |
 | `now` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | The current time, in seconds. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L449)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L449)
 
 ### SolveRelease(float, out Vector3, out Vector3) {#solverelease-single-vector3-vector3}
 
@@ -443,7 +443,7 @@ public bool SolveRelease(float window, out Vector3 linear, out Vector3 angular)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - False when too little movement history exists to derive anything.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L611)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L611)
 
 ### Step(float, float) {#step-single-single}
 
@@ -460,5 +460,5 @@ public void Step(float dt, float stepEndTime)
 | `dt` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Length of the step, in seconds. |
 | `stepEndTime` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | The time the step ends at, which is the pose the hand aims for. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsHand.cs#L491)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L491)
 

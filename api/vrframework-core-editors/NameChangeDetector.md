@@ -8,7 +8,7 @@ description: 'Watches the hierarchy for a renamed scenario object and keeps the 
 
 # NameChangeDetector
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Process/NameChangeDetector.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Process/NameChangeDetector.cs#L10)
 
 Watches the hierarchy for a renamed scenario object and keeps the component's own name, the
 order prefixes and the graph in step with it.

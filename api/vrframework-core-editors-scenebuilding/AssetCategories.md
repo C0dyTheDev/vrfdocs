@@ -8,7 +8,7 @@ description: 'The kinds of asset the Assets category deals in - what an entry is
 
 # AssetCategories
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L20)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L20)
 
 The kinds of asset the Assets category deals in - what an entry *is*, shown on the
 card and offered as the type filter. Kept to the things a scene is actually built out of:
@@ -37,7 +37,7 @@ public const string Materials = "Materials"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L31)
 
 ### Models {#models}
 
@@ -49,7 +49,7 @@ public const string Models = "Models"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L23)
 
 ### Ordered {#ordered}
 
@@ -62,7 +62,7 @@ public static readonly string[] Ordered
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L39)
 
 ### Prefabs {#prefabs}
 
@@ -74,7 +74,7 @@ public const string Prefabs = "Prefabs"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L25)
 
 ### Sounds {#sounds}
 
@@ -86,7 +86,7 @@ public const string Sounds = "Sounds"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L27)
 
 ### Textures {#textures}
 
@@ -98,7 +98,7 @@ public const string Textures = "Textures"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L29)
 
 ### Videos {#videos}
 
@@ -110,7 +110,7 @@ public const string Videos = "Videos"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L33)
 
 ## Methods
 
@@ -130,5 +130,5 @@ public static int SortKey(string category)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32) - Its index in [`Ordered`](/api/vrframework-core-editors-scenebuilding/AssetCategories#ordered), or a weight past the end when it is not listed.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L47)
 

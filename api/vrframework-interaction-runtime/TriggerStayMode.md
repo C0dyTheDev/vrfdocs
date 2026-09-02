@@ -8,7 +8,7 @@ description: 'What leaving a TriggerStay/api/vrframework-interaction-runtime/Tri
 
 # TriggerStayMode
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/TriggerStay.cs#L153)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/TriggerStay.cs#L153)
 
 What leaving a [`TriggerStay`](/api/vrframework-interaction-runtime/TriggerStay) early does to the time counted so far.
 
@@ -18,8 +18,15 @@ public enum TriggerStayMode
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Reset` | 0 | The count starts over. |
-| `Save` | 1 | The count is kept and continues when the object returns. |
+### Reset {#reset}
+
+`Reset = 0`
+
+The count starts over.
+
+### Save {#save}
+
+`Save = 1`
+
+The count is kept and continues when the object returns.
 

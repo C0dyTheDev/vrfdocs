@@ -8,7 +8,7 @@ description: 'Adapter that lets an authored asset behave exactly like a framewor
 
 # AuthoredSceneTemplate
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L175)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L175)
 
 Adapter that lets an authored asset behave exactly like a framework template. It has no
 parameterless constructor on purpose, so type discovery skips it.
@@ -35,7 +35,7 @@ public AuthoredSceneTemplate(VRFSceneTemplateAsset asset)
 | --- | --- | --- |
 | `asset` | [`VRFSceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/VRFSceneTemplateAsset) | The authored template. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L179)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L179)
 
 ## Properties
 
@@ -49,7 +49,7 @@ public VRFSceneTemplateAsset Asset { get; }
 
 **Returns** [`VRFSceneTemplateAsset`](/api/vrframework-core-editors-scenebuilding/VRFSceneTemplateAsset)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L185)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L185)
 
 ### CapturedScene {#capturedscene}
 
@@ -61,7 +61,7 @@ public override SceneAsset CapturedScene { get; }
 
 **Returns** [`SceneAsset`](https://docs.unity3d.com/ScriptReference/SceneAsset.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L207)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L207)
 
 ### Description {#description}
 
@@ -73,7 +73,7 @@ public override string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L192)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L192)
 
 ### DisplayName {#displayname}
 
@@ -85,7 +85,7 @@ public override string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L190)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L190)
 
 ### IconName {#iconname}
 
@@ -97,7 +97,7 @@ public override string IconName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L199)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L199)
 
 ### Id {#id}
 
@@ -109,7 +109,7 @@ public override string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L188)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L188)
 
 ### InstallerIds {#installerids}
 
@@ -121,7 +121,7 @@ public override string[] InstallerIds { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L203)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L203)
 
 ### Order {#order}
 
@@ -133,7 +133,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L196)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L196)
 
 ### Prefabs {#prefabs}
 
@@ -145,7 +145,7 @@ public override GameObject[] Prefabs { get; }
 
 **Returns** [`GameObject[]`](https://docs.unity3d.com/ScriptReference/GameObject[].html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L210)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L210)
 
 ### Source {#source}
 
@@ -157,7 +157,7 @@ public override Object Source { get; }
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L214)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L214)
 
 ### Tags {#tags}
 
@@ -169,5 +169,5 @@ public override string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L194)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/VRFSceneTemplateAsset.cs#L194)
 

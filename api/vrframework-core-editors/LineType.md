@@ -8,7 +8,7 @@ description: 'What a connection on the graph stands for, which decides its colou
 
 # LineType
 
-**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Line/LineType.cs#L3)
+**Enum** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Line/LineType.cs#L3)
 
 What a connection on the graph stands for, which decides its colour.
 
@@ -18,10 +18,27 @@ public enum LineType
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Constant` | 0 | An unconditional enqueue: this block always follows. |
-| `False` | 2 | The branch taken when a step's condition does not hold. |
-| `New` | 3 | A connection being drawn right now, not yet attached to anything. |
-| `True` | 1 | The branch taken when a step's condition holds. |
+### Constant {#constant}
+
+`Constant = 0`
+
+An unconditional enqueue: this block always follows.
+
+### False {#false}
+
+`False = 2`
+
+The branch taken when a step's condition does not hold.
+
+### New {#new}
+
+`New = 3`
+
+A connection being drawn right now, not yet attached to anything.
+
+### True {#true}
+
+`True = 1`
+
+The branch taken when a step's condition holds.
 

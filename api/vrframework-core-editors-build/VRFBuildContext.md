@@ -8,7 +8,7 @@ description: 'What a setting is handed when it is applied: the profile it belong
 
 # VRFBuildContext
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L69)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L70)
 
 What a setting is handed when it is applied: the profile it belongs to, the player settings
 that profile actually builds with, and the one place StreamingAssets is written.
@@ -37,7 +37,7 @@ public VRFBuildContext(BuildProfile profile, VRFBuildSettings settings, BuildRep
 | `settings` | [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings) | Framework settings of that profile. |
 | `report` | [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html) | Unity's build report, or null outside a build. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L81)
 
 ## Fields
 
@@ -51,7 +51,7 @@ public const string StreamingAssetsFolder = "Assets/StreamingAssets"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L73)
 
 ## Properties
 
@@ -70,7 +70,7 @@ public PlayerSettings PlayerSettings { get; }
 
 **Returns** [`PlayerSettings`](https://docs.unity3d.com/ScriptReference/PlayerSettings.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L108)
 
 ### Profile {#profile}
 
@@ -82,7 +82,7 @@ public BuildProfile Profile { get; }
 
 **Returns** [`BuildProfile`](https://docs.unity3d.com/ScriptReference/Build.Profile.BuildProfile.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L88)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L89)
 
 ### Report {#report}
 
@@ -94,7 +94,7 @@ public BuildReport Report { get; }
 
 **Returns** [`BuildReport`](https://docs.unity3d.com/ScriptReference/Build.Reporting.BuildReport.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L94)
 
 ### Settings {#settings}
 
@@ -106,7 +106,7 @@ public VRFBuildSettings Settings { get; }
 
 **Returns** [`VRFBuildSettings`](/api/vrframework-core-editors-build/VRFBuildSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L90)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L91)
 
 ### WrittenFiles {#writtenfiles}
 
@@ -118,7 +118,7 @@ public IReadOnlyList<string> WrittenFiles { get; }
 
 **Returns** `IReadOnlyList<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L97)
 
 ## Methods
 
@@ -139,7 +139,7 @@ public void SetPlayerSetting(string propertyName, string value, Action fallback)
 | `value` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `fallback` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L123)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L124)
 
 ### WriteStreamingAsset(string, string) {#writestreamingasset-string-string}
 
@@ -156,5 +156,5 @@ public void WriteStreamingAsset(string fileName, string contents)
 | `fileName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `contents` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSetting.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSetting.cs#L111)
 

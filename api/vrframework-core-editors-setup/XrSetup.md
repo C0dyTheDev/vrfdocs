@@ -8,7 +8,7 @@ description: 'Turns a project into an OpenXR one: XR Plug-in Management configur
 
 # XrSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/XrSetup.cs#L27)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/XrSetup.cs#L27)
 
 Turns a project into an OpenXR one: XR Plug-in Management configured for both platforms, the
 OpenXR loader assigned, the Meta feature set on, and the features the framework's hands and
@@ -50,7 +50,7 @@ public static int ApplyOpenXrValidationFixes(BuildTargetGroup group)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/XrSetup.cs#L296)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/XrSetup.cs#L296)
 
 ### ConfigureOpenXrFeatures() {#configureopenxrfeatures}
 
@@ -62,7 +62,7 @@ mode per platform.
 public static void ConfigureOpenXrFeatures()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/XrSetup.cs#L211)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/XrSetup.cs#L211)
 
 ### ConfigureXrManagement() {#configurexrmanagement}
 
@@ -73,5 +73,5 @@ registered where Unity looks for them, and that XR starts on its own.
 public static void ConfigureXrManagement()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/XrSetup.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/XrSetup.cs#L83)
 

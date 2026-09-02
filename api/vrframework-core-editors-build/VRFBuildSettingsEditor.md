@@ -8,7 +8,7 @@ description: 'Draws the VRF settings of one build profile: one collapsible secti
 
 # VRFBuildSettingsEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettingsEditor.cs#L19)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettingsEditor.cs#L19)
 
 Draws the VRF settings of one build profile: one collapsible section per setting, the
 problems they add up to, and the menu that adds another.
@@ -34,5 +34,5 @@ Draws the framework settings of a build profile, section by section.
 public override void OnInspectorGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildSettingsEditor.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildSettingsEditor.cs#L37)
 

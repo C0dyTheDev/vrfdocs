@@ -8,7 +8,7 @@ description: 'When a zone takes an object that is inside it.'
 
 # SnapWhen
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L19)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L19)
 
 When a zone takes an object that is inside it.
 
@@ -18,8 +18,17 @@ public enum SnapWhen
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `FromTheHand` | 0 | As soon as it is inside, out of the hand holding it. Putting something away is aiming it at its place and letting the place do the rest, which is the whole reason a holder exists. |
-| `WhenLetGo` | 1 | Only once the hand has let go of it inside the zone. For a holder something is carried past rather than to, where taking it out of the hand would be a theft rather than a convenience. |
+### FromTheHand {#fromthehand}
+
+`FromTheHand = 0`
+
+As soon as it is inside, out of the hand holding it. Putting something away is aiming it at
+its place and letting the place do the rest, which is the whole reason a holder exists.
+
+### WhenLetGo {#whenletgo}
+
+`WhenLetGo = 1`
+
+Only once the hand has let go of it inside the zone. For a holder something is carried past
+rather than to, where taking it out of the hand would be a theft rather than a convenience.
 

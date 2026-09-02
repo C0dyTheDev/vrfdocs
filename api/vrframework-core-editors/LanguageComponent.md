@@ -8,7 +8,7 @@ description: 'The translation picker itself: the button showing which entry a fi
 
 # LanguageComponent
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageComponent.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageComponent.cs#L15)
 
 The translation picker itself: the button showing which entry a field points at, the dialog it
 opens, and the shortcuts to the translation asset behind it. Shared by every drawer that edits
@@ -37,7 +37,7 @@ public LanguageComponent(LangType type, string label)
 | `type` | [`LangType`](/api/vrframework-core-runtime/LangType) | Which kind of translation asset it picks from. |
 | `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Label shown in front of the picker. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageComponent.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageComponent.cs#L45)
 
 ## Methods
 
@@ -55,9 +55,9 @@ public void Process(string languageElementID, Action<string, int> onChange, Acti
 | --- | --- | --- |
 | `languageElementID` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Translation ID the field currently holds. |
 | `onChange` | `Action<string, int>` | Called with the new ID and its position when the choice changes. |
-| `onOpenDialog` | `Action<int, List<(string guid, string name, int index)>, LangType, Action<int>>` |  |
+| `onOpenDialog` | `Action<int, List<(string guid, string name, int index)>, LangType, Action<int>>` | Called to open the picker, with the current position, the entries to choose from, what kind of entry they are, and what to call with the choice. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageComponent.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageComponent.cs#L81)
 
 ### SetActiveDialog(LanguageDialog) {#setactivedialog-languagedialog}
 
@@ -73,7 +73,7 @@ public void SetActiveDialog(LanguageDialog dialog)
 | --- | --- | --- |
 | `dialog` | [`LanguageDialog`](/api/vrframework-core-editors/LanguageDialog) | The dialog that has just opened. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageComponent.cs#L229)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageComponent.cs#L233)
 
 ### TryInit() {#tryinit}
 
@@ -83,5 +83,5 @@ Loads the entries of the translation asset if that has not happened yet.
 public void TryInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Language/LanguageComponent.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Language/LanguageComponent.cs#L54)
 

@@ -8,7 +8,7 @@ description: 'An asset holding translated audio: one entry per clip, each with a
 
 # LanguageAudioInstance
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L17)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L17)
 
 An asset holding translated audio: one entry per clip, each with a slot per language, plus the
 clips that are the same everywhere. Referenced by the Localization module and picked from by
@@ -35,7 +35,7 @@ public List<LanguageAudioList> languageEntries
 
 **Returns** `List<LanguageAudioList>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L22)
 
 ### untranslatedEntries {#untranslatedentries}
 
@@ -48,7 +48,7 @@ public List<UntranslatedAudioElement> untranslatedEntries
 
 **Returns** `List<UntranslatedAudioElement>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L24)
 
 ## Methods
 
@@ -61,5 +61,5 @@ clips already assigned. Run after a language is added, removed or reordered.
 public void CheckForLanguageChanges()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L77)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Audio/LanguageAudioInstance.cs#L77)
 

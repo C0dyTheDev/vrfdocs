@@ -8,7 +8,7 @@ description: 'Puts a localized sprite onto one material of the mesh it sits on, 
 
 # LocalizedTexture
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LocalizedTexture.cs#L11)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LocalizedTexture.cs#L11)
 
 Puts a localized sprite onto one material of the mesh it sits on, optionally as the emission
 map too, and puts the authored texture back when it is destroyed. Leaves the material alone

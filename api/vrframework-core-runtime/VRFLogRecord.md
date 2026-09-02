@@ -8,7 +8,7 @@ description: 'One framework log line, carrying everything a viewer needs to disp
 
 # VRFLogRecord
 
-**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L32)
+**Struct** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L32)
 
 One framework log line, carrying everything a viewer needs to display, filter and navigate
 back to it. The caller file, line and member are filled in by the compiler at the call site
@@ -44,7 +44,7 @@ public VRFLogRecord(VRFLogLevel level, string message, string channel, string me
 | `stackTrace` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Captured stack trace, or null. |
 | `context` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) | Object the line was logged against, or null. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L76)
 
 ## Fields
 
@@ -58,7 +58,7 @@ public readonly string Channel
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L41)
 
 ### Context {#context}
 
@@ -70,7 +70,7 @@ public readonly Object Context
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L62)
 
 ### File {#file}
 
@@ -82,7 +82,7 @@ public readonly string File
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L46)
 
 ### Frame {#frame}
 
@@ -94,7 +94,7 @@ public readonly int Frame
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L50)
 
 ### Level {#level}
 
@@ -106,7 +106,7 @@ public readonly VRFLogLevel Level
 
 **Returns** [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L35)
 
 ### Line {#line}
 
@@ -118,7 +118,7 @@ public readonly int Line
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L48)
 
 ### Member {#member}
 
@@ -130,7 +130,7 @@ public readonly string Member
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L44)
 
 ### Message {#message}
 
@@ -142,7 +142,7 @@ public readonly string Message
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L38)
 
 ### StackTrace {#stacktrace}
 
@@ -154,7 +154,7 @@ public readonly string StackTrace
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L59)
 
 ### Ticks {#ticks}
 
@@ -166,7 +166,7 @@ public readonly long Ticks
 
 **Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L56)
 
 ### Time {#time}
 
@@ -178,5 +178,5 @@ public readonly double Time
 
 **Returns** [`double`](https://learn.microsoft.com/dotnet/api/system.double)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L53)
 

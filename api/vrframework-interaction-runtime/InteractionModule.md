@@ -8,7 +8,7 @@ description: 'The interaction module.'
 
 # InteractionModule
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L10)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L10)
 
 The interaction module. Holds the scene's rig - camera, hands, vision fader - and hands those
 references to anything that asks, so nothing has to find the player rig by name. Also owns
@@ -34,7 +34,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L27)
 
 ### GrabHandL {#grabhandl}
 
@@ -46,7 +46,7 @@ public GameObject GrabHandL { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L32)
 
 ### GrabHandR {#grabhandr}
 
@@ -58,7 +58,7 @@ public GameObject GrabHandR { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L34)
 
 ### MainCamera {#maincamera}
 
@@ -70,7 +70,7 @@ public GameObject MainCamera { get; }
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L30)
 
 ### PlayerRecenter {#playerrecenter}
 
@@ -82,7 +82,7 @@ public PlayerRecenter PlayerRecenter { get; }
 
 **Returns** [`PlayerRecenter`](/api/vrframework-interaction-runtime/PlayerRecenter)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L23)
 
 ### VisionFader {#visionfader}
 
@@ -94,7 +94,7 @@ public VisionFader VisionFader { get; }
 
 **Returns** [`VisionFader`](/api/vrframework-core-runtime/VisionFader)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L36)
 
 ## Methods
 
@@ -106,7 +106,7 @@ Switches off the finger tracking components on both hands.
 public void DisableFingers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L39)
 
 ### EnableFingers() {#enablefingers}
 
@@ -116,7 +116,7 @@ Switches the finger tracking components on both hands back on.
 public void EnableFingers()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L48)
 
 ### OnCleanup() {#oncleanup}
 
@@ -126,7 +126,7 @@ Unregisters the module, unless another one has taken over the service in the mea
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L120)
 
 ### OnInit() {#oninit}
 
@@ -137,7 +137,7 @@ was left unassigned, since each of those fails silently later.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L81)
 
 ### OnRecenterRequested(PlayerRecenter, bool) {#onrecenterrequested-playerrecenter-boolean}
 
@@ -154,7 +154,7 @@ protected virtual void OnRecenterRequested(PlayerRecenter target, bool doRotatio
 | `target` | [`PlayerRecenter`](/api/vrframework-interaction-runtime/PlayerRecenter) | Recenter point to move the player to. |
 | `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face the target's forward direction. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L136)
 
 ### OnRigBound() {#onrigbound}
 
@@ -164,7 +164,7 @@ Override to finish a custom rig setup once the serialized references are in plac
 protected virtual void OnRigBound()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L115)
 
 ### Recenter(Component, bool) {#recenter-component-boolean}
 
@@ -181,7 +181,7 @@ public void Recenter(Component target, bool doRotation)
 | `target` | [`Component`](https://docs.unity3d.com/ScriptReference/Component.html) | A [`PlayerRecenter`](/api/vrframework-interaction-runtime/InteractionModule#playerrecenter) to recenter on, or null to reuse the last one. |
 | `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face the target's forward direction. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L61)
 
 ### SetCurrentRecenter(PlayerRecenter) {#setcurrentrecenter-playerrecenter}
 
@@ -197,5 +197,5 @@ public void SetCurrentRecenter(PlayerRecenter target)
 | --- | --- | --- |
 | `target` | [`PlayerRecenter`](/api/vrframework-interaction-runtime/PlayerRecenter) | Recenter point to remember. Null is ignored. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/InteractionModule.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/InteractionModule.cs#L128)
 

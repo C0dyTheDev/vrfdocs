@@ -8,7 +8,7 @@ description: 'Objects that rename themselves with the hierarchy, such as Progres
 
 # RenamableBehaviourDefaultEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFDefaultEditors.cs#L41)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L42)
 
 Objects that rename themselves with the hierarchy, such as ProgressBlock.
 

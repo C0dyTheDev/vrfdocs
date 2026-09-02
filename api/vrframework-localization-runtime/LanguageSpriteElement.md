@@ -8,7 +8,7 @@ description: 'One language''s version of a translated sprite.'
 
 # LanguageSpriteElement
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L11)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L11)
 
 One language's version of a translated sprite.
 
@@ -35,7 +35,7 @@ public LanguageSpriteElement(Language language)
 | --- | --- | --- |
 | `language` | [`Language`](/api/vrframework-localization-runtime/Language) | Language this entry belongs to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L21)
 
 ## Fields
 
@@ -50,7 +50,7 @@ public Sprite element
 
 **Returns** [`Sprite`](https://docs.unity3d.com/ScriptReference/Sprite.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L17)
 
 ### language {#language}
 
@@ -63,5 +63,5 @@ public Language language
 
 **Returns** [`Language`](/api/vrframework-localization-runtime/Language)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/Classes/Data/Sprite/LanguageSpriteElement.cs#L15)
 

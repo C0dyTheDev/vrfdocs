@@ -8,7 +8,7 @@ description: 'Which part a grip point plays when the object is held by two hands
 
 # GripRole
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPoint.cs#L34)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L34)
 
 Which part a grip point plays when the object is held by two hands.
 
@@ -18,9 +18,26 @@ public enum GripRole
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Either` | 0 | No part in particular. An object whose points all say this is held the way two hands hold a barrel: where it points follows the line between the grips, and neither hand outranks the other. |
-| `Primary` | 1 | Decides where the object is and how it is rolled - the grip of a rifle, the handle of a drill. |
-| `Secondary` | 2 | Steadies and aims, and takes its position from the primary - the foregrip of a rifle.  Held on its own it stands in as the primary, because an object with a hand on it has to be somewhere. It does so weakly: a rifle held by the foregrip alone is heavy and hard to aim rather than crisp, which is the honest answer to holding a two-handed thing one-handed. |
+### Either {#either}
+
+`Either = 0`
+
+No part in particular. An object whose points all say this is held the way two hands hold a
+barrel: where it points follows the line between the grips, and neither hand outranks the other.
+
+### Primary {#primary}
+
+`Primary = 1`
+
+Decides where the object is and how it is rolled - the grip of a rifle, the handle of a drill.
+
+### Secondary {#secondary}
+
+`Secondary = 2`
+
+Steadies and aims, and takes its position from the primary - the foregrip of a rifle.
+
+Held on its own it stands in as the primary, because an object with a hand on it has to be
+somewhere. It does so weakly: a rifle held by the foregrip alone is heavy and hard to aim
+rather than crisp, which is the honest answer to holding a two-handed thing one-handed.
 

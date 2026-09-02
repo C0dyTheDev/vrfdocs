@@ -8,7 +8,7 @@ description: 'One entry of a SpriteChanger/api/vrframework-core-runtime/SpriteCh
 
 # SpriteVariant
 
-**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L117)
+**Class** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L117)
 
 One entry of a [`SpriteChanger`](/api/vrframework-core-runtime/SpriteChanger): a translation ID of a localized sprite.
 
@@ -29,7 +29,7 @@ Builds an empty entry.
 public SpriteVariant()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L128)
 
 ## Fields
 
@@ -45,7 +45,7 @@ public string name
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L121)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L121)
 
 ### sprite {#sprite}
 
@@ -59,5 +59,5 @@ public string sprite
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Graphics/SpriteChanger.cs#L125)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Graphics/SpriteChanger.cs#L125)
 

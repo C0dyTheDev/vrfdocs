@@ -8,7 +8,7 @@ description: 'Raises an event once the player has looked at this object for long
 
 # CameraLookCheck
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CameraLookCheck.cs#L11)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraLookCheck.cs#L11)
 
 Raises an event once the player has looked at this object for long enough - used to confirm the
 player has actually seen something before a step continues.
@@ -32,7 +32,7 @@ public UnityEvent OnLookingFinished
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CameraLookCheck.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraLookCheck.cs#L22)
 
 ## Methods
 
@@ -45,5 +45,5 @@ every frame; public so a project can drive the check itself.
 public void CheckIfCameraIsLooking()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/CameraLookCheck.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraLookCheck.cs#L84)
 

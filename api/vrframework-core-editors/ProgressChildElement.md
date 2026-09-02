@@ -8,7 +8,7 @@ description: 'A graph element laid out by its parent rather than positioned on t
 
 # ProgressChildElement
 
-**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressChildElement.cs#L8)
+**Class** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressChildElement.cs#L8)
 
 A graph element laid out by its parent rather than positioned on the canvas itself - headers,
 port holders and the like.
@@ -33,7 +33,7 @@ Builds a child element.
 public ProgressChildElement()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressChildElement.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressChildElement.cs#L18)
 
 ### ProgressChildElement(string) {#ctor-string}
 
@@ -49,5 +49,5 @@ public ProgressChildElement(string hint)
 | --- | --- | --- |
 | `hint` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Hint shown while the pointer is over it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/ProgressChildElement.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/ProgressChildElement.cs#L12)
 

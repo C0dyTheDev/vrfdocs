@@ -8,7 +8,7 @@ description: 'What a SnapDropZone/api/vrframework-interaction-runtime/SnapDropZo
 
 # SnapAccepts
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/SnapDropZone.cs#L9)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/SnapDropZone.cs#L9)
 
 What a [`SnapDropZone`](/api/vrframework-interaction-runtime/SnapDropZone) will take.
 
@@ -18,8 +18,15 @@ public enum SnapAccepts
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Object` | 0 | One particular object, named on the zone. |
-| `Tag` | 1 | Anything carrying a given tag. |
+### Object {#object}
+
+`Object = 0`
+
+One particular object, named on the zone.
+
+### Tag {#tag}
+
+`Tag = 1`
+
+Anything carrying a given tag.
 

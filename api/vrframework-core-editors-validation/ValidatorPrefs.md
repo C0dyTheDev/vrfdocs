@@ -8,7 +8,7 @@ description: 'What the Validator window remembers between sessions.'
 
 # ValidatorPrefs
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L10)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L10)
 
 What the Validator window remembers between sessions. These are one developer's viewing
 preferences rather than project settings, so they live in EditorPrefs and never touch the repo.
@@ -31,7 +31,7 @@ public static bool AutoRevalidate { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L36)
 
 ### CollapsedGroups {#collapsedgroups}
 
@@ -43,7 +43,7 @@ public static IEnumerable<string> CollapsedGroups { get; set; }
 
 **Returns** `IEnumerable<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L57)
 
 ### Scope {#scope}
 
@@ -55,7 +55,7 @@ public static int Scope { get; set; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L43)
 
 ### Search {#search}
 
@@ -67,7 +67,7 @@ public static string Search { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L50)
 
 ### ShowError {#showerror}
 
@@ -79,7 +79,7 @@ public static bool ShowError { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L15)
 
 ### ShowInfo {#showinfo}
 
@@ -91,7 +91,7 @@ public static bool ShowInfo { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L29)
 
 ### ShowWarning {#showwarning}
 
@@ -103,5 +103,5 @@ public static bool ShowWarning { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidatorPrefs.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidatorPrefs.cs#L22)
 

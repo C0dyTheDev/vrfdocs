@@ -8,7 +8,7 @@ description: 'How the setup produces its object.'
 
 # ComponentSetupAsset.SetupKind
 
-**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L40)
+**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L36)
 
 How the setup produces its object.
 
@@ -18,8 +18,15 @@ public enum ComponentSetupAsset.SetupKind
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Prefab` | 1 | Drops a prefab into the scene. |
-| `ScriptPack` | 0 | Builds an object out of the listed scripts and components. |
+### Prefab {#prefab}
+
+`Prefab = 1`
+
+Drops a prefab into the scene.
+
+### ScriptPack {#scriptpack}
+
+`ScriptPack = 0`
+
+Builds an object out of the listed scripts and components.
 

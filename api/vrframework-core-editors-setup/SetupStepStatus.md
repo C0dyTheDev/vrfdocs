@@ -8,7 +8,7 @@ description: 'Where one step of a sequence has got to.'
 
 # SetupStepStatus
 
-**Enum** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/SetupRunner.cs#L77)
+**Enum** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L77)
 
 Where one step of a sequence has got to.
 
@@ -18,11 +18,33 @@ public enum SetupStepStatus
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Done` | 2 | Ran and reported nothing. |
-| `Failed` | 3 | Threw, timed out, or reported a problem. The sequence carried on past it. |
-| `Pending` | 0 | Its turn has not come yet. |
-| `Running` | 1 | Running now, or waiting for the work it handed to Unity to finish. |
-| `Skipped` | 4 | Never ran, because the sequence was aborted or cancelled before reaching it. |
+### Done {#done}
+
+`Done = 2`
+
+Ran and reported nothing.
+
+### Failed {#failed}
+
+`Failed = 3`
+
+Threw, timed out, or reported a problem. The sequence carried on past it.
+
+### Pending {#pending}
+
+`Pending = 0`
+
+Its turn has not come yet.
+
+### Running {#running}
+
+`Running = 1`
+
+Running now, or waiting for the work it handed to Unity to finish.
+
+### Skipped {#skipped}
+
+`Skipped = 4`
+
+Never ran, because the sequence was aborted or cancelled before reaching it.
 

@@ -8,7 +8,7 @@ description: 'One authored hand shape at one GripPoint/api/vrframework-interacti
 
 # GripPose
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L27)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L27)
 
 One authored hand shape at one [`GripPoint`](/api/vrframework-interaction-runtime/GripPoint): where the hand sits relative to the point,
 and what its fingers do once it is there.
@@ -46,7 +46,7 @@ public List<PosedBone> bones
 
 **Returns** `List<PosedBone>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L43)
 
 ### hand {#hand}
 
@@ -58,7 +58,7 @@ public HandType hand
 
 **Returns** [`HandType`](/api/vrframework-interaction-runtime/HandType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L31)
 
 ### isSet {#isset}
 
@@ -70,7 +70,7 @@ public bool isSet
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L34)
 
 ### wristPosition {#wristposition}
 
@@ -82,7 +82,7 @@ public Vector3 wristPosition
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L37)
 
 ### wristRotation {#wristrotation}
 
@@ -94,7 +94,7 @@ public Quaternion wristRotation
 
 **Returns** [`Quaternion`](https://docs.unity3d.com/ScriptReference/Quaternion.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L40)
 
 ## Properties
 
@@ -108,7 +108,7 @@ public Pose Wrist { get; }
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L46)
 
 ## Methods
 
@@ -127,7 +127,7 @@ public void SetWrist(Transform frame, Transform wrist)
 | `frame` | [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) | The grip point this shape belongs to. |
 | `wrist` | [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) | The hand's wrist, in world space. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L51)
 
 ### ShapeInto(Dictionary\<string, Quaternion>) {#shapeinto-quaternion}
 
@@ -143,7 +143,7 @@ public void ShapeInto(Dictionary<string, Quaternion> into)
 | --- | --- | --- |
 | `into` | `Dictionary<string, Quaternion>` | Filled with the rotations, by bone name. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L73)
 
 ### WristOn(Transform) {#wriston-transform}
 
@@ -161,5 +161,5 @@ public Pose WristOn(Transform frame)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html) - The world pose of the wrist.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/GripPose.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPose.cs#L62)
 

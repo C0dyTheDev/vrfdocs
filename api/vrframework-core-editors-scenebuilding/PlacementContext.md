@@ -8,7 +8,7 @@ description: 'Everything an item needs to know about the place it is being dropp
 
 # PlacementContext
 
-**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L43)
+**Struct** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L43)
 
 Everything an item needs to know about the place it is being dropped into.
 
@@ -28,7 +28,7 @@ public GameObject DropUpon
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L49)
 
 ### HasWorldPosition {#hasworldposition}
 
@@ -40,7 +40,7 @@ public bool HasWorldPosition
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L57)
 
 ### Origin {#origin}
 
@@ -52,7 +52,7 @@ public PlacementOrigin Origin
 
 **Returns** [`PlacementOrigin`](/api/vrframework-core-editors-scenebuilding/PlacementOrigin)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L46)
 
 ### Parent {#parent}
 
@@ -64,7 +64,7 @@ public Transform Parent
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L52)
 
 ### WorldPosition {#worldposition}
 
@@ -76,7 +76,7 @@ public Vector3 WorldPosition
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L55)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L55)
 
 ## Methods
 
@@ -90,5 +90,5 @@ public static PlacementContext FromWindow()
 
 **Returns** [`PlacementContext`](/api/vrframework-core-editors-scenebuilding/PlacementContext) - The placement context.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Core/SceneBuilderTypes.cs#L61)
 

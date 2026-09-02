@@ -8,7 +8,7 @@ description: 'Owns the platform session: build settings, incoming platform data,
 
 # PlatformManager
 
-**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L24)
+**Class** · namespace `VRFramework.Platform.Runtime` · assembly `VRFramework.Platform.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L24)
 
 Owns the platform session: build settings, incoming platform data, parameters,
 the max game time budget and the outgoing reports.
@@ -38,7 +38,7 @@ public BuildSettings buildSettings
 
 **Returns** [`BuildSettings`](/api/vrframework-core-runtime/BuildSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L33)
 
 ### completed {#completed}
 
@@ -50,7 +50,7 @@ public bool completed
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L42)
 
 ### config {#config}
 
@@ -62,7 +62,7 @@ public PlatformConfig config
 
 **Returns** [`PlatformConfig`](/api/vrframework-platform-runtime/PlatformConfig)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L27)
 
 ### gameTime {#gametime}
 
@@ -74,7 +74,7 @@ public float gameTime
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L40)
 
 ### maxGameTime {#maxgametime}
 
@@ -86,7 +86,7 @@ public float maxGameTime
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L38)
 
 ### platformData {#platformdata}
 
@@ -99,7 +99,7 @@ public PlatformData platformData
 
 **Returns** [`PlatformData`](/api/vrframework-platform-runtime/PlatformData)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L35)
 
 ### reportSettings {#reportsettings}
 
@@ -111,7 +111,7 @@ public ReportSettings reportSettings
 
 **Returns** [`ReportSettings`](/api/vrframework-platform-runtime/ReportSettings)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L30)
 
 ## Properties
 
@@ -125,7 +125,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L56)
 
 ### Reports {#reports}
 
@@ -137,7 +137,7 @@ public ReportQueue Reports { get; }
 
 **Returns** [`ReportQueue`](/api/vrframework-platform-runtime/ReportQueue)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L52)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L52)
 
 ## Methods
 
@@ -149,7 +149,7 @@ Ends the session as passed, for a UnityEvent that has to finish the app early.
 public void ApplicationEnd()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L426)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L426)
 
 ### ApplicationEndC(bool) {#applicationendc-boolean}
 
@@ -167,7 +167,7 @@ public IEnumerator ApplicationEndC(bool gameTimeRanOut = false)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L435)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L435)
 
 ### ApplyParameterDefaults() {#applyparameterdefaults}
 
@@ -177,7 +177,7 @@ Seeds every parameter with its configured default until the platform overrides i
 protected virtual void ApplyParameterDefaults()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L175)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L175)
 
 ### BuildEnvelope(string, int) {#buildenvelope-string-int32}
 
@@ -199,7 +199,7 @@ protected virtual string BuildEnvelope(string reportBody, int ordinal)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L511)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L511)
 
 ### CompleteSession(bool) {#completesession-boolean}
 
@@ -216,7 +216,7 @@ public void CompleteSession(bool success)
 | --- | --- | --- |
 | `success` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the session counts as passed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L130)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L130)
 
 ### ContributeSessionValues() {#contributesessionvalues}
 
@@ -229,7 +229,7 @@ with [`SetValue(string, object)`](/api/vrframework-core-runtime/PlatformReport#s
 protected virtual void ContributeSessionValues()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L464)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L464)
 
 ### GetLanguage() {#getlanguage}
 
@@ -242,7 +242,7 @@ public string GetLanguage()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The language name, or null when neither names one.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L109)
 
 ### GetParameter(string) {#getparameter-string}
 
@@ -260,7 +260,7 @@ public string GetParameter(string name)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The value, or null when no such parameter is defined.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L87)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L87)
 
 ### LoadBuildSettings() {#loadbuildsettings}
 
@@ -272,7 +272,7 @@ protected virtual IEnumerator LoadBuildSettings()
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L314)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L314)
 
 ### OnCleanup() {#oncleanup}
 
@@ -282,7 +282,7 @@ Drops the progress and minigame subscriptions and unregisters the module.
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L292)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L292)
 
 ### OnInit() {#oninit}
 
@@ -294,7 +294,7 @@ down in favour of the one already running.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L143)
 
 ### OnTimeLimitExceeded() {#ontimelimitexceeded}
 
@@ -304,7 +304,7 @@ The session ran past its time budget. Records the outcome as "not in time" and e
 protected virtual void OnTimeLimitExceeded()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L229)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L229)
 
 ### ParsePlatformData() {#parseplatformdata}
 
@@ -316,7 +316,7 @@ protected virtual bool ParsePlatformData()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the app was launched by the platform
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L350)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L350)
 
 ### SendReport() {#sendreport}
 
@@ -328,7 +328,7 @@ sends them one at a time in the order they were made.
 public void SendReport()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L477)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L477)
 
 ### SetInfoText(string) {#setinfotext-string}
 
@@ -344,7 +344,7 @@ public void SetInfoText(string text)
 | --- | --- | --- |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text to report. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L120)
 
 ### StartMeasuringTime() {#startmeasuringtime}
 
@@ -352,7 +352,7 @@ public void SetInfoText(string text)
 public void StartMeasuringTime()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L58)
 
 ### ThisSceneEnd() {#thissceneend}
 
@@ -363,7 +363,7 @@ so the platform never hears the scene is finished before it has the results.
 public void ThisSceneEnd()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L525)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L525)
 
 ## Events
 
@@ -377,7 +377,7 @@ public event Action CompletionFinished
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L82)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L82)
 
 ### CompletionStarted {#completionstarted}
 
@@ -389,7 +389,7 @@ public event Action CompletionStarted
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L80)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L80)
 
 ### SessionInitialized {#sessioninitialized}
 
@@ -401,5 +401,5 @@ public event Action SessionInitialized
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Platform/PlatformManager.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Platform/PlatformManager.cs#L78)
 

@@ -8,7 +8,7 @@ description: 'The fingers of a hand, as flags, so a grabbable can ask for any co
 
 # FingerType
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FingerController.cs#L50)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FingerController.cs#L50)
 
 The fingers of a hand, as flags, so a grabbable can ask for any combination of them.
 
@@ -19,13 +19,45 @@ public enum FingerType
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `All` | Thumb \| Index \| Middle \| Ring \| Little | Every finger. |
-| `Index` | 2 | The index finger. |
-| `Little` | 16 | The little finger. |
-| `Middle` | 4 | The middle finger. |
-| `None` | 0 | No finger. |
-| `Ring` | 8 | The ring finger. |
-| `Thumb` | 1 | The thumb. |
+### All {#all}
+
+`All = Thumb | Index | Middle | Ring | Little`
+
+Every finger.
+
+### Index {#index}
+
+`Index = 2`
+
+The index finger.
+
+### Little {#little}
+
+`Little = 16`
+
+The little finger.
+
+### Middle {#middle}
+
+`Middle = 4`
+
+The middle finger.
+
+### None {#none}
+
+`None = 0`
+
+No finger.
+
+### Ring {#ring}
+
+`Ring = 8`
+
+The ring finger.
+
+### Thumb {#thumb}
+
+`Thumb = 1`
+
+The thumb.
 

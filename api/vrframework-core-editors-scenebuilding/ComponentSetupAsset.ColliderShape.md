@@ -8,7 +8,7 @@ description: 'The collider a script pack setup adds, if any.'
 
 # ComponentSetupAsset.ColliderShape
 
-**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L25)
+**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L21)
 
 The collider a script pack setup adds, if any.
 
@@ -18,11 +18,33 @@ public enum ComponentSetupAsset.ColliderShape
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Box` | 1 | A box collider. |
-| `Capsule` | 3 | A capsule collider. |
-| `Mesh` | 4 | A mesh collider. |
-| `None` | 0 | No collider. |
-| `Sphere` | 2 | A sphere collider. |
+### Box {#box}
+
+`Box = 1`
+
+A box collider.
+
+### Capsule {#capsule}
+
+`Capsule = 3`
+
+A capsule collider.
+
+### Mesh {#mesh}
+
+`Mesh = 4`
+
+A mesh collider.
+
+### None {#none}
+
+`None = 0`
+
+No collider.
+
+### Sphere {#sphere}
+
+`Sphere = 2`
+
+A sphere collider.
 

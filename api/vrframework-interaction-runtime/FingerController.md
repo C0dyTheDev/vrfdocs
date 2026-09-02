@@ -8,7 +8,7 @@ description: 'Sits on one finger of the hand and reports to GrabHand/api/vrframe
 
 # FingerController
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FingerController.cs#L9)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FingerController.cs#L9)
 
 Sits on one finger of the hand and reports to [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) when that finger touches
 an object within reach, which is what the physical grab test is built on.
@@ -31,5 +31,5 @@ public FingerType fingerType
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FingerController.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FingerController.cs#L12)
 

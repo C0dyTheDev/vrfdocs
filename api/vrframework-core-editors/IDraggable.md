@@ -8,7 +8,7 @@ description: 'An element of the progress graph the user can drag about the canva
 
 # IDraggable
 
-**Interface** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/IDraggable.cs#L5)
+**Interface** · namespace `VRFramework.Core.Editors` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/IDraggable.cs#L5)
 
 An element of the progress graph the user can drag about the canvas.
 
@@ -34,7 +34,7 @@ void Move(Vector2 delta)
 | --- | --- | --- |
 | `delta` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | How far to move it, in canvas pixels. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/IDraggable.cs#L9)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/IDraggable.cs#L9)
 
 ### SetPosition(Vector2) {#setposition-vector2}
 
@@ -50,5 +50,5 @@ void SetPosition(Vector2 pos)
 | --- | --- | --- |
 | `pos` | [`Vector2`](https://docs.unity3d.com/ScriptReference/Vector2.html) | Where to put it, in canvas coordinates. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Graph/Element/Abstract/IDraggable.cs#L12)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Graph/Element/Abstract/IDraggable.cs#L12)
 

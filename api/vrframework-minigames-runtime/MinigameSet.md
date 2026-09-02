@@ -8,7 +8,7 @@ description: 'The parts a minigame session is made of, and how far through them 
 
 # MinigameSet
 
-**Class** · namespace `VRFramework.Minigames.Runtime` · assembly `VRFramework.Minigames.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L11)
+**Class** · namespace `VRFramework.Minigames.Runtime` · assembly `VRFramework.Minigames.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L11)
 
 The parts a minigame session is made of, and how far through them it is. An asset rather than a
 component, so progress survives the scene load between parts.
@@ -33,7 +33,7 @@ public Minigame currentMinigame
 
 **Returns** [`Minigame`](/api/vrframework-minigames-runtime/Minigame)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L18)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L18)
 
 ### currentPart {#currentpart}
 
@@ -45,7 +45,7 @@ public int currentPart
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L20)
 
 ### parts {#parts}
 
@@ -57,5 +57,5 @@ public Minigame[] parts
 
 **Returns** `Minigame[]`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Minigames/MinigameSet.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Minigames/MinigameSet.cs#L15)
 

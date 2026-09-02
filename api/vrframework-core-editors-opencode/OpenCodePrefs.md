@@ -8,7 +8,7 @@ description: 'What the OpenCode window remembers between editor sessions.'
 
 # OpenCodePrefs
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L9)
 
 What the OpenCode window remembers between editor sessions. These are one developer's
 choices - which model they like, where their binary lives - rather than project settings,
@@ -32,7 +32,7 @@ public static string Agent { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L21)
 
 ### AutoStartServer {#autostartserver}
 
@@ -44,7 +44,7 @@ public static bool AutoStartServer { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L42)
 
 ### ExecutablePath {#executablepath}
 
@@ -56,7 +56,7 @@ public static string ExecutablePath { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L14)
 
 ### LastSessionId {#lastsessionid}
 
@@ -68,7 +68,7 @@ public static string LastSessionId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L73)
 
 ### ModelId {#modelid}
 
@@ -80,7 +80,7 @@ public static string ModelId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L35)
 
 ### ProviderId {#providerid}
 
@@ -92,7 +92,7 @@ public static string ProviderId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L28)
 
 ### RefreshAssetsWhenIdle {#refreshassetswhenidle}
 
@@ -105,7 +105,7 @@ public static bool RefreshAssetsWhenIdle { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L66)
 
 ### ShowReasoning {#showreasoning}
 
@@ -117,7 +117,7 @@ public static bool ShowReasoning { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L49)
 
 ### ShowToolCalls {#showtoolcalls}
 
@@ -129,5 +129,5 @@ public static bool ShowToolCalls { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodePrefs.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L56)
 

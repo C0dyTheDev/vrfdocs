@@ -8,7 +8,7 @@ description: 'Finds the opencode executable on this machine.'
 
 # OpenCodeLocator
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeLocator.cs#L13)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeLocator.cs#L13)
 
 Finds the opencode executable on this machine.
 npm installs a shim next to the real binary rather than the binary itself - on Windows the
@@ -32,7 +32,7 @@ Forgets the cached path, so a fresh install is picked up without an editor resta
 public static void ClearCache()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeLocator.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeLocator.cs#L45)
 
 ### Resolve() {#resolve}
 
@@ -46,5 +46,5 @@ public static string Resolve()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/OpenCode/OpenCodeLocator.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeLocator.cs#L36)
 

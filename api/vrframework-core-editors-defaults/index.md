@@ -45,8 +45,10 @@ sidebar_position: 0
 | [`SceneChangerEditor`](/api/vrframework-core-editors-defaults/SceneChangerEditor) | Default framework inspector for SceneChanger/api/vrframework-core-runtime/SceneChanger. |
 | [`SceneCompletionEditor`](/api/vrframework-core-editors-defaults/SceneCompletionEditor) | Default framework inspector for SceneCompletion/api/vrframework-core-runtime/SceneCompletion. |
 | [`SceneCutEditor`](/api/vrframework-core-editors-defaults/SceneCutEditor) | Default framework inspector for SceneCut/api/vrframework-core-runtime/SceneCut. |
+| [`SpeechAudioInputEditor`](/api/vrframework-core-editors-defaults/SpeechAudioInputEditor) | Default framework inspector for every SpeechAudioInput/api/vrframework-speech-runtime/SpeechAudioInput. |
+| [`SpeechPhraseEditor`](/api/vrframework-core-editors-defaults/SpeechPhraseEditor) | Default framework inspector for SpeechPhrase/api/vrframework-speech-runtime/SpeechPhrase. |
 | [`SpriteChangerEditor`](/api/vrframework-core-editors-defaults/SpriteChangerEditor) | Default framework inspector for SpriteChanger/api/vrframework-core-runtime/SpriteChanger. |
-| [`StreamManagerEditor`](/api/vrframework-core-editors-defaults/StreamManagerEditor) | Default framework inspector for StreamManager/api/vrframework-streaming-runtime/StreamManager. |
+| [`TeleportArcEditor`](/api/vrframework-core-editors-defaults/TeleportArcEditor) | Default framework inspector for TeleportArc/api/vrframework-movement-runtime/TeleportArc. |
 | [`VisionFaderEditor`](/api/vrframework-core-editors-defaults/VisionFaderEditor) | Default framework inspector for VisionFader/api/vrframework-core-runtime/VisionFader. |
 | [`VRCoreEditor`](/api/vrframework-core-editors-defaults/VRCoreEditor) | Default framework inspector for VRCore/api/vrframework-core-runtime/VRCore. |
 | [`VRModuleDefaultEditor`](/api/vrframework-core-editors-defaults/VRModuleDefaultEditor) | Every framework module - AudioManager, PlatformManager, InteractionModule and so on. |

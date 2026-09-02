@@ -8,7 +8,7 @@ description: 'How the generated fist is shaped.'
 
 # FistSettings
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L7)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L7)
 
 How the generated fist is shaped. Rarely touched: the fist is a bound, not a pose.
 
@@ -32,7 +32,7 @@ public float closure
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L11)
 
 ### jointAngles {#jointangles}
 
@@ -53,7 +53,7 @@ public float[] jointAngles
 
 **Returns** [`float[]`](https://learn.microsoft.com/dotnet/api/system.single[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L27)
 
 ### palmClearance {#palmclearance}
 
@@ -68,7 +68,7 @@ public float palmClearance
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L46)
 
 ### steps {#steps}
 
@@ -81,7 +81,7 @@ public int steps
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L49)
 
 ### thumbAngles {#thumbangles}
 
@@ -97,5 +97,5 @@ public float[] thumbAngles
 
 **Returns** [`float[]`](https://learn.microsoft.com/dotnet/api/system.single[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L37)
 

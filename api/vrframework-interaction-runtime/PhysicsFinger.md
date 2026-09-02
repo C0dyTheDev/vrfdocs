@@ -8,7 +8,7 @@ description: 'One finger''s own body: a small rigidbody chasing the tip of a tra
 
 # PhysicsFinger
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L18)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L18)
 
 One finger's own body: a small rigidbody chasing the tip of a tracked finger, which the world can
 stop and which can push things about.
@@ -41,7 +41,7 @@ public FingerType finger
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L23)
 
 ### hand {#hand}
 
@@ -53,7 +53,7 @@ public HandType hand
 
 **Returns** [`HandType`](/api/vrframework-interaction-runtime/HandType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L26)
 
 ## Properties
 
@@ -67,7 +67,7 @@ public Collider Against { get; }
 
 **Returns** [`Collider`](https://docs.unity3d.com/ScriptReference/Collider.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L64)
 
 ### Body {#body}
 
@@ -79,7 +79,7 @@ public Rigidbody Body { get; }
 
 **Returns** [`Rigidbody`](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L70)
 
 ### ContactNormal {#contactnormal}
 
@@ -91,7 +91,7 @@ public Vector3 ContactNormal { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L61)
 
 ### HasTarget {#hastarget}
 
@@ -103,7 +103,7 @@ public bool HasTarget { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L76)
 
 ### Lag {#lag}
 
@@ -115,7 +115,7 @@ public float Lag { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L79)
 
 ### Push {#push}
 
@@ -130,7 +130,7 @@ public Vector3 Push { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L88)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L88)
 
 ### Reach {#reach}
 
@@ -142,7 +142,7 @@ public float Reach { get; set; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L94)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L94)
 
 ### Separation {#separation}
 
@@ -154,7 +154,7 @@ public float Separation { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L67)
 
 ### Strength {#strength}
 
@@ -166,7 +166,7 @@ public float Strength { get; set; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L97)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L97)
 
 ### Target {#target}
 
@@ -178,7 +178,7 @@ public Pose Target { get; }
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L73)
 
 ### Tip {#tip}
 
@@ -190,7 +190,7 @@ public Vector3 Tip { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L91)
 
 ### Touching {#touching}
 
@@ -203,7 +203,7 @@ public bool Touching { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L58)
 
 ## Methods
 
@@ -221,7 +221,7 @@ public void Aim(Pose target)
 | --- | --- | --- |
 | `target` | [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html) | Where the segment should be, already carried onto the physics hand. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L214)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L214)
 
 ### Forget() {#forget}
 
@@ -231,7 +231,7 @@ Forgets what the finger was resting on.
 public void Forget()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L133)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L133)
 
 ### Snap() {#snap}
 
@@ -241,7 +241,7 @@ Puts the finger on its target at once, for a hand that has just started or stopp
 public void Snap()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L221)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L221)
 
 ### Step(float) {#step-single}
 
@@ -257,7 +257,7 @@ public void Step(float dt)
 | --- | --- | --- |
 | `dt` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Length of the step, in seconds. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L241)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L241)
 
 ### Wake() {#wake}
 
@@ -267,5 +267,5 @@ Reads the body and sets it up. Needed outside play mode, where Awake never ran.
 public void Wake()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PhysicsFinger.cs#L195)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsFinger.cs#L195)
 

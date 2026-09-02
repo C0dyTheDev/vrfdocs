@@ -8,7 +8,7 @@ description: 'Puts a localized sprite onto the SpriteRenderer it sits on, and pu
 
 # LocalizedSprite
 
-**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LocalizedSprite.cs#L10)
+**Class** · namespace `VRFramework.Localization.Runtime` · assembly `VRFramework.Localization.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LocalizedSprite.cs#L10)
 
 Puts a localized sprite onto the SpriteRenderer it sits on, and puts the authored one back when
 it is destroyed. Leaves the renderer alone when the scene has no Localization module.
@@ -36,5 +36,5 @@ protected virtual void ApplySprite(Sprite value)
 | --- | --- | --- |
 | `value` | [`Sprite`](https://docs.unity3d.com/ScriptReference/Sprite.html) | The resolved sprite, or null when the slot is empty. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Language/LocalizedSprite.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Language/LocalizedSprite.cs#L48)
 

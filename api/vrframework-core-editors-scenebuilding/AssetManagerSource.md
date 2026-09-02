@@ -8,7 +8,7 @@ description: 'The organisation''s Unity Asset Manager library, browsed in place 
 
 # AssetManagerSource
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L36)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L36)
 
 The organisation's Unity Asset Manager library, browsed in place and imported on demand.
 Two packages do the work between them, because neither can do it alone: Unity Cloud Assets
@@ -45,7 +45,7 @@ public string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L83)
 
 ### Id {#id}
 
@@ -57,7 +57,7 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L81)
 
 ### IsConfigured {#isconfigured}
 
@@ -71,7 +71,7 @@ public bool IsConfigured { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L92)
 
 ### Order {#order}
 
@@ -83,7 +83,7 @@ public int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L85)
 
 ### StatusLabel {#statuslabel}
 
@@ -95,7 +95,7 @@ public string StatusLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L95)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L95)
 
 ## Methods
 
@@ -109,7 +109,7 @@ public IEnumerable<AssetEntry> GetEntries()
 
 **Returns** `IEnumerable<AssetEntry>` - One entry per listable cloud asset.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L107)
 
 ### GetThumbnail(AssetEntry) {#getthumbnail-assetentry}
 
@@ -127,7 +127,7 @@ public Texture2D GetThumbnail(AssetEntry entry)
 
 **Returns** [`Texture2D`](https://docs.unity3d.com/ScriptReference/Texture2D.html) - The thumbnail, or null while it is on its way.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L137)
 
 ### IsResolving(AssetEntry) {#isresolving-assetentry}
 
@@ -145,7 +145,7 @@ public bool IsResolving(AssetEntry entry)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the import runs.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L154)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L154)
 
 ### IsThumbnailPending(AssetEntry) {#isthumbnailpending-assetentry}
 
@@ -163,7 +163,7 @@ public bool IsThumbnailPending(AssetEntry entry)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the thumbnail is on its way.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L146)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L146)
 
 ### Refresh() {#refresh}
 
@@ -173,7 +173,7 @@ Drops what was read from the library and reads it again.
 public void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L114)
 
 ### Resolve(AssetEntry) {#resolve-assetentry}
 
@@ -193,7 +193,7 @@ public Object Resolve(AssetEntry entry)
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) - The imported asset, or null when it is not in the project yet.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L129)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L129)
 
 ### ResolveAsync(AssetEntry, Action\<Object>) {#resolveasync-assetentry-object}
 
@@ -212,5 +212,5 @@ public void ResolveAsync(AssetEntry entry, Action<Object> completed)
 | `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry to import. |
 | `completed` | `Action<Object>` | Called with the imported asset, or null when the import failed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L166)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L166)
 

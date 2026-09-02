@@ -8,7 +8,7 @@ description: 'What a set-up project looks like, in one place.'
 
 # FrameworkDefaults
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L8)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L8)
 
 What a set-up project looks like, in one place. [`ProjectSetup`](/api/vrframework-core-editors-setup/ProjectSetup) writes these values
 and the validator's project rules check for them, so they have to agree: when the two each kept
@@ -33,7 +33,7 @@ public const string BuildSettingsPath = "Assets/StreamingAssets/BuildSettings.js
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L20)
 
 ### BuildSettingsTemplate {#buildsettingstemplate}
 
@@ -45,7 +45,7 @@ public const string BuildSettingsTemplate = "{\"isProductionBuild\":false}"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L26)
 
 ### ExecutionOrders {#executionorders}
 
@@ -57,7 +57,7 @@ public static readonly (string script, int order)[] ExecutionOrders
 
 **Returns** `(string script, int order)[]`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L62)
 
 ### FixedTimestep {#fixedtimestep}
 
@@ -69,7 +69,7 @@ public const float FixedTimestep = 0.008333
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L11)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L11)
 
 ### IgnoredCollisions {#ignoredcollisions}
 
@@ -82,7 +82,7 @@ public static readonly (string a, string b, string consequence)[] IgnoredCollisi
 
 **Returns** `(string a, string b, string consequence)[]`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L38)
 
 ### MyDataPath {#mydatapath}
 
@@ -94,7 +94,7 @@ public const string MyDataPath = "Assets/StreamingAssets/MyData.json"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L23)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L23)
 
 ### RequiredCollisions {#requiredcollisions}
 
@@ -112,7 +112,7 @@ public static readonly (string a, string b, string consequence)[] RequiredCollis
 
 **Returns** `(string a, string b, string consequence)[]`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L54)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L54)
 
 ### RequiredLayers {#requiredlayers}
 
@@ -124,7 +124,7 @@ public static readonly string[] RequiredLayers
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L32)
 
 ### RequiredTags {#requiredtags}
 
@@ -136,7 +136,7 @@ public static readonly string[] RequiredTags
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L29)
 
 ### SolverIterations {#solveriterations}
 
@@ -148,7 +148,7 @@ public const int SolverIterations = 10
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L14)
 
 ### StreamingAssetsFolder {#streamingassetsfolder}
 
@@ -160,5 +160,5 @@ public const string StreamingAssetsFolder = "Assets/StreamingAssets"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Setup/FrameworkDefaults.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/FrameworkDefaults.cs#L17)
 

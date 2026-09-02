@@ -8,7 +8,7 @@ description: 'Builds a closed-hand pose from the shape of the hand itself, so no
 
 # FistGenerator
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L74)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L74)
 
 Builds a closed-hand pose from the shape of the hand itself, so nothing has to be authored for a
 grabbable to be auto posed.
@@ -57,7 +57,7 @@ public static List<PosedBone> Generate(HandSkeleton hand, IReadOnlyDictionary<st
 
 **Returns** `List<PosedBone>` - The closed shape, or an empty list when there are no fingers to curl.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L98)
 
 ### Generate(HandVisualSolver, IReadOnlyDictionary\<string, Quaternion>, FistSettings) {#generate-handvisualsolver-quaternion-fistsettings}
 
@@ -77,5 +77,5 @@ public static List<PosedBone> Generate(HandVisualSolver solver, IReadOnlyDiction
 
 **Returns** `List<PosedBone>` - The closed shape, or an empty list when the hand has no finger maps.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/FistGenerator.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FistGenerator.cs#L81)
 

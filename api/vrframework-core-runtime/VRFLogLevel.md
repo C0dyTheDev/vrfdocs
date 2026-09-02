@@ -8,7 +8,7 @@ description: 'Severity of a framework log line.'
 
 # VRFLogLevel
 
-**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Logging/VRFLog.cs#L11)
+**Enum** · namespace `VRFramework.Core.Runtime` · assembly `VRFramework.Core.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L11)
 
 Severity of a framework log line. Debug sits last rather than first so the numbers already
 written into a persisted log buffer keep meaning what they meant.
@@ -19,10 +19,28 @@ public enum VRFLogLevel
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Debug` | 3 | The framework talking to whoever is working on the framework. Only exists in a build compiled with VRF_DEBUG - see [`LogDebug(string, string, Object, string, string, int, string)`](/api/vrframework-core-runtime/Util#logdebug-string-string-object-string-string-int32-string). |
-| `Error` | 2 | Something failed and needs attention. |
-| `Info` | 0 | The framework reporting ordinary progress. |
-| `Warning` | 1 | Something is off, but the framework carried on. |
+### Debug {#debug}
+
+`Debug = 3`
+
+The framework talking to whoever is working on the framework. Only exists in a build
+compiled with VRF_DEBUG - see [`LogDebug(string, string, Object, string, string, int, string)`](/api/vrframework-core-runtime/Util#logdebug-string-string-object-string-string-int32-string).
+
+### Error {#error}
+
+`Error = 2`
+
+Something failed and needs attention.
+
+### Info {#info}
+
+`Info = 0`
+
+The framework reporting ordinary progress.
+
+### Warning {#warning}
+
+`Warning = 1`
+
+Something is off, but the framework carried on.
 

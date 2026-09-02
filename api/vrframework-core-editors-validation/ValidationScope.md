@@ -8,7 +8,7 @@ description: 'What part of the project a rule looks at.'
 
 # ValidationScope
 
-**Enum** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Validation/ValidationIssue.cs#L19)
+**Enum** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/ValidationIssue.cs#L19)
 
 What part of the project a rule looks at.
 
@@ -18,8 +18,15 @@ public enum ValidationScope
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Project` | 0 | Project-wide settings: build target, XR, rendering, tags, physics, player settings. |
-| `Scene` | 1 | Whatever the currently open scene contains. |
+### Project {#project}
+
+`Project = 0`
+
+Project-wide settings: build target, XR, rendering, tags, physics, player settings.
+
+### Scene {#scene}
+
+`Scene = 1`
+
+Whatever the currently open scene contains.
 

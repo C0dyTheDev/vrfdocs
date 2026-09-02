@@ -8,7 +8,7 @@ description: 'One line in the log list.'
 
 # VRFLogRow
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L33)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L33)
 
 One line in the log list. Rows are recycled by the ListView, so everything is built once in
 the constructor and only re-pointed at another entry in [`Bind(VRFLogEntry, VRFLogRowContext, int, VRFLogEntry)`](/api/vrframework-core-editors-logging/VRFLogRow#bind-vrflogentry-vrflogrowcontext-int32-vrflogentry).
@@ -31,7 +31,7 @@ Builds an empty row, ready to be bound to an entry.
 public VRFLogRow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L44)
 
 ## Properties
 
@@ -45,7 +45,7 @@ public VRFLogEntry Entry { get; }
 
 **Returns** [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L82)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L82)
 
 ## Methods
 
@@ -66,5 +66,5 @@ public void Bind(VRFLogEntry entry, VRFLogRowContext context, int collapsed, VRF
 | `collapsed` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) | How many identical lines this row stands for. |
 | `previous` | [`VRFLogEntry`](/api/vrframework-core-editors-logging/VRFLogEntry) | The line above this one, needed for the delta time column. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogRow.cs#L89)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogRow.cs#L89)
 

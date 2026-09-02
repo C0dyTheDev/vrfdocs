@@ -8,7 +8,7 @@ description: 'A place to put the player.'
 
 # PlayerRecenter
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L13)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L13)
 
 A place to put the player. Moves the XR rig so the headset ends up at this transform, optionally
 matching its rotation and its height, fading the view out and back in around the move.
@@ -18,6 +18,8 @@ public class PlayerRecenter : MonoBehaviour
 ```
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) ← [`Component`](https://docs.unity3d.com/ScriptReference/Component.html) ← [`Behaviour`](https://docs.unity3d.com/ScriptReference/Behaviour.html) ← [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) ← `PlayerRecenter`
+
+**Derived:** [`TeleportPoint`](/api/vrframework-movement-runtime/TeleportPoint)
 
 ## Fields
 
@@ -31,7 +33,7 @@ public UnityEvent AfterFadeOut
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L53)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L83)
 
 ### AfterRecenter {#afterrecenter}
 
@@ -43,7 +45,7 @@ public UnityEvent AfterRecenter
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L81)
 
 ### BeforeRecenter {#beforerecenter}
 
@@ -55,7 +57,7 @@ public UnityEvent BeforeRecenter
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L79)
 
 ### setPlayerHeight {#setplayerheight}
 
@@ -68,9 +70,71 @@ public bool setPlayerHeight
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L49)
+
+## Properties
+
+### FadesOnRecenter {#fadesonrecenter}
+
+Whether the view is faded out and back in around the move. A scripted recenter fades,
+because the player did not ask to be moved and has no idea it is coming. Somewhere the
+player chose to go, and watched an arc land on, does not need it - and the fade costs
+three seconds.
+
+```csharp
+protected virtual bool FadesOnRecenter { get; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L37)
+
+### RecenterFacing {#recenterfacing}
+
+Which way the player ends up looking once a recenter has turned them. Yaw only, because
+the rig is turned around the origin's up rather than tilted: a marker left with some
+pitch or roll still lands the player level, so `transform.forward`would point
+somewhere the player never looks.
+
+```csharp
+public Vector3 RecenterFacing { get; }
+```
+
+**Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L45)
+
+### TrackingSpace {#trackingspace}
+
+The rig being moved. A recenter that lives in a prefab cannot have the scene's rig
+assigned in the inspector, so an unassigned one is looked up once and remembered.
+
+```csharp
+protected XROrigin TrackingSpace { get; }
+```
+
+**Returns** `XROrigin`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L21)
 
 ## Methods
+
+### OnDrawGizmos() {#ondrawgizmos}
+
+Draws an arrow along [`RecenterFacing`](/api/vrframework-interaction-runtime/PlayerRecenter#recenterfacing), so a point that will spin the player
+to face a wall is visible while authoring rather than in the headset. Drawn whether or
+not the point is selected: a marker turned the wrong way looks exactly like a right one,
+and several of them are only comparable side by side.
+
+It shows the facing of a recenter that turns the player - the startup recenter, and
+a scripted one asked to rotate. A player who walks here by teleport keeps whichever
+way they were already looking.
+
+```csharp
+protected virtual void OnDrawGizmos()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L265)
 
 ### Recenter(bool) {#recenter-boolean}
 
@@ -86,7 +150,7 @@ public void Recenter(bool doRotation)
 | --- | --- | --- |
 | `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face this transform's forward direction. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L96)
 
 ### RecenterCor(bool, bool) {#recentercor-boolean-boolean}
 
@@ -105,7 +169,7 @@ public IEnumerator RecenterCor(bool doRotation, bool overrideSetPlayerHeight = f
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the view has faded back in.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L143)
 
 ### RecenterCorStart(bool) {#recentercorstart-boolean}
 
@@ -127,5 +191,5 @@ public IEnumerator RecenterCorStart(bool doRotation)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the view has faded in.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Runtime/Scripts/Interaction/PlayerRecenter.cs#L161)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L193)
 

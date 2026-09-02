@@ -74,6 +74,7 @@ sidebar_position: 0
 | [`ShowOnlyDrawer`](/api/vrframework-core-editors/ShowOnlyDrawer) | Makes the property uneditable from the Editor |
 | [`SnapDropZoneEditor`](/api/vrframework-core-editors/SnapDropZoneEditor) | Editor for the SnapDropZone script. |
 | [`StepHighlight`](/api/vrframework-core-editors/StepHighlight) | The marker showing where a dragged step would land if it were dropped now. |
+| [`TeleportPointEditor`](/api/vrframework-core-editors/TeleportPointEditor) | Editor for the TeleportPoint script. |
 | [`ToggleSelectEditor`](/api/vrframework-core-editors/ToggleSelectEditor) | Editor for ToggleSelect script. |
 | [`TriggerActionEditor`](/api/vrframework-core-editors/TriggerActionEditor) | Editor for TriggerAction script. |
 | [`TriggerStayEditor`](/api/vrframework-core-editors/TriggerStayEditor) | Editor for TriggerStay script. |
@@ -83,7 +84,6 @@ sidebar_position: 0
 | [`UntranslatedTextElementDrawer`](/api/vrframework-core-editors/UntranslatedTextElementDrawer) | Draws an untranslated text entry. |
 | [`VRFEditorIcons`](/api/vrframework-core-editors/VRFEditorIcons) | The framework's one cache of Unity's built-in editor icons, shared by every VRF window. |
 | [`VRFrameworkDebugMode`](/api/vrframework-core-editors/VRFrameworkDebugMode) | Debug Mode is the VRF_DEBUG scripting define and nothing else. |
-| [`VRFrameworkSettings`](/api/vrframework-core-editors/VRFrameworkSettings) | This is a scriptable object for global VRF settings. |
 | [`VRFrameworkSettingsProvider`](/api/vrframework-core-editors/VRFrameworkSettingsProvider) | The VR Framework pages in Project Settings. |
 | [`WavUtility`](/api/vrframework-core-editors/WavUtility) | WavUtility for Audio Clip Editor - can read and write audio files |
 

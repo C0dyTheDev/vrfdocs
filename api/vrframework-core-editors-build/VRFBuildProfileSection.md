@@ -8,7 +8,7 @@ description: 'Registers the VRF settings as a section in Unity''s own Build Prof
 
 # VRFBuildProfileSection
 
-**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfileSection.cs#L47)
+**Class** · namespace `VRFramework.Core.Editors.Build` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfileSection.cs#L47)
 
 Registers the VRF settings as a section in Unity's own Build Profiles window, so a profile's
 framework configuration sits next to its Player Settings and Quality rather than in a
@@ -56,7 +56,7 @@ public static bool Installed { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfileSection.cs#L60)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfileSection.cs#L60)
 
 ### Unavailable {#unavailable}
 
@@ -68,5 +68,5 @@ public static string Unavailable { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Build/VRFBuildProfileSection.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Build/VRFBuildProfileSection.cs#L63)
 

@@ -8,7 +8,7 @@ description: 'How the time column is written.'
 
 # VRFLogTimeMode
 
-**Enum** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/Logger/VRFLogEntry.cs#L8)
+**Enum** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L8)
 
 How the time column is written.
 
@@ -18,11 +18,33 @@ public enum VRFLogTimeMode
 
 ## Fields
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `Clock` | 1 | Wall clock time of the line. |
-| `Delta` | 3 | Time since the line before it. |
-| `Frame` | 4 | Frame number the line was logged on. |
-| `None` | 0 | No time column. |
-| `SinceStartup` | 2 | Seconds since the editor started playing. |
+### Clock {#clock}
+
+`Clock = 1`
+
+Wall clock time of the line.
+
+### Delta {#delta}
+
+`Delta = 3`
+
+Time since the line before it.
+
+### Frame {#frame}
+
+`Frame = 4`
+
+Frame number the line was logged on.
+
+### None {#none}
+
+`None = 0`
+
+No time column.
+
+### SinceStartup {#sincestartup}
+
+`SinceStartup = 2`
+
+Seconds since the editor started playing.
 

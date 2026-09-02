@@ -8,7 +8,7 @@ description: 'The drawing vocabulary shared by every VRF inspector: one header s
 
 # VRFEditorGUI
 
-**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L11)
+**Class** · namespace `VRFramework.Core.Editors.UI` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L11)
 
 The drawing vocabulary shared by every VRF inspector: one header strip, collapsible section
 boxes, and the notices that explain a multi-object selection. Editors call these instead of
@@ -44,7 +44,7 @@ public static VRFEditorGUI.BandRegionScope BandRegion(float x, float width)
 
 **Returns** [`VRFEditorGUI.BandRegionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.BandRegionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L33)
 
 ### ButtonRow(params GUIContent[]) {#buttonrow-guicontent}
 
@@ -62,7 +62,7 @@ public static int ButtonRow(params GUIContent[] buttons)
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L198)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L242)
 
 ### Divider(float) {#divider-single}
 
@@ -78,7 +78,7 @@ public static void Divider(float spacing = 4)
 | --- | --- | --- |
 | `spacing` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L151)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L151)
 
 ### DrawPill(string, Color) {#drawpill-string-color}
 
@@ -95,7 +95,7 @@ public static void DrawPill(string text, Color color)
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `color` | [`Color`](https://docs.unity3d.com/ScriptReference/Color.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L115)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L115)
 
 ### EventsSection(string, string, bool) {#eventssection-string-string-boolean}
 
@@ -116,7 +116,7 @@ public static VRFEditorGUI.SectionScope EventsSection(string prefsKey, string ti
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L144)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L144)
 
 ### HeaderBar(string, string, int) {#headerbar-string-string-int32}
 
@@ -139,7 +139,7 @@ public static void HeaderBar(string title, string subtitle, int selectionCount =
 | `subtitle` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `selectionCount` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L47)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L47)
 
 ### Hint(string) {#hint-string}
 
@@ -155,7 +155,7 @@ public static void Hint(string text)
 | --- | --- | --- |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L190)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L188)
 
 ### MixedValueNotice(string) {#mixedvaluenotice-string}
 
@@ -172,7 +172,25 @@ public static void MixedValueNotice(string fieldLabel)
 | --- | --- | --- |
 | `fieldLabel` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L163)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L163)
+
+### Notice(string, MessageType) {#notice-string-messagetype}
+
+Message box for something the user should know about what is in front of them - the
+framework's `HelpBox(string, MessageType)`.
+
+```csharp
+public static void Notice(string message, MessageType type = MessageType.Info)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `message` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `type` | [`MessageType`](https://docs.unity3d.com/ScriptReference/MessageType.html) |  |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L199)
 
 ### Section(string, string, bool) {#section-string-string-boolean}
 
@@ -193,7 +211,7 @@ public static VRFEditorGUI.SectionScope Section(string prefsKey, string title, b
 
 **Returns** [`VRFEditorGUI.SectionScope`](/api/vrframework-core-editors-ui/VRFEditorGUI.SectionScope)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L135)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L135)
 
 ### TagField(SerializedProperty, string) {#tagfield-serializedproperty-string}
 
@@ -212,5 +230,5 @@ public static void TagField(SerializedProperty property, string label)
 | `property` | [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) |  |
 | `label` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/interaction/physics-hold/Editor/UI/VRFEditorGUI.cs#L175)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFEditorGUI.cs#L173)
 
