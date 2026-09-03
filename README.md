@@ -127,6 +127,8 @@ resolved in this order:
 
 `api/` is fully owned by the script and wiped on every run - fix a description
 by editing the XML doc comment in the C# source, then re-run `npm run gen:api`.
+The one exception is `api/bug-report.js` (see [Bug reports](#bug-reports)),
+which is listed in `OUT_DOCS_KEEP` and survives a regeneration.
 
 The generated Markdown **is committed**, exactly like `tutorials/`: the Vercel
 build has no access to the Unity project, so `npm run build` must find the pages
@@ -134,6 +136,45 @@ already in the repo. Regenerate and commit whenever the public API changes.
 
 Sidebar order comes from `NAMESPACE_ORDER` in `scripts/gen-api.mjs`; everything
 not listed follows alphabetically.
+
+## Bug reports
+
+`/report-bug` (`src/pages/report-bug.tsx`) is a form that mails a report to the
+team. Nothing is stored - the inbox is the tracker.
+
+`api/bug-report.js` is the Vercel serverless function behind it. It validates
+the submission, formats it as an email and posts it to
+[Resend](https://resend.com). It sits in `api/` because Vercel only picks up
+functions from the repository-root `api/` directory; the docs plugin globs
+`.md`/`.mdx`, so it ignores the file.
+
+### One-time setup
+
+1. Create a Resend account with the address that should receive the reports and
+   generate an API key.
+2. In the Vercel project, add the environment variables (Production, Preview and
+   Development):
+
+   | Variable | Required | Default |
+   | --- | --- | --- |
+   | `RESEND_API_KEY` | yes | - |
+   | `BUG_REPORT_TO` | no | `kulhanek@cie-group.cz` |
+   | `BUG_REPORT_FROM` | no | `VRF Bug Reports <onboarding@resend.dev>` |
+
+3. Redeploy.
+
+The default sender is Resend's shared `onboarding@resend.dev`, which can only
+deliver to the Resend account owner. To send anywhere else - a shared mailbox, a
+second recipient - verify `cie-group.cz` in Resend and set `BUG_REPORT_FROM` to
+an address on it.
+
+Without `RESEND_API_KEY` the endpoint answers 500 and the form shows "Bug
+reporting is not configured yet"; `npm start` does not run functions at all, so
+use `vercel dev` (with a `.env` file) to exercise the form locally.
+
+Spam defence is a honeypot field plus a per-instance burst limit. Both are
+cheap; if reports start arriving from bots, put Vercel's WAF or a captcha in
+front of the endpoint.
 
 ## Design
 
@@ -184,3 +225,5 @@ build does not depend on it.
   it off for `tutorials/`: those files are generated and the next sync
   overwrites any edit
 - the navbar and footer still link to GitLab while the source lives on GitHub
+- set `RESEND_API_KEY` in the Vercel project, or `/report-bug` cannot send
+  anything (see [Bug reports](#bug-reports))

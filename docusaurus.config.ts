@@ -139,6 +139,11 @@ const config: Config = {
           label: 'API',
         },
         {
+          to: '/report-bug',
+          label: 'Report a bug',
+          position: 'right',
+        },
+        {
           href: 'https://git.cie-group.cz/vr-framework',
           label: 'GitLab',
           position: 'right',
@@ -163,6 +168,7 @@ const config: Config = {
         {
           title: 'More',
           items: [
+            {label: 'Report a bug', to: '/report-bug'},
             {
               label: 'VR Framework on GitLab',
               href: 'https://git.cie-group.cz/vr-framework',

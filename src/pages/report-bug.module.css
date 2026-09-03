@@ -1,0 +1,161 @@
+/**
+ * Bug report form. Laid out as a filled-in inspection sheet: hairline boxes on
+ * paper, uppercase annotation labels, no rounded corners anywhere.
+ * Palette and drafting metrics come from src/css/custom.css.
+ */
+
+.page {
+  max-width: 56rem;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.title {
+  margin: 0.6rem 0 1rem;
+}
+
+.lead {
+  max-width: 42rem;
+  color: var(--vrf-graphite);
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.field label {
+  font-family: var(--vrf-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--vrf-pencil);
+}
+
+.required {
+  color: var(--vrf-ink-strong);
+  border-bottom: var(--vrf-hairline) solid var(--vrf-rule);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  color: var(--vrf-ink);
+  background: var(--vrf-paper-raised);
+  border: var(--vrf-hairline) solid var(--vrf-rule);
+  border-radius: 0;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 5.5rem;
+  line-height: 1.6;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--vrf-ink-strong);
+  box-shadow: var(--vrf-sheet-shadow);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--vrf-pencil-soft);
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--vrf-pencil);
+}
+
+.fieldset {
+  margin: 0;
+  padding: 1.5rem;
+  border: var(--vrf-hairline) solid var(--vrf-rule-soft);
+}
+
+.fieldset legend {
+  padding: 0 0.5rem;
+  font-family: var(--vrf-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--vrf-pencil);
+}
+
+/* Off-screen rather than display:none - bots skip hidden inputs. */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.error {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: var(--vrf-heavy) solid var(--vrf-ink-strong);
+  background: var(--vrf-paper-sunken);
+  color: var(--vrf-ink-strong);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  border-top: var(--vrf-hairline) solid var(--vrf-rule);
+}
+
+.actions .hint {
+  flex: 1 1 18rem;
+}
+
+.done {
+  max-width: 36rem;
+  padding: 3rem 0 4rem;
+}
+
+.done .lead {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .row,
+  .row3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fieldset {
+    padding: 1.25rem 1rem;
+  }
+}

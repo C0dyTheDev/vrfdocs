@@ -48,6 +48,13 @@ const SITE_ROOT = path.resolve(__dirname, '..');
 
 /** Output location inside the site, and the route the docs plugin serves it on. */
 const OUT_DOCS = path.join(SITE_ROOT, 'api');
+/**
+ * Files in `api/` that this script does not own. Vercel only serves functions
+ * from the repository-root `api/` directory, so the bug-report endpoint has to
+ * live alongside the generated reference - and must survive a regeneration.
+ */
+const OUT_DOCS_KEEP = new Set(['bug-report.js']);
+
 const ROUTE_BASE = '/api';
 
 /** Scratch directory for the docfx config and its YAML output. Gitignored. */
@@ -710,6 +717,16 @@ function renderIndexPage(namespaces, model) {
 // Main
 // ---------------------------------------------------------------------------
 
+
+/** Removes everything this script generated, keeping `OUT_DOCS_KEEP` intact. */
+function clearGeneratedDocs() {
+  if (!fs.existsSync(OUT_DOCS)) return;
+  for (const entry of fs.readdirSync(OUT_DOCS)) {
+    if (OUT_DOCS_KEEP.has(entry)) continue;
+    fs.rmSync(path.join(OUT_DOCS, entry), {recursive: true, force: true});
+  }
+}
+
 function main() {
   const config = readConfig();
   const sourceRoot = resolveSourceRoot(config);
@@ -755,7 +772,7 @@ function main() {
       return rank(a.name) - rank(b.name) || a.name.localeCompare(b.name);
     });
 
-  fs.rmSync(OUT_DOCS, {recursive: true, force: true});
+  clearGeneratedDocs();
   fs.mkdirSync(OUT_DOCS, {recursive: true});
   fs.writeFileSync(path.join(OUT_DOCS, 'index.md'), renderIndexPage(namespaces, model), 'utf8');
 
