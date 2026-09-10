@@ -48,7 +48,7 @@ Before configuring your Git client, you need to generate an authentication token
 3. In the left menu, select **Access Tokens**.
 4. Click **Add new token**:
    * **Token Name:** `"REPLACE_THIS_WITH_YOUR_SURNAME"_PAT`
-   * **Expiration Date:** leave blank.
+   * **Expiration Date:** maximum a year from now, set as long as you can.
    * **Select Scopes:** Check `read_repository`, `write_repository`, and `api`.
 5. Click **Create personal access token**.
 >**IMPORTANT:** Copy the generated token immediately and save it in a secure location (e.g., password manager). *You will not be able to view it again!*
@@ -65,7 +65,9 @@ While Git can be used via command line, we use **Fork** as our visual Git client
    * **You can safely ignore or skip this prompt.** Fork offers an unlimited evaluation period with full functionality.
 3. **Configuring Git Identity:**
    * In Fork settings (`File` → `Settings` → **Git** tab), set your **Name** and **Work Email** (should match your GitLab email).
-1. **Connect GitLab Account (Using PAT):**
+4. **Setting Default Project Directory:**
+   * Set the default folder path where your Unity projects will be stored locally (e.g., `C:\Projects\Unity\` or `~/Projects/Unity/`).
+5. **Connect GitLab Account (Using PAT):**
    * Open Fork and go to **File** → **Accounts...** (or `Ctrl + Shift + A` / `Cmd + ,` → Accounts).
    * Click **Add Account** and select **GitLab Server**.
 <img src="/img/vault/Pasted%20image%2020260728112546.png" alt="Pasted image 20260728112546" width="661" />
@@ -73,8 +75,6 @@ While Git can be used via command line, we use **Fork** as our visual Git client
 ![Pasted image 20260728112709](/img/vault/Pasted%20image%2020260728112709.png)
    * Paste your **Personal Access Token (PAT)** created in Step 2.
    * Fork will authenticate and securely store your credentials globally.
-5. **Setting Default Project Directory:**
-   * Set the default folder path where your Unity projects will be stored locally (e.g., `C:\Projects\Unity\` or `~/Projects/Unity/`).
 
 >**Tip**: Keep project paths clean, short, and free of special characters or spaces.
 
