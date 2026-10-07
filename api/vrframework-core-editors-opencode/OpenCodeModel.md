@@ -8,7 +8,7 @@ description: 'One selectable model, flattened out of the provider list for the d
 
 # OpenCodeModel
 
-**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L231)
+**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L522)
 
 One selectable model, flattened out of the provider list for the dropdown.
 
@@ -18,12 +18,12 @@ public readonly struct OpenCodeModel
 
 ## Constructors
 
-### OpenCodeModel(string, string, string, string) {#ctor-string-string-string-string}
+### OpenCodeModel(string, string, string, string, IReadOnlyList\<string>, long) {#ctor-string-string-string-string-string-int64}
 
 Builds a model entry.
 
 ```csharp
-public OpenCodeModel(string providerId, string modelId, string providerName, string modelName)
+public OpenCodeModel(string providerId, string modelId, string providerName, string modelName, IReadOnlyList<string> variants, long contextLimit)
 ```
 
 **Parameters**
@@ -34,10 +34,24 @@ public OpenCodeModel(string providerId, string modelId, string providerName, str
 | `modelId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID of the model. |
 | `providerName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Provider name as shown. |
 | `modelName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Model name as shown. |
+| `variants` | `IReadOnlyList<string>` | Reasoning-effort presets the model offers. |
+| `contextLimit` | [`long`](https://learn.microsoft.com/dotnet/api/system.int64) | Size of the model's context window in tokens, 0 when unknown. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L238)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L531)
 
 ## Properties
+
+### ContextLimit {#contextlimit}
+
+Size of the context window in tokens, 0 when the server did not say.
+
+```csharp
+public long ContextLimit { get; }
+```
+
+**Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L553)
 
 ### DisplayPath {#displaypath}
 
@@ -49,7 +63,7 @@ public string DisplayPath { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L256)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L556)
 
 ### ModelId {#modelid}
 
@@ -61,7 +75,7 @@ public string ModelId { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L249)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L545)
 
 ### ModelName {#modelname}
 
@@ -73,7 +87,7 @@ public string ModelName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L253)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L549)
 
 ### ProviderId {#providerid}
 
@@ -85,7 +99,7 @@ public string ProviderId { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L247)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L543)
 
 ### ProviderName {#providername}
 
@@ -97,5 +111,17 @@ public string ProviderName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L251)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L547)
+
+### Variants {#variants}
+
+Reasoning-effort presets, e.g. low / medium / high. Empty when the model has none.
+
+```csharp
+public IReadOnlyList<string> Variants { get; }
+```
+
+**Returns** `IReadOnlyList<string>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L551)
 

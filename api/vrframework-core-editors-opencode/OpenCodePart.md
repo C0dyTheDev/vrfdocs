@@ -8,7 +8,7 @@ description: 'A run of assistant output: prose, hidden reasoning, or one tool in
 
 # OpenCodePart
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L358)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L625)
 
 A run of assistant output: prose, hidden reasoning, or one tool invocation.
 
@@ -35,7 +35,7 @@ public OpenCodePart(string id, string type)
 | `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID the server gave the part. |
 | `type` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Kind of part, e.g. text or a tool call. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L363)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L630)
 
 ## Properties
 
@@ -44,12 +44,12 @@ public OpenCodePart(string id, string type)
 Set on file parts - an attachment that went out with the message.
 
 ```csharp
-public string FileName { get; set; }
+public string FileName { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L391)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L663)
 
 ### Id {#id}
 
@@ -61,19 +61,31 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L370)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L637)
 
 ### Input {#input}
 
-Input the tool was called with.
+Arguments the tool was called with.
 
 ```csharp
-public string Input { get; set; }
+public JObject Input { get; }
+```
+
+**Returns** `JObject`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L650)
+
+### InputJson {#inputjson}
+
+The tool's input, formatted for reading.
+
+```csharp
+public string InputJson { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L383)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L687)
 
 ### IsFailed {#isfailed}
 
@@ -85,7 +97,7 @@ public bool IsFailed { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L402)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L677)
 
 ### IsImage {#isimage}
 
@@ -97,7 +109,7 @@ public bool IsImage { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L397)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L672)
 
 ### IsRunning {#isrunning}
 
@@ -109,101 +121,146 @@ public bool IsRunning { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L400)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L675)
 
 ### IsSynthetic {#issynthetic}
 
 Injected by the server rather than written by the user; not shown.
 
 ```csharp
-public bool IsSynthetic { get; set; }
+public bool IsSynthetic { get; }
 ```
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L388)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L660)
+
+### Metadata {#metadata}
+
+What the tool reported about itself: a unified diff for edits, live output for a shell
+command still running.
+
+```csharp
+public JObject Metadata { get; }
+```
+
+**Returns** `JObject`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L657)
 
 ### Mime {#mime}
 
 MIME type, for a file part.
 
 ```csharp
-public string Mime { get; set; }
+public string Mime { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L394)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L666)
 
 ### Output {#output}
 
-Output the tool returned.
+Output the tool returned, or its error.
 
 ```csharp
-public string Output { get; set; }
+public string Output { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L385)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L652)
+
+### Revision {#revision}
+
+Bumped on every change, so the window only redraws parts that moved.
+
+```csharp
+public int Revision { get; }
+```
+
+**Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L669)
 
 ### Status {#status}
 
-State of the part: pending, running, done or error.
+State of the part: pending, running, completed or error.
 
 ```csharp
-public string Status { get; set; }
+public string Status { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L379)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L646)
 
 ### Text {#text}
 
 Text of the part, as far as it has streamed in.
 
 ```csharp
-public string Text { get; set; }
+public string Text { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L374)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L641)
 
 ### Title {#title}
 
 One line describing the part, as shown in the transcript.
 
 ```csharp
-public string Title { get; set; }
+public string Title { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L381)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L648)
 
 ### Tool {#tool}
 
 Name of the tool, for a tool call part.
 
 ```csharp
-public string Tool { get; set; }
+public string Tool { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L377)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L644)
 
 ### Type {#type}
 
 Kind of part, e.g. text or a tool call.
 
 ```csharp
-public string Type { get; set; }
+public string Type { get; }
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L372)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L639)
+
+## Methods
+
+### InputString(string) {#inputstring-string}
+
+A short string from the tool's input, e.g. the path for a read or the command for bash.
+
+```csharp
+public string InputString(string key)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `key` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L680)
 

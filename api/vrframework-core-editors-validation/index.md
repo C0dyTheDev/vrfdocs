@@ -34,6 +34,7 @@ sidebar_position: 0
 | [`ProgressLayoutRule`](/api/vrframework-core-editors-validation/ProgressLayoutRule) | Where blocks and steps sit in the hierarchy, and whether their object names still match the order the manager reads them in. |
 | [`ProgressReachabilityRule`](/api/vrframework-core-editors-validation/ProgressReachabilityRule) | Walks the scenario the way the manager does - start block, then whatever each step queues - and reports the blocks nothing can reach. |
 | [`ProgressSetupRule`](/api/vrframework-core-editors-validation/ProgressSetupRule) | Checks that the scene has a scenario and a progress module wired to a start block. |
+| [`RecenterWatchRule`](/api/vrframework-core-editors-validation/RecenterWatchRule) | A recenter watch that cannot do its job: not on a wrist bone, so it never moves with the hand; on the wrong hand's wrist for what it says it is worn on; with no trigger to read the |
 | [`RenderingRule`](/api/vrframework-core-editors-validation/RenderingRule) | Checks the render pipeline settings VR needs to run smoothly. |
 | [`ReportContributorRule`](/api/vrframework-core-editors-validation/ReportContributorRule) | What this scene adds to the session report. |
 | [`SceneCameraRule`](/api/vrframework-core-editors-validation/SceneCameraRule) | Checks the scene's cameras: that there is one, and that it is the rig's. |

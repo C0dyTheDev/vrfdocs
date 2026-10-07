@@ -25,7 +25,8 @@ public class GrabHand : MonoBehaviour
 
 ### candidateObjectToGrab {#candidateobjecttograb}
 
-The grabbables currently within reach, i.e. touching this hand's trigger.
+The grabbables currently within reach, i.e. overlapping this hand's trigger. Rebuilt every
+step by `GatherCandidates()`; not kept by trigger events.
 
 ```csharp
 public List<GrabbableObject> candidateObjectToGrab
@@ -33,7 +34,7 @@ public List<GrabbableObject> candidateObjectToGrab
 
 **Returns** `List<GrabbableObject>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L84)
 
 ### debugFingerSpread {#debugfingerspread}
 
@@ -45,7 +46,7 @@ public float debugFingerSpread
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L109)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L119)
 
 ### grabbedObject {#grabbedobject}
 
@@ -57,7 +58,7 @@ public GrabbableObject grabbedObject
 
 **Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L76)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L86)
 
 ### grabPoint {#grabpoint}
 
@@ -119,7 +120,7 @@ public float Closure { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L122)
 
 ### GripInWrist {#gripinwrist}
 
@@ -135,7 +136,7 @@ public Pose GripInWrist { get; }
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L720)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L803)
 
 ### IsFistClosed {#isfistclosed}
 
@@ -148,7 +149,7 @@ public bool IsFistClosed { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L128)
 
 ## Methods
 
@@ -167,7 +168,7 @@ public void Grab(GrabbableObject objectToGrab)
 | --- | --- | --- |
 | `objectToGrab` | [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject) | Object to take hold of. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L498)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L581)
 
 ### Release() {#release}
 
@@ -178,7 +179,7 @@ the object is not caught straight back by the fingers still closed around it.
 public void Release()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L757)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L840)
 
 ### SetFingerStateOff(FingerType) {#setfingerstateoff-fingertype}
 
@@ -194,7 +195,7 @@ public void SetFingerStateOff(FingerType fingerType)
 | --- | --- | --- |
 | `fingerType` | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | Finger that lost contact. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L799)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L882)
 
 ### SetFingerStateOn(FingerType) {#setfingerstateon-fingertype}
 
@@ -210,7 +211,7 @@ public void SetFingerStateOn(FingerType fingerType)
 | --- | --- | --- |
 | `fingerType` | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | Finger that made contact. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L790)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L873)
 
 ### SetPhysicalGrabDistanceToDropMultiplier(float) {#setphysicalgrabdistancetodropmultiplier-single}
 
@@ -226,7 +227,7 @@ public void SetPhysicalGrabDistanceToDropMultiplier(float multiplier)
 | --- | --- | --- |
 | `multiplier` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Distance in metres. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L825)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L908)
 
 ### SetPhysicalGrabDistanceToDropThreshold(float) {#setphysicalgrabdistancetodropthreshold-single}
 
@@ -243,5 +244,5 @@ public void SetPhysicalGrabDistanceToDropThreshold(float threshold)
 | --- | --- | --- |
 | `threshold` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Distance in metres. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L818)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L901)
 

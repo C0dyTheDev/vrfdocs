@@ -50,7 +50,7 @@ public static bool AndroidPluginIsCurrent()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when the installed plugin matches the package's.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L438)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L443)
 
 ### ConfigureGraphicsAndQuality() {#configuregraphicsandquality}
 
@@ -129,7 +129,7 @@ existing copy is left alone.
 public static void CopySpeechModel()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L515)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L520)
 
 ### CreateStreamingAssets() {#createstreamingassets}
 
@@ -141,7 +141,7 @@ described about itself.
 public static void CreateStreamingAssets()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L473)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L478)
 
 ### FetchGitignore() {#fetchgitignore}
 
@@ -153,7 +153,7 @@ considers an asset - so it is written with File rather than through the asset da
 public static void FetchGitignore()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L603)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L608)
 
 ### GitignoreFetched() {#gitignorefetched}
 
@@ -167,7 +167,7 @@ public static bool GitignoreFetched()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L615)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L620)
 
 ### InstallAndroidPlugins() {#installandroidplugins}
 
@@ -182,7 +182,7 @@ half lives in the platform, so a project editing it would only break the pairing
 public static void InstallAndroidPlugins()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L397)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L402)
 
 ### IsOnAndroid() {#isonandroid}
 
@@ -208,7 +208,7 @@ The local storage has no template: Bakery creates an empty one the first time it
 public static void PrepareBakeryData()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L554)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ProjectSetup.cs#L559)
 
 ### SwitchToAndroid() {#switchtoandroid}
 

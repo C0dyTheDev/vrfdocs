@@ -8,7 +8,7 @@ description: 'Takes a project from empty to buildable on an Android headset in o
 
 # PackageSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L21)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L22)
 
 Takes a project from empty to buildable on an Android headset in one menu item.
 This used to be three menu items that had to be clicked in order, because switching platform,
@@ -30,6 +30,19 @@ public static class PackageSetup
 
 ## Methods
 
+### ApplyEditorEnhancerSettings() {#applyeditorenhancersettings}
+
+The Ultimate Editor Enhancer half of the same idea, on its own menu entry so it can be put
+back after somebody has changed the plugin's settings, without a whole setup run. In the
+sequence as well, unlike the layout, because it closes no windows.
+
+```csharp
+[MenuItem("VRFramework/Apply VRF Editor Enhancer Settings", priority = 23)]
+public static void ApplyEditorEnhancerSettings()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L85)
+
 ### ApplyEditorLayout() {#applyeditorlayout}
 
 Kept out of the sequence on purpose. It rearranges the editor's own windows, which is a
@@ -37,11 +50,11 @@ matter of taste rather than of the project building, and doing it mid-setup woul
 the console the setup is reporting into.
 
 ```csharp
-[MenuItem("VRFramework/Appearance/Apply VRF Editor Layout", priority = 100)]
+[MenuItem("VRFramework/Apply VRF Editor Layout", priority = 22)]
 public static void ApplyEditorLayout()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L59)
 
 ### Begin() {#begin}
 
@@ -52,7 +65,7 @@ the answer was yes.
 public static void Begin()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L40)
 
 ### Preview() {#preview}
 
@@ -65,5 +78,5 @@ public static IReadOnlyList<SetupStep> Preview()
 
 **Returns** `IReadOnlyList<SetupStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L49)
 

@@ -33,3 +33,17 @@ public FingerType fingerType
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FingerController.cs#L12)
 
+## Properties
+
+### Hand {#hand}
+
+The grab hand this finger reports to, which is also how a fingertip knows its side.
+
+```csharp
+public GrabHand Hand { get; }
+```
+
+**Returns** [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/FingerController.cs#L16)
+

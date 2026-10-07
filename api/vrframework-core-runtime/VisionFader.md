@@ -19,25 +19,70 @@ public class VisionFader : MonoBehaviour
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) ← [`Component`](https://docs.unity3d.com/ScriptReference/Component.html) ← [`Behaviour`](https://docs.unity3d.com/ScriptReference/Behaviour.html) ← [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) ← `VisionFader`
 
+## Fields
+
+### DefaultFadeSeconds {#defaultfadeseconds}
+
+How long a fade takes when the caller does not say: long enough to read the logo, and to
+make it clear that the scene is changing rather than glitching.
+
+```csharp
+public const float DefaultFadeSeconds = 1.5
+```
+
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L15)
+
+## Properties
+
+### IsClear {#isclear}
+
+Whether the player can see: nothing over the view and no fade to black under way. False
+from the start, because the view starts black, until the first fade out completes. Goes
+false the moment a fade to black is asked for, not when the black arrives, so a caller
+that would rather not move a blind player can check it on the same frame.
+
+```csharp
+public bool IsClear { get; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L40)
+
 ## Methods
 
-### FadeIn() {#fadein}
+### FadeIn(float, bool) {#fadein-single-boolean}
 
 Fades the view to black. Interrupts a fade already running.
 
 ```csharp
-public void FadeIn()
+public void FadeIn(float seconds = 1.5, bool withLogo = true)
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L53)
+**Parameters**
 
-### FadeOut() {#fadeout}
+| Name | Type | Description |
+| --- | --- | --- |
+| `seconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long a fade from fully clear takes. A fade from part-way is proportionally shorter. |
+| `withLogo` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the logo comes up over the black. A short blink that only hides a jump has no time for it, and a logo flashing on every teleport reads as an error. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L78)
+
+### FadeOut(float) {#fadeout-single}
 
 Fades the view back to clear and disables the quad afterwards. Interrupts a fade already running.
 
 ```csharp
-public void FadeOut()
+public void FadeOut(float seconds = 1.5)
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L61)
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `seconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long a fade from fully black takes. A fade from part-way is proportionally shorter. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Camera/VisionFader.cs#L89)
 

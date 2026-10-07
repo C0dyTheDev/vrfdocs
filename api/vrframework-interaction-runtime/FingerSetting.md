@@ -8,7 +8,7 @@ description: 'Whether one finger takes part in a grab.'
 
 # FingerSetting
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L551)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L607)
 
 Whether one finger takes part in a grab.
 
@@ -31,7 +31,7 @@ public FingerType finger
 
 **Returns** [`FingerType`](/api/vrframework-interaction-runtime/FingerType)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L555)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L611)
 
 ### isNeeded {#isneeded}
 
@@ -43,5 +43,5 @@ public bool isNeeded
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L557)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L613)
 

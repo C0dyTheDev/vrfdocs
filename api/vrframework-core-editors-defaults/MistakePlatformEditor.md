@@ -8,7 +8,7 @@ description: 'Default framework inspector for MistakePlatform/api/vrframework-mi
 
 # MistakePlatformEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L282)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L289)
 
 Default framework inspector for [`MistakePlatform`](/api/vrframework-mistakes-runtime/MistakePlatform).
 

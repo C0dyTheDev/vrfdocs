@@ -31,7 +31,7 @@ public abstract class GripConstraint : MonoBehaviour
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) ← [`Component`](https://docs.unity3d.com/ScriptReference/Component.html) ← [`Behaviour`](https://docs.unity3d.com/ScriptReference/Behaviour.html) ← [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) ← `GripConstraint`
 
-**Derived:** [`GripConstraintOneAxis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis)
+**Derived:** [`Constraint`](/api/vrframework-interaction-runtime/Constraint)
 
 ## Fields
 

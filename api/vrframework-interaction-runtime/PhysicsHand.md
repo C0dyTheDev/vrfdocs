@@ -209,7 +209,7 @@ public IReadOnlyList<PhysicsHold> Holds { get; }
 
 **Returns** `IReadOnlyList<PhysicsHold>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L329)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L346)
 
 ### IsHolding {#isholding}
 
@@ -221,7 +221,7 @@ public bool IsHolding { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L332)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L349)
 
 ### IsTracking {#istracking}
 
@@ -247,6 +247,21 @@ public Vector3 Push { get; }
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L287)
 
+### Target {#target}
+
+The pose the hand last drove towards: the tracked hand, filtered and read through to the end
+of the step, or what the held object asked for while carrying. What the body is behind when
+it is behind anything - and where the drawn hand would be if nothing were in the way, since
+the drawn hand is this body.
+
+```csharp
+public Pose Target { get; }
+```
+
+**Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L305)
+
 ### TargetDistance {#targetdistance}
 
 How far the hand trails the pose it is chasing, in metres.
@@ -257,7 +272,7 @@ public float TargetDistance { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L317)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L334)
 
 ### TrackedAngle {#trackedangle}
 
@@ -269,7 +284,7 @@ public float TrackedAngle { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L326)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L343)
 
 ### TrackedDistance {#trackeddistance}
 
@@ -282,7 +297,7 @@ public float TrackedDistance { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L323)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L340)
 
 ## Methods
 
@@ -308,7 +323,7 @@ public void Brace(Vector3 normal, float capacity)
 | `normal` | [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html) | Which way the surface faces. |
 | `capacity` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | The most of the hand's push the fingers can hold, in newtons. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L310)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L327)
 
 ### ClearReleaseHistory() {#clearreleasehistory}
 
@@ -318,7 +333,7 @@ Forgets the recorded movement history, so the next release throws nothing.
 public void ClearReleaseHistory()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L617)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L634)
 
 ### CommandedGrip(float) {#commandedgrip-single}
 
@@ -405,7 +420,7 @@ outside play mode, where Awake and OnEnable never ran.
 public void InitialiseOutsidePlayMode()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L413)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L430)
 
 ### SampleTracking(float) {#sampletracking-single}
 
@@ -423,7 +438,7 @@ public void SampleTracking(float now)
 | --- | --- | --- |
 | `now` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | The current time, in seconds. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L449)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L466)
 
 ### SolveRelease(float, out Vector3, out Vector3) {#solverelease-single-vector3-vector3}
 
@@ -443,7 +458,7 @@ public bool SolveRelease(float window, out Vector3 linear, out Vector3 angular)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - False when too little movement history exists to derive anything.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L611)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L628)
 
 ### Step(float, float) {#step-single-single}
 
@@ -460,5 +475,21 @@ public void Step(float dt, float stepEndTime)
 | `dt` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | Length of the step, in seconds. |
 | `stepEndTime` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | The time the step ends at, which is the pose the hand aims for. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L491)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L508)
+
+## Events
+
+### Recovered {#recovered}
+
+Raised when the hand has given up and jumped back onto the tracked pose. A body that has been
+teleported off a surface is not always told it left, so anything remembering what the hand
+was resting on has to hear this.
+
+```csharp
+public event Action Recovered
+```
+
+**Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PhysicsHand.cs#L297)
 

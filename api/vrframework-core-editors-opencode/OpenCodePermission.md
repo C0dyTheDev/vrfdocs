@@ -8,7 +8,7 @@ description: 'A tool call the agent may not make until the user allows it.'
 
 # OpenCodePermission
 
-**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L406)
+**Struct** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L733)
 
 A tool call the agent may not make until the user allows it.
 
@@ -18,12 +18,12 @@ public readonly struct OpenCodePermission
 
 ## Constructors
 
-### OpenCodePermission(string, string, string) {#ctor-string-string-string}
+### OpenCodePermission(string, string, string, string) {#ctor-string-string-string-string}
 
 Builds a permission request.
 
 ```csharp
-public OpenCodePermission(string id, string action, string detail)
+public OpenCodePermission(string id, string action, string detail, string diff)
 ```
 
 **Parameters**
@@ -33,8 +33,9 @@ public OpenCodePermission(string id, string action, string detail)
 | `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID the server gave the request. |
 | `action` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | What the agent is asking to do. |
 | `detail` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The specifics of the request, e.g. the command or path. |
+| `diff` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The change an edit would make, as a unified diff, or null. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L412)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L740)
 
 ## Properties
 
@@ -48,7 +49,7 @@ public string Action { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L423)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L752)
 
 ### Detail {#detail}
 
@@ -60,7 +61,19 @@ public string Detail { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L426)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L755)
+
+### Diff {#diff}
+
+For an edit, the change it would make.
+
+```csharp
+public string Diff { get; }
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L758)
 
 ### Id {#id}
 
@@ -72,5 +85,5 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L420)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L749)
 

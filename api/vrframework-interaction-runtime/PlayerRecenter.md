@@ -33,7 +33,7 @@ public UnityEvent AfterFadeOut
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L75)
 
 ### AfterRecenter {#afterrecenter}
 
@@ -45,7 +45,7 @@ public UnityEvent AfterRecenter
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L73)
 
 ### BeforeRecenter {#beforerecenter}
 
@@ -57,7 +57,7 @@ public UnityEvent BeforeRecenter
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L71)
 
 ### setPlayerHeight {#setplayerheight}
 
@@ -70,24 +70,9 @@ public bool setPlayerHeight
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L41)
 
 ## Properties
-
-### FadesOnRecenter {#fadesonrecenter}
-
-Whether the view is faded out and back in around the move. A scripted recenter fades,
-because the player did not ask to be moved and has no idea it is coming. Somewhere the
-player chose to go, and watched an arc land on, does not need it - and the fade costs
-three seconds.
-
-```csharp
-protected virtual bool FadesOnRecenter { get; }
-```
-
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L37)
 
 ### RecenterFacing {#recenterfacing}
 
@@ -102,7 +87,7 @@ public Vector3 RecenterFacing { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L45)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L37)
 
 ### TrackingSpace {#trackingspace}
 
@@ -134,11 +119,33 @@ way they were already looking.
 protected virtual void OnDrawGizmos()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L265)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L293)
+
+### Recenter(bool, float, bool) {#recenter-boolean-single-boolean}
+
+Recenters the player here with a fade of the given length. The fade is what keeps a
+jump in place from turning the stomach, so it is never skipped; but a move the player
+chose and aimed at only needs a blink, not the full cut.
+
+```csharp
+public void Recenter(bool doRotation, float fadeSeconds, bool withLogo = true)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face this transform's forward direction. |
+| `fadeSeconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long the view takes to go black before the move, and to clear after it. |
+| `withLogo` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the logo comes up over the black. False for a blink too short to read it. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L118)
 
 ### Recenter(bool) {#recenter-boolean}
 
-Recenters the player here, becoming the module's current recenter point.
+Recenters the player here, becoming the module's current recenter point. The view fades
+to black for the move and back afterwards, at the fader's default pace: a scripted
+recenter is one the player did not ask for and has no idea is coming.
 
 ```csharp
 public void Recenter(bool doRotation)
@@ -150,14 +157,14 @@ public void Recenter(bool doRotation)
 | --- | --- | --- |
 | `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face this transform's forward direction. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L105)
 
-### RecenterCor(bool, bool) {#recentercor-boolean-boolean}
+### RecenterCor(bool, bool, float, bool) {#recentercor-boolean-boolean-single-boolean}
 
 The recenter itself: fade out, wait for head tracking, move the rig, fade back in.
 
 ```csharp
-public IEnumerator RecenterCor(bool doRotation, bool overrideSetPlayerHeight = false)
+public IEnumerator RecenterCor(bool doRotation, bool overrideSetPlayerHeight = false, float fadeSeconds = 1.5, bool withLogo = true)
 ```
 
 **Parameters**
@@ -166,10 +173,12 @@ public IEnumerator RecenterCor(bool doRotation, bool overrideSetPlayerHeight = f
 | --- | --- | --- |
 | `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face this transform's forward direction. |
 | `overrideSetPlayerHeight` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Forces the height reset even when the component is not set to do it. |
+| `fadeSeconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long the view takes to go black before the move, and to clear after it. |
+| `withLogo` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the logo comes up over the black. |
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the view has faded back in.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L143)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L167)
 
 ### RecenterCorStart(bool) {#recentercorstart-boolean}
 
@@ -191,5 +200,5 @@ public IEnumerator RecenterCorStart(bool doRotation)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the view has faded in.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L193)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L218)
 

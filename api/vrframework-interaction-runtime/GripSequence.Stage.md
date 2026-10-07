@@ -52,10 +52,10 @@ public bool Inside
 The mechanism this stage watches.
 
 ```csharp
-public GripConstraintOneAxis mechanism
+public Constraint mechanism
 ```
 
-**Returns** [`GripConstraintOneAxis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis)
+**Returns** [`Constraint`](/api/vrframework-interaction-runtime/Constraint)
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripSequence.cs#L49)
 

@@ -45,7 +45,6 @@ public static ValidationReport Run(ValidationScope? only = null)
 Runs every rule and writes what they find to the Unity console.
 
 ```csharp
-[MenuItem("VRFramework/Validate to Console", priority = 61)]
 public static void ValidateToConsole()
 ```
 

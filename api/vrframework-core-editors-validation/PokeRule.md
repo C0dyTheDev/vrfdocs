@@ -8,7 +8,7 @@ description: 'Checks the poke surfaces in the open scene, and that there is a ha
 
 # PokeRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L704)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L746)
 
 Checks the poke surfaces in the open scene, and that there is a hand able to touch them.
 
@@ -35,7 +35,7 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L707)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L749)
 
 ### Order {#order}
 
@@ -47,7 +47,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L710)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L752)
 
 ## Methods
 
@@ -61,7 +61,7 @@ public override bool AppliesTo()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L713)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L755)
 
 ### Validate(ValidationReport) {#validate-validationreport}
 
@@ -77,5 +77,5 @@ public override void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L720)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/GripRules.cs#L762)
 

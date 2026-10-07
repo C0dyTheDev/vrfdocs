@@ -8,7 +8,7 @@ description: 'A surface fingers stop on and that says when they are on it: petti
 
 # PokeInteractable
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L61)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L62)
 
 A surface fingers stop on and that says when they are on it: petting, stroking, smearing, and a
 button being pressed.
@@ -19,7 +19,8 @@ travel, no latch and no press threshold; see [`PokeButton`](/api/vrframework-int
 
 Declaring a surface is also what lets a finger reach it. A hand's fingers - see
 [`PhysicsFingers`](/api/vrframework-interaction-runtime/PhysicsFingers) - collide only with the layers these sit on, so a scene that
-has been told nothing has hands that pass through everything.
+has been told nothing has hands that pass through everything. The palm is stopped by the
+whole world regardless, and reports only the surfaces declared here.
 
 Adding this in the editor also sets up a solid collider, since a finger stops on solids.
 
@@ -41,7 +42,7 @@ public UnityEvent OnLifted
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L79)
 
 ### OnTouched {#ontouched}
 
@@ -53,7 +54,7 @@ public UnityEvent OnTouched
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L76)
 
 ### surfaces {#surfaces}
 
@@ -66,7 +67,7 @@ public List<Collider> surfaces
 
 **Returns** `List<Collider>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L73)
 
 ## Properties
 
@@ -80,11 +81,11 @@ public static IReadOnlyList<PokeInteractable> All { get; }
 
 **Returns** `IReadOnlyList<PokeInteractable>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L102)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L103)
 
 ### Contacts {#contacts}
 
-What is pressing on this, one entry per finger.
+What is pressing on this, one entry per finger or palm.
 
 ```csharp
 public IReadOnlyList<PokeContact> Contacts { get; }
@@ -92,7 +93,7 @@ public IReadOnlyList<PokeContact> Contacts { get; }
 
 **Returns** `IReadOnlyList<PokeContact>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L139)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L140)
 
 ### Deepest {#deepest}
 
@@ -106,7 +107,7 @@ public PokeContact Deepest { get; }
 
 **Returns** [`PokeContact`](/api/vrframework-interaction-runtime/PokeContact)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L145)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L146)
 
 ### IsTouched {#istouched}
 
@@ -118,7 +119,7 @@ public bool IsTouched { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L137)
 
 ### Layers {#layers}
 
@@ -131,7 +132,7 @@ public static int Layers { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L109)
 
 ## Methods
 
@@ -151,7 +152,7 @@ public bool Covers(Collider collider)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when a finger landing on it has landed on this surface.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L185)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L186)
 
 ### Lift(HandType, FingerType) {#lift-handtype-fingertype}
 
@@ -166,9 +167,9 @@ public void Lift(HandType hand, FingerType finger)
 | Name | Type | Description |
 | --- | --- | --- |
 | `hand` | [`HandType`](/api/vrframework-interaction-runtime/HandType) | Which hand the finger belongs to. |
-| `finger` | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | Which finger left. |
+| `finger` | [`FingerType`](/api/vrframework-interaction-runtime/FingerType) | Which finger left, or [`None`](/api/vrframework-interaction-runtime/FingerType#none) for the palm. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L232)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L233)
 
 ### LookAgain() {#lookagain}
 
@@ -180,7 +181,7 @@ there are no surfaces at all.
 public static void LookAgain()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L288)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L289)
 
 ### On(Collider) {#on-collider}
 
@@ -199,7 +200,7 @@ public static PokeInteractable On(Collider collider)
 
 **Returns** [`PokeInteractable`](/api/vrframework-interaction-runtime/PokeInteractable) - The surface, or null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L171)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L172)
 
 ### Press(PokeContact) {#press-pokecontact}
 
@@ -215,7 +216,7 @@ public void Press(PokeContact contact)
 | --- | --- | --- |
 | `contact` | [`PokeContact`](/api/vrframework-interaction-runtime/PokeContact) | Where the finger is and how far past the surface it went. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L203)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L204)
 
 ### Step() {#step}
 
@@ -226,7 +227,7 @@ harness, which has no frames to be driven by.
 public void Step()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L257)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L258)
 
 ## Events
 
@@ -240,7 +241,7 @@ public static event Action Changed
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L84)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L85)
 
 ### FingerDown {#fingerdown}
 
@@ -252,7 +253,7 @@ public event Action<PokeContact> FingerDown
 
 **Returns** `Action<PokeContact>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L94)
 
 ### FingerMoved {#fingermoved}
 
@@ -264,7 +265,7 @@ public event Action<PokeContact> FingerMoved
 
 **Returns** `Action<PokeContact>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L97)
 
 ### FingerUp {#fingerup}
 
@@ -276,5 +277,5 @@ public event Action<PokeContact> FingerUp
 
 **Returns** `Action<PokeContact>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeInteractable.cs#L100)
 

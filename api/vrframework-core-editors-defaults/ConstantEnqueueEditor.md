@@ -8,7 +8,7 @@ description: 'Default framework inspector for ConstantEnqueue/api/vrframework-pr
 
 # ConstantEnqueueEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L289)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L296)
 
 Default framework inspector for [`ConstantEnqueue`](/api/vrframework-progress-runtime/ConstantEnqueue).
 

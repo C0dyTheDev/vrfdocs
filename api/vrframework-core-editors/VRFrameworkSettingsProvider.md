@@ -38,7 +38,7 @@ public static SettingsProvider[] CreateSettingsProviders()
 
 **Returns** [`SettingsProvider[]`](https://docs.unity3d.com/ScriptReference/SettingsProvider[].html) - The providers Unity should show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L331)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L336)
 
 ### OnActivate(string, VisualElement) {#onactivate-string-visualelement}
 
@@ -55,7 +55,7 @@ public override void OnActivate(string searchContext, VisualElement rootElement)
 | `searchContext` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Text typed in the settings search box. |
 | `rootElement` | [`VisualElement`](https://docs.unity3d.com/ScriptReference/UIElements.VisualElement.html) | Root element of the page. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L82)
 
 ### OnDeactivate() {#ondeactivate}
 
@@ -66,5 +66,5 @@ change, which writes the asset to disk on each keystroke in a text field.
 public override void OnDeactivate()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L108)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/VRFrameworkSettingsProvider.cs#L111)
 

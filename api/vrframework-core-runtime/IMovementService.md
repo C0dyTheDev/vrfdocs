@@ -94,11 +94,13 @@ event Action<bool> AimingChanged
 
 **Returns** `Action<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMovementService.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMovementService.cs#L46)
 
 ### Teleported {#teleported}
 
-Raised after the player has been moved, with the place they arrived at.
+Raised when a teleport is committed, with the place the player is going. The rig itself
+moves a moment later, behind a fade to black; for the instant it lands, listen to the
+destination's own `AfterRecenter`.
 
 ```csharp
 event Action<Component> Teleported
@@ -106,5 +108,5 @@ event Action<Component> Teleported
 
 **Returns** `Action<Component>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMovementService.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/IMovementService.cs#L43)
 

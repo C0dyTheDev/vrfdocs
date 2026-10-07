@@ -102,7 +102,7 @@ protected virtual void Apply(HighlightData data)
 | --- | --- | --- |
 | `data` | [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | The renderer being highlighted, and what it looked like beforehand. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L96)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L112)
 
 ### Clear(HighlightData) {#clear-highlightdata}
 
@@ -118,7 +118,19 @@ protected virtual void Clear(HighlightData data)
 | --- | --- | --- |
 | `data` | [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | The renderer being restored, and what it looked like beforehand. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L122)
+
+### Prepare() {#prepare}
+
+Gathers the renderers and gives them their highlight now rather than on the next frame. For
+a highlight added at run time that has to look right on the frame it first appears; one that
+was in the scene all along is prepared on its own.
+
+```csharp
+public void Prepare()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L77)
 
 ### UpdateTransparencyMode(HighlightData) {#updatetransparencymode-highlightdata}
 
@@ -134,5 +146,5 @@ public void UpdateTransparencyMode(HighlightData data)
 | --- | --- | --- |
 | `data` | [`HighlightData`](/api/vrframework-interaction-runtime/HighlightData) | The renderer to update. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L189)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/Highlight.cs#L205)
 

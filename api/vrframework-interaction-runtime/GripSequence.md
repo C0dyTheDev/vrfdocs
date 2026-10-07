@@ -16,7 +16,7 @@ the way.
 A latch that has to be flipped before a handle will turn. A key that goes into a lock and then
 turns. A pump that must come fully back before it will chamber anything. A dial that clicks
 through its stops. Each of those is several places along one or more
-[`GripConstraintOneAxis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis), and none of them is a property of any single one.
+[`Constraint`](/api/vrframework-interaction-runtime/Constraint), and none of them is a property of any single one.
 
 Nothing here moves anything. The constraints move, the hold follows them, and this watches and
 gates - which is the whole reason it is a separate component. A mechanism knows where its rail

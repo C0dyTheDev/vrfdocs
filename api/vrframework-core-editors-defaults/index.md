@@ -36,6 +36,7 @@ sidebar_position: 0
 | [`PhysicsFingerEditor`](/api/vrframework-core-editors-defaults/PhysicsFingerEditor) | Default framework inspector for PhysicsFinger/api/vrframework-interaction-runtime/PhysicsFinger. |
 | [`PhysicsFingersEditor`](/api/vrframework-core-editors-defaults/PhysicsFingersEditor) | Default framework inspector for PhysicsFingers/api/vrframework-interaction-runtime/PhysicsFingers. |
 | [`PhysicsHandEditor`](/api/vrframework-core-editors-defaults/PhysicsHandEditor) | Default framework inspector for PhysicsHand/api/vrframework-interaction-runtime/PhysicsHand. |
+| [`PhysicsPalmEditor`](/api/vrframework-core-editors-defaults/PhysicsPalmEditor) | Default framework inspector for PhysicsPalm/api/vrframework-interaction-runtime/PhysicsPalm. |
 | [`PokeButtonEditor`](/api/vrframework-core-editors-defaults/PokeButtonEditor) | Default framework inspector for PokeButton/api/vrframework-interaction-runtime/PokeButton. |
 | [`PokeInteractableEditor`](/api/vrframework-core-editors-defaults/PokeInteractableEditor) | Default framework inspector for PokeInteractable/api/vrframework-interaction-runtime/PokeInteractable. |
 | [`RenamableBehaviourDefaultEditor`](/api/vrframework-core-editors-defaults/RenamableBehaviourDefaultEditor) | Objects that rename themselves with the hierarchy, such as ProgressBlock. |

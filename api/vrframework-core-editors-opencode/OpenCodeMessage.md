@@ -8,7 +8,7 @@ description: 'One turn in the transcript - a user prompt, or an assistant reply 
 
 # OpenCodeMessage
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L263)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L497)
 
 One turn in the transcript - a user prompt, or an assistant reply and its tool calls.
 
@@ -34,7 +34,7 @@ public OpenCodeMessage(string id)
 | --- | --- | --- |
 | `id` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | ID the server gave the message. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L270)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L504)
 
 ## Properties
 
@@ -48,7 +48,43 @@ public string Agent { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L280)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L514)
+
+### Completed {#completed}
+
+When the turn finished, in Unix milliseconds; 0 while it is still running.
+
+```csharp
+public long Completed { get; }
+```
+
+**Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L532)
+
+### Cost {#cost}
+
+What the turn cost, in dollars. Zero on free models.
+
+```csharp
+public double Cost { get; }
+```
+
+**Returns** [`double`](https://learn.microsoft.com/dotnet/api/system.double)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L526)
+
+### Created {#created}
+
+When the turn started and finished, in Unix milliseconds. Completed is 0 while running.
+
+```csharp
+public long Created { get; }
+```
+
+**Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L529)
 
 ### Error {#error}
 
@@ -60,7 +96,7 @@ public string Error { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L284)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L518)
 
 ### Id {#id}
 
@@ -72,7 +108,7 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L276)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L510)
 
 ### IsUser {#isuser}
 
@@ -84,7 +120,7 @@ public bool IsUser { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L290)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L541)
 
 ### ModelId {#modelid}
 
@@ -96,7 +132,7 @@ public string ModelId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L282)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L516)
 
 ### Parts {#parts}
 
@@ -108,7 +144,7 @@ public IReadOnlyList<OpenCodePart> Parts { get; }
 
 **Returns** `IReadOnlyList<OpenCodePart>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L287)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L538)
 
 ### PlainText {#plaintext}
 
@@ -120,7 +156,19 @@ public string PlainText { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L293)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L544)
+
+### Revision {#revision}
+
+Bumped on every change to the message or any of its parts.
+
+```csharp
+public int Revision { get; }
+```
+
+**Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L535)
 
 ### Role {#role}
 
@@ -132,7 +180,31 @@ public string Role { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L278)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L512)
+
+### Tokens {#tokens}
+
+Tokens the turn used, context included - so the last one reads as context size.
+
+```csharp
+public long Tokens { get; }
+```
+
+**Returns** [`long`](https://learn.microsoft.com/dotnet/api/system.int64)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L523)
+
+### WasAborted {#wasaborted}
+
+Whether the turn was stopped by the user rather than failing.
+
+```csharp
+public bool WasAborted { get; set; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L520)
 
 ## Methods
 
@@ -151,7 +223,39 @@ public void AppendToPart(string partId, string delta)
 | `partId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `delta` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L350)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L605)
+
+### Apply(JObject) {#apply-jobject}
+
+Takes the message's own fields - role, model, usage - from a server payload.
+
+```csharp
+public void Apply(JObject info)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `info` | `JObject` |  |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L550)
+
+### RemovePart(string) {#removepart-string}
+
+Drops a part the server withdrew.
+
+```csharp
+public void RemovePart(string partId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `partId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L614)
 
 ### UpsertPart(JObject) {#upsertpart-jobject}
 
@@ -167,5 +271,5 @@ public void UpsertPart(JObject source)
 | --- | --- | --- |
 | `source` | `JObject` | The part as the server sent it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L300)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L583)
 

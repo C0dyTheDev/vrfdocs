@@ -15,18 +15,31 @@ sidebar_position: 0
 | [`OpenCodeAttachment`](/api/vrframework-core-editors-opencode/OpenCodeAttachment) | One file queued to go out with the next message. |
 | [`OpenCodeChatWindow`](/api/vrframework-core-editors-opencode/OpenCodeChatWindow) | A chat window for the OpenCode agent, working inside the open Unity project. |
 | [`OpenCodeClient`](/api/vrframework-core-editors-opencode/OpenCodeClient) | Typed calls against the opencode server's HTTP API. |
+| [`OpenCodeConsole`](/api/vrframework-core-editors-opencode/OpenCodeConsole) | Reads the errors currently in Unity's Console so they can be handed to the agent. |
 | [`OpenCodeConversation`](/api/vrframework-core-editors-opencode/OpenCodeConversation) | The transcript of one session, rebuilt from the event stream. |
 | [`OpenCodeEventStream`](/api/vrframework-core-editors-opencode/OpenCodeEventStream) | Reads the server's server-sent event stream and replays it on the main thread. |
 | [`OpenCodeLocator`](/api/vrframework-core-editors-opencode/OpenCodeLocator) | Finds the opencode executable on this machine. |
+| [`OpenCodeMarkdown`](/api/vrframework-core-editors-opencode/OpenCodeMarkdown) | Turns the agent's markdown into UI Toolkit elements. |
 | [`OpenCodeMessage`](/api/vrframework-core-editors-opencode/OpenCodeMessage) | One turn in the transcript - a user prompt, or an assistant reply and its tool calls. |
 | [`OpenCodePart`](/api/vrframework-core-editors-opencode/OpenCodePart) | A run of assistant output: prose, hidden reasoning, or one tool invocation. |
 | [`OpenCodePrefs`](/api/vrframework-core-editors-opencode/OpenCodePrefs) | What the OpenCode window remembers between editor sessions. |
+| [`OpenCodeProjectSettings`](/api/vrframework-core-editors-opencode/OpenCodeProjectSettings) | What the OpenCode window knows about this project: the instructions every chat starts from, and the prompts a new chat suggests. |
+| [`OpenCodeQuestion`](/api/vrframework-core-editors-opencode/OpenCodeQuestion) | A question the agent asked through its question tool. |
+| [`OpenCodeQuestionItem`](/api/vrframework-core-editors-opencode/OpenCodeQuestionItem) | One question within a request. |
 | [`OpenCodeServer`](/api/vrframework-core-editors-opencode/OpenCodeServer) | Owns the headless opencode serveprocess that the chat window talks to. |
+| [`OpenCodeSessionInfo`](/api/vrframework-core-editors-opencode/OpenCodeSessionInfo) | A session as the server lists it. |
+| [`OpenCodeSettingsGUI`](/api/vrframework-core-editors-opencode/OpenCodeSettingsGUI) | The Assistant page of the VR Framework project settings: the instructions every OpenCode chat in this project starts from, and the prompts a new chat suggests. |
+| [`OpenCodeUpdater`](/api/vrframework-core-editors-opencode/OpenCodeUpdater) | Checks for and installs newer opencode releases. |
 
 ## Structs
 
 | Name | Summary |
 | --- | --- |
+| [`OpenCodeAgentInfo`](/api/vrframework-core-editors-opencode/OpenCodeAgentInfo) | An agent the user can pick. |
+| [`OpenCodeCommandInfo`](/api/vrframework-core-editors-opencode/OpenCodeCommandInfo) | A slash command the server can run. |
 | [`OpenCodeModel`](/api/vrframework-core-editors-opencode/OpenCodeModel) | One selectable model, flattened out of the provider list for the dropdown. |
 | [`OpenCodePermission`](/api/vrframework-core-editors-opencode/OpenCodePermission) | A tool call the agent may not make until the user allows it. |
+| [`OpenCodePromptOptions`](/api/vrframework-core-editors-opencode/OpenCodePromptOptions) | Who answers a prompt and on what model; the same for prompts and slash commands. |
+| [`OpenCodeQuestionOption`](/api/vrframework-core-editors-opencode/OpenCodeQuestionOption) | One choice offered by a question. |
+| [`OpenCodeTodo`](/api/vrframework-core-editors-opencode/OpenCodeTodo) | One entry on the agent's task list. |
 

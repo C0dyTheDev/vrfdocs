@@ -38,7 +38,7 @@ public bool CanTeleport { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L116)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L150)
 
 ### DefaultInitOrder {#defaultinitorder}
 
@@ -50,7 +50,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L147)
 
 ### IsAiming {#isaiming}
 
@@ -62,7 +62,7 @@ public bool IsAiming { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L129)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L163)
 
 ### StandingAt {#standingat}
 
@@ -75,7 +75,7 @@ public Component StandingAt { get; }
 
 **Returns** [`Component`](https://docs.unity3d.com/ScriptReference/Component.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L132)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L166)
 
 ## Methods
 
@@ -87,7 +87,7 @@ Unregisters the module, unless another one has taken over the service.
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L190)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L240)
 
 ### OnInit() {#oninit}
 
@@ -97,7 +97,7 @@ Registers the service, finds the rig and works out where the player is standing.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L161)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L211)
 
 ### TeleportTo(Component) {#teleportto-component}
 
@@ -114,7 +114,7 @@ public void TeleportTo(Component destination)
 | --- | --- | --- |
 | `destination` | [`Component`](https://docs.unity3d.com/ScriptReference/Component.html) | A teleport point to move to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L199)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L249)
 
 ## Events
 
@@ -128,11 +128,13 @@ public event Action<bool> AimingChanged
 
 **Returns** `Action<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L175)
 
 ### Teleported {#teleported}
 
-Raised after the player has been moved, with the place they arrived at.
+Raised when a teleport is committed, with the place the player is going. The rig itself
+moves a moment later, behind a fade to black; for the instant it lands, listen to the
+destination's own `AfterRecenter`.
 
 ```csharp
 public event Action<Component> Teleported
@@ -140,5 +142,5 @@ public event Action<Component> Teleported
 
 **Returns** `Action<Component>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L138)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/MovementModule.cs#L172)
 

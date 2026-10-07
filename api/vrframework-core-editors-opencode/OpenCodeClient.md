@@ -8,7 +8,7 @@ description: 'Typed calls against the opencode server''s HTTP API.'
 
 # OpenCodeClient
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L17)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L18)
 
 Typed calls against the opencode server's HTTP API.
 Responses stay as `JToken`rather than becoming generated DTOs: the payloads are
@@ -36,7 +36,7 @@ public const string ZenProviderId = "opencode"
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L25)
 
 ## Methods
 
@@ -56,14 +56,37 @@ public static Task Abort(string sessionId)
 
 **Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L182)
+
+### Compact(string, string, string) {#compact-string-string-string}
+
+Condenses the conversation so far into a summary the agent continues from, freeing the
+context window. Runs as a turn of its own on the given model.
+
+```csharp
+public static Task<bool> Compact(string sessionId, string providerId, string modelId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `providerId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `modelId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<bool>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L191)
 
 ### CreateSession(string) {#createsession-string}
 
-Creates a conversation and returns its id, or null if the server refused.
+Creates a conversation and returns its id, or null if the server refused. Leave the title
+out to let the server name the chat after its first exchange - it only does that while the
+title is still its own placeholder, so any title given here sticks for good.
 
 ```csharp
-public static Task<string> CreateSession(string title)
+public static Task<string> CreateSession(string title = null)
 ```
 
 **Parameters**
@@ -74,14 +97,14 @@ public static Task<string> CreateSession(string title)
 
 **Returns** `Task<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L36)
 
 ### DeleteSession(string) {#deletesession-string}
 
 Deletes a session on the OpenCode server.
 
 ```csharp
-public static Task DeleteSession(string sessionId)
+public static Task<bool> DeleteSession(string sessionId)
 ```
 
 **Parameters**
@@ -90,22 +113,21 @@ public static Task DeleteSession(string sessionId)
 | --- | --- | --- |
 | `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Session to delete. |
 
-**Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task) - A task that completes once the server has answered.
+**Returns** `Task<bool>` - True when the server confirmed it.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L75)
 
-### GetDefaultZenModel() {#getdefaultzenmodel}
+### GetAllSessionStatus() {#getallsessionstatus}
 
-The model Zen itself nominates as its default, used when the user has not picked one or
-their remembered choice has since been withdrawn.
+Status of every session that is not idle, keyed by session id.
 
 ```csharp
-public static Task<string> GetDefaultZenModel()
+public static Task<JObject> GetAllSessionStatus()
 ```
 
-**Returns** `Task<string>`
+**Returns** `Task<JObject>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L181)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L98)
 
 ### GetMessages(string) {#getmessages-string}
 
@@ -123,51 +145,26 @@ public static Task<JArray> GetMessages(string sessionId)
 
 **Returns** `Task<JArray>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L112)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L215)
 
-### ListAgents() {#listagents}
+### GetServerVersion() {#getserverversion}
 
-Agent names the server offers, e.g. build / plan / explore.
+Version of the running server, or null when it does not answer.
 
 ```csharp
-public static Task<List<string>> ListAgents()
+public static Task<string> GetServerVersion()
 ```
 
-**Returns** `Task<List<string>>`
+**Returns** `Task<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L131)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L364)
 
-### ListModels() {#listmodels}
+### GetSession(string) {#getsession-string}
 
-The OpenCode Zen models, flattened for a dropdown. Other providers the user happens to
-have authenticated are filtered out on purpose - see [`ZenProviderId`](/api/vrframework-core-editors-opencode/OpenCodeClient#zenproviderid).
-
-```csharp
-public static Task<List<OpenCodeModel>> ListModels()
-```
-
-**Returns** `Task<List<OpenCodeModel>>`
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L151)
-
-### ListSessions() {#listsessions}
-
-Sessions on the server, newest first, as (id, title) pairs.
+One session's metadata - title, revert state, totals - or null when it is gone.
 
 ```csharp
-public static Task<List<(string Id, string Title)>> ListSessions()
-```
-
-**Returns** `Task<List<(string Id, string Title)>>`
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L37)
-
-### RespondToPermission(string, string, string) {#respondtopermission-string-string-string}
-
-Answers a pending permission prompt. Reply is "once", "always" or "reject".
-
-```csharp
-public static Task RespondToPermission(string sessionId, string requestId, string reply)
+public static Task<OpenCodeSessionInfo> GetSession(string sessionId)
 ```
 
 **Parameters**
@@ -175,14 +172,252 @@ public static Task RespondToPermission(string sessionId, string requestId, strin
 | Name | Type | Description |
 | --- | --- | --- |
 | `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<OpenCodeSessionInfo>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L67)
+
+### GetSessionStatus(string) {#getsessionstatus-string}
+
+Whether the session is working right now. The event stream only reports changes, so a
+session reopened mid-turn - after a domain reload, say - would otherwise read as idle
+while the agent is still writing.
+
+```csharp
+public static Task<JObject> GetSessionStatus(string sessionId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<JObject>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L92)
+
+### GetTodos(string) {#gettodos-string}
+
+The agent's task list for a session.
+
+```csharp
+public static Task<JArray> GetTodos(string sessionId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<JArray>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L221)
+
+### ListAgents() {#listagents}
+
+Agents a user can talk to directly. Subagents only run when another agent delegates to
+them, and hidden agents (title, summary, compaction) are the server's own plumbing -
+choosing either from the menu makes every prompt fail.
+
+```csharp
+public static Task<List<OpenCodeAgentInfo>> ListAgents()
+```
+
+**Returns** `Task<List<OpenCodeAgentInfo>>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L278)
+
+### ListCommands() {#listcommands}
+
+The slash commands the server offers: custom commands from the project and user config,
+prompts exposed by MCP servers, and installed skills.
+
+```csharp
+public static Task<List<OpenCodeCommandInfo>> ListCommands()
+```
+
+**Returns** `Task<List<OpenCodeCommandInfo>>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L302)
+
+### ListModels() {#listmodels}
+
+The OpenCode Zen models, flattened for a dropdown, together with the model Zen nominates
+as its default. Other providers the user happens to have authenticated are filtered out
+on purpose - see [`ZenProviderId`](/api/vrframework-core-editors-opencode/OpenCodeClient#zenproviderid).
+
+```csharp
+public static Task<(List<OpenCodeModel> Models, string DefaultModelId)> ListModels()
+```
+
+**Returns** `Task<(List<OpenCodeModel> Models, string DefaultModelId)>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L326)
+
+### ListPendingPermissions() {#listpendingpermissions}
+
+Permission requests still waiting for an answer, across all sessions. Asked for on open
+because the ask event may have fired before a domain reload, and an unanswered request
+blocks the agent indefinitely.
+
+```csharp
+public static Task<JArray> ListPendingPermissions()
+```
+
+**Returns** `Task<JArray>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L233)
+
+### ListPendingQuestions() {#listpendingquestions}
+
+Questions the agent asked that nobody has answered, across all sessions.
+
+```csharp
+public static Task<JArray> ListPendingQuestions()
+```
+
+**Returns** `Task<JArray>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L239)
+
+### ListSessions() {#listsessions}
+
+Top-level sessions on the server, most recently used first. Sessions a subagent spawned
+are children of the conversation that started them and are left out - opening one on its
+own shows half a task with no context.
+
+```csharp
+public static Task<List<OpenCodeSessionInfo>> ListSessions()
+```
+
+**Returns** `Task<List<OpenCodeSessionInfo>>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L49)
+
+### RejectQuestion(string) {#rejectquestion-string}
+
+Declines to answer a question; the agent is told and carries on without it.
+
+```csharp
+public static Task<bool> RejectQuestion(string requestId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `requestId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<bool>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L266)
+
+### RenameSession(string, string) {#renamesession-string-string}
+
+Renames a session.
+
+```csharp
+public static Task<bool> RenameSession(string sessionId, string title)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `title` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<bool>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L81)
+
+### ReplyToQuestion(string, IEnumerable\<IEnumerable\<string>>) {#replytoquestion-string-string}
+
+Answers a question the agent asked. One entry per question, each the list of chosen
+option labels - or a single free-text answer when the user typed their own.
+
+```csharp
+public static Task<bool> ReplyToQuestion(string requestId, IEnumerable<IEnumerable<string>> answers)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `requestId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `answers` | `IEnumerable<IEnumerable<string>>` |  |
+
+**Returns** `Task<bool>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L255)
+
+### RespondToPermission(string, string) {#respondtopermission-string-string}
+
+Answers a pending permission prompt. Reply is "once", "always" or "reject".
+
+```csharp
+public static Task<bool> RespondToPermission(string requestId, string reply)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
 | `requestId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `reply` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-**Returns** [`Task`](https://learn.microsoft.com/dotnet/api/system.threading.tasks.task)
+**Returns** `Task<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L245)
 
-### SendPrompt(string, string, string, string, string, IEnumerable\<OpenCodeAttachment>) {#sendprompt-string-string-string-string-string-opencodeattachment}
+### Revert(string, string) {#revert-string-string}
+
+Rewinds the session to just before a message: the message and everything after it are
+hidden and the files the agent changed since are restored. Nothing is lost until the next
+prompt is sent, so [`Unrevert(string)`](/api/vrframework-core-editors-opencode/OpenCodeClient#unrevert-string) can still take it back.
+
+```csharp
+public static Task<OpenCodeSessionInfo> Revert(string sessionId, string messageId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `messageId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<OpenCodeSessionInfo>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L202)
+
+### RunCommand(string, string, string, OpenCodePromptOptions, IEnumerable\<OpenCodeAttachment>) {#runcommand-string-string-string-opencodepromptoptions-opencodeattachment}
+
+Runs one of the server's slash commands - a custom command, an MCP prompt or a skill.
+Unlike a prompt this route answers only once the command has finished, so it is not
+awaited by the window; progress arrives over the event stream like any other turn.
+
+```csharp
+public static Task<bool> RunCommand(string sessionId, string command, string arguments, OpenCodePromptOptions options, IEnumerable<OpenCodeAttachment> attachments = null)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `command` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `arguments` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `options` | [`OpenCodePromptOptions`](/api/vrframework-core-editors-opencode/OpenCodePromptOptions) |  |
+| `attachments` | `IEnumerable<OpenCodeAttachment>` |  |
+
+**Returns** `Task<bool>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L145)
+
+### SendPrompt(string, string, OpenCodePromptOptions, IEnumerable\<OpenCodeAttachment>) {#sendprompt-string-string-opencodepromptoptions-opencodeattachment}
 
 Queues a prompt and returns immediately. The reply arrives over the event stream rather
 than in this response, which is what keeps the window painting while the agent works.
@@ -190,7 +425,7 @@ Attachments are sent as file parts pointing at paths on disk; the server opens t
 itself, so nothing is uploaded here.
 
 ```csharp
-public static Task<bool> SendPrompt(string sessionId, string text, string agent, string providerId, string modelId, IEnumerable<OpenCodeAttachment> attachments = null)
+public static Task<bool> SendPrompt(string sessionId, string text, OpenCodePromptOptions options, IEnumerable<OpenCodeAttachment> attachments = null)
 ```
 
 **Parameters**
@@ -199,12 +434,28 @@ public static Task<bool> SendPrompt(string sessionId, string text, string agent,
 | --- | --- | --- |
 | `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `text` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `agent` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `providerId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
-| `modelId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+| `options` | [`OpenCodePromptOptions`](/api/vrframework-core-editors-opencode/OpenCodePromptOptions) |  |
 | `attachments` | `IEnumerable<OpenCodeAttachment>` |  |
 
 **Returns** `Task<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L70)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L111)
+
+### Unrevert(string) {#unrevert-string}
+
+Undoes a [`Revert(string, string)`](/api/vrframework-core-editors-opencode/OpenCodeClient#revert-string-string) that has not been committed by a new prompt yet.
+
+```csharp
+public static Task<OpenCodeSessionInfo> Unrevert(string sessionId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+**Returns** `Task<OpenCodeSessionInfo>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeClient.cs#L209)
 

@@ -33,7 +33,7 @@ public class VRFBuildWindow : EditorWindow
 Opens the VRF Build window.
 
 ```csharp
-[MenuItem("VRFramework/Build", priority = 41)]
+[MenuItem("VRFramework/Build", priority = 63)]
 public static void Open()
 ```
 

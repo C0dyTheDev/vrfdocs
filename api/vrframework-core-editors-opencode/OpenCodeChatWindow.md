@@ -8,15 +8,20 @@ description: 'A chat window for the OpenCode agent, working inside the open Unit
 
 # OpenCodeChatWindow
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L21)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L28)
 
 A chat window for the OpenCode agent, working inside the open Unity project.
-The layout is a single column - transcript above, prompt box below - because the window is
-meant to be docked to the side of the editor at roughly the width of the Inspector, where a
-horizontal split would leave nothing readable.
+The conversation is a single column - transcript above, prompt box below - with the list of
+chats in a resizable pane to its left. The pane collapses away from the toolbar, because the
+window is often docked at roughly the width of the Inspector, where a permanent split would
+leave neither side readable.
 The agent runs against the project root, so it can read and write the user's scenes, prefabs
 and scripts. That is the point of it, and also why every tool call it makes is shown and why
 permission prompts are answered here rather than auto-approved.
+The transcript is reconciled rather than rebuilt: each message and part keeps its element
+and is only redrawn when its revision moves. Rebuilding everything on every streamed token
+collapsed any tool call the user had opened, dropped text selections, and yanked the view
+back to the bottom while the user was reading further up.
 
 ```csharp
 public class OpenCodeChatWindow : EditorWindow
@@ -34,7 +39,7 @@ Builds the window: the transcript, the prompt box and the toolbar.
 public void CreateGUI()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L191)
 
 ### ShowWindow() {#showwindow}
 
@@ -45,5 +50,5 @@ Opens the OpenCode chat window.
 public static void ShowWindow()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeChatWindow.cs#L180)
 

@@ -8,7 +8,7 @@ description: 'The transcript of one session, rebuilt from the event stream.'
 
 # OpenCodeConversation
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L18)
 
 The transcript of one session, rebuilt from the event stream.
 The server describes a conversation as messages made of parts, and streams both as they
@@ -16,6 +16,8 @@ change: a part is announced, then filled in by deltas, then finalised. This fold
 into an ordered list the window can render, keyed by id so an update replaces rather than
 appends. Nothing here talks to UIElements - the window subscribes to
 [`Changed`](/api/vrframework-core-editors-opencode/OpenCodeConversation#changed) and redraws.
+Every message and part carries a revision that is bumped on each change, which is what lets
+the window redraw only what moved instead of the whole column on every streamed token.
 
 ```csharp
 public class OpenCodeConversation
@@ -24,6 +26,30 @@ public class OpenCodeConversation
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `OpenCodeConversation`
 
 ## Properties
+
+### BusySince {#busysince}
+
+When the agent last went from idle to working, for the elapsed-time readout.
+
+```csharp
+public DateTime BusySince { get; }
+```
+
+**Returns** [`DateTime`](https://learn.microsoft.com/dotnet/api/system.datetime)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L66)
+
+### EditedFiles {#editedfiles}
+
+Files the agent changed that Unity has not imported yet.
+
+```csharp
+public IReadOnlyCollection<string> EditedFiles { get; }
+```
+
+**Returns** `IReadOnlyCollection<string>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L54)
 
 ### Error {#error}
 
@@ -35,7 +61,7 @@ public string Error { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L75)
 
 ### IsBusy {#isbusy}
 
@@ -47,11 +73,11 @@ public bool IsBusy { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L63)
 
 ### Messages {#messages}
 
-The messages exchanged so far, oldest first.
+The messages exchanged so far, oldest first, including any hidden by a revert.
 
 ```csharp
 public IReadOnlyList<OpenCodeMessage> Messages { get; }
@@ -59,7 +85,7 @@ public IReadOnlyList<OpenCodeMessage> Messages { get; }
 
 **Returns** `IReadOnlyList<OpenCodeMessage>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L27)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L42)
 
 ### Permissions {#permissions}
 
@@ -71,7 +97,45 @@ public IReadOnlyList<OpenCodePermission> Permissions { get; }
 
 **Returns** `IReadOnlyList<OpenCodePermission>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L45)
+
+### Questions {#questions}
+
+Questions the agent asked that have not been answered.
+
+```csharp
+public IReadOnlyList<OpenCodeQuestion> Questions { get; }
+```
+
+**Returns** `IReadOnlyList<OpenCodeQuestion>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L48)
+
+### RetryMessage {#retrymessage}
+
+Why the current turn is being retried - rate limit, overloaded provider - or null. Without
+this a retry looks like a hang.
+
+```csharp
+public string RetryMessage { get; }
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L72)
+
+### RevertMessageId {#revertmessageid}
+
+The message a pending revert rewinds to. It and everything after it are hidden until the
+revert is undone, or dropped for good when the next prompt goes out.
+
+```csharp
+public string RevertMessageId { get; }
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L60)
 
 ### SessionId {#sessionid}
 
@@ -83,7 +147,31 @@ public string SessionId { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L36)
+
+### Title {#title}
+
+Title of the session, generated by the server after the first exchange.
+
+```csharp
+public string Title { get; }
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L39)
+
+### Todos {#todos}
+
+The agent's current task list.
+
+```csharp
+public IReadOnlyList<OpenCodeTodo> Todos { get; }
+```
+
+**Returns** `IReadOnlyList<OpenCodeTodo>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L51)
 
 ## Methods
 
@@ -102,17 +190,43 @@ public void Apply(JObject serverEvent)
 | --- | --- | --- |
 | `serverEvent` | `JObject` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L88)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L188)
+
+### ApplySession(OpenCodeSessionInfo) {#applysession-opencodesessioninfo}
+
+Takes session metadata returned directly by a request, e.g. after a revert.
+
+```csharp
+public void ApplySession(OpenCodeSessionInfo session)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `session` | [`OpenCodeSessionInfo`](/api/vrframework-core-editors-opencode/OpenCodeSessionInfo) |  |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L175)
 
 ### Clear() {#clear}
 
-Drops every message and permission request, leaving the conversation empty.
+Drops every message and pending request, leaving the conversation empty.
 
 ```csharp
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L48)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L96)
+
+### ClearEditedFiles() {#cleareditedfiles}
+
+Forgets the edited-file list once Unity has imported them.
+
+```csharp
+public void ClearEditedFiles()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L112)
 
 ### DismissPermission(string) {#dismisspermission-string}
 
@@ -128,7 +242,41 @@ public void DismissPermission(string requestId)
 | --- | --- | --- |
 | `requestId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L240)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L467)
+
+### DismissQuestion(string) {#dismissquestion-string}
+
+Drops a question locally the moment it is answered, without waiting for the echo.
+
+```csharp
+public void DismissQuestion(string requestId)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `requestId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L474)
+
+### IsReverted(OpenCodeMessage) {#isreverted-opencodemessage}
+
+Whether a message is hidden by a pending revert.
+
+```csharp
+public bool IsReverted(OpenCodeMessage message)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `message` | [`OpenCodeMessage`](/api/vrframework-core-editors-opencode/OpenCodeMessage) |  |
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L81)
 
 ### LoadHistory(JArray) {#loadhistory-jarray}
 
@@ -146,7 +294,29 @@ public void LoadHistory(JArray history)
 | --- | --- | --- |
 | `history` | `JArray` |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L123)
+
+### LoadState(OpenCodeSessionInfo, JObject, JArray, JArray, JArray) {#loadstate-opencodesessioninfo-jobject-jarray-jarray-jarray}
+
+Seeds everything the event stream only reports as changes: session metadata, whether it
+is busy, its todos, and requests still waiting for an answer. Missing any of these after a
+domain reload leaves the agent blocked on a prompt the window no longer shows.
+
+```csharp
+public void LoadState(OpenCodeSessionInfo session, JObject status, JArray todoList, JArray pendingPermissions, JArray pendingQuestions)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `session` | [`OpenCodeSessionInfo`](/api/vrframework-core-editors-opencode/OpenCodeSessionInfo) |  |
+| `status` | `JObject` |  |
+| `todoList` | `JArray` |  |
+| `pendingPermissions` | `JArray` |  |
+| `pendingQuestions` | `JArray` |  |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L149)
 
 ### SetSession(string) {#setsession-string}
 
@@ -162,7 +332,7 @@ public void SetSession(string sessionId)
 | --- | --- | --- |
 | `sessionId` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L89)
 
 ## Events
 
@@ -176,5 +346,5 @@ public event Action Changed
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodeConversation.cs#L78)
 

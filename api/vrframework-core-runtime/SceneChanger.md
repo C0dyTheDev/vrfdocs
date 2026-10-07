@@ -29,5 +29,5 @@ Starts the scene change.
 public void ChangeScene()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/QualityOfLife/SceneChanger.cs#L16)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/QualityOfLife/SceneChanger.cs#L20)
 

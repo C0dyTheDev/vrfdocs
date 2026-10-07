@@ -128,5 +128,5 @@ public override GameObject Install(Transform parentOverride)
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) - The object that was created, or null when nothing was.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L303)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/FrameworkInstallers.cs#L302)
 

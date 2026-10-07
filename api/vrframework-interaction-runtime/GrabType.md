@@ -8,7 +8,7 @@ description: 'The ways an object can be picked up.'
 
 # GrabType
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L540)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabbableObject.cs#L596)
 
 The ways an object can be picked up.
 

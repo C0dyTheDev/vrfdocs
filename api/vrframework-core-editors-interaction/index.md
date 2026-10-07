@@ -12,9 +12,9 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
+| [`ConstraintEditor`](/api/vrframework-core-editors-interaction/ConstraintEditor) | Inspector and scene handles for Constraint/api/vrframework-interaction-runtime/Constraint. |
 | [`GrabPoseAuthoring`](/api/vrframework-core-editors-interaction/GrabPoseAuthoring) | The operations that shape a ghost hand where it stands, at the grip point it is going to hold. |
 | [`GrabPoseHandles`](/api/vrframework-core-editors-interaction/GrabPoseHandles) | Draws the hand's bones in the scene view so a grip can be posed by grabbing them directly. |
-| [`GripConstraintOneAxisEditor`](/api/vrframework-core-editors-interaction/GripConstraintOneAxisEditor) | Inspector and scene handles for GripConstraintOneAxis/api/vrframework-interaction-runtime/GripConstraintOneAxis. |
 | [`GripPointEditor`](/api/vrframework-core-editors-interaction/GripPointEditor) | Inspector for GripPoint/api/vrframework-interaction-runtime/GripPoint, and the whole of authoring a hand pose. |
 | [`GripSequenceEditor`](/api/vrframework-core-editors-interaction/GripSequenceEditor) | Inspector for GripSequence/api/vrframework-interaction-runtime/GripSequence. |
 

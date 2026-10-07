@@ -30,7 +30,7 @@ public static class SceneScaffold
 Marker object the player rig goes under.
 
 ```csharp
-public const string Camera = "-----CAMERA"
+public const string Camera = "---CAMERA"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
@@ -54,7 +54,7 @@ public const string Environment = "---ENVIRONMENT"
 Marker object the scene's lights go under.
 
 ```csharp
-public const string Lighting = "----LIGHTING"
+public const string Lighting = "---LIGHTING"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
@@ -66,7 +66,7 @@ public const string Lighting = "----LIGHTING"
 Marker object the framework modules go under.
 
 ```csharp
-public const string Managers = "--------MANAGERS"
+public const string Managers = "---MANAGERS"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
@@ -90,7 +90,7 @@ public static readonly string[] Markers
 Marker object the scenario goes under.
 
 ```csharp
-public const string Scenario = "---------SCENARIO"
+public const string Scenario = "---SCENARIO"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
@@ -102,7 +102,7 @@ public const string Scenario = "---------SCENARIO"
 Marker object the scene's audio sources go under.
 
 ```csharp
-public const string Sounds = "------SOUNDS"
+public const string Sounds = "---SOUNDS"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
@@ -114,7 +114,7 @@ public const string Sounds = "------SOUNDS"
 Marker object the teleport points go under.
 
 ```csharp
-public const string Teleports = "-------TELEPORTS"
+public const string Teleports = "---TELEPORTS"
 ```
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
@@ -139,7 +139,7 @@ public static List<T> AllInActiveScene<T>() where T : Component
 
 **Returns** `List<T>` - The components found.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L309)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L335)
 
 ### ClearScene() {#clearscene}
 
@@ -149,7 +149,7 @@ Deletes every root object in the active scene. Callers must confirm with the use
 public static void ClearScene()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L215)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L241)
 
 ### CreateChild(string, Transform, params Type[]) {#createchild-string-transform-type}
 
@@ -170,7 +170,7 @@ public static GameObject CreateChild(string name, Transform parent, params Type[
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L178)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L204)
 
 ### CreateUnderMarker(string, string, params Type[]) {#createundermarker-string-string-type}
 
@@ -191,7 +191,7 @@ public static GameObject CreateUnderMarker(string name, string markerName, param
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L140)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L166)
 
 ### Ensure(string) {#ensure-string}
 
@@ -209,7 +209,7 @@ public static Transform Ensure(string markerName)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L69)
 
 ### EnsureAll() {#ensureall}
 
@@ -219,7 +219,7 @@ Creates whichever marker objects the open scene is missing, in the usual order.
 public static void EnsureAll()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L65)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L85)
 
 ### Exists(string) {#exists-string}
 
@@ -237,11 +237,11 @@ public static bool Exists(string markerName)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when it is there.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L110)
 
 ### Find(string) {#find-string}
 
-Finds a root object by name in the active scene only.
+Finds a marker in the active scene only, however many dashes it is padded with.
 
 ```csharp
 public static Transform Find(string markerName)
@@ -255,7 +255,7 @@ public static Transform Find(string markerName)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L93)
 
 ### FindInActiveScene(Type) {#findinactivescene-type}
 
@@ -274,7 +274,7 @@ public static Component FindInActiveScene(Type componentType)
 
 **Returns** [`Component`](https://docs.unity3d.com/ScriptReference/Component.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L282)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L308)
 
 ### FindInActiveScene\<T>() {#findinactivescene-1}
 
@@ -292,7 +292,7 @@ public static T FindInActiveScene<T>() where T : Component
 
 **Returns** `T` - The component, or null when the scene has none.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L301)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L327)
 
 ### IsComplete() {#iscomplete}
 
@@ -304,7 +304,7 @@ public static bool IsComplete()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when none is missing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L93)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L117)
 
 ### MarkSceneDirty() {#markscenedirty}
 
@@ -314,7 +314,7 @@ Marks the open scene as changed, so Unity offers to save what was just built.
 public static void MarkSceneDirty()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L321)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L347)
 
 ### PlaceUnderMarker(GameObject, string) {#placeundermarker-gameobject-string}
 
@@ -335,7 +335,7 @@ public static void PlaceUnderMarker(GameObject go, string markerName)
 | `go` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | The object to place. It is detached from any parent first. |
 | `markerName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | The marker block it belongs to. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L161)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L187)
 
 ### RefreshCoreModules() {#refreshcoremodules}
 
@@ -346,7 +346,7 @@ module so the serialized array never goes stale.
 public static void RefreshCoreModules()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L228)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L254)
 
 ### SetReference(Object, string, Object) {#setreference-object-string-object}
 
@@ -364,7 +364,7 @@ public static void SetReference(Object target, string propertyName, Object value
 | `propertyName` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `value` | [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L258)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L284)
 
 ### Spawn(string, Transform, string, params Type[]) {#spawn-string-transform-string-type}
 
@@ -386,5 +386,5 @@ public static GameObject Spawn(string name, Transform parentOverride, string mar
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L196)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/SceneScaffold.cs#L222)
 

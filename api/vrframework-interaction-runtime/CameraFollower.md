@@ -45,6 +45,22 @@ public float height
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraFollower.cs#L15)
 
+### rotationOffset {#rotationoffset}
+
+Extra rotation applied after the object has been turned to face the player, in degrees, in
+the object's own frame. A model whose front is not +Z, or a canvas built facing away, is
+turned here rather than wrapped in an empty parent; every asset is off by its own amount.
+Zero faces the object's +Z at the player.
+
+```csharp
+[Tooltip("Degrees added after the object faces the player, in its own frame. Fixes a model whose front is not +Z. Zero points the object's +Z at the player.")]
+public Vector3 rotationOffset
+```
+
+**Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/CameraFollower.cs#L27)
+
 ### smoothSpeed {#smoothspeed}
 
 How quickly the object catches up, as the interpolation factor per frame.

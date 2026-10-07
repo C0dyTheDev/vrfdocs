@@ -8,7 +8,7 @@ description: 'Default framework inspector for every SpeechAudioInput/api/vrframe
 
 # SpeechAudioInputEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L314)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L321)
 
 Default framework inspector for every [`SpeechAudioInput`](/api/vrframework-speech-runtime/SpeechAudioInput).
 

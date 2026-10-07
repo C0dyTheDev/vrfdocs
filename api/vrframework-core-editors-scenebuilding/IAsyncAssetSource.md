@@ -41,6 +41,25 @@ bool IsResolving(AssetEntry entry)
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L156)
 
+### Progress(AssetEntry) {#progress-assetentry}
+
+How far the import of the entry has got. Asked only while [`IsResolving(AssetEntry)`](/api/vrframework-core-editors-scenebuilding/IAsyncAssetSource#isresolving-assetentry) is
+true, several times a second, so it must be cheap.
+
+```csharp
+ItemProgress Progress(AssetEntry entry)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry being imported. |
+
+**Returns** [`ItemProgress`](/api/vrframework-core-editors-scenebuilding/ItemProgress) - The current stage, and how far into it when that is known.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L164)
+
 ### ResolveAsync(AssetEntry, Action\<Object>) {#resolveasync-assetentry-object}
 
 Starts making the entry available and calls back on the main thread when it is done.
@@ -57,5 +76,5 @@ void ResolveAsync(AssetEntry entry, Action<Object> completed)
 | `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry to resolve. |
 | `completed` | `Action<Object>` | Called with the imported asset, or null. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L164)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/IAssetSource.cs#L172)
 

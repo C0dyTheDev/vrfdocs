@@ -8,7 +8,7 @@ description: 'Knows how to put one piece of the framework into the open scene.'
 
 # ModuleInstaller
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L12)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L13)
 
 Knows how to put one piece of the framework into the open scene. One installer produces one
 card in the Modules category, so keep them single-purpose.
@@ -19,7 +19,7 @@ public abstract class ModuleInstaller
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `ModuleInstaller`
 
-**Derived:** [`AudioModuleInstaller`](/api/vrframework-core-editors-scenebuilding/AudioModuleInstaller), [`CoreInstaller`](/api/vrframework-core-editors-scenebuilding/CoreInstaller), [`InteractionModuleInstaller`](/api/vrframework-core-editors-scenebuilding/InteractionModuleInstaller), [`LocalizationModuleInstaller`](/api/vrframework-core-editors-scenebuilding/LocalizationModuleInstaller), [`MinigamesModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MinigamesModuleInstaller), [`MistakesModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MistakesModuleInstaller), [`MovementModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MovementModuleInstaller), [`PlatformModuleInstaller`](/api/vrframework-core-editors-scenebuilding/PlatformModuleInstaller), [`ProgressModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ProgressModuleInstaller), [`SceneScaffoldInstaller`](/api/vrframework-core-editors-scenebuilding/SceneScaffoldInstaller), [`SpeechRecognitionModuleInstaller`](/api/vrframework-core-editors-scenebuilding/SpeechRecognitionModuleInstaller), [`StreamingModuleInstaller`](/api/vrframework-core-editors-scenebuilding/StreamingModuleInstaller)
+**Derived:** [`AudioModuleInstaller`](/api/vrframework-core-editors-scenebuilding/AudioModuleInstaller), [`CoreInstaller`](/api/vrframework-core-editors-scenebuilding/CoreInstaller), [`InteractionModuleInstaller`](/api/vrframework-core-editors-scenebuilding/InteractionModuleInstaller), [`LocalizationModuleInstaller`](/api/vrframework-core-editors-scenebuilding/LocalizationModuleInstaller), [`MinigamesModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MinigamesModuleInstaller), [`MistakesModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MistakesModuleInstaller), [`MovementModuleInstaller`](/api/vrframework-core-editors-scenebuilding/MovementModuleInstaller), [`PlatformModuleInstaller`](/api/vrframework-core-editors-scenebuilding/PlatformModuleInstaller), [`ProgressModuleInstaller`](/api/vrframework-core-editors-scenebuilding/ProgressModuleInstaller), [`RecenterWatchInstaller`](/api/vrframework-core-editors-scenebuilding/RecenterWatchInstaller), [`SceneScaffoldInstaller`](/api/vrframework-core-editors-scenebuilding/SceneScaffoldInstaller), [`SpeechRecognitionModuleInstaller`](/api/vrframework-core-editors-scenebuilding/SpeechRecognitionModuleInstaller), [`StreamingModuleInstaller`](/api/vrframework-core-editors-scenebuilding/StreamingModuleInstaller)
 
 ## Properties
 
@@ -33,7 +33,7 @@ public virtual bool AllowsMultiple { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L39)
 
 ### Creates {#creates}
 
@@ -45,7 +45,7 @@ public virtual string[] Creates { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L33)
 
 ### Description {#description}
 
@@ -57,7 +57,7 @@ public virtual string Description { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L20)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L21)
 
 ### DisplayName {#displayname}
 
@@ -69,7 +69,7 @@ public abstract string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L17)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L18)
 
 ### Group {#group}
 
@@ -81,7 +81,7 @@ public virtual string Group { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L23)
 
 ### Icon {#icon}
 
@@ -93,7 +93,7 @@ public virtual Texture Icon { get; }
 
 **Returns** [`Texture`](https://docs.unity3d.com/ScriptReference/Texture.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L51)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L52)
 
 ### Id {#id}
 
@@ -105,7 +105,7 @@ public abstract string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L16)
 
 ### IsInstalled {#isinstalled}
 
@@ -117,7 +117,7 @@ public virtual bool IsInstalled { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L42)
 
 ### ModuleType {#moduletype}
 
@@ -129,7 +129,7 @@ public virtual Type ModuleType { get; }
 
 **Returns** [`Type`](https://learn.microsoft.com/dotnet/api/system.type)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L30)
 
 ### Order {#order}
 
@@ -141,7 +141,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L27)
 
 ### Requires {#requires}
 
@@ -153,7 +153,7 @@ public virtual string[] Requires { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L36)
 
 ### Tags {#tags}
 
@@ -165,7 +165,7 @@ public virtual string[] Tags { get; }
 
 **Returns** [`string[]`](https://learn.microsoft.com/dotnet/api/system.string[])
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L25)
 
 ## Methods
 
@@ -187,7 +187,28 @@ public abstract GameObject Install(Transform parentOverride)
 
 **Returns** [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L58)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L59)
+
+### PackageAsset(string) {#packageasset-string}
+
+Where an asset the framework ships can be loaded from, given where it sits inside the
+package. The framework is a folder under Assets in the projects it is developed in and a
+resolved package everywhere else, so a path written from the project root finds the asset
+in one of those and nothing in the other.
+
+```csharp
+protected static string PackageAsset(string relative)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `relative` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) | Path of the asset inside the package, such as "Assets/Default/x.prefab". |
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The path to load from, or the given path when the package root could not be found.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L69)
 
 ### Run(Transform, bool) {#run-transform-boolean}
 
@@ -207,5 +228,5 @@ public bool Run(Transform parentOverride = null, bool select = true)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ModuleInstaller.cs#L80)
 

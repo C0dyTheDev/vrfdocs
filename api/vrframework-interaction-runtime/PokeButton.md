@@ -8,17 +8,20 @@ description: 'A surface that travels when it is pressed: a button, a key, a peda
 
 # PokeButton
 
-**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L17)
+**Class** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L21)
 
 A surface that travels when it is pressed: a button, a key, a pedal, a plunger.
 
-The travel is a [`GripConstraintOneAxis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis), the same rail a drawer or a bolt runs
+The travel is a [`Constraint`](/api/vrframework-interaction-runtime/Constraint), the same rail a drawer or a bolt runs
 on, so a button is authored with handles and limits that already exist. Bottoming out raises
 that constraint's `end`event and coming back up raises its `start`one, so what a
 press means is whatever the author hangs off those.
 
 The press is measured from where the fingertip was when it landed rather than from the face,
 because the face is the thing the press is moving. Nothing here pushes back on the hand.
+
+A palm presses it the same way a finger does: it arrives as a contact with no finger, and
+whichever part of the hand has pushed furthest works the button.
 
 ```csharp
 [RequireComponent(typeof(PokeInteractable))]
@@ -42,7 +45,30 @@ public float grace
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L69)
+
+### pressSpeed {#pressspeed}
+
+How fast the face may be pushed, in metres per second, and how fast it may rise under a finger
+that is lifting. The finger or palm is stopped by the face, so this is also how fast a hand
+can go into the button.
+
+Capped for the physics rather than for feel. The contacts that stop a hand are found only
+within the two colliders' contact offsets of each other - two centimetres by default - plus
+whatever the body is already moving; a face that moves further than that away from a body
+at rest in one physics step leaves it in open air, the hand's drive then crosses several
+centimetres in the step to catch up, and it comes out the far side of the button - and of
+the panel behind it. At 72 Hz, 1.2 m/s stays inside those two centimetres.
+
+```csharp
+[Tooltip("How fast the face may be pushed, in metres per second, and how fast it may rise under a finger that is lifting.\n\nThe finger or palm is stopped by the face, so this is also how fast a hand can go into the button. It is capped for the physics: contacts are found only within two centimetres (the two colliders' contact offsets), so a face that moves further than that away from the body in one physics step leaves the body in open air, and the hand's drive then carries it out the far side of the button. At 72 Hz, 1.2 m/s stays inside those two centimetres.")]
+[Range(0.05, 1.2)]
+public float pressSpeed
+```
+
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L59)
 
 ### returns {#returns}
 
@@ -55,7 +81,7 @@ public bool returns
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L32)
 
 ### returnSpeed {#returnspeed}
 
@@ -69,7 +95,7 @@ public float returnSpeed
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L32)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L36)
 
 ### travels {#travels}
 
@@ -77,18 +103,18 @@ The travel this button has. Empty uses the constraint on this object.
 
 ```csharp
 [Tooltip("The travel this button has. Leave empty to use the one on this object.\n\nSet it up as Slide, This Part, with Start where the button rests and End where it bottoms out.")]
-public GripConstraintOneAxis travels
+public Constraint travels
 ```
 
-**Returns** [`GripConstraintOneAxis`](/api/vrframework-interaction-runtime/GripConstraintOneAxis)
+**Returns** [`Constraint`](/api/vrframework-interaction-runtime/Constraint)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L24)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L28)
 
 ## Properties
 
 ### IsPressed {#ispressed}
 
-Whether a finger is working it now.
+Whether a finger or a palm is working it now.
 
 ```csharp
 public bool IsPressed { get; }
@@ -96,7 +122,7 @@ public bool IsPressed { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L97)
 
 ### Pressed {#pressed}
 
@@ -108,7 +134,7 @@ public float Pressed { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L61)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L94)
 
 ### Travelled {#travelled}
 
@@ -120,14 +146,15 @@ public float Travelled { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L100)
 
 ## Methods
 
 ### Step(float) {#step-single}
 
 Moves the button to wherever the finger working it has got to. Driven from LateUpdate in
-play; public so anything stepping the scene itself can drive it.
+play, by the physics time that has passed; public so anything stepping the scene itself can
+drive it.
 
 ```csharp
 public void Step(float sinceLast)
@@ -137,7 +164,7 @@ public void Step(float sinceLast)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `sinceLast` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long since this last ran, in seconds. |
+| `sinceLast` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How much physics time has passed since this last ran, in seconds. Physics time rather than frame time because the face is paced against what the physics can follow: a face that moves on a frame the physics did not step has moved twice by the time it does. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L74)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PokeButton.cs#L112)
 

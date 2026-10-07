@@ -89,8 +89,13 @@ public int width
 
 ### DefaultInitOrder {#defaultinitorder}
 
-Initialises after every other module: what it streams is the finished scene, so nothing is
-gained by starting the sockets before the rest of the scene stands.
+Initialises before every other module. Nothing here depends on another module - the sockets
+and the render texture are this module's own - and the viewer wants to see the scene from
+the moment it starts, loading included. This module used to go last, on the grounds that
+what it streams is the finished scene; but VRCore waits for each required module to report
+ready before it starts the next, so last meant the stream did not open until everything
+else had - and a scene whose speech recogniser takes twenty seconds to build its model was
+twenty seconds into the session before the first frame went out.
 
 ```csharp
 public override int DefaultInitOrder { get; }
@@ -98,7 +103,7 @@ public override int DefaultInitOrder { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L55)
 
 ### FramesSent {#framessent}
 
@@ -110,7 +115,7 @@ public int FramesSent { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L64)
 
 ### IsWatched {#iswatched}
 
@@ -123,7 +128,7 @@ public bool IsWatched { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L61)
 
 ### StreamCamera {#streamcamera}
 
@@ -135,7 +140,7 @@ public Camera StreamCamera { get; }
 
 **Returns** [`Camera`](https://docs.unity3d.com/ScriptReference/Camera.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L62)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L67)
 
 ## Methods
 
@@ -147,7 +152,7 @@ Unregisters the module, unless another one has taken over the service in the mea
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L130)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L135)
 
 ### OnInit() {#oninit}
 
@@ -158,7 +163,7 @@ itself off rather than failing every capture.
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L91)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L96)
 
 ### StreamFrom(Camera) {#streamfrom-camera}
 
@@ -175,5 +180,5 @@ public void StreamFrom(Camera camera)
 | --- | --- | --- |
 | `camera` | [`Camera`](https://docs.unity3d.com/ScriptReference/Camera.html) | The camera to stream. A null camera is refused and changes nothing. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Streaming/StreamManager.cs#L74)
 

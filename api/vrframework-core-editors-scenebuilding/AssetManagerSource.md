@@ -8,7 +8,7 @@ description: 'The organisation''s Unity Asset Manager library, browsed in place 
 
 # AssetManagerSource
 
-**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L36)
+**Class** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L48)
 
 The organisation's Unity Asset Manager library, browsed in place and imported on demand.
 Two packages do the work between them, because neither can do it alone: Unity Cloud Assets
@@ -16,12 +16,22 @@ Two packages do the work between them, because neither can do it alone: Unity Cl
 Asset Manager for Unity (com.unity.asset-manager-for-unity) performs the import, so an
 asset brought in here is the same tracked asset the Asset Manager window would have brought
 in. Without both packages installed this file does not compile in at all and the source is
-simply absent from the browser.
+simply absent from the browser - which is why the framework's package.json and the project
+setup both pull them in.
 Only the kinds a scene is built from are listed - see [`AssetCategories`](/api/vrframework-core-editors-scenebuilding/AssetCategories) - so a
 library full of scripts and shaders does not crowd out the models.
 Importing runs on the editor loop, so it cannot be waited on from a button click without
 deadlocking; the source implements [`IAsyncAssetSource`](/api/vrframework-core-editors-scenebuilding/IAsyncAssetSource) and the browser places
 the asset from the callback.
+Before anything is imported the library asset's files are checked against the project by
+GUID. The Asset Manager treats a file whose GUID the project already owns as one that moved,
+and moves the project's copy into the import folder - or, when that copy is in an immutable
+package, deletes it and lets Unity assign the incoming copy a new GUID, which leaves every
+reference to the old one dangling. A library asset that shares files with the framework
+package (a prefab uploaded with its dependencies) would strip those files out of the package
+in every project that imported it. So the Asset Manager only imports assets the project has
+nothing of; what is partly there is completed by downloading the missing files alone, and
+what is wholly there is simply used.
 Which library is read is fixed rather than configured - see the constants below - so every
 project that installs the framework browses the same shared library with no setup.
 
@@ -45,7 +55,7 @@ public string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L83)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L110)
 
 ### Id {#id}
 
@@ -57,7 +67,7 @@ public string Id { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L81)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L108)
 
 ### IsConfigured {#isconfigured}
 
@@ -71,7 +81,7 @@ public bool IsConfigured { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L119)
 
 ### Order {#order}
 
@@ -83,7 +93,7 @@ public int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L112)
 
 ### StatusLabel {#statuslabel}
 
@@ -95,7 +105,7 @@ public string StatusLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L95)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L122)
 
 ## Methods
 
@@ -109,7 +119,7 @@ public IEnumerable<AssetEntry> GetEntries()
 
 **Returns** `IEnumerable<AssetEntry>` - One entry per listable cloud asset.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L134)
 
 ### GetThumbnail(AssetEntry) {#getthumbnail-assetentry}
 
@@ -127,7 +137,7 @@ public Texture2D GetThumbnail(AssetEntry entry)
 
 **Returns** [`Texture2D`](https://docs.unity3d.com/ScriptReference/Texture2D.html) - The thumbnail, or null while it is on its way.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L137)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L164)
 
 ### IsResolving(AssetEntry) {#isresolving-assetentry}
 
@@ -145,7 +155,7 @@ public bool IsResolving(AssetEntry entry)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the import runs.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L154)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L181)
 
 ### IsThumbnailPending(AssetEntry) {#isthumbnailpending-assetentry}
 
@@ -163,7 +173,25 @@ public bool IsThumbnailPending(AssetEntry entry)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True while the thumbnail is on its way.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L146)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L173)
+
+### Progress(AssetEntry) {#progress-assetentry}
+
+How far the import of the entry has got.
+
+```csharp
+public ItemProgress Progress(AssetEntry entry)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry being imported. |
+
+**Returns** [`ItemProgress`](/api/vrframework-core-editors-scenebuilding/ItemProgress) - The current stage, and how far into it when that is known.
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L189)
 
 ### Refresh() {#refresh}
 
@@ -173,7 +201,7 @@ Drops what was read from the library and reads it again.
 public void Refresh()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L141)
 
 ### Resolve(AssetEntry) {#resolve-assetentry}
 
@@ -193,13 +221,13 @@ public Object Resolve(AssetEntry entry)
 
 **Returns** [`Object`](https://docs.unity3d.com/ScriptReference/Object.html) - The imported asset, or null when it is not in the project yet.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L129)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L156)
 
 ### ResolveAsync(AssetEntry, Action\<Object>) {#resolveasync-assetentry-object}
 
-Imports the library asset through the Asset Manager and calls back when it lands in the
-project. The Asset Manager refuses to run two imports at once, so a second request while
-one is in flight is reported rather than queued.
+Brings the library asset into the project and calls back when it is there. Files the
+project already holds are left alone, whichever way they got there - see the class notes
+for why they must be.
 
 ```csharp
 public void ResolveAsync(AssetEntry entry, Action<Object> completed)
@@ -212,5 +240,5 @@ public void ResolveAsync(AssetEntry entry, Action<Object> completed)
 | `entry` | [`AssetEntry`](/api/vrframework-core-editors-scenebuilding/AssetEntry) | Entry to import. |
 | `completed` | `Action<Object>` | Called with the imported asset, or null when the import failed. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L166)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/AssetSources/AssetManagerSource.cs#L242)
 

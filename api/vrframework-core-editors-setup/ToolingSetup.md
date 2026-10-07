@@ -8,7 +8,7 @@ description: 'The half of the setup that is about the machine rather than the pr
 
 # ToolingSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L32)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L40)
 
 The half of the setup that is about the machine rather than the project: the agent tooling the
 framework ships a window for, and the editor layout that arranges those windows.
@@ -18,6 +18,12 @@ OpenCode window needs an opencode binary, opencode needs to know about Unity's M
 before it can see the editor at all, and the relay only exists once something copies it out
 of the AI Assistant package. Each of those was a page of setup instructions nobody read;
 they are steps now.
+
+The Ultimate Editor Enhancer configuration is the same kind of thing. The plugin ships in
+the package, but what the framework has set up in it - its preferences, the quick access
+bar, the hierarchy headers - lives in the user's EditorPrefs and in assets the plugin writes
+into the project, and neither comes along with the package. See
+[`ApplyEditorEnhancerSettings()`](/api/vrframework-core-editors-setup/ToolingSetup#applyeditorenhancersettings).
 
 Everything here is written to be safe to run twice and to report rather than throw: none of
 it is needed to build the project, so a machine that refuses to install a tool should end
@@ -29,7 +35,60 @@ public static class ToolingSetup
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `ToolingSetup`
 
+## Fields
+
+### EnhancerItemsPath {#enhanceritemspath}
+
+The plugin's quick access bar, hierarchy headers, empty inspector and project folder icons,
+as its File > Export > Items writes them.
+
+```csharp
+public const string EnhancerItemsPath = "Assets/Settings/UEE-ItemSettings.json"
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L54)
+
+### EnhancerSettingsPath {#enhancersettingspath}
+
+The Ultimate Editor Enhancer preferences the framework ships, as the plugin's own File >
+Export > Settings writes them. Copied into the project with the rest of the settings.
+
+```csharp
+public const string EnhancerSettingsPath = "Assets/Settings/UEE-GeneralSettings.ucs"
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L48)
+
 ## Methods
+
+### ApplyEditorEnhancerSettings() {#applyeditorenhancersettings}
+
+Applies the Ultimate Editor Enhancer configuration the framework ships: the preferences,
+and the quick access bar, hierarchy headers, empty inspector and project folder icons that
+go with them. A project that has only installed the package has the plugin and none of this.
+
+What File > Import > Settings and File > Import > Items do in the plugin's own settings
+window, without the file panels and without the "already contains items" dialogs: the
+items are replaced outright, so a second run lands on the same set rather than on the
+same set twice. Bookmarks, favourite windows and mini layouts are only touched when the
+shipped file has some, and it ships none.
+
+The plugin keeps its preferences per user, in EditorPrefs, unless the project has a
+settings file of its own - and then that file is what it reads and writes. This gives the
+project one, at `UEE-Settings.uee`in the project root, so that what is applied here
+stays with this project and reaches no other on the machine. The file is the project's
+to keep under version control; deleting it hands the plugin back to the user's
+preferences. The items go into assets under the project either way.
+
+```csharp
+public static void ApplyEditorEnhancerSettings()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L749)
 
 ### ApplyEditorLayout() {#applyeditorlayout}
 
@@ -42,7 +101,7 @@ outlives the window and comes straight back with it.
 public static void ApplyEditorLayout()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L709)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L803)
 
 ### ConfigureOpenCode() {#configureopencode}
 
@@ -58,7 +117,7 @@ written, and a copy of the old one is kept beside it.
 public static void ConfigureOpenCode()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L546)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L572)
 
 ### EnableUnityMcpBridge() {#enableunitymcpbridge}
 
@@ -70,7 +129,7 @@ does not have the AI Assistant package.
 public static void EnableUnityMcpBridge()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L496)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L522)
 
 ### InstallOpenCode() {#installopencode}
 
@@ -82,7 +141,7 @@ rather than blocking the editor.
 public static void InstallOpenCode()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L98)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L118)
 
 ### InstallUnityMcpRelay() {#installunitymcprelay}
 
@@ -95,7 +154,7 @@ points at something that exists.
 public static void InstallUnityMcpRelay()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L445)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L471)
 
 ### OpenCodeInstalled() {#opencodeinstalled}
 
@@ -109,7 +168,7 @@ public static bool OpenCodeInstalled()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L177)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L197)
 
 ### WriteAgentsFile() {#writeagentsfile}
 
@@ -121,5 +180,5 @@ its own rules to it.
 public static void WriteAgentsFile()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L671)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/ToolingSetup.cs#L697)
 

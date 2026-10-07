@@ -8,7 +8,7 @@ description: 'Checks the speech module''s setup: where its audio comes from, whe
 
 # SpeechRecognitionModuleRule
 
-**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L521)
+**Class** · namespace `VRFramework.Core.Editors.Validation` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L507)
 
 Checks the speech module's setup: where its audio comes from, whether the model was copied
 into the project, and whether the scene has anything listening for what it hears.
@@ -31,7 +31,7 @@ public override string Category { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L527)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L523)
 
 ### Order {#order}
 
@@ -43,7 +43,7 @@ public override int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L529)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L525)
 
 ## Methods
 
@@ -61,5 +61,5 @@ public override void Validate(ValidationReport report)
 | --- | --- | --- |
 | `report` | [`ValidationReport`](/api/vrframework-core-editors-validation/ValidationReport) | Where problems are reported. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L533)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Validation/Rules/ModuleRules.cs#L529)
 

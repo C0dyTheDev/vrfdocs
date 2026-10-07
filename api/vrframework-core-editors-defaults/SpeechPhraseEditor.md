@@ -8,7 +8,7 @@ description: 'Default framework inspector for SpeechPhrase/api/vrframework-speec
 
 # SpeechPhraseEditor
 
-**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L307)
+**Class** · namespace `VRFramework.Core.Editors.Defaults` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/UI/VRFDefaultEditors.cs#L314)
 
 Default framework inspector for [`SpeechPhrase`](/api/vrframework-speech-runtime/SpeechPhrase).
 

@@ -34,7 +34,7 @@ so the package manager resolves and reloads once instead of once per package.
 public static void AddRequiredPackages()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L126)
 
 ### AllowPreReleasePackages() {#allowprereleasepackages}
 
@@ -49,7 +49,7 @@ editor being reachable by an agent fails behind it.
 public static void AllowPreReleasePackages()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L67)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L75)
 
 ### ImportSamples() {#importsamples}
 
@@ -61,7 +61,7 @@ asynchronously and then raced its own callback.
 public static void ImportSamples()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L216)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L224)
 
 ### ImportTextMeshProResources() {#importtextmeshproresources}
 
@@ -75,7 +75,7 @@ scenes, prefabs and scripts into every project.
 public static void ImportTextMeshProResources()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L160)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L168)
 
 ### RequiredPackagesResolved() {#requiredpackagesresolved}
 
@@ -87,7 +87,7 @@ public static bool RequiredPackagesResolved()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when nothing is missing.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L136)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L144)
 
 ### TextMeshProResourcesImported() {#textmeshproresourcesimported}
 
@@ -99,5 +99,5 @@ public static bool TextMeshProResourcesImported()
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) - True when they are present.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L186)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageContentSetup.cs#L194)
 

@@ -154,7 +154,7 @@ public bool Constrains { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L202)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L208)
 
 ### Constraints {#constraints}
 
@@ -173,7 +173,7 @@ public List<GripConstraint> Constraints { get; }
 
 **Returns** `List<GripConstraint>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L155)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L161)
 
 ### Grabbable {#grabbable}
 
@@ -185,7 +185,19 @@ public GrabbableObject Grabbable { get; }
 
 **Returns** [`GrabbableObject`](/api/vrframework-interaction-runtime/GrabbableObject)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L189)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L195)
+
+### HandShown {#handshown}
+
+Whether a ghost hand is being shown here. See [`ShowHand(bool)`](/api/vrframework-interaction-runtime/GripPoint#showhand-boolean).
+
+```csharp
+public bool HandShown { get; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L148)
 
 ### HeldBy {#heldby}
 
@@ -209,7 +221,7 @@ public bool MovesAPart { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L218)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L224)
 
 ## Methods
 
@@ -230,7 +242,31 @@ public bool Accepts(GrabHand hand, GrabType grabType)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L287)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L321)
+
+### Admits(GrabHand) {#admits-grabhand}
+
+Whether this point is for a hand at all: switched on, and not reserved for the other hand.
+
+Asked separately from [`Accepts(GrabHand, GrabType)`](/api/vrframework-interaction-runtime/GripPoint#accepts-grabhand-grabtype) because it is the part of the answer that does
+not change while the object is held. An object whose every point says "not this hand" has
+nowhere for that hand to hold it, and the object refuses the hand outright - which is
+different from a point that is merely busy, where the object may still let the hand in by
+swapping or joining.
+
+```csharp
+public bool Admits(GrabHand hand)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `hand` | [`GrabHand`](/api/vrframework-interaction-runtime/GrabHand) | Hand asking. |
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L301)
 
 ### Allowed(Pose) {#allowed-pose}
 
@@ -253,7 +289,7 @@ public Pose Allowed(Pose wanted)
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L243)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L249)
 
 ### AttachFor(GrabHand) {#attachfor-grabhand}
 
@@ -275,7 +311,7 @@ public Transform AttachFor(GrabHand hand)
 
 **Returns** [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) - A transform for the hold to align to. Never null.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L350)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L381)
 
 ### Compose(IReadOnlyList\<GripConstraint>, Pose) {#compose-gripconstraint-pose}
 
@@ -300,7 +336,7 @@ public static Pose Compose(IReadOnlyList<GripConstraint> constraints, Pose wante
 
 **Returns** [`Pose`](https://docs.unity3d.com/ScriptReference/Pose.html) - The pose they allow between them, or `wanted`if none of them apply.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L261)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L267)
 
 ### HasPoseFor(HandType) {#hasposefor-handtype}
 
@@ -318,7 +354,7 @@ public bool HasPoseFor(HandType hand)
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L335)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L366)
 
 ### PoseFor(HandType) {#posefor-handtype}
 
@@ -336,7 +372,7 @@ public GripPose PoseFor(HandType hand)
 
 **Returns** [`GripPose`](/api/vrframework-interaction-runtime/GripPose)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L308)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L339)
 
 ### PoseForOrNew(HandType) {#poseforornew-handtype}
 
@@ -354,5 +390,56 @@ public GripPose PoseForOrNew(HandType hand)
 
 **Returns** [`GripPose`](/api/vrframework-interaction-runtime/GripPose)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L320)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L351)
+
+### ShowHand(bool) {#showhand-boolean}
+
+Shows or hides a ghost hand here, for the player to see that a hand may be put here. Drawn as
+the framework's highlight, standing where the authored pose puts the wrist and shaped as the
+authored fingers are.
+
+Only for a point whose [`fingers`](/api/vrframework-interaction-runtime/GripPoint#fingers) are [`Custom`](/api/vrframework-interaction-runtime/GripFingers#custom) with a
+pose authored for that hand. Asked on any other point this does nothing: a point that auto
+poses or leaves the fingers alone has no shape of its own to show, and a hand invented
+here would promise something the player's hand never becomes.
+
+Off until asked for, and nothing here turns it on or off by itself: a hand taking the
+point does not hide it, and a hand leaving does not bring it back. That is the caller's
+call - a tutorial that wants the hint gone once the player has found the grip wires
+[`OnGrab`](/api/vrframework-interaction-runtime/GripPoint#ongrab) to this with false, and one that wants it back wires
+[`OnRelease`](/api/vrframework-interaction-runtime/GripPoint#onrelease). Disabling the point or its object does hide it, because a point
+that is switched off is not somewhere a hand may go.
+
+The hand shown is the one this point is for. A point that accepts either shows the right
+one, or the left when the left is the only pose authored on it;
+[`ShowHand(HandType, bool)`](/api/vrframework-interaction-runtime/GripPoint#showhand-handtype-boolean) says outright.
+
+```csharp
+public void ShowHand(bool show)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `show` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to show the hand, false to hide it. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L476)
+
+### ShowHand(HandType, bool) {#showhand-handtype-boolean}
+
+Shows or hides a ghost hand of one side here. See [`ShowHand(bool)`](/api/vrframework-interaction-runtime/GripPoint#showhand-boolean).
+
+```csharp
+public void ShowHand(HandType hand, bool show)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `hand` | [`HandType`](/api/vrframework-interaction-runtime/HandType) | Which hand to show. Ignored when hiding, which hides whichever is shown. |
+| `show` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to show the hand, false to hide it. |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GripPoint.cs#L491)
 

@@ -59,7 +59,7 @@ public override string EmptyMessage { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L42)
 
 ### GroupLabel {#grouplabel}
 
@@ -99,7 +99,9 @@ public override string Id { get; }
 
 ### IsAvailable {#isavailable}
 
-Whether this is offered at all right now.
+Whether this is offered at all right now. Stays offered when no source compiled in, so a
+project missing the cloud packages sees why the grid is empty instead of a category that
+silently vanished.
 
 ```csharp
 public override bool IsAvailable { get; }
@@ -107,7 +109,7 @@ public override bool IsAvailable { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L39)
 
 ### Order {#order}
 
@@ -133,5 +135,5 @@ public override IEnumerable<SceneBuilderItem> GetItems()
 
 **Returns** `IEnumerable<SceneBuilderItem>` - The items to show.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Catalogs/AssetCatalog.cs#L51)
 

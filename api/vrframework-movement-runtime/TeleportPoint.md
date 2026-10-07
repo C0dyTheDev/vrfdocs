@@ -54,18 +54,19 @@ public UnityEvent OnSelect
 
 ## Properties
 
-### FadesOnRecenter {#fadesonrecenter}
+### ArcTarget {#arctarget}
 
-The player aimed at this point and watched the arc land on it, so they know exactly
-where they are going and a three second fade would only be in the way.
+Where the arc is drawn to. The marker sits at head height, because that is where the
+player's head ends up, so an arc drawn to it ends in mid-air above the floor. It lands on
+the pedestal instead - the thing the player is actually aiming at.
 
 ```csharp
-protected override bool FadesOnRecenter { get; }
+public Vector3 ArcTarget { get; }
 ```
 
-**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+**Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/TeleportPoint.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/TeleportPoint.cs#L105)
 
 ### IsSelected {#isselected}
 
@@ -89,5 +90,5 @@ public Vector3 StandPosition { get; }
 
 **Returns** [`Vector3`](https://docs.unity3d.com/ScriptReference/Vector3.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/TeleportPoint.cs#L104)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Movement/TeleportPoint.cs#L98)
 

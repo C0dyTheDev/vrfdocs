@@ -8,7 +8,7 @@ description: 'The collider a script pack setup adds, if any.'
 
 # ComponentSetupAsset.ColliderShape
 
-**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L21)
+**Enum** · namespace `VRFramework.Core.Editors.SceneBuilding` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetupAsset.cs#L23)
 
 The collider a script pack setup adds, if any.
 

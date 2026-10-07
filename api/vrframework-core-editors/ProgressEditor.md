@@ -51,7 +51,7 @@ public void CreateGUI()
 Opens the Progress Graph Editor window.
 
 ```csharp
-[MenuItem("VRFramework/Progress Graph Editor", priority = 63)]
+[MenuItem("VRFramework/Progress Graph Editor", priority = 41)]
 public static void OpenWindow()
 ```
 

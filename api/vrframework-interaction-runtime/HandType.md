@@ -8,7 +8,7 @@ description: 'Which of the player''s two hands a component belongs to.'
 
 # HandType
 
-**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L832)
+**Enum** · namespace `VRFramework.Interaction.Runtime` · assembly `VRFramework.Interaction.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/GrabHand.cs#L915)
 
 Which of the player's two hands a component belongs to.
 

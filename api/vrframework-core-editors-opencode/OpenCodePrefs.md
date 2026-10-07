@@ -8,7 +8,7 @@ description: 'What the OpenCode window remembers between editor sessions.'
 
 # OpenCodePrefs
 
-**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L9)
+**Class** · namespace `VRFramework.Core.Editors.OpenCode` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L11)
 
 What the OpenCode window remembers between editor sessions. These are one developer's
 choices - which model they like, where their binary lives - rather than project settings,
@@ -32,7 +32,7 @@ public static string Agent { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L23)
 
 ### AutoStartServer {#autostartserver}
 
@@ -44,7 +44,7 @@ public static bool AutoStartServer { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L42)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L71)
 
 ### ExecutablePath {#executablepath}
 
@@ -56,7 +56,7 @@ public static string ExecutablePath { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L14)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L16)
 
 ### LastSessionId {#lastsessionid}
 
@@ -68,7 +68,7 @@ public static string LastSessionId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L116)
 
 ### ModelId {#modelid}
 
@@ -80,7 +80,20 @@ public static string ModelId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L37)
+
+### PromptHistory {#prompthistory}
+
+Prompts sent recently, newest last, recalled with the Up arrow. Stored as one string with a
+unit separator, which no one types into a prompt.
+
+```csharp
+public static List<string> PromptHistory { get; set; }
+```
+
+**Returns** `List<string>`
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L57)
 
 ### ProviderId {#providerid}
 
@@ -92,7 +105,7 @@ public static string ProviderId { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L30)
 
 ### RefreshAssetsWhenIdle {#refreshassetswhenidle}
 
@@ -105,7 +118,7 @@ public static bool RefreshAssetsWhenIdle { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L95)
 
 ### ShowReasoning {#showreasoning}
 
@@ -117,7 +130,7 @@ public static bool ShowReasoning { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L78)
 
 ### ShowToolCalls {#showtoolcalls}
 
@@ -129,5 +142,42 @@ public static bool ShowToolCalls { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L56)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L85)
+
+### SidebarOpen {#sidebaropen}
+
+Whether the chat list is shown beside the conversation.
+
+```csharp
+public static bool SidebarOpen { get; set; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L102)
+
+### SidebarWidth {#sidebarwidth}
+
+Width of the chat list, as last dragged.
+
+```csharp
+public static float SidebarWidth { get; set; }
+```
+
+**Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L109)
+
+### Variant {#variant}
+
+Reasoning-effort preset for models that offer them. Empty means the model's default; a
+value the current model does not offer is ignored rather than sent.
+
+```csharp
+public static string Variant { get; set; }
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/OpenCode/OpenCodePrefs.cs#L47)
 

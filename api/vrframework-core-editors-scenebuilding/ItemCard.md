@@ -38,7 +38,7 @@ public ItemCard(SceneBuilderItem item, Action<SceneBuilderItem> onSelect)
 | `item` | [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem) | Entry the card stands for. |
 | `onSelect` | `Action<SceneBuilderItem>` | Called with the entry when the card is clicked. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L26)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L35)
 
 ## Properties
 
@@ -52,7 +52,7 @@ public SceneBuilderItem Item { get; }
 
 **Returns** [`SceneBuilderItem`](/api/vrframework-core-editors-scenebuilding/SceneBuilderItem)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L89)
 
 ### ThumbnailPending {#thumbnailpending}
 
@@ -64,9 +64,20 @@ public bool ThumbnailPending { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L92)
 
 ## Methods
+
+### RefreshProgress() {#refreshprogress}
+
+Shows the item's background work, if any, as a bar over the bottom of the card. Without a
+percentage yet a block sweeps across instead, so a stalled card and a busy one differ.
+
+```csharp
+public void RefreshProgress()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L134)
 
 ### RefreshState() {#refreshstate}
 
@@ -76,7 +87,7 @@ Re-reads the scene-dependent state: the badge and the dimmed "already there" loo
 public void RefreshState()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L108)
 
 ### RefreshThumbnail() {#refreshthumbnail}
 
@@ -86,7 +97,7 @@ Fetches the thumbnail again, for a card whose preview was still baking.
 public void RefreshThumbnail()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L79)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L102)
 
 ### SetSelected(bool) {#setselected-boolean}
 
@@ -102,5 +113,5 @@ public void SetSelected(bool selected)
 | --- | --- | --- |
 | `selected` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to draw it as selected. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/UI/ItemCard.cs#L96)
 

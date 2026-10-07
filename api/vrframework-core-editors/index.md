@@ -49,6 +49,7 @@ sidebar_position: 0
 | [`LineDeleter`](/api/vrframework-core-editors/LineDeleter) | The bin a line is dropped onto to delete the connection it stands for. |
 | [`LocalizationPresence`](/api/vrframework-core-editors/LocalizationPresence) | Tracks whether the open scene has a Localization module, so drawers can decide between the translation picker and a plain asset field without searching on every repaint. |
 | [`MinigameManagerEditor`](/api/vrframework-core-editors/MinigameManagerEditor) | Editor for MinigamesManager script. |
+| [`ModelDummyCreatorEditor`](/api/vrframework-core-editors/ModelDummyCreatorEditor) | Editor for ModelDummyCreator/api/vrframework-core-runtime/ModelDummyCreator: the instructions, the settings and the button that takes the picture. |
 | [`NameChangeDetector`](/api/vrframework-core-editors/NameChangeDetector) | Watches the hierarchy for a renamed scenario object and keeps the component's own name, the order prefixes and the graph in step with it. |
 | [`OutputPort`](/api/vrframework-core-editors/OutputPort) | One step of a block, drawn as a row with a port on the right: the lines leaving it are the blocks that step queues. |
 | [`ParamDrawer`](/api/vrframework-core-editors/ParamDrawer) | Draws one platform parameter: its name, type and the values it offers. |
@@ -67,8 +68,10 @@ sidebar_position: 0
 | [`ProgressStepEditor`](/api/vrframework-core-editors/ProgressStepEditor) | Editor for the ProgressStep script. |
 | [`ProgressTextField`](/api/vrframework-core-editors/ProgressTextField) | A text field on the graph canvas, wrapped so it carries a status bar hint of its own. |
 | [`ReactOnParameterEditor`](/api/vrframework-core-editors/ReactOnParameterEditor) | Editor for ReactOnParameter script. |
+| [`RecenterWatchEditor`](/api/vrframework-core-editors/RecenterWatchEditor) | Editor for the recenter watch. |
 | [`ScenarioEditor`](/api/vrframework-core-editors/ScenarioEditor) | Editor for the Scenario script. |
 | [`SceneBuilder`](/api/vrframework-core-editors/SceneBuilder) | Browses everything that can go into a scene - modules, prefabs, external assets, scene templates and framework components - and gets it there by button or by drag and drop. |
+| [`SceneNameDrawer`](/api/vrframework-core-editors/SceneNameDrawer) | Draws a SceneName string field as a picker over the scenes the next build would ship. |
 | [`SearchablePopup`](/api/vrframework-core-editors/SearchablePopup) | A popup list with a search box, for picking one item out of a long list. |
 | [`SelectionBox`](/api/vrframework-core-editors/SelectionBox) | The rubber band drawn while dragging across empty canvas to select several blocks at once. |
 | [`ShowOnlyDrawer`](/api/vrframework-core-editors/ShowOnlyDrawer) | Makes the property uneditable from the Editor |

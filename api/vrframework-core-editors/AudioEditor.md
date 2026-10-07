@@ -26,7 +26,7 @@ public class AudioEditor : EditorWindow
 Opens the Audio Clip Editor window.
 
 ```csharp
-[MenuItem("VRFramework/Authoring/Audio Clip Editor", false, 80)]
+[MenuItem("VRFramework/Audio Clip Editor", false, 43)]
 public static void ShowWindow()
 ```
 

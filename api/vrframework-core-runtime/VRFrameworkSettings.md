@@ -141,6 +141,27 @@ public Color snapDropZoneHighlightColor
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/VRFrameworkSettings.cs#L32)
 
+## Properties
+
+### Current {#current}
+
+The project's settings, for anything that reads them while the game runs. Null when the
+project has none.
+
+In the editor it is the asset the settings page edits, found the way that page finds
+it. In a build it comes out of Resources, which is where project setup put the copy.
+The package carries a template of the same name in a Resources folder of its own, so
+a build that finds two has no way to tell them apart and takes whichever comes first;
+they differ only where somebody changed a setting after setup.
+
+```csharp
+public static VRFrameworkSettings Current { get; }
+```
+
+**Returns** [`VRFrameworkSettings`](/api/vrframework-core-runtime/VRFrameworkSettings)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/VRFrameworkSettings.cs#L54)
+
 ## Methods
 
 ### GetAssetBasePath\<T>() {#getassetbasepath-1}
@@ -159,7 +180,7 @@ public static string GetAssetBasePath<T>()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/VRFrameworkSettings.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/VRFrameworkSettings.cs#L126)
 
 ### GetSerializedSettings() {#getserializedsettings}
 
@@ -171,5 +192,5 @@ public static VRFrameworkSettings GetSerializedSettings()
 
 **Returns** [`VRFrameworkSettings`](/api/vrframework-core-runtime/VRFrameworkSettings) - The project's settings.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/VRFrameworkSettings.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/VRFrameworkSettings.cs#L113)
 

@@ -18,6 +18,7 @@ sidebar_position: 0
 | [`InvokeDelayed`](/api/vrframework-core-runtime/InvokeDelayed) | Raises an event once, a set time after the component is enabled, then disables itself. |
 | [`LanguageAttribute`](/api/vrframework-core-runtime/LanguageAttribute) | Turns a string field into a translation ID picker in the Inspector, listing the entries of the language instance named by type/api/vrframework-core-runtime/LanguageAttributetype. |
 | [`MistakeScene`](/api/vrframework-core-runtime/MistakeScene) | The mistake results of one scene, as frozen at the end of it. |
+| [`ModelDummyCreator`](/api/vrframework-core-runtime/ModelDummyCreator) | Takes a still of whatever this camera is pointed at and writes it into the project as a PNG - the flat pictures of models a course uses for menus, labels and printed material. |
 | [`PlatformReport`](/api/vrframework-core-runtime/PlatformReport) | Everything the session report is made of. |
 | [`RepeatOnIntervals`](/api/vrframework-core-runtime/RepeatOnIntervals) | Raises an event over and over on a fixed interval, with a separate delay before the first one - for nudges and reminders that should not fire the moment the scene starts. |
 | [`ReportContributor`](/api/vrframework-core-runtime/ReportContributor) | The shortcut for a component that adds something to the session report: fill in GetReportValue/api/vrframework-core-runtime/ReportContributorgetreportvalue and the value shows up u |
@@ -25,6 +26,7 @@ sidebar_position: 0
 | [`SceneChanger`](/api/vrframework-core-runtime/SceneChanger) | Loads another scene on demand, optionally fading the view out first. |
 | [`SceneCompletion`](/api/vrframework-core-runtime/SceneCompletion) | Standalone-scene fallback: quits the application when progress finishes. |
 | [`SceneCut`](/api/vrframework-core-runtime/SceneCut) | A hard cut in VR: fades the view to black, raises OnCut/api/vrframework-core-runtime/SceneCutoncut while the player cannot see - move the rig or swap the set there - then fades bac |
+| [`SceneNameAttribute`](/api/vrframework-core-runtime/SceneNameAttribute) | Turns a string field into a picker over the scenes the next build would ship, so a scene is chosen from a list instead of typed out and misspelled. |
 | [`ShowOnlyAttribute`](/api/vrframework-core-runtime/ShowOnlyAttribute) | Marks a serialized field as read only in the Inspector: the value is shown but cannot be edited. |
 | [`ShutdownRelay`](/api/vrframework-core-runtime/ShutdownRelay) | The Unity half of the platform's remote lifecycle protocol. |
 | [`SpriteChanger`](/api/vrframework-core-runtime/SpriteChanger) | Swaps the texture of a mesh between localized sprites - a poster or a screen that shows a different image per language and per step. |
@@ -65,5 +67,6 @@ sidebar_position: 0
 | Name | Summary |
 | --- | --- |
 | [`LangType`](/api/vrframework-core-runtime/LangType) | The kinds of localized content a language instance can hold. |
+| [`ModelDummyAntiAliasing`](/api/vrframework-core-runtime/ModelDummyAntiAliasing) | How many samples the edges of a model dummy are rendered with. |
 | [`VRFLogLevel`](/api/vrframework-core-runtime/VRFLogLevel) | Severity of a framework log line. |
 

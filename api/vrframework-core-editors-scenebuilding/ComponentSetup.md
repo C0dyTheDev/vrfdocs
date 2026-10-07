@@ -14,8 +14,9 @@ A ready-made component arrangement - the unit the Components category deals in. 
 either a prefab, or a pack of scripts with the settings that make them work already filled
 in: a grabbable object is a rigidbody, a collider, GrabbableObject and a configured
 Highlight, not four separate things to remember.
-Subclass this for framework setups, or author one in the project with
-[`ComponentSetupAsset`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset).
+The framework ships none. Author one in the project with [`ComponentSetupAsset`](/api/vrframework-core-editors-scenebuilding/ComponentSetupAsset),
+most easily with Create Component Setup on a configured component's context menu, or
+subclass this in an editor script.
 
 ```csharp
 public abstract class ComponentSetup
@@ -23,7 +24,7 @@ public abstract class ComponentSetup
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `ComponentSetup`
 
-**Derived:** [`AudioEmitterSetup`](/api/vrframework-core-editors-scenebuilding/AudioEmitterSetup), [`AuthoredComponentSetup`](/api/vrframework-core-editors-scenebuilding/AuthoredComponentSetup), [`CameraFollowerSetup`](/api/vrframework-core-editors-scenebuilding/CameraFollowerSetup), [`CameraLookCheckSetup`](/api/vrframework-core-editors-scenebuilding/CameraLookCheckSetup), [`ComponentTogglerSetup`](/api/vrframework-core-editors-scenebuilding/ComponentTogglerSetup), [`CounterSetup`](/api/vrframework-core-editors-scenebuilding/CounterSetup), [`EventHolderSetup`](/api/vrframework-core-editors-scenebuilding/EventHolderSetup), [`GrabbableSetup`](/api/vrframework-core-editors-scenebuilding/GrabbableSetup), [`HighlightSetup`](/api/vrframework-core-editors-scenebuilding/HighlightSetup), [`InvokeDelayedSetup`](/api/vrframework-core-editors-scenebuilding/InvokeDelayedSetup), [`LocalizedTextSetup`](/api/vrframework-core-editors-scenebuilding/LocalizedTextSetup), [`ObjectDestroyerSetup`](/api/vrframework-core-editors-scenebuilding/ObjectDestroyerSetup), [`RepeatOnIntervalsSetup`](/api/vrframework-core-editors-scenebuilding/RepeatOnIntervalsSetup), [`SceneChangerSetup`](/api/vrframework-core-editors-scenebuilding/SceneChangerSetup), [`SnapDropZoneSetup`](/api/vrframework-core-editors-scenebuilding/SnapDropZoneSetup), [`ToggleSelectSetup`](/api/vrframework-core-editors-scenebuilding/ToggleSelectSetup), [`TriggerAreaSetup`](/api/vrframework-core-editors-scenebuilding/TriggerAreaSetup), [`TriggerStayAreaSetup`](/api/vrframework-core-editors-scenebuilding/TriggerStayAreaSetup)
+**Derived:** [`AuthoredComponentSetup`](/api/vrframework-core-editors-scenebuilding/AuthoredComponentSetup)
 
 ## Properties
 
@@ -213,39 +214,6 @@ public virtual void Configure(GameObject target)
 | `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) |  |
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L80)
-
-### ConfigureCollider(GameObject, bool) {#configurecollider-gameobject-boolean}
-
-Gives an object a collider sized to its renderer, adding one when it has none.
-
-```csharp
-protected static void ConfigureCollider(GameObject target, bool isTrigger)
-```
-
-**Parameters**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object to give a collider. |
-| `isTrigger` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the collider is a trigger. |
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L219)
-
-### ConfigureHighlight(GameObject) {#configurehighlight-gameobject}
-
-Gives an object the framework's highlight, disabled and coloured from the settings.
-
-```csharp
-protected static void ConfigureHighlight(GameObject target)
-```
-
-**Parameters**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| `target` | [`GameObject`](https://docs.unity3d.com/ScriptReference/GameObject.html) | Object to give a highlight. |
-
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/SceneBuilder/Scene/ComponentSetup.cs#L231)
 
 ### Create(Transform) {#create-transform}
 
