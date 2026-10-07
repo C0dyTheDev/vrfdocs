@@ -74,7 +74,33 @@ const config: Config = {
     },
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      // Offline full-text search. The index is built from the rendered HTML at
+      // `docusaurus build` time, so it only works in a production build
+      // (`npm run build && npm run serve`), not under `npm start`.
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexBlog: false,
+        // Both docs plugin instances: tutorials and the API reference.
+        // `docsDir` feeds the index hash, so it must name the real source
+        // folders or browsers keep serving a stale cached index.
+        docsRouteBasePath: ['tutorials', 'api'],
+        docsDir: ['tutorials', 'api'],
+        // Searching from inside a section prefers hits from that section, with
+        // a toggle to widen to the whole site.
+        searchContextByPaths: [
+          {label: 'Tutorials', path: 'tutorials'},
+          {label: 'API', path: 'api'},
+        ],
+        useAllContextsWithNoSearchContext: true,
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
 
   presets: [
     [

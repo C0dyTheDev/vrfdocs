@@ -602,6 +602,49 @@ div[class^='codeBlockTitle'] {
   border-radius: 0;
 }
 
+/*
+ * Local search dropdown (@easyops-cn/docusaurus-search-local): a sheet pinned
+ * under the title block. Its active row fills with `--ifm-color-primary` and
+ * sets the text to white, which is light-on-light in dark mode, so the active
+ * text is mapped to paper instead - ink on paper inverted, in both themes.
+ */
+:root {
+  --search-local-modal-background: var(--vrf-paper-raised);
+  --search-local-modal-shadow: 0 0 0 var(--vrf-hairline) var(--vrf-rule), var(--vrf-sheet-shadow);
+  --search-local-hit-background: var(--vrf-paper);
+  --search-local-hit-shadow: inset 0 0 0 var(--vrf-hairline) var(--vrf-rule-soft);
+  --search-local-hit-color: var(--vrf-ink);
+  --search-local-highlight-color: var(--vrf-ink-strong);
+  --search-local-hit-active-color: var(--vrf-paper);
+  --search-local-muted-color: var(--vrf-pencil);
+  --search-local-input-active-border-color: var(--vrf-ink);
+}
+
+[class*='dropdownMenu_'],
+[class^='suggestion_'] {
+  border-radius: 0 !important;
+}
+
+[class^='hitPath_'] {
+  font-family: var(--vrf-font-mono);
+  letter-spacing: 0.04em;
+}
+
+/* The /search page uses a native search input; Chrome draws its clear button blue. */
+input[type='search']::-webkit-search-cancel-button {
+  filter: grayscale(1);
+}
+
+/*
+ * Search terms are marked on the results page and, after following a hit, on
+ * the target page. The browser default is highlighter yellow; use a graphite
+ * wash instead.
+ */
+mark {
+  background-color: var(--vrf-rule);
+  color: var(--vrf-ink-strong);
+}
+
 /* The dark-mode logo swap keeps the mark from vanishing on dark paper. */
 [data-theme='dark'] .navbar__logo img[src*='-ink'] {
   filter: invert(1);

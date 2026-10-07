@@ -176,6 +176,27 @@ Spam defence is a honeypot field plus a per-instance burst limit. Both are
 cheap; if reports start arriving from bots, put Vercel's WAF or a captcha in
 front of the endpoint.
 
+## Search
+
+Full-text search is
+[`@easyops-cn/docusaurus-search-local`](https://github.com/easyops-cn/docusaurus-search-local),
+configured under `themes` in `docusaurus.config.ts`. It needs no external
+service: `docusaurus build` crawls the rendered HTML of `tutorials/` and `api/`
+and writes a lunr index next to the site (`build/search-index*.json`), which the
+browser downloads the first time someone focuses the search box.
+
+- The index only exists in a production build. Under `npm start` the search box
+  renders but finds nothing - use `npm run build && npm run serve` to try it.
+- Searches are scoped to the section the reader is in (Tutorials or API), with
+  a link to the full results page at `/search`, which can widen to everywhere.
+  From pages outside both sections (the homepage, `/report-bug`) it searches
+  everything.
+- The API index is the bulk of it - about 1 MB gzipped against about 100 KB for
+  the tutorials - so a reader searching from a tutorial never downloads it.
+- `docsDir` must keep naming the real source folders. It feeds the hash that
+  cache-busts the index; left at the default it would point at a nonexistent
+  `docs/` and browsers would keep a stale index after a deploy.
+
 ## Design
 
 The identity comes from the logo: a "V" drawn as a construction sketch with
