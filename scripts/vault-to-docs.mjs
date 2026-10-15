@@ -42,7 +42,7 @@ const ASSET_URL = '/img/vault';
 const ROUTE_BASE = '/tutorials';
 
 /** Sidebar order of the top-level folders. Anything else lands after them. */
-const CATEGORY_ORDER = ['Getting Started', 'Modules', 'Additions', 'Onboarding'];
+const CATEGORY_ORDER = ['Getting Started', 'Upgrading', 'Modules', 'Additions', 'Onboarding'];
 
 /** Folders inside the vault that are not documentation. */
 const IGNORED_DIRS = new Set(['.obsidian', '.trash', 'templates']);

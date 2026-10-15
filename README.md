@@ -62,7 +62,7 @@ npm run docs:normalize -- --move    # also take the attachment out of the vault
 - turns `![[Image.png]]` embeds into image references and copies the attachment
   into `static/img/vault/`; `![[Image.png|661]]` becomes an `<img width="661">`
 - writes a `_category_.json` per folder so the sidebar order is
-  Getting Started → Modules → Additions → Onboarding
+  Getting Started → Upgrading → Modules → Additions → Onboarding
   (`CATEGORY_ORDER` in the script)
 - makes `index.md` the section landing page at `/tutorials`
 

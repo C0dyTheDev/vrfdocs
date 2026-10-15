@@ -26,7 +26,8 @@ need them.
 
 ## What is new in 4.0
 
-If you have worked with 3.0, these are the things that changed:
+If you have worked with 3.0, these are the things that changed. To move an existing 3.0 project over,
+see **[Converting a 3.0 Project](/tutorials/upgrading/converting-a-3-0-project)**.
 
 - **Hands are physical.** The hand you see is a rigidbody that is stopped by walls and feels the weight of what it carries. A held object is driven by velocity, never teleported into the palm. See
   **[Interaction](/tutorials/modules/interaction)**.
