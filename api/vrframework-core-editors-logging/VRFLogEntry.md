@@ -23,6 +23,19 @@ public class VRFLogEntry
 
 ## Fields
 
+### assembly {#assembly}
+
+Assembly a compiler message was reported for, empty for every other line. Compiler messages
+only last until the next build starts.
+
+```csharp
+public string assembly
+```
+
+**Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L62)
+
 ### channel {#channel}
 
 Grouping label, usually the source file the line came from.
@@ -191,7 +204,7 @@ public string CollapseKey { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L75)
 
 ### FirstLine {#firstline}
 
@@ -203,7 +216,7 @@ public string FirstLine { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L72)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L78)
 
 ### SearchText {#searchtext}
 
@@ -215,7 +228,7 @@ public string SearchText { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L66)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L72)
 
 ### SourceLabel {#sourcelabel}
 
@@ -227,7 +240,7 @@ public string SourceLabel { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L86)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L92)
 
 ### Timestamp {#timestamp}
 
@@ -239,7 +252,7 @@ public DateTime Timestamp { get; }
 
 **Returns** [`DateTime`](https://learn.microsoft.com/dotnet/api/system.datetime)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L63)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L69)
 
 ## Methods
 
@@ -260,7 +273,7 @@ public string TimeText(VRFLogTimeMode mode, VRFLogEntry previous)
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string) - The text of the time column.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L105)
 
 ### ToLine() {#toline}
 
@@ -272,5 +285,5 @@ public string ToLine()
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogEntry.cs#L124)
 

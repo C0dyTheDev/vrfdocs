@@ -24,7 +24,7 @@ comments in the package - fix a description by editing the source, then run
 | [VRFramework.Core.Editors.Logging](/api/vrframework-core-editors-logging) | 14 |
 | [VRFramework.Core.Editors.OpenCode](/api/vrframework-core-editors-opencode) | 25 |
 | [VRFramework.Core.Editors.SceneBuilding](/api/vrframework-core-editors-scenebuilding) | 59 |
-| [VRFramework.Core.Editors.Setup](/api/vrframework-core-editors-setup) | 14 |
+| [VRFramework.Core.Editors.Setup](/api/vrframework-core-editors-setup) | 15 |
 | [VRFramework.Core.Editors.UI](/api/vrframework-core-editors-ui) | 7 |
 | [VRFramework.Core.Editors.Validation](/api/vrframework-core-editors-validation) | 47 |
 | [VRFramework.Interaction.Runtime](/api/vrframework-interaction-runtime) | 74 |

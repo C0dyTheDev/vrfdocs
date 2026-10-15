@@ -8,10 +8,14 @@ description: 'The headset microphone, read as a rolling buffer.'
 
 # MicrophoneInput
 
-**Class** · namespace `VRFramework.Speech.Runtime` · assembly `VRFramework.Speech.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L11)
+**Class** · namespace `VRFramework.Speech.Runtime` · assembly `VRFramework.Speech.Runtime` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L16)
 
 The headset microphone, read as a rolling buffer. Unity records into a short looping clip and
 reports a write position; this hands on whatever has been written since it was last asked.
+
+Android can take the microphone away - when the app is paused, when the headset comes off,
+when another app claims it - and Unity does not open it again by itself. So this watches
+the recording and opens the device again when it stops or its write position freezes.
 
 ```csharp
 public class MicrophoneInput : SpeechAudioInput
@@ -32,7 +36,7 @@ public int deviceIndex
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L47)
 
 ### sampleRate {#samplerate}
 
@@ -46,7 +50,7 @@ public int sampleRate
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L54)
 
 ## Properties
 
@@ -61,7 +65,7 @@ public override bool IsCapturing { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L38)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L73)
 
 ### SampleRate {#samplerate}
 
@@ -73,9 +77,22 @@ public override int SampleRate { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L70)
 
 ## Methods
+
+### Discard() {#discard}
+
+Throws away what has been captured but not read yet, so the next
+[`ReadSamples()`](/api/vrframework-speech-runtime/SpeechAudioInput#readsamples) starts from now. Called when listening starts: what the input
+picked up before then - typically the instruction the trainee was just played - is not an
+answer.
+
+```csharp
+public override void Discard()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L196)
 
 ### ReadSamples() {#readsamples}
 
@@ -87,5 +104,5 @@ public override float[] ReadSamples()
 
 **Returns** [`float[]`](https://learn.microsoft.com/dotnet/api/system.single[]) - The new samples, or null when there are none yet.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L69)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/MicrophoneInput.cs#L159)
 

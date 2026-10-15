@@ -40,11 +40,12 @@ public bool CanListen { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L101)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L120)
 
 ### IsListening {#islistening}
 
-True between [`StartListening()`](/api/vrframework-core-runtime/ISpeechRecognitionService#startlistening) and the result that ends it.
+True between [`StartListening()`](/api/vrframework-core-runtime/ISpeechRecognitionService#startlistening) and [`StopListening()`](/api/vrframework-core-runtime/ISpeechRecognitionService#stoplistening), including while
+a request made early waits for the model.
 
 ```csharp
 public bool IsListening { get; }
@@ -52,7 +53,7 @@ public bool IsListening { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L104)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L123)
 
 ## Methods
 
@@ -64,7 +65,7 @@ Unregisters the module, unless another one has taken over the service.
 public override void OnCleanup()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L169)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L205)
 
 ### OnInit() {#oninit}
 
@@ -75,18 +76,18 @@ recogniser exists, which on Android is after the model has been copied out of th
 public override void OnInit()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L152)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L187)
 
 ### StartListening() {#startlistening}
 
-Starts feeding audio to the recogniser. Does nothing while [`CanListen`](/api/vrframework-core-runtime/ISpeechRecognitionService#canlisten) is
-false, so a scene may call it before the model has finished loading.
+Starts feeding audio to the recogniser. A scene may call it before the model has finished
+loading: the request is kept and listening begins once [`CanListen`](/api/vrframework-core-runtime/ISpeechRecognitionService#canlisten) turns true.
 
 ```csharp
 public void StartListening()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L178)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L214)
 
 ### StopListening() {#stoplistening}
 
@@ -96,7 +97,7 @@ Stops feeding audio to the recogniser, discarding anything half heard.
 public void StopListening()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L192)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L235)
 
 ## Events
 
@@ -111,7 +112,7 @@ public event Action<string> OnFinalResult
 
 **Returns** `Action<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L110)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L129)
 
 ### OnPartialResult {#onpartialresult}
 
@@ -124,5 +125,5 @@ public event Action<string> OnPartialResult
 
 **Returns** `Action<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L107)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechRecognitionManager.cs#L126)
 

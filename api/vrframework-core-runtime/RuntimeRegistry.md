@@ -87,7 +87,7 @@ Called by VRCore once every module in the scene has been initialised.
 public static void MarkRegistrationComplete()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L95)
 
 ### Register\<T>(T) {#register-1-0}
 
@@ -111,6 +111,18 @@ public static void Register<T>(T service) where T : class
 | `service` | `T` | Implementation to publish. |
 
 [View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L42)
+
+### ReopenRegistration() {#reopenregistration}
+
+Called by VRCore as its scene starts. Registration was closed by the scene before, whose
+modules are gone; left closed, every [`Resolve<T>(Action<T>, Func<T, bool>)`](/api/vrframework-core-runtime/RuntimeRegistry#resolve-1-0-boolean) in this scene would give up on
+a module that simply has not registered yet.
+
+```csharp
+public static void ReopenRegistration()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L89)
 
 ### Resolve\<T>(Action\<T>, Func\<T, bool>) {#resolve-1-0-boolean}
 
@@ -138,7 +150,7 @@ public static IEnumerator Resolve<T>(Action<T> onResolved, Func<T, bool> until =
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the service is handed over.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L114)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L124)
 
 ### ResolveLocalization(Action\<ILocalizationService>) {#resolvelocalization-ilocalizationservice}
 
@@ -156,7 +168,7 @@ public static IEnumerator ResolveLocalization(Action<ILocalizationService> onRes
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once localization is settled.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L158)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/RuntimeRegistry.cs#L168)
 
 ### Unregister\<T>() {#unregister-1}
 

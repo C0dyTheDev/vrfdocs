@@ -15,7 +15,7 @@ sidebar_position: 0
 | [`FrameworkDefaults`](/api/vrframework-core-editors-setup/FrameworkDefaults) | What a set-up project looks like, in one place. |
 | [`PackageContentSetup`](/api/vrframework-core-editors-setup/PackageContentSetup) | The parts of the setup that bring content in from outside the project: packages the framework depends on but does not ship, the TextMesh Pro resources, and the XR samples the frame |
 | [`PackageSetup`](/api/vrframework-core-editors-setup/PackageSetup) | Takes a project from empty to buildable on an Android headset in one menu item. |
-| [`PackageSetupWindow`](/api/vrframework-core-editors-setup/PackageSetupWindow) | The face of "Set Up Project for VR": what the run is about to do, what it is doing now, and what each step ended up reporting. |
+| [`PackageSetupWindow`](/api/vrframework-core-editors-setup/PackageSetupWindow) | The face of "Set Up Project for VR": which steps the next run takes, what the run is doing now, and what each step ended up reporting. |
 | [`ProjectSetup`](/api/vrframework-core-editors-setup/ProjectSetup) | Everything the setup writes into the project itself: the framework's own template assets, the project settings a VR build needs, the two StreamingAssets files the platform reads on |
 | [`SetupExtension`](/api/vrframework-core-editors-setup/SetupExtension) | Setup steps a project adds to the end of "Set Up Project for VR". |
 | [`SetupExtensions`](/api/vrframework-core-editors-setup/SetupExtensions) | Finds every setup extension in the loaded editor assemblies and flattens them into one list of steps for PackageSetup/api/vrframework-core-editors-setup/PackageSetup to append to i |
@@ -35,5 +35,6 @@ sidebar_position: 0
 
 | Name | Summary |
 | --- | --- |
+| [`SetupScope`](/api/vrframework-core-editors-setup/SetupScope) | Where the work of a setup step ends up, which decides who has to run it. |
 | [`SetupStepStatus`](/api/vrframework-core-editors-setup/SetupStepStatus) | Where one step of a sequence has got to. |
 

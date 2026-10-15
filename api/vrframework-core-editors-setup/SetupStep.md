@@ -8,7 +8,7 @@ description: 'One piece of work in a setup sequence, plus the question "is it fi
 
 # SetupStep
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L14)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L31)
 
 One piece of work in a setup sequence, plus the question "is it finished yet?".
 Most steps are done the moment [`Run`](/api/vrframework-core-editors-setup/SetupStep#run) returns. The ones that hand work to Unity -
@@ -23,12 +23,12 @@ public class SetupStep
 
 ## Constructors
 
-### SetupStep(string, Action, Func\<bool>, float) {#ctor-string-action-boolean-single}
+### SetupStep(string, Action, Func\<bool>, float, SetupScope) {#ctor-string-action-boolean-single-setupscope}
 
 Builds a setup step.
 
 ```csharp
-public SetupStep(string title, Action run, Func<bool> isFinished = null, float timeoutSeconds = 120)
+public SetupStep(string title, Action run, Func<bool> isFinished = null, float timeoutSeconds = 120, SetupScope scope = SetupScope.Project)
 ```
 
 **Parameters**
@@ -39,8 +39,9 @@ public SetupStep(string title, Action run, Func<bool> isFinished = null, float t
 | `run` | [`Action`](https://learn.microsoft.com/dotnet/api/system.action) | The work itself. |
 | `isFinished` | `Func<bool>` | Polled until it answers true, for work Unity finishes asynchronously. |
 | `timeoutSeconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long the step may take before it counts as failed. |
+| `scope` | [`SetupScope`](/api/vrframework-core-editors-setup/SetupScope) | Whether the work lands in the project or stays on this machine. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L21)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L39)
 
 ## Properties
 
@@ -57,7 +58,7 @@ public Func<bool> IsFinished { get; }
 
 **Returns** `Func<bool>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L71)
 
 ### Run {#run}
 
@@ -69,7 +70,21 @@ public Action Run { get; }
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L63)
+
+### Scope {#scope}
+
+Whether what the step writes is committed with the project or stays on this machine. The
+setup window groups the steps by it, so somebody who has just cloned a project can run
+only the half that did not come with it.
+
+```csharp
+public SetupScope Scope { get; }
+```
+
+**Returns** [`SetupScope`](/api/vrframework-core-editors-setup/SetupScope)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L60)
 
 ### TimeoutSeconds {#timeoutseconds}
 
@@ -81,11 +96,12 @@ public float TimeoutSeconds { get; }
 
 **Returns** [`float`](https://learn.microsoft.com/dotnet/api/system.single)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L74)
 
 ### Title {#title}
 
 What the console line for this step says. Present tense, "Switching the build target".
+Also what picks the step out when somebody runs only some of them, so it has to be unique.
 
 ```csharp
 public string Title { get; }
@@ -93,5 +109,5 @@ public string Title { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L30)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupRunner.cs#L53)
 

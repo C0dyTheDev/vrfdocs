@@ -33,7 +33,7 @@ public UnityEvent AfterFadeOut
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L75)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L86)
 
 ### AfterRecenter {#afterrecenter}
 
@@ -45,7 +45,7 @@ public UnityEvent AfterRecenter
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L73)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L84)
 
 ### BeforeRecenter {#beforerecenter}
 
@@ -57,7 +57,7 @@ public UnityEvent BeforeRecenter
 
 **Returns** [`UnityEvent`](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L82)
 
 ### setPlayerHeight {#setplayerheight}
 
@@ -119,7 +119,7 @@ way they were already looking.
 protected virtual void OnDrawGizmos()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L293)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L319)
 
 ### Recenter(bool, float, bool) {#recenter-boolean-single-boolean}
 
@@ -139,7 +139,7 @@ public void Recenter(bool doRotation, float fadeSeconds, bool withLogo = true)
 | `fadeSeconds` | [`float`](https://learn.microsoft.com/dotnet/api/system.single) | How long the view takes to go black before the move, and to clear after it. |
 | `withLogo` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the logo comes up over the black. False for a blink too short to read it. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L118)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L129)
 
 ### Recenter(bool) {#recenter-boolean}
 
@@ -157,7 +157,7 @@ public void Recenter(bool doRotation)
 | --- | --- | --- |
 | `doRotation` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | Whether the player is also turned to face this transform's forward direction. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L105)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L116)
 
 ### RecenterCor(bool, bool, float, bool) {#recentercor-boolean-boolean-single-boolean}
 
@@ -178,13 +178,13 @@ public IEnumerator RecenterCor(bool doRotation, bool overrideSetPlayerHeight = f
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the view has faded back in.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L167)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L177)
 
 ### RecenterCorStart(bool) {#recentercorstart-boolean}
 
 The startup recenter: waits for the headset to settle, moves the rig and only then fades in,
 since the view starts out black.
-A session running at a physical VR point is placed by `RecenterOnVRPoint(string)`
+A session running at a physical VR point is placed by `RecenterOnVRPoint(bool)`
 instead, because there the headset's resting place is decided by the hardware rather than
 by where the player happens to be standing.
 
@@ -200,5 +200,5 @@ public IEnumerator RecenterCorStart(bool doRotation)
 
 **Returns** [`IEnumerator`](https://learn.microsoft.com/dotnet/api/system.collections.ienumerator) - A coroutine that completes once the view has faded in.
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L218)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Interaction/PlayerRecenter.cs#L228)
 

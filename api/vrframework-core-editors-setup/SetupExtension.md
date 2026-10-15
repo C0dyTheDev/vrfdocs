@@ -8,7 +8,7 @@ description: 'Setup steps a project adds to the end of "Set Up Project for VR".'
 
 # SetupExtension
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L34)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L41)
 
 Setup steps a project adds to the end of "Set Up Project for VR". Subclass this anywhere in an
 editor assembly and it is picked up automatically - the same way a project adds validator
@@ -21,6 +21,12 @@ same order every time it is called. The runner carries its position through the 
 the setup causes as a plain index and rebuilds the sequence on the other side by calling this
 again, so a list that changed length in between resumes at the wrong step. Decide inside a
 step's own body and return early; do not decide by leaving the step out.
+
+Give each step a title of its own - the setup window lets somebody tick which steps to
+run, and the title is what remembers the tick. A step whose work stays on the machine
+rather than being committed with the project - something in the Library, EditorPrefs or
+the home directory - passes [`Machine`](/api/vrframework-core-editors-setup/SetupScope#machine), so a fresh clone of the
+project knows to run it again.
 
 ```csharp
 public abstract class SetupExtension
@@ -54,7 +60,7 @@ public virtual string DisplayName { get; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L47)
 
 ### Order {#order}
 
@@ -66,7 +72,7 @@ public virtual int Order { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L44)
 
 ## Methods
 
@@ -81,5 +87,5 @@ public abstract IEnumerable<SetupStep> Steps()
 
 **Returns** `IEnumerable<SetupStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L46)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/SetupExtension.cs#L53)
 

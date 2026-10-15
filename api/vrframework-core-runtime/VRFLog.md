@@ -42,6 +42,7 @@ public static bool CaptureStackTraces
 
 True while [`Util`](/api/vrframework-core-runtime/Util) is handing a line to [`Debug`](https://docs.unity3d.com/ScriptReference/Debug.html). A collector that
 also listens to the Unity console uses this to skip lines it is already receiving here.
+Per thread, so a worker thread logging at the same moment is not mistaken for the forwarded line.
 
 ```csharp
 public static bool Forwarding { get; }
@@ -49,7 +50,7 @@ public static bool Forwarding { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L119)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L122)
 
 ### HasListeners {#haslisteners}
 
@@ -61,7 +62,7 @@ public static bool HasListeners { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L122)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L129)
 
 ## Methods
 
@@ -87,7 +88,7 @@ public static void Emit(VRFLogLevel level, string message, string channel = null
 | `member` | [`string`](https://learn.microsoft.com/dotnet/api/system.string) |  |
 | `skipFrames` | [`int`](https://learn.microsoft.com/dotnet/api/system.int32) |  |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L128)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Logging/VRFLog.cs#L135)
 
 ## Events
 

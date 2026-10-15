@@ -8,7 +8,7 @@ description: 'Collects every framework log line whether or not the window is ope
 
 # VRFLogStore
 
-**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L15)
+**Class** · namespace `VRFramework.Core.Editors.Logging` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L19)
 
 Collects every framework log line whether or not the window is open, so opening the Logger
 shows what already happened instead of starting blank.
@@ -34,7 +34,7 @@ public int DebugCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L39)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L81)
 
 ### Entries {#entries}
 
@@ -46,7 +46,7 @@ public IReadOnlyList<VRFLogEntry> Entries { get; }
 
 **Returns** `IReadOnlyList<VRFLogEntry>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L31)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L73)
 
 ### ErrorCount {#errorcount}
 
@@ -58,7 +58,7 @@ public int ErrorCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L37)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L79)
 
 ### InfoCount {#infocount}
 
@@ -70,7 +70,7 @@ public int InfoCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L33)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L75)
 
 ### TotalCount {#totalcount}
 
@@ -82,7 +82,7 @@ public int TotalCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L41)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L83)
 
 ### WarningCount {#warningcount}
 
@@ -94,7 +94,7 @@ public int WarningCount { get; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L35)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L77)
 
 ## Methods
 
@@ -108,17 +108,30 @@ public List<string> Channels()
 
 **Returns** `List<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L236)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L586)
 
 ### Clear() {#clear}
 
-Empties the buffer and resets every count.
+Empties the buffer and resets every count. Rows still in the Unity Console are not brought
+back; only what it logs from now on shows up.
 
 ```csharp
 public void Clear()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L204)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L505)
+
+### ClearWithConsole() {#clearwithconsole}
+
+The Logger's Clear: empties the buffer and the Unity Console with it. A compile error
+survives the Console's clear, so while the Console is mirrored, what it kept is read back
+in and both still show the same lines.
+
+```csharp
+public void ClearWithConsole()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L525)
 
 ### Flush() {#flush}
 
@@ -128,7 +141,7 @@ Writes the buffer to Library so it is still there after the reload.
 public void Flush()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L215)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L537)
 
 ### SetUnityConsoleCapture(bool) {#setunityconsolecapture-boolean}
 
@@ -144,7 +157,7 @@ public static void SetUnityConsoleCapture(bool enabled)
 | --- | --- | --- |
 | `enabled` | [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean) | True to capture them. |
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L138)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L219)
 
 ## Events
 
@@ -158,5 +171,5 @@ public static event Action Changed
 
 **Returns** [`Action`](https://learn.microsoft.com/dotnet/api/system.action)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L44)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLogStore.cs#L88)
 

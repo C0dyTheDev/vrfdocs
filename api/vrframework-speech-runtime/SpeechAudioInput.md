@@ -55,6 +55,19 @@ public abstract int SampleRate { get; }
 
 ## Methods
 
+### Discard() {#discard}
+
+Throws away what has been captured but not read yet, so the next
+[`ReadSamples()`](/api/vrframework-speech-runtime/SpeechAudioInput#readsamples) starts from now. Called when listening starts: what the input
+picked up before then - typically the instruction the trainee was just played - is not an
+answer.
+
+```csharp
+public virtual void Discard()
+```
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Speech/SpeechAudioInput.cs#L37)
+
 ### ReadSamples() {#readsamples}
 
 The samples captured since the last call, as mono values in -1 to 1.

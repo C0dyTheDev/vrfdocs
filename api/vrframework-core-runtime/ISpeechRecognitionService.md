@@ -38,7 +38,8 @@ bool CanListen { get; }
 
 ### IsListening {#islistening}
 
-True between [`StartListening()`](/api/vrframework-core-runtime/ISpeechRecognitionService#startlistening) and the result that ends it.
+True between [`StartListening()`](/api/vrframework-core-runtime/ISpeechRecognitionService#startlistening) and [`StopListening()`](/api/vrframework-core-runtime/ISpeechRecognitionService#stoplistening), including while
+a request made early waits for the model.
 
 ```csharp
 bool IsListening { get; }
@@ -46,20 +47,20 @@ bool IsListening { get; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L19)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L22)
 
 ## Methods
 
 ### StartListening() {#startlistening}
 
-Starts feeding audio to the recogniser. Does nothing while [`CanListen`](/api/vrframework-core-runtime/ISpeechRecognitionService#canlisten) is
-false, so a scene may call it before the model has finished loading.
+Starts feeding audio to the recogniser. A scene may call it before the model has finished
+loading: the request is kept and listening begins once [`CanListen`](/api/vrframework-core-runtime/ISpeechRecognitionService#canlisten) turns true.
 
 ```csharp
 void StartListening()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L25)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L28)
 
 ### StopListening() {#stoplistening}
 
@@ -69,7 +70,7 @@ Stops feeding audio to the recogniser, discarding anything half heard.
 void StopListening()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L28)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L31)
 
 ## Events
 
@@ -84,7 +85,7 @@ event Action<string> OnFinalResult
 
 **Returns** `Action<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L40)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L43)
 
 ### OnPartialResult {#onpartialresult}
 
@@ -97,5 +98,5 @@ event Action<string> OnPartialResult
 
 **Returns** `Action<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L34)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Runtime/Scripts/Core/ISpeechRecognitionService.cs#L37)
 

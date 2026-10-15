@@ -31,7 +31,7 @@ public static bool AutoScroll { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L64)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L73)
 
 ### Capacity {#capacity}
 
@@ -43,11 +43,12 @@ public static int Capacity { get; set; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L50)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L59)
 
 ### ClearOnPlay {#clearonplay}
 
-Whether the buffer is emptied when play mode starts.
+Whether the buffer is emptied when play mode starts. Lines mirrored from the Unity Console
+follow the Console's own Clear on Play instead.
 
 ```csharp
 public static bool ClearOnPlay { get; set; }
@@ -55,11 +56,12 @@ public static bool ClearOnPlay { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L15)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L18)
 
 ### ClearOnRecompile {#clearonrecompile}
 
-Whether the buffer is emptied when scripts recompile.
+Whether the buffer is emptied when scripts recompile. Lines mirrored from the Unity Console
+follow the Console's own Clear on Recompile instead.
 
 ```csharp
 public static bool ClearOnRecompile { get; set; }
@@ -67,7 +69,7 @@ public static bool ClearOnRecompile { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L22)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L28)
 
 ### Collapse {#collapse}
 
@@ -79,7 +81,7 @@ public static bool Collapse { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L57)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L66)
 
 ### Colorize {#colorize}
 
@@ -91,7 +93,7 @@ public static bool Colorize { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L148)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L157)
 
 ### ErrorPause {#errorpause}
 
@@ -103,7 +105,7 @@ public static bool ErrorPause { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L43)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L52)
 
 ### ExpandedRows {#expandedrows}
 
@@ -115,7 +117,7 @@ public static bool ExpandedRows { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L141)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L150)
 
 ### FontSize {#fontsize}
 
@@ -127,7 +129,7 @@ public static int FontSize { get; set; }
 
 **Returns** [`int`](https://learn.microsoft.com/dotnet/api/system.int32)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L155)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L164)
 
 ### HiddenChannels {#hiddenchannels}
 
@@ -139,11 +141,12 @@ public static IEnumerable<string> HiddenChannels { get; set; }
 
 **Returns** `IEnumerable<string>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L169)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L178)
 
 ### IncludeUnityConsole {#includeunityconsole}
 
-Also record lines that did not come through Util - plain Debug calls, exceptions.
+Also record lines that did not come through Util - plain Debug calls, exceptions, compiler
+errors and warnings.
 
 ```csharp
 public static bool IncludeUnityConsole { get; set; }
@@ -151,7 +154,7 @@ public static bool IncludeUnityConsole { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L36)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L45)
 
 ### MatchCase {#matchcase}
 
@@ -163,7 +166,7 @@ public static bool MatchCase { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L113)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L122)
 
 ### PersistBetweenSessions {#persistbetweensessions}
 
@@ -175,7 +178,7 @@ public static bool PersistBetweenSessions { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L29)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L35)
 
 ### Search {#search}
 
@@ -187,7 +190,7 @@ public static string Search { get; set; }
 
 **Returns** [`string`](https://learn.microsoft.com/dotnet/api/system.string)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L99)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L108)
 
 ### ShowChannel {#showchannel}
 
@@ -199,7 +202,7 @@ public static bool ShowChannel { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L127)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L136)
 
 ### ShowDebug {#showdebug}
 
@@ -211,7 +214,7 @@ public static bool ShowDebug { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L92)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L101)
 
 ### ShowDetails {#showdetails}
 
@@ -223,7 +226,7 @@ public static bool ShowDetails { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L162)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L171)
 
 ### ShowError {#showerror}
 
@@ -235,7 +238,7 @@ public static bool ShowError { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L94)
 
 ### ShowInfo {#showinfo}
 
@@ -247,7 +250,7 @@ public static bool ShowInfo { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L71)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L80)
 
 ### ShowSource {#showsource}
 
@@ -259,7 +262,7 @@ public static bool ShowSource { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L134)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L143)
 
 ### ShowWarning {#showwarning}
 
@@ -271,7 +274,7 @@ public static bool ShowWarning { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L78)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L87)
 
 ### TimeMode {#timemode}
 
@@ -283,7 +286,7 @@ public static VRFLogTimeMode TimeMode { get; set; }
 
 **Returns** [`VRFLogTimeMode`](/api/vrframework-core-editors-logging/VRFLogTimeMode)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L120)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L129)
 
 ### UseRegex {#useregex}
 
@@ -295,5 +298,5 @@ public static bool UseRegex { get; set; }
 
 **Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L106)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Logger/VRFLoggerPrefs.cs#L115)
 

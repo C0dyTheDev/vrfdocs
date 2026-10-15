@@ -46,7 +46,7 @@ public void CreateGUI()
 Opens the OpenCode chat window.
 
 ```csharp
-[MenuItem("VRFramework/OpenCode Assistant", priority = 63)]
+[MenuItem("VRFramework/AI Agent", priority = 63)]
 public static void ShowWindow()
 ```
 

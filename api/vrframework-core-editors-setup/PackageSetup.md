@@ -8,7 +8,7 @@ description: 'Takes a project from empty to buildable on an Android headset in o
 
 # PackageSetup
 
-**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L22)
+**Class** · namespace `VRFramework.Core.Editors.Setup` · assembly `VRFramework.Core.Editors` · [view source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L31)
 
 Takes a project from empty to buildable on an Android headset in one menu item.
 This used to be three menu items that had to be clicked in order, because switching platform,
@@ -19,7 +19,15 @@ track of it was. So the sequence below is a plain ordered list and
 Adding a step means adding one line here. A project adds steps of its own without touching
 this file, by subclassing [`SetupExtension`](/api/vrframework-core-editors-setup/SetupExtension); those run at the end, after the
 framework has finished with the project.
-Nothing here draws anything. Starting, watching and cancelling a run all happen in
+
+The steps are of two kinds, by where their work ends up - see [`SetupScope`](/api/vrframework-core-editors-setup/SetupScope).
+Most of it is written into the project and reaches everybody else through git. The rest
+stays on the machine that ran it: the build target in the Library, the agent tooling in
+the home directory, the MCP bridge in EditorPrefs, the window layout. A clone of a project
+that was set up somewhere else is missing only that second kind, so a run takes whichever
+steps it is given rather than always all of them.
+
+Nothing here draws anything. Choosing, starting, watching and cancelling a run all happen in
 [`PackageSetupWindow`](/api/vrframework-core-editors-setup/PackageSetupWindow), which is also the menu item.
 
 ```csharp
@@ -27,6 +35,22 @@ public static class PackageSetup
 ```
 
 **Inheritance:** [`object`](https://learn.microsoft.com/dotnet/api/system.object) ← `PackageSetup`
+
+## Properties
+
+### ProjectIsSetUp {#projectissetup}
+
+Whether the project half of the setup has been run - here, or on whichever machine
+committed the project. The setup window starts a clone off with only this machine's steps
+ticked. Loaded rather than fetched through GetSerializedSettings, which creates the asset.
+
+```csharp
+public static bool ProjectIsSetUp { get; }
+```
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L50)
 
 ## Methods
 
@@ -41,7 +65,7 @@ sequence as well, unlike the layout, because it closes no windows.
 public static void ApplyEditorEnhancerSettings()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L85)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L141)
 
 ### ApplyEditorLayout() {#applyeditorlayout}
 
@@ -54,23 +78,51 @@ the console the setup is reporting into.
 public static void ApplyEditorLayout()
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L59)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L115)
 
-### Begin() {#begin}
+### Begin(IEnumerable\<string>) {#begin-string}
 
-Starts the whole sequence. The window asks the question first; by the time this is called
-the answer was yes.
+Runs the steps with these titles, in the order the full setup would take them, and saves
+at the end. Titles rather than the steps themselves, because a title is what survives the
+script reloads the run causes. The window asks the question first; by the time this is
+called the answer was yes.
 
 ```csharp
-public static void Begin()
+public static void Begin(IEnumerable<string> titles)
 ```
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L40)
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `titles` | `IEnumerable<string>` |  |
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L76)
+
+### ClosesWindows(SetupStep) {#closeswindows-setupstep}
+
+Whether running this step closes and reopens every window in the editor.
+
+```csharp
+public static bool ClosesWindows(SetupStep step)
+```
+
+**Parameters**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `step` | [`SetupStep`](/api/vrframework-core-editors-setup/SetupStep) |  |
+
+**Returns** [`bool`](https://learn.microsoft.com/dotnet/api/system.boolean)
+
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L105)
 
 ### Preview() {#preview}
 
-The steps a run would take, for listing them before anyone has pressed anything. Building
-the sequence has no side effects - the work is inside the steps, not in making them.
+Every step there is to choose from, in run order, for listing them before anyone has
+pressed anything. The save is not among them because it is not a choice: every run ends
+with it. Building the steps has no side effects - the work is inside them, not in making
+them.
 
 ```csharp
 public static IReadOnlyList<SetupStep> Preview()
@@ -78,5 +130,5 @@ public static IReadOnlyList<SetupStep> Preview()
 
 **Returns** `IReadOnlyList<SetupStep>`
 
-[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L49)
+[View source](https://git.cie-group.cz/vr-framework/vrf4/core/-/blob/main/Editor/Setup/PackageSetup.cs#L99)
 
